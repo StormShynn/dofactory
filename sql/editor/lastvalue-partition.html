@@ -1,0 +1,3371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/sql/editor/lastvalue-partition by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:46:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SQL LAST_VALUE Example - Dofactory</title>
+    <meta name="keywords" content="SQL Editor, SQL, SQL Server, Data Analysis, Tutorial, Reference, Guide, Examples, Demos, Top, Best, Tips, Advice, Training, Learning, Courses, Lessons, Interview, Programming, Code, Source">
+    <meta name="description" content="SQL Editor. SQL Server LAST_VALUE -- the best examples. The LAST_VALUE function returns the last value in a result set.">
+
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="lastvalue-partition.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+<header class='navbar navbar-expand-lg py-0 pl-0 do-navbar border-bottom'
+        style="height: 80px; background: #fff!important;">
+
+        <div class="width-240">
+          <a class="pl-35 pt-0 width-220 d-block" href="javascript:void(0)">
+            <img src="../../img/dofactorylogo.png" class="pt-6 no-outline" />
+          </a>
+        </div>
+      </header>
+
+
+    <div class="container-fluid">
+        <style>
+  th { background-color: #f6f8ff; }
+  ::-webkit-input-placeholder { color: #6f6fa9 !important; font-weight: normal; }
+</style>
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #ba3371 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+
+  <div class="">
+    <div class="height-70 pl-15 pt-27">
+
+      <div class="d-flex">
+          <div class="pt-10"><h1 class="m-0 p-0 font-25 font-weight-bold">SQL Editor</h1></div>
+        </div>
+    </div>
+
+    <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom ">
+      Tables and Columns&nbsp;
+    </div>
+
+    <nav class="width-230 do-links" id="scroll-list">
+
+      <div class="list-group mb-25 font-14" tabindex="-1" role="tablist" id="list-tab">
+
+          <a id="tableCustomer" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Customer &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsCustomer" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- FirstName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- LastName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- City <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Country <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Phone <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableOrder" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Order &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsOrder" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- OrderDate <span class="font-weight-normal">(datetime)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- OrderNumber <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- CustomerId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- TotalAmount <span class="font-weight-normal">(decimal)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableOrderItem" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">OrderItem &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsOrderItem" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- OrderId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ProductId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- UnitPrice <span class="font-weight-normal">(decimal)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Quantity <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableProduct" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Product &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsProduct" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ProductName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- SupplierId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- UnitPrice <span class="font-weight-normal">(decimal)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Package <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- IsDiscontinued <span class="font-weight-normal">(bit)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableSupplier" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Supplier &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsSupplier" class="pl-20" style='display:block;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- CompanyName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ContactName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ContactTitle <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- City <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Country <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Phone <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Fax <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+            </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="px-md-30 px-10 tutorial">
+
+      <div class="py-20">
+        <div id="scriptassist-display" class="pl-30 font-15 d-flex flex-column justify-content-center" style="background: #f6f7fa;height:85px;background:#333;color:white;">
+          <div class="d-flex">
+            <div><h1 style="display:inline;padding:0 !important;margin: 0 0 2px 0 !important; font-weight:600;border:none !important; font-size:16px !important;text-decoration:none !important;">Problem: </h1></div>
+            <div class="ml-12">List the orders for the year 2013. Include the lowest and highest sales amount for each month.
+</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="">
+
+        <form method="post" action="https://www.dofactory.com/sql/editor/lastvalue-partition">
+
+          <textarea name="script" id="script" rows="9" class="mb-10 form-control border bg-light font-weight-semibold"
+                    placeholder="Enter your SQL" style="font-family: monospace, monospace;color:#334;font-weight:bold;">SELECT MONTH(OrderDate) AS Month,
+       CONCAT(FirstName, ' ', LastName) AS Customer, 
+       LAST_VALUE(TotalAmount) OVER(PARTITION BY MONTH(OrderDate)
+                        ORDER BY TotalAmount DESC 
+                        ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING) 
+                        AS 'Lowest Monthly Sale',
+       TotalAmount, 
+       LAST_VALUE(TotalAmount) OVER(PARTITION BY MONTH(OrderDate)
+                        ORDER BY TotalAmount 
+                        ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
+                        AS 'Highest Monthly Sale'
+  FROM [Order] O
+  JOIN Customer C ON O.CustomerId = C.Id
+ WHERE YEAR(OrderDate) = 2013
+ ORDER BY MONTH(OrderDate), TotalAmount DESC
+</textarea>
+
+          <input id="submit" type="submit" class="btn btn-dark" value="Run" />&nbsp;
+          <input id="clear" type="button" class="btn btn-light" value="Clear" />
+
+          <input type="hidden" id="scriptassist" name="scriptassist" value="List the orders for the year 2013. Include the lowest and highest sales amount for each month.&#xD;&#xA;" />
+          <input type="hidden" id="prescript" name="prescript" value="LAST_VALUE" />
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7EquW-e84kLMYNzgKnoFTY_G8pKNj48nltxQb8hkuml7rgYBlUILN7lg357U1y4cjLTu1HvvN7jFvIiFs2erhT-51y8c3zanzX2xlTTmKJkp5vM-pdXQS3mb8U3o5tw0_hpY" /></form>
+      </div>
+
+      <div class="mt-60 mb-40"></div>
+
+      <div id="results">
+        <div class="table-hscroll">
+
+            <div class="fffade mb-20 ml-5 font-weight-semibold py-5" style="background-color: #dbff9d; opacity: 0;">
+              &nbsp;408 Records
+            </div>
+            <table class="table table-md table-hover">
+
+                  <tr>
+                      <th>Month</th>
+                      <th>Customer</th>
+                      <th>Lowest Monthly Sale</th>
+                      <th>TotalAmount</th>
+                      <th>Highest Monthly Sale</th>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Jean Fresni&#xE8;re</td>
+                        <td>49.80</td>
+                        <td>11493.20</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Jytte Petersen</td>
+                        <td>49.80</td>
+                        <td>11283.20</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Roland Mendel</td>
+                        <td>49.80</td>
+                        <td>5796.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Paula Wilson</td>
+                        <td>49.80</td>
+                        <td>3868.60</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Ann Devon</td>
+                        <td>49.80</td>
+                        <td>3063.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Roland Mendel</td>
+                        <td>49.80</td>
+                        <td>2713.50</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Elizabeth Lincoln</td>
+                        <td>49.80</td>
+                        <td>2523.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Michael Holz</td>
+                        <td>49.80</td>
+                        <td>2208.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Annette Roulet</td>
+                        <td>49.80</td>
+                        <td>2123.20</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>L&#xFA;cia Carvalho</td>
+                        <td>49.80</td>
+                        <td>2018.20</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Paula Parente</td>
+                        <td>49.80</td>
+                        <td>1897.60</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Horst Kloss</td>
+                        <td>49.80</td>
+                        <td>1814.80</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Patricia McKenna</td>
+                        <td>49.80</td>
+                        <td>1748.50</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Giovanni Rovelli</td>
+                        <td>49.80</td>
+                        <td>1675.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Martine Ranc&#xE9;</td>
+                        <td>49.80</td>
+                        <td>1622.40</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Bernardo Batista</td>
+                        <td>49.80</td>
+                        <td>1273.20</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Elizabeth Lincoln</td>
+                        <td>49.80</td>
+                        <td>1208.50</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Henriette Pfalzheim</td>
+                        <td>49.80</td>
+                        <td>1194.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Andr&#xE9; Fonseca</td>
+                        <td>49.80</td>
+                        <td>1020.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Roland Mendel</td>
+                        <td>49.80</td>
+                        <td>1005.90</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Elizabeth Lincoln</td>
+                        <td>49.80</td>
+                        <td>802.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Pirkko Koskitalo</td>
+                        <td>49.80</td>
+                        <td>720.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Georg Pipps</td>
+                        <td>49.80</td>
+                        <td>651.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Art Braunschweiger</td>
+                        <td>49.80</td>
+                        <td>485.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Annette Roulet</td>
+                        <td>49.80</td>
+                        <td>480.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Felipe Izquierdo</td>
+                        <td>49.80</td>
+                        <td>400.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Pirkko Koskitalo</td>
+                        <td>49.80</td>
+                        <td>372.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Eduardo Saavedra</td>
+                        <td>49.80</td>
+                        <td>338.20</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Yvonne Moncada</td>
+                        <td>49.80</td>
+                        <td>319.20</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Aria Cruz</td>
+                        <td>49.80</td>
+                        <td>231.40</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Maurizio Moroni</td>
+                        <td>49.80</td>
+                        <td>192.00</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Yoshi Latimer</td>
+                        <td>49.80</td>
+                        <td>102.40</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>Paolo Accorti</td>
+                        <td>49.80</td>
+                        <td>49.80</td>
+                        <td>11493.20</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Jose Pavarotti</td>
+                        <td>174.90</td>
+                        <td>5793.10</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Horst Kloss</td>
+                        <td>174.90</td>
+                        <td>4277.40</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Pascale Cartrain</td>
+                        <td>174.90</td>
+                        <td>3891.00</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Pirkko Koskitalo</td>
+                        <td>174.90</td>
+                        <td>2684.00</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Fr&#xE9;d&#xE9;rique Citeaux</td>
+                        <td>174.90</td>
+                        <td>2210.80</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Jose Pavarotti</td>
+                        <td>174.90</td>
+                        <td>2096.00</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Carlos Gonz&#xE1;lez</td>
+                        <td>174.90</td>
+                        <td>2051.60</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Fr&#xE9;d&#xE9;rique Citeaux</td>
+                        <td>174.90</td>
+                        <td>1838.20</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Roland Mendel</td>
+                        <td>174.90</td>
+                        <td>1792.00</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Rene Phillips</td>
+                        <td>174.90</td>
+                        <td>1755.00</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Mary Saveley</td>
+                        <td>174.90</td>
+                        <td>1688.00</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Philip Cramer</td>
+                        <td>174.90</td>
+                        <td>1584.00</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Jean Fresni&#xE8;re</td>
+                        <td>174.90</td>
+                        <td>1078.00</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Christina Berglund</td>
+                        <td>174.90</td>
+                        <td>1031.70</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Janete Limeira</td>
+                        <td>174.90</td>
+                        <td>914.40</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Isabel de Castro</td>
+                        <td>174.90</td>
+                        <td>851.20</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Philip Cramer</td>
+                        <td>174.90</td>
+                        <td>656.00</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Elizabeth Brown</td>
+                        <td>174.90</td>
+                        <td>631.60</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Karin Josephs</td>
+                        <td>174.90</td>
+                        <td>567.50</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Maurizio Moroni</td>
+                        <td>174.90</td>
+                        <td>537.60</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Mary Saveley</td>
+                        <td>174.90</td>
+                        <td>531.40</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Thomas Hardy</td>
+                        <td>174.90</td>
+                        <td>453.00</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Sergio Guti&#xE9;rrez</td>
+                        <td>174.90</td>
+                        <td>443.40</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Annette Roulet</td>
+                        <td>174.90</td>
+                        <td>414.00</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Pirkko Koskitalo</td>
+                        <td>174.90</td>
+                        <td>393.00</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Maria Larsson</td>
+                        <td>174.90</td>
+                        <td>360.00</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Karin Josephs</td>
+                        <td>174.90</td>
+                        <td>273.60</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Maria Larsson</td>
+                        <td>174.90</td>
+                        <td>234.80</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Christina Berglund</td>
+                        <td>174.90</td>
+                        <td>174.90</td>
+                        <td>5793.10</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Paula Wilson</td>
+                        <td>147.00</td>
+                        <td>10495.60</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Carlos Hern&#xE1;ndez</td>
+                        <td>147.00</td>
+                        <td>3163.20</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Palle Ibsen</td>
+                        <td>147.00</td>
+                        <td>2719.00</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Lino Rodriguez</td>
+                        <td>147.00</td>
+                        <td>1848.00</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Laurence Lebihan</td>
+                        <td>147.00</td>
+                        <td>1820.80</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Pascale Cartrain</td>
+                        <td>147.00</td>
+                        <td>1770.80</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Felipe Izquierdo</td>
+                        <td>147.00</td>
+                        <td>1760.00</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Peter Franken</td>
+                        <td>147.00</td>
+                        <td>1560.00</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Janete Limeira</td>
+                        <td>147.00</td>
+                        <td>1472.00</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Victoria Ashworth</td>
+                        <td>147.00</td>
+                        <td>1328.00</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Carlos Hern&#xE1;ndez</td>
+                        <td>147.00</td>
+                        <td>1272.00</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Guillermo Fern&#xE1;ndez</td>
+                        <td>147.00</td>
+                        <td>1249.10</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Karl Jablonski</td>
+                        <td>147.00</td>
+                        <td>1125.50</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Hari Kumar</td>
+                        <td>147.00</td>
+                        <td>1051.20</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>L&#xFA;cia Carvalho</td>
+                        <td>147.00</td>
+                        <td>925.10</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Martine Ranc&#xE9;</td>
+                        <td>147.00</td>
+                        <td>756.00</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Philip Cramer</td>
+                        <td>147.00</td>
+                        <td>717.60</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Pascale Cartrain</td>
+                        <td>147.00</td>
+                        <td>713.30</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Karl Jablonski</td>
+                        <td>147.00</td>
+                        <td>704.00</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Isabel de Castro</td>
+                        <td>147.00</td>
+                        <td>672.00</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Georg Pipps</td>
+                        <td>147.00</td>
+                        <td>502.20</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Mary Saveley</td>
+                        <td>147.00</td>
+                        <td>496.00</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Victoria Ashworth</td>
+                        <td>147.00</td>
+                        <td>386.20</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Lino Rodriguez</td>
+                        <td>147.00</td>
+                        <td>305.30</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Giovanni Rovelli</td>
+                        <td>147.00</td>
+                        <td>235.20</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Helen Bennett</td>
+                        <td>147.00</td>
+                        <td>230.40</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Pedro Afonso</td>
+                        <td>147.00</td>
+                        <td>216.00</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Carlos Hern&#xE1;ndez</td>
+                        <td>147.00</td>
+                        <td>182.40</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>Elizabeth Brown</td>
+                        <td>147.00</td>
+                        <td>156.00</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>3</td>
+                        <td>John Steel</td>
+                        <td>147.00</td>
+                        <td>147.00</td>
+                        <td>10495.60</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Horst Kloss</td>
+                        <td>136.80</td>
+                        <td>10588.50</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Roland Mendel</td>
+                        <td>136.80</td>
+                        <td>8623.45</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Jose Pavarotti</td>
+                        <td>136.80</td>
+                        <td>4735.44</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Miguel Angel Paolino</td>
+                        <td>136.80</td>
+                        <td>4150.05</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Laurence Lebihan</td>
+                        <td>136.80</td>
+                        <td>3000.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Renate Messner</td>
+                        <td>136.80</td>
+                        <td>2657.80</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Patricia McKenna</td>
+                        <td>136.80</td>
+                        <td>2614.50</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Rita M&#xFC;ller</td>
+                        <td>136.80</td>
+                        <td>2427.50</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Yang Wang</td>
+                        <td>136.80</td>
+                        <td>2356.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Patricia McKenna</td>
+                        <td>136.80</td>
+                        <td>2048.50</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Carlos Gonz&#xE1;lez</td>
+                        <td>136.80</td>
+                        <td>1412.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Karl Jablonski</td>
+                        <td>136.80</td>
+                        <td>1388.50</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Renate Messner</td>
+                        <td>136.80</td>
+                        <td>1380.60</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Pedro Afonso</td>
+                        <td>136.80</td>
+                        <td>912.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Elizabeth Lincoln</td>
+                        <td>136.80</td>
+                        <td>896.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Antonio Moreno</td>
+                        <td>136.80</td>
+                        <td>881.25</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Guillermo Fern&#xE1;ndez</td>
+                        <td>136.80</td>
+                        <td>816.30</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Annette Roulet</td>
+                        <td>136.80</td>
+                        <td>676.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Aria Cruz</td>
+                        <td>136.80</td>
+                        <td>618.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Carlos Hern&#xE1;ndez</td>
+                        <td>136.80</td>
+                        <td>575.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Annette Roulet</td>
+                        <td>136.80</td>
+                        <td>550.80</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Philip Cramer</td>
+                        <td>136.80</td>
+                        <td>462.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Simon Crowther</td>
+                        <td>136.80</td>
+                        <td>352.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Yoshi Tannamuri</td>
+                        <td>136.80</td>
+                        <td>278.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Henriette Pfalzheim</td>
+                        <td>136.80</td>
+                        <td>240.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Patricio Simpson</td>
+                        <td>136.80</td>
+                        <td>225.50</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Jonas Bergulfsen</td>
+                        <td>136.80</td>
+                        <td>200.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Anabela Domingues</td>
+                        <td>136.80</td>
+                        <td>200.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Hanna Moos</td>
+                        <td>136.80</td>
+                        <td>149.00</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Jean Fresni&#xE8;re</td>
+                        <td>136.80</td>
+                        <td>147.90</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>4</td>
+                        <td>Hanna Moos</td>
+                        <td>136.80</td>
+                        <td>136.80</td>
+                        <td>10588.50</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Horst Kloss</td>
+                        <td>110.00</td>
+                        <td>10191.70</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Horst Kloss</td>
+                        <td>110.00</td>
+                        <td>4181.50</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Georg Pipps</td>
+                        <td>110.00</td>
+                        <td>4180.00</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Christina Berglund</td>
+                        <td>110.00</td>
+                        <td>3192.65</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Mary Saveley</td>
+                        <td>110.00</td>
+                        <td>2812.00</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Hari Kumar</td>
+                        <td>110.00</td>
+                        <td>2715.90</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Maria Larsson</td>
+                        <td>110.00</td>
+                        <td>2295.20</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Mario Pontes</td>
+                        <td>110.00</td>
+                        <td>2162.80</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Antonio Moreno</td>
+                        <td>110.00</td>
+                        <td>2156.50</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Renate Messner</td>
+                        <td>110.00</td>
+                        <td>2085.00</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Hari Kumar</td>
+                        <td>110.00</td>
+                        <td>1908.00</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Lino Rodriguez</td>
+                        <td>110.00</td>
+                        <td>1836.00</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Michael Holz</td>
+                        <td>110.00</td>
+                        <td>1823.80</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Henriette Pfalzheim</td>
+                        <td>110.00</td>
+                        <td>1819.50</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Carlos Gonz&#xE1;lez</td>
+                        <td>110.00</td>
+                        <td>1770.00</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Horst Kloss</td>
+                        <td>110.00</td>
+                        <td>1670.00</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Pirkko Koskitalo</td>
+                        <td>110.00</td>
+                        <td>1546.30</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Pirkko Koskitalo</td>
+                        <td>110.00</td>
+                        <td>1344.00</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Catherine Dewey</td>
+                        <td>110.00</td>
+                        <td>946.00</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Carlos Hern&#xE1;ndez</td>
+                        <td>110.00</td>
+                        <td>880.50</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Laurence Lebihan</td>
+                        <td>110.00</td>
+                        <td>846.00</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Ann Devon</td>
+                        <td>110.00</td>
+                        <td>796.35</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Jos&#xE9; Pedro Freyre</td>
+                        <td>110.00</td>
+                        <td>749.00</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Renate Messner</td>
+                        <td>110.00</td>
+                        <td>517.40</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Philip Cramer</td>
+                        <td>110.00</td>
+                        <td>493.80</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Fran Wilson</td>
+                        <td>110.00</td>
+                        <td>417.20</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Howard Snyder</td>
+                        <td>110.00</td>
+                        <td>396.20</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Victoria Ashworth</td>
+                        <td>110.00</td>
+                        <td>355.50</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Karin Josephs</td>
+                        <td>110.00</td>
+                        <td>275.10</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>John Steel</td>
+                        <td>110.00</td>
+                        <td>210.00</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Victoria Ashworth</td>
+                        <td>110.00</td>
+                        <td>139.80</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>5</td>
+                        <td>Yvonne Moncada</td>
+                        <td>110.00</td>
+                        <td>110.00</td>
+                        <td>10191.70</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Jose Pavarotti</td>
+                        <td>155.00</td>
+                        <td>3680.50</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Patricia McKenna</td>
+                        <td>155.00</td>
+                        <td>3109.00</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Maria Larsson</td>
+                        <td>155.00</td>
+                        <td>2844.50</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Jean Fresni&#xE8;re</td>
+                        <td>155.00</td>
+                        <td>2595.00</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Pirkko Koskitalo</td>
+                        <td>155.00</td>
+                        <td>2413.90</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Alexander Feuer</td>
+                        <td>155.00</td>
+                        <td>2147.40</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Thomas Hardy</td>
+                        <td>155.00</td>
+                        <td>2142.90</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Antonio Moreno</td>
+                        <td>155.00</td>
+                        <td>2082.00</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Fr&#xE9;d&#xE9;rique Citeaux</td>
+                        <td>155.00</td>
+                        <td>2040.00</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Christina Berglund</td>
+                        <td>155.00</td>
+                        <td>1565.65</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Paula Wilson</td>
+                        <td>155.00</td>
+                        <td>1299.00</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Peter Franken</td>
+                        <td>155.00</td>
+                        <td>1257.30</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Renate Messner</td>
+                        <td>155.00</td>
+                        <td>1152.50</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Henriette Pfalzheim</td>
+                        <td>155.00</td>
+                        <td>1067.10</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Paula Wilson</td>
+                        <td>155.00</td>
+                        <td>977.50</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Janete Limeira</td>
+                        <td>155.00</td>
+                        <td>965.00</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Miguel Angel Paolino</td>
+                        <td>155.00</td>
+                        <td>838.45</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Jytte Petersen</td>
+                        <td>155.00</td>
+                        <td>835.20</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Helvetius Nagy</td>
+                        <td>155.00</td>
+                        <td>764.30</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Jean Fresni&#xE8;re</td>
+                        <td>155.00</td>
+                        <td>711.00</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Roland Mendel</td>
+                        <td>155.00</td>
+                        <td>647.75</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Fr&#xE9;d&#xE9;rique Citeaux</td>
+                        <td>155.00</td>
+                        <td>625.00</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Helvetius Nagy</td>
+                        <td>155.00</td>
+                        <td>569.00</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Fr&#xE9;d&#xE9;rique Citeaux</td>
+                        <td>155.00</td>
+                        <td>547.80</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Maurizio Moroni</td>
+                        <td>155.00</td>
+                        <td>543.00</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Victoria Ashworth</td>
+                        <td>155.00</td>
+                        <td>477.00</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Aria Cruz</td>
+                        <td>155.00</td>
+                        <td>387.50</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Hanna Moos</td>
+                        <td>155.00</td>
+                        <td>330.00</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Jaime Yorres</td>
+                        <td>155.00</td>
+                        <td>317.75</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>6</td>
+                        <td>Eduardo Saavedra</td>
+                        <td>155.00</td>
+                        <td>155.00</td>
+                        <td>3680.50</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Jose Pavarotti</td>
+                        <td>28.00</td>
+                        <td>6475.40</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Jose Pavarotti</td>
+                        <td>28.00</td>
+                        <td>6375.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Roland Mendel</td>
+                        <td>28.00</td>
+                        <td>6300.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Howard Snyder</td>
+                        <td>28.00</td>
+                        <td>5032.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Jean Fresni&#xE8;re</td>
+                        <td>28.00</td>
+                        <td>4326.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Horst Kloss</td>
+                        <td>28.00</td>
+                        <td>3900.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Renate Messner</td>
+                        <td>28.00</td>
+                        <td>2493.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Paula Wilson</td>
+                        <td>28.00</td>
+                        <td>2388.50</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Carlos Hern&#xE1;ndez</td>
+                        <td>28.00</td>
+                        <td>2285.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Howard Snyder</td>
+                        <td>28.00</td>
+                        <td>1650.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Jose Pavarotti</td>
+                        <td>28.00</td>
+                        <td>1508.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Karl Jablonski</td>
+                        <td>28.00</td>
+                        <td>1476.10</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Anabela Domingues</td>
+                        <td>28.00</td>
+                        <td>1413.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Jean Fresni&#xE8;re</td>
+                        <td>28.00</td>
+                        <td>1140.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Karin Josephs</td>
+                        <td>28.00</td>
+                        <td>1064.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Palle Ibsen</td>
+                        <td>28.00</td>
+                        <td>812.50</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Zbyszek Piestrzeniewicz</td>
+                        <td>28.00</td>
+                        <td>808.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Bernardo Batista</td>
+                        <td>28.00</td>
+                        <td>807.38</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Georg Pipps</td>
+                        <td>28.00</td>
+                        <td>800.10</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Rene Phillips</td>
+                        <td>28.00</td>
+                        <td>565.50</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Renate Messner</td>
+                        <td>28.00</td>
+                        <td>543.65</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Victoria Ashworth</td>
+                        <td>28.00</td>
+                        <td>493.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Yoshi Latimer</td>
+                        <td>28.00</td>
+                        <td>479.80</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Hanna Moos</td>
+                        <td>28.00</td>
+                        <td>464.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Janine Labrune</td>
+                        <td>28.00</td>
+                        <td>424.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Annette Roulet</td>
+                        <td>28.00</td>
+                        <td>399.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Carlos Hern&#xE1;ndez</td>
+                        <td>28.00</td>
+                        <td>358.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Lino Rodriguez</td>
+                        <td>28.00</td>
+                        <td>256.50</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Paula Parente</td>
+                        <td>28.00</td>
+                        <td>142.50</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Matti Karttunen</td>
+                        <td>28.00</td>
+                        <td>120.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Howard Snyder</td>
+                        <td>28.00</td>
+                        <td>72.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Palle Ibsen</td>
+                        <td>28.00</td>
+                        <td>65.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>7</td>
+                        <td>Maurizio Moroni</td>
+                        <td>28.00</td>
+                        <td>28.00</td>
+                        <td>6475.40</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Roland Mendel</td>
+                        <td>57.50</td>
+                        <td>6483.05</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Martine Ranc&#xE9;</td>
+                        <td>57.50</td>
+                        <td>4985.50</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>L&#xFA;cia Carvalho</td>
+                        <td>57.50</td>
+                        <td>2896.25</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Jos&#xE9; Pedro Freyre</td>
+                        <td>57.50</td>
+                        <td>2775.05</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Felipe Izquierdo</td>
+                        <td>57.50</td>
+                        <td>2720.05</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Jean Fresni&#xE8;re</td>
+                        <td>57.50</td>
+                        <td>2697.50</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Carlos Hern&#xE1;ndez</td>
+                        <td>57.50</td>
+                        <td>2054.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Patricia McKenna</td>
+                        <td>57.50</td>
+                        <td>1928.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Aria Cruz</td>
+                        <td>57.50</td>
+                        <td>1820.20</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Mario Pontes</td>
+                        <td>57.50</td>
+                        <td>1535.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Christina Berglund</td>
+                        <td>57.50</td>
+                        <td>1503.60</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Catherine Dewey</td>
+                        <td>57.50</td>
+                        <td>1434.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Peter Franken</td>
+                        <td>57.50</td>
+                        <td>1429.75</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Paula Parente</td>
+                        <td>57.50</td>
+                        <td>1422.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Liu Wong</td>
+                        <td>57.50</td>
+                        <td>1393.24</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Giovanni Rovelli</td>
+                        <td>57.50</td>
+                        <td>1380.25</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Jose Pavarotti</td>
+                        <td>57.50</td>
+                        <td>1264.50</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Jean Fresni&#xE8;re</td>
+                        <td>57.50</td>
+                        <td>1260.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Maria Anders</td>
+                        <td>57.50</td>
+                        <td>1086.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Rita M&#xFC;ller</td>
+                        <td>57.50</td>
+                        <td>945.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Philip Cramer</td>
+                        <td>57.50</td>
+                        <td>918.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Jytte Petersen</td>
+                        <td>57.50</td>
+                        <td>870.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Helen Bennett</td>
+                        <td>57.50</td>
+                        <td>758.50</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Bernardo Batista</td>
+                        <td>57.50</td>
+                        <td>636.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Pirkko Koskitalo</td>
+                        <td>57.50</td>
+                        <td>629.50</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Rita M&#xFC;ller</td>
+                        <td>57.50</td>
+                        <td>620.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Janete Limeira</td>
+                        <td>57.50</td>
+                        <td>605.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Jonas Bergulfsen</td>
+                        <td>57.50</td>
+                        <td>500.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Ana Trujillo</td>
+                        <td>57.50</td>
+                        <td>479.75</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Fr&#xE9;d&#xE9;rique Citeaux</td>
+                        <td>57.50</td>
+                        <td>450.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Janete Limeira</td>
+                        <td>57.50</td>
+                        <td>382.50</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Annette Roulet</td>
+                        <td>57.50</td>
+                        <td>62.00</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>8</td>
+                        <td>Yoshi Tannamuri</td>
+                        <td>57.50</td>
+                        <td>57.50</td>
+                        <td>6483.05</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Patricia McKenna</td>
+                        <td>45.00</td>
+                        <td>6201.90</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Jose Pavarotti</td>
+                        <td>45.00</td>
+                        <td>5256.50</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Horst Kloss</td>
+                        <td>45.00</td>
+                        <td>4668.00</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Michael Holz</td>
+                        <td>45.00</td>
+                        <td>4666.94</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Jose Pavarotti</td>
+                        <td>45.00</td>
+                        <td>4371.60</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Christina Berglund</td>
+                        <td>45.00</td>
+                        <td>4210.50</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Peter Franken</td>
+                        <td>45.00</td>
+                        <td>2301.75</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Laurence Lebihan</td>
+                        <td>45.00</td>
+                        <td>2032.00</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Roland Mendel</td>
+                        <td>45.00</td>
+                        <td>1921.00</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Henriette Pfalzheim</td>
+                        <td>45.00</td>
+                        <td>1768.00</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Yoshi Latimer</td>
+                        <td>45.00</td>
+                        <td>1701.00</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Rene Phillips</td>
+                        <td>45.00</td>
+                        <td>1682.50</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Georg Pipps</td>
+                        <td>45.00</td>
+                        <td>1638.45</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Lino Rodriguez</td>
+                        <td>45.00</td>
+                        <td>1515.75</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Peter Franken</td>
+                        <td>45.00</td>
+                        <td>1423.00</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Howard Snyder</td>
+                        <td>45.00</td>
+                        <td>1327.00</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Fran Wilson</td>
+                        <td>45.00</td>
+                        <td>1295.00</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>L&#xFA;cia Carvalho</td>
+                        <td>45.00</td>
+                        <td>1291.60</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Peter Franken</td>
+                        <td>45.00</td>
+                        <td>1203.50</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Antonio Moreno</td>
+                        <td>45.00</td>
+                        <td>956.90</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Carine Schmitt</td>
+                        <td>45.00</td>
+                        <td>920.10</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Andr&#xE9; Fonseca</td>
+                        <td>45.00</td>
+                        <td>801.10</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Patricia McKenna</td>
+                        <td>45.00</td>
+                        <td>703.25</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Rita M&#xFC;ller</td>
+                        <td>45.00</td>
+                        <td>694.75</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Howard Snyder</td>
+                        <td>45.00</td>
+                        <td>671.35</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Christina Berglund</td>
+                        <td>45.00</td>
+                        <td>668.70</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Fr&#xE9;d&#xE9;rique Citeaux</td>
+                        <td>45.00</td>
+                        <td>660.00</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Jytte Petersen</td>
+                        <td>45.00</td>
+                        <td>570.00</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Miguel Angel Paolino</td>
+                        <td>45.00</td>
+                        <td>534.85</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Rita M&#xFC;ller</td>
+                        <td>45.00</td>
+                        <td>530.40</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Matti Karttunen</td>
+                        <td>45.00</td>
+                        <td>412.35</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Antonio Moreno</td>
+                        <td>45.00</td>
+                        <td>375.50</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Andr&#xE9; Fonseca</td>
+                        <td>45.00</td>
+                        <td>331.78</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Maurizio Moroni</td>
+                        <td>45.00</td>
+                        <td>193.00</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Fran Wilson</td>
+                        <td>45.00</td>
+                        <td>125.00</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Janine Labrune</td>
+                        <td>45.00</td>
+                        <td>63.00</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>9</td>
+                        <td>Helen Bennett</td>
+                        <td>45.00</td>
+                        <td>45.00</td>
+                        <td>6201.90</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Horst Kloss</td>
+                        <td>93.50</td>
+                        <td>10164.80</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Horst Kloss</td>
+                        <td>93.50</td>
+                        <td>4825.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Jose Pavarotti</td>
+                        <td>93.50</td>
+                        <td>4451.70</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Roland Mendel</td>
+                        <td>93.50</td>
+                        <td>3600.73</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Palle Ibsen</td>
+                        <td>93.50</td>
+                        <td>3490.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Philip Cramer</td>
+                        <td>93.50</td>
+                        <td>3463.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Andr&#xE9; Fonseca</td>
+                        <td>93.50</td>
+                        <td>3424.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Patricia McKenna</td>
+                        <td>93.50</td>
+                        <td>3370.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Jose Pavarotti</td>
+                        <td>93.50</td>
+                        <td>2941.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Jose Pavarotti</td>
+                        <td>93.50</td>
+                        <td>2827.90</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Maria Larsson</td>
+                        <td>93.50</td>
+                        <td>2545.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Karl Jablonski</td>
+                        <td>93.50</td>
+                        <td>2334.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Jose Pavarotti</td>
+                        <td>93.50</td>
+                        <td>2048.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Rene Phillips</td>
+                        <td>93.50</td>
+                        <td>1893.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Thomas Hardy</td>
+                        <td>93.50</td>
+                        <td>1704.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Jose Pavarotti</td>
+                        <td>93.50</td>
+                        <td>1570.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Peter Franken</td>
+                        <td>93.50</td>
+                        <td>1331.75</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Laurence Lebihan</td>
+                        <td>93.50</td>
+                        <td>1296.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Patricia McKenna</td>
+                        <td>93.50</td>
+                        <td>1238.40</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Mario Pontes</td>
+                        <td>93.50</td>
+                        <td>1150.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Jaime Yorres</td>
+                        <td>93.50</td>
+                        <td>1125.67</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Felipe Izquierdo</td>
+                        <td>93.50</td>
+                        <td>1073.90</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Karl Jablonski</td>
+                        <td>93.50</td>
+                        <td>996.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Horst Kloss</td>
+                        <td>93.50</td>
+                        <td>972.50</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Maria Anders</td>
+                        <td>93.50</td>
+                        <td>878.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Sergio Guti&#xE9;rrez</td>
+                        <td>93.50</td>
+                        <td>706.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Matti Karttunen</td>
+                        <td>93.50</td>
+                        <td>642.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Jean Fresni&#xE8;re</td>
+                        <td>93.50</td>
+                        <td>638.50</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Christina Berglund</td>
+                        <td>93.50</td>
+                        <td>630.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>L&#xFA;cia Carvalho</td>
+                        <td>93.50</td>
+                        <td>595.50</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Bernardo Batista</td>
+                        <td>93.50</td>
+                        <td>550.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Karl Jablonski</td>
+                        <td>93.50</td>
+                        <td>468.45</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Carlos Hern&#xE1;ndez</td>
+                        <td>93.50</td>
+                        <td>378.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Maria Anders</td>
+                        <td>93.50</td>
+                        <td>330.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Aria Cruz</td>
+                        <td>93.50</td>
+                        <td>287.80</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Liz Nixon</td>
+                        <td>93.50</td>
+                        <td>180.40</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Alexander Feuer</td>
+                        <td>93.50</td>
+                        <td>114.00</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>10</td>
+                        <td>Paolo Accorti</td>
+                        <td>93.50</td>
+                        <td>93.50</td>
+                        <td>10164.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Horst Kloss</td>
+                        <td>52.35</td>
+                        <td>4529.80</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Elizabeth Lincoln</td>
+                        <td>52.35</td>
+                        <td>3118.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Jose Pavarotti</td>
+                        <td>52.35</td>
+                        <td>3082.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Laurence Lebihan</td>
+                        <td>52.35</td>
+                        <td>2598.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Art Braunschweiger</td>
+                        <td>52.35</td>
+                        <td>2487.50</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Yang Wang</td>
+                        <td>52.35</td>
+                        <td>2311.70</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Jose Pavarotti</td>
+                        <td>52.35</td>
+                        <td>2196.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Yang Wang</td>
+                        <td>52.35</td>
+                        <td>1990.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Georg Pipps</td>
+                        <td>52.35</td>
+                        <td>1912.85</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Pirkko Koskitalo</td>
+                        <td>52.35</td>
+                        <td>1871.25</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Felipe Izquierdo</td>
+                        <td>52.35</td>
+                        <td>1850.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Karl Jablonski</td>
+                        <td>52.35</td>
+                        <td>1770.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Maurizio Moroni</td>
+                        <td>52.35</td>
+                        <td>1710.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Michael Holz</td>
+                        <td>52.35</td>
+                        <td>1701.46</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Michael Holz</td>
+                        <td>52.35</td>
+                        <td>1644.60</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Andr&#xE9; Fonseca</td>
+                        <td>52.35</td>
+                        <td>1498.35</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Christina Berglund</td>
+                        <td>52.35</td>
+                        <td>1459.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>L&#xFA;cia Carvalho</td>
+                        <td>52.35</td>
+                        <td>1296.75</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Helen Bennett</td>
+                        <td>52.35</td>
+                        <td>1080.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Patricia McKenna</td>
+                        <td>52.35</td>
+                        <td>997.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Palle Ibsen</td>
+                        <td>52.35</td>
+                        <td>920.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Ann Devon</td>
+                        <td>52.35</td>
+                        <td>655.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Jaime Yorres</td>
+                        <td>52.35</td>
+                        <td>596.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Laurence Lebihan</td>
+                        <td>52.35</td>
+                        <td>509.75</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Laurence Lebihan</td>
+                        <td>52.35</td>
+                        <td>360.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Thomas Hardy</td>
+                        <td>52.35</td>
+                        <td>336.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Ana Trujillo</td>
+                        <td>52.35</td>
+                        <td>320.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Thomas Hardy</td>
+                        <td>52.35</td>
+                        <td>285.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Simon Crowther</td>
+                        <td>52.35</td>
+                        <td>252.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Paul Henriot</td>
+                        <td>52.35</td>
+                        <td>240.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Paul Henriot</td>
+                        <td>52.35</td>
+                        <td>139.80</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Paolo Accorti</td>
+                        <td>52.35</td>
+                        <td>88.00</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Giovanni Rovelli</td>
+                        <td>52.35</td>
+                        <td>55.20</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>11</td>
+                        <td>Dominique Perrier</td>
+                        <td>52.35</td>
+                        <td>52.35</td>
+                        <td>4529.80</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Roland Mendel</td>
+                        <td>12.50</td>
+                        <td>6984.50</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Maria Larsson</td>
+                        <td>12.50</td>
+                        <td>4337.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Mart&#xED;n Sommer</td>
+                        <td>12.50</td>
+                        <td>4035.80</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Jytte Petersen</td>
+                        <td>12.50</td>
+                        <td>3923.75</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Martine Ranc&#xE9;</td>
+                        <td>12.50</td>
+                        <td>3687.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Renate Messner</td>
+                        <td>12.50</td>
+                        <td>3603.22</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Catherine Dewey</td>
+                        <td>12.50</td>
+                        <td>3304.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Carlos Hern&#xE1;ndez</td>
+                        <td>12.50</td>
+                        <td>2878.08</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Liz Nixon</td>
+                        <td>12.50</td>
+                        <td>2775.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Annette Roulet</td>
+                        <td>12.50</td>
+                        <td>2760.80</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Roland Mendel</td>
+                        <td>12.50</td>
+                        <td>2540.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Roland Mendel</td>
+                        <td>12.50</td>
+                        <td>2499.25</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Henriette Pfalzheim</td>
+                        <td>12.50</td>
+                        <td>2310.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Hari Kumar</td>
+                        <td>12.50</td>
+                        <td>2290.40</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Roland Mendel</td>
+                        <td>12.50</td>
+                        <td>2216.25</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Peter Franken</td>
+                        <td>12.50</td>
+                        <td>1926.06</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>L&#xFA;cia Carvalho</td>
+                        <td>12.50</td>
+                        <td>1913.85</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Palle Ibsen</td>
+                        <td>12.50</td>
+                        <td>1704.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Horst Kloss</td>
+                        <td>12.50</td>
+                        <td>1684.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Giovanni Rovelli</td>
+                        <td>12.50</td>
+                        <td>1650.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Hari Kumar</td>
+                        <td>12.50</td>
+                        <td>1632.15</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Philip Cramer</td>
+                        <td>12.50</td>
+                        <td>1585.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Thomas Hardy</td>
+                        <td>12.50</td>
+                        <td>1477.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Mario Pontes</td>
+                        <td>12.50</td>
+                        <td>1442.50</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Alexander Feuer</td>
+                        <td>12.50</td>
+                        <td>1335.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Paula Parente</td>
+                        <td>12.50</td>
+                        <td>1255.80</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Pirkko Koskitalo</td>
+                        <td>12.50</td>
+                        <td>1132.35</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Maria Larsson</td>
+                        <td>12.50</td>
+                        <td>875.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Andr&#xE9; Fonseca</td>
+                        <td>12.50</td>
+                        <td>850.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Horst Kloss</td>
+                        <td>12.50</td>
+                        <td>770.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Carlos Gonz&#xE1;lez</td>
+                        <td>12.50</td>
+                        <td>720.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Paula Wilson</td>
+                        <td>12.50</td>
+                        <td>629.50</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Martine Ranc&#xE9;</td>
+                        <td>12.50</td>
+                        <td>616.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Mary Saveley</td>
+                        <td>12.50</td>
+                        <td>572.10</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Helen Bennett</td>
+                        <td>12.50</td>
+                        <td>446.60</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Sven Ottlieb</td>
+                        <td>12.50</td>
+                        <td>420.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Zbyszek Piestrzeniewicz</td>
+                        <td>12.50</td>
+                        <td>399.85</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Bernardo Batista</td>
+                        <td>12.50</td>
+                        <td>393.45</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Manuel Pereira</td>
+                        <td>12.50</td>
+                        <td>387.50</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Roland Mendel</td>
+                        <td>12.50</td>
+                        <td>344.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Mario Pontes</td>
+                        <td>12.50</td>
+                        <td>315.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Andr&#xE9; Fonseca</td>
+                        <td>12.50</td>
+                        <td>280.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Liu Wong</td>
+                        <td>12.50</td>
+                        <td>228.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Thomas Hardy</td>
+                        <td>12.50</td>
+                        <td>191.10</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Christina Berglund</td>
+                        <td>12.50</td>
+                        <td>96.50</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Pascale Cartrain</td>
+                        <td>12.50</td>
+                        <td>28.00</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Paolo Accorti</td>
+                        <td>12.50</td>
+                        <td>18.40</td>
+                        <td>6984.50</td>
+                  </tr>
+                  <tr>
+                        <td>12</td>
+                        <td>Patricio Simpson</td>
+                        <td>12.50</td>
+                        <td>12.50</td>
+                        <td>6984.50</td>
+                  </tr>
+            </table>
+            <div class="py-120"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+
+    </div>
+
+    
+  <div class="box-shadow" style="border-top:1px solid #e2ecee;">
+    <div class="container">
+      <div class="row" style="padding:60px 0 10px 0;">
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 pb-15"><img src="../../img/dofactorylogo.png" height="30" /></div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../about.html">About Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../story.html">Our Story</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../customers.html">Customers</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../contact.html">Contact Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../faq.html">FAQs</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum.html">Forum</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum/explore.html">Explore Forum</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../login.html">Login</a> &nbsp; <a class="footer-link" href="../../join.html">Join</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted ">Products</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../products.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-net.html">Dofactory .NET</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-sql.html">Dofactory SQL</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-js.html">Dofactory JS</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-bundle.html">Dofactory Bundle</a></li>
+          </ul>
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-8 text-muted">Pricing</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../pricing.html">Product Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/bundle.html">Bundle Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/compare.html">Compare Editions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Demos</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../showcases.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/analytics.html">Analytics App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/ecommerce.html">Ecommerce App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/saas.html">SaaS App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/crm.html">CRM App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/app-factory.html">33-Day App Factory&trade;</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-3 mb-2 ">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Tutorials</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../tutorials.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql.html">SQL Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../reference.html">SQL Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html.html">HTML Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html/ref.html">HTML Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../net/design-patterns.html">.NET Design Patterns</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../csharp-coding-standards.html">C# Coding Standards</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../javascript.html">JavaScript Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../connection-strings.html">Connection Strings</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row mx-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="row py-10">
+        <div class="col pl-35">
+          <div class="font-weight-bold font-18 merriweather text-muted">Stay Inspired!</div>
+        </div>
+      </div>
+
+      <div class="row pt-3 pb-10">
+        <div class="col-12 col-md-6 xcol-md-5 pl-35">
+          Join other developers and designers who have
+          already signed up for our mailing list.
+        </div>
+        <div class="col-12 col-md-4 xcol-md-4 pl-35">
+
+          
+<form method="post" action="https://www.dofactory.com/emaillist">
+    <div class="input-group mb-3 pt-1">
+        <input type="text" class="form-control" placeholder="Your email..." aria-label="your-email" aria-describedby="your-email" style="max-width:260px;" data-val="true" data-val-email="Invalid email address" data-val-required="Email is required." id="YourEmail" name="YourEmail" value="">
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-green" style="height:37px;">
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <span class="field-validation-valid" data-valmsg-for="YourEmail" data-valmsg-replace="true"></span>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7EquW-e84kLMYNzgKnoFTY_G8pKNj48nltxQb8hkuml7rgYBlUILN7lg357U1y4cjLTu1HvvN7jFvIiFs2erhT-51y8c3zanzX2xlTTmKJkp5vM-pdXQS3mb8U3o5tw0_hpY" /></form>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row mx-10 mt-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="d-flex flex-lg-row flex-column p-20 mb-15 font-14">
+        <div class="pb-1 ">
+          <a href="../../terms.html" class="text-muted">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../privacy.html" class="text-muted">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../licensing.html" class="text-muted">Licensing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../eula.html" class="text-muted">EULA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../sitemap.html" class="text-muted">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="pb-1">
+          &copy; Data &amp; Object Factory, LLC. 
+        </div>
+        <div class="pb-1 ml-lg-auto">
+          Made with &nbsp;<img src="../../img/heart.png" style="width:14px;" />&nbsp; in Austin, Texas. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vsn 1.3.0
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.namespace("Sql").Sandbox = (function () {
+
+      var activateControls = function () {
+
+        // clear button
+
+        $("#clear").on("click", function () {
+
+          $("#prescript").val("");
+          $("#script").val("");
+          $("#scriptassist").val("Enter your own SQL and click Run.");
+          $("#scriptassist-display").html("&nbsp;&nbsp;&nbsp;Enter your own SQL and click Run.");
+
+          $("#results").html("<div style='height:450px;color:#666;padding-left:0px;'>No results to display</div>");
+        });
+
+        // display column names when clicked on table name
+
+        $("a[id^='table']").on("click", function () {
+          var id = "#" + $(this).attr("id").replace("table", "columns");
+          $(id).slideToggle(200);
+        });
+      };
+
+      var fadeIn = function () {
+        $('.fffade').fadeTo(800, 1);
+      }
+
+      var start = function () {
+        activateControls();
+        fadeIn();
+      };
+
+      return { start: start };
+    })();
+
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Sql.Sandbox.start();
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/sql/editor/lastvalue-partition by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:46:19 GMT -->
+</html>

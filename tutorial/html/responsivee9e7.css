@@ -1,0 +1,8 @@
+@media (min-width: 1200px) {
+  .tutorial p:not(.tip), .tutorial .dl { margin-right: 100px !important; }
+  .tutorial p.tip { margin-right: 50px !important; }
+}
+
+@media (max-width: 576px) {
+  .tutorial h1 { font-size: 32px; }
+}

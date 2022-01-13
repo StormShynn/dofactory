@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/javascript/builtin-types by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:05:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Built-in Types - Dofactory</title>
+    <meta name="keywords" content="javascript value and reference type, javascript string, javascript boolean, javascript number, javascript math, javascript date">
+    <meta name="description" content="Variables come in two different types: value types and reference types. Boolean values and numbers are value-based types, whereas strings, objects, arrays, and functions are reference types. Let&#x27;s look at the differences.">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="builtin-types.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        <link rel="stylesheet" href="../tutorial/css/javascript1cdd.css?v=qVXqJlnTI2nqJ78-w9n5mGO4sNLYFSlXHRVEVwRSTj4" />
+
+<style>
+  .bg-cream-100 { background-color: #f6f8fd !important; }
+</style>
+
+
+<script>
+  var console = {};
+  console.log = function (e) {
+    try {
+
+      if (!e && e != false) e = "undefined";
+      if (e == "Andrew Fuller\n Bob Springsteen") {
+        e = e.replace(/(?:\r\n|\r|\n)/g, '<br>');
+      }
+      document.writeln(e);
+      document.write("<br />");
+    }
+    catch {
+      document.writeln("");
+    }
+  };
+  window.console = console;
+</script>
+
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="../img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        JavaScript Tutorial&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="../javascript.html">JavaScript Intro</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="what-is.html">What is JavaScript</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="essentials.html">JavaScript Essentials</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="variables.html">JavaScript Variables</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="operators.html">JavaScript Operators</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="conditionals.html">JavaScript Conditionals</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="loops.html">JavaScript Loops</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="builtin-types.html">JavaScript Built-in Types</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="objects.html">JavaScript Objects</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="advanced-objects.html">JavaScript Adv. Objects</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="arrays.html">JavaScript Arrays</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="functions.html">JavaScript Functions</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="function-objects.html">JavaScript Function Objects</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="json.html">JavaScript JSON</a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="regular-expressions.html">JavaScript Reg. Expressions</a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="design-patterns.html">JavaScript Patterns</a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="reference.html">JavaScript Reference</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="224" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="../img/arrow-left.jpg" /> &nbsp;Back to JS </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html/ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css/ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="../net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial" xstyle="xmax-width:1200px;">
+
+      <div class="d-flex justify-content-around align-items-start">
+
+        <div class="w-100 m-auto" style="max-width:970px;">
+
+          <h1>JavaScript Built-in Types</h1>
+
+
+<div class="d-flex">
+    <div class="mt-40">
+        <p class="pb-0 mb-0" style="margin-right:0 !important;">JavaScript comes with primitive and composite <em> Built-in Types</em>. The primitive types are: <code>string</code>, <code>number</code>, and <code>boolean</code>, with these special types: <code>null</code>, and <code>undefined</code>. Composite types include object, array, and function (which are all <code>object</code> types).</p>
+    </div>
+    <div class="ml-auto d-none d-md-block text-center" style="flex: 0 0 200px;">
+      <img src="../img/javascript/show-js.png" alt="JavaScript Tutorial" style="margin:20px 10px 0px 35px;" />
+    </div>
+</div>
+
+
+
+<hr />
+<a class="goto-target" id="value-reference"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xvalue-reference&#x27;).show();" onmouseout="$(&#x27;#xvalue-reference&#x27;).hide();">Value and Reference Types</h2>
+    <h2><a id="xvalue-reference" style="display:none" class="d-block pl-12 header-anchor" href="#value-reference">#</a></h2>
+</div>
+
+
+
+<p>
+  From a memory perspective, variables come in two different types: value types and reference types. Boolean values and numbers 
+  are value-based types, whereas strings, objects, arrays, and functions are reference types.  Let's look 
+  at the differences.
+</p>
+
+<p>
+  Value types occupy a fixed size in memory. A boolean value for example only takes one bit. All 
+  numbers in JavaScript are 64-bit floating point numbers, so each number is represented by 8 bytes.  
+  A reference type variable holds a reference to the value whose length is not fixed and can be of any size.
+</p>
+
+<p>
+  Another difference between value and reference types is that value types are copied, passed, and 
+  compared <i>by value</i>. Reference types, are copied, passed, and compared <i>by reference</i>, 
+  rather than by value.  Let's look at value types first:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-1');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-1" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-1">var x = 1;&#xD;&#xA;var y = x;&#xD;&#xA;&#xD;&#xA;console.log(x == y);    // =&gt; true&#xD;&#xA;console.log(x === y);   // =&gt; true&#xD;&#xA;&#xD;&#xA;x = 6;&#xD;&#xA;&#xD;&#xA;console.log(x);         // =&gt; 6  &#xD;&#xA;console.log(y);         // =&gt; 1&#xD;&#xA;&#xD;&#xA;console.log(x == y);    // =&gt; false&#xD;&#xA;console.log(x === y);   // =&gt; false&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var x = 1;&#xD;&#xA;var y = x;&#xD;&#xA;&#xD;&#xA;console.log(x == y);    // =&gt; true&#xD;&#xA;console.log(x === y);   // =&gt; true&#xD;&#xA;&#xD;&#xA;x = 6;&#xD;&#xA;&#xD;&#xA;console.log(x);         // =&gt; 6  &#xD;&#xA;console.log(y);         // =&gt; 1&#xD;&#xA;&#xD;&#xA;console.log(x == y);    // =&gt; false&#xD;&#xA;console.log(x === y);   // =&gt; false&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-1" style="display:none;">
+  <script>
+      var x = 1;
+var y = x;
+
+console.log(x == y);    // => true
+console.log(x === y);   // => true
+
+x = 6;
+
+console.log(x);         // => 6  
+console.log(y);         // => 1
+
+console.log(x == y);    // => false
+console.log(x === y);   // => false
+;
+  </script>
+</div>
+<button id="built-ins-1-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-1');">
+  Run
+</button>
+
+
+<p>
+  When variable <code>y</code> is assigned to <code>x</code> it copies its value 
+  and following the assignment any relationship between <code>x</code> and <code>y</code> 
+  is severed.  So, changing the value of <code>x</code> has no impact on the value 
+  of <code>y</code>.
+</p>
+
+<p>
+  Consider this example where a reference type is copied: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-2');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-2" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-2">var x = { make: &quot;Toyota&quot; };&#xD;&#xA;var y = x;&#xD;&#xA;&#xD;&#xA;console.log(x == y);      // =&gt; true&#xD;&#xA;console.log(x === y);     // =&gt; true&#xD;&#xA;&#xD;&#xA;x.make = &quot;Ford&quot;;&#xD;&#xA;&#xD;&#xA;console.log(x.make);      // =&gt; Ford&#xD;&#xA;console.log(y.make);      // =&gt; Ford&#xD;&#xA;console.log(x == y);      // =&gt; true&#xD;&#xA;console.log(x === y);     // =&gt; true&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var x = { make: &quot;Toyota&quot; };&#xD;&#xA;var y = x;&#xD;&#xA;&#xD;&#xA;console.log(x == y);      // =&gt; true&#xD;&#xA;console.log(x === y);     // =&gt; true&#xD;&#xA;&#xD;&#xA;x.make = &quot;Ford&quot;;&#xD;&#xA;&#xD;&#xA;console.log(x.make);      // =&gt; Ford&#xD;&#xA;console.log(y.make);      // =&gt; Ford&#xD;&#xA;console.log(x == y);      // =&gt; true&#xD;&#xA;console.log(x === y);     // =&gt; true&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-2" style="display:none;">
+  <script>
+      var x = { make: "Toyota" };
+var y = x;
+
+console.log(x == y);      // => true
+console.log(x === y);     // => true
+
+x.make = "Ford";
+
+console.log(x.make);      // => Ford
+console.log(y.make);      // => Ford
+console.log(x == y);      // => true
+console.log(x === y);     // => true
+;
+  </script>
+</div>
+<button id="built-ins-2-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-2');">
+  Run
+</button>
+
+
+<p>
+  Following the execution of the second statement in which <code>x</code> is assigned 
+  to <code>y</code>, <code>y</code> refers to the same object that 
+  <code>x</code> refers to. JavaScript does not create a new copy of that object. 
+  If you make any changes to the underlying object through <code>x</code>, you can 
+  see these changes through <code>y</code> and vice-versa.
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="loops.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; JavaScript Loops &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="objects.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; JavaScript Objects &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<a class="goto-target" id="string"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xstring&#x27;).show();" onmouseout="$(&#x27;#xstring&#x27;).hide();">String type</h2>
+    <h2><a id="xstring" style="display:none" class="d-block pl-12 header-anchor" href="#string">#</a></h2>
+</div>
+
+
+
+<p>
+  A string represents an ordered sequence of zero or more 16-bit values. Each value typically 
+  represents a Unicode character. Unicode is designed to represent all of the characters found 
+  in all human languages.
+</p>
+
+<p>A string is wrapped in either double or single quotes. Adding a single-quote character within 
+  a string that is delimited by double quotes is no problem; the same is true for adding a double-quote 
+  character in a single-quote delimited string.  Adding a single quote in the latter requires an escape 
+  character before the single quote, like so \'.  Other common escape characters include \n = newline; 
+  \r = carriage return; \t = tab, and \\ = backslash.
+  </p>
+
+<p>
+  A string literal can be split across one or more lines by placing an escape character \ (called a 
+  continuation character) at the end of each line except the last one. The \ character does not 
+  become a part of the string literal. Here are some examples of string literals:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-3');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-3" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-3">var s1 = &quot;Don&#x27;t ignore Peter&#x27;s feedback&quot;;&#xD;&#xA;var s2 = &#x27;Don\&#x27;t ignore Peter\&#x27;s feedback&#x27;;&#xD;&#xA;var s3 = &#x27;Andrew Fuller\n Bob Springsteen&#x27;;&#xD;&#xA;var s4 = &quot;Andrew Fuller, \&#xD;&#xA;Bob Springsteen, \&#xD;&#xA;Helena Williams&quot;;&#xD;&#xA;&#xD;&#xA;console.log(s1);&#xD;&#xA;console.log(s2);&#xD;&#xA;console.log(s3);&#xD;&#xA;console.log(s4);&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var s1 = &quot;Don&#x27;t ignore Peter&#x27;s feedback&quot;;&#xD;&#xA;var s2 = &#x27;Don\&#x27;t ignore Peter\&#x27;s feedback&#x27;;&#xD;&#xA;var s3 = &#x27;Andrew Fuller\n Bob Springsteen&#x27;;&#xD;&#xA;var s4 = &quot;Andrew Fuller, \&#xD;&#xA;Bob Springsteen, \&#xD;&#xA;Helena Williams&quot;;&#xD;&#xA;&#xD;&#xA;console.log(s1);&#xD;&#xA;console.log(s2);&#xD;&#xA;console.log(s3);&#xD;&#xA;console.log(s4);&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-3" style="display:none;">
+  <script>
+      var s1 = "Don't ignore Peter's feedback";
+var s2 = 'Don\'t ignore Peter\'s feedback';
+var s3 = 'Andrew Fuller\n Bob Springsteen';
+var s4 = "Andrew Fuller, \
+Bob Springsteen, \
+Helena Williams";
+
+console.log(s1);
+console.log(s2);
+console.log(s3);
+console.log(s4);
+;
+  </script>
+</div>
+<button id="built-ins-3-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-3');">
+  Run
+</button>
+
+
+<p>
+  Note that using the continuation character is generally not recommended. 
+</p>
+
+<p>
+  Here are some other string members you frequently use: <code>length</code>, and 
+  <code>charAt</code>.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-4');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-4" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-4">var s = &quot;Paris, London, Amsterdam&quot;;&#xD;&#xA;&#xD;&#xA;console.log(s.length);              // =&gt; 24&#xD;&#xA;console.log(s.charAt(0));           // =&gt; P. First character&#xD;&#xA;console.log(s.charAt(s.length - 1));  // =&gt; m. Last character&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var s = &quot;Paris, London, Amsterdam&quot;;&#xD;&#xA;&#xD;&#xA;console.log(s.length);              // =&gt; 24&#xD;&#xA;console.log(s.charAt(0));           // =&gt; P. First character&#xD;&#xA;console.log(s.charAt(s.length - 1));  // =&gt; m. Last character&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-4" style="display:none;">
+  <script>
+      var s = "Paris, London, Amsterdam";
+
+console.log(s.length);              // => 24
+console.log(s.charAt(0));           // => P. First character
+console.log(s.charAt(s.length - 1));  // => m. Last character
+;
+  </script>
+</div>
+<button id="built-ins-4-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-4');">
+  Run
+</button>
+
+
+<p>
+  And here are some additional frequently used string methods: <code>indexOf</code>, 
+  <code>lastIndexOf</code>, <code>toLowerCase</code>, <code>substring</code>, 
+  <code>replace</code>, and <code>split</code>.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-5');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-5" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-5">var s = &quot;Paris, London, Amsterdam&quot;;&#xD;&#xA;&#xD;&#xA;// Gets position of first &#x27;a&#x27;, returns 1&#xD;&#xA;console.log(s.indexOf(&quot;a&quot;));&#xD;&#xA;&#xD;&#xA;// Gets position of first &#x27;a&#x27; starting at 3, returns 22&#xD;&#xA;console.log(s.indexOf(&quot;a&quot;, 3));&#xD;&#xA;&#xD;&#xA;// Gets position of last &#x27;o&#x27;, returns 11&#xD;&#xA;console.log(s.lastIndexOf(&quot;o&quot;));&#xD;&#xA;&#xD;&#xA;// Converts string to lower-case&#xD;&#xA;console.log(s.toLowerCase());&#xD;&#xA;&#xD;&#xA;// Gets substring starting from the 15th character to the last,&#xD;&#xA;console.log(s.substring(14, s.length));&#xD;&#xA;&#xD;&#xA;// Replaces &quot;London&quot; with &quot;Berlin&quot;&#xD;&#xA;console.log(s.replace(&quot;London&quot;, &quot;Berlin&quot;));&#xD;&#xA;&#xD;&#xA;// splits into an array of substrings using &quot;, &quot; separator&#xD;&#xA;console.log(&quot;Array: &quot; &#x2B; s.split(&quot;, &quot;)); &#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var s = &quot;Paris, London, Amsterdam&quot;;&#xD;&#xA;&#xD;&#xA;// Gets position of first &#x27;a&#x27;, returns 1&#xD;&#xA;console.log(s.indexOf(&quot;a&quot;));&#xD;&#xA;&#xD;&#xA;// Gets position of first &#x27;a&#x27; starting at 3, returns 22&#xD;&#xA;console.log(s.indexOf(&quot;a&quot;, 3));&#xD;&#xA;&#xD;&#xA;// Gets position of last &#x27;o&#x27;, returns 11&#xD;&#xA;console.log(s.lastIndexOf(&quot;o&quot;));&#xD;&#xA;&#xD;&#xA;// Converts string to lower-case&#xD;&#xA;console.log(s.toLowerCase());&#xD;&#xA;&#xD;&#xA;// Gets substring starting from the 15th character to the last,&#xD;&#xA;console.log(s.substring(14, s.length));&#xD;&#xA;&#xD;&#xA;// Replaces &quot;London&quot; with &quot;Berlin&quot;&#xD;&#xA;console.log(s.replace(&quot;London&quot;, &quot;Berlin&quot;));&#xD;&#xA;&#xD;&#xA;// splits into an array of substrings using &quot;, &quot; separator&#xD;&#xA;console.log(&quot;Array: &quot; &#x2B; s.split(&quot;, &quot;)); &#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-5" style="display:none;">
+  <script>
+      var s = "Paris, London, Amsterdam";
+
+// Gets position of first 'a', returns 1
+console.log(s.indexOf("a"));
+
+// Gets position of first 'a' starting at 3, returns 22
+console.log(s.indexOf("a", 3));
+
+// Gets position of last 'o', returns 11
+console.log(s.lastIndexOf("o"));
+
+// Converts string to lower-case
+console.log(s.toLowerCase());
+
+// Gets substring starting from the 15th character to the last,
+console.log(s.substring(14, s.length));
+
+// Replaces "London" with "Berlin"
+console.log(s.replace("London", "Berlin"));
+
+// splits into an array of substrings using ", " separator
+console.log("Array: " + s.split(", ")); 
+;
+  </script>
+</div>
+<button id="built-ins-5-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-5');">
+  Run
+</button>
+
+
+<p>
+  When comparing two strings they are considered equal when they have the same length and the same 
+  sequence of characters in corresponding positions.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-6');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-6" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-6">var str1 = &quot;Hello World&quot;;&#xD;&#xA;var str2 = &quot;Hello&quot; &#x2B; &quot; World&quot;;&#xD;&#xA;&#xD;&#xA;console.log(str1 == str2);      // =&gt; true&#xD;&#xA;console.log(str1 === str2);     // =&gt; true&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var str1 = &quot;Hello World&quot;;&#xD;&#xA;var str2 = &quot;Hello&quot; &#x2B; &quot; World&quot;;&#xD;&#xA;&#xD;&#xA;console.log(str1 == str2);      // =&gt; true&#xD;&#xA;console.log(str1 === str2);     // =&gt; true&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-6" style="display:none;">
+  <script>
+      var str1 = "Hello World";
+var str2 = "Hello" + " World";
+
+console.log(str1 == str2);      // => true
+console.log(str1 === str2);     // => true
+;
+  </script>
+</div>
+<button id="built-ins-6-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-6');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="immutable-strings"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#ximmutable-strings&#x27;).show();" onmouseout="$(&#x27;#ximmutable-strings&#x27;).hide();">Strings are immutable</h3>
+    <h3 class="pl-12"><a id="ximmutable-strings" class="d-block header-anchor" href="#immutable-strings">#</a></h3>
+</div>
+
+
+
+<p>
+  When we say that strings are immutable it means that once created, the contents of a string is of 
+  fixed length and cannot be modified.  String may appear mutable when you work with them but they are not.: 
+  they are immutable internally. JavaScript does not offer any method or property that lets you alter 
+  the contents of a string value. 
+</p>
+
+<p>
+  Again, modifying the string may appear to work, but in fact, a new string is generated. 
+  In the following example, <code>b</code> is referencing the same string as <code>a</code>.  
+  However, when modifying the underlying string through the <code>b</code> reference, a new string 
+  is created internally and its reference is assigned to <code>b</code> without affecting the 
+  original string referenced by <code>a</code>.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-7');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-7" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-7">var a = &quot;Hey&quot;;&#xD;&#xA;var b = a;&#xD;&#xA;&#xD;&#xA;b &#x2B;= &quot;, what&#x27;s up&quot;;&#xD;&#xA;&#xD;&#xA;console.log(b);            // =&gt; Hey, what&#x27;s up&#xD;&#xA;console.log(a);            // =&gt; Hey&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var a = &quot;Hey&quot;;&#xD;&#xA;var b = a;&#xD;&#xA;&#xD;&#xA;b &#x2B;= &quot;, what&#x27;s up&quot;;&#xD;&#xA;&#xD;&#xA;console.log(b);            // =&gt; Hey, what&#x27;s up&#xD;&#xA;console.log(a);            // =&gt; Hey&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-7" style="display:none;">
+  <script>
+      var a = "Hey";
+var b = a;
+
+b += ", what's up";
+
+console.log(b);            // => Hey, what's up
+console.log(a);            // => Hey
+;
+  </script>
+</div>
+<button id="built-ins-7-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-7');">
+  Run
+</button>
+
+
+<p>
+  String methods like <code>replace</code> and <code>toLowerCase</code> appear to 
+  alter the string on which they operate, but they also return new strings.
+</p>
+
+<hr />
+<a class="goto-target" id="boolean"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xboolean&#x27;).show();" onmouseout="$(&#x27;#xboolean&#x27;).hide();">Boolean type</h2>
+    <h2><a id="xboolean" style="display:none" class="d-block pl-12 header-anchor" href="#boolean">#</a></h2>
+</div>
+
+
+
+<p>
+  The boolean type has two literal values: true and false. Note that true and false are language 
+  keywords and are not the same as 1 and 0.
+</p>
+
+<p>
+  All types of values in JavaScript have boolean equivalents. An empty string, null, undefined, NaN, 0, -0, 
+  and false itself evaluate to the boolean value false. All these types and their values are referred to 
+  as <i>falsy</i>. On the other hand, a non-empty string, any non-zero number including Infinity, any object, 
+  and true itself evaluate to the boolean value true. These types and their values are referred to as 
+  <i>truthy</i>. Although truthy and falsy are unofficial terms, they are widely used in the JavaScript 
+  community.
+</p>
+
+<p>
+  JavaScript has a special boolean casting function that is used to convert a value into its boolean equivalent 
+  – essentially determining whether the passed in expression is truthy or falsy.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-8');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-8" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-8">var empty = &quot;&quot;;&#xD;&#xA;console.log(Boolean(empty));            // =&gt; false&#xD;&#xA;&#xD;&#xA;var nonEmpty = &quot;JavaScript is cool!&quot;;&#xD;&#xA;console.log(Boolean(nonEmpty));         // =&gt; true&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var empty = &quot;&quot;;&#xD;&#xA;console.log(Boolean(empty));            // =&gt; false&#xD;&#xA;&#xD;&#xA;var nonEmpty = &quot;JavaScript is cool!&quot;;&#xD;&#xA;console.log(Boolean(nonEmpty));         // =&gt; true&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-8" style="display:none;">
+  <script>
+      var empty = "";
+console.log(Boolean(empty));            // => false
+
+var nonEmpty = "JavaScript is cool!";
+console.log(Boolean(nonEmpty));         // => true
+;
+  </script>
+</div>
+<button id="built-ins-8-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-8');">
+  Run
+</button>
+
+
+<p>
+  Automatic conversions to boolean equivalents are common in conditional statements.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-9');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-9" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-9">var car = { make: &quot;Toyota&quot; };&#xD;&#xA;var display = true;&#xD;&#xA;&#xD;&#xA;if (car &amp;&amp; display) {        // =&gt; true&#xD;&#xA;    console.log(car.make);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;car = null;&#xD;&#xA;if (car) {                  // =&gt; false&#xD;&#xA;    console.log(&quot;drive my car&quot;);&#xD;&#xA;}&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var car = { make: &quot;Toyota&quot; };&#xD;&#xA;var display = true;&#xD;&#xA;&#xD;&#xA;if (car &amp;&amp; display) {        // =&gt; true&#xD;&#xA;    console.log(car.make);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;car = null;&#xD;&#xA;if (car) {                  // =&gt; false&#xD;&#xA;    console.log(&quot;drive my car&quot;);&#xD;&#xA;}&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-9" style="display:none;">
+  <script>
+      var car = { make: "Toyota" };
+var display = true;
+
+if (car && display) {        // => true
+    console.log(car.make);
+}
+
+car = null;
+if (car) {                  // => false
+    console.log("drive my car");
+}
+;
+  </script>
+</div>
+<button id="built-ins-9-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-9');">
+  Run
+</button>
+
+
+<p>
+  The first if statement returns true and therefore the alert displays. The second if-statement returns 
+  false and does not get executed. 
+</p>
+
+<hr />
+<a class="goto-target" id="read-only"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xread-only&#x27;).show();" onmouseout="$(&#x27;#xread-only&#x27;).hide();">Read-only Properties</h2>
+    <h2><a id="xread-only" style="display:none" class="d-block pl-12 header-anchor" href="#read-only">#</a></h2>
+</div>
+
+
+
+<p>
+  Variables of type string, number, and boolean have properties and methods, but they are not objects. 
+  When you read a property or method from these types, JavaScript creates a temporary object, 
+  called a wrapper object, by calling the String(), Number(), or Boolean() constructor behind the scenes. 
+  Note that you can also explicitly call these constructor functions and create wrapper objects.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-10');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-10" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-10">var message = &quot;Hello World&quot;;&#xD;&#xA;&#xD;&#xA;message.howlong = message.length;       // =&gt; sets property on object&#xD;&#xA;&#xD;&#xA;console.log(message.howlong);           // =&gt; undefined&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var message = &quot;Hello World&quot;;&#xD;&#xA;&#xD;&#xA;message.howlong = message.length;       // =&gt; sets property on object&#xD;&#xA;&#xD;&#xA;console.log(message.howlong);           // =&gt; undefined&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-10" style="display:none;">
+  <script>
+      var message = "Hello World";
+
+message.howlong = message.length;       // => sets property on object
+
+console.log(message.howlong);           // => undefined
+;
+  </script>
+</div>
+<button id="built-ins-10-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-10');">
+  Run
+</button>
+
+
+<p>
+  When the second statement is executed, JavaScript creates a temporary String wrapper object. Then it 
+  adds a user-defined property called howlong on it, sets its value, and subsequently discards that object. 
+  This shows that String objects are not true objects because they do not accept new properties. 
+</p>
+
+<p>
+  In summary, you cannot set properties to numbers, strings, or booleans; any modification on the wrapper 
+  objects is not permanent.
+</p>
+
+<hr />
+<a class="goto-target" id="conversions"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xconversions&#x27;).show();" onmouseout="$(&#x27;#xconversions&#x27;).hide();">String conversions</h2>
+    <h2><a id="xconversions" style="display:none" class="d-block pl-12 header-anchor" href="#conversions">#</a></h2>
+</div>
+
+
+
+<p>
+  JavaScript offers three ways to explicitly convert a string to a number. They are the 
+  <code>Number</code> constructor function, <code>parseFloat</code>, and 
+  <code>parseInt</code>. The latter two functions have some special behavior. 
+  Here is an example using the Number constructor function which takes a string argument:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-11');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-11" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-11">var num = Number(&quot;1.73&quot;);&#xD;&#xA;&#xD;&#xA;console.log(num);                     // =&gt; 1.73&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var num = Number(&quot;1.73&quot;);&#xD;&#xA;&#xD;&#xA;console.log(num);                     // =&gt; 1.73&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-11" style="display:none;">
+  <script>
+      var num = Number("1.73");
+
+console.log(num);                     // => 1.73
+;
+  </script>
+</div>
+<button id="built-ins-11-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-11');">
+  Run
+</button>
+
+
+<p>
+  The <code>parseFloat</code> function converts strings to floating point numbers. It ignores 
+  any non-numeric values that appear after numeric characters: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-12');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-12" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-12">console.log(parseFloat(&quot;1.73&quot;));      // =&gt; 1.73 &#xD;&#xA;console.log(parseFloat(&quot;USD 1.73&quot;));  // =&gt; NaN&#xD;&#xA;console.log(parseFloat(&quot;1.73 USD&quot;));  // =&gt; 1.73&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>console.log(parseFloat(&quot;1.73&quot;));      // =&gt; 1.73 &#xD;&#xA;console.log(parseFloat(&quot;USD 1.73&quot;));  // =&gt; NaN&#xD;&#xA;console.log(parseFloat(&quot;1.73 USD&quot;));  // =&gt; 1.73&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-12" style="display:none;">
+  <script>
+      console.log(parseFloat("1.73"));      // => 1.73 
+console.log(parseFloat("USD 1.73"));  // => NaN
+console.log(parseFloat("1.73 USD"));  // => 1.73
+;
+  </script>
+</div>
+<button id="built-ins-12-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-12');">
+  Run
+</button>
+
+
+<p>
+  The <code>parseInt</code> function converts string to integer values. It also ignores any 
+  trailing non-numeric values:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-13');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-13" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-13">console.log(parseInt(&quot;1.73&quot;));        // =&gt; 1, rounded down&#xD;&#xA;console.log(parseInt(&quot;USD 1.73&quot;));    // =&gt; NaN  &#xD;&#xA;console.log(parseInt(&quot;1.73 USD&quot;));    // =&gt; 1 &#xD;&#xA;console.log(parseInt(&quot;0x10&quot;));        // =&gt; 16.  interpreted as hex &#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>console.log(parseInt(&quot;1.73&quot;));        // =&gt; 1, rounded down&#xD;&#xA;console.log(parseInt(&quot;USD 1.73&quot;));    // =&gt; NaN  &#xD;&#xA;console.log(parseInt(&quot;1.73 USD&quot;));    // =&gt; 1 &#xD;&#xA;console.log(parseInt(&quot;0x10&quot;));        // =&gt; 16.  interpreted as hex &#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-13" style="display:none;">
+  <script>
+      console.log(parseInt("1.73"));        // => 1, rounded down
+console.log(parseInt("USD 1.73"));    // => NaN  
+console.log(parseInt("1.73 USD"));    // => 1 
+console.log(parseInt("0x10"));        // => 16.  interpreted as hex 
+;
+  </script>
+</div>
+<button id="built-ins-13-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-13');">
+  Run
+</button>
+
+
+<p>
+  Here are some additional conversion methods: parseInt also lets you specify the base of the 
+  number. If you want JavaScript to treat your numeric string as base 10 number, pass 10 as the second parameter 
+  to parseInt(). Pass 8 if the string is an octal number.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-14');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-14" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-14">console.log(parseInt(&quot;1.73&quot;, 10));    // =&gt; 1&#xD;&#xA;console.log(parseInt(&quot;10&quot;, 16));      // =&gt; 16&#xD;&#xA;console.log(parseInt(&quot;111&quot;, 2));      // =&gt; 7  &#xD;&#xA;console.log(parseInt(&quot;16&quot;, 8));       // =&gt; 14&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>console.log(parseInt(&quot;1.73&quot;, 10));    // =&gt; 1&#xD;&#xA;console.log(parseInt(&quot;10&quot;, 16));      // =&gt; 16&#xD;&#xA;console.log(parseInt(&quot;111&quot;, 2));      // =&gt; 7  &#xD;&#xA;console.log(parseInt(&quot;16&quot;, 8));       // =&gt; 14&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-14" style="display:none;">
+  <script>
+      console.log(parseInt("1.73", 10));    // => 1
+console.log(parseInt("10", 16));      // => 16
+console.log(parseInt("111", 2));      // => 7  
+console.log(parseInt("16", 8));       // => 14
+;
+  </script>
+</div>
+<button id="built-ins-14-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-14');">
+  Run
+</button>
+
+
+<p>
+  When reporting monetary values, you are likely to perform number-to-string conversions. In the output 
+  string, you may like to standardize the number of decimal places by rounding the trailing digits or 
+  padding with zeros. The Number object offers methods that you can use to convert numbers to strings. 
+  For example, the <code>toFixed</code> method converts it to a string while keeping a 
+  number of decimals.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-15');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-15" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-15">var num = 7.679;&#xD;&#xA;&#xD;&#xA;console.log(num.toFixed(0));     // =&gt; &quot;8&quot; rounded to nearest whole number&#xD;&#xA;console.log(num.toFixed(2));     // =&gt; &quot;7.68&quot;&#xD;&#xA;console.log(num.toFixed(4));     // =&gt; &quot;7.6790&quot;&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var num = 7.679;&#xD;&#xA;&#xD;&#xA;console.log(num.toFixed(0));     // =&gt; &quot;8&quot; rounded to nearest whole number&#xD;&#xA;console.log(num.toFixed(2));     // =&gt; &quot;7.68&quot;&#xD;&#xA;console.log(num.toFixed(4));     // =&gt; &quot;7.6790&quot;&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-15" style="display:none;">
+  <script>
+      var num = 7.679;
+
+console.log(num.toFixed(0));     // => "8" rounded to nearest whole number
+console.log(num.toFixed(2));     // => "7.68"
+console.log(num.toFixed(4));     // => "7.6790"
+;
+  </script>
+</div>
+<button id="built-ins-15-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-15');">
+  Run
+</button>
+
+
+<p>
+  Here are two additional conversion methods: <code>toPrecision</code> and 
+  <code>toExponential</code>.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-16');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-16" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-16">var num = 17305.73;&#xD;&#xA;&#xD;&#xA;console.log(num.toPrecision(3));      // =&gt; &quot;1.73e&#x2B;4&quot;&#xD;&#xA;console.log(num.toPrecision(5));      // =&gt; &quot;17306&quot;&#xD;&#xA;console.log(num.toPrecision(6));      // =&gt; &quot;17305.7&quot;&#xD;&#xA;console.log(num.toPrecision(8));      // =&gt; &quot;17305.730&quot;&#xD;&#xA;console.log(num.toExponential(1));    // =&gt; &quot;1.7e&#x2B;4&quot;&#xD;&#xA;console.log(num.toExponential(3));    // =&gt; &quot;1.731e&#x2B;4&quot;&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var num = 17305.73;&#xD;&#xA;&#xD;&#xA;console.log(num.toPrecision(3));      // =&gt; &quot;1.73e&#x2B;4&quot;&#xD;&#xA;console.log(num.toPrecision(5));      // =&gt; &quot;17306&quot;&#xD;&#xA;console.log(num.toPrecision(6));      // =&gt; &quot;17305.7&quot;&#xD;&#xA;console.log(num.toPrecision(8));      // =&gt; &quot;17305.730&quot;&#xD;&#xA;console.log(num.toExponential(1));    // =&gt; &quot;1.7e&#x2B;4&quot;&#xD;&#xA;console.log(num.toExponential(3));    // =&gt; &quot;1.731e&#x2B;4&quot;&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-16" style="display:none;">
+  <script>
+      var num = 17305.73;
+
+console.log(num.toPrecision(3));      // => "1.73e+4"
+console.log(num.toPrecision(5));      // => "17306"
+console.log(num.toPrecision(6));      // => "17305.7"
+console.log(num.toPrecision(8));      // => "17305.730"
+console.log(num.toExponential(1));    // => "1.7e+4"
+console.log(num.toExponential(3));    // => "1.731e+4"
+;
+  </script>
+</div>
+<button id="built-ins-16-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-16');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="math-object"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xmath-object&#x27;).show();" onmouseout="$(&#x27;#xmath-object&#x27;).hide();">Math Object</h2>
+    <h2><a id="xmath-object" style="display:none" class="d-block pl-12 header-anchor" href="#math-object">#</a></h2>
+</div>
+
+
+
+<p>
+  For mathematical computations you use the Math object. There is no need to create an instance of 
+  Math to access its properties and methods because it is a static object. You simply use the Math object 
+  directly and call its method or property names. Below are <code>max</code>, 
+  <code>min</code> and <code>abs</code> methods: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-17');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-17" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-17">console.log(Math.max(1, 2));       // =&gt; 2&#xD;&#xA;console.log(Math.min(1, 2));       // =&gt; 1&#xD;&#xA;console.log(Math.abs(-2));         // =&gt; 2&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>console.log(Math.max(1, 2));       // =&gt; 2&#xD;&#xA;console.log(Math.min(1, 2));       // =&gt; 1&#xD;&#xA;console.log(Math.abs(-2));         // =&gt; 2&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-17" style="display:none;">
+  <script>
+      console.log(Math.max(1, 2));       // => 2
+console.log(Math.min(1, 2));       // => 1
+console.log(Math.abs(-2));         // => 2
+;
+  </script>
+</div>
+<button id="built-ins-17-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-17');">
+  Run
+</button>
+
+
+<p>
+  Next are some trigonometry related items: the constant PI, and sin and cos.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-18');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-18" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-18">console.log(Math.PI);                          // =&gt; value of pi&#xD;&#xA;console.log((180 / Math.PI) * Math.sin(1));      // =&gt; 90 (degrees)&#xD;&#xA;console.log((180 / Math.PI) * Math.cos(0));      // =&gt; 90 (degrees)&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>console.log(Math.PI);                          // =&gt; value of pi&#xD;&#xA;console.log((180 / Math.PI) * Math.sin(1));      // =&gt; 90 (degrees)&#xD;&#xA;console.log((180 / Math.PI) * Math.cos(0));      // =&gt; 90 (degrees)&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-18" style="display:none;">
+  <script>
+      console.log(Math.PI);                          // => value of pi
+console.log((180 / Math.PI) * Math.sin(1));      // => 90 (degrees)
+console.log((180 / Math.PI) * Math.cos(0));      // => 90 (degrees)
+;
+  </script>
+</div>
+<button id="built-ins-18-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-18');">
+  Run
+</button>
+
+
+<p>
+  Finally some rounding methods:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-19');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-19" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-19">console.log(Math.round(Math.PI)); // =&gt; 3, round up/down to nearest whole nbr&#xD;&#xA;console.log(Math.floor(9.69));    // =&gt; 9, round down to nearest whole number&#xD;&#xA;console.log(Math.ceil(9.69));     // =&gt; 10, round up to nearest whole number&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>console.log(Math.round(Math.PI)); // =&gt; 3, round up/down to nearest whole nbr&#xD;&#xA;console.log(Math.floor(9.69));    // =&gt; 9, round down to nearest whole number&#xD;&#xA;console.log(Math.ceil(9.69));     // =&gt; 10, round up to nearest whole number&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-19" style="display:none;">
+  <script>
+      console.log(Math.round(Math.PI)); // => 3, round up/down to nearest whole nbr
+console.log(Math.floor(9.69));    // => 9, round down to nearest whole number
+console.log(Math.ceil(9.69));     // => 10, round up to nearest whole number
+;
+  </script>
+</div>
+<button id="built-ins-19-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-19');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="date-object"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xdate-object&#x27;).show();" onmouseout="$(&#x27;#xdate-object&#x27;).hide();">Date Object</h2>
+    <h2><a id="xdate-object" style="display:none" class="d-block pl-12 header-anchor" href="#date-object">#</a></h2>
+</div>
+
+
+
+<p>
+  To perform date and time calculations you use the Date object. The Date object holds a date as 
+  the number of milliseconds that have passed since Jan 1 1970 12:00 AM UTC. If you create a new Date object 
+  it will be set to the current date and time in the browser.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-20');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-20" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-20">var current = new Date();&#xD;&#xA;&#xD;&#xA;console.log(current);                // =&gt; current date and time&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var current = new Date();&#xD;&#xA;&#xD;&#xA;console.log(current);                // =&gt; current date and time&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-20" style="display:none;">
+  <script>
+      var current = new Date();
+
+console.log(current);                // => current date and time
+;
+  </script>
+</div>
+<button id="built-ins-20-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-20');">
+  Run
+</button>
+
+
+<p>
+  The time zone is determined by the system settings. In the example below, let's assume that the 
+  time zone where this code is run is set to Paris i.e. UTC + 1:00. Depending on your timezone your 
+  results will differ.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-21');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-21" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-21">// =&gt; Jan 02 2011, 6:55:42 PM local time&#xD;&#xA;var date = new Date(2011, 0, 2, 18, 55, 42);&#xD;&#xA;&#xD;&#xA;console.log(date.getDay());        // =&gt; 0.  0&#x2013;Sunday, 1&#x2013;Monday, and so on&#xD;&#xA;console.log(date.getDate());       // =&gt; 2.  2nd day of the month&#xD;&#xA;console.log(date.getMonth());      // =&gt; 0.  0&#x2013;January, 1&#x2013;February, and so on&#xD;&#xA;console.log(date.getFullYear());   // =&gt; 2011.&#xD;&#xA;console.log(date.getUTCHours());   // =&gt; 17. Paris is 1:00 hour ahead from UTC&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>// =&gt; Jan 02 2011, 6:55:42 PM local time&#xD;&#xA;var date = new Date(2011, 0, 2, 18, 55, 42);&#xD;&#xA;&#xD;&#xA;console.log(date.getDay());        // =&gt; 0.  0&#x2013;Sunday, 1&#x2013;Monday, and so on&#xD;&#xA;console.log(date.getDate());       // =&gt; 2.  2nd day of the month&#xD;&#xA;console.log(date.getMonth());      // =&gt; 0.  0&#x2013;January, 1&#x2013;February, and so on&#xD;&#xA;console.log(date.getFullYear());   // =&gt; 2011.&#xD;&#xA;console.log(date.getUTCHours());   // =&gt; 17. Paris is 1:00 hour ahead from UTC&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-21" style="display:none;">
+  <script>
+      // => Jan 02 2011, 6:55:42 PM local time
+var date = new Date(2011, 0, 2, 18, 55, 42);
+
+console.log(date.getDay());        // => 0.  0–Sunday, 1–Monday, and so on
+console.log(date.getDate());       // => 2.  2nd day of the month
+console.log(date.getMonth());      // => 0.  0–January, 1–February, and so on
+console.log(date.getFullYear());   // => 2011.
+console.log(date.getUTCHours());   // => 17. Paris is 1:00 hour ahead from UTC
+;
+  </script>
+</div>
+<button id="built-ins-21-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-21');">
+  Run
+</button>
+
+
+<p>
+  The difference between two dates is returned in milliseconds.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-22');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-22" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-22">// =&gt; Jan 01 2011 12:00:00 AM local time&#xD;&#xA;var from = new Date(2011, 0, 1);&#xD;&#xA;&#xD;&#xA;// =&gt; Jan 02 2011, 6:55:42 PM local time&#xD;&#xA;var to = new Date(2011, 0, 2, 18, 55, 42);&#xD;&#xA;&#xD;&#xA;var timeElapsed = to - from;&#xD;&#xA;&#xD;&#xA;console.log(timeElapsed);          // =&gt; 154542000 milliseconds&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>// =&gt; Jan 01 2011 12:00:00 AM local time&#xD;&#xA;var from = new Date(2011, 0, 1);&#xD;&#xA;&#xD;&#xA;// =&gt; Jan 02 2011, 6:55:42 PM local time&#xD;&#xA;var to = new Date(2011, 0, 2, 18, 55, 42);&#xD;&#xA;&#xD;&#xA;var timeElapsed = to - from;&#xD;&#xA;&#xD;&#xA;console.log(timeElapsed);          // =&gt; 154542000 milliseconds&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-22" style="display:none;">
+  <script>
+      // => Jan 01 2011 12:00:00 AM local time
+var from = new Date(2011, 0, 1);
+
+// => Jan 02 2011, 6:55:42 PM local time
+var to = new Date(2011, 0, 2, 18, 55, 42);
+
+var timeElapsed = to - from;
+
+console.log(timeElapsed);          // => 154542000 milliseconds
+;
+  </script>
+</div>
+<button id="built-ins-22-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-22');">
+  Run
+</button>
+
+
+<p>
+  Here are examples of formatting date and time. Please note that your returns will differ depending 
+  on your timezone:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-23');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-23" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-23">// =&gt; Jan 02 2011, 6:55:42 PM local time&#xD;&#xA;var date = new Date(2011, 0, 2, 18, 55, 42);&#xD;&#xA;&#xD;&#xA;console.log(date.toString());           // =&gt; Sun Jan 2 18:55:42 CST 2011 &#xD;&#xA;console.log(date.toDateString());       // =&gt; Sun Jan 2 2011&#xD;&#xA;console.log(date.toTimeString());       // =&gt; 18:55:42 CST&#xD;&#xA;console.log(date.toLocaleDateString()); // =&gt; Sunday, January 02, 2011&#xD;&#xA;console.log(date.toLocaleTimeString()); // =&gt; 6:55:42 PM&#xD;&#xA;console.log(date.toUTCString());        // =&gt; Mon, 3 Jan 2011 00:55:42 UTC&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>// =&gt; Jan 02 2011, 6:55:42 PM local time&#xD;&#xA;var date = new Date(2011, 0, 2, 18, 55, 42);&#xD;&#xA;&#xD;&#xA;console.log(date.toString());           // =&gt; Sun Jan 2 18:55:42 CST 2011 &#xD;&#xA;console.log(date.toDateString());       // =&gt; Sun Jan 2 2011&#xD;&#xA;console.log(date.toTimeString());       // =&gt; 18:55:42 CST&#xD;&#xA;console.log(date.toLocaleDateString()); // =&gt; Sunday, January 02, 2011&#xD;&#xA;console.log(date.toLocaleTimeString()); // =&gt; 6:55:42 PM&#xD;&#xA;console.log(date.toUTCString());        // =&gt; Mon, 3 Jan 2011 00:55:42 UTC&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-23" style="display:none;">
+  <script>
+      // => Jan 02 2011, 6:55:42 PM local time
+var date = new Date(2011, 0, 2, 18, 55, 42);
+
+console.log(date.toString());           // => Sun Jan 2 18:55:42 CST 2011 
+console.log(date.toDateString());       // => Sun Jan 2 2011
+console.log(date.toTimeString());       // => 18:55:42 CST
+console.log(date.toLocaleDateString()); // => Sunday, January 02, 2011
+console.log(date.toLocaleTimeString()); // => 6:55:42 PM
+console.log(date.toUTCString());        // => Mon, 3 Jan 2011 00:55:42 UTC
+;
+  </script>
+</div>
+<button id="built-ins-23-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-23');">
+  Run
+</button>
+
+
+<p>
+  Be careful when you enter an invalid date like January 32, 2011.  Most browsers 
+  silently changes it to February 1.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('built-ins-24');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-built-ins-24" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-built-ins-24">console.log(new Date(2011, 0, 32));          // =&gt; Feb 1, 2011&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>console.log(new Date(2011, 0, 32));          // =&gt; Feb 1, 2011&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="built-ins-24" style="display:none;">
+  <script>
+      console.log(new Date(2011, 0, 32));          // => Feb 1, 2011
+;
+  </script>
+</div>
+<button id="built-ins-24-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'built-ins-24');">
+  Run
+</button>
+
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="loops.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; JavaScript Loops &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="objects.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; JavaScript Objects &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+          <div class="bg-light p-10 my-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css.html">CSS Tutorial</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/selectors.html">CSS Selectors</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/borders.html">CSS Borders</a></li>
+
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/flex.html">CSS Flex</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/grids.html">CSS Grid</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/tables.html">CSS Tables</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/notfound.html">CSS Units</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/fonts.html">CSS Fonts</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/animation.html">CSS Animation</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/hover.html">CSS Hover</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/images.html">CSS Images</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/comments.html">CSS Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" xstyle="flex: 0 0 230px">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">Built-in types</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#value-reference">Value, Reference</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#string">String</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#immutable-strings">Immutable</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#boolean">Boolean</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#read-only">Read-only</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#conversions">Conversions</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#math-object">Math Object</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#date-object">Date Object</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+
+    let runbutton = function (button, model) {
+      var n = '#' + model;
+      var text = button.innerText;
+      if (text == "Run") {
+        $(n).slideDown(300);
+        button.innerText = "Clear";
+      } else {
+        $(n).slideUp(300);
+        button.innerText = "Run";
+      }
+    };
+
+    function copy(id) {
+      var stor = document.createElement("textarea");
+      stor.setAttribute("contentEditable", true);
+      stor.innerHTML = document.getElementById('copy-' + id).innerHTML;
+      stor.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+      document.body.appendChild(stor);
+      stor.focus({ preventScroll: true });
+      stor.focus();
+
+      document.execCommand("copy");
+      document.body.removeChild(stor);
+
+      $('#show-' + id).fadeIn('fast').delay(1200).fadeOut('slow');
+    }
+
+
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/javascript/builtin-types by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:05:03 GMT -->
+</html>

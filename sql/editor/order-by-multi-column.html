@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/sql/editor/order-by-multi-column by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:46:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SQL Order By Example - Dofactory</title>
+    <meta name="keywords" content="SQL Editor, SQL, SQL Server, Data Analysis, Tutorial, Reference, Guide, Examples, Demos, Top, Best, Tips, Advice, Training, Learning, Courses, Lessons, Interview, Programming, Code, Source">
+    <meta name="description" content="SQL Editor. SQL Server ORDER BY -- the best examples. An ORDER BY clause returns a result set in a specified sort order.">
+
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="order-by-multi-column.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+<header class='navbar navbar-expand-lg py-0 pl-0 do-navbar border-bottom'
+        style="height: 80px; background: #fff!important;">
+
+        <div class="width-240">
+          <a class="pl-35 pt-0 width-220 d-block" href="javascript:void(0)">
+            <img src="../../img/dofactorylogo.png" class="pt-6 no-outline" />
+          </a>
+        </div>
+      </header>
+
+
+    <div class="container-fluid">
+        <style>
+  th { background-color: #f6f8ff; }
+  ::-webkit-input-placeholder { color: #6f6fa9 !important; font-weight: normal; }
+</style>
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #ba3371 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+
+  <div class="">
+    <div class="height-70 pl-15 pt-27">
+
+      <div class="d-flex">
+          <div class="pt-10"><h1 class="m-0 p-0 font-25 font-weight-bold">SQL Editor</h1></div>
+        </div>
+    </div>
+
+    <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom ">
+      Tables and Columns&nbsp;
+    </div>
+
+    <nav class="width-230 do-links" id="scroll-list">
+
+      <div class="list-group mb-25 font-14" tabindex="-1" role="tablist" id="list-tab">
+
+          <a id="tableCustomer" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Customer &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsCustomer" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- FirstName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- LastName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- City <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Country <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Phone <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableOrder" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Order &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsOrder" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- OrderDate <span class="font-weight-normal">(datetime)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- OrderNumber <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- CustomerId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- TotalAmount <span class="font-weight-normal">(decimal)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableOrderItem" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">OrderItem &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsOrderItem" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- OrderId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ProductId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- UnitPrice <span class="font-weight-normal">(decimal)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Quantity <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableProduct" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Product &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsProduct" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ProductName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- SupplierId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- UnitPrice <span class="font-weight-normal">(decimal)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Package <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- IsDiscontinued <span class="font-weight-normal">(bit)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableSupplier" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Supplier &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsSupplier" class="pl-20" style='display:block;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- CompanyName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ContactName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ContactTitle <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- City <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Country <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Phone <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Fax <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+            </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="px-md-30 px-10 tutorial">
+
+      <div class="py-20">
+        <div id="scriptassist-display" class="pl-30 font-15 d-flex flex-column justify-content-center" style="background: #f6f7fa;height:85px;background:#333;color:white;">
+          <div class="d-flex">
+            <div><h1 style="display:inline;padding:0 !important;margin: 0 0 2px 0 !important; font-weight:600;border:none !important; font-size:16px !important;text-decoration:none !important;">Problem: </h1></div>
+            <div class="ml-12">List all customers ordered by country,  then by city within each country.
+</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="">
+
+        <form method="post" action="https://www.dofactory.com/sql/editor/order-by-multi-column">
+
+          <textarea name="script" id="script" rows="9" class="mb-10 form-control border bg-light font-weight-semibold"
+                    placeholder="Enter your SQL" style="font-family: monospace, monospace;color:#334;font-weight:bold;">SELECT FirstName, LastName, City, Country
+  FROM Customer
+ ORDER BY Country, City
+</textarea>
+
+          <input id="submit" type="submit" class="btn btn-dark" value="Run" />&nbsp;
+          <input id="clear" type="button" class="btn btn-light" value="Clear" />
+
+          <input type="hidden" id="scriptassist" name="scriptassist" value="List all customers ordered by country,  then by city within each country.&#xD;&#xA;" />
+          <input type="hidden" id="prescript" name="prescript" value="Order By" />
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7EquHxh0g4R2PG7gg3hYCZFKFLJ7JVokc4cGcuaXvi2OTGKe-Y4IBhojdcjNR-XhnQHkQ7e9gjSgZ6GlIu1hCMZs_-FQWjHsIC834eih4ePV5BTM3RDH61dH6a_WDvesz8Wc" /></form>
+      </div>
+
+      <div class="mt-60 mb-40"></div>
+
+      <div id="results">
+        <div class="table-hscroll">
+
+            <div class="fffade mb-20 ml-5 font-weight-semibold py-5" style="background-color: #dbff9d; opacity: 0;">
+              &nbsp;91 Records
+            </div>
+            <table class="table table-md table-hover">
+
+                  <tr>
+                      <th>FirstName</th>
+                      <th>LastName</th>
+                      <th>City</th>
+                      <th>Country</th>
+                  </tr>
+                  <tr>
+                        <td>Patricio</td>
+                        <td>Simpson</td>
+                        <td>Buenos Aires</td>
+                        <td>Argentina</td>
+                  </tr>
+                  <tr>
+                        <td>Yvonne</td>
+                        <td>Moncada</td>
+                        <td>Buenos Aires</td>
+                        <td>Argentina</td>
+                  </tr>
+                  <tr>
+                        <td>Sergio</td>
+                        <td>Guti&#xE9;rrez</td>
+                        <td>Buenos Aires</td>
+                        <td>Argentina</td>
+                  </tr>
+                  <tr>
+                        <td>Roland</td>
+                        <td>Mendel</td>
+                        <td>Graz</td>
+                        <td>Austria</td>
+                  </tr>
+                  <tr>
+                        <td>Georg</td>
+                        <td>Pipps</td>
+                        <td>Salzburg</td>
+                        <td>Austria</td>
+                  </tr>
+                  <tr>
+                        <td>Catherine</td>
+                        <td>Dewey</td>
+                        <td>Bruxelles</td>
+                        <td>Belgium</td>
+                  </tr>
+                  <tr>
+                        <td>Pascale</td>
+                        <td>Cartrain</td>
+                        <td>Charleroi</td>
+                        <td>Belgium</td>
+                  </tr>
+                  <tr>
+                        <td>Andr&#xE9;</td>
+                        <td>Fonseca</td>
+                        <td>Campinas</td>
+                        <td>Brazil</td>
+                  </tr>
+                  <tr>
+                        <td>Paula</td>
+                        <td>Parente</td>
+                        <td>Resende</td>
+                        <td>Brazil</td>
+                  </tr>
+                  <tr>
+                        <td>Mario</td>
+                        <td>Pontes</td>
+                        <td>Rio de Janeiro</td>
+                        <td>Brazil</td>
+                  </tr>
+                  <tr>
+                        <td>Bernardo</td>
+                        <td>Batista</td>
+                        <td>Rio de Janeiro</td>
+                        <td>Brazil</td>
+                  </tr>
+                  <tr>
+                        <td>Janete</td>
+                        <td>Limeira</td>
+                        <td>Rio de Janeiro</td>
+                        <td>Brazil</td>
+                  </tr>
+                  <tr>
+                        <td>L&#xFA;cia</td>
+                        <td>Carvalho</td>
+                        <td>Sao Paulo</td>
+                        <td>Brazil</td>
+                  </tr>
+                  <tr>
+                        <td>Aria</td>
+                        <td>Cruz</td>
+                        <td>Sao Paulo</td>
+                        <td>Brazil</td>
+                  </tr>
+                  <tr>
+                        <td>Pedro</td>
+                        <td>Afonso</td>
+                        <td>Sao Paulo</td>
+                        <td>Brazil</td>
+                  </tr>
+                  <tr>
+                        <td>Anabela</td>
+                        <td>Domingues</td>
+                        <td>Sao Paulo</td>
+                        <td>Brazil</td>
+                  </tr>
+                  <tr>
+                        <td>Jean</td>
+                        <td>Fresni&#xE8;re</td>
+                        <td>Montr&#xE9;al</td>
+                        <td>Canada</td>
+                  </tr>
+                  <tr>
+                        <td>Elizabeth</td>
+                        <td>Lincoln</td>
+                        <td>Tsawassen</td>
+                        <td>Canada</td>
+                  </tr>
+                  <tr>
+                        <td>Yoshi</td>
+                        <td>Tannamuri</td>
+                        <td>Vancouver</td>
+                        <td>Canada</td>
+                  </tr>
+                  <tr>
+                        <td>Palle</td>
+                        <td>Ibsen</td>
+                        <td>&#xC5;rhus</td>
+                        <td>Denmark</td>
+                  </tr>
+                  <tr>
+                        <td>Jytte</td>
+                        <td>Petersen</td>
+                        <td>Kobenhavn</td>
+                        <td>Denmark</td>
+                  </tr>
+                  <tr>
+                        <td>Matti</td>
+                        <td>Karttunen</td>
+                        <td>Helsinki</td>
+                        <td>Finland</td>
+                  </tr>
+                  <tr>
+                        <td>Pirkko</td>
+                        <td>Koskitalo</td>
+                        <td>Oulu</td>
+                        <td>Finland</td>
+                  </tr>
+                  <tr>
+                        <td>Martine</td>
+                        <td>Ranc&#xE9;</td>
+                        <td>Lille</td>
+                        <td>France</td>
+                  </tr>
+                  <tr>
+                        <td>Mary</td>
+                        <td>Saveley</td>
+                        <td>Lyon</td>
+                        <td>France</td>
+                  </tr>
+                  <tr>
+                        <td>Laurence</td>
+                        <td>Lebihan</td>
+                        <td>Marseille</td>
+                        <td>France</td>
+                  </tr>
+                  <tr>
+                        <td>Janine</td>
+                        <td>Labrune</td>
+                        <td>Nantes</td>
+                        <td>France</td>
+                  </tr>
+                  <tr>
+                        <td>Carine</td>
+                        <td>Schmitt</td>
+                        <td>Nantes</td>
+                        <td>France</td>
+                  </tr>
+                  <tr>
+                        <td>Marie</td>
+                        <td>Bertrand</td>
+                        <td>Paris</td>
+                        <td>France</td>
+                  </tr>
+                  <tr>
+                        <td>Dominique</td>
+                        <td>Perrier</td>
+                        <td>Paris</td>
+                        <td>France</td>
+                  </tr>
+                  <tr>
+                        <td>Paul</td>
+                        <td>Henriot</td>
+                        <td>Reims</td>
+                        <td>France</td>
+                  </tr>
+                  <tr>
+                        <td>Fr&#xE9;d&#xE9;rique</td>
+                        <td>Citeaux</td>
+                        <td>Strasbourg</td>
+                        <td>France</td>
+                  </tr>
+                  <tr>
+                        <td>Annette</td>
+                        <td>Roulet</td>
+                        <td>Toulouse</td>
+                        <td>France</td>
+                  </tr>
+                  <tr>
+                        <td>Daniel</td>
+                        <td>Tonini</td>
+                        <td>Versailles</td>
+                        <td>France</td>
+                  </tr>
+                  <tr>
+                        <td>Sven</td>
+                        <td>Ottlieb</td>
+                        <td>Aachen</td>
+                        <td>Germany</td>
+                  </tr>
+                  <tr>
+                        <td>Maria</td>
+                        <td>Anders</td>
+                        <td>Berlin</td>
+                        <td>Germany</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>Germany</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>Germany</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>Germany</td>
+                  </tr>
+                  <tr>
+                        <td>Henriette</td>
+                        <td>Pfalzheim</td>
+                        <td>K&#xF6;ln</td>
+                        <td>Germany</td>
+                  </tr>
+                  <tr>
+                        <td>Alexander</td>
+                        <td>Feuer</td>
+                        <td>Leipzig</td>
+                        <td>Germany</td>
+                  </tr>
+                  <tr>
+                        <td>Hanna</td>
+                        <td>Moos</td>
+                        <td>Mannheim</td>
+                        <td>Germany</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>Germany</td>
+                  </tr>
+                  <tr>
+                        <td>Karin</td>
+                        <td>Josephs</td>
+                        <td>M&#xFC;nster</td>
+                        <td>Germany</td>
+                  </tr>
+                  <tr>
+                        <td>Rita</td>
+                        <td>M&#xFC;ller</td>
+                        <td>Stuttgart</td>
+                        <td>Germany</td>
+                  </tr>
+                  <tr>
+                        <td>Patricia</td>
+                        <td>McKenna</td>
+                        <td>Cork</td>
+                        <td>Ireland</td>
+                  </tr>
+                  <tr>
+                        <td>Giovanni</td>
+                        <td>Rovelli</td>
+                        <td>Bergamo</td>
+                        <td>Italy</td>
+                  </tr>
+                  <tr>
+                        <td>Maurizio</td>
+                        <td>Moroni</td>
+                        <td>Reggio Emilia</td>
+                        <td>Italy</td>
+                  </tr>
+                  <tr>
+                        <td>Paolo</td>
+                        <td>Accorti</td>
+                        <td>Torino</td>
+                        <td>Italy</td>
+                  </tr>
+                  <tr>
+                        <td>Ana</td>
+                        <td>Trujillo</td>
+                        <td>M&#xE9;xico D.F.</td>
+                        <td>Mexico</td>
+                  </tr>
+                  <tr>
+                        <td>Antonio</td>
+                        <td>Moreno</td>
+                        <td>M&#xE9;xico D.F.</td>
+                        <td>Mexico</td>
+                  </tr>
+                  <tr>
+                        <td>Francisco</td>
+                        <td>Chang</td>
+                        <td>M&#xE9;xico D.F.</td>
+                        <td>Mexico</td>
+                  </tr>
+                  <tr>
+                        <td>Guillermo</td>
+                        <td>Fern&#xE1;ndez</td>
+                        <td>M&#xE9;xico D.F.</td>
+                        <td>Mexico</td>
+                  </tr>
+                  <tr>
+                        <td>Miguel</td>
+                        <td>Angel Paolino</td>
+                        <td>M&#xE9;xico D.F.</td>
+                        <td>Mexico</td>
+                  </tr>
+                  <tr>
+                        <td>Jonas</td>
+                        <td>Bergulfsen</td>
+                        <td>Stavern</td>
+                        <td>Norway</td>
+                  </tr>
+                  <tr>
+                        <td>Zbyszek</td>
+                        <td>Piestrzeniewicz</td>
+                        <td>Warszawa</td>
+                        <td>Poland</td>
+                  </tr>
+                  <tr>
+                        <td>Isabel</td>
+                        <td>de Castro</td>
+                        <td>Lisboa</td>
+                        <td>Portugal</td>
+                  </tr>
+                  <tr>
+                        <td>Lino</td>
+                        <td>Rodriguez</td>
+                        <td>Lisboa</td>
+                        <td>Portugal</td>
+                  </tr>
+                  <tr>
+                        <td>Eduardo</td>
+                        <td>Saavedra</td>
+                        <td>Barcelona</td>
+                        <td>Spain</td>
+                  </tr>
+                  <tr>
+                        <td>Diego</td>
+                        <td>Roel</td>
+                        <td>Madrid</td>
+                        <td>Spain</td>
+                  </tr>
+                  <tr>
+                        <td>Mart&#xED;n</td>
+                        <td>Sommer</td>
+                        <td>Madrid</td>
+                        <td>Spain</td>
+                  </tr>
+                  <tr>
+                        <td>Alejandra</td>
+                        <td>Camino</td>
+                        <td>Madrid</td>
+                        <td>Spain</td>
+                  </tr>
+                  <tr>
+                        <td>Jos&#xE9;</td>
+                        <td>Pedro Freyre</td>
+                        <td>Sevilla</td>
+                        <td>Spain</td>
+                  </tr>
+                  <tr>
+                        <td>Maria</td>
+                        <td>Larsson</td>
+                        <td>Br&#xE4;cke</td>
+                        <td>Sweden</td>
+                  </tr>
+                  <tr>
+                        <td>Christina</td>
+                        <td>Berglund</td>
+                        <td>Lule&#xE5;</td>
+                        <td>Sweden</td>
+                  </tr>
+                  <tr>
+                        <td>Yang</td>
+                        <td>Wang</td>
+                        <td>Bern</td>
+                        <td>Switzerland</td>
+                  </tr>
+                  <tr>
+                        <td>Michael</td>
+                        <td>Holz</td>
+                        <td>Gen&#xE8;ve</td>
+                        <td>Switzerland</td>
+                  </tr>
+                  <tr>
+                        <td>Helen</td>
+                        <td>Bennett</td>
+                        <td>Cowes</td>
+                        <td>UK</td>
+                  </tr>
+                  <tr>
+                        <td>Simon</td>
+                        <td>Crowther</td>
+                        <td>London</td>
+                        <td>UK</td>
+                  </tr>
+                  <tr>
+                        <td>Victoria</td>
+                        <td>Ashworth</td>
+                        <td>London</td>
+                        <td>UK</td>
+                  </tr>
+                  <tr>
+                        <td>Elizabeth</td>
+                        <td>Brown</td>
+                        <td>London</td>
+                        <td>UK</td>
+                  </tr>
+                  <tr>
+                        <td>Thomas</td>
+                        <td>Hardy</td>
+                        <td>London</td>
+                        <td>UK</td>
+                  </tr>
+                  <tr>
+                        <td>Ann</td>
+                        <td>Devon</td>
+                        <td>London</td>
+                        <td>UK</td>
+                  </tr>
+                  <tr>
+                        <td>Hari</td>
+                        <td>Kumar</td>
+                        <td>London</td>
+                        <td>UK</td>
+                  </tr>
+                  <tr>
+                        <td>Paula</td>
+                        <td>Wilson</td>
+                        <td>Albuquerque</td>
+                        <td>USA</td>
+                  </tr>
+                  <tr>
+                        <td>Rene</td>
+                        <td>Phillips</td>
+                        <td>Anchorage</td>
+                        <td>USA</td>
+                  </tr>
+                  <tr>
+                        <td>Jose</td>
+                        <td>Pavarotti</td>
+                        <td>Boise</td>
+                        <td>USA</td>
+                  </tr>
+                  <tr>
+                        <td>Liu</td>
+                        <td>Wong</td>
+                        <td>Butte</td>
+                        <td>USA</td>
+                  </tr>
+                  <tr>
+                        <td>Yoshi</td>
+                        <td>Latimer</td>
+                        <td>Elgin</td>
+                        <td>USA</td>
+                  </tr>
+                  <tr>
+                        <td>Howard</td>
+                        <td>Snyder</td>
+                        <td>Eugene</td>
+                        <td>USA</td>
+                  </tr>
+                  <tr>
+                        <td>Helvetius</td>
+                        <td>Nagy</td>
+                        <td>Kirkland</td>
+                        <td>USA</td>
+                  </tr>
+                  <tr>
+                        <td>Art</td>
+                        <td>Braunschweiger</td>
+                        <td>Lander</td>
+                        <td>USA</td>
+                  </tr>
+                  <tr>
+                        <td>Liz</td>
+                        <td>Nixon</td>
+                        <td>Portland</td>
+                        <td>USA</td>
+                  </tr>
+                  <tr>
+                        <td>Fran</td>
+                        <td>Wilson</td>
+                        <td>Portland</td>
+                        <td>USA</td>
+                  </tr>
+                  <tr>
+                        <td>Jaime</td>
+                        <td>Yorres</td>
+                        <td>San Francisco</td>
+                        <td>USA</td>
+                  </tr>
+                  <tr>
+                        <td>Karl</td>
+                        <td>Jablonski</td>
+                        <td>Seattle</td>
+                        <td>USA</td>
+                  </tr>
+                  <tr>
+                        <td>John</td>
+                        <td>Steel</td>
+                        <td>Walla Walla</td>
+                        <td>USA</td>
+                  </tr>
+                  <tr>
+                        <td>Carlos</td>
+                        <td>Gonz&#xE1;lez</td>
+                        <td>Barquisimeto</td>
+                        <td>Venezuela</td>
+                  </tr>
+                  <tr>
+                        <td>Manuel</td>
+                        <td>Pereira</td>
+                        <td>Caracas</td>
+                        <td>Venezuela</td>
+                  </tr>
+                  <tr>
+                        <td>Felipe</td>
+                        <td>Izquierdo</td>
+                        <td>I. de Margarita</td>
+                        <td>Venezuela</td>
+                  </tr>
+                  <tr>
+                        <td>Carlos</td>
+                        <td>Hern&#xE1;ndez</td>
+                        <td>San Crist&#xF3;bal</td>
+                        <td>Venezuela</td>
+                  </tr>
+            </table>
+            <div class="py-120"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+
+    </div>
+
+    
+  <div class="box-shadow" style="border-top:1px solid #e2ecee;">
+    <div class="container">
+      <div class="row" style="padding:60px 0 10px 0;">
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 pb-15"><img src="../../img/dofactorylogo.png" height="30" /></div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../about.html">About Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../story.html">Our Story</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../customers.html">Customers</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../contact.html">Contact Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../faq.html">FAQs</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum.html">Forum</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum/explore.html">Explore Forum</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../login.html">Login</a> &nbsp; <a class="footer-link" href="../../join.html">Join</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted ">Products</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../products.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-net.html">Dofactory .NET</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-sql.html">Dofactory SQL</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-js.html">Dofactory JS</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-bundle.html">Dofactory Bundle</a></li>
+          </ul>
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-8 text-muted">Pricing</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../pricing.html">Product Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/bundle.html">Bundle Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/compare.html">Compare Editions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Demos</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../showcases.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/analytics.html">Analytics App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/ecommerce.html">Ecommerce App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/saas.html">SaaS App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/crm.html">CRM App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/app-factory.html">33-Day App Factory&trade;</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-3 mb-2 ">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Tutorials</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../tutorials.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql.html">SQL Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../reference.html">SQL Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html.html">HTML Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html/ref.html">HTML Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../net/design-patterns.html">.NET Design Patterns</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../csharp-coding-standards.html">C# Coding Standards</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../javascript.html">JavaScript Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../connection-strings.html">Connection Strings</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row mx-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="row py-10">
+        <div class="col pl-35">
+          <div class="font-weight-bold font-18 merriweather text-muted">Stay Inspired!</div>
+        </div>
+      </div>
+
+      <div class="row pt-3 pb-10">
+        <div class="col-12 col-md-6 xcol-md-5 pl-35">
+          Join other developers and designers who have
+          already signed up for our mailing list.
+        </div>
+        <div class="col-12 col-md-4 xcol-md-4 pl-35">
+
+          
+<form method="post" action="https://www.dofactory.com/emaillist">
+    <div class="input-group mb-3 pt-1">
+        <input type="text" class="form-control" placeholder="Your email..." aria-label="your-email" aria-describedby="your-email" style="max-width:260px;" data-val="true" data-val-email="Invalid email address" data-val-required="Email is required." id="YourEmail" name="YourEmail" value="">
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-green" style="height:37px;">
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <span class="field-validation-valid" data-valmsg-for="YourEmail" data-valmsg-replace="true"></span>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7EquHxh0g4R2PG7gg3hYCZFKFLJ7JVokc4cGcuaXvi2OTGKe-Y4IBhojdcjNR-XhnQHkQ7e9gjSgZ6GlIu1hCMZs_-FQWjHsIC834eih4ePV5BTM3RDH61dH6a_WDvesz8Wc" /></form>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row mx-10 mt-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="d-flex flex-lg-row flex-column p-20 mb-15 font-14">
+        <div class="pb-1 ">
+          <a href="../../terms.html" class="text-muted">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../privacy.html" class="text-muted">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../licensing.html" class="text-muted">Licensing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../eula.html" class="text-muted">EULA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../sitemap.html" class="text-muted">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="pb-1">
+          &copy; Data &amp; Object Factory, LLC. 
+        </div>
+        <div class="pb-1 ml-lg-auto">
+          Made with &nbsp;<img src="../../img/heart.png" style="width:14px;" />&nbsp; in Austin, Texas. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vsn 1.3.0
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.namespace("Sql").Sandbox = (function () {
+
+      var activateControls = function () {
+
+        // clear button
+
+        $("#clear").on("click", function () {
+
+          $("#prescript").val("");
+          $("#script").val("");
+          $("#scriptassist").val("Enter your own SQL and click Run.");
+          $("#scriptassist-display").html("&nbsp;&nbsp;&nbsp;Enter your own SQL and click Run.");
+
+          $("#results").html("<div style='height:450px;color:#666;padding-left:0px;'>No results to display</div>");
+        });
+
+        // display column names when clicked on table name
+
+        $("a[id^='table']").on("click", function () {
+          var id = "#" + $(this).attr("id").replace("table", "columns");
+          $(id).slideToggle(200);
+        });
+      };
+
+      var fadeIn = function () {
+        $('.fffade').fadeTo(800, 1);
+      }
+
+      var start = function () {
+        activateControls();
+        fadeIn();
+      };
+
+      return { start: start };
+    })();
+
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Sql.Sandbox.start();
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/sql/editor/order-by-multi-column by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:46:09 GMT -->
+</html>

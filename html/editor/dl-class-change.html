@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/html/editor/dl-class-change by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:48:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML dl class Attribute Example - Dofactory</title>
+    <meta name="keywords" content="HTML Editor, HTML, HTML Tutorial, Reference, Guide, Examples, Demos, Top, Best, Tips, Advice, Training, Learning, Courses, Lessons, Interview, Front-end, Programming, Code, Source">
+    <meta name="description" content="HTML Editor. HTML dl class -- the best examples. The class attribute on a dl element assigns one or more classnames to that element. Classes are used to style elements.">
+
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="dl-class-change.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+<header class='navbar navbar-expand-lg py-0 pl-0 do-navbar border-bottom'
+        style="height: 80px; background: #fff!important;">
+
+        <div class="width-240">
+          <a class="pl-35 pt-0 width-220 d-block" href="javascript:void(0)">
+            <img src="../../img/dofactorylogo.png" class="pt-6 no-outline" />
+          </a>
+        </div>
+      </header>
+
+
+    <div class="container-fluid">
+        
+<link rel="stylesheet" href="../../lib/codemirror/codemirror.css">
+<script src="../../lib/codemirror/codemirror.js"></script>
+<script src="../../lib/codemirror/mode/xml/xml.js"></script>
+
+<style>
+  .CodeMirror { height: calc(100vh - 222px); }
+  code { background: transparent !important; color: white; }
+</style>
+
+<div id="scriptassist" class="row mb-15 no-gutters" style="background: #f6f7fa;height:60px;background:#333;color:white;">
+  <div class="col-md-12 col-12 d-flex">
+    <div class="align-items-center font-15 m-auto text-center pb-4" style="max-width: 1100px; ">
+      A <code>class</code> attribute styling a <code>&lt;dl&gt;</code> element.<br />
+Clicking the button toggles a classname that changes the border color and border radius.
+
+    </div>
+  </div>
+</div>
+
+
+
+    
+<div class="row no-gutters">
+  <div class="col-md-6 col-12">
+    <div style="border: 1px solid #bcd; " class="mr-md-10">
+      <div class="font-18 font-weight-semibold py-10 pl-10" style="background: #f5f6f7; color: #3630a3; border-bottom: 1px solid #def; z-index: 2000; ">HTML <span class="font-16 font-weight-normal">&nbsp;-- Edit code and see the results on the right.</span></div>
+
+      <div class="border" style="height: calc(100vh - 220px) !important;">
+        <textarea id="input" name="code" wrap="hard" spellcheck="false" class="p-10 w-100 h-100">
+<style>
+  .dl-border {background:aliceblue;border:solid 4px lightblue;padding:30px;width:300px;}
+  .dl-rounded {border-radius:25px;border-color:steelblue;}
+</style>
+
+<dl id="mydl" class="dl-border">
+  <dt>Kunstmuseum</dt>
+  <dd>Basel, Switzerland</dd> 
+  <dt>National Gallery of Art</dt>
+  <dd>Washington DC, USA</dd>
+  <dt>Musée d'Orsay</dt>
+  <dd>Paris, France</dd>
+</dl>
+
+<br/>
+<button onclick="toggle();">Toggle class</button>
+
+<script>
+  let toggle = () => {
+    let element = document.getElementById("mydl");
+    element.classList.toggle("dl-rounded");
+  }
+</script>
+
+        </textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-12 mt-md-0">
+    <div style="border: 1px solid #bcd; " class="ml-md-10">
+      <div class="font-20 font-weight-semibold py-10 pl-15" style="background: #f5f6f7; color: #3630a3; border-bottom: 1px solid #def; ">Result</div>
+      <div class="border" style="height: calc(100vh - 220px);">
+        <iframe id="preview" class="w-100 h-100 border-0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
+
+    
+  <div class="box-shadow" style="border-top:1px solid #e2ecee;">
+    <div class="container">
+      <div class="row" style="padding:60px 0 10px 0;">
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 pb-15"><img src="../../img/dofactorylogo.png" height="30" /></div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../about.html">About Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../story.html">Our Story</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../customers.html">Customers</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../contact.html">Contact Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../faq.html">FAQs</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum.html">Forum</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum/explore.html">Explore Forum</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../login.html">Login</a> &nbsp; <a class="footer-link" href="../../join.html">Join</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted ">Products</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../products.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-net.html">Dofactory .NET</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-sql.html">Dofactory SQL</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-js.html">Dofactory JS</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-bundle.html">Dofactory Bundle</a></li>
+          </ul>
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-8 text-muted">Pricing</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../pricing.html">Product Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/bundle.html">Bundle Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/compare.html">Compare Editions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Demos</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../showcases.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/analytics.html">Analytics App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/ecommerce.html">Ecommerce App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/saas.html">SaaS App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/crm.html">CRM App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/app-factory.html">33-Day App Factory&trade;</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-3 mb-2 ">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Tutorials</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../tutorials.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql.html">SQL Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql/reference.html">SQL Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html.html">HTML Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../ref.html">HTML Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../net/design-patterns.html">.NET Design Patterns</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../csharp-coding-standards.html">C# Coding Standards</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../javascript.html">JavaScript Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../connection-strings.html">Connection Strings</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row mx-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="row py-10">
+        <div class="col pl-35">
+          <div class="font-weight-bold font-18 merriweather text-muted">Stay Inspired!</div>
+        </div>
+      </div>
+
+      <div class="row pt-3 pb-10">
+        <div class="col-12 col-md-6 xcol-md-5 pl-35">
+          Join other developers and designers who have
+          already signed up for our mailing list.
+        </div>
+        <div class="col-12 col-md-4 xcol-md-4 pl-35">
+
+          
+<form method="post" action="https://www.dofactory.com/emaillist">
+    <div class="input-group mb-3 pt-1">
+        <input type="text" class="form-control" placeholder="Your email..." aria-label="your-email" aria-describedby="your-email" style="max-width:260px;" data-val="true" data-val-email="Invalid email address" data-val-required="Email is required." id="YourEmail" name="YourEmail" value="">
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-green" style="height:37px;">
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <span class="field-validation-valid" data-valmsg-for="YourEmail" data-valmsg-replace="true"></span>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7EqvGvpckdjfKdR0Mi-b_CoHbeKDFPy3hg8ERhdndwcJDWbQqg_Eiu3TiBYfqE2jSah4LIIpXlGUDTe3MUTa3uZT9Q5gUBtj88ZsL4CoFJJSizArdGw67_Ij3ehsq4zFzCXM" /></form>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row mx-10 mt-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="d-flex flex-lg-row flex-column p-20 mb-15 font-14">
+        <div class="pb-1 ">
+          <a href="../../terms.html" class="text-muted">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../privacy.html" class="text-muted">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../licensing.html" class="text-muted">Licensing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../eula.html" class="text-muted">EULA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../sitemap.html" class="text-muted">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="pb-1">
+          &copy; Data &amp; Object Factory, LLC. 
+        </div>
+        <div class="pb-1 ml-lg-auto">
+          Made with &nbsp;<img src="../../img/heart.png" style="width:14px;" />&nbsp; in Austin, Texas. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vsn 1.3.0
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+    $(function () {
+
+      Dofactory.namespace("Local").Run = (function () {
+
+        var start = function () {
+
+          var delay;
+
+          var editor = CodeMirror.fromTextArea(document.getElementById('input'), {
+            mode: 'text/html',
+            htmlMode: true,
+            lineWrapping: true,
+            smartIndent: true,
+            addModeClass: true,
+            autocorrect: true
+          });
+
+          editor.on("change", function () {
+            clearTimeout(delay);
+            delay = setTimeout(updatePreview, 300);
+          });
+
+          // Update preview with HTML
+
+          function updatePreview() {
+            var previewFrame = document.getElementById('preview');
+            var preview = previewFrame.contentDocument || previewFrame.contentWindow.document;
+            preview.open();
+            preview.write(editor.getValue());
+            preview.close();
+          }
+          setTimeout(updatePreview, 300);
+        };
+
+        var adjustPanes = function () {
+          //var height = $("#scriptassist").height();
+          //var diff = (40 - height);
+          // $(".CodeMirror").css("height", "calc(100vh - 300px)");
+          ///var height = scriptAssist.height();
+          //alert(height)
+
+        };
+
+        return { start: start, adjustPanes: adjustPanes };
+
+      })();
+
+      Dofactory.Local.Run.start();
+      Dofactory.Local.Run.adjustPanes();
+
+    });
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/html/editor/dl-class-change by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:48:56 GMT -->
+</html>

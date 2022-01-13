@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/javascript/objects by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:05:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Objects - Dofactory</title>
+    <meta name="keywords" content="javascript classes, javascript objects, javascript properties, javascript this, javascript prototypal">
+    <meta name="description" content="A JavaScript object is a collection of properties where each property has a name and a value, similar to Hash, Map, or Dictionary in other languages. The name of a property can be any string, including an empty string. The value can be any value, such as a string, Boolean, number, and null, but it cannot be undefined. The object&#x27;s properties can be defined even after you start using the object. But first, let&#x27;s look at how we create objects in JavaScript.">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="objects.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        <link rel="stylesheet" href="../tutorial/css/javascript1cdd.css?v=qVXqJlnTI2nqJ78-w9n5mGO4sNLYFSlXHRVEVwRSTj4" />
+
+<style>
+  .bg-cream-100 { background-color: #f6f8fd !important; }
+</style>
+
+
+<script>
+  var console = {};
+  console.log = function (e) {
+    try {
+
+      if (!e && e != false) e = "undefined";
+      if (e == "Andrew Fuller\n Bob Springsteen") {
+        e = e.replace(/(?:\r\n|\r|\n)/g, '<br>');
+      }
+      document.writeln(e);
+      document.write("<br />");
+    }
+    catch {
+      document.writeln("");
+    }
+  };
+  window.console = console;
+</script>
+
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="../img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        JavaScript Tutorial&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="../javascript.html">JavaScript Intro</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="what-is.html">What is JavaScript</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="essentials.html">JavaScript Essentials</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="variables.html">JavaScript Variables</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="operators.html">JavaScript Operators</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="conditionals.html">JavaScript Conditionals</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="loops.html">JavaScript Loops</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="builtin-types.html">JavaScript Built-in Types</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="objects.html">JavaScript Objects</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="advanced-objects.html">JavaScript Adv. Objects</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="arrays.html">JavaScript Arrays</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="functions.html">JavaScript Functions</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="function-objects.html">JavaScript Function Objects</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="json.html">JavaScript JSON</a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="regular-expressions.html">JavaScript Reg. Expressions</a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="design-patterns.html">JavaScript Patterns</a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="reference.html">JavaScript Reference</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="257" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="../img/arrow-left.jpg" /> &nbsp;Back to JS </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html/ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css/ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="../net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial" xstyle="xmax-width:1200px;">
+
+      <div class="d-flex justify-content-around align-items-start">
+
+        <div class="w-100 m-auto" style="max-width:970px;">
+
+          <h1> JavaScript Objects</h1>
+
+
+<div class="d-flex">
+    <div class="mt-40">
+        <p class="pb-0 mb-0" style="margin-right:0 !important;">A <em>JavaScript Object</em> is a standalone container that holds multiple properties with values and methods (functions). An example is a <b>customer</b> object with firstName, lastName, and email properties, and a sendMessage method.</p>
+    </div>
+    <div class="ml-auto d-none d-md-block text-center" style="flex: 0 0 200px;">
+      <img src="../img/javascript/show-js.png" alt="JavaScript Tutorial" style="margin:20px 10px 0px 35px;" />
+    </div>
+</div>
+
+
+
+<hr />
+<a class="goto-target" id="literals"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xliterals&#x27;).show();" onmouseout="$(&#x27;#xliterals&#x27;).hide();">Object Literals</h2>
+    <h2><a id="xliterals" style="display:none" class="d-block pl-12 header-anchor" href="#literals">#</a></h2>
+</div>
+
+
+
+<p>
+  A JavaScript object is a collection of properties and methods similar to Hash, Map, or Dictionary 
+  in other languages. The name of a property can be any string, 
+  including an empty string. The value can be any value, such as a string, boolean, number, and 
+  null, but it cannot be undefined. The object's properties can be defined even after you start 
+  using the object. But first, let's look at how we create objects in JavaScript. 
+</p>
+
+<p>
+  The easiest way is to create a new object is with object literal notation which is bracketed 
+  by a pair of curly braces: {}.  Properties and their values can be added as you go.  In the example b
+  elow we create an empty object, using object literal notation, and we are adding two properties 
+  after that: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-1');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-1" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-1">var rect = {};                // creates an empty object&#xD;&#xA;rect.width = 20;&#xD;&#xA;rect.height = 10;&#xD;&#xA;&#xD;&#xA;console.log(rect.width);      // =&gt; 20&#xD;&#xA;console.log(rect.height);     // =&gt; 10&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var rect = {};                // creates an empty object&#xD;&#xA;rect.width = 20;&#xD;&#xA;rect.height = 10;&#xD;&#xA;&#xD;&#xA;console.log(rect.width);      // =&gt; 20&#xD;&#xA;console.log(rect.height);     // =&gt; 10&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-1" style="display:none;">
+  <script>
+      var rect = {};                // creates an empty object
+rect.width = 20;
+rect.height = 10;
+
+console.log(rect.width);      // => 20
+console.log(rect.height);     // => 10
+;
+  </script>
+</div>
+<button id="objects-1-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-1');">
+  Run
+</button>
+
+
+<p>
+  As an alternative you can immediately assign properties and their values in the literal notation.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-2');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-2" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-2">var rect = { width: 20, height: 10 };&#xD;&#xA;&#xD;&#xA;console.log(rect.width);      // =&gt; 20&#xD;&#xA;console.log(rect.height);     // =&gt; 10&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var rect = { width: 20, height: 10 };&#xD;&#xA;&#xD;&#xA;console.log(rect.width);      // =&gt; 20&#xD;&#xA;console.log(rect.height);     // =&gt; 10&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-2" style="display:none;">
+  <script>
+      var rect = { width: 20, height: 10 };
+
+console.log(rect.width);      // => 20
+console.log(rect.height);     // => 10
+;
+  </script>
+</div>
+<button id="objects-2-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-2');">
+  Run
+</button>
+
+
+<p>
+  JavaScript objects are mutable, meaning you can modify their values. 
+ </p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-3');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-3" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-3">var rect = { width: 20, height: 10 };&#xD;&#xA;rect.width = 30;              // =&gt; modify value &#xD;&#xA;&#xD;&#xA;console.log(rect.width);      // =&gt; 30&#xD;&#xA;console.log(rect.height);     // =&gt; 10&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var rect = { width: 20, height: 10 };&#xD;&#xA;rect.width = 30;              // =&gt; modify value &#xD;&#xA;&#xD;&#xA;console.log(rect.width);      // =&gt; 30&#xD;&#xA;console.log(rect.height);     // =&gt; 10&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-3" style="display:none;">
+  <script>
+      var rect = { width: 20, height: 10 };
+rect.width = 30;              // => modify value 
+
+console.log(rect.width);      // => 30
+console.log(rect.height);     // => 10
+;
+  </script>
+</div>
+<button id="objects-3-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-3');">
+  Run
+</button>
+
+
+<p>
+  Property values are not limited to primitive types, like number or string; you can also add properties 
+  that are other objects, including functions. When a function is added to an object it is called a 
+  <i>method</i>.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-4');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-4" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-4">var rect = { width: 20, height: 10 };&#xD;&#xA;&#xD;&#xA;// add new object&#xD;&#xA;rect.color = { red: 0, green: 255, blue: 128 };&#xD;&#xA;&#xD;&#xA;// add new method&#xD;&#xA;rect.getArea = function () {&#xD;&#xA;    return this.width * this.height;&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;console.log(rect.color.red);             // =&gt; 0&#xD;&#xA;console.log(rect.color.green);           // =&gt; 255&#xD;&#xA;console.log(rect.color.blue);            // =&gt; 128&#xD;&#xA;console.log(rect.getArea());             // =&gt; 200&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var rect = { width: 20, height: 10 };&#xD;&#xA;&#xD;&#xA;// add new object&#xD;&#xA;rect.color = { red: 0, green: 255, blue: 128 };&#xD;&#xA;&#xD;&#xA;// add new method&#xD;&#xA;rect.getArea = function () {&#xD;&#xA;    return this.width * this.height;&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;console.log(rect.color.red);             // =&gt; 0&#xD;&#xA;console.log(rect.color.green);           // =&gt; 255&#xD;&#xA;console.log(rect.color.blue);            // =&gt; 128&#xD;&#xA;console.log(rect.getArea());             // =&gt; 200&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-4" style="display:none;">
+  <script>
+      var rect = { width: 20, height: 10 };
+
+// add new object
+rect.color = { red: 0, green: 255, blue: 128 };
+
+// add new method
+rect.getArea = function () {
+    return this.width * this.height;
+};
+
+console.log(rect.color.red);             // => 0
+console.log(rect.color.green);           // => 255
+console.log(rect.color.blue);            // => 128
+console.log(rect.getArea());             // => 200
+;
+  </script>
+</div>
+<button id="objects-4-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-4');">
+  Run
+</button>
+
+
+<p>
+  You can define objects and all their member properties and methods in a single statement as object 
+  literal.  Below we create a rectangle with two numeric properties, one object property, and a method. 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-5');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-5" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-5">var rect = {&#xD;&#xA;    width: 20,&#xD;&#xA;    height: 10,&#xD;&#xA;    color: { red: 0, green: 255, blue: 128 }, // object property&#xD;&#xA;    getArea: function () {                     // method property &#xD;&#xA;        return this.width * this.height;&#xD;&#xA;    }&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;console.log(rect.width);                 // =&gt; 20&#xD;&#xA;console.log(rect.height);                // =&gt; 10&#xD;&#xA;console.log(rect.color.red);             // =&gt; 0&#xD;&#xA;console.log(rect.color.green);           // =&gt; 255&#xD;&#xA;console.log(rect.color.blue);            // =&gt; 128&#xD;&#xA;console.log(rect.getArea());             // =&gt; 200&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var rect = {&#xD;&#xA;    width: 20,&#xD;&#xA;    height: 10,&#xD;&#xA;    color: { red: 0, green: 255, blue: 128 }, // object property&#xD;&#xA;    getArea: function () {                     // method property &#xD;&#xA;        return this.width * this.height;&#xD;&#xA;    }&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;console.log(rect.width);                 // =&gt; 20&#xD;&#xA;console.log(rect.height);                // =&gt; 10&#xD;&#xA;console.log(rect.color.red);             // =&gt; 0&#xD;&#xA;console.log(rect.color.green);           // =&gt; 255&#xD;&#xA;console.log(rect.color.blue);            // =&gt; 128&#xD;&#xA;console.log(rect.getArea());             // =&gt; 200&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-5" style="display:none;">
+  <script>
+      var rect = {
+    width: 20,
+    height: 10,
+    color: { red: 0, green: 255, blue: 128 }, // object property
+    getArea: function () {                     // method property 
+        return this.width * this.height;
+    }
+};
+
+console.log(rect.width);                 // => 20
+console.log(rect.height);                // => 10
+console.log(rect.color.red);             // => 0
+console.log(rect.color.green);           // => 255
+console.log(rect.color.blue);            // => 128
+console.log(rect.getArea());             // => 200
+;
+  </script>
+</div>
+<button id="objects-5-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-5');">
+  Run
+</button>
+
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="builtin-types.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; JavaScript Built-in Types &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="advanced-objects.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; JavaScript Adv. Objects &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<a class="goto-target" id="properties"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xproperties&#x27;).show();" onmouseout="$(&#x27;#xproperties&#x27;).hide();">Object Properties</h2>
+    <h2><a id="xproperties" style="display:none" class="d-block pl-12 header-anchor" href="#properties">#</a></h2>
+</div>
+
+
+
+<p>
+  In this section we look at accessing, retrieving, and deleting object properties.
+</p>
+
+<h3>Accessing properties</h3>
+
+<p>
+  Property values can be retrieved in one of two ways; <i>dot notation</i> and <i>bracket notation</i>.  
+  Below are examples of each:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-6');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-6" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-6">var rect = { width: 20, height: 10 };&#xD;&#xA;&#xD;&#xA;console.log(rect.width);             // =&gt; 20 (dot notation)&#xD;&#xA;console.log(rect[&quot;width&quot;]);          // =&gt; 20 (bracket notation)&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var rect = { width: 20, height: 10 };&#xD;&#xA;&#xD;&#xA;console.log(rect.width);             // =&gt; 20 (dot notation)&#xD;&#xA;console.log(rect[&quot;width&quot;]);          // =&gt; 20 (bracket notation)&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-6" style="display:none;">
+  <script>
+      var rect = { width: 20, height: 10 };
+
+console.log(rect.width);             // => 20 (dot notation)
+console.log(rect["width"]);          // => 20 (bracket notation)
+;
+  </script>
+</div>
+<button id="objects-6-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-6');">
+  Run
+</button>
+
+
+<p>
+  Dot notation is used more often because it is easier to read and more compact.  
+  So when would you use bracket notation?  Square brackets allow you to use property names 
+  that are not valid identifiers and don't work with dot notation, for example when they have 
+  spaces in them or start with a number.  Also, bracket notation allows you to use property 
+  names that are variables.  Examples of both are below: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-7');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-7" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-7">var shape = {&#xD;&#xA;    &quot;bounding box width&quot;: 20,&#xD;&#xA;    &quot;bounding box height&quot;: 10,&#xD;&#xA;    side1: 5,&#xD;&#xA;    side2: 15,&#xD;&#xA;    side3: 25,&#xD;&#xA;    side4: 7,&#xD;&#xA;    side5: 12&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;// could not be done with dot notation&#xD;&#xA;console.log(shape[&quot;bounding box width&quot;]);   // =&gt; 20 &#xD;&#xA;&#xD;&#xA;for (var i = 1; i &lt; 6; i&#x2B;&#x2B;) {&#xD;&#xA;    var prop = &quot;side&quot; &#x2B; i;        // variable property name&#xD;&#xA;    console.log(shape[prop]);     // =&gt; 5, 15, 25, 7, 12 &#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var property = &quot;side1&quot;;&#xD;&#xA;&#xD;&#xA;console.log(shape.property);      // =&gt; undefined  (dot notation does not work)&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var shape = {&#xD;&#xA;    &quot;bounding box width&quot;: 20,&#xD;&#xA;    &quot;bounding box height&quot;: 10,&#xD;&#xA;    side1: 5,&#xD;&#xA;    side2: 15,&#xD;&#xA;    side3: 25,&#xD;&#xA;    side4: 7,&#xD;&#xA;    side5: 12&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;// could not be done with dot notation&#xD;&#xA;console.log(shape[&quot;bounding box width&quot;]);   // =&gt; 20 &#xD;&#xA;&#xD;&#xA;for (var i = 1; i &lt; 6; i&#x2B;&#x2B;) {&#xD;&#xA;    var prop = &quot;side&quot; &#x2B; i;        // variable property name&#xD;&#xA;    console.log(shape[prop]);     // =&gt; 5, 15, 25, 7, 12 &#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var property = &quot;side1&quot;;&#xD;&#xA;&#xD;&#xA;console.log(shape.property);      // =&gt; undefined  (dot notation does not work)&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-7" style="display:none;">
+  <script>
+      var shape = {
+    "bounding box width": 20,
+    "bounding box height": 10,
+    side1: 5,
+    side2: 15,
+    side3: 25,
+    side4: 7,
+    side5: 12
+};
+
+// could not be done with dot notation
+console.log(shape["bounding box width"]);   // => 20 
+
+for (var i = 1; i < 6; i++) {
+    var prop = "side" + i;        // variable property name
+    console.log(shape[prop]);     // => 5, 15, 25, 7, 12 
+}
+
+var property = "side1";
+
+console.log(shape.property);      // => undefined  (dot notation does not work)
+;
+  </script>
+</div>
+<button id="objects-7-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-7');">
+  Run
+</button>
+
+
+<p>
+  The last two statements are included to demonstrate that dot notation does not work with 
+  the property being a variable.
+</p>
+
+<hr />
+<a class="goto-target" id="property-names"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#xproperty-names&#x27;).show();" onmouseout="$(&#x27;#xproperty-names&#x27;).hide();">Property Names</h3>
+    <h3 class="pl-12"><a id="xproperty-names" class="d-block header-anchor" href="#property-names">#</a></h3>
+</div>
+
+
+
+<p>
+  To get a list of property names from an object use the for-in loop.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-8');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-8" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-8">var car = { make: &quot;Toyota&quot;, model: &quot;Camry&quot; };&#xD;&#xA;&#xD;&#xA;for (var prop in car) {&#xD;&#xA;    // =&gt; make: Toyota, and model: Camry&#xD;&#xA;    console.log(prop &#x2B; &quot;: &quot; &#x2B; car[prop]);&#xD;&#xA;}&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var car = { make: &quot;Toyota&quot;, model: &quot;Camry&quot; };&#xD;&#xA;&#xD;&#xA;for (var prop in car) {&#xD;&#xA;    // =&gt; make: Toyota, and model: Camry&#xD;&#xA;    console.log(prop &#x2B; &quot;: &quot; &#x2B; car[prop]);&#xD;&#xA;}&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-8" style="display:none;">
+  <script>
+      var car = { make: "Toyota", model: "Camry" };
+
+for (var prop in car) {
+    // => make: Toyota, and model: Camry
+    console.log(prop + ": " + car[prop]);
+}
+;
+  </script>
+</div>
+<button id="objects-8-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-8');">
+  Run
+</button>
+
+
+<p>
+  The for-in loop returns all members of the object, that is, all properties and methods.  
+  If you don't need certain members or data types, you can exclude these from enumeration 
+  using the typeof operator. In the example below we skip functions.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-9');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-9" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-9">var car = {&#xD;&#xA;    make: &quot;Toyota&quot;,&#xD;&#xA;    model: &quot;Camry&quot;,&#xD;&#xA;    print: function () {&#xD;&#xA;        console.log(this.make &#x2B; &quot; &quot; &#x2B; this.model);&#xD;&#xA;    }&#xD;&#xA;};&#xD;&#xA;for (var prop in car) {&#xD;&#xA;    if (typeof car[prop] !== &quot;function&quot;) {&#xD;&#xA;        console.log(prop);         // =&gt; make, and model&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var car = {&#xD;&#xA;    make: &quot;Toyota&quot;,&#xD;&#xA;    model: &quot;Camry&quot;,&#xD;&#xA;    print: function () {&#xD;&#xA;        console.log(this.make &#x2B; &quot; &quot; &#x2B; this.model);&#xD;&#xA;    }&#xD;&#xA;};&#xD;&#xA;for (var prop in car) {&#xD;&#xA;    if (typeof car[prop] !== &quot;function&quot;) {&#xD;&#xA;        console.log(prop);         // =&gt; make, and model&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-9" style="display:none;">
+  <script>
+      var car = {
+    make: "Toyota",
+    model: "Camry",
+    print: function () {
+        console.log(this.make + " " + this.model);
+    }
+};
+for (var prop in car) {
+    if (typeof car[prop] !== "function") {
+        console.log(prop);         // => make, and model
+    }
+}
+;
+  </script>
+</div>
+<button id="objects-9-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-9');">
+  Run
+</button>
+
+
+<p>
+  Be aware that the order in which the properties are returned by a for-in loop is not guaranteed.  
+  If order is important you will need to manage your own list of properties 
+  (probably as an internal array).
+</p>
+
+<hr />
+<a class="goto-target" id="delete-properties"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#xdelete-properties&#x27;).show();" onmouseout="$(&#x27;#xdelete-properties&#x27;).hide();">Deleting Properties</h3>
+    <h3 class="pl-12"><a id="xdelete-properties" class="d-block header-anchor" href="#delete-properties">#</a></h3>
+</div>
+
+
+
+<p>
+  Use the delete operator to remove a property from an object, like so: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-10');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-10" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-10">var circle = { radius: 8 };&#xD;&#xA;&#xD;&#xA;console.log(circle.radius);             // =&gt; 8&#xD;&#xA;console.log(delete circle.radius);      // =&gt; true&#xD;&#xA;console.log(circle.radius);             // =&gt; undefined&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var circle = { radius: 8 };&#xD;&#xA;&#xD;&#xA;console.log(circle.radius);             // =&gt; 8&#xD;&#xA;console.log(delete circle.radius);      // =&gt; true&#xD;&#xA;console.log(circle.radius);             // =&gt; undefined&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-10" style="display:none;">
+  <script>
+      var circle = { radius: 8 };
+
+console.log(circle.radius);             // => 8
+console.log(delete circle.radius);      // => true
+console.log(circle.radius);             // => undefined
+;
+  </script>
+</div>
+<button id="objects-10-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-10');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="constructor-functions"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xconstructor-functions&#x27;).show();" onmouseout="$(&#x27;#xconstructor-functions&#x27;).hide();">Constructor Ffunctions</h2>
+    <h2><a id="xconstructor-functions" style="display:none" class="d-block pl-12 header-anchor" href="#constructor-functions">#</a></h2>
+</div>
+
+
+
+<p>
+  Object literal notation, such as <code>var x = {}</code>, is preferred if all you need is a single 
+  object and there is no need for multiple instances. However, if you need multiple instances, 
+  it is better to use a constructor function. Here is an example of a book constructor function.
+</p>
+
+
+<pre class="prettyprint xlinenums run code-hscroll">
+function Book(isbn) {
+    this.isbn = isbn;
+    this.getIsbn = function () {
+        return "Isbn is " + this.isbn;
+    };
+}
+</pre>
+
+<p>
+  Properties, including methods, are assigned to the 'this' value in the function's body. 
+  In the above example a property and a function are assigned.  Also notice that this function 
+  is capitalized (i.e. <code><b>B</b>ook</code>); constructor functions are capitalized by 
+  convention in JavaScript
+</p>
+
+<p>
+  To create a new object with this function you use the new operator followed by a function invocation.  
+  A function that is invoked this way is called a constructor function whose main purpose is to create 
+  and initialize a new object.  Here we are creating a new book object: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-11');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-11" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-11">function Book(isbn) {&#xD;&#xA;    this.isbn = isbn;&#xD;&#xA;    this.getIsbn = function () {&#xD;&#xA;        return &quot;Isbn is &quot; &#x2B; this.isbn;&#xD;&#xA;    };&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var book = new Book(&quot;901-3865&quot;);&#xD;&#xA;&#xD;&#xA;console.log(book.getIsbn());    // =&gt; Isbn is 901-3865&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function Book(isbn) {&#xD;&#xA;    this.isbn = isbn;&#xD;&#xA;    this.getIsbn = function () {&#xD;&#xA;        return &quot;Isbn is &quot; &#x2B; this.isbn;&#xD;&#xA;    };&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var book = new Book(&quot;901-3865&quot;);&#xD;&#xA;&#xD;&#xA;console.log(book.getIsbn());    // =&gt; Isbn is 901-3865&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-11" style="display:none;">
+  <script>
+      function Book(isbn) {
+    this.isbn = isbn;
+    this.getIsbn = function () {
+        return "Isbn is " + this.isbn;
+    };
+}
+
+var book = new Book("901-3865");
+
+console.log(book.getIsbn());    // => Isbn is 901-3865
+;
+  </script>
+</div>
+<button id="objects-11-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-11');">
+  Run
+</button>
+
+
+<p>
+  When <code>new Book()</code> is invoked, JavaScript creates a new empty Object and sets an internal 
+  property which specifies that the new object's prototype is Book, that is, the newly created object 
+  inherits the prototype of the function. It then passes the <code>Book()</code> function two 
+  arguments: the new object as <code>this</code> (as a hidden parameter) and the "901-3865" as 
+  <code>isbn</code>. The function, in turn, sets the object's <code>isbn</code> property to "901-3865" 
+  and also adds the <code>getIsbn()</code> method to the object. JavaScript returns the newly 
+  created object to the caller which then assigns the new object to the <code>book</code> variable.
+</p>
+
+<p>
+  Each time you invoke <code>new Book()</code>, a new <code>getIsbn</code> method is created which is a 
+  rather inefficient because the method is the same for all book instances. A better approach is to let 
+  all instances share a single method which can be accomplished by adding <code>getIsbn</code> to the 
+  prototype of Book rather than the Book function itself.  Here is how this is done: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-12');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-12" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-12">function Book(isbn) {&#xD;&#xA;    this.isbn = isbn;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;Book.prototype.getIsbn = function () {&#xD;&#xA;    return &quot;Isbn is &quot; &#x2B; this.isbn;&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;var book = new Book(&quot;901-3865&quot;);&#xD;&#xA;&#xD;&#xA;console.log(book.getIsbn());    // =&gt; Isbn is 901-3865&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function Book(isbn) {&#xD;&#xA;    this.isbn = isbn;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;Book.prototype.getIsbn = function () {&#xD;&#xA;    return &quot;Isbn is &quot; &#x2B; this.isbn;&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;var book = new Book(&quot;901-3865&quot;);&#xD;&#xA;&#xD;&#xA;console.log(book.getIsbn());    // =&gt; Isbn is 901-3865&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-12" style="display:none;">
+  <script>
+      function Book(isbn) {
+    this.isbn = isbn;
+}
+
+Book.prototype.getIsbn = function () {
+    return "Isbn is " + this.isbn;
+};
+
+var book = new Book("901-3865");
+
+console.log(book.getIsbn());    // => Isbn is 901-3865
+;
+  </script>
+</div>
+<button id="objects-12-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-12');">
+  Run
+</button>
+
+
+<p>
+  As you can see, it works the same as when <code>getIsbn</code> was not shared. This is a very common 
+  object creation pattern. To really get to know JavaScript, we present this pattern and many others 
+  in our unique <a href="../products/dofactory-js.html"><b>Dofactory JS</b></a>. 
+  <a href="../products/dofactory-js.html">Click here</a> for more information.
+</p>
+
+<hr />
+<a class="goto-target" id="omitting-new"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#xomitting-new&#x27;).show();" onmouseout="$(&#x27;#xomitting-new&#x27;).hide();">Omitting new</h3>
+    <h3 class="pl-12"><a id="xomitting-new" class="d-block header-anchor" href="#omitting-new">#</a></h3>
+</div>
+
+
+
+<p>
+  If you forget to use the <code>new</code> keyword, your code will break without warning. There won't 
+  be any compile-time or runtime warnings.  See the example below where we call the instructor 
+  function with <code>new</code> and later without <code>new</code>. 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-13');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-13" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-13">function Task() {&#xD;&#xA;    this.message = &quot;Learning JS&quot;;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var t = new Task();                        // includes new   &#xD;&#xA;&#xD;&#xA;console.log(t.message);                    // =&gt; Learning JS&#xD;&#xA;console.log(window.message === undefined); // =&gt; true&#xD;&#xA;&#xD;&#xA;var u = Task();                            // new is omitted!&#xD;&#xA;&#xD;&#xA;console.log(u.message);                    // =&gt; error (not displayed in runtime)&#xD;&#xA;console.log(window.message === undefined); // =&gt; false&#xD;&#xA;console.log(window.message);               // =&gt; Learning JS&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function Task() {&#xD;&#xA;    this.message = &quot;Learning JS&quot;;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var t = new Task();                        // includes new   &#xD;&#xA;&#xD;&#xA;console.log(t.message);                    // =&gt; Learning JS&#xD;&#xA;console.log(window.message === undefined); // =&gt; true&#xD;&#xA;&#xD;&#xA;var u = Task();                            // new is omitted!&#xD;&#xA;&#xD;&#xA;console.log(u.message);                    // =&gt; error (not displayed in runtime)&#xD;&#xA;console.log(window.message === undefined); // =&gt; false&#xD;&#xA;console.log(window.message);               // =&gt; Learning JS&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-13" style="display:none;">
+  <script>
+      function Task() {
+    this.message = "Learning JS";
+}
+
+var t = new Task();                        // includes new   
+
+console.log(t.message);                    // => Learning JS
+console.log(window.message === undefined); // => true
+
+var u = Task();                            // new is omitted!
+
+console.log(u.message);                    // => error (not displayed in runtime)
+console.log(window.message === undefined); // => false
+console.log(window.message);               // => Learning JS
+;
+  </script>
+</div>
+<button id="objects-13-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-13');">
+  Run
+</button>
+
+
+<p>
+  Calling a constructor function without <code>new</code> is like calling an ordinary function. 
+  The <code>this</code> value in this call will <i>not</i> be bound to a new object. Instead, 
+  it is bound to the global object. Notice that the function is adding the <code>message</code> property 
+  to the global object (i.e. window). This is often referred to as <i>polluting</i> the global namespace. 
+</p>
+
+<p>
+  You can protect yourself against this mistake by including a check at the beginning of each constructor 
+  function. Essentially, it checks if this is an instance of <code>Task</code>: if it is not, then it 
+  invokes <code>new Task()</code> returning a true new instance. 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-14');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-14" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-14">function Task() {&#xD;&#xA;    if (!(this instanceof Task)) {&#xD;&#xA;        return new Task();&#xD;&#xA;    }&#xD;&#xA;    this.message = &quot;Learning JS&quot;;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var t = Task();          // new is omitted&#xD;&#xA;&#xD;&#xA;console.log(t.message);  // =&gt; Learning JS&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function Task() {&#xD;&#xA;    if (!(this instanceof Task)) {&#xD;&#xA;        return new Task();&#xD;&#xA;    }&#xD;&#xA;    this.message = &quot;Learning JS&quot;;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var t = Task();          // new is omitted&#xD;&#xA;&#xD;&#xA;console.log(t.message);  // =&gt; Learning JS&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-14" style="display:none;">
+  <script>
+      function Task() {
+    if (!(this instanceof Task)) {
+        return new Task();
+    }
+    this.message = "Learning JS";
+}
+
+var t = Task();          // new is omitted
+
+console.log(t.message);  // => Learning JS
+;
+  </script>
+</div>
+<button id="objects-14-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-14');">
+  Run
+</button>
+
+
+<p>
+  To learn more about avoiding common JavaScript errors, the 
+  <a href="../products/dofactory-js.html"><b>Dofactory JS</b></a> includes helpful guidelines about optimal 
+  object instantiation, object scopes, and object lifetimes through the use of design patterns and 
+  best practices. To learn more <a href="../products/dofactory-js.html">click here</a>.
+</p>
+
+<hr />
+<a class="goto-target" id="this"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xthis&#x27;).show();" onmouseout="$(&#x27;#xthis&#x27;).hide();">The value of this</h2>
+    <h2><a id="xthis" style="display:none" class="d-block pl-12 header-anchor" href="#this">#</a></h2>
+</div>
+
+
+
+<p>
+  In JavaScript, the <code>this</code> keyword provides an object a way to identify and examine itself. 
+  Consider the example below: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-15');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-15" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-15">function Circle(radius) {&#xD;&#xA;    this.radius = radius;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;Circle.prototype.getRadius = function () {&#xD;&#xA;    return this.radius;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var smallCircle = new Circle(5);&#xD;&#xA;console.log(smallCircle.getRadius());    // =&gt; 5&#xD;&#xA;&#xD;&#xA;var largeCircle = new Circle(100);&#xD;&#xA;console.log(largeCircle.getRadius());    // =&gt; 100&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function Circle(radius) {&#xD;&#xA;    this.radius = radius;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;Circle.prototype.getRadius = function () {&#xD;&#xA;    return this.radius;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var smallCircle = new Circle(5);&#xD;&#xA;console.log(smallCircle.getRadius());    // =&gt; 5&#xD;&#xA;&#xD;&#xA;var largeCircle = new Circle(100);&#xD;&#xA;console.log(largeCircle.getRadius());    // =&gt; 100&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-15" style="display:none;">
+  <script>
+      function Circle(radius) {
+    this.radius = radius;
+}
+
+Circle.prototype.getRadius = function () {
+    return this.radius;
+}
+
+var smallCircle = new Circle(5);
+console.log(smallCircle.getRadius());    // => 5
+
+var largeCircle = new Circle(100);
+console.log(largeCircle.getRadius());    // => 100
+;
+  </script>
+</div>
+<button id="objects-15-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-15');">
+  Run
+</button>
+
+
+<p>
+  We have two circles, a small one and a large one. Each knows the size of their radius because in the 
+  getRadius method this value refers to the object it called from.  
+</p>
+
+<p>
+  However, <code>this</code> can refer to a different object as well; it all depends on the execution context. 
+  All JavaScript code runs in an execution context. You can imagine the execution context as the scope of a 
+  function. A call to a function creates a new execution context. Also, in recursive functions a new context 
+  is created each time a function makes a call to itself.  
+</p>
+
+<p>
+  Code that is not inside a function executes in a global execution context in which this is bound to the 
+  global object. The example below shows that in the global context the <code>str</code> variable is the same 
+  as <code>this.str</code>.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-16');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-16" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-16">var str = &#x27;hello&#x27;;&#xD;&#xA;console.log(str);       // =&gt; hello&#xD;&#xA;&#xD;&#xA;this.str = &#x27;world&#x27;;     // this refers to the global object&#xD;&#xA;console.log(str);       // =&gt; world&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var str = &#x27;hello&#x27;;&#xD;&#xA;console.log(str);       // =&gt; hello&#xD;&#xA;&#xD;&#xA;this.str = &#x27;world&#x27;;     // this refers to the global object&#xD;&#xA;console.log(str);       // =&gt; world&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-16" style="display:none;">
+  <script>
+      var str = 'hello';
+console.log(str);       // => hello
+
+this.str = 'world';     // this refers to the global object
+console.log(str);       // => world
+;
+  </script>
+</div>
+<button id="objects-16-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-16');">
+  Run
+</button>
+
+
+<p>
+  The value of <code>this</code> inside a function body is determined how the function is invoked. 
+  The context is commonly furnished by the parent scope in which the function was invoked. Consider 
+  the example below: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-17');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-17" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-17">var circle = {&#xD;&#xA;    radius: 10,&#xD;&#xA;    getRadius: function () {&#xD;&#xA;        console.log(this === circle);&#xD;&#xA;        console.log(this.radius);&#xD;&#xA;    }&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;circle.getRadius();                 // =&gt; true, 10&#xD;&#xA;&#xD;&#xA;var anotherCircle = {&#xD;&#xA;    radius: 12&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;anotherCircle.getRadius = circle.getRadius;&#xD;&#xA;anotherCircle.getRadius();         // =&gt; false, 12&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var circle = {&#xD;&#xA;    radius: 10,&#xD;&#xA;    getRadius: function () {&#xD;&#xA;        console.log(this === circle);&#xD;&#xA;        console.log(this.radius);&#xD;&#xA;    }&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;circle.getRadius();                 // =&gt; true, 10&#xD;&#xA;&#xD;&#xA;var anotherCircle = {&#xD;&#xA;    radius: 12&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;anotherCircle.getRadius = circle.getRadius;&#xD;&#xA;anotherCircle.getRadius();         // =&gt; false, 12&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-17" style="display:none;">
+  <script>
+      var circle = {
+    radius: 10,
+    getRadius: function () {
+        console.log(this === circle);
+        console.log(this.radius);
+    }
+};
+
+circle.getRadius();                 // => true, 10
+
+var anotherCircle = {
+    radius: 12
+};
+
+anotherCircle.getRadius = circle.getRadius;
+anotherCircle.getRadius();         // => false, 12
+;
+  </script>
+</div>
+<button id="objects-17-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-17');">
+  Run
+</button>
+
+
+<p>
+  When invoking <code>circle.getRadius()</code> JavaScript establishes an execution context for the 
+  function call and sets <code>this</code> to the circle object. <code>anotherCircle</code> does not 
+  have a <code>getRadius()</code> method, but can be copied from circle.  Once copied and executed, 
+  the value of <code>this</code> refers to <code>anotherCircle</code> which is why the first alert, 
+  which tests for cicle, return false, because <code>this</code> is not of type circle. 
+</p>
+
+<p>
+  There is an easy way to determine the value of 'this' in a function. Look at the immediate left side 
+  of the invocation parentheses () and determine the object to which it belongs to.  Let's explain this 
+  with an example. Below we have three names with different scope. The First name has global scope and 
+  is a property of the global object, the Middle name is a student object property and the Last name 
+  is a detail object property.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-18');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-18" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-18">var name = &#x27;First&#x27;;&#xD;&#xA;&#xD;&#xA;var student = {&#xD;&#xA;    name: &#x27;Middle&#x27;,&#xD;&#xA;    detail: {&#xD;&#xA;        name: &#x27;Last&#x27;,&#xD;&#xA;        getName: function () {&#xD;&#xA;            console.log(this.name);&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var result = student.detail.getName;&#xD;&#xA;&#xD;&#xA;result();                    // =&gt; First (global scope)&#xD;&#xA;student.detail.getName();    // =&gt; Last  (detail scope)  &#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var name = &#x27;First&#x27;;&#xD;&#xA;&#xD;&#xA;var student = {&#xD;&#xA;    name: &#x27;Middle&#x27;,&#xD;&#xA;    detail: {&#xD;&#xA;        name: &#x27;Last&#x27;,&#xD;&#xA;        getName: function () {&#xD;&#xA;            console.log(this.name);&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var result = student.detail.getName;&#xD;&#xA;&#xD;&#xA;result();                    // =&gt; First (global scope)&#xD;&#xA;student.detail.getName();    // =&gt; Last  (detail scope)  &#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-18" style="display:none;">
+  <script>
+      var name = 'First';
+
+var student = {
+    name: 'Middle',
+    detail: {
+        name: 'Last',
+        getName: function () {
+            console.log(this.name);
+        }
+    }
+}
+
+var result = student.detail.getName;
+
+result();                    // => First (global scope)
+student.detail.getName();    // => Last  (detail scope)  
+;
+  </script>
+</div>
+<button id="objects-18-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-18');">
+  Run
+</button>
+
+
+<p>
+  In the first example, the left side of the parentheses is the variable <code>result</code> which 
+  belongs to the global object when invoked. So we get its name which is 'First'.
+</p>
+
+<p>
+  The second example, the left side of the parentheses is <code>getName</code>, which belongs to 
+  the <code>detail</code> object, so we get its name which is 'Last'.
+</p>
+
+<hr />
+<a class="goto-target" id="inheritance"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xinheritance&#x27;).show();" onmouseout="$(&#x27;#xinheritance&#x27;).hide();">Inheritance</h2>
+    <h2><a id="xinheritance" style="display:none" class="d-block pl-12 header-anchor" href="#inheritance">#</a></h2>
+</div>
+
+
+
+
+<p>
+  Unlike classical inheritance where classes inherit from classes, JavaScript objects inherit from other 
+  objects, called <i>prototypes</i>, in a prototypal inheritance system. 
+</p>
+
+<p>Each object in JavaScript has a prototype property that points to a prototype object.  
+  There is nothing special about prototype objects, they are regular objects.  Objects inherit all 
+  properties and methods that are available on the prototype object.  Prototype objects themselves 
+  have prototypes, which leads to a prototype chain.  This process in which objects inherit 
+  properties from objects in a prototype chain is referred to as <i>prototypal inheritance</i>. 
+  This model is simpler, smaller, and with less redundancy than that of classical inheritance.
+  </p>
+
+<p>
+  Prototypal inheritance works on the concept of <i>differential</i> inheritance in which each item in 
+  the prototype chain only augments the differences with its parent. In other words, properties on 
+  prototype objects do not change or override properties in the parent object.
+ </p>
+
+<p>
+  Let's look at an example.  First, we create an <code>account</code> object with a <code>bank</code> 
+  property and a <code>getBank</code> method. This object will serve as the prototype for other 
+  objects like <code>savings</code>, <code>checking</code>, etc.
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+var account = {
+    bank: "Bank of America",    // default value
+    getBank: function() {
+        return this.bank;
+    }
+};
+</pre>
+
+<p>
+  Setting prototypes to an object is done by setting an object's prototype attribute to a 
+  prototype object. We can make this process a bit simpler by using a helper function, so let's 
+  first create this function; we'll name it <code>createObject</code>. What follows may seem a 
+  bit convoluted, but once you understand prototypes in JavaScript things will clear up.  
+  Furthermore, our <a href="../products/dofactory-js.html"><b>Dofactory JS</b></a> does a wonderful 
+  job of explaining the details of prototypal inheritance which will help you in your journey 
+  to becoming a true JavaScript rockstar.  To learn more about this framework 
+  <a href="../products/dofactory-js.html">click here</a>. But now back to <code>createObject</code>.
+</p>
+
+<p>
+  <code>createObject</code> accepts a prototype object as an argument, named <code>p</code> and returns 
+  a new object (a function object really) whose prototype attribute is set to the passed in 
+  prototype object. The prototype attribute is how JavaScript is able to follow an object's prototype 
+  chain. 
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+function createObject (p) {
+    var F = function () {};    // Create a new and empty function
+    F.prototype = p;
+    return new F();
+}
+</pre>
+
+<p>
+  With this function in place, we now like to create a <code>savings</code> object that inherits 
+  the functionality of the <code>account</code> object.  First, we call our <code>createObject</code> 
+  function and pass in the account.  This returns a new object with <code>account</code> as its prototype.  
+  Next we add member properties and methods that are specific to savings accounts.
+ </p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-19');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-19" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-19">function createObject(p) {&#xD;&#xA;    var F = function () { };    // Create a new and empty function&#xD;&#xA;    F.prototype = p;&#xD;&#xA;    return new F();&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var account = {&#xD;&#xA;    bank: &quot;Bank of America&quot;,   // just the default value&#xD;&#xA;    getBank: function () {&#xD;&#xA;        return this.bank;&#xD;&#xA;    }&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;var savings = createObject(account);&#xD;&#xA;savings.accountHolders = [];&#xD;&#xA;&#xD;&#xA;savings.getAccountHolders = function () {&#xD;&#xA;    return this.accountHolders;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;savings.accountHolders.push(&quot;Jack Saver&quot;);&#xD;&#xA;savings.accountHolders.push(&quot;Mary Saver&quot;);&#xD;&#xA;&#xD;&#xA;console.log(savings.getAccountHolders()[0]);      // =&gt; Jack Saver&#xD;&#xA;console.log(savings.getAccountHolders()[1]);      // =&gt; Mary Saver&#xD;&#xA;console.log(savings.getBank());                   // =&gt; Bank of America&#xD;&#xA;&#xD;&#xA;savings.bank = &quot;JP Morgan Chase&quot;;&#xD;&#xA;console.log(savings.getBank());                   // =&gt; JP Morgan Chase&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function createObject(p) {&#xD;&#xA;    var F = function () { };    // Create a new and empty function&#xD;&#xA;    F.prototype = p;&#xD;&#xA;    return new F();&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var account = {&#xD;&#xA;    bank: &quot;Bank of America&quot;,   // just the default value&#xD;&#xA;    getBank: function () {&#xD;&#xA;        return this.bank;&#xD;&#xA;    }&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;var savings = createObject(account);&#xD;&#xA;savings.accountHolders = [];&#xD;&#xA;&#xD;&#xA;savings.getAccountHolders = function () {&#xD;&#xA;    return this.accountHolders;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;savings.accountHolders.push(&quot;Jack Saver&quot;);&#xD;&#xA;savings.accountHolders.push(&quot;Mary Saver&quot;);&#xD;&#xA;&#xD;&#xA;console.log(savings.getAccountHolders()[0]);      // =&gt; Jack Saver&#xD;&#xA;console.log(savings.getAccountHolders()[1]);      // =&gt; Mary Saver&#xD;&#xA;console.log(savings.getBank());                   // =&gt; Bank of America&#xD;&#xA;&#xD;&#xA;savings.bank = &quot;JP Morgan Chase&quot;;&#xD;&#xA;console.log(savings.getBank());                   // =&gt; JP Morgan Chase&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-19" style="display:none;">
+  <script>
+      function createObject(p) {
+    var F = function () { };    // Create a new and empty function
+    F.prototype = p;
+    return new F();
+}
+
+var account = {
+    bank: "Bank of America",   // just the default value
+    getBank: function () {
+        return this.bank;
+    }
+};
+
+var savings = createObject(account);
+savings.accountHolders = [];
+
+savings.getAccountHolders = function () {
+    return this.accountHolders;
+}
+
+savings.accountHolders.push("Jack Saver");
+savings.accountHolders.push("Mary Saver");
+
+console.log(savings.getAccountHolders()[0]);      // => Jack Saver
+console.log(savings.getAccountHolders()[1]);      // => Mary Saver
+console.log(savings.getBank());                   // => Bank of America
+
+savings.bank = "JP Morgan Chase";
+console.log(savings.getBank());                   // => JP Morgan Chase
+;
+  </script>
+</div>
+<button id="objects-19-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-19');">
+  Run
+</button>
+
+
+<p>
+  After creating the savings account, we add a couple of account holders to the object.  
+  Next we see which bank is associated with these savings accounts; as expected it is "Bank of America". 
+  In the second to last statement we change the bank to "JP Morgan Chase", which is confirmed 
+  with the alert message. This confirms that the prototypal inheritance chain works as expected.
+ </p>
+
+<hr />
+<a class="goto-target" id="hierarchies"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#xhierarchies&#x27;).show();" onmouseout="$(&#x27;#xhierarchies&#x27;).hide();">Building Prototypal Hierarchies</h3>
+    <h3 class="pl-12"><a id="xhierarchies" class="d-block header-anchor" href="#hierarchies">#</a></h3>
+</div>
+
+
+
+
+<p>
+  You can inherit from savings and add new properties and methods to a new parent object, and do this 
+  again and again.  Inheritance can go many levels deep, but in order to not overcomplicate things, 
+  it is generally best to limit this to 2 or 3 levels.  Of course, JavaScript will just continue 
+  searching the prototype chain until it hits the last object, the global object, and if the 
+  property or methods is not found, JavaScript return undefined.  Lengthy inheritance chains 
+  will negatively affect performance, which is another reason to avoid deep hierarchies. 
+</p>
+
+<p>
+  Prototypal inheritance is a highly memory efficient. A prototype is just a single object and derived 
+  object instances hold only references to their prototype. All replicated instances share a 
+  single copy of the members defined in the prototype object.
+</p>
+
+<p>
+  If you are coding to the EcmaScript 5 specification, then you don't need to write the 
+  aforementioned <code>createObject</code> function yourself. EcmaScript 5 has a built-in 
+  <code>Object.create()</code> method, which allows the creation of derived objects 
+  just as we did with our own <code>createObject</code>. Here is the code:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('objects-20');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-objects-20" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-objects-20">// EcmaScript 5&#xD;&#xA;var account = {&#xD;&#xA;    bank: &quot;Bank of America&quot;,        // just the default value&#xD;&#xA;    getBank: function () {&#xD;&#xA;        return this.bank;&#xD;&#xA;    }&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;var savings = Object.create(account);&#xD;&#xA;&#xD;&#xA;console.log(savings.bank);          // =&gt; Bank of America&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>// EcmaScript 5&#xD;&#xA;var account = {&#xD;&#xA;    bank: &quot;Bank of America&quot;,        // just the default value&#xD;&#xA;    getBank: function () {&#xD;&#xA;        return this.bank;&#xD;&#xA;    }&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;var savings = Object.create(account);&#xD;&#xA;&#xD;&#xA;console.log(savings.bank);          // =&gt; Bank of America&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="objects-20" style="display:none;">
+  <script>
+      // EcmaScript 5
+var account = {
+    bank: "Bank of America",        // just the default value
+    getBank: function () {
+        return this.bank;
+    }
+};
+
+var savings = Object.create(account);
+
+console.log(savings.bank);          // => Bank of America
+;
+  </script>
+</div>
+<button id="objects-20-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'objects-20');">
+  Run
+</button>
+
+
+<p>
+  If you are an experienced object-oriented developer you know that programming a 
+  class-based language is impossible without understanding class based inheritance. 
+  Similarly, writing professional JavaScript requires a solid grasp of prototypal 
+  inheritance to be able to move beyond the simple JavaScript snippets that were 
+  common just a few years ago.
+</p>
+
+<p>
+  Our unique <a href="../products/dofactory-js.html"><b>Dofactory JS</b></a> provides the necessary 
+  information on prototypes and how to use these in your own projects by applying proven design 
+  patterns and best practices. <a href="../products/dofactory-js.html">Click here</a> for more details.
+</p>
+
+<p>
+  Once you are familiar with prototypal inheritance it is actually easier to work with than 
+  classical inheritance. Its syntax is more tidy and simple. To customize your objects, you 
+  can quickly modify properties and methods at runtime without requiring a large amount of 
+  infrastructure code.
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="builtin-types.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; JavaScript Built-in Types &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="advanced-objects.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; JavaScript Adv. Objects &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+          <div class="bg-light p-10 my-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css.html">CSS Tutorial</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/selectors.html">CSS Selectors</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/borders.html">CSS Borders</a></li>
+
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/flex.html">CSS Flex</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/grids.html">CSS Grid</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/tables.html">CSS Tables</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/notfound.html">CSS Units</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/fonts.html">CSS Fonts</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/animation.html">CSS Animation</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/hover.html">CSS Hover</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/images.html">CSS Images</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/comments.html">CSS Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" xstyle="flex: 0 0 230px">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">Objects</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#literals">Object literals</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#properties">Object properties</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#property-names">Property names</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#delete-properties">Deleting properties</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#constructor-functions">Constructor functions</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#omitting-new">Omitting new</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#this">The this value</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#inheritance">Inheritance</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#hierarchies">Hierarchies</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+
+    let runbutton = function (button, model) {
+      var n = '#' + model;
+      var text = button.innerText;
+      if (text == "Run") {
+        $(n).slideDown(300);
+        button.innerText = "Clear";
+      } else {
+        $(n).slideUp(300);
+        button.innerText = "Run";
+      }
+    };
+
+    function copy(id) {
+      var stor = document.createElement("textarea");
+      stor.setAttribute("contentEditable", true);
+      stor.innerHTML = document.getElementById('copy-' + id).innerHTML;
+      stor.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+      document.body.appendChild(stor);
+      stor.focus({ preventScroll: true });
+      stor.focus();
+
+      document.execCommand("copy");
+      document.body.removeChild(stor);
+
+      $('#show-' + id).fadeIn('fast').delay(1200).fadeOut('slow');
+    }
+
+
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/javascript/objects by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:05:03 GMT -->
+</html>

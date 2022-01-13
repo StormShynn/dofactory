@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/forum/1026/where-to-start-with-net-design-patterns by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:47:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Where to start with .NET Design Patterns? - Dofactory</title>
+    <meta name="keywords">
+    <meta name="description" content="Topic: Where to start with .NET Design Patterns?">
+
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="where-to-start-with-net-design-patterns.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../../index.html">
+        <img src="../../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../../about.html">About Us</a>
+            <a class="dropdown-item" href="../../story.html">Our Story</a>
+            <a class="dropdown-item" href="../../customers.html">Customers</a>
+            <a class="dropdown-item" href="../../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../../login.html">Login</a>
+          <a class="btn btn-join " href="../../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        
+<div class="container pb-70">
+    <div class="row pt-30">
+
+        <div><i class="icon icon-arrow-left"></i> &nbsp;<a rel="nofollow" href="javascript:history.back();">Back to list</a></div>
+
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold">Views:&nbsp;&nbsp; 34.3K</span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold">Replies:&nbsp; 7</span></div>
+                    <div class="pl-10 pt-15"><span class="font-weight-semibold text-extra-muted">Archived</span></div>
+
+                </td>
+                <td class="pl-20 pt-3">
+
+                    <div><h1 class="font-weight-semibold font-25" style="color:#345;">Where to start with .NET Design Patterns?</h1></div>
+                    <div class="">I have been pretty successful in my career and consider myself a solid Senior .NET Developer.<br />
+Recently,&nbsp;I have been reading up on&nbsp;<span style="font-weight: bold">Design Patterns </span>and when&nbsp;I see an example, I usually&nbsp;get it.<br />
+<br />
+However, what&nbsp;troubles me is that I don't really know&nbsp;when and where to apply them in my own work. <br />
+For example, using a Singleton or Factory does not come '<span style="font-weight: bold">naturally</span>' to me.<br />
+<br />
+Am I the only one, or are there other developers that have similar experiences?</div>
+                    <div class="text-right p-10">Leo Benson, Mar 21, 2010</div>
+
+                </td>
+            </tr>
+        </table>
+
+
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;1</h5></div>
+
+
+                    <div class="">Hm... I quickly scanned through your replies to the question above... and there's one thing I noticed and that I dislike. He explains that using specific patterns in nothing that comes naturally into his mind. Your replies basically work like &quot;Learn about patterns, look for examples, identify pattern usage in code, etc.&quot;.<br />
+<br />
+I have a different suggestion:<br />
+Reflect your code.<br />
+<br />
+Thats it. <br />
+<br />
+Long explanation:<br />
+Patterns are common solutions for common problems/requirements. I believe that - before you come to understand every pattern in detail (hint: get the design pattern framework, it will help in regards to a deep understanding in this topic), you need to identify problems that you have with your code.<br />
+<br />
+If everything's fine... why change? However, I guess not everything is fine... and I guess you will also guess that sometimes. And this is when pattern come into play.<br />
+<br />
+Consider the following situation: Imagine a class that has a set of properties and you are about to implement lets say the fifth constructor ovverride to initialize the class properly. When others come across that class they might find it difficult to understand which constructor to use and when. Here you have your problem. Because ctors MUST have the same name, you couldn't offer any design time help by for instance naming the ctors after their concrete purpose. <br />
+<br />
+The solution: Factory methods. Simple declare the ctor private so that it cannot be called and implement static public Factory methods that return new instances of your class. Those can be named after their purpose.<br />
+<br />
+Another example:<br />
+You are developing a classic three tier application. In your database, three tables exist that contain data that depend on eachother. For each table you have a datalayer class accessing the data and a business logic class implementing business rules. However, when you want to make use of the data you might find yourself in a situation in which your presentation layer needs to know the implementation of your complex implementation. For example it needs to update your three business objects and then persist them in the correct order (yeah, I know that there are better ways). Here you have you problem: Maybe you need to do this in different places... and actually it makes no sense that some instance of a highlevel module know about a complex implementation on the low level end.<br />
+<br />
+The solution: The Facade pattern. Simply implement&nbsp;a class that knows your subsystem dn publishes simple methods that can be used to do whatever needs to be done... however, your high level classes do not have to know the subsystem anymore.<br />
+<br />
+Now I've done it, too. Presenting examples, ... ;-)<br />
+<br />
+But basically, what I really wanted to say is: Whatever you do, ask yourself if it can be done better and identify possible problems... the moment the recognize that something's going wrong or may lead to a problem, you will try finding a solution and eventually come across some pattern that solves it. The more you go this way the more you will get used to implementing those patterns right in the beginning.<br />
+<br />
+I know programmers who still instantiate and dispose objects manually even when they implement the IDisposable interface, instead of using the using statement... I know this has nothing to do with patterns... but it's a common way of thinking: Disposing your objects manually increases the possibility of forgetting... the using statement does this automatically instead. <br />
+<br />
+Regards,<br />
+-Chris<br />
+<br />
+P.S.: More than 3000 Views... and only a hand full of replies... guys... this is entitled as a forum. Would love to see more discussion here...</div>
+                    <div class="text-right p-10">Christian Jacob, Jul 29, 2010</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;2</h5></div>
+
+
+                    <div class="">Hello fellow developer. You’re certainly not alone. Every developer goes through a stage where the cone of uncertainty is wide and confidence is low. Fear not. Clearly you sound like a dedicated developer, wholike most of us loves the art of creating practical and useful tools and such for the virtual medium. My suggestion to you is to start with a factory pattern and perhaps a dependency injection pattern. Both are relatively simple to implement and are among the most commonly used patterns.
+<p></p>I learn best by examples so I’m going to give you a piece of an example without providing any code. I recently used a factory pattern to create a Web based app using .NET that would allow a user to upload a file that my app would need to be able to read, parse and store into a database. Initially the requirements called for only one specific file format, but I wanted to make the app scalable enough to handle many different file formats, just in case the requirements changed at some point. It’s not advisable to scope creep your own projects, but I knew I could accomplish this with minimal code addition.
+<p></p>So how did I solve this problem? Factory pattern to the rescue. I designed the app in such a way that the factory could choose which parser to execute depending on which file format was uploaded to the system. One of the positive side effects is that going forward, if new requirements emerge to include a new file type, the core factory code never need be modified. I simply add the definition of the file format as a custom type and add the parser code to handle the parser execution and presto, a new file format is ready to be accepted.
+<p></p>The dependency injection pattern comes in handy when abstracting your code for unit testing. It gives you the freedom to pass in a data source or “instance” variable so that your base code has no concrete dependency on any specific data source. This may be something that you’re already doing, but where unaware that there was actually a pattern associated to the method, which happens a lot at first. Sometimes you might find yourself realizing that you’re already using several patterns in slight variations. Those revelations are awesome.
+<p></p>&nbsp;
+<p></p>Anyway, hope this helps. Best of luck friend.
+<p></p></div>
+                    <div class="text-right p-10">Andrew Green, Jul 28, 2010</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;3</h5></div>
+
+
+                    <div class="">I'd recommend you start off with the book &quot;Head First Design Patterns&quot; as it uses an easy-going style explaining several patterns<br />
+<a href="http://oreilly.com/catalog/9780596007126" target="_blank">http://oreilly.com/catalog/9780596007126</a><br />
+<br />
+Good Luck!<br />
+<a href="http://oreilly.com/catalog/9780596007126" target="_blank"><br />
+<br />
+<br />
+<br />
+</a><br /></div>
+                    <div class="text-right p-10">Robert Blixt, May 21, 2010</div>
+
+                    <div class="pt-15">
+                        Exactly<br />
+                        <div class="text-right pr-10">  Mar 09, 2010</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;4</h5></div>
+
+
+                    <div class=""><span style="font-weight: bold; ">Firs</span>t: Go through different types of Patterns<br />
+<br />
+  Father of all design patterns: GOF<br />
+<a href="http://dofactory.com/Patterns/Patterns.aspx">http://dofactory.com/Patterns/Patterns.aspx<br />
+<br />
+or<br />
+<br />
+</a><a href="http://www.allapplabs.com/java_design_patterns/adapter_pattern.htm">http://www.allapplabs.com/java_design_patterns/adapter_pattern.htm</a><br />
+<br />
+<span style="font-weight: bold; ">Second</span>:Try to understand these patterns.<br />
+<br />
+   <span style="font-weight: bold; ">Third</span>: Find out the benefits and disadvantages of each and every design patterns<br />
+<br />
+   <span style="font-weight: bold; ">Fourth</span>: Try to use it in your applications.Before using it , think properly. And ask questions like<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;1. Is appropriate patterm? 2.Why should I use it? 3.Am I getting benefits?<br />
+<br />
+   <span style="font-weight: bold; ">Fifth</span>: If you are a dotnet developer, then try to find out which patterns are used in dotnet framework and try to understand it and ask yourself why these patterns are used.<br />
+<br />
+   By going through such approach , you will have better understanding of design concept.<br />
+<br />
+   <span style="font-weight: bold; ">Once you know design patterns , it doesnt mean you can use these patterns anywhere beacuse <br />
+   &gt;&gt;it will increase the complexity&nbsp;<br />
+   &gt;&gt;it will spoil structure of your project<br />
+<br />
+  NOTE: So always point out your design problem in your application and then think about design patterns.</span><br />
+<br />
+   So be careful while using design patterns.:)&nbsp;<br />
+<br />
+   Hope this will help you...</div>
+                    <div class="text-right p-10">Bhupendra Sinha, May 21, 2010</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;5</h5></div>
+
+
+                    <div class="">You can also check examples for <span style="font-weight: bold">abstract factory </span>at<br />
+<a href="http://www.dotnetpal.com/pattern/abstractfactory.html" target="_blank">http://www.dotnetpal.com/pattern/abstractfactory.html</a><br />
+<br />
+For <span style="font-weight: bold">Factory medhod </span>Design Pattern<br />
+<a href="http://www.dotnetpal.com/pattern/factorypattern.html" target="_blank">http://www.dotnetpal.com/pattern/factorypattern.html</a><br />
+<br /></div>
+                    <div class="text-right p-10">Ashish Sharma, Apr 20, 2010</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;6</h5></div>
+
+
+                    <div class="">Just to let you know that i have just published another article in this series.<br />
+<br />
+http://www.codeproject.com/KB/recipes/DecoratorPrimerA.aspx<br />
+<br />
+The intention behind this series i have already mentioned. Your feedback is tooooooo much welcome, as it will help me shape this series. It's a bit delayed publication. I was supposed to publish it 2 weeks before, but things came up. Anyway i am going to write another on Creational Patterns (Simple Factory, Factory Method, Abstract Factory and builder). Hopefully this won't get delayed. But feedback will be vital. Thank you<br /></div>
+                    <div class="text-right p-10">Syed Saqib Ali Tipu, Apr 16, 2010</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;7</h5></div>
+
+
+                    <div class="">Welcome to the world of design patterns, and yes you're not alone.<br />
+<br />
+I used to feel the same way, esp when i started, and still feel this way now. I am trying to tackle this problem in my recently started series. I am trying to explain them in terms of a scenario, so new comers will understand what should be the thought process. Yet only one on strategy pattern. Another on decorator pattern is in process.<br />
+<br />
+I am trying to learn from the mistakes i made, While trying my level best to make it as simple as possible, i made the pattern to much isolated. Anyway, it may help you to get started with at least one <br />
+<br />
+http://www.codeproject.com/KB/recipes/strategyPatternPrimerC.aspx<br /></div>
+                    <div class="text-right p-10">Syed Saqib Ali Tipu, Mar 22, 2010</div>
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+<br />
+<br />
+
+
+
+
+
+
+
+
+    </div>
+
+    
+  <div class="box-shadow" style="border-top:1px solid #e2ecee;">
+    <div class="container">
+      <div class="row" style="padding:60px 0 10px 0;">
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 pb-15"><img src="../../img/dofactorylogo.png" height="30" /></div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../about.html">About Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../story.html">Our Story</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../customers.html">Customers</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../contact.html">Contact Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../faq.html">FAQs</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum.html">Forum</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../explore.html">Explore Forum</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../login.html">Login</a> &nbsp; <a class="footer-link" href="../../join.html">Join</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted ">Products</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../products.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-net.html">Dofactory .NET</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-sql.html">Dofactory SQL</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-js.html">Dofactory JS</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-bundle.html">Dofactory Bundle</a></li>
+          </ul>
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-8 text-muted">Pricing</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../pricing.html">Product Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/bundle.html">Bundle Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/compare.html">Compare Editions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Demos</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../showcases.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/analytics.html">Analytics App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/ecommerce.html">Ecommerce App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/saas.html">SaaS App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/crm.html">CRM App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/app-factory.html">33-Day App Factory&trade;</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-3 mb-2 ">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Tutorials</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../tutorials.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql.html">SQL Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql/reference.html">SQL Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html.html">HTML Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html/ref.html">HTML Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../net/design-patterns.html">.NET Design Patterns</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../csharp-coding-standards.html">C# Coding Standards</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../javascript.html">JavaScript Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../connection-strings.html">Connection Strings</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row mx-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="row py-10">
+        <div class="col pl-35">
+          <div class="font-weight-bold font-18 merriweather text-muted">Stay Inspired!</div>
+        </div>
+      </div>
+
+      <div class="row pt-3 pb-10">
+        <div class="col-12 col-md-6 xcol-md-5 pl-35">
+          Join other developers and designers who have
+          already signed up for our mailing list.
+        </div>
+        <div class="col-12 col-md-4 xcol-md-4 pl-35">
+
+          
+<form method="post" action="https://www.dofactory.com/emaillist">
+    <div class="input-group mb-3 pt-1">
+        <input type="text" class="form-control" placeholder="Your email..." aria-label="your-email" aria-describedby="your-email" style="max-width:260px;" data-val="true" data-val-email="Invalid email address" data-val-required="Email is required." id="YourEmail" name="YourEmail" value="">
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-green" style="height:37px;">
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <span class="field-validation-valid" data-valmsg-for="YourEmail" data-valmsg-replace="true"></span>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7EqvaF0OymdGVK9uSJVxTqnyy11x95Pfz09spSiRP1qBMIajqSAZJSyfPVfVOgYuLNFkSwRDaHZfdSFP6-59xqR6AYiRS5ENPwPAgCwAU9cdZCiUL0k41wlFVHW3jNeCuN98" /></form>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row mx-10 mt-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="d-flex flex-lg-row flex-column p-20 mb-15 font-14">
+        <div class="pb-1 ">
+          <a href="../../terms.html" class="text-muted">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../privacy.html" class="text-muted">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../licensing.html" class="text-muted">Licensing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../eula.html" class="text-muted">EULA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../sitemap.html" class="text-muted">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="pb-1">
+          &copy; Data &amp; Object Factory, LLC. 
+        </div>
+        <div class="pb-1 ml-lg-auto">
+          Made with &nbsp;<img src="../../img/heart.png" style="width:14px;" />&nbsp; in Austin, Texas. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vsn 1.3.0
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+    <script type="text/javascript">
+        $(function () {
+
+            Dofactory.Utils.ScrollToTarget.start();
+
+        });
+    </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/forum/1026/where-to-start-with-net-design-patterns by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:47:21 GMT -->
+</html>

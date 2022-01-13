@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.dofactory.com/tutorial/click-handler.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:49:19 GMT -->
+<head>
+    <title>Forms Handler</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css" />
+</head>
+<body>
+    <div style="padding:20px;font-size:16px;">
+
+        <div><button class="btn btn-sm btn-default" onclick="window.frameElement ? window.parent.location.reload() : history.back()">< Back to page</button></div>
+        <br />
+        <div>The form handler received this data:</div>
+        <div style="padding-left: 10px; white-space: pre-line;" id="result"></div>
+    </div>
+</body>
+
+<!-- Mirrored from www.dofactory.com/tutorial/click-handler.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:49:19 GMT -->
+</html>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+   
+    var result = '<br />';
+    for (const [key, value] of params) {
+        result += ("coordinate = " + key + "<br />");
+    }
+
+    document.getElementById("result").innerHTML = result; 
+
+</script>

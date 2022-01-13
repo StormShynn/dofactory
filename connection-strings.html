@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/connection-strings by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:05:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Connection Strings - Database Connectionstrings - Dofactory</title>
+    <meta name="keywords" content="connectionstring, connection string ADO.NET ADO ODBC OLEDB DSN Jet Access SQL SQLServer Oracle UDB DB2 MySQL Interbase Sybase Visual FoxPro Informix .open SqlConnection OdbcConnection OleDbConnection OracleConnection MySqlConnection connection database">
+    <meta name="description" content="Connection string reference for all commonly used databases and data stores.">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="canonical" href="connection-strings.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="index.html">
+        <img src="img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="about.html">About Us</a>
+            <a class="dropdown-item" href="story.html">Our Story</a>
+            <a class="dropdown-item" href="customers.html">Customers</a>
+            <a class="dropdown-item" href="contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="login.html">Login</a>
+          <a class="btn btn-join " href="join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        
+<style>
+  h2 { font-size: 28px; margin-top: 70px !important; }
+  pre { font-weight: bold; margin-top: 30px; }
+
+  ol.linenums li { line-height: 22px; }
+  .prettyprint { font-size: 17px; }
+  .kwd { color: #0b7490; }
+  .lit, .str { color: #cc4500; }
+
+  /* enables autoscroll in flex and grid */
+  div { min-width: 0; }
+</style>
+
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        Db Connectionstrings&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="connection-strings.html">Introduction</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="connection-strings.html#sqlserver">SQL Server</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="connection-strings.html#sqlexpress">SQL Express</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="connection-strings.html#access">MS Access</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="connection-strings.html#oracle">Oracle</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="connection-strings.html#db2">IBM DB2</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="connection-strings.html#mysql">MySql</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="connection-strings.html#sybase">Sybase</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="connection-strings.html#interbase">Interbase</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="connection-strings.html#informix">Informix</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="connection-strings.html#excel">Excel</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="connection-strings.html#text">Text</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="connection-strings.html#dbase">dBase Dbf</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="connection-strings.html#foxpro">Visual FoxPro</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="0" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="img/arrow-left.jpg" /> &nbsp;Back to Conn strings</a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="html/ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="css/ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="javascript/design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial">
+
+      <div class="d-flex justify-content-around align-items-start">
+
+        <div class="w-100 m-auto" style="max-width:970px;">
+
+          
+<h1>Database Connectionstrings</h1>
+
+<div class="d-flex">
+  <div class="mt-40">
+    <div class="items">
+      <p>It's hard to remember details of database connection strings.</p>
+      <p>Here is an easy reference for the most popular databases.
+    </div>
+  </div>
+  <div class="ml-auto d-none d-md-block text-center pt-30" style="flex: 0 0 220px;">
+    <img src="img/connectionstrings/show-reference.png" alt="Database connectionstrings" xstyle="margin:30px 0px 0px 35px;" />
+  </div>
+</div>
+
+
+<p class="pt-35 ">
+  <b>Note:</b> Code samples are in C#. You must provide the values in <code style="color:red;font-size:15px;">red</code>
+</p>
+
+<a class="goto-target" id="sqlserver"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xsqlserver&#x27;).show();" onmouseout="$(&#x27;#xsqlserver&#x27;).hide();">Microsoft SQL Server</h2>
+    <h2><a id="xsqlserver" style="display:none" class="d-block pl-12 header-anchor" href="#sqlserver">#</a></h2>
+</div>
+
+<div>
+  <br />
+  <h5>ODBC DSN</h5>
+
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Dsn=<span class="r">DsnName</span>;" + 
+              "Uid=<span class="r">UserName</span>;" + 
+              "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+  <h5>ODBC -- Standard Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Driver={SQL Server};" + 
+              "Server=<span class="r">DataBaseName</span>x;" + 
+              "DataBase=<span class="r">DataBaseName</span>;" + 
+              "Uid=<span class="r">UserName</span>;" + 
+              "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+  <h5>ODBC -- Trusted Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Driver={SQL Server};" + 
+              "Server=<span class="r">ServerName</span>;" + 
+              "DataBase=<span class="r">DataBaseName</span>;" + 
+              "Uid=;" + 
+              "Pwd=;"; 
+conn.Open();
+// or
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Driver={SQL Server};" + 
+              "Server=<span class="r">ServerName</span>;" + 
+              "DataBase=<span class="r">DataBaseName</span>;" + 
+              "Trusted_Connection=Yes;"; 
+conn.Open();</pre>
+
+  <br /><br />
+  <h5>OleDb -- Standard Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+              "Driver=SQLOLEDB;" + 
+              "Data Source=<span class="r">ServerName</span>;" + 
+              "Initial Catalog=<span class="r">DataBaseName</span>;" + 
+              "User id=<span class="r">UserName</span>;" + 
+              "Password=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+  <h5>OleDb -- Trusted Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+              "Driver=SQLOLEDB;" + 
+              "Data Source=<span class="r">ServerName</span>;" + 
+              "Initial Catalog=<span class="r">DataBaseName</span>;" + 
+              "Integrated Security=SSPI;"; 
+conn.Open();</pre>
+
+  <br /><br />
+  <h5>OleDb -- via IP Address</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+              "Driver=SQLOLEDB;" + 
+              "Network Library=DBMSSOCN;" + 
+              "Data Source=<span class="r">xxx.xxx.xxx.xxx,1433</span>;" + 
+              "Initial Catalog=<span class="r">DataBaseName</span>;" + 
+              "User id=<span class="r">UserName</span>;" + 
+              "Password=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+  <h5>.NET DataProvider -- Standard Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.SqlClient;
+var conn = new SqlDbConnection();
+conn.ConnectionString = 
+              "Data Source=<span class="r">ServerName</span>;" + 
+              "Initial Catalog=<span class="r">DataBaseName</span>;" + 
+              "User id=<span class="r">UserName</span>;" + 
+              "Password=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+  <h5>.NET DataProvider -- Trusted Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.SqlClient;
+var conn = new SqlConnection();
+conn.ConnectionString = 
+              "Data Source=<span class="r">ServerName</span>;" + 
+              "Initial Catalog=<span class="r">DataBaseName</span>;" + 
+              "Integrated Security=SSPI;"; 
+conn.Open();</pre>
+
+  <br /><br />
+  <h5>.NET DataProvider -- via IP Address</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.SqlClient;
+var conn = new SqlConnection();
+conn.ConnectionString = 
+              "Network Library=DBMSSOCN;" + 
+              "Data Source=<span class="r">xxx.xxx.xxx.xxx,1433</span>;" + 
+              "Initial Catalog=<span class="r">DataBaseName</span>;" + 
+              "User Id=<span class="r">UserName</span>;" + 
+              "Password=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+</div>
+
+
+<a class="goto-target" id="sqlexpress"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xsqlexpress&#x27;).show();" onmouseout="$(&#x27;#xsqlexpress&#x27;).hide();">Microsoft Sql Express</h2>
+    <h2><a id="xsqlexpress" style="display:none" class="d-block pl-12 header-anchor" href="#sqlexpress">#</a></h2>
+</div>
+
+<div>
+  <br /><br />
+
+  <h5>.NET Data Provider -- Default Relative Path -- Standard Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.SqlClient;
+var conn = new SqlConnection();
+conn.ConnectionString = 
+     "Data Source=.\SQLExpress;" + 
+     "User Instance=true;" + 
+     "User Id=<span class="r">UserName</span>;" + 
+     "Password=<span class="r">Secret</span>;" + 
+     "AttachDbFilename=|DataDirectory|<span class="r">DataBaseName.mdf</span>;"
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>.NET Data Provider -- Default Relative Path -- Trusted Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.SqlClient;
+var conn = new SqlConnection();
+conn.ConnectionString = 
+     "Data Source=.\SQLExpress;" + 
+     "User Instance=true;" + 
+     "Integrated Security=true;" + 
+     "AttachDbFilename=|DataDirectory|<span class="r">DataBaseName.mdf</span>;"
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>.NET Data Provider -- Custom Relative Path -- Standard Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.SqlClient;
+AppDomain.CurrentDomain.SetData(
+     "DataDirectory", "<span class='r'>C:\MyPath\</span>");
+var conn = new SqlConnection();
+conn.ConnectionString = 
+     "Data Source=.\SQLExpress;" + 
+     "User Instance=true;" + 
+     "User Id=<span class="r">UserName</span>;" + 
+     "Password=<span class="r">Secret</span>;" + 
+     "AttachDbFilename=|DataDirectory|<span class="r">DataBaseName.mdf</span>;"
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>.NET Data Provider -- Custom Relative Path -- Trusted Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.SqlClient;
+AppDomain.CurrentDomain.SetData(
+     "DataDirectory", "<span class='r'>C:\MyPath\</span>");
+var conn = new SqlConnection();
+conn.ConnectionString = 
+     "Data Source=.\SQLExpress;" + 
+     "User Instance=true;" + 
+     "Integrated Security=true;" + 
+     "AttachDbFilename=|DataDirectory|<span class='r'>DataBaseName.mdf</span>;"
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>.NET Data Provider -- Absolute Path -- Standard Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.SqlClient;
+var conn = new SqlConnection();
+conn.ConnectionString = 
+     "Data Source=.\SQLExpress;" + 
+     "User Instance=true;" + 
+     "User Id=<span class="r">UserName</span>;" + 
+     "Password=<span class="r">Secret</span>;" + 
+     "AttachDbFilename=C:\MyPath\<span class="r">DataBaseName.mdf</span>;"
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>.NET Data Provider -- Absolute Path -- Trusted Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.SqlClient;
+var conn = new SqlConnection();
+conn.ConnectionString = 
+     "Data Source=.\SQLExpress;" + 
+     "User Instance=true;" + 
+     "Integrated Security=true;" + 
+     "AttachDbFilename=<span class="r">C:\MyPath\DataBaseName.mdf</span>;"
+conn.Open();</pre>
+
+
+</div>
+
+<a class="goto-target" id="access"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xaccess&#x27;).show();" onmouseout="$(&#x27;#xaccess&#x27;).hide();">Microsoft Access</h2>
+    <h2><a id="xaccess" style="display:none" class="d-block pl-12 header-anchor" href="#access">#</a></h2>
+</div>
+
+<div>
+  <br /><br />
+
+  <h5>ODBC DSN</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = "Dsn=<span class="r">DsnName</span>";
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- Standard Security</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+    "Driver={Microsoft Access Driver (*.mdb)};" + 
+    "Dbq=<span class="r">c:\myPath\myDb.mdb</span>;" + 
+    "Uid=Admin;Pwd=;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- Workgroup (System Database)</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+    "Driver={Microsoft Access Driver (*.mdb)};" + 
+    "Dbq=<span class="r">c:\myPath\myDb.mdb</span>;" + 
+    "SystemDb=<span class="r">c:\myPath\myDb.mdw</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- Exclusive Use</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+     "Driver={Microsoft Access Driver (*.mdb)};" + 
+     "Dbq=<span class="r">c:\myPath\myDb.mdb</span>;" + 
+     "Exclusive=1;"; 
+     "Uid=Admin;Pwd=;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>OleDb with MS Jet -- Standard Security</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+           "Provider=<span class="r">Microsoft.Jet.OLEDB.4.0</span>;" + 
+           "Data Source=<span class="r">c:\mypath\myDb.mdb</span>;" + 
+           "User id=admin;" + 
+           "Password=";
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>OleDb with MS Jet -- Workgroup (System Database)</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+           "Provider=<span class="r">Microsoft.Jet.OLEDB.4.0</span>;" + 
+           "Data Source=<span class="r">c:\mypath\myDb.mdb</span>;" + 
+           "System Database=<span class="r">c:\mypath\myDb.mdw</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>OleDb with MS Jet -- With Password</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+           "Provider=<span class="r">Microsoft.Jet.OLEDB.4.0</span>;" + 
+           "Data Source=<span class="r">c:\mypath\myDb.mdb</span>;" + 
+           "Database Password=<span class="r">Secret</span>;"
+conn.Open();</pre>
+
+</div>
+
+<a class="goto-target" id="oracle"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xoracle&#x27;).show();" onmouseout="$(&#x27;#xoracle&#x27;).hide();">ORACLE</h2>
+    <h2><a id="xoracle" style="display:none" class="d-block pl-12 header-anchor" href="#oracle">#</a></h2>
+</div>
+
+<div>
+  <br /><br />
+
+  <h5>ODBC DSN</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Dsn=<span class="r">DsnName</span>;" + 
+              "Uid=<span class="r">UserName</span>;" + 
+              "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();
+</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- New Microsoft Driver</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+           "Driver={Microsoft ODBC for Oracle};" + 
+           "Server=<span class="r">OracleServer.world</span>;" + 
+           "Uid=<span class="r">UserName</span>;" + 
+           "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- Old Microsoft Driver</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+    "Driver={Microsoft ODBC Driver for Oracle};" + 
+    "ConnectString=<span class="r">OracleServer.world</span>;" + 
+    "Uid=<span class="r">UserName</span>;" + 
+    "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- Oracle Driver</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+    "Driver={Oracle ODBC Driver};" + 
+    "Dbq=<span class="r">myDataBase</span>;" + // define in tsnames.ora
+    "Uid=<span class="r">UserName</span>;" + 
+    "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>OleDb -- Microsoft Driver</h5>
+  <pre class="prettyprint linenums run code-hscroll">uusing System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+              "Driver=MSDAORA;" + 
+              "Data Source=<span class="r">ServerName</span>;" + 
+              "User id=<span class="r">UserName</span>;" + 
+              "Password=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>OleDb -- Oracle Driver -- Standard Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+              "Driver=OraOLEDB.Oracle;" + 
+              "Data Source=<span class="r">ServerName</span>;" + 
+              "User id=<span class="r">UserName</span>;" + 
+              "Password=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>OleDb -- Oracle Driver -- Trusted Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+              "Driver=OraOLEDB.Oracle;" + 
+              "Data Source=<span class="r">ServerName</span>;" + 
+              "OSAuthent=1;";
+conn.Open();
+// or 
+using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+              "Driver=OraOLEDB.Oracle;" + 
+              "Data Source=<span class="r">ServerName</span>;" + 
+              "User id=/" + 
+              "Password=;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>.NET DataProvider from Microsoft -- Standard Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OracleClient;
+var conn = new OracleConnection();
+conn.ConnectionString = 
+              "Data Source=<span class="r">ServerName</span>;" + 
+              "User id=<span class="r">UserName</span>;"; 
+              "Password=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>.NET DataProvider from Microsoft -- Trusted Connection </h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OracleClient;
+var conn = new OracleConnection();
+conn.ConnectionString = 
+              "Data Source=<span class="r">Servername</span>;" + 
+              "Integrated Security=Yes;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>.NET DataProvider from Oracle -- Standard Connection</h5>
+  <pre class="prettyprint linenums run code-hscroll">using Oracle.DataAccess.Client;
+var conn = new OracleConnection();
+conn.ConnectionString = 
+              "Data Source=<span class="r">ServerName</span>;" + 
+              "User id=<span class="r">UserName</span>;"; 
+              "Password=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>.NET DataProvider from Oracle -- Trusted Connection </h5>
+  <pre class="prettyprint linenums run code-hscroll">using Oracle.DataAccess.Client;
+var conn = new OracleConnection();
+conn.ConnectionString = 
+              "Data Source=<span class="r">Servername</span>;" + 
+              "Integrated Security=Yes;"; 
+conn.Open();</pre>
+
+</div>
+
+<a class="goto-target" id="db2"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xdb2&#x27;).show();" onmouseout="$(&#x27;#xdb2&#x27;).hide();">IBM DB2</h2>
+    <h2><a id="xdb2" style="display:none" class="d-block pl-12 header-anchor" href="#db2">#</a></h2>
+</div>
+
+<div>
+  <br /><br />
+
+  <h5>ODBC DSN</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Dsn=<span class="r">DsnName</span>;" + 
+              "Uid=<span class="r">UserName</span>;" + 
+              "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC without DSN</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Driver={IBM DB2 ODBC DRIVER};" + 
+              "DataBase=<span class="r">DataBaseName</span>;" + 
+              "HostName=<span class="r">ServerName</span>;" + 
+              "Protocol=<span class="r">TCPIP</span>;" + 
+              "Port=<span class="r">PortNumber</span>;" + 
+              "Uid=<span class="r">UserName</span>;" + 
+              "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>OleDb -- Microsoft Driver</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+           "Driver=DB2OLEDB;" + 
+           "Network Transport Library=<span class="r">TCPIP</span>;" + 
+           "Network Address=<span class="r">xxx.xxx.xxx.xxx</span>;" + 
+           "Package Collection=<span class="r">CollectionName</span>;" + 
+           "Initial Catalog=<span class="r">DataBaseName</span>;" + 
+           "User id=<span class="r">UserName</span>;" + 
+           "Password=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>OleDb -- IBM Driver</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+            "Driver=IBMDADB2;" + 
+            "DataBase=<span class="r">DataBaseName</span>;" + 
+            "HostName=<span class="r">ServerName</span>;" + 
+            "Protocol=<span class="r">TCPIP</span>;" + 
+            "Port=<span class="r">PortNumber</span>;" + 
+            "Uid=<span class="r">UserName</span>;" + 
+            "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>.NET DataProvider from IBM </h5>
+  <pre class="prettyprint linenums run code-hscroll">using IBM.Data.DB2;
+var conn = new Db2Connection();
+conn.ConnectionString = 
+              "DataBase=<span class="r">DataBaseName</span>;" + 
+              "Uid=<span class="r">UserName</span>;" + 
+              "Pwd=<span class="r">Secret</span>;" + 
+conn.Open();</pre>
+
+
+</div>
+
+<a class="goto-target" id="mysql"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xmysql&#x27;).show();" onmouseout="$(&#x27;#xmysql&#x27;).hide();">MySql</h2>
+    <h2><a id="xmysql" style="display:none" class="d-block pl-12 header-anchor" href="#mysql">#</a></h2>
+</div>
+
+<div>
+  <br /><br />
+
+  <h5>ODBC DSN</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Dsn=<span class="r">DsnName</span>;" + 
+              "Uid=<span class="r">UserName</span>;" + 
+              "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- MyODBC Driver -- local database</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+            "Driver={MySql};" + 
+            "Server=localhost;" + 
+            "Option=16834;" + 
+            "DataBase=<span class="r">DataBaseName</span>;" 
+conn.Open();
+</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- MyODBC Driver -- remote database</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+            "Driver={MySql};" + 
+            "Server=<span class="r">db.domain.com</span>;" + 
+            "Option=131072;" + 
+            "Port=3306;" + 
+            "Stmt=;" + 
+            "DataBase=<span class="r">DataBaseName</span>;" + 
+            "Uid=<span class="r">UserName</span>;" + 
+            "Pwd=<span class="r">Secret</span>;" 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- MySQL ODBC 3.51 Driver</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+     "Driver={MySql ODBC 3.51 Driver};" + 
+     "Server=<span class="r">ServerName</span>;" + 
+     "Option=16834;" + 
+     "Port=3306;" + 
+     "Stmt=;" + 
+     "DataBase=<span class="r">DataBaseName</span>;" + 
+     "Uid=<span class="r">UserName</span>;" + 
+     "Pwd=<span class="r">Secret</span>;" 
+conn.Open();
+// or 
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+     "DRIVER={MySql ODBC 3.51 Driver};" + 
+     "SERVER=<span class="r">ServerName</span>;" + 
+     "DATABASE=<span class="r">DataBaseName</span>;" + 
+     "USER=<span class="r">UserName</span>;" + 
+     "PASSWORD=<span class="r">Secret</span>;" 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>OleDb</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+            "Provider=MySqlProv;" + 
+            "Data Source=<span class="r">ServerName</span>;" + 
+            "User id=<span class="r">UserName</span>;" + 
+            "Password=<span class="r">Secret</span>;" 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>.NET DataProvider from CoreLab </h5>
+  <pre class="prettyprint linenums run code-hscroll">using CoreLab.MySql;
+var conn = new MySqlConnection();
+conn.ConnectionString = 
+              "Host=<span class="r">ServerName</span>;" + 
+              "DataBase=<span class="r">DataBaseName</span>;" + 
+              "Protocol=<span class="r">TCP</span>;" + 
+              "Port=<span class="r">3306</span>;" + 
+              "Direct=<span class="r">true</span>;" + 
+              "Compress=<span class="r">false</span>;" + 
+              "Pooling=<span class="r">true</span>;" + 
+              "Min Pool Size=<span class="r">0</span>;" + 
+              "Max Pool Size=<span class="r">100</span>;" + 
+              "Connection Lifetime=<span class="r">0</span>;" + 
+              "User id=<span class="r">UserName</span>;" + 
+              "Password=<span class="r">Secret</span>;" + 
+conn.Open();</pre>
+
+</div>
+
+<a class="goto-target" id="sybase"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xsybase&#x27;).show();" onmouseout="$(&#x27;#xsybase&#x27;).hide();">Sybase</h2>
+    <h2><a id="xsybase" style="display:none" class="d-block pl-12 header-anchor" href="#sybase">#</a></h2>
+</div>
+
+<div>
+  <br /><br />
+
+  <h5>ODBC DSN</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Dsn=<span class="r">DsnName</span>;" + 
+              "Uid=<span class="r">UserName</span>;" + 
+              "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- Sybase System 12 (12.5) ODBC Driver</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Driver={SYBASE ASE ODBC Driver};" + 
+              "Srvr=<span class="r">ServerName</span>;" + 
+              "Uid=<span class="r">UserName</span>;" + 
+              "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- Sybase System 11 ODBC Driver</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+           "Driver={SYBASE SYSTEM 11};" + 
+           "Srvr=<span class="r">ServerName</span>;" + 
+           "Uid=<span class="r">UserName</span>;" + 
+           "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- Intersolv 3.10 ODBC Driver</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+        "Driver={INTERSOLV 3.10 32-BIT Sybase};" + 
+        "Srvr=<span class="r">ServerName</span>;" + 
+        "Uid=<span class="r">UserName</span>;" + 
+        "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- SQL Anywhere</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+         "ODBC;" + 
+         "Driver={Sybase SQL Anywhere 5.0};" + 
+         "DefaultDir=c:\myfolder\;" + 
+         "Dbf=c:\mypath\dbname.db;" + 
+         "Uid=UserName;" + 
+         "Pwd=Secret;" + 
+         "Dsn="""";";     // Must be included!
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>OleDb -- Sybase Adaptive Server Enterprise (ASE)</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+              "Driver=Sybase.ASEOLEDBProvider;" + 
+              "Server Name=ServerName,5000;" + 
+              "Initial Catalog=DataBaseName;" + 
+              "User id=UserName;" + 
+              "Password=Secret;"; 
+conn.Open();
+// optionally, replace 
+// 'Server Name' with 'Srvr', and 
+// 'Initial Catalog' with 'Catalog'</pre>
+
+  <br /><br />
+
+  <h5>.NET DataProvider from Sybase</h5>
+  <pre class="prettyprint linenums run code-hscroll">using Sybase.Data.AseClient;
+var conn = new AseConnection();
+conn.ConnectionString = 
+              "Data Source=ServerName;" + 
+              "Initial Catalog=DataBaseName;" + 
+              "User id=UserName;" + 
+              "Password=Secret;"; 
+conn.Open();
+</pre>
+
+
+</div>
+
+<a class="goto-target" id="interbase"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xinterbase&#x27;).show();" onmouseout="$(&#x27;#xinterbase&#x27;).hide();">Interbase</h2>
+    <h2><a id="xinterbase" style="display:none" class="d-block pl-12 header-anchor" href="#interbase">#</a></h2>
+</div>
+
+<div>
+  <br /><br />
+
+  <h5>ODBC DSN</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Dsn=<span class="r">DsnName</span>;" + 
+              "Uid=<span class="r">UserName</span>;" + 
+              "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- EasySoft ODBC Driver -- local machine</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+      "Driver={Easysoft IB6 ODBC};" + 
+      "Server=<span class="r">localhost</span>;" + 
+      "DataBase=localhost:<span class="r">C:\MyPath\DbName.gdb</span>;" + 
+      "Uid=<span class="r">UserName</span>;" + 
+      "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- EasySoft ODBC Driver -- remote machine</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+      "Driver={Easysoft IB6 ODBC};" + 
+      "Server=<span class="r">ServerName</span>;" + 
+      "DataBase=<span class="r">ServerName:C:\MyPath\DbName.gdb</span>;" + 
+      "Uid=<span class="r">UserName</span>;" + 
+      "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- Intersolv ODBC Driver -- local machine</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+      "Driver=" + 
+   "{INTERSOLV InterBase ODBC Driver (*.gdb)};" + 
+      "Server=<span class="r">localhost</span>;" + 
+      "DataBase=<span class="r">localhost:C:\MyPath\DbName.gdb</span>;" + 
+      "Uid=<span class="r">UserName</span>;" + 
+      "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC -- Intersolv ODBC Driver -- remote machine</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+      "Driver=" + 
+   "{INTERSOLV InterBase ODBC Driver (*.gdb)};" + 
+      "Server=<span class="r">ServerName</span>;" + 
+      "DataBase=<span class="r">ServerName:C:\MyPath\DbName.gdb</span>;" + 
+      "Uid=<span class="r">UserName</span>;" + 
+      "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();
+</pre>
+
+
+</div>
+
+<a class="goto-target" id="informix"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xinformix&#x27;).show();" onmouseout="$(&#x27;#xinformix&#x27;).hide();">Informix</h2>
+    <h2><a id="xinformix" style="display:none" class="d-block pl-12 header-anchor" href="#informix">#</a></h2>
+</div>
+
+<div>
+  <br /><br />
+
+  <h5>ODBC DSN -- INFORMIX 3.30 ODBC Driver</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Dsn=<span class="r">DsnName</span>;" + 
+              "Host=<span class="r">HostName</span>;" + 
+              "Server=<span class="r">ServerName</span>;" + 
+              "Service=<span class="r">ServerName</span>;" + 
+              "Protocol=<span class="r">olsoctcp</span>;" + 
+              "Database=<span class="r">DataBaseName</span>;" + 
+              "Uid=<span class="r">UserName</span>;" + 
+              "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC without DSN -- INFORMIX 3.30 ODBC Driver</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Dsn="";" + 
+              "Driver={INFORMIX 3.30 32 BIT};" + 
+              "Host=<span class="r">HostName</span>;" + 
+              "Server=<span class="r">ServerName</span>;" + 
+              "Service=<span class="r">ServerName</span>;" + 
+              "Protocol=<span class="r">olsoctcp</span>;" + 
+              "Database=<span class="r">DataBaseName</span>;" + 
+              "Uid=<span class="r">UserName</span>;" + 
+              "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();
+</pre>
+
+  <br /><br />
+
+  <h5>ODBC Informix-CLI 2.5 ODBC Driver</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+          "Driver={Informix-CLI 2.5 (32 Bit)};" + 
+          "Server=<span class="r">ServerName</span>;" + 
+          "DataBase=<span class="r">DataBaseName</span>;" + 
+          "Uid=<span class="r">UserName</span>;" + 
+          "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>OleDb -- IBM Informix OleDb Provider</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+        "Driver=IFXOLEDBC;" + 
+        "Data Source=<span class="r">DataBaseName@ServerName</span>;" + 
+        "User id=<span class="r">UserName</span>;" + 
+        "Password=<span class="r">Secret</span>;"; 
+        "Persist Security Info=<span class="r">true</span>;"; 
+conn.Open();</pre>
+
+
+
+</div>
+
+<a class="goto-target" id="excel"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xexcel&#x27;).show();" onmouseout="$(&#x27;#xexcel&#x27;).hide();">Excel</h2>
+    <h2><a id="xexcel" style="display:none" class="d-block pl-12 header-anchor" href="#excel">#</a></h2>
+</div>
+
+<div>
+  <br /><br />
+
+  <h5>ODBC DSN</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Dsn=<span class="r">DsnName</span>;" + 
+              "Uid=<span class="r">UserName</span>;" + 
+              "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC without DSN</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+       "Driver={Microsoft Excel Driver (*.xls)};" + 
+       "Driverid=790;" + 
+       "Dbq=<span class="r">C:\MyPath\SpreadSheet.xls</span>;" + 
+       "DefaultDir=<span class="r">C:\MyPath</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>OleDb with MS Jet</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+    "Driver=Microsoft.Jet.OLEDB.4.0;" + 
+    "Data Source=<span class="r">C:\MyPath\SpreadSheet.xls;</span>" + 
+   @"Extended Properties=<span class="r">""Excel 8.0;HDR=Yes"""</span>; 
+conn.Open();
+</pre>
+
+  <
+
+</div>
+
+<a class="goto-target" id="text"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xtext&#x27;).show();" onmouseout="$(&#x27;#xtext&#x27;).hide();">Text</h2>
+    <h2><a id="xtext" style="display:none" class="d-block pl-12 header-anchor" href="#text">#</a></h2>
+</div>
+
+<div>
+  <br /><br />
+
+  <h5>ODBC DSN</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+              "Dsn=<span class="r">DsnName</span>;" + 
+              "Uid=<span class="r">UserName</span>;" + 
+              "Pwd=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC without DSN</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+ "Driver={Microsoft Text Driver (*.txt; *.csv)};" + 
+ "Dbq=<span class="r">C:\MyPath\</span>;" + 
+ "Extensions=<span class="r">asc,csv,tab,txt</span>;"; 
+conn.Open();
+// Use: sql = "Select * From MyTextFile.txt"
+</pre>
+
+  <br /><br />
+
+  <h5>OleDb with MS Jet</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+      "Driver=Microsoft.Jet.OLEDB.4.0;" + 
+      "Data Source=<span class="r">C:\MyPath\</span>;" + 
+      "Extended Properties=" + 
+        @"<span class="r">""text;HDR=Yes;FMT=Delimited""</span>"; 
+conn.Open();
+// Use: sql = "Select * From MyTextFile.txt"
+</pre>
+
+</div>
+
+<a class="goto-target" id="dbase"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xdbase&#x27;).show();" onmouseout="$(&#x27;#xdbase&#x27;).hide();">dBase Dbf</h2>
+    <h2><a id="xdbase" style="display:none" class="d-block pl-12 header-anchor" href="#dbase">#</a></h2>
+</div>
+
+<div>
+  <br /><br />
+
+  <h5>ODBC DSN</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = "Dsn=<span class="r">DsnName</span>";
+conn.Open();
+// Use: sql = "Select * From MyDb.dbf"</pre>
+
+  <br /><br />
+
+  <h5>ODBC without DSN</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+     "Driver={Microsoft dBASE Driver (*.dbf)};" + 
+     "Driverid=277;" + 
+     "Dbq=<span class="r">C:\MyPath\</span>";
+conn.Open();
+// Use: sql = "Select * From MyDb.dbf"</pre>
+
+
+
+</div>
+
+<a class="goto-target" id="foxpro"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xfoxpro&#x27;).show();" onmouseout="$(&#x27;#xfoxpro&#x27;).hide();">Visual FoxPro</h2>
+    <h2><a id="xfoxpro" style="display:none" class="d-block pl-12 header-anchor" href="#foxpro">#</a></h2>
+</div>
+
+<div>
+  <br /><br />
+
+  <h5>ODBC DSN</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = "Dsn=<span class="r">DsnName</span>";
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC without DSN -- Database container (dbc)</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+      "Driver={Microsoft Visual FoxPro Driver};" + 
+      "SourceType=DBC;" + 
+      "SourceDB=<span class="r">C:\MyPath\MyDb.dbc</span>;" + 
+      "Exclusive=<span class="r">No</span>"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>ODBC without DSN -- Free table directory</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.Odbc;
+var conn = new OdbcConnection();
+conn.ConnectionString = 
+      "Driver={Microsoft Visual FoxPro Driver};" + 
+      "SourceType=DBF;" + 
+      "SourceDB=<span class="r">C:\MyPath</span>;" + 
+      "Exclusive=<span class="r">No</span>"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>OleDb -- Database container (dbc)</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+              "Driver=VFPOLEDB;" + 
+              "Data Source=<span class="r">C:\MyPath\MyDb.dbc</span>;" + 
+              "Collating Sequence=machine;" + 
+              "Password=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+  <br /><br />
+
+  <h5>OleDb -- Free table directory</h5>
+  <pre class="prettyprint linenums run code-hscroll">using System.Data.OleDb;
+var conn = new OleDbConnection();
+conn.ConnectionString = 
+              "Driver=VFPOLEDB;" + 
+              "Data Source=<span class="r">C:\MyPath\</span>;" + 
+              "Collating Sequence=general;" + 
+              "Password=<span class="r">Secret</span>;"; 
+conn.Open();</pre>
+
+</div>
+
+<br />
+<br />
+<br />
+
+
+
+
+          <div class="bg-light p-10 mb-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">Connectionstrings</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#sqlserver">SQL Server</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#sqlexpress">SQL Express</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#access">MS Access</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#oracle">ORACLE</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#db2">IBM DB2</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#mysql">MySql</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#sybase">Sybase</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#interbase">Interbase</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#informix">Informix</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#excel">Excel</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#text">Text</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#dbase">dBase</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#foxpro">Visual FoxPro</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+      $('a[id^="item-"]').on('click', function (e) {
+        $('a[id^="item-"]').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/connection-strings by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:05:45 GMT -->
+</html>

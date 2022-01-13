@@ -1,0 +1,2131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/javascript/what-is by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:05:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>What is JavaScript - Dofactory</title>
+    <meta name="keywords" content="javascript, learning javascript, prototypes, for loop, while loop, javascript switch, javascript try catch, javascript programming, javascript functions">
+    <meta name="description" content="Learn JavaScript. A JavaScript tutorial that comes with numerous code samples that demonstrate the concepts in action. Each time you see a &#x27;Run&#x27; button it will execute the code displayed:">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="what-is.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        <link rel="stylesheet" href="../tutorial/css/javascript1cdd.css?v=qVXqJlnTI2nqJ78-w9n5mGO4sNLYFSlXHRVEVwRSTj4" />
+
+<style>
+  .bg-cream-100 { background-color: #f6f8fd !important; }
+</style>
+
+
+<script>
+  var console = {};
+  console.log = function (e) {
+    try {
+
+      if (!e && e != false) e = "undefined";
+      if (e == "Andrew Fuller\n Bob Springsteen") {
+        e = e.replace(/(?:\r\n|\r|\n)/g, '<br>');
+      }
+      document.writeln(e);
+      document.write("<br />");
+    }
+    catch {
+      document.writeln("");
+    }
+  };
+  window.console = console;
+</script>
+
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="../img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        JavaScript Tutorial&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="../javascript.html">JavaScript Intro</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="what-is.html">What is JavaScript</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="essentials.html">JavaScript Essentials</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="variables.html">JavaScript Variables</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="operators.html">JavaScript Operators</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="conditionals.html">JavaScript Conditionals</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="loops.html">JavaScript Loops</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="builtin-types.html">JavaScript Built-in Types</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="objects.html">JavaScript Objects</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="advanced-objects.html">JavaScript Adv. Objects</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="arrays.html">JavaScript Arrays</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="functions.html">JavaScript Functions</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="function-objects.html">JavaScript Function Objects</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="json.html">JavaScript JSON</a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="regular-expressions.html">JavaScript Reg. Expressions</a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="design-patterns.html">JavaScript Patterns</a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="reference.html">JavaScript Reference</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="29" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="../img/arrow-left.jpg" /> &nbsp;Back to JS </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html/ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css/ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="../net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial" xstyle="xmax-width:1200px;">
+
+      <div class="d-flex justify-content-around align-items-start">
+
+        <div class="w-100 m-auto" style="max-width:970px;">
+
+          <h1>What is JavaScript</h1>
+
+
+<div class="d-flex">
+    <div class="mt-40">
+        <p class="pb-0 mb-0" style="margin-right:0 !important;"><em>JavaScript</em> is a dynamic programming language that can be used client-side as well server-side. On the client, JavaScript creates interactive elements that perform business logic and engage the user.</p>
+    </div>
+    <div class="ml-auto d-none d-md-block text-center" style="flex: 0 0 200px;">
+      <img src="../img/javascript/show-js.png" alt="JavaScript Tutorial" style="margin:20px 10px 0px 35px;" />
+    </div>
+</div>
+
+
+
+<hr />
+<a class="goto-target" id="history"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xhistory&#x27;).show();" onmouseout="$(&#x27;#xhistory&#x27;).hide();">History</h2>
+    <h2><a id="xhistory" style="display:none" class="d-block pl-12 header-anchor" href="#history">#</a></h2>
+</div>
+
+
+
+<p>
+  JavaScript was introduced in 1995 by Netscape, the company that created the first browser by the
+  same name.  Other browsers followed, and JavaScript quickly gained acceptance as the de-facto
+  client-side scripting language on the internet. Today it is used by millions of websites to add
+  functionality and responsiveness, validate forms, communicate with the server, and much more.
+</p>
+<p>
+  Originally, JavaScript was named LiveScript but was renamed JavaScript as a marketing strategy
+  to benefit from the exploding popularity of the Java programming language at that time.  As it
+  turned out, Java evolved into a server-side language and did not succeed on the browser, whereas
+  JavaScript did.  The change of name is unfortunate because it has caused a lot of confusion.
+</p>
+<p>
+  Soon after its initial release the JavaScript language was submitted to ECMA International -- an
+  international non-profit standards organization -- for consideration as an industry standard.
+  It was accepted and today we have a standardized version which is called EcmaScript. There are
+  several implementations of the EcmaScript standard, including JavaScript, Jscript (Microsoft),
+  and ActionScript (Adobe). The EcmaScript language is undergoing continuous improvements.
+</p>
+<p>
+  Developers initially felt that JavaScript was an inferior language because of its perceived
+  simplicity.  Also, users would frequently disable JavaScript in their browsers because of
+  security concerns.  However, over time, starting with the introduction of AJAX and the
+  related Web 2.0 transition, it became clear that JavaScript allows developers to build
+  powerful and responsive web applications. Today JavaScript is considered <i>the</i> Web language
+  and an essential tool for building modern and responsive web apps.
+</p>
+<p>
+  Some developers are finding it difficult to start building serious apps with JavaScript;
+  in particular those that are coming from mature, object-oriented, statically-typed languages,
+  such as Java, C++, and C#.  This is understandable because JavaScript is dynamically typed
+  and a rather forgiving language which makes it easy to program, but also easy to make mistakes.
+  In addition, mistakes and coding errors in JavaScript can be difficult to identify because of
+  less mature developer tools, such as editors, compilers, debuggers, integration, deployment, etc.
+  Fortunately, better tooling is becoming available but, as an example, JavaScript's
+  <code>console.log</code> is still a common debugging facility.
+</p>
+<p>
+  In this tutorial we cover the JavaScript language and we will highlight those aspects
+  of the language that are painful and error prone. We will explain how to avoid these.
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="../javascript.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; JavaScript Intro &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="essentials.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; JavaScript Essentials &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<a class="goto-target" id="js-vs-java"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xjs-vs-java&#x27;).show();" onmouseout="$(&#x27;#xjs-vs-java&#x27;).hide();">JavaScript versus Java</h2>
+    <h2><a id="xjs-vs-java" style="display:none" class="d-block pl-12 header-anchor" href="#js-vs-java">#</a></h2>
+</div>
+
+
+
+<p>
+  A common misconception is that JavaScript is closely related to Java. It is not.
+  However, it is true that both languages have a C-like syntax but that is where the
+  similarity ends. With Java you create standalone applications, but this is not
+  how JavaScript works. JavaScript requires a <i>hosting environment</i> which most
+  commonly is the browser. The JavaScript code is embedded in an HTML documents and
+  its primary use is to add interactivity to HTML pages. Many developers don't
+  realize this, but JavaScript itself does not have the facilities to provide
+  input and output to the user, it relies on the DOM and the browser for that.
+</p>
+<p>
+  Another difference is that Java is statically typed whereas JavaScript is a
+  dynamically typed language.  In a statically typed language, like Java,
+  C#, or C++, you declare variables that are of a certain type, such as, integer,
+  double, or string. At runtime these types do not change. Assigning a string
+  to an integer variable will result in an error.
+</p>
+<p>In Java, assigning a string value to an integer causes an error.</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+// Java
+
+int total = 131;
+total = "This is Java";      // Error. In fact, won't even compile
+</pre>
+
+<p>
+  In JavaScript, which is a dynamically typed language, a variable can
+  hold any type of value, such as integer, string, boolean, etc.
+  Moreover, at runtime, the type can be changed. For instance, a
+  variable that is bound to a number can easily be re-assigned to a string.
+</p>
+<p>
+  A JavaScript variable is assigned a number value, a string,
+  an object, and even a function. It all works perfectly fine.
+</p>
+
+<pre class="prettyprint  xlinenums run code-hscroll">
+// JavaScript
+
+var total = 131;                         // number
+total = "This is JavaScript";            // string
+total = {"Customer": "Karen McGrath"};   // object
+total = function () {alert("Hello");};   // function
+total();                                 // => Hello (executes function)
+</pre>
+
+<p>
+  Both Java and JavaScript borrow their programming syntax from C.
+  For example, <code >for</code>, <code >do while</code>,
+  <code >while</code> loops, and <code >if</code>,
+  <code >switch</code>, <code >break</code>,
+  and <code >continue</code> statements all
+  exist in JavaScript. Here are some examples:
+</p>
+
+<hr />
+<a class="goto-target" id="for-loop"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#xfor-loop&#x27;).show();" onmouseout="$(&#x27;#xfor-loop&#x27;).hide();">for loop</h3>
+    <h3 class="pl-12"><a id="xfor-loop" class="d-block header-anchor" href="#for-loop">#</a></h3>
+</div>
+
+
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-1');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-1" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-1">var count = 0;&#xD;&#xA;for (var i = 0; i &lt; 10; i&#x2B;&#x2B;) {&#xD;&#xA;    count &#x2B;= i;&#xD;&#xA;}&#xD;&#xA;console.log(&quot;count = &quot; &#x2B; count);         // =&gt; count = 45&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var count = 0;&#xD;&#xA;for (var i = 0; i &lt; 10; i&#x2B;&#x2B;) {&#xD;&#xA;    count &#x2B;= i;&#xD;&#xA;}&#xD;&#xA;console.log(&quot;count = &quot; &#x2B; count);         // =&gt; count = 45&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-1" style="display:none;">
+  <script>
+      var count = 0;
+for (var i = 0; i < 10; i++) {
+    count += i;
+}
+console.log("count = " + count);         // => count = 45
+;
+  </script>
+</div>
+<button id="what-is-1-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-1');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="while-loop"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#xwhile-loop&#x27;).show();" onmouseout="$(&#x27;#xwhile-loop&#x27;).hide();">while loop</h3>
+    <h3 class="pl-12"><a id="xwhile-loop" class="d-block header-anchor" href="#while-loop">#</a></h3>
+</div>
+
+
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-2');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-2" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-2">var i = 0;&#xD;&#xA;count = 100;&#xD;&#xA;while (i &lt; count){&#xD;&#xA;   i&#x2B;&#x2B;;&#xD;&#xA;}&#xD;&#xA;console.log(&quot;i = &quot; &#x2B; i);            // =&gt; i = 100&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var i = 0;&#xD;&#xA;count = 100;&#xD;&#xA;while (i &lt; count){&#xD;&#xA;   i&#x2B;&#x2B;;&#xD;&#xA;}&#xD;&#xA;console.log(&quot;i = &quot; &#x2B; i);            // =&gt; i = 100&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-2" style="display:none;">
+  <script>
+      var i = 0;
+count = 100;
+while (i < count){
+   i++;
+}
+console.log("i = " + i);            // => i = 100
+;
+  </script>
+</div>
+<button id="what-is-2-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-2');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="switch-statement"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#xswitch-statement&#x27;).show();" onmouseout="$(&#x27;#xswitch-statement&#x27;).hide();">switch statement</h3>
+    <h3 class="pl-12"><a id="xswitch-statement" class="d-block header-anchor" href="#switch-statement">#</a></h3>
+</div>
+
+
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-3');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-3" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-3">// switch statement&#xD;&#xA;var day = new Date().getDay();&#xD;&#xA;switch (day) {&#xD;&#xA;    case 0:&#xD;&#xA;        console.log(&quot;Today is Sunday.&quot;);&#xD;&#xA;        break;&#xD;&#xA;    case 1:&#xD;&#xA;        console.log(&quot;Today is Monday.&quot;);&#xD;&#xA;        break;&#xD;&#xA;    case 2:&#xD;&#xA;        console.log(&quot;Today is Tuesday.&quot;);&#xD;&#xA;        break;&#xD;&#xA;    case 3:&#xD;&#xA;        console.log(&quot;Today is Wednesday.&quot;);&#xD;&#xA;        break;&#xD;&#xA;    case 4:&#xD;&#xA;        console.log(&quot;Today is Thursday.&quot;);&#xD;&#xA;        break;&#xD;&#xA;    case 5:&#xD;&#xA;        console.log(&quot;Today is Friday.&quot;);&#xD;&#xA;        break;&#xD;&#xA;    case 6:&#xD;&#xA;        console.log(&quot;Today is Saturday.&quot;);&#xD;&#xA;        break;&#xD;&#xA;    default:&#xD;&#xA;        console.log(&quot;Today is a strange day.&quot;);&#xD;&#xA;}&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>// switch statement&#xD;&#xA;var day = new Date().getDay();&#xD;&#xA;switch (day) {&#xD;&#xA;    case 0:&#xD;&#xA;        console.log(&quot;Today is Sunday.&quot;);&#xD;&#xA;        break;&#xD;&#xA;    case 1:&#xD;&#xA;        console.log(&quot;Today is Monday.&quot;);&#xD;&#xA;        break;&#xD;&#xA;    case 2:&#xD;&#xA;        console.log(&quot;Today is Tuesday.&quot;);&#xD;&#xA;        break;&#xD;&#xA;    case 3:&#xD;&#xA;        console.log(&quot;Today is Wednesday.&quot;);&#xD;&#xA;        break;&#xD;&#xA;    case 4:&#xD;&#xA;        console.log(&quot;Today is Thursday.&quot;);&#xD;&#xA;        break;&#xD;&#xA;    case 5:&#xD;&#xA;        console.log(&quot;Today is Friday.&quot;);&#xD;&#xA;        break;&#xD;&#xA;    case 6:&#xD;&#xA;        console.log(&quot;Today is Saturday.&quot;);&#xD;&#xA;        break;&#xD;&#xA;    default:&#xD;&#xA;        console.log(&quot;Today is a strange day.&quot;);&#xD;&#xA;}&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-3" style="display:none;">
+  <script>
+      // switch statement
+var day = new Date().getDay();
+switch (day) {
+    case 0:
+        console.log("Today is Sunday.");
+        break;
+    case 1:
+        console.log("Today is Monday.");
+        break;
+    case 2:
+        console.log("Today is Tuesday.");
+        break;
+    case 3:
+        console.log("Today is Wednesday.");
+        break;
+    case 4:
+        console.log("Today is Thursday.");
+        break;
+    case 5:
+        console.log("Today is Friday.");
+        break;
+    case 6:
+        console.log("Today is Saturday.");
+        break;
+    default:
+        console.log("Today is a strange day.");
+}
+;
+  </script>
+</div>
+<button id="what-is-3-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-3');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="if-then-else"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#xif-then-else&#x27;).show();" onmouseout="$(&#x27;#xif-then-else&#x27;).hide();">if then else</h3>
+    <h3 class="pl-12"><a id="xif-then-else" class="d-block header-anchor" href="#if-then-else">#</a></h3>
+</div>
+
+
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-4');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-4" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-4">var value = 9;&#xD;&#xA;if (value &lt; 0) {&#xD;&#xA;    console.log(&quot;Negative value.&quot;);&#xD;&#xA;} else if (value &lt; 10) {&#xD;&#xA;    console.log(&quot;Between 0 and 9, inclusive.&quot;);&#xD;&#xA;} else {&#xD;&#xA;    console.log(&quot;Greater than or equal to 10.&quot;);&#xD;&#xA;}&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var value = 9;&#xD;&#xA;if (value &lt; 0) {&#xD;&#xA;    console.log(&quot;Negative value.&quot;);&#xD;&#xA;} else if (value &lt; 10) {&#xD;&#xA;    console.log(&quot;Between 0 and 9, inclusive.&quot;);&#xD;&#xA;} else {&#xD;&#xA;    console.log(&quot;Greater than or equal to 10.&quot;);&#xD;&#xA;}&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-4" style="display:none;">
+  <script>
+      var value = 9;
+if (value < 0) {
+    console.log("Negative value.");
+} else if (value < 10) {
+    console.log("Between 0 and 9, inclusive.");
+} else {
+    console.log("Greater than or equal to 10.");
+}
+;
+  </script>
+</div>
+<button id="what-is-4-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-4');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="break-continue"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#xbreak-continue&#x27;).show();" onmouseout="$(&#x27;#xbreak-continue&#x27;).hide();">break and continue</h3>
+    <h3 class="pl-12"><a id="xbreak-continue" class="d-block header-anchor" href="#break-continue">#</a></h3>
+</div>
+
+
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-5');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-5" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-5">for (var i = 0; i &lt; 100; i&#x2B;&#x2B;) {&#xD;&#xA;    if (i &lt; 5) {&#xD;&#xA;        continue;&#xD;&#xA;    } else if (i &gt; 7) {&#xD;&#xA;        break;&#xD;&#xA;    }&#xD;&#xA;    console.log(i);         // =&gt; 5, 6, 7&#xD;&#xA;}&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>for (var i = 0; i &lt; 100; i&#x2B;&#x2B;) {&#xD;&#xA;    if (i &lt; 5) {&#xD;&#xA;        continue;&#xD;&#xA;    } else if (i &gt; 7) {&#xD;&#xA;        break;&#xD;&#xA;    }&#xD;&#xA;    console.log(i);         // =&gt; 5, 6, 7&#xD;&#xA;}&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-5" style="display:none;">
+  <script>
+      for (var i = 0; i < 100; i++) {
+    if (i < 5) {
+        continue;
+    } else if (i > 7) {
+        break;
+    }
+    console.log(i);         // => 5, 6, 7
+}
+;
+  </script>
+</div>
+<button id="what-is-5-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-5');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="try-catch"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#xtry-catch&#x27;).show();" onmouseout="$(&#x27;#xtry-catch&#x27;).hide();">try, catch</h3>
+    <h3 class="pl-12"><a id="xtry-catch" class="d-block header-anchor" href="#try-catch">#</a></h3>
+</div>
+
+
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-6');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-6" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-6">try {&#xD;&#xA;    doesNotExist();&#xD;&#xA;}&#xD;&#xA;catch (ex) {&#xD;&#xA;    console.log(&quot;Error: &quot; &#x2B; ex.message);    // =&gt; Error details&#xD;&#xA;}&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>try {&#xD;&#xA;    doesNotExist();&#xD;&#xA;}&#xD;&#xA;catch (ex) {&#xD;&#xA;    console.log(&quot;Error: &quot; &#x2B; ex.message);    // =&gt; Error details&#xD;&#xA;}&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-6" style="display:none;">
+  <script>
+      try {
+    doesNotExist();
+}
+catch (ex) {
+    console.log("Error: " + ex.message);    // => Error details
+}
+;
+  </script>
+</div>
+<button id="what-is-6-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-6');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="scoping"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xscoping&#x27;).show();" onmouseout="$(&#x27;#xscoping&#x27;).hide();">Scoping</h2>
+    <h2><a id="xscoping" style="display:none" class="d-block pl-12 header-anchor" href="#scoping">#</a></h2>
+</div>
+
+
+
+<p>
+  Most languages support block-level scoping.  Block level variables only
+  exist within the context of a block of code, such as an <code >if</code>
+  or a <code >for</code> statement. In the Java example below, the variable
+  <code>count</code> only exists inside the curly braces. It is not visible or
+  accessible outside the block.
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+// Java
+if (accept == true) {
+   int count = 0;                     // block level scope
+   ...  
+}
+</pre>
+
+<br />
+<a class="goto-target" id="function-scope"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#xfunction-scope&#x27;).show();" onmouseout="$(&#x27;#xfunction-scope&#x27;).hide();">Function level scope</h3>
+    <h3 class="pl-12"><a id="xfunction-scope" class="d-block header-anchor" href="#function-scope">#</a></h3>
+</div>
+
+
+
+<p>
+  In JavaScript there is no block level scoping, but it does support <i>function-level scoping</i>.
+  Function level variables that are declared inside a function are only available and visible to
+  that function.
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+// JavaScript
+function calculate () {
+   var count = 0;                     // function level scope
+   ...                   
+}
+</pre>
+
+<br />
+<a class="goto-target" id="global-scope"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#xglobal-scope&#x27;).show();" onmouseout="$(&#x27;#xglobal-scope&#x27;).hide();">Global scope</h3>
+    <h3 class="pl-12"><a id="xglobal-scope" class="d-block header-anchor" href="#global-scope">#</a></h3>
+</div>
+
+
+
+<p>
+  JavaScript variables that are declared outside functions have global
+  scope and are visible to the entire program.
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+// JavaScript
+var accept = true;       // global scope 
+if (accept === true) {
+   var count = 0;        // global scope   
+}
+</pre>
+
+
+<hr />
+<a class="goto-target" id="semicolons"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xsemicolons&#x27;).show();" onmouseout="$(&#x27;#xsemicolons&#x27;).hide();">Semicolons</h2>
+    <h2><a id="xsemicolons" style="display:none" class="d-block pl-12 header-anchor" href="#semicolons">#</a></h2>
+</div>
+
+
+
+<p>
+  Statements in JavaScript are delimited with semicolons.  You can omit semicolons because
+  the JavaScript engine has an auto-insertion mechanism which adds semicolons where it thinks
+  they are missing. The problem is that this may cause unintended side effects.
+</p>
+<p>
+  For this reason, it is best to always end your statements with semicolons explicitly.
+  Below is an example of how JavaScript looks at statements differently from what the
+  developer intended.
+</p>
+
+<p>Consider these 2 statements without semi-colons.</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+// anti-pattern!
+sum = total1 + total2
+(total3 + total4).x()
+</pre>
+
+<p>JavaScript will interpret this as: </p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+sum = total1 + total2(total3 + total4).x();
+</pre>
+
+<p>Another example of what can go wrong.</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-7');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-7" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-7">// anti-pattern!&#xD;&#xA;function sumSquared(x, y) {&#xD;&#xA;    return&#xD;&#xA;    (x * x) &#x2B; (y * y);&#xD;&#xA;}&#xD;&#xA;console.log(sumSquared(3, 4));         // =&gt; undefined&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>// anti-pattern!&#xD;&#xA;function sumSquared(x, y) {&#xD;&#xA;    return&#xD;&#xA;    (x * x) &#x2B; (y * y);&#xD;&#xA;}&#xD;&#xA;console.log(sumSquared(3, 4));         // =&gt; undefined&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-7" style="display:none;">
+  <script>
+      // anti-pattern!
+function sumSquared(x, y) {
+    return
+    (x * x) + (y * y);
+}
+console.log(sumSquared(3, 4));         // => undefined
+;
+  </script>
+</div>
+<button id="what-is-7-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-7');">
+  Run
+</button>
+
+
+
+<p>
+  This function will always return undefined because it executes the code with a
+  semicolon following <code>return</code>.
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+function sumsquared(x,y) {
+    return;                     // semicolon added! 
+        (x * x) + (y * y);
+}
+</pre>
+
+<hr />
+<a class="goto-target" id="weakly-typed"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xweakly-typed&#x27;).show();" onmouseout="$(&#x27;#xweakly-typed&#x27;).hide();">JavaScript is Weakly Typed</h2>
+    <h2><a id="xweakly-typed" style="display:none" class="d-block pl-12 header-anchor" href="#weakly-typed">#</a></h2>
+</div>
+
+
+
+<p>
+  As mentioned earlier, JavaScript is a weakly-typed language. A variable can be bound
+  to any data type and then change its type. For instance, a variable with a value of 1
+  an be changed to "Hello", followed by an object assignment.
+</p>
+<p>
+  Sometimes this has confusing consequences. For example, when JavaScript encounters the
+  expression <code >"2" + 1</code>, it implicitly converts the numeric 1 to a
+  string and returns <code >"21"</code>.  Even this expression: <code >null + 0</code>.
+  is legal in JavaScript and returns <code >0</code>. Such implicit conversions
+  can cause program errors that are difficult to detect.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-8');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-8" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-8">console.log(null &#x2B; 34);               // =&gt; 34&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>console.log(null &#x2B; 34);               // =&gt; 34&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-8" style="display:none;">
+  <script>
+      console.log(null + 34);               // => 34
+;
+  </script>
+</div>
+<button id="what-is-8-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-8');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="functional"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xfunctional&#x27;).show();" onmouseout="$(&#x27;#xfunctional&#x27;).hide();">Functional programming</h2>
+    <h2><a id="xfunctional" style="display:none" class="d-block pl-12 header-anchor" href="#functional">#</a></h2>
+</div>
+
+
+
+<p>
+  JavaScript supports a <i>functional programming</i> style. Functions in JavaScript are
+  first-class citizens which it derives from the Scheme programming language. In fact, functions
+  are objects and therefore a function can also have properties and methods.
+</p>
+
+<p>
+  There is more you can do with functions; you can store them in variables, pass them
+  around as function arguments, and return them as the return value of a function.  In JavaScript
+  the difference between code and data can be blurry at times, a characteristic it borrows from the
+  <i>Lisp</i> programming language.  Here is an example of a function assigned to a variable.
+  The function is executed by appending the variable name with two parentheses.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-9');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-9" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-9">var say = function () {&#xD;&#xA;    console.log(&quot;Hello&quot;);&#xD;&#xA;};&#xD;&#xA;say();                          // =&gt; Hello&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var say = function () {&#xD;&#xA;    console.log(&quot;Hello&quot;);&#xD;&#xA;};&#xD;&#xA;say();                          // =&gt; Hello&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-9" style="display:none;">
+  <script>
+      var say = function () {
+    console.log("Hello");
+};
+say();                          // => Hello
+;
+  </script>
+</div>
+<button id="what-is-9-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-9');">
+  Run
+</button>
+
+<p>
+  Next is an example of a function that is passed as an argument to another function.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-10');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-10" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-10">var say = function () {&#xD;&#xA;    console.log(&quot;Hello&quot;);&#xD;&#xA;};&#xD;&#xA;function execute(callback) {&#xD;&#xA;    callback();&#xD;&#xA;}&#xD;&#xA;execute(say);                  // =&gt; Hello&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var say = function () {&#xD;&#xA;    console.log(&quot;Hello&quot;);&#xD;&#xA;};&#xD;&#xA;function execute(callback) {&#xD;&#xA;    callback();&#xD;&#xA;}&#xD;&#xA;execute(say);                  // =&gt; Hello&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-10" style="display:none;">
+  <script>
+      var say = function () {
+    console.log("Hello");
+};
+function execute(callback) {
+    callback();
+}
+execute(say);                  // => Hello
+;
+  </script>
+</div>
+<button id="what-is-10-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-10');">
+  Run
+</button>
+
+
+<p>
+  Finally, an example of a function that is returned by another function.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-11');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-11" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-11">function go() {&#xD;&#xA;    return function () {&#xD;&#xA;        console.log(&quot;I was returned&quot;);&#xD;&#xA;    };&#xD;&#xA;}&#xD;&#xA;var result = go();&#xD;&#xA;result();                    // =&gt; I was returnedh&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function go() {&#xD;&#xA;    return function () {&#xD;&#xA;        console.log(&quot;I was returned&quot;);&#xD;&#xA;    };&#xD;&#xA;}&#xD;&#xA;var result = go();&#xD;&#xA;result();                    // =&gt; I was returnedh&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-11" style="display:none;">
+  <script>
+      function go() {
+    return function () {
+        console.log("I was returned");
+    };
+}
+var result = go();
+result();                    // => I was returnedh
+;
+  </script>
+</div>
+<button id="what-is-11-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-11');">
+  Run
+</button>
+
+
+<p>
+  JavaScript supports functions nested within other functions. The nested functions are
+  called methods. Methods have access to all parameters and local variables of the functions
+  it is nested within. <br /><br />
+  In this example the nested say function has access to the
+  name variable in the outer function.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-12');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-12" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-12">function person(first, last) {&#xD;&#xA;    var name = first &#x2B; &quot; &quot; &#x2B; last;&#xD;&#xA;    function say() {       // method, nested function&#xD;&#xA;        console.log(name);&#xD;&#xA;    }&#xD;&#xA;    say();&#xD;&#xA;};&#xD;&#xA;person(&quot;Joe&quot;, &quot; McArthur &quot;);     // =&gt; Joe McArthur&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function person(first, last) {&#xD;&#xA;    var name = first &#x2B; &quot; &quot; &#x2B; last;&#xD;&#xA;    function say() {       // method, nested function&#xD;&#xA;        console.log(name);&#xD;&#xA;    }&#xD;&#xA;    say();&#xD;&#xA;};&#xD;&#xA;person(&quot;Joe&quot;, &quot; McArthur &quot;);     // =&gt; Joe McArthur&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-12" style="display:none;">
+  <script>
+      function person(first, last) {
+    var name = first + " " + last;
+    function say() {       // method, nested function
+        console.log(name);
+    }
+    say();
+};
+person("Joe", " McArthur ");     // => Joe McArthur
+;
+  </script>
+</div>
+<button id="what-is-12-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-12');">
+  Run
+</button>
+
+
+<p>
+  Arrays are also objects and the built-in array methods such as map, filter,
+  and reduce possess the characteristics of a functional programming style;
+  so they also have access to all array values. Arrays are discussed in a later chapter.
+</p>
+
+<hr />
+<a class="goto-target" id="object-oriented"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xobject-oriented&#x27;).show();" onmouseout="$(&#x27;#xobject-oriented&#x27;).hide();">JavaScript is Object-Oriented, but Class-less</h2>
+    <h2><a id="xobject-oriented" style="display:none" class="d-block pl-12 header-anchor" href="#object-oriented">#</a></h2>
+</div>
+
+
+
+<p>
+  JavaScript does not support classes, but objects play a central role.  Since there are no classes
+  you may wonder 1) how are objects created, and 2) does JavaScript support inheritance? The short answers
+  are: there are a few different ways to created objects and as far as inheritance, yes, JavaScript
+  does support inheritance but through a mechanism that uses prototypes. The class-less, prototypal
+  nature of JavaScript will be explored shortly, but first we'll review the types and objects
+  supported by JavaScript.
+</p>
+<p>
+  First the basic types: JavaScript offers several primitive types: Numbers, String and Booleans,
+  and also null type and undefined type. The first three, Numbers Strings, and Booleans, do have
+  properties and methods but they are not objects. When reading a property or method from these types,
+  JavaScript creates a wrapper object, by calling the Number(), String(), or Boolean() constructor
+  behind the scenes. You can also explicitly create these wrapper objects yourself. Below is an
+  example where JavaScript implicitly (i.e. behind the scenes) uses the String constructor to
+  perform a substring operation. The second example uses the Number constructor to convert the
+  number to a string while keeping only two decimals.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-13');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-13" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-13">var text = &quot;excellent&quot;;&#xD;&#xA;console.log(text.substring(0, 5));     // =&gt; excel&#xD;&#xA;&#xD;&#xA;var count = 20.1045;&#xD;&#xA;console.log(count.toFixed(2));        // =&gt; 20.10&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var text = &quot;excellent&quot;;&#xD;&#xA;console.log(text.substring(0, 5));     // =&gt; excel&#xD;&#xA;&#xD;&#xA;var count = 20.1045;&#xD;&#xA;console.log(count.toFixed(2));        // =&gt; 20.10&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-13" style="display:none;">
+  <script>
+      var text = "excellent";
+console.log(text.substring(0, 5));     // => excel
+
+var count = 20.1045;
+console.log(count.toFixed(2));        // => 20.10
+;
+  </script>
+</div>
+<button id="what-is-13-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-13');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="objects"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xobjects&#x27;).show();" onmouseout="$(&#x27;#xobjects&#x27;).hide();">Objects</h2>
+    <h2><a id="xobjects" style="display:none" class="d-block pl-12 header-anchor" href="#objects">#</a></h2>
+</div>
+
+
+
+<p>
+  A JavaScript object is a collection of properties where each property has a name
+  and a value. Just imagine it as a structure made up of key-value pairs.  In more
+  formal terms, JavaScript objects are associative arrays -- similar to Hash, Map,
+  or Dictionary in other languages.
+</p>
+<p>
+  At runtime, you can create an empty object and then add properties of any type,
+  such as primitive types, other objects, and functions to the object.  Properties
+  and values can be modified and deleted at any point in time. Properties can be
+  enumerated using the for-in loop.  Let's look at some examples.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-14');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-14" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-14">// Note: the use of new Object() is generally discouraged &#xD;&#xA;var o = new Object();&#xD;&#xA;o.firstName = &quot;Joan&quot;;&#xD;&#xA;o.lastName = &quot;Holland&quot;;&#xD;&#xA;o.age = 31;&#xD;&#xA;&#xD;&#xA;console.log(o.firstName &#x2B; &quot; &quot; &#x2B; o.lastName);  // =&gt; Joan Holland&#xD;&#xA;console.log(typeof o.age);                    // =&gt; number &#xD;&#xA;&#xD;&#xA;delete o.firstName;&#xD;&#xA;console.log(o.firstName &#x2B; &quot; &quot; &#x2B; o.lastName);  // =&gt; undefined Holland&#xD;&#xA;&#xD;&#xA;for (var prop in o) {&#xD;&#xA;&#xD;&#xA;    // name: firstName, value: Joan, type: string&#xD;&#xA;    // name: age, value: 31, type: number&#xD;&#xA;    console.log(&quot;name: &quot; &#x2B; prop &#x2B; &quot; ,value: &quot; &#x2B; o[prop] &#x2B;&#xD;&#xA;        &quot; ,type: &quot; &#x2B; typeof o[prop]);&#xD;&#xA;}&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>// Note: the use of new Object() is generally discouraged &#xD;&#xA;var o = new Object();&#xD;&#xA;o.firstName = &quot;Joan&quot;;&#xD;&#xA;o.lastName = &quot;Holland&quot;;&#xD;&#xA;o.age = 31;&#xD;&#xA;&#xD;&#xA;console.log(o.firstName &#x2B; &quot; &quot; &#x2B; o.lastName);  // =&gt; Joan Holland&#xD;&#xA;console.log(typeof o.age);                    // =&gt; number &#xD;&#xA;&#xD;&#xA;delete o.firstName;&#xD;&#xA;console.log(o.firstName &#x2B; &quot; &quot; &#x2B; o.lastName);  // =&gt; undefined Holland&#xD;&#xA;&#xD;&#xA;for (var prop in o) {&#xD;&#xA;&#xD;&#xA;    // name: firstName, value: Joan, type: string&#xD;&#xA;    // name: age, value: 31, type: number&#xD;&#xA;    console.log(&quot;name: &quot; &#x2B; prop &#x2B; &quot; ,value: &quot; &#x2B; o[prop] &#x2B;&#xD;&#xA;        &quot; ,type: &quot; &#x2B; typeof o[prop]);&#xD;&#xA;}&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-14" style="display:none;">
+  <script>
+      // Note: the use of new Object() is generally discouraged 
+var o = new Object();
+o.firstName = "Joan";
+o.lastName = "Holland";
+o.age = 31;
+
+console.log(o.firstName + " " + o.lastName);  // => Joan Holland
+console.log(typeof o.age);                    // => number 
+
+delete o.firstName;
+console.log(o.firstName + " " + o.lastName);  // => undefined Holland
+
+for (var prop in o) {
+
+    // name: firstName, value: Joan, type: string
+    // name: age, value: 31, type: number
+    console.log("name: " + prop + " ,value: " + o[prop] +
+        " ,type: " + typeof o[prop]);
+}
+;
+  </script>
+</div>
+<button id="what-is-14-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-14');">
+  Run
+</button>
+
+
+<p>
+  In this example an empty object is created. Then three properties are added by assigning
+  two strings and a numeric value.  After displaying the values and the number type, the
+  firstName property is deleted.  Finally, a <code >for-in</code> loop displays
+  the remaining properties (with name, value, and type) on the object.
+</p>
+
+<p>
+  There are 3 categories of objects in JavaScript: <br /><br />
+
+  &nbsp;&nbsp;&nbsp;&nbsp; 1. Built-in (native) objects like <code >Math</code>, <code >Date</code>, and <code >Array</code> <br />
+  &nbsp;&nbsp;&nbsp;&nbsp; 2. User-defined objects like <code >Book</code>, <code >Employee</code>, etc., and <br />
+  &nbsp;&nbsp;&nbsp;&nbsp; 3. Host objects defined by the runtime environment (usually the browser) such as DOM objects <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and the window global object. <br />
+  <br />
+  Objects in the first two categories conform to the EcmaScript specification. However, objects made available by the hosting environment are outside the realm of EcmaScript.
+</p>
+
+<hr />
+<a class="goto-target" id="functions"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xfunctions&#x27;).show();" onmouseout="$(&#x27;#xfunctions&#x27;).hide();">Functions</h2>
+    <h2><a id="xfunctions" style="display:none" class="d-block pl-12 header-anchor" href="#functions">#</a></h2>
+</div>
+
+
+
+<p>
+  The code below confirms that functions are indeed objects in JavaScript.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-15');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-15" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-15">function say(name) {&#xD;&#xA;    console.log(&quot;Hello &quot; &#x2B; name);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(typeof say);             // =&gt; function&#xD;&#xA;console.log(say instanceof Object);  // =&gt; true&#xD;&#xA;&#xD;&#xA;say.volume = &quot;high&quot;;&#xD;&#xA;console.log(say.volume);            // =&gt; high&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function say(name) {&#xD;&#xA;    console.log(&quot;Hello &quot; &#x2B; name);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(typeof say);             // =&gt; function&#xD;&#xA;console.log(say instanceof Object);  // =&gt; true&#xD;&#xA;&#xD;&#xA;say.volume = &quot;high&quot;;&#xD;&#xA;console.log(say.volume);            // =&gt; high&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-15" style="display:none;">
+  <script>
+      function say(name) {
+    console.log("Hello " + name);
+}
+
+console.log(typeof say);             // => function
+console.log(say instanceof Object);  // => true
+
+say.volume = "high";
+console.log(say.volume);            // => high
+;
+  </script>
+</div>
+<button id="what-is-15-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-15');">
+  Run
+</button>
+
+
+<p>
+  The function is of type <code >function</code>, but it is also an instance
+  of type <code >Object</code>.  In the last two lines a property named volume is
+  assigned to the object without a problem, confirming that it behaves like an object.
+</p>
+<p>
+  Functions can also be used to create objects; these are called <i>constructor functions</i>.
+  First you declare a function and then assign properties and functions (i.e. methods) using
+  the <code >this</code> keyword. This example assigns two properties and one method
+  to <code >this</code>.
+</p>
+<pre class="prettyprint xlinenums run code-hscroll">
+function Book (title, author) {
+    
+    this.title = title;                      // book properties
+    this.author = author;
+    
+    this.details = function() {              // book method  
+        return this.title + " by " + this.author;
+    }
+}
+</pre>
+
+<p>
+  By convention, constructor functions start with an upper-case letter (i.e. <code ><b>B</b>ook</code>).
+</p>
+
+<p>
+  When a constructor function is called with a <code >new</code> operator it will create a
+  new book instance. Internally, the function creates a new blank object and binds it to <code >this</code>.
+  Then it executes the function body which commonly assigns properties and methods to <code >this</code>.
+  At the end the function returns the newly created objects by an implicit <code >return this</code> statement.
+</p>
+<p>
+  In the code below a new Book instance is created and we invoke its <code >details</code> method.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-16');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-16" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-16">function Book(title, author) {&#xD;&#xA;&#xD;&#xA;    this.title = title;                      // book properties&#xD;&#xA;    this.author = author;&#xD;&#xA;&#xD;&#xA;    this.details = function () {              // book method&#xD;&#xA;        return this.title &#x2B; &quot; by &quot; &#x2B; this.author;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var book = new Book(&quot;Ulysses&quot;, &quot;James Joyce&quot;);&#xD;&#xA;console.log(book.details());        // =&gt; Ulysses by James Joyce&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function Book(title, author) {&#xD;&#xA;&#xD;&#xA;    this.title = title;                      // book properties&#xD;&#xA;    this.author = author;&#xD;&#xA;&#xD;&#xA;    this.details = function () {              // book method&#xD;&#xA;        return this.title &#x2B; &quot; by &quot; &#x2B; this.author;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var book = new Book(&quot;Ulysses&quot;, &quot;James Joyce&quot;);&#xD;&#xA;console.log(book.details());        // =&gt; Ulysses by James Joyce&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-16" style="display:none;">
+  <script>
+      function Book(title, author) {
+
+    this.title = title;                      // book properties
+    this.author = author;
+
+    this.details = function () {              // book method
+        return this.title + " by " + this.author;
+    }
+}
+
+var book = new Book("Ulysses", "James Joyce");
+console.log(book.details());        // => Ulysses by James Joyce
+;
+  </script>
+</div>
+<button id="what-is-16-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-16');">
+  Run
+</button>
+
+
+<p>
+  Functions and objects are not the only objects in JavaScript; arrays are objects and regular expressions
+  are objects also.
+</p>
+<p>
+  A property of an object can be another object, which in turn can have one or more objects. All these
+  objects provide a lot of flexibility and allow the creation of complex tree and graph structures.
+</p>
+
+<hr />
+<a class="goto-target" id="prototypes"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xprototypes&#x27;).show();" onmouseout="$(&#x27;#xprototypes&#x27;).hide();">Prototypes</h2>
+    <h2><a id="xprototypes" style="display:none" class="d-block pl-12 header-anchor" href="#prototypes">#</a></h2>
+</div>
+
+
+
+<p>
+  JavaScript has no classes, only objects.  So, without classes, is there perhaps another way that objects
+  can derive functionality from other objects?  In other words, is inheritance supported by JavaScript?
+  The answer is yes; you can achieve inheritance by using prototypes. This is called <i>prototypal inheritance</i>,
+  a concept borrowed from a language named <i>Self</i>. Prototypal inheritance is implicit, meaning it exists
+  even if you do nothing special.
+</p>
+<p>
+  Let's look at prototypal inheritance. Each object in JavaScript is linked to a prototype object
+  from which it inherits properties and methods.  The default prototype for an object is
+  <code >Object.prototype</code>.  You can access this property via a property called
+  <code >prototype</code>. In the code below we have a constructor function and check its
+  <code >prototype</code> property.  This is the prototype object that will be assigned
+  to each book instance that is created by this constructor function.
+</p>
+
+<br />
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-17');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-17" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-17">var Book = function (author) {&#xD;&#xA;    this.author = author;&#xD;&#xA;};&#xD;&#xA;console.log(Book.prototype);       // =&gt; [object Object], so there is something&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var Book = function (author) {&#xD;&#xA;    this.author = author;&#xD;&#xA;};&#xD;&#xA;console.log(Book.prototype);       // =&gt; [object Object], so there is something&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-17" style="display:none;">
+  <script>
+      var Book = function (author) {
+    this.author = author;
+};
+console.log(Book.prototype);       // => [object Object], so there is something
+;
+  </script>
+</div>
+<button id="what-is-17-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-17');">
+  Run
+</button>
+
+
+<p>
+  Since each object has a prototype, it is easy to imagine a series of objects linked together to
+  form a prototype chain.  The beginning of the chain is the current object, linked to its prototype,
+  which, in turn, is linked to its own prototype, etc. all the way until you reach the root prototype
+  at <code >Object.prototype</code>.
+</p>
+<p>
+  Following the prototype chain is how a JavaScript object retrieves its properties and values.
+  When evaluating an expression to retrieve a property, JavaScript determines if the property is defined
+  in the object itself. If it is not found, it looks for the property in the immediate prototype up in
+  the chain. This continues until the root prototype is reached. If the property is found, it is
+  returned, otherwise undefined is returned.
+</p>
+<p>
+  Every function in JavaScript automatically gets a prototype property including constructor function(s).
+  When you use a function as a constructor, its prototype property is the object that will be assigned as
+  the prototype to all instances created.<br /><br />Here is an example.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-18');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-18" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-18">function Rectangle(width, height) {&#xD;&#xA;    this.width = width;&#xD;&#xA;    this.height = height;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;Rectangle.prototype.area = function () {&#xD;&#xA;    return this.width * this.height;&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;var r1 = new Rectangle(4, 5);&#xD;&#xA;var r2 = new Rectangle(3, 4);&#xD;&#xA;&#xD;&#xA;console.log(r1.area());               // =&gt; 20&#xD;&#xA;console.log(r2.area());               // =&gt; 12&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function Rectangle(width, height) {&#xD;&#xA;    this.width = width;&#xD;&#xA;    this.height = height;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;Rectangle.prototype.area = function () {&#xD;&#xA;    return this.width * this.height;&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;var r1 = new Rectangle(4, 5);&#xD;&#xA;var r2 = new Rectangle(3, 4);&#xD;&#xA;&#xD;&#xA;console.log(r1.area());               // =&gt; 20&#xD;&#xA;console.log(r2.area());               // =&gt; 12&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-18" style="display:none;">
+  <script>
+      function Rectangle(width, height) {
+    this.width = width;
+    this.height = height;
+}
+
+Rectangle.prototype.area = function () {
+    return this.width * this.height;
+};
+
+var r1 = new Rectangle(4, 5);
+var r2 = new Rectangle(3, 4);
+
+console.log(r1.area());               // => 20
+console.log(r2.area());               // => 12
+;
+  </script>
+</div>
+<button id="what-is-18-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-18');">
+  Run
+</button>
+
+
+<p>
+  In the example, r1 and r2 objects are created by the same constructor, so they both inherit from the
+  same prototype which includes the <code >area</code> method.
+</p>
+<p>
+  There is considerable confusion surrounding prototypes and prototypal inheritance among JavaScript
+  developers. Many books, blogs, and other references define prototypal inheritance but
+  unfortunately most are rather fuzzy and lack clear code samples.
+</p>
+<p>
+  Our <a href="../products/dofactory-js.html"><b>JavaScript JS</b></a>
+  is designed to solve this confusion once and for all. It takes you step-by-step through
+  JavaScript's prototype system with easy-to-understand diagrams and clear code samples. It may take
+  20 minutes or more, but once you 'get it' your understanding of JavaScript will have gone
+  up exponentially -- not to mention your confidence in the language. To learn more
+  <a href="../products/javascript-js.html">click here</a>.
+</p>
+
+<hr />
+<a class="goto-target" id="runtime"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xruntime&#x27;).show();" onmouseout="$(&#x27;#xruntime&#x27;).hide();">JavaScript runtime and hosting environment</h2>
+    <h2><a id="xruntime" style="display:none" class="d-block pl-12 header-anchor" href="#runtime">#</a></h2>
+</div>
+
+
+
+<p>
+  When JavaScript was first released the language was interpreted. The source code would be parsed and
+  execute immediately without preliminary compilation into byte code.  However, recent versions of browsers
+  include highly optimized JavaScript compilers. Usually this involves the following steps: first it parses
+  the script, checks the syntax, and produces byte code. Next, it takes the byte code as input, generates
+  native (machine) code, and then executes it on the fly.
+</p>
+<p>
+  JavaScript applications need an environment to run in. The JavaScript interpreter/JIT-compiler is implemented
+  as part of the <i>host environment</i> such as a web browser. The script is executed by the JavaScript engine
+  of the web browser, which is by far the most common host environment for JavaScript.
+</p>
+<p>
+  More recently JavaScript is also being used outside the browser. Examples include Mozilla's Rhino and node.js –
+  the latter is a Chrome-based platform to build fast, scalable network applications.  JavaScript is also found
+  on the desktop with applications like Open Office, Photoshop, Dreamweaver, and Illustrator, which allow
+  scripting through JavaScript type languages.
+</p>
+<p>
+  JavaScript is a small language; it defines basic types, such as strings, numbers, and a few more advanced
+  objects and concepts, such <code >Math</code>, <code >Date</code>, regular expressions,
+  events, objects, functions, and arrays. However, JavaScript does not natively have the ability to receive
+  input from the user and display output back to the user. Neither does it provide an API for graphics,
+  networking, or storage.  For this, it has to rely on its hosting environment. With JavaScript running
+  in a browser, to communicate back and forth with the user, it needs to interact with the document
+  object model, commonly known as the 'DOM'.
+</p>
+<p>
+  DOM is an internal representation of the HTML elements that appear in a web page. When the browser
+  loads a page, it builds the page's DOM in memory and then displays the page. The HTML elements that
+  represent the structure of a web page are called host objects that provide special access to the host
+  environment. Based on user input, your JavaScript code modifies the DOM and as a consequence the web
+  page is updated. Every piece of text, tag, attribute, and style can be accessed and manipulated
+  using the DOM API. The document object lets you work with the DOM.  A simple way to interact with
+  the user is to use <code >document.write</code> which writes a message directly into
+  the web page (note: the use of <code >document.write</code> is generally not recommended).
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+var today = new Date();
+var day = today.getDay();
+
+if (day === 0 || day === 6) {
+    document.write("It's weekend");
+} else {
+    document.write("It's a weekday!");
+}
+</pre>
+
+<p>Consider the following textbox on the web page.</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+&lt;input id="email" type="text" /&gt; 
+</pre>
+
+<p>
+  Here is how you can access and change this element on the page.
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+var email = document.getElementById("email");     // gets ref to textbox 
+email.disabled = true;                            // disable textbox
+
+var address = "me@company.com";
+document.getElementById("email").value = address; // update value
+</pre>
+
+<p>
+  When JavaScript runs in the browser, it makes a special object available called
+  <code >window</code> which is the global object. Note that <code >window</code> is not
+  part of the standard JavaScript language, but part of the hosting environment. The <code >alert</code>
+  method of the <code >window</code> object is widely used to display messages in a
+  dialog box in the web browser. Since <code >window</code> is a global object, JavaScript lets you
+  use this method without prefixing it with the <code >window</code> object name and dot operator.
+</p>
+<p>
+  When JavaScript is not running on the browser an entirely different set of host objects will be made
+  available by the hosting environment. For example, node.js which is hosted on server machines frequently
+  interacts with HTTP <code >request</code> and <code >response</code> objects allowing
+  the JavaScript program to generate web pages at runtime; indeed very different from the browser.
+</p>
+
+<hr />
+<a class="goto-target" id="ecmascript"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xecmascript&#x27;).show();" onmouseout="$(&#x27;#xecmascript&#x27;).hide();">EcmaScript</h2>
+    <h2><a id="xecmascript" style="display:none" class="d-block pl-12 header-anchor" href="#ecmascript">#</a></h2>
+</div>
+
+
+
+<p>
+  EcmaScript is the official, standardized version of JavaScript and several well-known implementations exist,
+  including JavaScript, Jscript (Microsoft) and ActionScript (Adobe).
+</p>
+<p>
+  EcmaScript version 5 (ES 5) was introduced in late 2009. This version adds some new features, such as getters
+  and setters, which allow you to build useful shortcuts for accessing and changing data within an object
+  (similar to C# properties). Also new is built-in support for JSON, with methods such as
+  <code >JSON.parse()</code> and <code >JSON.stringify()</code>, removing the need to
+  use external libraries to work with JSON.
+</p>
+<p>
+  In addition, ES 5 added "strict mode", a feature which aims to enforce a restricted variant of the language
+  by providing thorough error checking and making the scripts less error-prone, simpler, more readable, and
+  reliable.  You enable strict mode, by adding <code >"use strict";</code> as the first line to your
+  script, like so.
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+"use strict";
+
+var text = "Yes, I'm strict now!";
+</pre>
+
+<p>
+  This will apply strict mode to the entire script. You need to be careful when concatenating different
+  scripts from different sources, because strict mode will apply to all scripts and you may include
+  script that was not meant to run in strict mode, which is very likely to cause errors.
+</p>
+<p>
+  To solve this you can limit the scope of strict mode to a function by including <code >"use strict";</code>
+  as the first line in the function body, like so.
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+function f() {
+    "use strict";
+     ...
+}
+</pre>
+
+<p>
+  Adding <code >"use strict";</code> changes both syntax and runtime behavior.
+  For example, strict mode prevents you from accidentally creating global variables by requiring
+  that each variable is declared explicitly.  If you forget to properly declare a variable you
+  will get an error.<br /><br /> For example, the following will not work.
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+"use strict";
+x = 4;             // error
+
+function f() {
+    var a = 2;      
+    b = a;         // error
+    ...  
+}
+</pre>
+
+<p>
+  Adding a <code >var</code> before <code >x</code> and before <code >b</code> will
+  solve the issue.
+</p>
+<p>
+  Strict mode disallows (i.e. deprecates) certain undesirable features including the <code >with()</code>
+  construct, the <code >arguments.callee</code> feature,  and octal numbers; if it encounters any of
+  these JavaScript will throw an error. Furthermore, the use of certain keywords is restricted; for instance
+  virtually all attempts to use the keywords eval and arguments as variable or function names will throw an error.
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+var eval = 10;                 // error
+function getArea(eval){}       // error 
+
+function eval(){}              // error
+var arguments = [];            // error
+</pre>
+
+<p>
+  Because of security concerns, the use of <code >eval()</code> is generally discouraged, but you can
+  still use it (even in strict mode).  In strict mode, the code passed to <code >eval()</code> will
+  also be evaluated in strict mode.  Furthermore, <code >eval()</code> does not let you introduce new
+  variables which is considered risky because it may hide an existing function or global variable.
+</p>
+
+<br />
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-19');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-19" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-19">&quot;use strict&quot;;&#xD;&#xA;&#xD;&#xA;var code = &quot;var num = 10;&quot;&#xD;&#xA;eval(code);                   // variable creation not allowed&#xD;&#xA;console.log(typeof num);      // undefined (some browsers return number)&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>&quot;use strict&quot;;&#xD;&#xA;&#xD;&#xA;var code = &quot;var num = 10;&quot;&#xD;&#xA;eval(code);                   // variable creation not allowed&#xD;&#xA;console.log(typeof num);      // undefined (some browsers return number)&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-19" style="display:none;">
+  <script>
+      "use strict";
+
+var code = "var num = 10;"
+eval(code);                   // variable creation not allowed
+console.log(typeof num);      // undefined (some browsers return number)
+;
+  </script>
+</div>
+<button id="what-is-19-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-19');">
+  Run
+</button>
+
+
+<p>
+  Be aware that strict mode is currently not reliable implemented across all browsers, and, of course,
+  older browsers don't support it at all. It is very important that you test your code with browsers
+  that support it and those that don't.  If it works in one it may not work in the other and vice versa.
+</p>
+<p>
+  An easy way to find out whether strict mode is supported is with the following expression:
+</p>
+<pre class="prettyprint xlinenums run code-hscroll">
+(function() { "use strict"; return !this; })();
+</pre>
+
+<p>Here is how you use it.</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-20');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-20" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-20">var strict = (function () { &quot;use strict&quot;; return !this; })();&#xD;&#xA;console.log(strict);  // =&gt; true or false&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var strict = (function () { &quot;use strict&quot;; return !this; })();&#xD;&#xA;console.log(strict);  // =&gt; true or false&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-20" style="display:none;">
+  <script>
+      var strict = (function () { "use strict"; return !this; })();
+console.log(strict);  // => true or false
+;
+  </script>
+</div>
+<button id="what-is-20-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-20');">
+  Run
+</button>
+
+
+<p>
+  When <code >strict</code> is true you can assume strict mode is supported.
+</p>
+
+<p>
+  ES 5 has a new object model which provides great flexibility on how objects are manipulated and used.
+  For example, objects allow getters and setters; they can prevent enumeration, deletion or manipulation
+  of properties; and they can even block others from adding new properties.
+</p>
+<p>
+  Getters and setters are useful shortcuts to accessing and changing data values in an object.
+  A getter is invoked when the value of the property is accessed (read). A setter is invoked when the
+  value of the property is modified (write).  The obvious advantage is that the 'private' name variable
+  in the object is hidden from direct access. <br /><br />The syntax is rather awkward, but here is an example.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-21');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-21" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-21">function Person(n) {&#xD;&#xA;    var name = n;&#xD;&#xA;&#xD;&#xA;    this.__defineGetter__(&quot;name&quot;, function () {&#xD;&#xA;        return name;&#xD;&#xA;    });&#xD;&#xA;&#xD;&#xA;    this.__defineSetter__(&quot;name&quot;, function (val) {&#xD;&#xA;        name = val;&#xD;&#xA;    });&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var person = new Person(&quot;John&quot;);&#xD;&#xA;console.log(person.name);     // =&gt; John        // uses getter&#xD;&#xA;&#xD;&#xA;person.name = &quot;Mary&quot;;                           // uses setter&#xD;&#xA;console.log(person.name);     // =&gt; Mary        // uses getter&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function Person(n) {&#xD;&#xA;    var name = n;&#xD;&#xA;&#xD;&#xA;    this.__defineGetter__(&quot;name&quot;, function () {&#xD;&#xA;        return name;&#xD;&#xA;    });&#xD;&#xA;&#xD;&#xA;    this.__defineSetter__(&quot;name&quot;, function (val) {&#xD;&#xA;        name = val;&#xD;&#xA;    });&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var person = new Person(&quot;John&quot;);&#xD;&#xA;console.log(person.name);     // =&gt; John        // uses getter&#xD;&#xA;&#xD;&#xA;person.name = &quot;Mary&quot;;                           // uses setter&#xD;&#xA;console.log(person.name);     // =&gt; Mary        // uses getter&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-21" style="display:none;">
+  <script>
+      function Person(n) {
+    var name = n;
+
+    this.__defineGetter__("name", function () {
+        return name;
+    });
+
+    this.__defineSetter__("name", function (val) {
+        name = val;
+    });
+}
+
+var person = new Person("John");
+console.log(person.name);     // => John        // uses getter
+
+person.name = "Mary";                           // uses setter
+console.log(person.name);     // => Mary        // uses getter
+;
+  </script>
+</div>
+<button id="what-is-21-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-21');">
+  Run
+</button>
+
+
+<p>
+  In ES 5, each object property has several new attributes. They are:  <code >enumerable</code>,
+  <code >writable</code>, and <code >configurable</code>. With <code >enumerable</code>
+  you indicate whether the property can be enumerated (using a <code >for-in</code> loop);
+  <code >writable</code> indicates that a property is changeable, and <code >configurable</code>
+  indicates whether it can be deleted or its other attributes can be changed.
+</p>
+<p>
+  <code >Object.defineProperty</code> is how you define these properties and their attributes.
+  Below we are creating a car with 4 wheels. The attributes ensure that the wheels property cannot
+  be changed or deleted, but wheel will show up when iterating over car's properties (with <code >for-in</code>).
+</p>
+
+<br />
+<pre class="prettyprint xlinenums run code-hscroll">
+var car = {};
+ 
+Object.defineProperty(car, "wheels", {
+   value: 4,
+   writable: false,
+   enumerable: true,
+   configurable: false
+});
+car.wheels = 3;               // => not allowed  (not writable)
+for (var prop in car) {
+   alert(prop);               // => wheels       (enumerable)
+}
+delete car.wheels;            // => not allowed  (not configurable)
+</pre>
+
+<p>
+  ES 5 provides two methods to control object extensibility: <code >Object.preventExtensions</code> prevents
+  the addition of new properties to an object, and <code >Object.isExtensible</code> tells whether an
+  object is extensible or not.<br /><br />This below demonstrates their use.
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+var rectangle = {};
+rectangle.width = 10;                    
+rectangle.height = 20;   
+                
+if (Object.isExtensible(rectangle)) {     // true
+    Object.preventExtensions(rectangle);  // disallow property additions
+}
+
+rectangle.volume = 20;                    // not allowed
+</pre>
+
+<p>
+  With ES 5 you have the ability to seal an object. A sealed object won't allow new properties
+  to be added nor will it allow existing properties or its descriptors be changed. But it does
+  allow reading and writing the property values.  Two methods support this feature:
+  <code >Object.seal</code> and <code >Object.isSealed</code>; the first one to seal the object,
+  the second one to determine whether an object is sealed.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-22');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-22" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-22">var employee = { firstName: &quot;Jack&quot;, lastName: &quot;Watson&quot; };&#xD;&#xA;&#xD;&#xA;Object.seal(employee);&#xD;&#xA;console.log(Object.isSealed(employee));    // =&gt; true&#xD;&#xA;employee.firstName = &quot;Tommie&quot;;             // okay&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var employee = { firstName: &quot;Jack&quot;, lastName: &quot;Watson&quot; };&#xD;&#xA;&#xD;&#xA;Object.seal(employee);&#xD;&#xA;console.log(Object.isSealed(employee));    // =&gt; true&#xD;&#xA;employee.firstName = &quot;Tommie&quot;;             // okay&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-22" style="display:none;">
+  <script>
+      var employee = { firstName: "Jack", lastName: "Watson" };
+
+Object.seal(employee);
+console.log(Object.isSealed(employee));    // => true
+employee.firstName = "Tommie";             // okay
+;
+  </script>
+</div>
+<button id="what-is-22-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-22');">
+  Run
+</button>
+
+
+<p>
+  Freezing is equivalent to sealing, but disallows reading or writing property values. 
+  The two method involved are <code >Object.freeze</code> and 
+  <code >Object.isFrozen</code>.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('what-is-23');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-what-is-23" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-what-is-23">var employee = { firstName: &quot;Jack&quot;, lastName: &quot;Watson&quot; };&#xD;&#xA;&#xD;&#xA;Object.freeze(employee);&#xD;&#xA;console.log(Object.isFrozen(employee));    // =&gt; true&#xD;&#xA;employee.firstName = &quot;Tommie&quot;;             // not allowed&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var employee = { firstName: &quot;Jack&quot;, lastName: &quot;Watson&quot; };&#xD;&#xA;&#xD;&#xA;Object.freeze(employee);&#xD;&#xA;console.log(Object.isFrozen(employee));    // =&gt; true&#xD;&#xA;employee.firstName = &quot;Tommie&quot;;             // not allowed&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="what-is-23" style="display:none;">
+  <script>
+      var employee = { firstName: "Jack", lastName: "Watson" };
+
+Object.freeze(employee);
+console.log(Object.isFrozen(employee));    // => true
+employee.firstName = "Tommie";             // not allowed
+;
+  </script>
+</div>
+<button id="what-is-23-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'what-is-23');">
+  Run
+</button>
+
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="../javascript.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; JavaScript Intro &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="essentials.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; JavaScript Essentials &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+          <div class="bg-light p-10 my-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css.html">CSS Tutorial</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/selectors.html">CSS Selectors</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/borders.html">CSS Borders</a></li>
+
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/flex.html">CSS Flex</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/grids.html">CSS Grid</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/tables.html">CSS Tables</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/notfound.html">CSS Units</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/fonts.html">CSS Fonts</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/animation.html">CSS Animation</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/hover.html">CSS Hover</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/images.html">CSS Images</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/comments.html">CSS Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" xstyle="flex: 0 0 230px">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">What Is JS</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#history">History</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#js-vs-java">JS vs Java</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#for-loop">for loop</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#while-loop">while loop</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#switch-statement">switch statement</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#if-then-else">if-then-else</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#break-continue">break, continue</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#try-catch">try, catch</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#scoping">Scoping</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#function-scope">Function scope</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#global-scope">Global scope</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#semicolons">Semicolons</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#weakly-typed">Weakly typed</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#functional">Functional</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#object-oriented">Object-oriented</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#objects">Objects</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#functions">Functions</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#prototypes">Prototypes</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#runtime">Runtime</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#ecmascript">EcmaScript</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+
+    let runbutton = function (button, model) {
+      var n = '#' + model;
+      var text = button.innerText;
+      if (text == "Run") {
+        $(n).slideDown(300);
+        button.innerText = "Clear";
+      } else {
+        $(n).slideUp(300);
+        button.innerText = "Run";
+      }
+    };
+
+    function copy(id) {
+      var stor = document.createElement("textarea");
+      stor.setAttribute("contentEditable", true);
+      stor.innerHTML = document.getElementById('copy-' + id).innerHTML;
+      stor.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+      document.body.appendChild(stor);
+      stor.focus({ preventScroll: true });
+      stor.focus();
+
+      document.execCommand("copy");
+      document.body.removeChild(stor);
+
+      $('#show-' + id).fadeIn('fast').delay(1200).fadeOut('slow');
+    }
+
+
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/javascript/what-is by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:05:03 GMT -->
+</html>

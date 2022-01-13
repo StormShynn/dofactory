@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/css/multiple-columns by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:53:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Multiple Columns - Dofactory</title>
+    <meta name="keywords" content="CSS, CSS Tutorial, Reference, Guide, Examples, Demos, Top, Best, Tips, Advice, Training, Learning, Courses, Lessons, Front-end, Programming, Code, Source">
+    <meta name="description" content="With CSS, text content can be partitioned in multiple columns. This text layout is like a newspaper or other publication with multiple columns.">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="multiple-columns.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        
+<style>
+
+  pre { font-weight: bold; margin-top: 30px; }
+  ol.linenums li { line-height: 22px; }
+
+  .prettyprint { font-size: 16px; }
+  .kwd { color: #0b7490; }
+  .lit, .str { color: #cc4500; }
+
+
+  /* ... review ... */
+
+  /*.atv { color: #139; }*/
+  .atv { color: #b7422c; }
+  /*.atn { color: #F45D48; }*/
+  .atn { color: #353768; }
+  /* too many keywords were incorrectly colored */
+  .kwd { color: #000000; }  
+
+  .prettyprint { background-color: #f6f7f8 !important; }
+
+  .tutorial hr { margin-top: 65px; margin-bottom: 5px; }
+
+  .tutorial .render button, .tutorial .render input[type="submit"], .render input[type="button"], .render input[type="reset"] { display: inline-block; font-weight: 400; text-align: center; white-space: nowrap; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; border: 1px solid transparent; padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; border-radius: 0.25rem; transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border: 1px solid #ccc; vertical-align: top; }
+  .tutorial .render button:hover, .tutorial .render input[type="submit"]:hover, .tutorial .render input[type="button"]:hover, .tutorial .render input[type="reset"]:hover { text-decoration: none; background-color: #dddddd; border-color: #bbb; }
+  .tutorial .render button:focus, .tutorial .render input[type="submit"]:focus, .tutorial .render input[type="button"]:focus, .tutorial .render input[type="reset"]:focus { outline: 0; border: 1px solid #999; }
+
+  .tutorial input[type="text"], .tutorial input[type="password"], .tutorial input[type="email"] { height: calc(2.25rem + 2px); padding: 0.375rem 0.75rem; font-size: 1rem; }
+
+  .tutorial .render select { outline: none; margin: 25px 0 10px; display: block; width: 180px; height: calc(2.25rem + 2px); padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; color: #495057; background-color: #fff; background-clip: padding-box; border: 1px solid #ced4da; border-radius: 0.25rem; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+
+  .tutorial em { font-weight: 500; font-style: normal;/*border: 1px dotted orangered; padding: 0.03em 0.30em 0.03em 0.25em; border-radius: 3px; font-style: normal;*/ }
+
+  /* enables autoscroll in flex and grid */
+  div { min-width: 0; }
+
+  /* multiple demo buttons */
+  .demo-links button { font-size: 17px; padding: 2px 8px 4px; background: #fff; margin: 5px 5px 5px 5px; border-radius: 3px; border: 1px solid #999; transition-duration: .25s }
+  .demo-links button:hover, .demo-links button:focus, .demo-links button:active, .tutorial .demo-links button.selected-style { background: #333; color: white; cursor: pointer; outline: none; }
+  
+  .tutorial p.demo-links { margin-right: 0 !important;}
+  /* Interactive style selection menus */
+  /*.tutorial .demo-links button.selected-style { background: #b8eeef; color: black; }*/
+  .muted-bar { color: #999; }
+
+  .tutorial div.items p:first-child { margin-top:35px !important;}
+  .tutorial .render p { margin-right: 0 !important;}
+
+  .tutorial .for-details { font-size: 15px; padding-top: 10px; }
+
+  .tutorial h3 { font-weight: 500; }
+  
+</style>
+
+<link rel="stylesheet" href="../tutorial/css/responsive1bd2.css?v=kbWbNIwNk4mwtaCxbJqtcx_bZolfxojMY9VsNm1mX_Y" />
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="../img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        CSS Tutorial&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="../css.html">CSS Tutorial</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="basics.html">CSS Basics</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="selectors.html">CSS Selectors</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="specificity.html">CSS Specificity</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="colors.html">CSS Colors</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="color-names.html">CSS Color Names</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="backgrounds.html">CSS Backgrounds</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="images.html">CSS Images</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="borders.html">CSS Borders</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="paddings.html">CSS Padding</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="margins.html">CSS Margin</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="text.html">CSS Text</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="fonts.html">CSS Fonts</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="buttons.html">CSS Buttons</a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="links.html">CSS Links</a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="lists.html">CSS Lists</a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="tables.html">CSS Tables</a>
+                <div class="height-1"></div>
+              <a id="item-17" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="hover.html">CSS Hover</a>
+                <div class="height-1"></div>
+              <a id="item-18" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="icons.html">CSS Icons</a>
+                <div class="height-1"></div>
+              <a id="item-19" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="positions.html">CSS Position</a>
+                <div class="height-1"></div>
+              <a id="item-20" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="alignment.html">CSS Alignment</a>
+                <div class="height-1"></div>
+              <a id="item-21" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="websafety.html">CSS Web Safety</a>
+                <div class="height-1"></div>
+              <a id="item-22" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="comments.html">CSS Comments</a>
+                <div class="height-1"></div>
+              <a id="item-23" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 data-isexternallink=&#x27;true&#x27;
+                 
+                 href="ref.html">CSS Reference</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">CSS Advanced</div>
+              <a id="item-25" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="displays.html">CSS Display</a>
+                <div class="height-1"></div>
+              <a id="item-26" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="box-model.html">CSS Box Model</a>
+                <div class="height-1"></div>
+              <a id="item-27" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="dimensions.html">CSS Dimensions</a>
+                <div class="height-1"></div>
+              <a id="item-28" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="overflows.html">CSS Overflow</a>
+                <div class="height-1"></div>
+              <a id="item-29" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="outlines.html">CSS Outline</a>
+                <div class="height-1"></div>
+              <a id="item-30" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="floats.html">CSS Float</a>
+                <div class="height-1"></div>
+              <a id="item-31" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="combinators.html">CSS Combinators</a>
+                <div class="height-1"></div>
+              <a id="item-32" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="pseudo-classes.html">CSS Pseudo-class</a>
+                <div class="height-1"></div>
+              <a id="item-33" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="pseudo-elements.html">CSS Pseudo-element</a>
+                <div class="height-1"></div>
+              <a id="item-34" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="opacities.html">CSS Opacity</a>
+                <div class="height-1"></div>
+              <a id="item-35" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="multiple-columns.html">CSS Multiple Columns</a>
+                <div class="height-1"></div>
+              <a id="item-36" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="variables.html">CSS Variables</a>
+                <div class="height-1"></div>
+              <a id="item-37" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="media-queries.html">CSS Media Queries</a>
+                <div class="height-1"></div>
+              <a id="item-38" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="transforms-2d.html">CSS 2D Transforms</a>
+                <div class="height-1"></div>
+              <a id="item-39" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="transforms-3d.html">CSS 3D Transforms</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">CSS Flexbox</div>
+              <a id="item-41" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="flexbox.html">CSS Flexbox Intro</a>
+                <div class="height-1"></div>
+              <a id="item-42" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="flexbox-containers.html">CSS Flexbox Containers</a>
+                <div class="height-1"></div>
+              <a id="item-43" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="flexbox-items.html">CSS Flexbox Items</a>
+                <div class="height-1"></div>
+              <a id="item-44" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="flexbox-alignments.html">CSS Flexbox Alignments</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">CSS Grid</div>
+              <a id="item-46" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="grids.html">CSS Grid Intro</a>
+                <div class="height-1"></div>
+              <a id="item-47" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="grid-containers.html">CSS Grid Container</a>
+                <div class="height-1"></div>
+              <a id="item-48" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="grid-items.html">CSS Grid Items</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="1162" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="../img/arrow-left.jpg" /> &nbsp;Back to CSS </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html/ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript/design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="../net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial" xstyle="xmax-width:1200px;">
+
+      <div class="d-flex justify-content-around align-items-start">
+
+        <div class="w-100 m-auto" style="max-width:970px;">
+
+<div>
+<h1>CSS Multiple Columns</h1>
+
+
+<div class="d-flex mt-10 pt-10 d-block d-lg-none" xstyle="border-top:1px solid #ccd;">
+    <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="opacities.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; CSS Opacity &nbsp;</a>
+  </div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="variables.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; CSS Variables &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<div class="items mt-70 mb-50">
+  <p>There are many ways in CSS to partition a page into two or more columns.</p>
+  <p>The <a href="column-count.html" class="code-link">column-count</a> property offers an easy way to create columns.</p>
+  <p>This property is mostly used to create columns for long text content.</p>
+</div>
+
+<a class="goto-target" id="example"></a>
+<div class="d-flex">
+    <h3  style="margin-left:-2px;font-weight:500 !important;" onmouseover="$(&#x27;#xexample&#x27;).show();" onmouseout="$(&#x27;#xexample&#x27;).hide();">Example</h3>
+    <h3 class="pl-12"><a id="xexample" class="d-block header-anchor" href="#example">#</a></h3>
+</div>
+
+
+
+<p class="">
+  An element divided into 2 columns with <a href="column-count.html" class="code-link">column-count</a>.
+</p>
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .multiple-column {
+    padding: 15px;
+    column-count: 2;
+  }
+</style>
+
+<p class="multiple-column">
+  Claude Monet was raised in Le Havre,
+  Normandy, and became interested in the
+  outdoors and drawing from an early age.
+  Although his mother, Louise-Justine
+  Aubrée Monet, supported his ambitions
+  to be a painter, his father, Claude-Adolphe,
+  disapproved and wanted him to pursue a
+  career in business. He was very close to
+  his mother, but she died in January 1857
+  when he was sixteen years old, and he was
+  sent to live with his childless, widowed
+  but wealthy aunt, Marie-Jeanne Lecadre.
+  He went on to study at the Académie Suisse,
+  and under the academic history painter
+  Charles Gleyre, where he was a classmate
+  of Auguste Renoir. His early works include
+  landscapes, seascapes, and portraits, but
+  attracted little attention. A key early
+  influence was Eugène Boudin who introduced
+  him to the concept of plein air painting.
+  From 1883, Monet lived in Giverny, also
+  in northern France, where he purchased a
+  house and property and began a vast
+  landscaping project, including a
+  water-lily pond.
+</p>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .multiple-column {&#xD;&#xA;    padding: 15px;&#xD;&#xA;    column-count: 2;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;p class=&quot;multiple-column&quot;&gt;&#xD;&#xA;  Claude Monet was raised in Le Havre,&#xD;&#xA;  Normandy, and became interested in the&#xD;&#xA;  outdoors and drawing from an early age.&#xD;&#xA;  Although his mother, Louise-Justine&#xD;&#xA;  Aubr&#xE9;e Monet, supported his ambitions&#xD;&#xA;  to be a painter, his father, Claude-Adolphe,&#xD;&#xA;  disapproved and wanted him to pursue a&#xD;&#xA;  career in business. He was very close to&#xD;&#xA;  his mother, but she died in January 1857&#xD;&#xA;  when he was sixteen years old, and he was&#xD;&#xA;  sent to live with his childless, widowed&#xD;&#xA;  but wealthy aunt, Marie-Jeanne Lecadre.&#xD;&#xA;  He went on to study at the Acad&#xE9;mie Suisse,&#xD;&#xA;  and under the academic history painter&#xD;&#xA;  Charles Gleyre, where he was a classmate&#xD;&#xA;  of Auguste Renoir. His early works include&#xD;&#xA;  landscapes, seascapes, and portraits, but&#xD;&#xA;  attracted little attention. A key early&#xD;&#xA;  influence was Eug&#xE8;ne Boudin who introduced&#xD;&#xA;  him to the concept of plein air painting.&#xD;&#xA;  From 1883, Monet lived in Giverny, also&#xD;&#xA;  in northern France, where he purchased a&#xD;&#xA;  house and property and began a vast&#xD;&#xA;  landscaping project, including a&#xD;&#xA;  water-lily pond.&#xD;&#xA;&lt;/p&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/multiple-columns.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+<a class="goto-target" id="creating"></a>
+<div class="d-flex">
+    <h3  style="margin-left:-2px;font-weight:500 !important;" onmouseover="$(&#x27;#xcreating&#x27;).show();" onmouseout="$(&#x27;#xcreating&#x27;).hide();">Creating columns</h3>
+    <h3 class="pl-12"><a id="xcreating" class="d-block header-anchor" href="#creating">#</a></h3>
+</div>
+
+
+<div class="items">
+  <p>A family of related properties is available to create and customize columns.</p>
+  <p>They are: </p>
+  <ul style="margin-left:30px; margin-top:0; padding-top:0; list-style-type:circle;">
+    <li><a href="column-count.html" class="code-link">column-count</a> -- Specifies the number of columns</li>
+    <li><a href="column-gap.html" class="code-link">column-gap</a> -- Specifies the space between the columns</li>
+    <li><a href="column-fill.html" class="code-link">column-fill</a> -- Specifies how to fill columns</li>
+    <li><a href="column-rule.html" class="code-link">column-rule</a> -- A shorthand for setting all column-rule-* values</li>
+    <li><a href="column-rule-color.html" class="code-link">column-rule-color</a> -- Specifies the color of the rule between columns</li>
+    <li><a href="column-rule-style.html" class="code-link">column-rule-style</a> -- Specifies the style of the rule between columns</li>
+    <li><a href="column-rule-width.html" class="code-link">column-rule-width</a> -- Specifies the width of the rule between columns</li>
+    <li><a href="column-span.html" class="code-link">column-span</a> -- Specifies how many columns an element should span across</li>
+    <li><a href="column-width.html" class="code-link">column-width</a> -- Specifies a suggested, optimal width for the columns</li>
+    <li><a href="columns.html" class="code-link">columns</a> -- A shorthand for setting column-width and column-count</li>
+  </ul>
+  <p>Each one is presented next.</p>
+</div>
+
+<hr />
+
+<a class="goto-target" id="column-count"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xcolumn-count&#x27;).show();" onmouseout="$(&#x27;#xcolumn-count&#x27;).hide();">The column-count property</h2>
+    <h2><a id="xcolumn-count" style="display:none" class="d-block pl-12 header-anchor" href="#column-count">#</a></h2>
+</div>
+
+
+<div class="items">
+  <p>The <a href="column-count.html" class="code-link">column-count</a> property specifies the number of columns.</p>
+  <p>This property is mostly used to create columns for long text content.</p>
+  <p>Setting this value to <code>auto</code> will divide the content based on the <a href="column-width.html" class="code-link">column-width</a>.</p>
+</div>
+
+<p>An element divided into 3 columns.</p>
+
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .column-count {
+    column-count: 3;
+  }
+</style>
+
+<div class="column-count">
+  Claude Monet was raised in Le Havre,
+  Normandy, and became interested in the
+  outdoors and drawing from an early age.
+  Although his mother, Louise-Justine
+  Aubrée Monet, supported his ambitions
+  to be a painter, his father, Claude-Adolphe,
+  disapproved and wanted him to pursue a
+  career in business. He was very close to
+  his mother, but she died in January 1857
+  when he was sixteen years old, and he was
+  sent to live with his childless, widowed
+  but wealthy aunt, Marie-Jeanne Lecadre.
+  He went on to study at the Académie Suisse,
+  and under the academic history painter
+  Charles Gleyre, where he was a classmate
+  of Auguste Renoir. His early works include
+  landscapes, seascapes, and portraits, but
+  attracted little attention. A key early
+  influence was Eugène Boudin who introduced
+  him to the concept of plein air painting.
+  From 1883, Monet lived in Giverny, also
+  in northern France, where he purchased a
+  house and property and began a vast
+  landscaping project, including a
+  water-lily pond.
+</div>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .column-count {&#xD;&#xA;    column-count: 3;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;column-count&quot;&gt;&#xD;&#xA;  Claude Monet was raised in Le Havre,&#xD;&#xA;  Normandy, and became interested in the&#xD;&#xA;  outdoors and drawing from an early age.&#xD;&#xA;  Although his mother, Louise-Justine&#xD;&#xA;  Aubr&#xE9;e Monet, supported his ambitions&#xD;&#xA;  to be a painter, his father, Claude-Adolphe,&#xD;&#xA;  disapproved and wanted him to pursue a&#xD;&#xA;  career in business. He was very close to&#xD;&#xA;  his mother, but she died in January 1857&#xD;&#xA;  when he was sixteen years old, and he was&#xD;&#xA;  sent to live with his childless, widowed&#xD;&#xA;  but wealthy aunt, Marie-Jeanne Lecadre.&#xD;&#xA;  He went on to study at the Acad&#xE9;mie Suisse,&#xD;&#xA;  and under the academic history painter&#xD;&#xA;  Charles Gleyre, where he was a classmate&#xD;&#xA;  of Auguste Renoir. His early works include&#xD;&#xA;  landscapes, seascapes, and portraits, but&#xD;&#xA;  attracted little attention. A key early&#xD;&#xA;  influence was Eug&#xE8;ne Boudin who introduced&#xD;&#xA;  him to the concept of plein air painting.&#xD;&#xA;  From 1883, Monet lived in Giverny, also&#xD;&#xA;  in northern France, where he purchased a&#xD;&#xA;  house and property and began a vast&#xD;&#xA;  landscaping project, including a&#xD;&#xA;  water-lily pond.&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/multiple-columns-column.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<p class="for-details">For details on <code>column-count</code>, see our <a class="underline" href="column-count.html">CSS column-count Property Reference</a>.</p>
+
+<hr />
+
+<a class="goto-target" id="column-gap"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xcolumn-gap&#x27;).show();" onmouseout="$(&#x27;#xcolumn-gap&#x27;).hide();">The column-gap property</h2>
+    <h2><a id="xcolumn-gap" style="display:none" class="d-block pl-12 header-anchor" href="#column-gap">#</a></h2>
+</div>
+
+
+<div class="items">
+  <p>The <a href="column-gap.html" class="code-link">column-gap</a> property defines the spacing between columns.</p>
+  <p>The default column gap is <code>1em</code>.</p>
+</div>
+
+<p>This example has a wider gap between the columns.</p>
+
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .column-gap {
+    column-count: 2;
+    column-gap: 50px;
+  }
+</style>
+
+<div class="column-gap">
+  Claude Monet was raised in Le Havre,
+  Normandy, and became interested in the
+  outdoors and drawing from an early age.
+  Although his mother, Louise-Justine
+  Aubrée Monet, supported his ambitions
+  to be a painter, his father, Claude-Adolphe,
+  disapproved and wanted him to pursue a
+  career in business. He was very close to
+  his mother, but she died in January 1857
+  when he was sixteen years old, and he was
+  sent to live with his childless, widowed
+  but wealthy aunt, Marie-Jeanne Lecadre.
+  He went on to study at the Académie Suisse,
+  and under the academic history painter
+  Charles Gleyre, where he was a classmate
+  of Auguste Renoir. His early works include
+  landscapes, seascapes, and portraits, but
+  attracted little attention. A key early
+  influence was Eugène Boudin who introduced
+  him to the concept of plein air painting.
+  From 1883, Monet lived in Giverny, also
+  in northern France, where he purchased a
+  house and property and began a vast
+  landscaping project, including a
+  water-lily pond.
+</div>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .column-gap {&#xD;&#xA;    column-count: 2;&#xD;&#xA;    column-gap: 50px;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;column-gap&quot;&gt;&#xD;&#xA;  Claude Monet was raised in Le Havre,&#xD;&#xA;  Normandy, and became interested in the&#xD;&#xA;  outdoors and drawing from an early age.&#xD;&#xA;  Although his mother, Louise-Justine&#xD;&#xA;  Aubr&#xE9;e Monet, supported his ambitions&#xD;&#xA;  to be a painter, his father, Claude-Adolphe,&#xD;&#xA;  disapproved and wanted him to pursue a&#xD;&#xA;  career in business. He was very close to&#xD;&#xA;  his mother, but she died in January 1857&#xD;&#xA;  when he was sixteen years old, and he was&#xD;&#xA;  sent to live with his childless, widowed&#xD;&#xA;  but wealthy aunt, Marie-Jeanne Lecadre.&#xD;&#xA;  He went on to study at the Acad&#xE9;mie Suisse,&#xD;&#xA;  and under the academic history painter&#xD;&#xA;  Charles Gleyre, where he was a classmate&#xD;&#xA;  of Auguste Renoir. His early works include&#xD;&#xA;  landscapes, seascapes, and portraits, but&#xD;&#xA;  attracted little attention. A key early&#xD;&#xA;  influence was Eug&#xE8;ne Boudin who introduced&#xD;&#xA;  him to the concept of plein air painting.&#xD;&#xA;  From 1883, Monet lived in Giverny, also&#xD;&#xA;  in northern France, where he purchased a&#xD;&#xA;  house and property and began a vast&#xD;&#xA;  landscaping project, including a&#xD;&#xA;  water-lily pond.&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/multiple-columns-gap.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<p class="for-details">For details on <code>column-gap</code>, see our <a class="underline" href="column-gap.html">CSS column-gap Property Reference</a>.</p>
+
+<hr />
+
+<a class="goto-target" id="column-fill"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xcolumn-fill&#x27;).show();" onmouseout="$(&#x27;#xcolumn-fill&#x27;).hide();">The column-fill property</h2>
+    <h2><a id="xcolumn-fill" style="display:none" class="d-block pl-12 header-anchor" href="#column-fill">#</a></h2>
+</div>
+
+
+<div class="items">
+  <p>The <a href="column-fill.html" class="code-link">column-fill</a> property defines how content is broken into columns.</p>
+  <p>The default value is <code>balance</code>.</p>
+</div>
+
+<p>This example has a balance <a href="column-fill.html" class="code-link">column-fill</a> setting.</p>
+
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .column-fill {
+    column-count: 2;
+    column-fill: auto;
+  }
+</style>
+
+<div class="column-fill">
+  Claude Monet was raised in Le Havre,
+  Normandy, and became interested in the
+  outdoors and drawing from an early age.
+  Although his mother, Louise-Justine
+  Aubrée Monet, supported his ambitions
+  to be a painter, his father, Claude-Adolphe,
+  disapproved and wanted him to pursue a
+  career in business. He was very close to
+  his mother, but she died in January 1857
+  when he was sixteen years old, and he was
+  sent to live with his childless, widowed
+  but wealthy aunt, Marie-Jeanne Lecadre.
+  He went on to study at the Académie Suisse,
+  and under the academic history painter
+  Charles Gleyre, where he was a classmate
+  of Auguste Renoir. His early works include
+  landscapes, seascapes, and portraits, but
+  attracted little attention. A key early
+  influence was Eugène Boudin who introduced
+  him to the concept of plein air painting.
+  From 1883, Monet lived in Giverny, also
+  in northern France, where he purchased a
+  house and property and began a vast
+  landscaping project, including a
+  water-lily pond.
+</div>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .column-fill {&#xD;&#xA;    column-count: 2;&#xD;&#xA;    column-fill: auto;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;column-fill&quot;&gt;&#xD;&#xA;  Claude Monet was raised in Le Havre,&#xD;&#xA;  Normandy, and became interested in the&#xD;&#xA;  outdoors and drawing from an early age.&#xD;&#xA;  Although his mother, Louise-Justine&#xD;&#xA;  Aubr&#xE9;e Monet, supported his ambitions&#xD;&#xA;  to be a painter, his father, Claude-Adolphe,&#xD;&#xA;  disapproved and wanted him to pursue a&#xD;&#xA;  career in business. He was very close to&#xD;&#xA;  his mother, but she died in January 1857&#xD;&#xA;  when he was sixteen years old, and he was&#xD;&#xA;  sent to live with his childless, widowed&#xD;&#xA;  but wealthy aunt, Marie-Jeanne Lecadre.&#xD;&#xA;  He went on to study at the Acad&#xE9;mie Suisse,&#xD;&#xA;  and under the academic history painter&#xD;&#xA;  Charles Gleyre, where he was a classmate&#xD;&#xA;  of Auguste Renoir. His early works include&#xD;&#xA;  landscapes, seascapes, and portraits, but&#xD;&#xA;  attracted little attention. A key early&#xD;&#xA;  influence was Eug&#xE8;ne Boudin who introduced&#xD;&#xA;  him to the concept of plein air painting.&#xD;&#xA;  From 1883, Monet lived in Giverny, also&#xD;&#xA;  in northern France, where he purchased a&#xD;&#xA;  house and property and began a vast&#xD;&#xA;  landscaping project, including a&#xD;&#xA;  water-lily pond.&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/multiple-columns-fill.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<p class="for-details">For details on <code>column-fill</code>, see our <a class="underline" href="column-fill.html">CSS column-fill Property Reference</a>.</p>
+
+<hr />
+
+<a class="goto-target" id="column-rule"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xcolumn-rule&#x27;).show();" onmouseout="$(&#x27;#xcolumn-rule&#x27;).hide();">The column-rule property</h2>
+    <h2><a id="xcolumn-rule" style="display:none" class="d-block pl-12 header-anchor" href="#column-rule">#</a></h2>
+</div>
+
+
+
+<div class="items">
+  <p>A column rule is a vertical divider line between columns.</p>
+  <p>The <a href="column-rule.html" class="code-link">column-rule</a> property is a shorthand for style, width, and color.</p>
+</div>
+
+<p>Using <a href="column-rule.html" class="code-link">column-rule</a> to customize the lines between the columns.</p>
+
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .column-rule {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 4px dotted purple;
+  }
+</style>
+
+<div class="column-rule">
+  Claude Monet was raised in Le Havre,
+  Normandy, and became interested in the
+  outdoors and drawing from an early age.
+  Although his mother, Louise-Justine
+  Aubrée Monet, supported his ambitions
+  to be a painter, his father, Claude-Adolphe,
+  disapproved and wanted him to pursue a
+  career in business. He was very close to
+  his mother, but she died in January 1857
+  when he was sixteen years old, and he was
+  sent to live with his childless, widowed
+  but wealthy aunt, Marie-Jeanne Lecadre.
+  He went on to study at the Académie Suisse,
+  and under the academic history painter
+  Charles Gleyre, where he was a classmate
+  of Auguste Renoir. His early works include
+  landscapes, seascapes, and portraits, but
+  attracted little attention. A key early
+  influence was Eugène Boudin who introduced
+  him to the concept of plein air painting.
+  From 1883, Monet lived in Giverny, also
+  in northern France, where he purchased a
+  house and property and began a vast
+  landscaping project, including a
+  water-lily pond.
+</div>      
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .column-rule {&#xD;&#xA;    column-count: 3;&#xD;&#xA;    column-gap: 40px;&#xD;&#xA;    column-rule: 4px dotted purple;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;column-rule&quot;&gt;&#xD;&#xA;  Claude Monet was raised in Le Havre,&#xD;&#xA;  Normandy, and became interested in the&#xD;&#xA;  outdoors and drawing from an early age.&#xD;&#xA;  Although his mother, Louise-Justine&#xD;&#xA;  Aubr&#xE9;e Monet, supported his ambitions&#xD;&#xA;  to be a painter, his father, Claude-Adolphe,&#xD;&#xA;  disapproved and wanted him to pursue a&#xD;&#xA;  career in business. He was very close to&#xD;&#xA;  his mother, but she died in January 1857&#xD;&#xA;  when he was sixteen years old, and he was&#xD;&#xA;  sent to live with his childless, widowed&#xD;&#xA;  but wealthy aunt, Marie-Jeanne Lecadre.&#xD;&#xA;  He went on to study at the Acad&#xE9;mie Suisse,&#xD;&#xA;  and under the academic history painter&#xD;&#xA;  Charles Gleyre, where he was a classmate&#xD;&#xA;  of Auguste Renoir. His early works include&#xD;&#xA;  landscapes, seascapes, and portraits, but&#xD;&#xA;  attracted little attention. A key early&#xD;&#xA;  influence was Eug&#xE8;ne Boudin who introduced&#xD;&#xA;  him to the concept of plein air painting.&#xD;&#xA;  From 1883, Monet lived in Giverny, also&#xD;&#xA;  in northern France, where he purchased a&#xD;&#xA;  house and property and began a vast&#xD;&#xA;  landscaping project, including a&#xD;&#xA;  water-lily pond.&#xD;&#xA;&lt;/div&gt;      &#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/multiple-columns-shorthand.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<p class="for-details">For details on <code>column-rule</code>, see our <a class="underline" href="column-rule.html">CSS column-rule Property Reference</a>.</p>
+
+<hr />
+
+<a class="goto-target" id="column-rule-style"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xcolumn-rule-style&#x27;).show();" onmouseout="$(&#x27;#xcolumn-rule-style&#x27;).hide();">The column-rule-style property</h2>
+    <h2><a id="xcolumn-rule-style" style="display:none" class="d-block pl-12 header-anchor" href="#column-rule-style">#</a></h2>
+</div>
+
+
+
+<div class="items">
+  <p>A column rule is a vertical divider line between columns.</p>
+  <p>The <a href="column-rule-style.html" class="code-link">column-rule-style</a> property specifies the line style of the rule.</p>
+</div>
+
+<p>This example has a dashed line between the columns.</p>
+
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .column-rule-style {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule-style: dashed;
+    column-rule-width: 2px;
+  }
+</style>
+
+<div class="column-rule-style">
+  Claude Monet was raised in Le Havre,
+  Normandy, and became interested in the
+  outdoors and drawing from an early age.
+  Although his mother, Louise-Justine
+  Aubrée Monet, supported his ambitions
+  to be a painter, his father, Claude-Adolphe,
+  disapproved and wanted him to pursue a
+  career in business. He was very close to
+  his mother, but she died in January 1857
+  when he was sixteen years old, and he was
+  sent to live with his childless, widowed
+  but wealthy aunt, Marie-Jeanne Lecadre.
+  He went on to study at the Académie Suisse,
+  and under the academic history painter
+  Charles Gleyre, where he was a classmate
+  of Auguste Renoir. His early works include
+  landscapes, seascapes, and portraits, but
+  attracted little attention. A key early
+  influence was Eugène Boudin who introduced
+  him to the concept of plein air painting.
+  From 1883, Monet lived in Giverny, also
+  in northern France, where he purchased a
+  house and property and began a vast
+  landscaping project, including a
+  water-lily pond.
+</div>      
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .column-rule-style {&#xD;&#xA;    column-count: 3;&#xD;&#xA;    column-gap: 40px;&#xD;&#xA;    column-rule-style: dashed;&#xD;&#xA;    column-rule-width: 2px;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;column-rule-style&quot;&gt;&#xD;&#xA;  Claude Monet was raised in Le Havre,&#xD;&#xA;  Normandy, and became interested in the&#xD;&#xA;  outdoors and drawing from an early age.&#xD;&#xA;  Although his mother, Louise-Justine&#xD;&#xA;  Aubr&#xE9;e Monet, supported his ambitions&#xD;&#xA;  to be a painter, his father, Claude-Adolphe,&#xD;&#xA;  disapproved and wanted him to pursue a&#xD;&#xA;  career in business. He was very close to&#xD;&#xA;  his mother, but she died in January 1857&#xD;&#xA;  when he was sixteen years old, and he was&#xD;&#xA;  sent to live with his childless, widowed&#xD;&#xA;  but wealthy aunt, Marie-Jeanne Lecadre.&#xD;&#xA;  He went on to study at the Acad&#xE9;mie Suisse,&#xD;&#xA;  and under the academic history painter&#xD;&#xA;  Charles Gleyre, where he was a classmate&#xD;&#xA;  of Auguste Renoir. His early works include&#xD;&#xA;  landscapes, seascapes, and portraits, but&#xD;&#xA;  attracted little attention. A key early&#xD;&#xA;  influence was Eug&#xE8;ne Boudin who introduced&#xD;&#xA;  him to the concept of plein air painting.&#xD;&#xA;  From 1883, Monet lived in Giverny, also&#xD;&#xA;  in northern France, where he purchased a&#xD;&#xA;  house and property and began a vast&#xD;&#xA;  landscaping project, including a&#xD;&#xA;  water-lily pond.&#xD;&#xA;&lt;/div&gt;      &#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/multiple-columns-style.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+<a class="goto-target" id="column-rule-width"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xcolumn-rule-width&#x27;).show();" onmouseout="$(&#x27;#xcolumn-rule-width&#x27;).hide();">The column-rule-width property</h2>
+    <h2><a id="xcolumn-rule-width" style="display:none" class="d-block pl-12 header-anchor" href="#column-rule-width">#</a></h2>
+</div>
+
+
+
+<div class="items">
+  <p>The <a href="column-rule-width.html" class="code-link">column-rule-width</a> property specifies the width of the line.</p>
+</div>
+<p>This example has a wide line between the columns.</p>
+
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .column-rule-width {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule-style: solid;
+    column-rule-width: 4px;
+  }
+</style>
+
+<div class="column-rule-width">
+  Claude Monet was raised in Le Havre,
+  Normandy, and became interested in the
+  outdoors and drawing from an early age.
+  Although his mother, Louise-Justine
+  Aubrée Monet, supported his ambitions
+  to be a painter, his father, Claude-Adolphe,
+  disapproved and wanted him to pursue a
+  career in business. He was very close to
+  his mother, but she died in January 1857
+  when he was sixteen years old, and he was
+  sent to live with his childless, widowed
+  but wealthy aunt, Marie-Jeanne Lecadre.
+  He went on to study at the Académie Suisse,
+  and under the academic history painter
+  Charles Gleyre, where he was a classmate
+  of Auguste Renoir. His early works include
+  landscapes, seascapes, and portraits, but
+  attracted little attention. A key early
+  influence was Eugène Boudin who introduced
+  him to the concept of plein air painting.
+  From 1883, Monet lived in Giverny, also
+  in northern France, where he purchased a
+  house and property and began a vast
+  landscaping project, including a
+  water-lily pond.
+</div>      
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .column-rule-width {&#xD;&#xA;    column-count: 3;&#xD;&#xA;    column-gap: 40px;&#xD;&#xA;    column-rule-style: solid;&#xD;&#xA;    column-rule-width: 4px;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;column-rule-width&quot;&gt;&#xD;&#xA;  Claude Monet was raised in Le Havre,&#xD;&#xA;  Normandy, and became interested in the&#xD;&#xA;  outdoors and drawing from an early age.&#xD;&#xA;  Although his mother, Louise-Justine&#xD;&#xA;  Aubr&#xE9;e Monet, supported his ambitions&#xD;&#xA;  to be a painter, his father, Claude-Adolphe,&#xD;&#xA;  disapproved and wanted him to pursue a&#xD;&#xA;  career in business. He was very close to&#xD;&#xA;  his mother, but she died in January 1857&#xD;&#xA;  when he was sixteen years old, and he was&#xD;&#xA;  sent to live with his childless, widowed&#xD;&#xA;  but wealthy aunt, Marie-Jeanne Lecadre.&#xD;&#xA;  He went on to study at the Acad&#xE9;mie Suisse,&#xD;&#xA;  and under the academic history painter&#xD;&#xA;  Charles Gleyre, where he was a classmate&#xD;&#xA;  of Auguste Renoir. His early works include&#xD;&#xA;  landscapes, seascapes, and portraits, but&#xD;&#xA;  attracted little attention. A key early&#xD;&#xA;  influence was Eug&#xE8;ne Boudin who introduced&#xD;&#xA;  him to the concept of plein air painting.&#xD;&#xA;  From 1883, Monet lived in Giverny, also&#xD;&#xA;  in northern France, where he purchased a&#xD;&#xA;  house and property and began a vast&#xD;&#xA;  landscaping project, including a&#xD;&#xA;  water-lily pond.&#xD;&#xA;&lt;/div&gt;      &#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/multiple-columns-width.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<p class="for-details">For details on <code>column-width</code>, see our <a class="underline" href="column-width.html">CSS column-width Property Reference</a>.</p>
+
+<hr />
+
+<a class="goto-target" id="column-rule-color"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xcolumn-rule-color&#x27;).show();" onmouseout="$(&#x27;#xcolumn-rule-color&#x27;).hide();">The column-rule-color property</h2>
+    <h2><a id="xcolumn-rule-color" style="display:none" class="d-block pl-12 header-anchor" href="#column-rule-color">#</a></h2>
+</div>
+
+
+
+<div class="items">
+  <p>The <a href="column-rule-color.html" class="code-link">column-rule-width</a> property specifies the color of the line.</p>
+</div>
+<p>This example has a colored line between the columns.</p>
+
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .column-rule-color {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule-style: solid;
+    column-rule-width: 4px;
+    column-rule-color: orangered;
+  }
+</style>
+
+<div class="column-rule-color">
+  Claude Monet was raised in Le Havre,
+  Normandy, and became interested in the
+  outdoors and drawing from an early age.
+  Although his mother, Louise-Justine
+  Aubrée Monet, supported his ambitions
+  to be a painter, his father, Claude-Adolphe,
+  disapproved and wanted him to pursue a
+  career in business. He was very close to
+  his mother, but she died in January 1857
+  when he was sixteen years old, and he was
+  sent to live with his childless, widowed
+  but wealthy aunt, Marie-Jeanne Lecadre.
+  He went on to study at the Académie Suisse,
+  and under the academic history painter
+  Charles Gleyre, where he was a classmate
+  of Auguste Renoir. His early works include
+  landscapes, seascapes, and portraits, but
+  attracted little attention. A key early
+  influence was Eugène Boudin who introduced
+  him to the concept of plein air painting.
+  From 1883, Monet lived in Giverny, also
+  in northern France, where he purchased a
+  house and property and began a vast
+  landscaping project, including a
+  water-lily pond.
+</div>      
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .column-rule-color {&#xD;&#xA;    column-count: 3;&#xD;&#xA;    column-gap: 40px;&#xD;&#xA;    column-rule-style: solid;&#xD;&#xA;    column-rule-width: 4px;&#xD;&#xA;    column-rule-color: orangered;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;column-rule-color&quot;&gt;&#xD;&#xA;  Claude Monet was raised in Le Havre,&#xD;&#xA;  Normandy, and became interested in the&#xD;&#xA;  outdoors and drawing from an early age.&#xD;&#xA;  Although his mother, Louise-Justine&#xD;&#xA;  Aubr&#xE9;e Monet, supported his ambitions&#xD;&#xA;  to be a painter, his father, Claude-Adolphe,&#xD;&#xA;  disapproved and wanted him to pursue a&#xD;&#xA;  career in business. He was very close to&#xD;&#xA;  his mother, but she died in January 1857&#xD;&#xA;  when he was sixteen years old, and he was&#xD;&#xA;  sent to live with his childless, widowed&#xD;&#xA;  but wealthy aunt, Marie-Jeanne Lecadre.&#xD;&#xA;  He went on to study at the Acad&#xE9;mie Suisse,&#xD;&#xA;  and under the academic history painter&#xD;&#xA;  Charles Gleyre, where he was a classmate&#xD;&#xA;  of Auguste Renoir. His early works include&#xD;&#xA;  landscapes, seascapes, and portraits, but&#xD;&#xA;  attracted little attention. A key early&#xD;&#xA;  influence was Eug&#xE8;ne Boudin who introduced&#xD;&#xA;  him to the concept of plein air painting.&#xD;&#xA;  From 1883, Monet lived in Giverny, also&#xD;&#xA;  in northern France, where he purchased a&#xD;&#xA;  house and property and began a vast&#xD;&#xA;  landscaping project, including a&#xD;&#xA;  water-lily pond.&#xD;&#xA;&lt;/div&gt;      &#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/multiple-columns-color.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<p class="for-details">For details on <code>column-color</code>, see our <a class="underline" href="notfound.html">CSS column-color Property Reference</a>.</p>
+
+<hr />
+
+<a class="goto-target" id="column-span"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xcolumn-span&#x27;).show();" onmouseout="$(&#x27;#xcolumn-span&#x27;).hide();">Column Span</h2>
+    <h2><a id="xcolumn-span" style="display:none" class="d-block pl-12 header-anchor" href="#column-span">#</a></h2>
+</div>
+
+
+<div class="items">
+  <p>The <a href="column-span.html" class="code-link">column-span</a> property specifies how many columns an element should span.</p>
+</div>
+
+<p>
+  This heading spans across all the columns in the container.
+</p>
+<style>
+  .render .column-span > h3 { margin-left: 0 !important; padding-left: 0 !important; margin-bottom: 25px !important; }
+</style>
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .column-span {
+    column-count: 3;
+  }
+</style>
+
+<div class="column-span">
+
+  <h3 style="column-span:all;">
+    The early life of Claude Monet
+  </h3>
+
+  Claude Monet was raised in Le Havre,
+  Normandy, and became interested in the
+  outdoors and drawing from an early age.
+  Although his mother, Louise-Justine
+  Aubrée Monet, supported his ambitions
+  to be a painter, his father, Claude-Adolphe,
+  disapproved and wanted him to pursue a
+  career in business. He was very close to
+  his mother, but she died in January 1857
+  when he was sixteen years old, and he was
+  sent to live with his childless, widowed
+  but wealthy aunt, Marie-Jeanne Lecadre.
+  He went on to study at the Académie Suisse,
+  and under the academic history painter
+  Charles Gleyre, where he was a classmate
+  of Auguste Renoir. His early works include
+  landscapes, seascapes, and portraits, but
+  attracted little attention. A key early
+  influence was Eugène Boudin who introduced
+  him to the concept of plein air painting.
+  From 1883, Monet lived in Giverny, also
+  in northern France, where he purchased a
+  house and property and began a vast
+  landscaping project, including a
+  water-lily pond.
+</div> 
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .column-span {&#xD;&#xA;    column-count: 3;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;column-span&quot;&gt;&#xD;&#xA;&#xD;&#xA;  &lt;h3 style=&quot;column-span:all;&quot;&gt;&#xD;&#xA;    The early life of Claude Monet&#xD;&#xA;  &lt;/h3&gt;&#xD;&#xA;&#xD;&#xA;  Claude Monet was raised in Le Havre,&#xD;&#xA;  Normandy, and became interested in the&#xD;&#xA;  outdoors and drawing from an early age.&#xD;&#xA;  Although his mother, Louise-Justine&#xD;&#xA;  Aubr&#xE9;e Monet, supported his ambitions&#xD;&#xA;  to be a painter, his father, Claude-Adolphe,&#xD;&#xA;  disapproved and wanted him to pursue a&#xD;&#xA;  career in business. He was very close to&#xD;&#xA;  his mother, but she died in January 1857&#xD;&#xA;  when he was sixteen years old, and he was&#xD;&#xA;  sent to live with his childless, widowed&#xD;&#xA;  but wealthy aunt, Marie-Jeanne Lecadre.&#xD;&#xA;  He went on to study at the Acad&#xE9;mie Suisse,&#xD;&#xA;  and under the academic history painter&#xD;&#xA;  Charles Gleyre, where he was a classmate&#xD;&#xA;  of Auguste Renoir. His early works include&#xD;&#xA;  landscapes, seascapes, and portraits, but&#xD;&#xA;  attracted little attention. A key early&#xD;&#xA;  influence was Eug&#xE8;ne Boudin who introduced&#xD;&#xA;  him to the concept of plein air painting.&#xD;&#xA;  From 1883, Monet lived in Giverny, also&#xD;&#xA;  in northern France, where he purchased a&#xD;&#xA;  house and property and began a vast&#xD;&#xA;  landscaping project, including a&#xD;&#xA;  water-lily pond.&#xD;&#xA;&lt;/div&gt; &#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/multiple-columns-span.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<p class="for-details">For details on <code>column-span</code>, see our <a class="underline" href="column-span.html">CSS column-span Property Reference</a>.</p>
+
+<hr />
+<a class="goto-target" id="column-width"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xcolumn-width&#x27;).show();" onmouseout="$(&#x27;#xcolumn-width&#x27;).hide();">Column Width</h2>
+    <h2><a id="xcolumn-width" style="display:none" class="d-block pl-12 header-anchor" href="#column-width">#</a></h2>
+</div>
+
+
+
+<div class="items">
+  <p>The <a href="column-width.html" class="code-link">column-width</a> property specifies a suggested column width.</p>
+  <p>This setting helps determine how many columns to display.</p>
+  <p>A value of <code>auto</code> lets the browser decide on each column size.</p>
+</div>
+
+<p>
+  An element with a specific <a href="column-width.html" class="code-link">column-width</a>. <br />
+  Resize the browser to see the number of columns change.
+</p>
+
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .column-width {
+    column-width: 200px;
+  }
+</style>
+
+<div class="column-width">
+  Claude Monet was raised in Le Havre,
+  Normandy, and became interested in the
+  outdoors and drawing from an early age.
+  Although his mother, Louise-Justine
+  Aubrée Monet, supported his ambitions
+  to be a painter, his father, Claude-Adolphe,
+  disapproved and wanted him to pursue a
+  career in business. He was very close to
+  his mother, but she died in January 1857
+  when he was sixteen years old, and he was
+  sent to live with his childless, widowed
+  but wealthy aunt, Marie-Jeanne Lecadre.
+  He went on to study at the Académie Suisse,
+  and under the academic history painter
+  Charles Gleyre, where he was a classmate
+  of Auguste Renoir. His early works include
+  landscapes, seascapes, and portraits, but
+  attracted little attention. A key early
+  influence was Eugène Boudin who introduced
+  him to the concept of plein air painting.
+  From 1883, Monet lived in Giverny, also
+  in northern France, where he purchased a
+  house and property and began a vast
+  landscaping project, including a
+  water-lily pond.
+</div>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .column-width {&#xD;&#xA;    column-width: 200px;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;column-width&quot;&gt;&#xD;&#xA;  Claude Monet was raised in Le Havre,&#xD;&#xA;  Normandy, and became interested in the&#xD;&#xA;  outdoors and drawing from an early age.&#xD;&#xA;  Although his mother, Louise-Justine&#xD;&#xA;  Aubr&#xE9;e Monet, supported his ambitions&#xD;&#xA;  to be a painter, his father, Claude-Adolphe,&#xD;&#xA;  disapproved and wanted him to pursue a&#xD;&#xA;  career in business. He was very close to&#xD;&#xA;  his mother, but she died in January 1857&#xD;&#xA;  when he was sixteen years old, and he was&#xD;&#xA;  sent to live with his childless, widowed&#xD;&#xA;  but wealthy aunt, Marie-Jeanne Lecadre.&#xD;&#xA;  He went on to study at the Acad&#xE9;mie Suisse,&#xD;&#xA;  and under the academic history painter&#xD;&#xA;  Charles Gleyre, where he was a classmate&#xD;&#xA;  of Auguste Renoir. His early works include&#xD;&#xA;  landscapes, seascapes, and portraits, but&#xD;&#xA;  attracted little attention. A key early&#xD;&#xA;  influence was Eug&#xE8;ne Boudin who introduced&#xD;&#xA;  him to the concept of plein air painting.&#xD;&#xA;  From 1883, Monet lived in Giverny, also&#xD;&#xA;  in northern France, where he purchased a&#xD;&#xA;  house and property and began a vast&#xD;&#xA;  landscaping project, including a&#xD;&#xA;  water-lily pond.&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/multiple-columns-col-width.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+<p class="for-details">For details on column width, see our <a class="underline" href="column-width.html">CSS column-width Property Referencee</a>.</p>
+
+<hr />
+<a class="goto-target" id="properties"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xproperties&#x27;).show();" onmouseout="$(&#x27;#xproperties&#x27;).hide();">Multi-column Properties</h2>
+    <h2><a id="xproperties" style="display:none" class="d-block pl-12 header-anchor" href="#properties">#</a></h2>
+</div>
+
+
+
+<p>These are the multi-column properties.</p>
+<div class="table-box">
+  <table class="table table-md ">
+    <tbody>
+      <tr class="bg-light">
+        <th style="width:200px;">Property</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><a href="column-count.html" class="code-link">column-count</a></td>
+        <td>Specifies the number of columns an element should be divided into</td>
+      </tr>
+      <tr>
+        <td><a href="column-fill.html" class="code-link">column-fill</a></td>
+        <td>Specifies how to fill columns</td>
+      </tr>
+      <tr>
+        <td><a href="column-gap.html" class="code-link">column-gap</a></td>
+        <td>Specifies the gap between the columns</td>
+      </tr>
+      <tr>
+        <td><a href="column-rule.html" class="code-link">column-rule</a></td>
+        <td>A shorthand property for setting all the column-rule-* properties</td>
+      </tr>
+      <tr>
+        <td><a href="column-rule-color.html" class="code-link">column-rule-color</a></td>
+        <td>Specifies the color of the rule between columns</td>
+      </tr>
+      <tr>
+        <td><a href="column-rule-style.html" class="code-link">column-rule-style</a></td>
+        <td>Specifies the style of the rule between columns</td>
+      </tr>
+      <tr>
+        <td><a href="column-rule-width.html" class="code-link">column-rule-width</a></td>
+        <td>Specifies the width of the rule between columns</td>
+      </tr>
+      <tr>
+        <td><a href="column-span.html" class="code-link">column-span</a></td>
+        <td>Specifies how many columns an element should span across</td>
+      </tr>
+      <tr>
+        <td><a href="column-width.html" class="code-link">column-width</a></td>
+        <td>Specifies a suggested, optimal width for the columns</td>
+      </tr>
+      <tr>
+        <td><a href="columns.html" class="code-link">columns</a></td>
+        <td>A shorthand property for setting column-width and column-count</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr />
+<a class="goto-target" id="browser"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xbrowser&#x27;).show();" onmouseout="$(&#x27;#xbrowser&#x27;).hide();">Browser Support</h2>
+    <h2><a id="xbrowser" style="display:none" class="d-block pl-12 header-anchor" href="#browser">#</a></h2>
+</div>
+
+
+
+<p>The numbers specify the browser version that first fully supported the property.</p>
+<div class="table-box">
+  <table class="table table-md ">
+    <tbody>
+      <tr class="bg-light">
+        <th style="width:300px;font-size:16px;text-align:left;">Function</th>
+        <th style="width:15%;" title="Chrome"><img src="../img/css/compatible_chrome.gif" /></th>
+        <th style="width:15%;" title="Internet Explorer"><img src="../img/css/compatible_edge.gif" /></th>
+        <th style="width:15%;" title="Firefox"><img src="../img/css/compatible_firefox.gif" /></th>
+        <th style="width:15%;" title="Safari"><img src="../img/css/compatible_safari.gif" /></th>
+        <th style=" width: 15%;" title="Opera"><img src="../img/css/compatible_opera.gif" /></th>
+      </tr>
+      <tr>
+        <td><a href="column-count.html" class="code-link">column-count</a></td>
+        <td>50.0</td>
+        <td>10.0</td>
+        <td>52.0</td>
+        <td>9.0</td>
+        <td>37.0</td>
+      </tr>
+      <tr>
+        <td><a href="column-gap.html" class="code-link">column-gap</a></td>
+        <td>50.0</td>
+        <td>10.0</td>
+        <td>52.0</td>
+        <td>9.0</td>
+        <td>37.0</td>
+      </tr>
+      <tr>
+        <td><a href="column-fill.html" class="code-link">column-fill</a></td>
+        <td>50.0</td>
+        <td>10.0</td>
+        <td>52.0</td>
+        <td>9.0</td>
+        <td>37.0</td>
+      </tr>
+      <tr>
+        <td><a href="column-rule.html" class="code-link">column-rule</a></td>
+        <td>50.0</td>
+        <td>10.0</td>
+        <td>52.0</td>
+        <td>9.0</td>
+        <td>37.0</td>
+      </tr>
+      <tr>
+        <td><a href="column-rule-color.html" class="code-link">column-rule-color</a></td>
+        <td>50.0</td>
+        <td>10.0</td>
+        <td>52.0</td>
+        <td>9.0</td>
+        <td>37.0</td>
+      </tr>
+      <tr>
+        <td><a href="column-rule-style.html" class="code-link">column-rule-style</a></td>
+        <td>50.0</td>
+        <td>10.0</td>
+        <td>52.0</td>
+        <td>9.0</td>
+        <td>37.0</td>
+      </tr>
+      <tr>
+        <td><a href="column-rule-width.html" class="code-link">column-rule-width</a></td>
+        <td>50.0</td>
+        <td>10.0</td>
+        <td>52.0</td>
+        <td>9.0</td>
+        <td>37.0</td>
+      </tr>
+      <tr>
+        <td><a href="column-span.html" class="code-link">column-span</a></td>
+        <td>50.0</td>
+        <td>10.0</td>
+        <td><span class="text-danger">Not supported</span></td>
+        <td>9.0</td>
+        <td>37.0</td>
+      </tr>
+      <tr>
+        <td><a href="column-width.html" class="code-link">column-width</a></td>
+        <td>50.0</td>
+        <td>10.0</td>
+        <td>52.0</td>
+        <td>9.0</td>
+        <td>37.0</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr />
+<a class="goto-target" id="like"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xlike&#x27;).show();" onmouseout="$(&#x27;#xlike&#x27;).hide();">You may also like</h2>
+    <h2><a id="xlike" style="display:none" class="d-block pl-12 header-anchor" href="#like">#</a></h2>
+</div>
+
+
+<p>
+  <div class="d-flex">
+    <div class="p-10">
+      <img src="../img/html/show-like.png" class="img-fluid" loading="lazy" />
+    </div>
+    <div class="pl-25 pt-5">
+      <ul>
+        <li>Our <a class="underline font-weight-semibold" href="column-count.html">CSS column-count Property Reference</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="column-gap.html">CSS column-gap Property Reference</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="column-fill.html">CSS column-fill Property Reference</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="column-rule.html">CSS column-rule Property Reference</a></li>
+      </ul>
+    </div>
+  </div>
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="opacities.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; CSS Opacity &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="variables.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; CSS Variables &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+</div>
+
+          <div class="bg-light p-10 mb-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css.html">CSS Tutorial</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="selectors.html">CSS Selectors</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="borders.html">CSS Borders</a></li>
+
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="flexbox.html">CSS Flex</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="grids.html">CSS Grid</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="tables.html">CSS Tables</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="length.html">CSS Length</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="fonts.html">CSS Fonts</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="animation.html">CSS Animation</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="hover.html">CSS Hover</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="images.html">CSS Images</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="comments.html">CSS Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" style="min-width:230px !important;">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">Multiple Columns</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#example">Example</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#creating">Creating columns</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#column-count">Column Count</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#column-gap">Columns Gap</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#column-fill">Columns Fill</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#column-rule">Column Rule</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#column-span">Column Span</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#column-width">Column Width</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#properties">Properties</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#browser">Browser Support</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#like">You may also like</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+
+    function copy(id) {
+      var stor = document.createElement("textarea");
+      stor.setAttribute("contentEditable", true);
+      stor.innerHTML = document.getElementById(id).innerHTML;
+      stor.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+      document.body.appendChild(stor);
+      stor.focus({ preventScroll: true });
+      stor.focus();
+
+      document.execCommand("copy");
+      document.body.removeChild(stor);
+
+      $('#show-' + id).fadeIn('fast').delay(1200).fadeOut('slow');
+    }
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/css/multiple-columns by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:53:40 GMT -->
+</html>

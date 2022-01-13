@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/javascript/functions by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:05:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Functions - Dofactory</title>
+    <meta name="keywords" content="javascript functions, javascript expressions, javascript hoisting, javascript variable, javascript closure, hash pattern, javascript call, javascript apply">
+    <meta name="description" content="Functions, as reusable blocks of code, are fully supported in JavaScript. Here is an example of a simple function declaration:">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="functions.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        <link rel="stylesheet" href="../tutorial/css/javascript1cdd.css?v=qVXqJlnTI2nqJ78-w9n5mGO4sNLYFSlXHRVEVwRSTj4" />
+
+<style>
+  .bg-cream-100 { background-color: #f6f8fd !important; }
+</style>
+
+
+<script>
+  var console = {};
+  console.log = function (e) {
+    try {
+
+      if (!e && e != false) e = "undefined";
+      if (e == "Andrew Fuller\n Bob Springsteen") {
+        e = e.replace(/(?:\r\n|\r|\n)/g, '<br>');
+      }
+      document.writeln(e);
+      document.write("<br />");
+    }
+    catch {
+      document.writeln("");
+    }
+  };
+  window.console = console;
+</script>
+
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="../img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        JavaScript Tutorial&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="../javascript.html">JavaScript Intro</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="what-is.html">What is JavaScript</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="essentials.html">JavaScript Essentials</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="variables.html">JavaScript Variables</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="operators.html">JavaScript Operators</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="conditionals.html">JavaScript Conditionals</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="loops.html">JavaScript Loops</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="builtin-types.html">JavaScript Built-in Types</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="objects.html">JavaScript Objects</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="advanced-objects.html">JavaScript Adv. Objects</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="arrays.html">JavaScript Arrays</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="functions.html">JavaScript Functions</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="function-objects.html">JavaScript Function Objects</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="json.html">JavaScript JSON</a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="regular-expressions.html">JavaScript Reg. Expressions</a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="design-patterns.html">JavaScript Patterns</a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="reference.html">JavaScript Reference</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="354" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="../img/arrow-left.jpg" /> &nbsp;Back to JS </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html/ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css/ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="../net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial" xstyle="xmax-width:1200px;">
+
+      <div class="d-flex justify-content-around align-items-start">
+
+        <div class="w-100 m-auto" style="max-width:970px;">
+
+          <h1>JavaScript Functions</h1>
+
+
+<div class="d-flex">
+    <div class="mt-40">
+        <p class="pb-0 mb-0" style="margin-right:0 !important;">A <em>JavaScript Function</em> is a block of JavaScript code that performs a task or calculates a value. A function has a name and it usually takes in some input and returns an output. Functions are reusable and can be executed as many times as necessary.</p>
+    </div>
+    <div class="ml-auto d-none d-md-block text-center" style="flex: 0 0 200px;">
+      <img src="../img/javascript/show-js.png" alt="JavaScript Tutorial" style="margin:20px 10px 0px 35px;" />
+    </div>
+</div>
+
+
+
+<hr />
+<a class="goto-target" id="declaring"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xdeclaring&#x27;).show();" onmouseout="$(&#x27;#xdeclaring&#x27;).hide();">Declaring Functions</h2>
+    <h2><a id="xdeclaring" style="display:none" class="d-block pl-12 header-anchor" href="#declaring">#</a></h2>
+</div>
+
+
+
+<p>
+  Functions, as reusable blocks of code, are fully supported in JavaScript.  
+  Here is an example of a simple function declaration:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-1');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-1" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-1">function say(name) {&#xD;&#xA;    console.log(&quot;Hello &quot; &#x2B; name);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;say(&quot;Nico&quot;);           // =&gt; Hello Nico&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function say(name) {&#xD;&#xA;    console.log(&quot;Hello &quot; &#x2B; name);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;say(&quot;Nico&quot;);           // =&gt; Hello Nico&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-1" style="display:none;">
+  <script>
+      function say(name) {
+    console.log("Hello " + name);
+}
+
+say("Nico");           // => Hello Nico
+;
+  </script>
+</div>
+<button id="functions-1-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-1');">
+  Run
+</button>
+
+
+<p>
+  The above function declaration starts with the keyword <code>function</code>. Next we 
+  have <code>say</code>, which is the function's name.  Following the name is a comma-separated 
+  list of zero or more parameters enclosed by parentheses: <code>()</code>. In our example we 
+  have one parameter named <code>name</code>. These parameters behave like local variables 
+  inside the function body.  The function body comprises a set of JavaScript statements 
+  enclosed by curly braces: <code>{}</code>. The body executes when the function is 
+  invoked by issueing its name followed by parenthesis (with possible arguments), 
+  like <code>say("Nico");</code>. 
+</p>
+
+<p>
+  Function declarations can appear in the top-level JavaScript program itself, 
+  just like our <code>say</code> example. However, functions can also be nested 
+  within other functions, like so.
+</p>
+
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-2');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-2" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-2">function hypotenuse(m, n) {        // outer function  &#xD;&#xA;    function square(num) {         // inner function&#xD;&#xA;        return num * num;&#xD;&#xA;    }&#xD;&#xA;    return Math.sqrt(square(m) &#x2B; square(n));&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(hypotenuse(3, 4));     // =&gt; 5&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function hypotenuse(m, n) {        // outer function  &#xD;&#xA;    function square(num) {         // inner function&#xD;&#xA;        return num * num;&#xD;&#xA;    }&#xD;&#xA;    return Math.sqrt(square(m) &#x2B; square(n));&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(hypotenuse(3, 4));     // =&gt; 5&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-2" style="display:none;">
+  <script>
+      function hypotenuse(m, n) {        // outer function  
+    function square(num) {         // inner function
+        return num * num;
+    }
+    return Math.sqrt(square(m) + square(n));
+}
+
+console.log(hypotenuse(3, 4));     // => 5
+;
+  </script>
+</div>
+<button id="functions-2-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-2');">
+  Run
+</button>
+
+
+<p>
+  The outer function <code>hypotenuse</code> contains an inner function <code>square</code>. 
+  The <code>square</code> function is visible only within the <code>hypotenuse</code> function 
+  body, that is, <code>square</code> has function scope only.  The easiest way 
+  to look at <code>square</code> is as a private helper function to the outer function. 
+</p>
+
+<hr />
+<a class="goto-target" id="expressions"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xexpressions&#x27;).show();" onmouseout="$(&#x27;#xexpressions&#x27;).hide();">Function Expressions</h2>
+    <h2><a id="xexpressions" style="display:none" class="d-block pl-12 header-anchor" href="#expressions">#</a></h2>
+</div>
+
+
+
+<p>
+  The examples before are <i>function declarations</i>. However, JavaScript also supports 
+  <i>function expressions</i> in which functions are assigned to variables. Here is an example:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-3');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-3" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-3">var area = function (radius) {&#xD;&#xA;    return Math.PI * radius * radius;&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;console.log(area(5));         // =&gt; 78.5398..&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var area = function (radius) {&#xD;&#xA;    return Math.PI * radius * radius;&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;console.log(area(5));         // =&gt; 78.5398..&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-3" style="display:none;">
+  <script>
+      var area = function (radius) {
+    return Math.PI * radius * radius;
+};
+
+console.log(area(5));         // => 78.5398..
+;
+  </script>
+</div>
+<button id="functions-3-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-3');">
+  Run
+</button>
+
+
+<p>
+  This function is assigned to a variable named <code>area</code>.  The function itself does 
+  not have a name, so this is an <i>anonymous function</i>.  Function expressions are 
+  invoked by calling the variable name with a pair of parentheses containing any arguments 
+  (in our example: <code>area(5));</code>.
+</p>
+
+<p>
+  How do we distinguish a function declaration from a function expression?  A
+  ny time a function is a part of an assignment, it is treated as a function expression.  
+  Function declarations do not end with a semicolon, whereas function expressions do, 
+  as they are part of an assignment.  Also, function declarations must always have 
+  a name whereas a function expression may or may not have a name, i.e. it can be named 
+  or anonymous. 
+</p>
+
+<p>
+  Anonymous functions are commonly used in JavaScript. Our <code>area</code> function is an example 
+  of this.  By the way: if you choose to give the function expression a name it is 
+  generally recommended you give it the same name as the variable it is assigned to; 
+  this will avoid confusion.
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="arrays.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; JavaScript Arrays &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="function-objects.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; JavaScript Function Objects &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<a class="goto-target" id="hoisting"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xhoisting&#x27;).show();" onmouseout="$(&#x27;#xhoisting&#x27;).hide();">Function Hoisting</h2>
+    <h2><a id="xhoisting" style="display:none" class="d-block pl-12 header-anchor" href="#hoisting">#</a></h2>
+</div>
+
+
+
+<p>
+  A JavaScript function can be invoked before its declaration. This works because the JavaScript 
+  engine implicitly hoists the function to the top so that they are visible throughout the program. 
+  In the example below, the function named <code>course</code> is parsed and evaluated before any 
+  other code is run.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-4');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-4" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-4">function course() {        // hoisted to top of program    &#xD;&#xA;    return &quot;Learning JS&quot;;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(course());     // =&gt; Learning JS&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function course() {        // hoisted to top of program    &#xD;&#xA;    return &quot;Learning JS&quot;;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(course());     // =&gt; Learning JS&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-4" style="display:none;">
+  <script>
+      function course() {        // hoisted to top of program    
+    return "Learning JS";
+}
+
+console.log(course());     // => Learning JS
+;
+  </script>
+</div>
+<button id="functions-4-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-4');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="scope"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xscope&#x27;).show();" onmouseout="$(&#x27;#xscope&#x27;).hide();">Variable Scope in Functions</h2>
+    <h2><a id="xscope" style="display:none" class="d-block pl-12 header-anchor" href="#scope">#</a></h2>
+</div>
+
+
+
+<p>
+  A variable has global scope if it exists during the life of the program and is 
+  accessible from anywhere in the program. A variable has function scope if it is 
+  declared within a function and is not accessible outside of that function and will 
+  cease to exist when the function finishes execution.
+</p>
+
+<p>
+  With function scope, the parameters and variables that you define as part of a function 
+  are not available outside the function body; they are only visible within the function 
+  throughout the lifetime of the function. Here are some examples:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-5');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-5" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-5">var num = 1;           // variable is global&#xD;&#xA;function showGlobal() {&#xD;&#xA;    console.log(num);  // uses the global num&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;showGlobal();          // =&gt; 1&#xD;&#xA;&#xD;&#xA;function showLocal() {&#xD;&#xA;    var num = 2;       // num is local, hides the global num &#xD;&#xA;    console.log(num);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;showLocal();           // =&gt; 2&#xD;&#xA;&#xD;&#xA;function showArgument(num) {&#xD;&#xA;    console.log(num);  // arguments are locally scoped&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;showArgument(3);       // =&gt; 3&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var num = 1;           // variable is global&#xD;&#xA;function showGlobal() {&#xD;&#xA;    console.log(num);  // uses the global num&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;showGlobal();          // =&gt; 1&#xD;&#xA;&#xD;&#xA;function showLocal() {&#xD;&#xA;    var num = 2;       // num is local, hides the global num &#xD;&#xA;    console.log(num);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;showLocal();           // =&gt; 2&#xD;&#xA;&#xD;&#xA;function showArgument(num) {&#xD;&#xA;    console.log(num);  // arguments are locally scoped&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;showArgument(3);       // =&gt; 3&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-5" style="display:none;">
+  <script>
+      var num = 1;           // variable is global
+function showGlobal() {
+    console.log(num);  // uses the global num
+}
+
+showGlobal();          // => 1
+
+function showLocal() {
+    var num = 2;       // num is local, hides the global num 
+    console.log(num);
+}
+
+showLocal();           // => 2
+
+function showArgument(num) {
+    console.log(num);  // arguments are locally scoped
+}
+
+showArgument(3);       // => 3
+;
+  </script>
+</div>
+<button id="functions-5-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-5');">
+  Run
+</button>
+
+
+<p>
+  Unfortunately JavaScript does not support <i>block-level scoping</i>.  A variable defined within 
+  a block, for instance an if- or a for-statement, will exist even after the block finishes 
+  execution. It will be available until the function in which the variable is declared finishes.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-6');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-6" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-6">function noBlock() {&#xD;&#xA;    if (true) {&#xD;&#xA;        var width = 10;  // not block level scoped&#xD;&#xA;    }&#xD;&#xA;    console.log(width);  // variable num is available outside the if block&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;noBlock();               // =&gt; 10&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function noBlock() {&#xD;&#xA;    if (true) {&#xD;&#xA;        var width = 10;  // not block level scoped&#xD;&#xA;    }&#xD;&#xA;    console.log(width);  // variable num is available outside the if block&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;noBlock();               // =&gt; 10&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-6" style="display:none;">
+  <script>
+      function noBlock() {
+    if (true) {
+        var width = 10;  // not block level scoped
+    }
+    console.log(width);  // variable num is available outside the if block
+}
+
+noBlock();               // => 10
+;
+  </script>
+</div>
+<button id="functions-6-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-6');">
+  Run
+</button>
+
+
+<p>
+  JavaScript functions can be nested within other functions. A nested (inner) function 
+  can access the arguments and variables of the (outer) function it is nested within.  
+  The example below demonstrates this: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-7');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-7" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-7">function verify(name) {             // outer function  &#xD;&#xA;    function isJohn() {             // inner function&#xD;&#xA;        return name === &quot;John&quot;;     // full access to argument        &#xD;&#xA;    }&#xD;&#xA;    if (isJohn()) {&#xD;&#xA;        console.log(&quot;Yep, this is John&quot;);&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;verify(&quot;John&quot;);&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function verify(name) {             // outer function  &#xD;&#xA;    function isJohn() {             // inner function&#xD;&#xA;        return name === &quot;John&quot;;     // full access to argument        &#xD;&#xA;    }&#xD;&#xA;    if (isJohn()) {&#xD;&#xA;        console.log(&quot;Yep, this is John&quot;);&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;verify(&quot;John&quot;);&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-7" style="display:none;">
+  <script>
+      function verify(name) {             // outer function  
+    function isJohn() {             // inner function
+        return name === "John";     // full access to argument        
+    }
+    if (isJohn()) {
+        console.log("Yep, this is John");
+    }
+}
+
+verify("John");
+;
+  </script>
+</div>
+<button id="functions-7-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-7');">
+  Run
+</button>
+
+
+<p>
+  The inner function <code>isJohn</code> has full access to the name argument of the outer 
+  function; there is no need to pass a parameter to the inner function.
+</p>
+
+<hr />
+<a class="goto-target" id="prototypes"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xprototypes&#x27;).show();" onmouseout="$(&#x27;#xprototypes&#x27;).hide();">Variable Scoping and Prototypes</h2>
+    <h2><a id="xprototypes" style="display:none" class="d-block pl-12 header-anchor" href="#prototypes">#</a></h2>
+</div>
+
+
+
+<p>
+  What happens when a function has a property and its prototype has a property of the same name? 
+  Which one will be used?  Let's run a test and find out:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-8');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-8" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-8">function Counter(count) {&#xD;&#xA;    this.count = count;           // object property&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;Counter.prototype.count = 2;      // prototype property&#xD;&#xA;&#xD;&#xA;var counter = new Counter(6);&#xD;&#xA;console.log(counter.count);       // =&gt; 6&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function Counter(count) {&#xD;&#xA;    this.count = count;           // object property&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;Counter.prototype.count = 2;      // prototype property&#xD;&#xA;&#xD;&#xA;var counter = new Counter(6);&#xD;&#xA;console.log(counter.count);       // =&gt; 6&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-8" style="display:none;">
+  <script>
+      function Counter(count) {
+    this.count = count;           // object property
+}
+
+Counter.prototype.count = 2;      // prototype property
+
+var counter = new Counter(6);
+console.log(counter.count);       // => 6
+;
+  </script>
+</div>
+<button id="functions-8-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-8');">
+  Run
+</button>
+
+
+<p>
+  This code demonstrates object properties take precedence over (i.e. hide) prototype properties 
+  of the same name.
+</p>
+
+<hr />
+<a class="goto-target" id="closures"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xclosures&#x27;).show();" onmouseout="$(&#x27;#xclosures&#x27;).hide();">Closures</h2>
+    <h2><a id="xclosures" style="display:none" class="d-block pl-12 header-anchor" href="#closures">#</a></h2>
+</div>
+
+
+
+<p>
+  Closures are an important and powerful concept in JavaScript. Simply put, a closure 
+  represents the variables of a function that are kept alive, even after the function returns.  
+  In almost all other languages when a function returns all local variables are destroyed and 
+  the program moves on, but not in JavaScript.  
+</p>
+
+<p>
+  Many JavaScript programmers are familiar with the concept of holding a reference to a function 
+  with a variable (if not, see the discussion of function expressions before this section).  
+  Many other languages have similar concepts where they can reference functions through 
+  function pointers or delegates. However, in JavaScript when a variable holds a reference 
+  to a function it also maintains a second, but hidden, reference to its closure, which 
+  essentially are the local variables that were present at the time of creation and their 
+  current values.  These variables are its scope context. Let's show this with an example 
+  (note that <code>counter()</code> is a regular function and not a constructor function): 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-9');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-9" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-9">function counter() {&#xD;&#xA;    var index = 0;&#xD;&#xA;    function increment() {&#xD;&#xA;        index = index &#x2B; 1;&#xD;&#xA;        console.log(index);&#xD;&#xA;        return index;&#xD;&#xA;    }&#xD;&#xA;    return increment;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var userIncrement = counter();    // a reference to inner increment()&#xD;&#xA;var adminIncrement = counter();   // a reference to inner increment()&#xD;&#xA;&#xD;&#xA;userIncrement();                  // =&gt; 1&#xD;&#xA;userIncrement();                  // =&gt; 2&#xD;&#xA;adminIncrement();                 // =&gt; 1&#xD;&#xA;adminIncrement();                 // =&gt; 2&#xD;&#xA;adminIncrement();                 // =&gt; 3&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function counter() {&#xD;&#xA;    var index = 0;&#xD;&#xA;    function increment() {&#xD;&#xA;        index = index &#x2B; 1;&#xD;&#xA;        console.log(index);&#xD;&#xA;        return index;&#xD;&#xA;    }&#xD;&#xA;    return increment;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var userIncrement = counter();    // a reference to inner increment()&#xD;&#xA;var adminIncrement = counter();   // a reference to inner increment()&#xD;&#xA;&#xD;&#xA;userIncrement();                  // =&gt; 1&#xD;&#xA;userIncrement();                  // =&gt; 2&#xD;&#xA;adminIncrement();                 // =&gt; 1&#xD;&#xA;adminIncrement();                 // =&gt; 2&#xD;&#xA;adminIncrement();                 // =&gt; 3&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-9" style="display:none;">
+  <script>
+      function counter() {
+    var index = 0;
+    function increment() {
+        index = index + 1;
+        console.log(index);
+        return index;
+    }
+    return increment;
+}
+
+var userIncrement = counter();    // a reference to inner increment()
+var adminIncrement = counter();   // a reference to inner increment()
+
+userIncrement();                  // => 1
+userIncrement();                  // => 2
+adminIncrement();                 // => 1
+adminIncrement();                 // => 2
+adminIncrement();                 // => 3
+;
+  </script>
+</div>
+<button id="functions-9-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-9');">
+  Run
+</button>
+
+<p>When the <code>counter</code> function is invoked, it returns a reference to the <code>increment</code> function.
+  At the time <code>counter</code> finishes execution, JavaScript saves its scope, and only the function 
+  that it returns, in our example <code>increment</code>, has access to it. This is the 
+  function's closure and includes a copy of the variable <code>index</code>, which is 0 
+  following the initialization.  Subsequent calls to <code> increment</code> increments 
+  the <code>index</code> value.  Note that <code>userIncrement</code> and <code>adminIncrement</code> 
+  each have their own closure with their own copy of the <code>index</code> variable that 
+  only they can work on.
+  </p>
+
+<p>
+  Arguments are local to their functions, so they also become part of the closure context. 
+  Here is an example in which name is part of the closure. 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-10');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-10" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-10">function greetings(name) {&#xD;&#xA;    function sayWelcome() {&#xD;&#xA;        console.log(&quot;Welcome to &quot; &#x2B; name);&#xD;&#xA;    }&#xD;&#xA;    return sayWelcome;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var greet = greetings(&quot;New York&quot;);&#xD;&#xA;&#xD;&#xA;greet();           // =&gt; Welcome to New York&#xD;&#xA;greet();           // =&gt; Welcome to New York&#xD;&#xA;greet();           // =&gt; Welcome to New York&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function greetings(name) {&#xD;&#xA;    function sayWelcome() {&#xD;&#xA;        console.log(&quot;Welcome to &quot; &#x2B; name);&#xD;&#xA;    }&#xD;&#xA;    return sayWelcome;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var greet = greetings(&quot;New York&quot;);&#xD;&#xA;&#xD;&#xA;greet();           // =&gt; Welcome to New York&#xD;&#xA;greet();           // =&gt; Welcome to New York&#xD;&#xA;greet();           // =&gt; Welcome to New York&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-10" style="display:none;">
+  <script>
+      function greetings(name) {
+    function sayWelcome() {
+        console.log("Welcome to " + name);
+    }
+    return sayWelcome;
+}
+
+var greet = greetings("New York");
+
+greet();           // => Welcome to New York
+greet();           // => Welcome to New York
+greet();           // => Welcome to New York
+;
+  </script>
+</div>
+<button id="functions-10-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-10');">
+  Run
+</button>
+
+
+<p>
+  Since all JavaScript functions are objects and they have a scope chain associated with them, 
+  they are, in fact, closures. Most commonly however, a closure is created when a nested function 
+  object is returned from the function within which it was defined. 
+</p>
+
+<p>
+  The nested function closures are a powerful feature of JavaScript and they are commonly used in 
+  advanced applications. For instance, it is commonly used when declaring event callbacks. Many 
+  JavaScript libraries make use of closures.  Our unique <a href="../products/dofactory-js.html"><b>Dofactory JS</b></a> 
+  demonstrates many advanced uses of JavaScript closures. 
+  To learn more <a href="../products/dofactory-js.html">click here</a>.
+</p>
+
+<hr />
+<a class="goto-target" id="option-hash"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xoption-hash&#x27;).show();" onmouseout="$(&#x27;#xoption-hash&#x27;).hide();">Option Hash Pattern</h2>
+    <h2><a id="xoption-hash" style="display:none" class="d-block pl-12 header-anchor" href="#option-hash">#</a></h2>
+</div>
+
+
+
+<p>
+  Suppose you have a function that expects a large number of parameters, like this:
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+function createCompany(name, street, city, zip, state, type,  
+                       taxId, currency, isActive, parentCompany) { 
+    ...
+}    
+</pre>
+
+<p>
+  It would be difficult for the client of the function to recall all the parameters 
+  and put them in the correct order.  When you invoke a function in JavaScript with 
+  an incorrect number or order of arguments you are not going to get an error.  
+  It just makes the missing variables undefined. So, it is easy to introduce bugs 
+  when calling functions that accepts a large number of parameters.
+</p>
+
+<p>
+  An nice solution to this kind of scenario is called the <i>Options Hash pattern</i>.  
+  Essentially, it is a function that accepts a single parameter which is an object that 
+  encapsulates all the parameters:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-11');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-11" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-11">var parms = {&#xD;&#xA;    name: &quot;Levis&quot;,&#xD;&#xA;    street: &quot;1 Main Street&quot;,&#xD;&#xA;    city: &quot;Anyhwere&quot;,&#xD;&#xA;    zip: &quot;01010&quot;,&#xD;&#xA;    state: &quot;NY&quot;,&#xD;&#xA;    type: &quot;Garments&quot;,&#xD;&#xA;    taxid: &quot;983233-003&quot;,&#xD;&#xA;    currency: &quot;USD&quot;,&#xD;&#xA;    isActive: true&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;function createCompany(parms) {&#xD;&#xA;    var name = parms.name;&#xD;&#xA;    var street = parms.street;&#xD;&#xA;    var city = parms.city;&#xD;&#xA;    console.log(&quot;State: &quot; &#x2B; parms.state);&#xD;&#xA;    console.log(&quot;Currency: &quot; &#x2B; parms.currency);&#xD;&#xA;    // ...&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;createCompany(parms);&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var parms = {&#xD;&#xA;    name: &quot;Levis&quot;,&#xD;&#xA;    street: &quot;1 Main Street&quot;,&#xD;&#xA;    city: &quot;Anyhwere&quot;,&#xD;&#xA;    zip: &quot;01010&quot;,&#xD;&#xA;    state: &quot;NY&quot;,&#xD;&#xA;    type: &quot;Garments&quot;,&#xD;&#xA;    taxid: &quot;983233-003&quot;,&#xD;&#xA;    currency: &quot;USD&quot;,&#xD;&#xA;    isActive: true&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;function createCompany(parms) {&#xD;&#xA;    var name = parms.name;&#xD;&#xA;    var street = parms.street;&#xD;&#xA;    var city = parms.city;&#xD;&#xA;    console.log(&quot;State: &quot; &#x2B; parms.state);&#xD;&#xA;    console.log(&quot;Currency: &quot; &#x2B; parms.currency);&#xD;&#xA;    // ...&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;createCompany(parms);&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-11" style="display:none;">
+  <script>
+      var parms = {
+    name: "Levis",
+    street: "1 Main Street",
+    city: "Anyhwere",
+    zip: "01010",
+    state: "NY",
+    type: "Garments",
+    taxid: "983233-003",
+    currency: "USD",
+    isActive: true
+};
+
+function createCompany(parms) {
+    var name = parms.name;
+    var street = parms.street;
+    var city = parms.city;
+    console.log("State: " + parms.state);
+    console.log("Currency: " + parms.currency);
+    // ...
+}
+
+createCompany(parms);
+;
+  </script>
+</div>
+<button id="functions-11-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-11');">
+  Run
+</button>
+
+
+<p>
+  The variable <code>parms</code> is a simple object literal. It allows the parameters 
+  to be added in any order. Also, optional parameters, such as <code>parentCompany</code> in the 
+  earlier code with the long parameter list, can be safely omitted.  It is far easier to 
+  maintain a parameter object than a list of individual parameters and worry about passing 
+  them in correctly.   By the way, this pattern also allows you to pass in more complex types, 
+  such as callback functions.
+ </p>
+<p>
+  Our <a href="../products/dofactory-js.html"><b>Dofactory JS</b></a> has more to say about the 
+  Option Hash pattern, including a wonderfully elegant way to handle default and missing values.  
+  To learn more <a href="../products/dofactory-js.html">click here</a>.
+</p>
+
+<hr />
+<a class="goto-target" id="immediate"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#ximmediate&#x27;).show();" onmouseout="$(&#x27;#ximmediate&#x27;).hide();">Immediate functions</h2>
+    <h2><a id="ximmediate" style="display:none" class="d-block pl-12 header-anchor" href="#immediate">#</a></h2>
+</div>
+
+
+
+<p>
+  <i>Immediate</i> functions execute as soon as JavaScript encounters them. These functions 
+  are a powerful concept that is frequently used in JavaScript. They are also referred to as 
+  <i>self-invoking</i> functions. First let's look at a normal function declaration.  
+  Clearly, it does not execute until it's invoked.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-12');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-12" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-12">function print() {&#xD;&#xA;    console.log(&#x27;Learning JS!&#x27;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;print();          // executes print function&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function print() {&#xD;&#xA;    console.log(&#x27;Learning JS!&#x27;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;print();          // executes print function&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-12" style="display:none;">
+  <script>
+      function print() {
+    console.log('Learning JS!');
+}
+
+print();          // executes print function
+;
+  </script>
+</div>
+<button id="functions-12-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-12');">
+  Run
+</button>
+
+
+<p>
+  JavaScript allows you to execute a function immediately by enclosing it with parentheses 
+  followed by another pair of parentheses, like so: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-13');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-13" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-13">(function () {&#xD;&#xA;    console.log(&quot;Learning JS!&quot;);&#xD;&#xA;}());&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>(function () {&#xD;&#xA;    console.log(&quot;Learning JS!&quot;);&#xD;&#xA;}());&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-13" style="display:none;">
+  <script>
+      (function () {
+    console.log("Learning JS!");
+}());
+;
+  </script>
+</div>
+<button id="functions-13-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-13');">
+  Run
+</button>
+
+
+<p>
+  The opening parenthesis before a function keyword tells the JavaScript to interpret 
+  the function keyword as a function expression. Without it, the interpreter treats 
+  it as a function declaration.  The paired brackets () at the end is the argument 
+  list; in this case an empty list.
+</p>
+
+<p>
+  The example above is an anonymous function, that is, it has no name. 
+  There is no need for a name, because nowhere in the program will this function be called.  
+  It is called once, as soon as JavaScript encounters it.
+ </p>
+<p>
+  You can also pass parameters to an immediate function.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-14');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-14" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-14">(function square(value) {&#xD;&#xA;    var result = value * value;&#xD;&#xA;    console.log(result);&#xD;&#xA;})(10);&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>(function square(value) {&#xD;&#xA;    var result = value * value;&#xD;&#xA;    console.log(result);&#xD;&#xA;})(10);&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-14" style="display:none;">
+  <script>
+      (function square(value) {
+    var result = value * value;
+    console.log(result);
+})(10);
+;
+  </script>
+</div>
+<button id="functions-14-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-14');">
+  Run
+</button>
+
+
+<p>
+  Any variable you define in an immediate function, including the arguments passed, remains 
+  local to the function. By using these self-invoking functions, your global namespace won't 
+  be polluted with temporary variables.  
+</p>
+
+<p>
+  Immediate functions offer great flexibility and are widely used in the most popular 
+  JavaScript frameworks, such as jQuery. Our accompanying Dofactory JS includes a great 
+  section on immediate functions and how JavaScript experts are using them to build robust 
+  and maintainable web apps.  To learn more 
+  <a href="../products/dofactory-js.html" style="font-style:italic;color:#800;">click here</a>. 
+</p>
+<p>
+  Next, we will look at an area where immediate functions can be useful: page initialization.
+</p>
+
+<hr />
+<a class="goto-target" id="initialization"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xinitialization&#x27;).show();" onmouseout="$(&#x27;#xinitialization&#x27;).hide();">Web Page Initialization</h2>
+    <h2><a id="xinitialization" style="display:none" class="d-block pl-12 header-anchor" href="#initialization">#</a></h2>
+</div>
+
+
+
+<p>
+  Immediate functions are useful for initialization tasks that are needed only once. A good example 
+  is when a web page is loaded in which you initialize objects, assign event handlers, etc.  
+  Using an immediate function allows you to package and run this process in the local scope 
+  of the function without leaving a global trace behind; only local variables are created 
+  and no global variables are left behind. The example below simply displays a welcome 
+  message with today's day.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-15');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-15" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-15">(function () {&#xD;&#xA;    var days = [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;,&#xD;&#xA;        &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;];&#xD;&#xA;&#xD;&#xA;    var today = new Date();&#xD;&#xA;&#xD;&#xA;    var message = &quot;Welcome, today is &quot; &#x2B; days[today.getDay()];&#xD;&#xA;&#xD;&#xA;    console.log(message);     // =&gt; Welcome, today is Monday&#xD;&#xA;}());&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>(function () {&#xD;&#xA;    var days = [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;,&#xD;&#xA;        &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;];&#xD;&#xA;&#xD;&#xA;    var today = new Date();&#xD;&#xA;&#xD;&#xA;    var message = &quot;Welcome, today is &quot; &#x2B; days[today.getDay()];&#xD;&#xA;&#xD;&#xA;    console.log(message);     // =&gt; Welcome, today is Monday&#xD;&#xA;}());&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-15" style="display:none;">
+  <script>
+      (function () {
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday",
+        "Thursday", "Friday", "Saturday"];
+
+    var today = new Date();
+
+    var message = "Welcome, today is " + days[today.getDay()];
+
+    console.log(message);     // => Welcome, today is Monday
+}());
+;
+  </script>
+</div>
+<button id="functions-15-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-15');">
+  Run
+</button>
+
+
+<p>
+  This function executes once and there will be no trace left.  If the above code were not wrapped 
+  in an immediate function, the variables <code>days</code>, <code>today</code>, and <code>message</code> 
+  would all end up on the global namespace, increasing the risk of name collisions.  With the 
+  immediate function we have zero footprint on the global namespace. 
+</p>
+
+<hr />
+<a class="goto-target" id="call-apply"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xcall-apply&#x27;).show();" onmouseout="$(&#x27;#xcall-apply&#x27;).hide();">call(), apply()</h2>
+    <h2><a id="xcall-apply" style="display:none" class="d-block pl-12 header-anchor" href="#call-apply">#</a></h2>
+</div>
+
+
+
+<p>
+  Functions in JavaScript have several built-in methods, two of which we will examine here; 
+  <code>call()</code> and <code>apply()</code>. This may sound strange, but remember that a 
+  function in JavaScript is an object so it has its own properties and its own methods.  
+  The methods <code>call()</code> and <code>apply()</code> allow you to invoke the function, 
+  giving you a lot of control over how the function executes.  Consider the following code: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-16');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-16" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-16">function message() {&#xD;&#xA;    console.log(this.num);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;message();        // =&gt; undefined, &#x27;this&#x27; references global object&#xD;&#xA;&#xD;&#xA;var obj = { num: 2 };&#xD;&#xA;&#xD;&#xA;message.call(obj);        // =&gt; 2,  &#x27;this&#x27; references obj&#xD;&#xA;message.apply(obj);       // =&gt; 2,  &#x27;this&#x27; references obj&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function message() {&#xD;&#xA;    console.log(this.num);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;message();        // =&gt; undefined, &#x27;this&#x27; references global object&#xD;&#xA;&#xD;&#xA;var obj = { num: 2 };&#xD;&#xA;&#xD;&#xA;message.call(obj);        // =&gt; 2,  &#x27;this&#x27; references obj&#xD;&#xA;message.apply(obj);       // =&gt; 2,  &#x27;this&#x27; references obj&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-16" style="display:none;">
+  <script>
+      function message() {
+    console.log(this.num);
+}
+
+message();        // => undefined, 'this' references global object
+
+var obj = { num: 2 };
+
+message.call(obj);        // => 2,  'this' references obj
+message.apply(obj);       // => 2,  'this' references obj
+;
+  </script>
+</div>
+<button id="functions-16-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-16');">
+  Run
+</button>
+
+
+<p>
+  The functions <code>call</code> and <code>apply</code> are very similar: the first argument 
+  passed is the same, which is the object on which the function is to be invoked. With this 
+  argument you essentially control what <code>this</code> is bound to inside the function body.  
+  This is a powerful concept, because what this implies is that any function can be invoked 
+  as a method of any object, even when it is not actually a method of that object. 
+  If you are familiar with .NET extension methods, then you'll immediately understand the concept.
+</p>
+
+<p>
+  An optional second argument to <code>call()</code> is a number of arguments to be passed to the function 
+  that is invoked. In <code>apply()</code> the optional second argument is the same, but specified 
+  as an array of arbitrary length.  When you know the exact number of arguments use <code>call()</code>, 
+  otherwise use <code>apply()</code>.
+</p>
+
+<p>
+  Here is another example of both methods in action. 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('functions-17');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-functions-17" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-functions-17">var welcome = function (guest) {&#xD;&#xA;    console.log(&quot;I&#x27;m &quot; &#x2B; this.name &#x2B; &quot;, you&#x27;re &quot; &#x2B; guest.name);&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;var stan = { name: &quot;Stan&quot; };&#xD;&#xA;var laurel = { name: &quot;Laurel&quot; };&#xD;&#xA;&#xD;&#xA;welcome.call(stan, laurel);    // =&gt; I&#x27;m Stan, you&#x27;re Laurel&#xD;&#xA;welcome.call(laurel, stan);    // =&gt; I&#x27;m Laurel, you&#x27;re Stan&#xD;&#xA;&#xD;&#xA;welcome.apply(stan, [laurel]); // =&gt; I&#x27;m Stan, you&#x27;re Laurel&#xD;&#xA;welcome.apply(laurel, [stan]); // =&gt; I&#x27;m Laurel, you&#x27;re Stan&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var welcome = function (guest) {&#xD;&#xA;    console.log(&quot;I&#x27;m &quot; &#x2B; this.name &#x2B; &quot;, you&#x27;re &quot; &#x2B; guest.name);&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;var stan = { name: &quot;Stan&quot; };&#xD;&#xA;var laurel = { name: &quot;Laurel&quot; };&#xD;&#xA;&#xD;&#xA;welcome.call(stan, laurel);    // =&gt; I&#x27;m Stan, you&#x27;re Laurel&#xD;&#xA;welcome.call(laurel, stan);    // =&gt; I&#x27;m Laurel, you&#x27;re Stan&#xD;&#xA;&#xD;&#xA;welcome.apply(stan, [laurel]); // =&gt; I&#x27;m Stan, you&#x27;re Laurel&#xD;&#xA;welcome.apply(laurel, [stan]); // =&gt; I&#x27;m Laurel, you&#x27;re Stan&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="functions-17" style="display:none;">
+  <script>
+      var welcome = function (guest) {
+    console.log("I'm " + this.name + ", you're " + guest.name);
+};
+
+var stan = { name: "Stan" };
+var laurel = { name: "Laurel" };
+
+welcome.call(stan, laurel);    // => I'm Stan, you're Laurel
+welcome.call(laurel, stan);    // => I'm Laurel, you're Stan
+
+welcome.apply(stan, [laurel]); // => I'm Stan, you're Laurel
+welcome.apply(laurel, [stan]); // => I'm Laurel, you're Stan
+;
+  </script>
+</div>
+<button id="functions-17-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'functions-17');">
+  Run
+</button>
+
+
+<p>
+  The first call has <code>stan</code> bound to <code>this</code> and <code>laurel</code> as 
+  the <code>guest</code>.  In the second call the roles are reversed. The <code>apply</code> methods 
+  are the same except that the <code>guest</code> argument is passed as an array. 
+</p>
+
+<p>
+  For a broader discussion on these powerful functions and additional invocation patterns check 
+  out our unique Dofactory JS product. To learn more 
+  <a href="../products/dofactory-js.html" style="font-style:italic;color:#800;">click here</a>. 
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="arrays.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; JavaScript Arrays &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="function-objects.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; JavaScript Function Objects &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+          <div class="bg-light p-10 my-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css.html">CSS Tutorial</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/selectors.html">CSS Selectors</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/borders.html">CSS Borders</a></li>
+
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/flex.html">CSS Flex</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/grids.html">CSS Grid</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/tables.html">CSS Tables</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/notfound.html">CSS Units</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/fonts.html">CSS Fonts</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/animation.html">CSS Animation</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/hover.html">CSS Hover</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/images.html">CSS Images</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/comments.html">CSS Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" xstyle="flex: 0 0 230px">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">Functions</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#declaring">Declaring functions</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#expressions">Function expressions</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#hoisting">Function hoisting</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#scope">Variable scope</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#prototypes">Scoping, Prototypes</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#closures">Closures</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#option-hash">Option Hash</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#immediate">Immediate functions</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#initialization">Page initialization</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#call-apply">call(), apply()</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+
+    let runbutton = function (button, model) {
+      var n = '#' + model;
+      var text = button.innerText;
+      if (text == "Run") {
+        $(n).slideDown(300);
+        button.innerText = "Clear";
+      } else {
+        $(n).slideUp(300);
+        button.innerText = "Run";
+      }
+    };
+
+    function copy(id) {
+      var stor = document.createElement("textarea");
+      stor.setAttribute("contentEditable", true);
+      stor.innerHTML = document.getElementById('copy-' + id).innerHTML;
+      stor.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+      document.body.appendChild(stor);
+      stor.focus({ preventScroll: true });
+      stor.focus();
+
+      document.execCommand("copy");
+      document.body.removeChild(stor);
+
+      $('#show-' + id).fadeIn('fast').delay(1200).fadeOut('slow');
+    }
+
+
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/javascript/functions by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:05:03 GMT -->
+</html>

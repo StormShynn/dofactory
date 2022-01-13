@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/javascript/loops by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:05:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Loops - Dofactory</title>
+    <meta name="keywords" content="javascript loop, while loop, do while loop, for loop, for in loop, break statement, continue statement">
+    <meta name="description" content="JavaScript loops are used to repeatedly run a block of code - until a certain condition is met. When developers talk about iteration or iterating over, say, an array, it is the same as looping. JavaScript offers several options to repeatedly run a block of code, including while, do while, for and for-in.">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="loops.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        <link rel="stylesheet" href="../tutorial/css/javascript1cdd.css?v=qVXqJlnTI2nqJ78-w9n5mGO4sNLYFSlXHRVEVwRSTj4" />
+
+<style>
+  .bg-cream-100 { background-color: #f6f8fd !important; }
+</style>
+
+
+<script>
+  var console = {};
+  console.log = function (e) {
+    try {
+
+      if (!e && e != false) e = "undefined";
+      if (e == "Andrew Fuller\n Bob Springsteen") {
+        e = e.replace(/(?:\r\n|\r|\n)/g, '<br>');
+      }
+      document.writeln(e);
+      document.write("<br />");
+    }
+    catch {
+      document.writeln("");
+    }
+  };
+  window.console = console;
+</script>
+
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="../img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        JavaScript Tutorial&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="../javascript.html">JavaScript Intro</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="what-is.html">What is JavaScript</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="essentials.html">JavaScript Essentials</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="variables.html">JavaScript Variables</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="operators.html">JavaScript Operators</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="conditionals.html">JavaScript Conditionals</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="loops.html">JavaScript Loops</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="builtin-types.html">JavaScript Built-in Types</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="objects.html">JavaScript Objects</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="advanced-objects.html">JavaScript Adv. Objects</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="arrays.html">JavaScript Arrays</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="functions.html">JavaScript Functions</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="function-objects.html">JavaScript Function Objects</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="json.html">JavaScript JSON</a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="regular-expressions.html">JavaScript Reg. Expressions</a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="design-patterns.html">JavaScript Patterns</a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="reference.html">JavaScript Reference</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="192" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="../img/arrow-left.jpg" /> &nbsp;Back to JS </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html/ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css/ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="../net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial" xstyle="xmax-width:1200px;">
+
+      <div class="d-flex justify-content-around align-items-start">
+
+        <div class="w-100 m-auto" style="max-width:970px;">
+
+          <h1>JavaScript Loops</h1>
+
+
+<div class="d-flex">
+    <div class="mt-40">
+        <p class="pb-0 mb-0" style="margin-right:0 !important;"><em>JavaScript Loops</em> are used to repeatedly run a block of code - until a certain condition is met. When developers talk about iteration or iterating over, say, an array, it is the same as looping.</p>
+    </div>
+    <div class="ml-auto d-none d-md-block text-center" style="flex: 0 0 200px;">
+      <img src="../img/javascript/show-js.png" alt="JavaScript Tutorial" style="margin:20px 10px 0px 35px;" />
+    </div>
+</div>
+
+
+
+<hr />
+<a class="goto-target" id="while"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xwhile&#x27;).show();" onmouseout="$(&#x27;#xwhile&#x27;).hide();">while</h2>
+    <h2><a id="xwhile" style="display:none" class="d-block pl-12 header-anchor" href="#while">#</a></h2>
+</div>
+
+
+
+<p>
+  JavaScript offers several options to repeatedly run a block of code, including
+  <code>while</code>, <code>do while</code>, <code>for</code> and <code>for-in</code>.
+ 
+  Here is an example of a JavaScript <code>while</code> loop.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('loops-1');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-loops-1" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-loops-1">var sum = 0;&#xD;&#xA;var number = 1;&#xD;&#xA;&#xD;&#xA;while (number &lt;= 50) {     // -- condition&#xD;&#xA;    sum &#x2B;= number;         // -- body&#xD;&#xA;    number&#x2B;&#x2B;;              // -- updater&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(&quot;Sum = &quot; &#x2B; sum);  // =&gt; Sum = 1275&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var sum = 0;&#xD;&#xA;var number = 1;&#xD;&#xA;&#xD;&#xA;while (number &lt;= 50) {     // -- condition&#xD;&#xA;    sum &#x2B;= number;         // -- body&#xD;&#xA;    number&#x2B;&#x2B;;              // -- updater&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(&quot;Sum = &quot; &#x2B; sum);  // =&gt; Sum = 1275&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="loops-1" style="display:none;">
+  <script>
+      var sum = 0;
+var number = 1;
+
+while (number <= 50) {     // -- condition
+    sum += number;         // -- body
+    number++;              // -- updater
+}
+
+console.log("Sum = " + sum);  // => Sum = 1275
+;
+  </script>
+</div>
+<button id="loops-1-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'loops-1');">
+  Run
+</button>
+
+
+<p>
+  The condition is first evaluated. If true, the block of statements following the <code>while</code> statement is
+  executed. This is repeated until the condition becomes false.  This is known as a <i>pre-test loop</i>
+  because the condition is evaluated before the block is executed.
+</p>
+
+<p>
+  The <code>number++</code> statement is called the <i>updater</i>. Removing it will result
+  in an <i>infinite loop</i>. You must always include a statement in a loop that guarantees the termination
+  of the loop or else you'll run into this problem.
+</p>
+
+<hr />
+<a class="goto-target" id="do-while"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xdo-while&#x27;).show();" onmouseout="$(&#x27;#xdo-while&#x27;).hide();">do while</h2>
+    <h2><a id="xdo-while" style="display:none" class="d-block pl-12 header-anchor" href="#do-while">#</a></h2>
+</div>
+
+
+
+<p>
+  Next is an example of a JavaScript <code>do while</code> loop:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('loops-2');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-loops-2" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-loops-2">var sum = 0;&#xD;&#xA;var number = 1;&#xD;&#xA;&#xD;&#xA;do {&#xD;&#xA;    sum &#x2B;= number;         // -- body&#xD;&#xA;    number&#x2B;&#x2B;;              // -- updater&#xD;&#xA;} while (number &lt;= 50);    // -- condition&#xD;&#xA;&#xD;&#xA;console.log(&quot;Sum = &quot; &#x2B; sum);    // =&gt; Sum = 1275&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var sum = 0;&#xD;&#xA;var number = 1;&#xD;&#xA;&#xD;&#xA;do {&#xD;&#xA;    sum &#x2B;= number;         // -- body&#xD;&#xA;    number&#x2B;&#x2B;;              // -- updater&#xD;&#xA;} while (number &lt;= 50);    // -- condition&#xD;&#xA;&#xD;&#xA;console.log(&quot;Sum = &quot; &#x2B; sum);    // =&gt; Sum = 1275&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="loops-2" style="display:none;">
+  <script>
+      var sum = 0;
+var number = 1;
+
+do {
+    sum += number;         // -- body
+    number++;              // -- updater
+} while (number <= 50);    // -- condition
+
+console.log("Sum = " + sum);    // => Sum = 1275
+;
+  </script>
+</div>
+<button id="loops-2-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'loops-2');">
+  Run
+</button>
+
+
+<p>
+  The block following do is executed first and then the condition is evaluated. If the while condition
+  is true, the block is executed again and repeats until the condition becomes false. This is known as
+  a <i>post-test loop</i> as the condition is evaluated after the block has executed.
+</p>
+
+<p>
+  The <code>do while</code> loop is executed at least once whereas the <code>while</code> loop may not execute at all.
+  The <code>do while</code> is typically used in a situation where the body of a loop contains a statement that
+  generates a value that you want to use in your conditional expression, like this:
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+do {
+    // read a character from keyboard in the body 
+} while (if ch === '0');     // => terminate loop if '0' is entered
+</pre>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="conditionals.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; JavaScript Conditionals &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="builtin-types.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; JavaScript Built-in Types &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<a class="goto-target" id="for"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xfor&#x27;).show();" onmouseout="$(&#x27;#xfor&#x27;).hide();">for</h2>
+    <h2><a id="xfor" style="display:none" class="d-block pl-12 header-anchor" href="#for">#</a></h2>
+</div>
+
+
+
+<p>
+  The most frequently used loop in JavaScript is the <code>for</code> loop. Here is an example:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('loops-3');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-loops-3" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-loops-3">var sum = 0;&#xD;&#xA;&#xD;&#xA;for (var i = 1; i &lt;= 50; i&#x2B;&#x2B;) {&#xD;&#xA;    sum = sum &#x2B; i;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(&quot;Sum = &quot; &#x2B; sum);    // =&gt; Sum = 1275&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var sum = 0;&#xD;&#xA;&#xD;&#xA;for (var i = 1; i &lt;= 50; i&#x2B;&#x2B;) {&#xD;&#xA;    sum = sum &#x2B; i;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(&quot;Sum = &quot; &#x2B; sum);    // =&gt; Sum = 1275&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="loops-3" style="display:none;">
+  <script>
+      var sum = 0;
+
+for (var i = 1; i <= 50; i++) {
+    sum = sum + i;
+}
+
+console.log("Sum = " + sum);    // => Sum = 1275
+;
+  </script>
+</div>
+<button id="loops-3-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'loops-3');">
+  Run
+</button>
+
+
+<p>
+  It consists of three parts, separated by semicolons. The first is the <i>initializer</i> (var i = 1) which
+  initializes the loop and is executed only once at the start. The second is a <i>test condition</i> (i <= 50).
+  When a conditional expression evaluates to true, the body of the loop is executed. When false, the loop
+  terminates. The third part is an <i>updater</i> (i++) which is invoked after each iteration.
+  The updater typically increments or decrements the loop counter.
+</p>
+
+<p>
+  In a <code>for</code> loop, all three parts i.e. initializer, test condition, and updater are written together
+  in a single line (called an iteration statement), whereas in a <code>while</code>, they're scattered and lie
+  at different places. This makes a <code>for</code> loop more readable than a <code>while</code> loop and as
+  a result, more easily maintainable.
+</p>
+
+<p>
+  So when do we use <code>for</code> and when <code>while</code>?  If the number of iterations is known use
+  the <code>for</code> loop.  If you want to loop until a certain condition is met use the <code>while</code> loop.
+</p>
+
+<hr />
+<a class="goto-target" id="for-in"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xfor-in&#x27;).show();" onmouseout="$(&#x27;#xfor-in&#x27;).hide();">for in</h2>
+    <h2><a id="xfor-in" style="display:none" class="d-block pl-12 header-anchor" href="#for-in">#</a></h2>
+</div>
+
+
+
+<p>
+  A <code>for-in</code> loop iterates through the properties of an object and executes the loop's body
+  once for each enumerable property of the object. Here is an example:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('loops-4');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-loops-4" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-loops-4">var student = { name: &quot;Bill&quot;, age: 25, degree: &quot;Masters&quot; };&#xD;&#xA;&#xD;&#xA;for (var item in student) {&#xD;&#xA;    console.log(student[item]);     // =&gt; &quot;Bill&quot;, then 25, then &quot;Masters&quot;&#xD;&#xA;}&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var student = { name: &quot;Bill&quot;, age: 25, degree: &quot;Masters&quot; };&#xD;&#xA;&#xD;&#xA;for (var item in student) {&#xD;&#xA;    console.log(student[item]);     // =&gt; &quot;Bill&quot;, then 25, then &quot;Masters&quot;&#xD;&#xA;}&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="loops-4" style="display:none;">
+  <script>
+      var student = { name: "Bill", age: 25, degree: "Masters" };
+
+for (var item in student) {
+    console.log(student[item]);     // => "Bill", then 25, then "Masters"
+}
+;
+  </script>
+</div>
+<button id="loops-4-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'loops-4');">
+  Run
+</button>
+
+
+<p>
+  With each iteration JavaScript assigns the name of the property (a string value) to the variable item.
+  In the example above these are: <code>name</code>, <code>age</code>, and <code>degree</code>.
+</p>
+
+<p>
+  Note that <code>for-in</code> loops also return properties and methods that are inherited through the
+  prototype chain. An easy way to skip properties and functions that are not part of the object itself use
+  the built-in <code>hasOwnProperty</code> method.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('loops-5');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-loops-5" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-loops-5">var Student = function (name) {&#xD;&#xA;    this.name = name;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;Student.prototype.age = 38;&#xD;&#xA;&#xD;&#xA;var student = new Student(&quot;Carl&quot;);&#xD;&#xA;&#xD;&#xA;for (var item in student) {&#xD;&#xA;    if (student.hasOwnProperty(item)) {&#xD;&#xA;        console.log(student[item]);        // =&gt; Carl. age is not displayed&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var Student = function (name) {&#xD;&#xA;    this.name = name;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;Student.prototype.age = 38;&#xD;&#xA;&#xD;&#xA;var student = new Student(&quot;Carl&quot;);&#xD;&#xA;&#xD;&#xA;for (var item in student) {&#xD;&#xA;    if (student.hasOwnProperty(item)) {&#xD;&#xA;        console.log(student[item]);        // =&gt; Carl. age is not displayed&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="loops-5" style="display:none;">
+  <script>
+      var Student = function (name) {
+    this.name = name;
+}
+
+Student.prototype.age = 38;
+
+var student = new Student("Carl");
+
+for (var item in student) {
+    if (student.hasOwnProperty(item)) {
+        console.log(student[item]);        // => Carl. age is not displayed
+    }
+}
+;
+  </script>
+</div>
+<button id="loops-5-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'loops-5');">
+  Run
+</button>
+
+
+<p>
+  We have not discussed objects yet, but the student object has a <code>name</code> property on the object itself.
+  Its prototype object has an <code>age</code> property.  The <code>for-in</code> loop iterates over all properties, but the
+  <code>hasOwnProperty</code> ensures that the <code>age</code> property on the prototype does not get
+  displayed because it is not student's own property.
+</p>
+
+<hr />
+<a class="goto-target" id="break"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xbreak&#x27;).show();" onmouseout="$(&#x27;#xbreak&#x27;).hide();">break</h2>
+    <h2><a id="xbreak" style="display:none" class="d-block pl-12 header-anchor" href="#break">#</a></h2>
+</div>
+
+
+
+<p>
+  When JavaScript encounters a <code>break</code> statement in a loop it immediately exits the loop without
+  executing any other statements in the loop. Control is immediately transferred to the statement
+  following the loop body. Here is an example:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('loops-6');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-loops-6" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-loops-6">var sum = 0;&#xD;&#xA;&#xD;&#xA;for (var i = 1; i &lt;= 10000; i&#x2B;&#x2B;) {&#xD;&#xA;    sum &#x2B;= i;&#xD;&#xA;    if (i === 50) {&#xD;&#xA;        break;    // immediately transfers control outside the for block&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(&quot;Sum = &quot; &#x2B; sum);       // =&gt; Sum = 1275&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var sum = 0;&#xD;&#xA;&#xD;&#xA;for (var i = 1; i &lt;= 10000; i&#x2B;&#x2B;) {&#xD;&#xA;    sum &#x2B;= i;&#xD;&#xA;    if (i === 50) {&#xD;&#xA;        break;    // immediately transfers control outside the for block&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(&quot;Sum = &quot; &#x2B; sum);       // =&gt; Sum = 1275&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="loops-6" style="display:none;">
+  <script>
+      var sum = 0;
+
+for (var i = 1; i <= 10000; i++) {
+    sum += i;
+    if (i === 50) {
+        break;    // immediately transfers control outside the for block
+    }
+}
+
+console.log("Sum = " + sum);       // => Sum = 1275
+;
+  </script>
+</div>
+<button id="loops-6-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'loops-6');">
+  Run
+</button>
+
+
+<p>
+  When an infinite loop is created intentionally, you can use a <code>break</code> statement to controls termination
+  of the loop, like so:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('loops-7');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-loops-7" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-loops-7">var number = 1;&#xD;&#xA;var sum = 0;&#xD;&#xA;&#xD;&#xA;while (true)    // equivalent to for ( ; ; ), called &#x27;forever&#x27; loop&#xD;&#xA;{&#xD;&#xA;    sum &#x2B;= number;&#xD;&#xA;    if (number === 50) {&#xD;&#xA;        break;  // immediately transfers control outside while block&#xD;&#xA;    }&#xD;&#xA;    number&#x2B;&#x2B;;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(&quot;Sum = &quot; &#x2B; sum);       // =&gt; Sum = 1275    &#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var number = 1;&#xD;&#xA;var sum = 0;&#xD;&#xA;&#xD;&#xA;while (true)    // equivalent to for ( ; ; ), called &#x27;forever&#x27; loop&#xD;&#xA;{&#xD;&#xA;    sum &#x2B;= number;&#xD;&#xA;    if (number === 50) {&#xD;&#xA;        break;  // immediately transfers control outside while block&#xD;&#xA;    }&#xD;&#xA;    number&#x2B;&#x2B;;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(&quot;Sum = &quot; &#x2B; sum);       // =&gt; Sum = 1275    &#xD;&#xA;</code></pre>
+<div class="javascript-output" id="loops-7" style="display:none;">
+  <script>
+      var number = 1;
+var sum = 0;
+
+while (true)    // equivalent to for ( ; ; ), called 'forever' loop
+{
+    sum += number;
+    if (number === 50) {
+        break;  // immediately transfers control outside while block
+    }
+    number++;
+}
+
+console.log("Sum = " + sum);       // => Sum = 1275    
+;
+  </script>
+</div>
+<button id="loops-7-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'loops-7');">
+  Run
+</button>
+
+
+<p>
+  The <code>number++;</code> statement won't be executed when the loop is entered for the 50th time.
+</p>
+
+<hr />
+<a class="goto-target" id="continue"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xcontinue&#x27;).show();" onmouseout="$(&#x27;#xcontinue&#x27;).hide();">continue</h2>
+    <h2><a id="xcontinue" style="display:none" class="d-block pl-12 header-anchor" href="#continue">#</a></h2>
+</div>
+
+
+
+<p>
+  When JavaScript encounters a <code>continue</code> statement in a loop it stops the execution of
+  the current iteration
+  and goes back to the beginning of the loop to begin the next iteration.  The example below displays
+  only even numbers.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('loops-8');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-loops-8" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-loops-8">for (var i = 1; i &lt;= 10; i&#x2B;&#x2B;) {&#xD;&#xA;    if ((i % 2) != 0) {&#xD;&#xA;        continue;&#xD;&#xA;    }&#xD;&#xA;    console.log(i);     // =&gt; 2, 4, 6, 8, 10&#xD;&#xA;}&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>for (var i = 1; i &lt;= 10; i&#x2B;&#x2B;) {&#xD;&#xA;    if ((i % 2) != 0) {&#xD;&#xA;        continue;&#xD;&#xA;    }&#xD;&#xA;    console.log(i);     // =&gt; 2, 4, 6, 8, 10&#xD;&#xA;}&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="loops-8" style="display:none;">
+  <script>
+      for (var i = 1; i <= 10; i++) {
+    if ((i % 2) != 0) {
+        continue;
+    }
+    console.log(i);     // => 2, 4, 6, 8, 10
+}
+;
+  </script>
+</div>
+<button id="loops-8-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'loops-8');">
+  Run
+</button>
+
+
+<p>
+  The <code>continue</code> statement can also be used in other loops.  However, in a <code>for</code> loop
+  it behaves differently
+  from when used in a <code>while</code> loop.  In the example above, the <code>for</code> loop first
+  evaluates the i++ expression
+  and then tests the i <= 50 condition.  Now, consider the <code>while</code> loop:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('loops-9');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-loops-9" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-loops-9">var number = 0;&#xD;&#xA;&#xD;&#xA;while (number &lt;= 10) {&#xD;&#xA;    number&#x2B;&#x2B;;&#xD;&#xA;    if ((number % 2) != 0) {&#xD;&#xA;        continue;&#xD;&#xA;    }&#xD;&#xA;    console.log(number);    // =&gt; 2, 4, 6, 8, 10 &#xD;&#xA;}&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var number = 0;&#xD;&#xA;&#xD;&#xA;while (number &lt;= 10) {&#xD;&#xA;    number&#x2B;&#x2B;;&#xD;&#xA;    if ((number % 2) != 0) {&#xD;&#xA;        continue;&#xD;&#xA;    }&#xD;&#xA;    console.log(number);    // =&gt; 2, 4, 6, 8, 10 &#xD;&#xA;}&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="loops-9" style="display:none;">
+  <script>
+      var number = 0;
+
+while (number <= 10) {
+    number++;
+    if ((number % 2) != 0) {
+        continue;
+    }
+    console.log(number);    // => 2, 4, 6, 8, 10 
+}
+;
+  </script>
+</div>
+<button id="loops-9-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'loops-9');">
+  Run
+</button>
+
+
+<p>
+  When the <code>continue</code> statement is executed, the control is returned directly to the while (number <= 50)
+  test condition and the number++ expression is not evaluated, thus causing an infinite loop. The lesson
+  here is that you cannot simply replace a <code>for</code> loop with a <code>while</code> loop; you
+  have to be careful especially when a <code>continue</code> statement is involved.
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="conditionals.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; JavaScript Conditionals &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="builtin-types.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; JavaScript Built-in Types &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+          <div class="bg-light p-10 my-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css.html">CSS Tutorial</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/selectors.html">CSS Selectors</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/borders.html">CSS Borders</a></li>
+
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/flex.html">CSS Flex</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/grids.html">CSS Grid</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/tables.html">CSS Tables</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/notfound.html">CSS Units</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/fonts.html">CSS Fonts</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/animation.html">CSS Animation</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/hover.html">CSS Hover</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/images.html">CSS Images</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/comments.html">CSS Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" xstyle="flex: 0 0 230px">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">Loops</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#while">while</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#do-while">do-while</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#for">for</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#for-in">for-in</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#break">break</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#continue">continue</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+
+    let runbutton = function (button, model) {
+      var n = '#' + model;
+      var text = button.innerText;
+      if (text == "Run") {
+        $(n).slideDown(300);
+        button.innerText = "Clear";
+      } else {
+        $(n).slideUp(300);
+        button.innerText = "Run";
+      }
+    };
+
+    function copy(id) {
+      var stor = document.createElement("textarea");
+      stor.setAttribute("contentEditable", true);
+      stor.innerHTML = document.getElementById('copy-' + id).innerHTML;
+      stor.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+      document.body.appendChild(stor);
+      stor.focus({ preventScroll: true });
+      stor.focus();
+
+      document.execCommand("copy");
+      document.body.removeChild(stor);
+
+      $('#show-' + id).fadeIn('fast').delay(1200).fadeOut('slow');
+    }
+
+
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/javascript/loops by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:05:03 GMT -->
+</html>

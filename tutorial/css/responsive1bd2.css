@@ -1,0 +1,6 @@
+@media (min-width: 1200px) {
+  .tutorial p, .tutorial .dl { margin-right: 100px !important; }
+}
+@media (max-width: 576px) {
+  .tutorial h1 { font-size: 32px; }
+}

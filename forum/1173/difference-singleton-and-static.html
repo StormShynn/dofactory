@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/forum/1173/difference-singleton-and-static by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:47:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Difference between Singleton and a static class - Dofactory</title>
+    <meta name="keywords">
+    <meta name="description" content="Topic: Difference between Singleton and a static class">
+
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="difference-singleton-and-static.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../../index.html">
+        <img src="../../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../../about.html">About Us</a>
+            <a class="dropdown-item" href="../../story.html">Our Story</a>
+            <a class="dropdown-item" href="../../customers.html">Customers</a>
+            <a class="dropdown-item" href="../../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../../login.html">Login</a>
+          <a class="btn btn-join " href="../../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        
+<div class="container pb-70">
+    <div class="row pt-30">
+
+        <div><i class="icon icon-arrow-left"></i> &nbsp;<a rel="nofollow" href="javascript:history.back();">Back to list</a></div>
+
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold">Views:&nbsp;&nbsp; 100.6K</span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold">Replies:&nbsp; 7</span></div>
+                    <div class="pl-10 pt-15"><span class="font-weight-semibold text-extra-muted">Archived</span></div>
+
+                </td>
+                <td class="pl-20 pt-3">
+
+                    <div><h1 class="font-weight-semibold font-25" style="color:#345;">Difference between Singleton and a static class</h1></div>
+                    <div class="">Hello All,<br />
+<br />
+Actually, I read a lot about&nbsp;the <span style="font-weight: bold">Singleton Pattern </span>and <span style="font-weight: bold">static classes</span>, but never&nbsp;quite understood&nbsp;the difference.<br />
+<br />
+Please help.<br />
+Anshuman Saini</div>
+                    <div class="text-right p-10">Anshuman Saini, Aug 26, 2010</div>
+
+                    <div class="pt-15">
+                        this is a wrong answer.&#xA;you mean to say static class and singleton class has no difference.&#xA;Then why on earth singleton exists if there is already static class and both are same according to you.<br />
+                        <div class="text-right pr-10">  Apr 17, 2012</div>
+                    </div>
+                    <div class="pt-15">
+                        In simple words, singleton is a pattern and not a keywork vs. static is keyword for .Net language. You can create singleton classes any modern day object oriented language. Use static class in c# code and you have singleton code ready for your work. Depending on how you initialized object it becomes thread safe or unsafe.<br />
+                        <div class="text-right pr-10">  Apr 06, 2011</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;1</h5></div>
+
+
+                    <div class="">I found an article for the same refer to this <a href="http://www.etechpulse.com/2014/07/c-class-difference-between-singleton.html" target="_self">link</a><br />
+<br />
+Thanks<br />
+<br /></div>
+                    <div class="text-right p-10">Ravi Kumar, Jul 16, 2014</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;2</h5></div>
+
+
+                    <div class=""><p>Hey,</p>
+<p>The difference between the Singleton and Static is Singleton Class can have value when Class object instantiated between server and client, such a way&nbsp;if three client want to have a shared data between them Singleton can be used. Static are always just shared and have no instance but multiple references.</p>
+<p>Thank you,</p>
+<p>Rajesh</p></div>
+                    <div class="text-right p-10">Rajesh Shanmugam, May 31, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;3</h5></div>
+
+
+                    <div class="">It is nice question. these are some differences:<br />
+1. Singlton class can implement interfaces. <br />
+2. We can pass singlton object as parameter.<br /></div>
+                    <div class="text-right p-10">Shashi Jha, May 28, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;4</h5></div>
+
+
+                    <div class="">Singleton class maintains state. It is thread safe. It gives flexibility to change the logic inside class methods while preserving interfaces by subclassing and returning the subclass object.<br />
+<br />
+public SomeClass {<br />
+<br />
+public static int doSomething(int a, int b) {<br />
+return a + b;<br />
+}<br />
+}<br />
+<br />
+public class AnotherClass {<br />
+private AnotherClass instance = new AnotherClass();<br />
+<br />
+private AnotherClass() { // private constructor so no one else can instantiate objects }<br />
+<br />
+public static AnotherClass GetInstance() {<br />
+return instance; // classic singleton<br />
+}<br />
+<br />
+public int doSomething(int a, int b) {<br />
+return a + b;<br />
+}<br />
+}<br />
+<br />
+There is no functional difference between the following:<br />
+int x = SomeClass.doSomething(1,2);<br />
+int y = AnotherClass.GetInstance().doSomething(1,2);<br />
+<br />
+Personally, I feel the second construct (what you call &quot;singleton&quot;) is more flexible because it hides object management and subclassing from the application layer. For example, I can make the following changes rather easily:<br />
+<br />
+// Converts from singleton to factory<br />
+public static AnotherClass GetInstance() {<br />
+return new AnotherClass(); // factory method, returns a new object instance each time<br />
+}<br />
+<br />
+// Change the implementation altogether<br />
+public static AnotherClass GetInstance() {<br />
+return new AnotherClassSubclass(); // abstract factory method, returns a new implementation altogether<br />
+}<br />
+<br />
+public class AnotherClassSubclass extends AnotherClass {<br />
+public int doSomething(int a, int b) {<br />
+return a * b;<br />
+}<br />
+}<br />
+<br />
+Both are very significant changes but we can effect them WITHOUT changing the code.<br />
+int y = AnotherClass.GetInstance().doSomething(1,2); // this line of code still works whether you use singletons, factory methods, or abstract factory methods<br />
+<br />
+If you wanted to accomplish the same thing using static methods, you would definitely have to change the code<br />
+SomeClass s = new SomeClass(); // explicitly declare a new instance<br />
+int x = s.doSomething(1,2);<br />
+<br />
+or<br />
+int x = SomeClass.doSomethingDifferent(1,2); // add another static method to multiply instead of add<br />
+<br />
+or <br />
+int x = SomeOtherClass.doSomething(1,2); // add another class altogether if you want keep the same method signature and multiply instead of add<br />
+<br /></div>
+                    <div class="text-right p-10">Shakeel Khan, Apr 06, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;5</h5></div>
+
+
+                    <div class="">Hello.. In addition to responses already provides here are my two cents why would you use a Singleton in favor of static class.<br />
+<br />
+As you know both by now Singleton and Static classes both provide a central point of access&nbsp; i.e. there's only one instance and one way to access it.<br />
+<br />
+The benefit of Singleton class is it is much more flexible that static classes.&nbsp; Static classes once defined could not accomodate any future design changes as by design static classes are rigid and cannot be extended. <br />
+<br />
+Singleton on the other hand provides flexibility and also provides sort of a mechanism to control object creation based on various requirements.&nbsp; They can be extended as well if need arises.&nbsp; In other words you are not always tied to a particular implementation.&nbsp; With Singleton you have the flexibility to make changes as when situation demands.. <br />
+<br />
+<br />
+Hope this add some more clarity to the thoughts about its usage.<br />
+<br />
+<br /></div>
+                    <div class="text-right p-10">Rajesh Pillai, Sep 03, 2010</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;6</h5></div>
+
+
+                    <div class="">Singleton = Single means single object across the application life cycle &amp; the scope of singleton is at application level.<br />
+Static=&nbsp; Static an not have any object pointer &amp; the scope of static is at App Domain level.<br />
+<br />
+I hope this will make your doubt clear.<br />
+<br />
+--<br />
+Kaushal<br />
+http://kaushalp.blogspot.com<br /></div>
+                    <div class="text-right p-10">Kaushal Patel, Aug 28, 2010</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;7</h5></div>
+
+
+                    <div class="">Take a look at this previous thread...<a href="http://dofactory.com/topic/1001/singleton-as-a-static-class.aspx">http://dofactory.com/topic/1001/singleton-as-a-static-class.aspx</a></div>
+                    <div class="text-right p-10">Robert Blixt, Aug 26, 2010</div>
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+<br />
+<br />
+
+
+
+
+
+
+
+
+    </div>
+
+    
+  <div class="box-shadow" style="border-top:1px solid #e2ecee;">
+    <div class="container">
+      <div class="row" style="padding:60px 0 10px 0;">
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 pb-15"><img src="../../img/dofactorylogo.png" height="30" /></div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../about.html">About Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../story.html">Our Story</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../customers.html">Customers</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../contact.html">Contact Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../faq.html">FAQs</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum.html">Forum</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../explore.html">Explore Forum</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../login.html">Login</a> &nbsp; <a class="footer-link" href="../../join.html">Join</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted ">Products</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../products.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-net.html">Dofactory .NET</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-sql.html">Dofactory SQL</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-js.html">Dofactory JS</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-bundle.html">Dofactory Bundle</a></li>
+          </ul>
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-8 text-muted">Pricing</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../pricing.html">Product Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/bundle.html">Bundle Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/compare.html">Compare Editions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Demos</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../showcases.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/analytics.html">Analytics App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/ecommerce.html">Ecommerce App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/saas.html">SaaS App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/crm.html">CRM App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/app-factory.html">33-Day App Factory&trade;</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-3 mb-2 ">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Tutorials</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../tutorials.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql.html">SQL Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql/reference.html">SQL Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html.html">HTML Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html/ref.html">HTML Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../net/design-patterns.html">.NET Design Patterns</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../csharp-coding-standards.html">C# Coding Standards</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../javascript.html">JavaScript Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../connection-strings.html">Connection Strings</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row mx-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="row py-10">
+        <div class="col pl-35">
+          <div class="font-weight-bold font-18 merriweather text-muted">Stay Inspired!</div>
+        </div>
+      </div>
+
+      <div class="row pt-3 pb-10">
+        <div class="col-12 col-md-6 xcol-md-5 pl-35">
+          Join other developers and designers who have
+          already signed up for our mailing list.
+        </div>
+        <div class="col-12 col-md-4 xcol-md-4 pl-35">
+
+          
+<form method="post" action="https://www.dofactory.com/emaillist">
+    <div class="input-group mb-3 pt-1">
+        <input type="text" class="form-control" placeholder="Your email..." aria-label="your-email" aria-describedby="your-email" style="max-width:260px;" data-val="true" data-val-email="Invalid email address" data-val-required="Email is required." id="YourEmail" name="YourEmail" value="">
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-green" style="height:37px;">
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <span class="field-validation-valid" data-valmsg-for="YourEmail" data-valmsg-replace="true"></span>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7EqsbjlRDH2M5qUXhKksL_m-r-kvJASJeKkOvvujXe4ifyh3_qaxOAk5uYjQSRW-2VKuhKJBP82sbUPjnIlfqSkuZfOwps2h_rXcynSCC4u6ikGYVRAqpR5YFIw90pNHx83M" /></form>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row mx-10 mt-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="d-flex flex-lg-row flex-column p-20 mb-15 font-14">
+        <div class="pb-1 ">
+          <a href="../../terms.html" class="text-muted">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../privacy.html" class="text-muted">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../licensing.html" class="text-muted">Licensing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../eula.html" class="text-muted">EULA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../sitemap.html" class="text-muted">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="pb-1">
+          &copy; Data &amp; Object Factory, LLC. 
+        </div>
+        <div class="pb-1 ml-lg-auto">
+          Made with &nbsp;<img src="../../img/heart.png" style="width:14px;" />&nbsp; in Austin, Texas. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vsn 1.3.0
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+    <script type="text/javascript">
+        $(function () {
+
+            Dofactory.Utils.ScrollToTarget.start();
+
+        });
+    </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/forum/1173/difference-singleton-and-static by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:47:33 GMT -->
+</html>

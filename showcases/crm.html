@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/showcases/crm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 14:49:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CRM Showcase of Dofactory.NET - Dofactory</title>
+    <meta name="keywords" content="Showcase, Demo, Reference Application, Reference Solution, .NET, C#, CRM, Customer Relationship Management, Dofactory.NET.">
+    <meta name="description" content="Showcase of a Customer Relationship Management (CRM) solution developed with Dofactory.NET">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="crm.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="analytics.html">Analytics</a>
+            <a class="dropdown-item" href="ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="saas.html">SaaS</a>
+            <a class="dropdown-item" href="crm.html">CRM</a>
+            <a class="dropdown-item" href="app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        
+<div class="pt-10 pb-50 ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 pt-60">
+        <h1 class="font-weight-semibold font-32" style="color:#5d6771;">CRM</h1>
+      </div>
+      <div class="col-md-9  pt-70 pb-10 pr-md-50 pl-md-100 font-16">
+        <p>
+          'CRM' is a comprehensive Customer Relationship Management solution that is included with the <span class="font-weight-semibold">Pro</span> edition
+          of <a class="underline text-dark font-weight-semibold" href="../products/dofactory-net.html">Dofactory .NET</a>. As with all our products, it comes with 100% source code.
+        </p>
+        <p>
+          This CRM solution is similar to Salesforce, with objects like Campaigns, Leads, Opportunities, Accounts, Contacts, and more.
+          This application is the crown-jewel of Dofactory .NET with the best design, the best code,
+          the best patterns, and it's based on our Ultra Clean&trade; architecture. CRM is truly
+          a unique and valuable resource for .NET developers and architects.
+        </p>
+        <p>
+          Remarkably, CRM was written in <span class="font-weight-semibold">just 33 days</span> by a single developer
+          following the step-by-step App Factory&trade; guide.
+          The 33-Day App Factory&trade; is included with the <span class="font-weight-semibold">Pro</span> edition of
+          <a class="underline text-dark font-weight-semibold" href="../products/dofactory-net.html">Dofactory .NET</a> which means
+          you can now also build applications at lightning speed.
+        </p>
+        <p>
+          Imagine being able to develop your next application in 33 days.
+          Think what that will do to your career!
+        </p>
+        <p>
+          To view the pages click on the menu <span class="d-none d-md-inline-block">on the left</span> under <span class="font-13 font-weight-semibold">VIEW APPLICATION PAGES</span>. Soon you'll
+          deliver similar results in your own applications.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container pb-100">
+  <div class="row">
+    <div class="col-md-3 pt-10 pr-10">
+
+      <div class="ml-10 py-20 font-13 merriweather">VIEW APPLICATION PAGES</div>
+      <div class="list-group border-0" id="list-tab" role="tablist" style="max-height:420px;overflow-y:scroll;">
+
+        <a class='list-group-item list-group-item-action border-0 active' data-toggle="list"
+           style="border-top: 1px solid #ddd !important; " href="#landing" role="tab" aria-controls="landing">Landing Page</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#login" role="tab" aria-controls="login">Login</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0 ' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#home" role="tab" aria-controls="home">Home</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#opportunities" role="tab" aria-controls="opportunities">Opportunities</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#opportunitydetails" role="tab" aria-controls="opportunitydetails">Opportunity Details</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#opportunityactivity" role="tab" aria-controls="opportunityactivity">Opportunity Activity</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#opportunityhistory" role="tab" aria-controls="opportunityhistory">Opportunity Stage History</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#leads" role="tab" aria-controls="leads">Leads</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#leadsedit" role="tab" aria-controls="leadsedit">Edit Lead</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#leadsimport" role="tab" aria-controls="leadsimport">Excel Import</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#leadsexport" role="tab" aria-controls="leadsexport">Excel Export</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#tasks" role="tab" aria-controls="tasks">Tasks</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#taskdetails" role="tab" aria-controls="taskdetails">Task Details</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#accounts" role="tab" aria-controls="accounts">Accounts</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#accountsdetails" role="tab" aria-controls="accountsdetails">Account Details</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#accountsactivity" role="tab" aria-controls="accountsactivity">Account Activity</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#accountscontacts" role="tab" aria-controls="accountscontacts">Account Contacts</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#accountsopportunities" role="tab" aria-controls="accountsopportunities">Account Opportunities</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#accountscases" role="tab" aria-controls="accountscases">Account Cases</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#contacts" role="tab" aria-controls="contacts">Contacts</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#contactsdetails" role="tab" aria-controls="contactsrelated">Contact Details</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#contactsactivity" role="tab" aria-controls="contactsactivity">Contact Activity</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#contactsopportunities" role="tab" aria-controls="contactsopportunities">Contact Opportunities</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#contactscases" role="tab" aria-controls="contactscases">Contact Cases</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#contactscampaignhistory" role="tab" aria-controls="contactscampaignhistory">Contact Campaign History</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#campaigns" role="tab" aria-controls="campaigns">Campaigns</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#campaignsdetails" role="tab" aria-controls="campaignsdetails">Campaign Details</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#campaignsactivity" role="tab" aria-controls="campaignsactivity">Campaign Activity</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#campaigsnmembers" role="tab" aria-controls="campaigsnmembers">Campaign Participants</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#cases" role="tab" aria-controls="cases">Cases</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#adminoverview" role="tab" aria-controls="adminoverview">Admin Overview</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#adminusers" role="tab" aria-controls="adminusert">Admin Users</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#adminlogins" role="tab" aria-controls="adminlogins">Admin Logins</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#accountedit" role="tab" aria-controls="account">Personal Account</a>
+        <div style="height:1px;"></div>
+
+        <a class='list-group-item list-group-item-action border-0' data-toggle="list"
+           style="border-top:1px solid #ddd !important;" href="#quickadds" role="tab" aria-controls="quickadds">Quick Adds</a>
+        <div style="height:1px;"></div>
+      </div>
+
+      <div class="d-none d-sm-block">
+
+        <div class="ml-10 pt-50 pb-15 font-13 merriweather">CRM DESIGN PATTERNS</div>
+
+        <p class="ml-10">
+          Create a comprehensive CRM solutions in just 33 days
+          with modern patterns and RAD techniques. 100% source code.
+        </p>
+
+        <div class="ml-10 pt-50 font-13 merriweather">PATTERNS &amp; FEATURES</div>
+
+        <ul class="mt-20 pl-35 font-14">
+          <li>Authentication</li>
+          <li>Authorization</li>
+          <li>Modular Design</li>
+          <li>Excel Import</li>
+          <li>Excel Export</li>
+          <li>Data Caching</li>
+          <li>Lazy Injection</li>
+          <li>Global Error Handling</li>
+          <li>Intuitive UI/UX</li>
+          <li>Analytics/Charting</li>
+          <li>CRUD Actions</li>
+          <li>Sorting</li>
+          <li>Searching, Filtering</li>
+          <li>Pagination</li>
+          <li>Master-Detail</li>
+          <li>Gang of Four Patterns</li>
+          <li>Enterprise Patterns</li>
+          <li>Architecture Patterns</li>
+          <li>Design Excellence Principles</li>
+          <li>Code Excellence Principles</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <div class="tab-content pt-15 pl-60">
+        <div class="tab-pane fade show active" id="landing" role="tabpanel"><img src="../img/solutions/crm-landinga255.png?x=1" class="img-fluid shadow-md" /></div>
+        <div class="tab-pane fade" id="login" role="tabpanel"><img src="../img/solutions/crm-logina255.png?x=1" class="img-fluid shadow-md" /></div>
+        <div class="tab-pane fade" id="home" role="tabpanel"><img src="../img/solutions/crm-homea255.png?x=1" class="img-fluid shadow-md" /></div>
+        <div class="tab-pane fade" id="opportunities" role="tabpanel"><img data-src="/img/solutions/crm-opportunities.png?x=1" class="img-fluid shadow-md" /></div>
+        <div class="tab-pane fade" id="opportunityactivity" role="tabpanel"><img data-src="/img/solutions/crm-opportunity-activity.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="opportunitydetails" role="tabpanel"><img data-src="/img/solutions/crm-opportunity-details.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="opportunityhistory" role="tabpanel"><img data-src="/img/solutions/crm-opportunity-stage-history.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="leads" role="tabpanel"><img data-src="/img/solutions/crm-leads.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="leadsedit" role="tabpanel"><img data-src="/img/solutions/crm-leads-edit.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="leadsimport" role="tabpanel"><img data-src="/img/solutions/crm-leads-import.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="leadsexport" role="tabpanel"><img data-src="/img/solutions/crm-leads-export.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="tasks" role="tabpanel"><img data-src="/img/solutions/crm-tasks.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="taskdetails" role="tabpanel"><img data-src="/img/solutions/crm-task-details.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="accounts" role="tabpanel"><img data-src="/img/solutions/crm-accounts.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="accountsactivity" role="tabpanel"><img data-src="/img/solutions/crm-accounts-activity.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="accountsdetails" role="tabpanel"><img data-src="/img/solutions/crm-accounts-details.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="accountscontacts" role="tabpanel"><img data-src="/img/solutions/crm-accounts-contacts.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="accountsopportunities" role="tabpanel"><img data-src="/img/solutions/crm-accounts-opportunities.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="accountscases" role="tabpanel"><img data-src="/img/solutions/crm-accounts-cases.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="contacts" role="tabpanel"><img data-src="/img/solutions/crm-contacts.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="contactsdetails" role="tabpanel"><img data-src="/img/solutions/crm-contacts-details.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="contactsactivity" role="tabpanel"><img data-src="/img/solutions/crm-contacts-activity.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="contactsopportunities" role="tabpanel"><img data-src="/img/solutions/crm-contacts-opportunities.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="contactscases" role="tabpanel"><img data-src="/img/solutions/crm-contacts-cases.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="contactscampaignhistory" role="tabpanel"><img data-src="/img/solutions/crm-contacts-campaign-history.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="campaigns" role="tabpanel"><img data-src="/img/solutions/crm-campaigns.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="campaignsdetails" role="tabpanel"><img data-src="/img/solutions/crm-campaigns-details.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="campaignsactivity" role="tabpanel"><img data-src="/img/solutions/crm-campaigns-activity.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="campaigsnmembers" role="tabpanel"><img data-src="/img/solutions/crm-campaigns-members.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="cases" role="tabpanel"><img data-src="/img/solutions/crm-cases.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="adminoverview" role="tabpanel"><img data-src="/img/solutions/crm-admin-overview.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="adminusers" role="tabpanel"><img data-src="/img/solutions/crm-admin-users.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="adminlogins" role="tabpanel"><img data-src="/img/solutions/crm-admin-logins.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="accountedit" role="tabpanel"><img data-src="/img/solutions/crm-account-edit.png?x=1" class="img-fluid box-shadow-square" /></div>
+        <div class="tab-pane fade" id="quickadds" role="tabpanel"><img data-src="/img/solutions/crm-quickadds.png?x=1" class="img-fluid box-shadow-square" /></div>
+      </div>
+
+
+
+
+      <div class="mt-80 row">
+        <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+          <p>
+            CRM is a Customer Relationship Management solution that demonstrates
+            the type of application that you can be build in just 33 days with the
+            App Factory&trade;.
+          </p>
+          <p>
+            CRM is designed for sales and marketing professionals to keep
+            track of their business activities. This includes leads, opportunities, accounts, contacts, tasks, campaigns, and cases.
+          </p>
+          <p>
+            The application is similar in functionality to Salesforce CRM, which underscores
+            the breadth and depth of what can be accomplished in 33 days with the App Factory&trade;.
+          </p>
+          <p>
+            The database has 7 main entities matching the modules listed above: Leads, Opportunities, Accounts, Contacts, etc.,
+            as well as 7 additional supporting entities. Ultra-Clean&trade; data models usually don't have
+            a boatload of tables. Below is a list of the tables, which also includes the ASP.NET Identity tables.
+          </p>
+
+          <img src="../img/placeholder.png" data-src="/img/solutions/crm-solution-database-tables.png" class="mt-15 mb-45 img-fluid shadow-md lazy" />
+
+          <p>
+            As a general rule of thumb, the CRM reference application represents a good example of the level of functionality that
+            can be accomplished in 33 days.
+          </p>
+          <p>
+            ASP.NET Identity is used for identity management, authentication, and authorization.
+            &nbsp;Two roles are supported: Admin, and User. Only Admin users have access to the Administrative
+            pages.
+          </p>
+          <p>
+            As usual, 100% source code is included which you can use in your own projects.
+            Patterns and features of this solution are listed
+            <span class="d-none d-md-inline-block">to your left</span> under <span class="font-13 font-weight-semibold">PATTERNS AND FEATURES</span>.
+          </p>
+          <p>
+            CRM is fully DX (Design Excellence&trade;) and CX (Code Excellence&trade;)
+            compliant, creating a solution with minimal footprint
+            and code that is easy to create, maintain, and extend. Note: DX and CX
+            are application architectural guides that are part of the Dofactory .NET package.
+          </p>
+
+          <p>
+            DX (Design Excellence&trade;) is designed to help you
+            design modular applications with pages that flow naturally and
+            that are easy to understand by the end-users.
+            Below is an example of the basic page flow that you'll find
+            in each module of this application.
+          </p>
+
+          <img src="../img/placeholder.png" data-src="/img/solutions/crm-solution-design-excellence.png" class="mt-15 mb-45 img-fluid shadow-md lazy" />
+
+          <p>
+            CX (Code Excellence&trade;) is designed to help you create simple, light-weight VS solutions.
+            Below is a screenshot of the <span class="font-italic"><i>entire</i></span> CRM
+            solution. &nbsp;One project and just 4 folders: <i>Areas</i>, <i>Code</i>, <i>Data</i>, and <i>Domain</i>.
+          </p>
+
+          <img src="../img/placeholder.png" data-src="/img/solutions/crm-solution.png" class="mt-15 mb-45 img-fluid box-shadow-square lazy" />
+          <p>
+            The next images show the expanded folders.<br /><br />Below is the <i>Areas</i> folder.
+            The  <i>_Base</i> and <i>_Related</i> subfolders at the top contain partial views
+            that are shared throughout the solution.
+          </p>
+          <img src="../img/placeholder.png" data-src="/img/solutions/crm-solution-areas.png" class="mt-15 mb-45 img-fluid box-shadow-square lazy" />
+          <p>
+            Next is the expanded <i>_Base</i> folder. It contains partial views that you'll find in all our
+            solutions. The important ones are: _Layout, _Header, _Footer, _Css, and _Js.
+            Their names are self explanatory.
+          </p>
+          <img src="../img/placeholder.png" data-src="/img/solutions/crm-solution-main.png" class="mt-15 mb-45 img-fluid box-shadow-square lazy" />
+          <p>
+            The _Layout is simple. All Dofactory .NET solutions use the same _Layout format.
+          </p>
+          <img src="../img/placeholder.png" data-src="/img/solutions/crm-solution-layout.png" class="mt-15 mb-45 img-fluid shadow-md lazy" />
+          <p>
+            Infrastructure code resides in a folder named <i>Code</i>.<br />
+            Each category in its own subfolder.
+          </p>
+          <img src="../img/placeholder.png" data-src="/img/solutions/crm-solution-code.png" class="mt-15 mb-45 img-fluid box-shadow-square lazy" />
+          <p>
+            The LocalDb database is placed in the <i>Data</i> folder. <br />
+            When using SQL Server there will be no database here.
+          </p>
+          <img src="../img/placeholder.png" data-src="/img/solutions/crm-solution-data.png" class="mt-15 mb-45 img-fluid box-shadow-square lazy" />
+          <p>
+            Reverse engineered EF entities using the Database First approach are located in the <i>Domain</i> folder.
+            It's interesting to see that a feature-rich application like CRM can have just 14 entities. So simple.
+          </p>
+          <img src="../img/placeholder.png" data-src="/img/solutions/crm-solution-domain.png" class="mt-15 mb-45 img-fluid box-shadow-square lazy" />
+          <p>
+            The models, views, and controllers of a module (Area) are located in a single folder
+            (see Opportunities Area below). Models and Views are paired with the same names, for example, List.cs, List.cshtml, and Detail.cs, Detail.cshtml, and others.
+            &nbsp;Files prefixed with an _ (underscore) are area-specific partial views
+            and their models.
+
+          </p>
+          <img src="../img/placeholder.png" data-src="/img/solutions/crm-solution-opportunities.png" class="mt-15 mb-45 img-fluid box-shadow-square lazy" />
+
+          <p>
+            Below is the Opportunities controller which is low-code with just 30 lines of code (for the entire module).
+            It supports the basic <i>CRUD action</i> methods: List, Detail, Edit, and Delete. Two <i>Ancillary action</i>
+            methods are NextStage and Export (Excel export).
+          </p>
+
+          <img src="../img/placeholder.png" data-src="/img/solutions/crm-solution-opportunities-controller.png" style="min-width:540px;" class="mt-15 mb-45 ximg-fluid shadow-md lazy" />
+          <p>
+            Notice, there is no dependency injection, and each action method is just a single line of code.
+            All controllers follow this simple pattern in which controller endpoints dispatch their requests to an <i>Actionmodel</i>.
+            <i>Actionmodels</i> handle the requests, one for each request -- a perfect implementation of the SRP principle.
+          </p>
+          <p>
+            An <i>Actionmodel</i> is a viewmodel with methods -- we know that some of you may frown upon this :-).
+            Below is an example of the List <i>Actionmodel</i> which handles the Opportunity List page request.
+            This page lists all the opportunities and includes support for sorting, filtering, pagination, search, etc.
+            (you can see a screenshot above). All with just 119 lines of code!
+          </p>
+
+          <img src="../img/placeholder.png" data-src="/img/solutions/crm-solution-opportunities-list-action-model.png" class="mt-15 mb-45 img-fluid shadow-md lazy" />
+
+          <p>
+            In Dofactory .NET each <i>Actionmodel</i> has 4 regions: <i>Data</i>, <i>Handlers</i>, <i>Helpers</i>, and <i>Mapping</i>.
+
+          </p>
+          <p>
+            A <i>Data</i> region holds the same data you see in a Viewmodel, including filter, sort, and pagination selections posted back from the page.
+          </p>
+          <p>
+            A <i>Handlers</i> region below has a single GetAsync method that processes the request.
+            It's very simple with just 2 database queries that support any
+            combination of paginate, filter, and sort actions.
+          </p>
+          <img src="../img/placeholder.png" data-src="/img/solutions/crm-solution-opportunities-list-getasync.png" class="mt-15 mb-45 img-fluid shadow-md lazy" />
+
+          <p>
+            Continuing with the <i>Actionmodel</i> regions, the <i>Helpers</i> region has a single method that helps to build the EF Core query.
+            Finally, the <i>Mapping</i> region is where AutoMapper mappings are defined for this request.
+          </p>
+          <p>
+            As you can see, Dofactory .NET delivers simplicity and developer productivity.
+          </p>
+          <p>
+            <b>And that is it!</b> &nbsp;Wouldn't you rather create solutions like these and write your application
+            in days rather than months or years?
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+    
+  <div class="box-shadow" style="border-top:1px solid #e2ecee;">
+    <div class="container">
+      <div class="row" style="padding:60px 0 10px 0;">
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 pb-15"><img src="../img/dofactorylogo.png" height="30" /></div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../about.html">About Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../story.html">Our Story</a></li>
+            <li class="footer-item"><a class="footer-link" href="../customers.html">Customers</a></li>
+            <li class="footer-item"><a class="footer-link" href="../contact.html">Contact Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../faq.html">FAQs</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../forum.html">Forum</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../forum/explore.html">Explore Forum</a></li>
+            <li class="footer-item"><a class="footer-link" href="../login.html">Login</a> &nbsp; <a class="footer-link" href="../join.html">Join</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted ">Products</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../products.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../products/dofactory-net.html">Dofactory .NET</a></li>
+            <li class="footer-item"><a class="footer-link" href="../products/dofactory-sql.html">Dofactory SQL</a></li>
+            <li class="footer-item"><a class="footer-link" href="../products/dofactory-js.html">Dofactory JS</a></li>
+            <li class="footer-item"><a class="footer-link" href="../products/dofactory-bundle.html">Dofactory Bundle</a></li>
+          </ul>
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-8 text-muted">Pricing</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../pricing.html">Product Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../pricing/bundle.html">Bundle Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../pricing/compare.html">Compare Editions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Demos</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../showcases.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="analytics.html">Analytics App</a></li>
+            <li class="footer-item"><a class="footer-link" href="ecommerce.html">Ecommerce App</a></li>
+            <li class="footer-item"><a class="footer-link" href="saas.html">SaaS App</a></li>
+            <li class="footer-item"><a class="footer-link" href="crm.html">CRM App</a></li>
+            <li class="footer-item"><a class="footer-link" href="app-factory.html">33-Day App Factory&trade;</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-3 mb-2 ">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Tutorials</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../tutorials.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../sql.html">SQL Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../sql/reference.html">SQL Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../html.html">HTML Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../html/ref.html">HTML Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../net/design-patterns.html">.NET Design Patterns</a></li>
+            <li class="footer-item"><a class="footer-link" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+            <li class="footer-item"><a class="footer-link" href="../javascript.html">JavaScript Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../connection-strings.html">Connection Strings</a></li>
+            <li class="footer-item"><a class="footer-link" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row mx-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="row py-10">
+        <div class="col pl-35">
+          <div class="font-weight-bold font-18 merriweather text-muted">Stay Inspired!</div>
+        </div>
+      </div>
+
+      <div class="row pt-3 pb-10">
+        <div class="col-12 col-md-6 xcol-md-5 pl-35">
+          Join other developers and designers who have
+          already signed up for our mailing list.
+        </div>
+        <div class="col-12 col-md-4 xcol-md-4 pl-35">
+
+          
+<form method="post" action="https://www.dofactory.com/emaillist">
+    <div class="input-group mb-3 pt-1">
+        <input type="text" class="form-control" placeholder="Your email..." aria-label="your-email" aria-describedby="your-email" style="max-width:260px;" data-val="true" data-val-email="Invalid email address" data-val-required="Email is required." id="YourEmail" name="YourEmail" value="">
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-green" style="height:37px;">
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <span class="field-validation-valid" data-valmsg-for="YourEmail" data-valmsg-replace="true"></span>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7EqsxhGUzpgRW-xyIrlUykUbWPH79LhuIaSTheqE5RZK9uxZhH0gKNWZkW_jbHFnapjpuYJcQ1wFbtnbKfsSCTNuFJdyehsz7edTa1icyFqMwbg4oGVFGJcZ20A4WQk2JlI0" /></form>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row mx-10 mt-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="d-flex flex-lg-row flex-column p-20 mb-15 font-14">
+        <div class="pb-1 ">
+          <a href="../terms.html" class="text-muted">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../privacy.html" class="text-muted">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../licensing.html" class="text-muted">Licensing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../eula.html" class="text-muted">EULA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../sitemap.html" class="text-muted">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="pb-1">
+          &copy; Data &amp; Object Factory, LLC. 
+        </div>
+        <div class="pb-1 ml-lg-auto">
+          Made with &nbsp;<img src="../img/heart.png" style="width:14px;" />&nbsp; in Austin, Texas. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vsn 1.3.0
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script>
+
+    Dofactory.Utils.LazyloadImages.start();
+
+    $(function () {
+      $('.list-group-item').on('click', function () {
+        var href = $(this).attr('href');
+        var img = $(href).children().first();
+
+        src = img.data('src');  // lazy load
+        if (src) {
+          img.attr('src', src);
+          img.data('src', null);
+        }
+
+      });
+    });
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/showcases/crm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 14:49:43 GMT -->
+</html>

@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/javascript/operators by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:05:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Operators - Dofactory</title>
+    <meta name="keywords" content="javascript operator, javascript boolean, javascript infinity, javascript nan, javascript increment decrement, javascript bitwise">
+    <meta name="description" content="JavaScript includes operators you&#x27;d expect from any modern language. There are four categories: arithmetic, comparison, assignment, and logical.">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="operators.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        <link rel="stylesheet" href="../tutorial/css/javascript1cdd.css?v=qVXqJlnTI2nqJ78-w9n5mGO4sNLYFSlXHRVEVwRSTj4" />
+
+<style>
+  .bg-cream-100 { background-color: #f6f8fd !important; }
+</style>
+
+
+<script>
+  var console = {};
+  console.log = function (e) {
+    try {
+
+      if (!e && e != false) e = "undefined";
+      if (e == "Andrew Fuller\n Bob Springsteen") {
+        e = e.replace(/(?:\r\n|\r|\n)/g, '<br>');
+      }
+      document.writeln(e);
+      document.write("<br />");
+    }
+    catch {
+      document.writeln("");
+    }
+  };
+  window.console = console;
+</script>
+
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="../img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        JavaScript Tutorial&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="../javascript.html">JavaScript Intro</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="what-is.html">What is JavaScript</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="essentials.html">JavaScript Essentials</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="variables.html">JavaScript Variables</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="operators.html">JavaScript Operators</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="conditionals.html">JavaScript Conditionals</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="loops.html">JavaScript Loops</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="builtin-types.html">JavaScript Built-in Types</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="objects.html">JavaScript Objects</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="advanced-objects.html">JavaScript Adv. Objects</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="arrays.html">JavaScript Arrays</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="functions.html">JavaScript Functions</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="function-objects.html">JavaScript Function Objects</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="json.html">JavaScript JSON</a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="regular-expressions.html">JavaScript Reg. Expressions</a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="design-patterns.html">JavaScript Patterns</a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="reference.html">JavaScript Reference</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="127" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="../img/arrow-left.jpg" /> &nbsp;Back to JS </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html/ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css/ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="../net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial" xstyle="xmax-width:1200px;">
+
+      <div class="d-flex justify-content-around align-items-start">
+
+        <div class="w-100 m-auto" style="max-width:970px;">
+
+          <h1>JavaScript Operators</h1>
+
+
+<div class="d-flex">
+    <div class="mt-40">
+        <p class="pb-0 mb-0" style="margin-right:0 !important;"><em>JavaScript Operators</em> are as rich as what you&lsquo;d expect from any modern language.  There are four categories: <b>arithmetic</b>, <b>comparison</b>, <b>assignment</b>, and <b>logical</b>.</p>
+    </div>
+    <div class="ml-auto d-none d-md-block text-center" style="flex: 0 0 200px;">
+      <img src="../img/javascript/show-js.png" alt="JavaScript Tutorial" style="margin:20px 10px 0px 35px;" />
+    </div>
+</div>
+
+
+
+<hr />
+<a class="goto-target" id="arithmetic-operators"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xarithmetic-operators&#x27;).show();" onmouseout="$(&#x27;#xarithmetic-operators&#x27;).hide();">Arithmetic Operators</h2>
+    <h2><a id="xarithmetic-operators" style="display:none" class="d-block pl-12 header-anchor" href="#arithmetic-operators">#</a></h2>
+</div>
+
+
+
+<p>
+  Arithmetic operators perform basic computations on their operands (the variables they operate on). 
+  In the table below, variable <code >a</code> has a value of 2 before the operation is applied.
+</p>
+
+<div class="table-box">
+  <table class="table table-md bg-cream-100">
+    <tr>
+      <th style="width:100px;">Operator</th>
+      <th style="width:300px;">Operation</th>
+      <th style="width:130px;">Expression</th>
+      <th style="width:70px;">Result</th>
+    </tr>
+    <tr>
+      <td>+</td>
+      <td>Add</td>
+      <td>2 + a</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>Substract</td>
+      <td>2 - a</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>Multiply</td>
+      <td>3 * a</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>/</td>
+      <td>Divide</td>
+      <td>3 / a</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <td>%</td>
+      <td>Modulus - division remainder</td>
+      <td>7 % a</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>++</td>
+      <td>Increment - increase by 1</td>
+      <td>a++</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>--</td>
+      <td>Decrement - decrease by 1</td>
+      <td>a--</td>
+      <td>1</td>
+    </tr>
+  </table>
+</div>
+
+<hr />
+<a class="goto-target" id="string-operators"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#xstring-operators&#x27;).show();" onmouseout="$(&#x27;#xstring-operators&#x27;).hide();">String Operators</h3>
+    <h3 class="pl-12"><a id="xstring-operators" class="d-block header-anchor" href="#string-operators">#</a></h3>
+</div>
+
+
+
+<p>
+  The + operator is used for adding numeric values, but it can also be used to concatenate (join) 
+  two or more strings and return a single string.  Here is an example:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-1');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-1" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-1">var str1 = &quot;Hello&quot;;&#xD;&#xA;var str2 = &quot; Vivek&quot;;&#xD;&#xA;&#xD;&#xA;str1 = str1 &#x2B; str2;        // =&gt; &quot;Hello Vivek&quot;&#xD;&#xA;console.log(str1);&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var str1 = &quot;Hello&quot;;&#xD;&#xA;var str2 = &quot; Vivek&quot;;&#xD;&#xA;&#xD;&#xA;str1 = str1 &#x2B; str2;        // =&gt; &quot;Hello Vivek&quot;&#xD;&#xA;console.log(str1);&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-1" style="display:none;">
+  <script>
+      var str1 = "Hello";
+var str2 = " Vivek";
+
+str1 = str1 + str2;        // => "Hello Vivek"
+console.log(str1);
+;
+  </script>
+</div>
+<button id="operators-1-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-1');">
+  Run
+</button>
+
+
+<p>
+  The last statement can also be rewritten by using the assignment += operator 
+  as follows:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-2');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-2" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-2">var str1 = &quot;Hello&quot;;&#xD;&#xA;var str2 = &quot; Vivek&quot;;&#xD;&#xA;&#xD;&#xA;str1 &#x2B;= str2;              // =&gt; &quot;Hello Vivek&quot;&#xD;&#xA;console.log(str1);&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var str1 = &quot;Hello&quot;;&#xD;&#xA;var str2 = &quot; Vivek&quot;;&#xD;&#xA;&#xD;&#xA;str1 &#x2B;= str2;              // =&gt; &quot;Hello Vivek&quot;&#xD;&#xA;console.log(str1);&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-2" style="display:none;">
+  <script>
+      var str1 = "Hello";
+var str2 = " Vivek";
+
+str1 += str2;              // => "Hello Vivek"
+console.log(str1);
+;
+  </script>
+</div>
+<button id="operators-2-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-2');">
+  Run
+</button>
+
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="variables.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; JavaScript Variables &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="conditionals.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; JavaScript Conditionals &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<a class="goto-target" id="comparison-operators"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xcomparison-operators&#x27;).show();" onmouseout="$(&#x27;#xcomparison-operators&#x27;).hide();">Comparison Operators</h2>
+    <h2><a id="xcomparison-operators" style="display:none" class="d-block pl-12 header-anchor" href="#comparison-operators">#</a></h2>
+</div>
+
+
+
+<p>
+  Comparison operators compare the value of two operands.  If the comparison is true, they return 
+  true, otherwise false. In the table below the variables are: <code >a = 1</code> 
+  and <code >b = 2</code>.
+</p>
+
+<div class="table-box">
+  <table class="table table-md bg-cream-100">
+    <tr>
+      <th style="width:100px;">Operator</th>
+      <th style="width:300px;">Operation</th>
+      <th style="width:130px;">Expression</th>
+      <th style="width:70px;">Result</th>
+    </tr>
+    <tr>
+      <td>==</td>
+      <td>Equal to</td>
+      <td>a == b</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>!=</td>
+      <td>Not equal to</td>
+      <td>a != b</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td><=</td>
+      <td>Less than equal to</td>
+      <td>a <= b</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>>=</td>
+      <td>Greater than or equal to</td>
+      <td>a >= b</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td><</td>
+      <td>Less than</td>
+      <td>a < b</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>></td>
+      <td>Greater than</td>
+      <td>a > b</td>
+      <td>false</td>
+    </tr>
+  </table>
+</div>
+
+<hr />
+<a class="goto-target" id="assignment-operators"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xassignment-operators&#x27;).show();" onmouseout="$(&#x27;#xassignment-operators&#x27;).hide();">Assignment Operators</h2>
+    <h2><a id="xassignment-operators" style="display:none" class="d-block pl-12 header-anchor" href="#assignment-operators">#</a></h2>
+</div>
+
+
+
+<p>
+  In an assignment operation the value of a variable is computed from the expression that lies 
+  to the right of an assignment operator. That value is assigned to the variable or property that 
+  is on the left side of the operator. In the table below the variables have the following values: 
+  <br /><code >a = 1</code>, <code >b = 2</code>, and <code >c = 3</code>.
+</p>
+
+<div class="table-box">
+  <table class="table table-md bg-cream-100">
+    <tr>
+      <th style="width:100px;">Operator</th>
+      <th style="width:300px;">Operation</th>
+      <th style="width:70px;">Result</th>
+    </tr>
+    <tr>
+      <td>=</td>
+      <td>a = b + c;</td>
+      <td>a = 5</td>
+    </tr>
+    <tr>
+      <td>+=</td>
+      <td>a += b; &nbsp;&nbsp;&nbsp;// equivalent to a = a + b</td>
+      <td>a = 3</td>
+    </tr>
+    <tr>
+      <td>-=</td>
+      <td>a -= b; &nbsp;&nbsp;&nbsp;// equivalent to a = a – b</td>
+      <td>a = -1</td>
+    </tr>
+    <tr>
+      <td>/=</td>
+      <td>a /= b; &nbsp;&nbsp;&nbsp;// equivalent to a = a / b</td>
+      <td>a = 0.5</td>
+    </tr>
+    <tr>
+      <td>%=</td>
+      <td>c %= b; &nbsp;&nbsp;// equivalent to c = c % b</td>
+      <td>c = 1</td>
+    </tr>
+    <tr>
+      <td>*=</td>
+      <td>a *= b; &nbsp;&nbsp;&nbsp;// equivalent to a = a * b</td>
+      <td>a = 2</td>
+    </tr>
+  </table>
+</div>
+
+<hr />
+<a class="goto-target" id="logical-operators"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xlogical-operators&#x27;).show();" onmouseout="$(&#x27;#xlogical-operators&#x27;).hide();">Logical Operators</h2>
+    <h2><a id="xlogical-operators" style="display:none" class="d-block pl-12 header-anchor" href="#logical-operators">#</a></h2>
+</div>
+
+
+
+<p>
+  Logical or boolean operators compare boolean expressions and then return true or false. 
+  The <code >&&</code> and <code >||</code> ('and' and 'or') operators take two operands. 
+  The <code >!</code> ('not') operator takes a single operand. In the table below the 
+  variables have the following values: <code >a = 1</code> and <code >b = 2</code>.
+</p>
+
+<div class="table-box">
+  <table class="table table-md bg-cream-100">
+    <tr>
+      <th style="width:80px;">Operator</th>
+      <th style="width:300px;">Operation</th>
+      <th style="width:110px;">Expression</th>
+      <th style="width:110px;">Result</th>
+    </tr>
+    <tr>
+      <td>&&</td>
+      <td>Logical and. Returns true only if both its first and second operands are evaluated to true.</td>
+      <td>a < 3 && b > 5 </td>
+      <td>returns false as b > 5 is false</td>
+    </tr>
+    <tr>
+      <td>||</td>
+      <td>Logical or. Returns true if one of the two operands are evaluated to true, returns false if both are evaluated to true.</td>
+      <td>a < 3 || b > 5</td>
+      <td>returns true as a < 3 is true</td>
+    </tr>
+    <tr>
+      <td>!</td>
+      <td>Logical not. Unary operator that simply inverts the boolean value of its operand.</td>
+      <td>!(b>5)</td>
+      <td>returns true</td>
+    </tr>
+  </table>
+</div>
+
+<hr />
+<a class="goto-target" id="infinity-nan"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xinfinity-nan&#x27;).show();" onmouseout="$(&#x27;#xinfinity-nan&#x27;).hide();">Infinity, NaN</h2>
+    <h2><a id="xinfinity-nan" style="display:none" class="d-block pl-12 header-anchor" href="#infinity-nan">#</a></h2>
+</div>
+
+
+
+<p>
+  In most languages, dividing a number by 0 throws an error and stops program execution. 
+  JavaScript however, returns a special infinity value, printed as <i>Infinity</i>, when the result 
+  of a numeric operation is larger than the largest representable number.
+</p>
+
+<p>
+  Similarly, it returns a negative infinity value, printed as <i>-Infinity</i>, when the resulting 
+  negative value becomes more negative than the most negative representable number. 
+</p>
+
+<p>
+  In both cases, the program simply <i>continues with its execution!</i>
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+10 / 0;         // =>  Infinity
+-10 / 0;        // => -Infinity
+2 / +0;         // => +Infinity
+2 / -0;         // => -Infinity
+</pre>
+
+<p>
+  Notice the -0 in the last statement. Negative 0 means it is a negative value closer to 0, but 
+  the value is so small that it cannot be represented with available precision. For instance, 
+  when you take <code >-Number.MIN_VALUE</code> (the smallest possible negative number, 
+  i.e. -5e-324) divided by 5, you get -0. Similarly, -1 divided by Infinity returns -0. Note that 
+  according to IEEE 754 specification, -0 is equal to 0.
+</p>
+
+<p>
+  In JavaScript when an arithmetic operation fails it does not throw an error; instead it returns 
+  a special numeric value, called <i>NaN</i> (for Not a Number), and the program happily continues 
+  with execution. The following operations all result in NaN:
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+Infinity / Infinity;   // => Nan. 
+0 / 0;                 // => Nan.
+"Hello" / 1;           // => Nan. "Hello" cannot be converted to number
+Math.sqrt(-1);         // => Nan.
+NaN / 0;               // => Nan. Any operation with NaN results in NaN
+</pre>
+
+<p>
+  The JavaScript typeof operator does not distinguish between NaN and numbers, therefore the 
+  expression <code >typeof NaN === "number"</code> returns true. Furthermore, NaN does 
+  not compare equal to any number, including a comparison with itself, thus <code >NaN == NaN</code> 
+  returns false.
+</p>
+
+<p>
+  You need to be aware how NaN can affect computations which involves multiple steps. If you have a 
+  sequence of arithmetic operations and you get NaN as the final result, it means that either one of 
+  the initial inputs was NaN or NaN is produced somewhere in the chain.
+</p>
+
+<p>
+  The built-in function <code >isNaN</code> is used to determine whether a given value is NaN.  
+  It will return true if it is, and false if not. When a value is confirmed to be NaN, it is up to you 
+  how you deal with the value. You could do something like this (set it to zero):
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+var profit = NaN;
+if (isNaN(profit)) {
+    profit = 0;
+}
+</pre>
+
+<p>
+  Rather than using <code >isNaN</code>, a better approach would be to use the built-in 
+  function <code >isFinite</code> to determine whether a value can be used as a number or not. 
+  This function checks for both Infinity and NaN.  Before calling <code >isFinite</code> make 
+  sure that the value passed is actually a number, like so:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-3');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-3" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-3">var isNumber = function (val) {&#xD;&#xA;    if (typeof val === &quot;number&quot;) {&#xD;&#xA;        return isFinite(val);&#xD;&#xA;    }&#xD;&#xA;    return false;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var n = 3.6;&#xD;&#xA;console.log(isNumber(n));   // =&gt; true&#xD;&#xA;&#xD;&#xA;n = NaN;&#xD;&#xA;console.log(isNumber(n));   // =&gt; false&#xD;&#xA;&#xD;&#xA;n = Infinity;&#xD;&#xA;console.log(isNumber(n));   // =&gt; false&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var isNumber = function (val) {&#xD;&#xA;    if (typeof val === &quot;number&quot;) {&#xD;&#xA;        return isFinite(val);&#xD;&#xA;    }&#xD;&#xA;    return false;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var n = 3.6;&#xD;&#xA;console.log(isNumber(n));   // =&gt; true&#xD;&#xA;&#xD;&#xA;n = NaN;&#xD;&#xA;console.log(isNumber(n));   // =&gt; false&#xD;&#xA;&#xD;&#xA;n = Infinity;&#xD;&#xA;console.log(isNumber(n));   // =&gt; false&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-3" style="display:none;">
+  <script>
+      var isNumber = function (val) {
+    if (typeof val === "number") {
+        return isFinite(val);
+    }
+    return false;
+}
+
+var n = 3.6;
+console.log(isNumber(n));   // => true
+
+n = NaN;
+console.log(isNumber(n));   // => false
+
+n = Infinity;
+console.log(isNumber(n));   // => false
+;
+  </script>
+</div>
+<button id="operators-3-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-3');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="rounding"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xrounding&#x27;).show();" onmouseout="$(&#x27;#xrounding&#x27;).hide();">JavaScript Rounding</h2>
+    <h2><a id="xrounding" style="display:none" class="d-block pl-12 header-anchor" href="#rounding">#</a></h2>
+</div>
+
+
+
+<p>
+  In terms of numeric precision, JavaScript may not give you the exact values you would expect.
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+0.119 / 100;    // => evaluates to 0.0011899999999999999
+0.14 / 100;     // => evaluates to 0.0014000000000000002
+</pre>
+
+<p>
+  The reason for these rounding imprecisions is that JavaScript uses a binary floating-point format 
+  for number. Binary floating-point representations can exactly represent fractions like 1/16, 
+  and 1/32, 1/64, 1/128, but not fractions like 1/100, 1/10 which are very common in monetary calculations.  
+  This can cause some rounding limitations like the examples below:  
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-4');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-4" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-4">var diff1 = .5 - .4;   // =&gt; 0.09999999999999998 &#xD;&#xA;var diff2 = .4 - .3;   // =&gt; 0.10000000000000003&#xD;&#xA;&#xD;&#xA;console.log(diff1 == diff2); // =&gt; false, the values are not the same&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var diff1 = .5 - .4;   // =&gt; 0.09999999999999998 &#xD;&#xA;var diff2 = .4 - .3;   // =&gt; 0.10000000000000003&#xD;&#xA;&#xD;&#xA;console.log(diff1 == diff2); // =&gt; false, the values are not the same&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-4" style="display:none;">
+  <script>
+      var diff1 = .5 - .4;   // => 0.09999999999999998 
+var diff2 = .4 - .3;   // => 0.10000000000000003
+
+console.log(diff1 == diff2); // => false, the values are not the same
+;
+  </script>
+</div>
+<button id="operators-4-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-4');">
+  Run
+</button>
+
+
+<p>
+  The last statement can be rather disheartening. Both <code >diff1</code> and 
+  <code >diff2</code> are very close to .1, but not exact. So, be aware of JavaScript's 
+  internal number representations.
+</p>
+
+<hr />
+<a class="goto-target" id="increment-decrement"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xincrement-decrement&#x27;).show();" onmouseout="$(&#x27;#xincrement-decrement&#x27;).hide();">The ++ and -- Operators</h2>
+    <h2><a id="xincrement-decrement" style="display:none" class="d-block pl-12 header-anchor" href="#increment-decrement">#</a></h2>
+</div>
+
+
+
+<p>
+  In the C language, copying a string is frequently coded as the following one-liner: </p>
+<pre class="prettyprint xlinenums run code-hscroll">
+while (*str1++ = *str2++);
+</pre>
+
+<p>This code tends to be tricky and confuse developers that are not too familiar with the 'pre' and 'post' nature of increment and decrement operators. Although JavaScript does not support pointers, the terseness of the ++ and -- operators is something that will need to be looked at carefully. For example, even an experienced JavaScript programmer will need some time to figure out what the following statement does:</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-5');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-5" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-5">var m = 7;&#xD;&#xA;m = m&#x2B;&#x2B; &#x2B; --m;&#xD;&#xA;console.log(m)        // what is the value of m?&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var m = 7;&#xD;&#xA;m = m&#x2B;&#x2B; &#x2B; --m;&#xD;&#xA;console.log(m)        // what is the value of m?&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-5" style="display:none;">
+  <script>
+      var m = 7;
+m = m++ + --m;
+console.log(m)        // what is the value of m?
+;
+  </script>
+</div>
+<button id="operators-5-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-5');">
+  Run
+</button>
+
+
+<p>
+  Clearly, this makes the code unnecessarily complex and hard to understand. It is best to use the ++ and -- 
+  operators on a single line which enhances program readability. For example:
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+count++;
+elements[count] = 10;
+</pre>
+
+<p>
+  Anything beyond that can be confusing; chances of making typos are high.
+</p>
+<p>
+  However, JavaScript loops can safely use the increment operators within a for-loop because 
+  it is standard practice and usually does not cause confusion. 
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+for(var i = 0, j = cost.length; i < 5; i++, j++)
+{
+    cost[j] = val[i];
+}
+</pre>
+
+<p>
+  If you minify JavaScript code, be very careful when using ++ and -- operators. Minimizers remove 
+  unnecessary whitespace and comments from your JavaScript code. As an example, it may translate 
+  <code >i + ++j</code> into <code >i+++j</code>. The compiler then treats the resulting 
+  expression as <br /><code >i++ + j</code> which is incorrect. Fortunately, this is easily 
+  corrected by adding parentheses like <br />so: <code >i + (++j)</code>.  So the lesson here 
+  is to always add parenthesis to make your intentions clear. 
+</p>
+
+<p>
+  It is also good practice to run JSLint before minifying your code, as it checks for these and other 
+  potential problems related to the ++ and -- operators.
+</p>
+
+<hr />
+<a class="goto-target" id="equality-operators"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xequality-operators&#x27;).show();" onmouseout="$(&#x27;#xequality-operators&#x27;).hide();">The == and === Operator</h2>
+    <h2><a id="xequality-operators" style="display:none" class="d-block pl-12 header-anchor" href="#equality-operators">#</a></h2>
+</div>
+
+
+
+<p>
+  The <code>==</code> operator compares the values of its operands. If their values are equal, it returns true. 
+  If the operands have different data types, JavaScript attempts to convert these to an appropriate 
+  type then compares their values.  Consider this:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-6');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-6" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-6">console.log(&quot;1&quot; == 1);       // =&gt; true&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>console.log(&quot;1&quot; == 1);       // =&gt; true&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-6" style="display:none;">
+  <script>
+      console.log("1" == 1);       // => true
+;
+  </script>
+</div>
+<button id="operators-6-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-6');">
+  Run
+</button>
+
+
+<p>
+  Here the string "1" is compared to the numeric 1. JavaScript converts the string numeric literal 
+  to a number value. Since they are equal, it returns true.  How about this:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-7');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-7" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-7">console.log(false == &quot;0&quot;);   // =&gt; true&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>console.log(false == &quot;0&quot;);   // =&gt; true&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-7" style="display:none;">
+  <script>
+      console.log(false == "0");   // => true
+;
+  </script>
+</div>
+<button id="operators-7-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-7');">
+  Run
+</button>
+
+
+<p>
+  This returns true. In this case, both operands are converted to numbers. Boolean true values are converted 
+  to 1 and false to 0.  And the string "0" is converted to the number 0.  Following the conversions JavaScript 
+  compares 0 == 0 and returns true. 
+</p>
+
+<p>
+  Here are a few more cases:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-8');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-8" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-8">console.log(null == undefined);    // =&gt; true&#xD;&#xA;console.log(true == &quot;1&quot;);          // =&gt; true&#xD;&#xA;console.log(&quot;9&quot; &lt; &quot;P&quot;);            // =&gt; true &#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>console.log(null == undefined);    // =&gt; true&#xD;&#xA;console.log(true == &quot;1&quot;);          // =&gt; true&#xD;&#xA;console.log(&quot;9&quot; &lt; &quot;P&quot;);            // =&gt; true &#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-8" style="display:none;">
+  <script>
+      console.log(null == undefined);    // => true
+console.log(true == "1");          // => true
+console.log("9" < "P");            // => true 
+;
+  </script>
+</div>
+<button id="operators-8-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-8');">
+  Run
+</button>
+
+
+<p>
+  In the last expression, the ASCII values for numbers are lower than those for letters, returning true.
+</p>
+<p>
+  The rules of data conversion with the <code>==</code> operator are complex and hard to remember. 
+  This can easily lead to bugs.  Fortunately JavaScript offers an alternative, called the strict 
+  equality operator (<code>===</code>) which does not convert data when testing for equality. 
+  It only returns true when  1) the operands being compared are of the same type, and 
+  2) their values are the same.  Here are some examples:
+  </p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-9');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-9" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-9">console.log(&quot;1&quot; === 1);           // =&gt; false&#xD;&#xA;console.log(true === !false);     // =&gt; true&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>console.log(&quot;1&quot; === 1);           // =&gt; false&#xD;&#xA;console.log(true === !false);     // =&gt; true&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-9" style="display:none;">
+  <script>
+      console.log("1" === 1);           // => false
+console.log(true === !false);     // => true
+;
+  </script>
+</div>
+<button id="operators-9-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-9');">
+  Run
+</button>
+
+
+<p>
+  If both operands are objects and if they refer to the same object, then JavaScript returns true.  
+  Let's see how this works with, say, arrays: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-10');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-10" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-10">var ref1 = [10, 20];            // an array&#xD;&#xA;var ref2 = [10, 20];            // a second array&#xD;&#xA;&#xD;&#xA;console.log(ref1 == ref2);      // =&gt; false&#xD;&#xA;console.log(ref1 === ref2);     // =&gt; false&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var ref1 = [10, 20];            // an array&#xD;&#xA;var ref2 = [10, 20];            // a second array&#xD;&#xA;&#xD;&#xA;console.log(ref1 == ref2);      // =&gt; false&#xD;&#xA;console.log(ref1 === ref2);     // =&gt; false&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-10" style="display:none;">
+  <script>
+      var ref1 = [10, 20];            // an array
+var ref2 = [10, 20];            // a second array
+
+console.log(ref1 == ref2);      // => false
+console.log(ref1 === ref2);     // => false
+;
+  </script>
+</div>
+<button id="operators-10-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-10');">
+  Run
+</button>
+
+
+<p>
+  Here <code >ref1 == ref2</code> returns false, because they reference different arrays.  
+  The strict comparison <code >ref1 === ref2</code> also return false because, 
+  although they have the same values, these are two different arrays in memory. 
+</p>
+
+<p>
+  As in many other languages, JavaScript strings are immutable meaning that the contents of a string object
+  cannot be changed after the object is created, although the syntax makes it appear as if you can do this.
+  Let's see how this affects <code>==</code> and <code>===</code> operations:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-11');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-11" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-11">var str1 = &quot;Hello World&quot;;       // a string&#xD;&#xA;var str2 = &quot;Hello&quot; &#x2B; &quot; World&quot;;  // another string&#xD;&#xA;&#xD;&#xA;console.log(str1 == str2);      // =&gt; true&#xD;&#xA;console.log(str1 === str2)      // =&gt; true&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var str1 = &quot;Hello World&quot;;       // a string&#xD;&#xA;var str2 = &quot;Hello&quot; &#x2B; &quot; World&quot;;  // another string&#xD;&#xA;&#xD;&#xA;console.log(str1 == str2);      // =&gt; true&#xD;&#xA;console.log(str1 === str2)      // =&gt; true&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-11" style="display:none;">
+  <script>
+      var str1 = "Hello World";       // a string
+var str2 = "Hello" + " World";  // another string
+
+console.log(str1 == str2);      // => true
+console.log(str1 === str2)      // => true
+;
+  </script>
+</div>
+<button id="operators-11-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-11');">
+  Run
+</button>
+
+
+<p>
+  Here <code >str1</code> and <code >str2</code> reference the same immutable "Hello World" 
+  string and therefore both <code>==</code> and <code>===</code> return true. 
+</p>
+<p>
+  How about comparing string objects created with the String constructor and with a string literal?
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-12');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-12" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-12">console.log(&quot;Hello&quot; == new String(&quot;Hello&quot;));    // =&gt; true&#xD;&#xA;console.log(&quot;Hello&quot; === new String(&quot;Hello&quot;));   // =&gt; false&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>console.log(&quot;Hello&quot; == new String(&quot;Hello&quot;));    // =&gt; true&#xD;&#xA;console.log(&quot;Hello&quot; === new String(&quot;Hello&quot;));   // =&gt; false&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-12" style="display:none;">
+  <script>
+      console.log("Hello" == new String("Hello"));    // => true
+console.log("Hello" === new String("Hello"));   // => false
+;
+  </script>
+</div>
+<button id="operators-12-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-12');">
+  Run
+</button>
+
+
+<p>
+  The <code>==</code> operator converts these objects on either side to the same type and then returns true because 
+  their values are the same.  The <code>===</code> operator understands that the objects are not of the same type and 
+  therefore immediately returns false without even looking at their values.
+</p>
+
+<hr />
+<a class="goto-target" id="bitwise-operators"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xbitwise-operators&#x27;).show();" onmouseout="$(&#x27;#xbitwise-operators&#x27;).hide();">Bitwise Operators</h2>
+    <h2><a id="xbitwise-operators" style="display:none" class="d-block pl-12 header-anchor" href="#bitwise-operators">#</a></h2>
+</div>
+
+
+
+<p>
+  The table below summarizes the bitwise operators in JavaScript:
+</p>
+<div class="table-box">
+  <table class="table table-md bg-cream-100">
+    <tr>
+      <th style="width:100px;">Operator</th>
+      <th style="width:70px;">Usage</th>
+      <th style="width:430px;">Result</th>
+    </tr>
+    <tr>
+      <td>Bitwise AND</td>
+      <td>a & b</td>
+      <td>Returns 1 for each bit position where both operands are 1</td>
+    </tr>
+    <tr>
+      <td>Bitwise OR</td>
+      <td>a | b</td>
+      <td>Returns 1 for each bit position where either operand is 1</td>
+    </tr>
+    <tr>
+      <td>Bitwise XOR</td>
+      <td>a ^ b</td>
+      <td>Returns 1 for each bit position where either but not both are 1</td>
+    </tr>
+    <tr>
+      <td>Left shift</td>
+      <td>a << b</td>
+      <td>Shifts in binary fashion all bits one position to the left; discarding the left bit and filling the right bit with 0.</td>
+    </tr>
+    <tr>
+      <td>Right shift</td>
+      <td>a >> b</td>
+      <td>Shifts in binary fashion all bits one position to the right, discarding the right bit. This operations maintains the original sign (+ or -).</td>
+    </tr>
+    <tr>
+      <td>0-fill right shift</td>
+      <td>a >>> b</td>
+      <td>Shifts in binary fashion all bits one position to the right, discarding the right bit and filling the left bit with 0.</td>
+    </tr>
+  </table>
+</div>
+
+<p>
+  JavaScript does not support an integer type. All numbers in JavaScript are stored in 64-bit floating 
+  point format i.e. double precision floating point. The bitwise operators that manipulate numbers at 
+  the bit level do not perform operations directly on this 64-bit floating-point representation. 
+  Instead, they coerce the numeric values to signed 32-bit integers, do the necessary operation, 
+  and again convert the result back to floating point format. This conversion has a performance impact.
+</p>
+
+<p>
+  You get the correct results for only up to 32 bits. During the conversion to 32-bit, the fractional 
+  part and any bits beyond the 32nd are dropped. If you have more bits than that, the value gets rounded 
+  to the nearest representable floating-point number.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-13');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-13" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-13">var a = 0xFFFFFFFFF;     // =&gt; 36 bits all set to 1&#xD;&#xA;var b = 0xFFFFFFFFF;     // =&gt; 36 bits all set to 1&#xD;&#xA;var c = a &amp; b;           // bitwise AND&#xD;&#xA;&#xD;&#xA;console.log(c);          // =&gt; -1&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var a = 0xFFFFFFFFF;     // =&gt; 36 bits all set to 1&#xD;&#xA;var b = 0xFFFFFFFFF;     // =&gt; 36 bits all set to 1&#xD;&#xA;var c = a &amp; b;           // bitwise AND&#xD;&#xA;&#xD;&#xA;console.log(c);          // =&gt; -1&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-13" style="display:none;">
+  <script>
+      var a = 0xFFFFFFFFF;     // => 36 bits all set to 1
+var b = 0xFFFFFFFFF;     // => 36 bits all set to 1
+var c = a & b;           // bitwise AND
+
+console.log(c);          // => -1
+;
+  </script>
+</div>
+<button id="operators-13-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-13');">
+  Run
+</button>
+
+
+<p>
+  You may expect that c's value has all 36 bits set to 1 following the bitwise & operation, 
+  but because of the conversion to 32-bits that is not the case.  JavaScript converts to 32-bit, 
+  executes the bitwise AND operation, and the resulting 32-bits are all set to 1 which is equal to -1.
+</p>
+
+<p>
+  Let's look at an example with floating point numbers:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-14');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-14" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-14">var a = 2.6;     // represented as bits 0010, fractional part discarded&#xD;&#xA;var b = 6.2      // represented as bits 0110, fractional part discarded&#xD;&#xA;var c = a &amp; b;   // =&gt; bits 0010, which is equal to 2 &#xD;&#xA;&#xD;&#xA;console.log(c);  // =&gt; 2&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var a = 2.6;     // represented as bits 0010, fractional part discarded&#xD;&#xA;var b = 6.2      // represented as bits 0110, fractional part discarded&#xD;&#xA;var c = a &amp; b;   // =&gt; bits 0010, which is equal to 2 &#xD;&#xA;&#xD;&#xA;console.log(c);  // =&gt; 2&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-14" style="display:none;">
+  <script>
+      var a = 2.6;     // represented as bits 0010, fractional part discarded
+var b = 6.2      // represented as bits 0110, fractional part discarded
+var c = a & b;   // => bits 0010, which is equal to 2 
+
+console.log(c);  // => 2
+;
+  </script>
+</div>
+<button id="operators-14-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-14');">
+  Run
+</button>
+
+
+<p>
+  Strangely, if you use <code></code>NaN, <code>Infinity</code>, or <code>-Infinity</code> as
+  operands in bitwise operations, they are converted to 0.
+</p>
+
+<p>
+  In all C-like languages, bitwise operators are extremely fast. Until recently, they were slow 
+  in JavaScript but the latest versions of web browsers can JIT-compile JavaScript code. These 
+  operations have accelerated enough to be useful.
+</p>
+
+<p>
+  Bitwise manipulations are typically close to the hardware and therefore they don't come up 
+  very often in JavaScript programming.
+</p>
+
+<p>
+  A common mistake it to use bitwise & and | operators instead of logical && and || operators. 
+  This can lead to hard-to-detect bugs. Here is what may happen. Say we have a variable x with a value 
+  of 5 and you have mistakenly typed & instead of &&.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('operators-15');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-operators-15" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-operators-15">var x = 5;&#xD;&#xA;&#xD;&#xA;if (x &gt; 5 &amp; x &lt; 8) {&#xD;&#xA;    console.log(true);&#xD;&#xA;} else {&#xD;&#xA;    console.log(false);&#xD;&#xA;}&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var x = 5;&#xD;&#xA;&#xD;&#xA;if (x &gt; 5 &amp; x &lt; 8) {&#xD;&#xA;    console.log(true);&#xD;&#xA;} else {&#xD;&#xA;    console.log(false);&#xD;&#xA;}&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="operators-15" style="display:none;">
+  <script>
+      var x = 5;
+
+if (x > 5 & x < 8) {
+    console.log(true);
+} else {
+    console.log(false);
+}
+;
+  </script>
+</div>
+<button id="operators-15-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'operators-15');">
+  Run
+</button>
+
+
+<p>
+  This is false, which is the same if you had typed the && operator: <code >if (x<=5 && x>7)</code>.  
+  Although we are getting the expected result, we have improperly used a logical & operator which is 
+  intended for bit-level operations only.  Again, be aware of this mistake as it can lead to difficult 
+  to find bugs.
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="variables.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; JavaScript Variables &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="conditionals.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; JavaScript Conditionals &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+          <div class="bg-light p-10 my-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css.html">CSS Tutorial</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/selectors.html">CSS Selectors</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/borders.html">CSS Borders</a></li>
+
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/flex.html">CSS Flex</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/grids.html">CSS Grid</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/tables.html">CSS Tables</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/notfound.html">CSS Units</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/fonts.html">CSS Fonts</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/animation.html">CSS Animation</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/hover.html">CSS Hover</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/images.html">CSS Images</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/comments.html">CSS Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" xstyle="flex: 0 0 230px">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">Operators</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#arithmetic-operators">Arithmetic</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#string-operators">String</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#comparison-operators">Comparison</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#assignment-operators">Assignment</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#logical-operators">Logical</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#infinity-nan">Infinity, NaN</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#rounding">Rounding</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#increment-decrement">&#x2B;&#x2B; and --</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#equality-operators">== and ===</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#bitwise-operators">Bitwise</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+
+    let runbutton = function (button, model) {
+      var n = '#' + model;
+      var text = button.innerText;
+      if (text == "Run") {
+        $(n).slideDown(300);
+        button.innerText = "Clear";
+      } else {
+        $(n).slideUp(300);
+        button.innerText = "Run";
+      }
+    };
+
+    function copy(id) {
+      var stor = document.createElement("textarea");
+      stor.setAttribute("contentEditable", true);
+      stor.innerHTML = document.getElementById('copy-' + id).innerHTML;
+      stor.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+      document.body.appendChild(stor);
+      stor.focus({ preventScroll: true });
+      stor.focus();
+
+      document.execCommand("copy");
+      document.body.removeChild(stor);
+
+      $('#show-' + id).fadeIn('fast').delay(1200).fadeOut('slow');
+    }
+
+
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/javascript/operators by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:05:03 GMT -->
+</html>

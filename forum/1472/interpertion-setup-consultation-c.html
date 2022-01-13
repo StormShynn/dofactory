@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/forum/1472/interpertion-setup-consultation-c by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:47:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interpretation Setup Consultation (C#) - Dofactory</title>
+    <meta name="keywords">
+    <meta name="description" content="Topic: Interpretation Setup Consultation (C#)">
+
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="interpertion-setup-consultation-c.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../../index.html">
+        <img src="../../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../../about.html">About Us</a>
+            <a class="dropdown-item" href="../../story.html">Our Story</a>
+            <a class="dropdown-item" href="../../customers.html">Customers</a>
+            <a class="dropdown-item" href="../../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../../login.html">Login</a>
+          <a class="btn btn-join " href="../../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        
+<div class="container pb-70">
+    <div class="row pt-30">
+
+        <div><i class="icon icon-arrow-left"></i> &nbsp;<a rel="nofollow" href="javascript:history.back();">Back to list</a></div>
+
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold">Views:&nbsp;&nbsp; 11.1K</span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold">Replies:&nbsp; 2</span></div>
+                    <div class="pl-10 pt-15"><span class="font-weight-semibold text-extra-muted">Archived</span></div>
+
+                </td>
+                <td class="pl-20 pt-3">
+
+                    <div><h1 class="font-weight-semibold font-25" style="color:#345;">Interpretation Setup Consultation (C#)</h1></div>
+                    <div class="">Hello. This is my first question ever. Party right here. Now, onto the question!<br />
+<br />
+<span style="font-weight: bold">Background information:</span><br />
+I am creating a framework for a game. It is a M(ulti) U(ser) D(ungeon) or a text based imagination driven interactive book or at least that's how I see it. I'm taking an approach to it that is hopefully rather fresh. I have not really looked into all the different ones already in existence because I do not want the vision I have to be tainted (you will not change my mind on this). Enough about that though. Right now I am working on the command text interpretation system.<br />
+<br />
+I view all input from the user to fall&nbsp;into the following 6 categories:<br />
+<br />
+<span style="font-weight: bold">Actions</span> - grab/touch/look/feel<br />
+<span style="font-weight: bold">Action Arguments</span> - the action &quot;stand&quot; takes an argument &quot;up&quot; (things that indicate how-to do an action)<br />
+<span style="font-weight: bold">Quantity Indicators</span> - some/three/dozen/all<br />
+<span style="font-weight: bold">Identity References</span> - my/he/it/Bob/them<br />
+<span style="font-weight: bold">Identity Descriptors</span> - dark/blue/tall/ignorant<br />
+<span style="font-weight: bold">Order of Execution</span> - before/after/next/previous/then/and<br />
+<br />
+The idea is that <span style="font-weight: bold">Actions</span> know what they need to look for. The action &quot;grab&quot; knows how to check for a who or a what and possibly a quantity in the command text. If multiple actions are present they execute in the order they are found unless <span style="font-weight: bold">Order of Execution</span> modifies are present. Now this is all swell and dandy but what exactly is my question?<br />
+<br />
+<span style="font-weight: bold">The question:</span><br />
+I am all about coding simplicity. Easy to understand readable flexible code design as I am sure most of the people on this site are. I picture there being three steps to interpenetration:<br />
+<br />
+<ol>
+<li>Filter the command text of ignorable words (like &quot;the&quot;) and excess garbage</li>
+<li>Re-order, if necessary, based on any <span style="font-weight: bold">Order of Execution</span> modifiers</li>
+<li>Execute the <span style="font-weight: bold">Actions</span>.</li></ol>I do not plan on doing <span style="font-style: italic">all </span>the development of the interpretation library so I want people to simply have to create the actions, quantity indicators, or order of execution words. <span style="font-weight: bold">Is there a pattern(s) or a way I could set things up to achieve this?</span> I may not need a pattern to do what I want to do but I do want to consult with those more wise to evaluate what I may be missing. I am thinking about using a &quot;as long as there is another action&quot; Chain of Responsibility setup with the actions using the Command pattern. Maybe, simply using the Command pattern and executing based on a possibly reordered List&lt;IActionWords&gt; calling &quot;Execute(Context, CommandText)&quot; would work. I'm not sure what I want yet.<br />
+<br />
+All of this is design work. A string of text comes in and I am deciding how I want to handle it from there. Please feel free to suggest anything as I have nothing more than &quot;string comes in now what?&quot;.<br />
+<br />
+Thanks in advance! I do appreciate the time it takes to wrap you're head around what I've said and also the time it takes to devise and respond to my question. <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /></div>
+                    <div class="text-right p-10">Karl Wessels, Jul 25, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+
+
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;1</h5></div>
+
+
+                    <div class="">Let me start off by thanking you. I was quite suprised to see your reply but even more so when I noticed that you (maybe) created your account to just reply to my question! Sweet ^_^<br />
+<br />
+I'll address what you have me in much the same manner it was given.<br />
+<br />
+<span style="font-weight: bold;">1.</span> I wouldn't use a third party. I'll take concepts from other things but as for simply using them is not something I plan to do. It creates a dependency in most cases. I want full liberities with the design and implementation of my model/system.<br />
+<br />
+<span style="font-weight: bold;">2. </span>You did lose me a little bit in your bird example but let me try to give me thoughts on it.<br />
+<br />
+&quot;Put bird in cage&quot; is definitly viable. Now, I add an aviary to my game where there are hundreds of birds. I'm not sure what you mean by the implied &quot;the&quot; but here is how I see things going down. &quot;Put&quot; should be intelligent enough to go:<br />
+<br />
+put&gt; what?&gt; looks at the identity reference &quot;bird&quot; &gt; can we find a sole instance of bird? &gt; no &gt; is a quanity given &gt; no &gt; put fails.<br />
+<br />
+what if it was &quot;put five bird in cage&quot; though incorrect grammatically someone could try it:<br />
+<br />
+put&gt; what?&gt; looks at the identity reference &quot;bird&quot; &gt; can we find a sole instance of bird? &gt; no &gt; is a quanity given &gt; yes &gt; are there identity descriptors given? &gt; no &gt; take first 5 or less identities (entities/objects) that match &quot;bird&quot; and put them into cage (assuming it allows that) up to however many will fit.<br />
+<br />
+I foresee the actions being rather intellegent about what they do; developing with the needs of my game/framework. I plan to let the objects, cage in this case, handle the addition of birds.<br />
+<br />
+I really do not forsee &quot;the&quot; really being used. It simply states &quot;an identity reference is coming up&quot; or more often it connects words for the tongue. I've tried to think of cases where it matters but so far I haven't. I will be consulting a few &quot;english major&quot; friends of mine as I progress.<br />
+<br />
+<span style="font-weight: bold;">3.</span> It seems like the purpose of my reordering step is a bit foggy. First, let me say that my game is not going to be like any prior. I am always asking &quot;What we would be the best version of this idea/feature be?&quot; then proceeding to *try* and create it. Let's just say I have a big dream for this game. Anyhoo!<br />
+<br />
+Take the sentence, &quot;grab the hat after standing up&quot;, which to me is a worthy command in game. Without reordering it I would &quot;grab the hat&quot; then &quot;stand up&quot; while the command clearly was intended to be the other way around. I want this type of syntax to be do-able because it allows more natural combo commands. In addition to that eventually the command input will be wired to a voice-to-text system (I think it will be easy to do).<br />
+<br />
+<span style="font-weight: bold;">4.</span> I believe the parts of speech are irrelevant. The reason being I look at them in more simpler terms being the six I mentioned above almost programmatic if you will.<br />
+<br />
+&quot;My&quot; says &quot;The one who gave the command&quot; so then &quot;My knife&quot; says &quot;The giver of the command's knife.&quot;<br />
+<br />
+The reason for breaking things down differently is to avoid the pitfall of an expected format. Using the examples you gave as reference it seems far more complex than letting the actions define what they do. Take &quot;statistics&quot; for example. If that was the entire command it would come back with &quot;of what?&quot; because is that not what you thought when you read it? Now, &quot;statistics for Bob&quot; it would come back with &quot;Bob is age 24 currently eating an ice cream cone in his villa in Arizona.&quot; for example. The word knows what it expects to operate on and how to find it. You could leave out &quot;for&quot; and that would be shorthand because it is merely a connector in this case. <br />
+<br />
+I can see why you might think this &quot;would be fiendish to hand code&quot; but it really only becomes that when you try to add a lot to a simple thing. As we (the developers of the framework) have a need for new action or an existing one to do more it can be incorperated then directly into the action.<br />
+<br />
+5. I love your examples. WE GET CHICKEN! (that might be an easter egg :P)<br />
+<br />
+You bring up some good points to consider. When throwing a bird does the bird have a state and how does that affect the action.<br />
+<br />
+All I can tell you now is that as I am thinking about the command system I am also modeling out my Obj (objects since C# has it as a keyword) and Entity models. I forsee my model developing as my actions are. In order to &quot;unlock and open the door&quot; I first must have a door and the commands unlock and open.<br />
+<br />
+6. This really made me smile/laugh because of your examples.<br />
+<br />
+&quot;throw axe&quot; would expect a direction or a target.<br />
+<br />
+&quot;take axe at dwarf&quot; might operate like this: take&gt; what?&gt; found axe&gt; at dwarf are not actions therefore there is nothing to do. <br />
+<br />
+however given &quot;take axe from dwarf&quot;: take&gt; what? found axe&gt; is there a what or who?&gt; found from&gt; from what/who?&gt; found dwarf&gt; take the axe from the dwarf (which I am guessing would trigger off an event on the dwarf).<br />
+<br />
+&quot;take dwarf&quot;: take&gt; what?&gt; dwarf found&gt; is dwarf take-able&gt; no&gt; do nothing.<br />
+<br />
+&quot;take knife&quot;: take&gt; what?&gt; knife word found&gt; can we resolve a knife reference&gt; no&gt; do nothing.<br />
+<br />
+7. This is where my mind is grid locked at the moment. The reason I brought up the command pattern is that it *could* be called via &quot;Action.Execute(commandText)&quot; in which the Action knows how to execute it. The next part I question is from there how do we execute the next command if it exists which is why I brought up the chain of responsibility pattern at least for the idea of &quot;passing it off to the next&quot;. <br />
+<br />
+This is the part I am trying to map out. I'd like to keep it to the &quot;three steps to interpertation&quot; I mentioned about. How it actually comes together is really up to the imagination. Maybe the &quot;thought process&quot; I use in response 6 will give you more of an idea of what I got/am thinking.<br />
+<br />
+I'll keep reviewing what you answered above and see if it sparks any ideas. You have given me a lot of good things to think about as well as a good laugh or two :) I'd love to keep discuss things with you or even work with you. If you're interested in either then perhaps we could get some email correspondence going. I won't be offended at all if you are not.<br />
+<br />
+Thank you! Catch you later.<br />
+<br /></div>
+                    <div class="text-right p-10">Karl Wessels, Jul 28, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;2</h5></div>
+
+
+                    <div class=""><p><br />
+If I'm understanding your goal right, you want to create an extensible engine, where other developers are able to add new commands (and, perhaps, new objects that can be maniuplated, etc.). </p>
+<p>Here are a bunch of thoughts generated by your question. Some may be way off the mark - in which case please forgive me. Hopefully, however, some will be helpful and will give you new directions of inquiry as you design your system.</p>
+<p>1. <span style="font-weight: bold; text-decoration: underline;">You can rule out third party parsers</span><br />
+There are a number of parsers &quot;out there&quot; (GOLD comes to mind, but I know there are others).&nbsp; Since a parser generator expects a fully defined grammar (I think this is true in the general case) none will meet your need since you want to be able to discover new commands at run time - and parser generators need to know the text of keywords are the time the parser is generated.</p>
+<p>2. <span style="font-weight: bold; text-decoration: underline;">Planning for complexity</span><br />
+You may need to do a little more thinking about the possible complexity of the game you plan to create, before you can create an engine that meets your need. Here's a scenario that bears thinging about:</p>
+<p>Consider a room with a bird in it; the adventurer has a cage.</p>
+<p>&quot;Put bird in cage&quot; is a viable command.</p>
+<p>Now, consider that you'd like to add an aviary to your game - where there are several (maybe hundreds) of birds in the room. An implied &quot;the&quot; may not be sufficient - maybe you'll want the user to be able to say &quot;put five birds in cage&quot; or &quot;fill cage with birds&quot; (requires bird size and cage volume, or cage bird count capacity, constraints, etc.).</p>
+<p>The above scenario is intended to illustrate that you need to strongly consider whether ignoring words like &quot;the&quot; will always work, or will only be acceptable depending on context. This greatly affects your parser.</p>
+<p>3. <span style="font-weight: bold; text-decoration: underline;">Reordering</span><br />
+The text-based adventure games I've played require a single command on a line. So, (in those games, at least) there is no need to reorder commands, or to queue them, etc.&nbsp; </p>
+<p>Perhaps you plan to implement some temporal constraint on commands - so that commands issued on the same command line have a different relationship with each other than commands issued on distinct command lines do.</p>
+<p>Either way, I'd make my engine start by splitting the input on the sequencing keywords; it can then sort the now distinct commands, and submit them one at a time to the true command interpreter - just as if they had been typed one per input line. And, if you have a 'commands on the same line are related' you can pass to the command interpreter a token of some kind (a line number, perhaps) that indicates their relationship.</p>
+<p>The bottom line is that I see the reordering action as a step prior to true command interpretation, making the latter simpler.</p>
+<p>4. <span style="font-weight: bold; text-decoration: underline;">Command interpretation</span><br />
+&nbsp;&nbsp; This, of course, is the hard part, and I suspect that you have some more thinking to do before you're ready to implement your engine. (Look at your Identity References examples: 'my' and 'Bob' (or 'knife') are very different parts of speech, so cannot both be identity references (&quot;my&quot; doesn't specify the thing in question, whereas &quot;Bob&quot; very concretely specifies a thing).&nbsp; &quot;my knife&quot;, &quot;Bob's knife&quot; and &quot;Bob&quot; are all equivalent parts of speech (things - nouns), with two of those phrases having extra content that selects a specific knife.)<br />
+&nbsp;&nbsp; I recommend that you write a description of the grammar you want to implement and then experiment with dozens of possible commands to see if it works. <br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; Here's an example (which is probably overcomplex and far from workable, but it hopefully illustrates an approach to designing your interpreter):<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; &lt;command&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; := &lt;action&gt; &lt;object phrase&gt; [&lt;action modifier phrase&gt;]<br />
+&nbsp;&nbsp; &lt;action&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; := {command name from internal dictionary}<br />
+&nbsp;&nbsp; &lt;object phrase&gt;&nbsp;&nbsp; := [&lt;object selector&gt;] [&lt;adjective&gt;] &lt;object&gt; [&lt;post-selector&gt;]<br />
+&nbsp;&nbsp; &lt;object&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; := {object name from internal dictionary; singular and plural forms accepted interchangeably}<br />
+&nbsp;&nbsp; &lt;object selector&gt; := my | the | &lt;number&gt; | &lt;posessive&gt; | his | hers <br />
+&nbsp;&nbsp; &lt;number&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; := {digit string} | one | two | some | any | dozen | ...<br />
+&nbsp;&nbsp; &lt;post-selector&gt;&nbsp;&nbsp; := in the corner | behind the door | ...<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; Where <br />
+&nbsp;&nbsp;[...]&nbsp;&nbsp;&nbsp; represents an optional clause<br />
+&nbsp;&nbsp;x | y&nbsp;&nbsp;&nbsp; represents a choice of x or y<br />
+&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp; means I couldn't be bothered to enumerate all the possible choices!<br />
+&nbsp;&nbsp;<br />
+&nbsp;Note that the grammar above is almost certainly overkill for a text-based game - and would be fiendish to hand code. So - researching how other text-based games interpret their input might be useful.<br />
+&nbsp;<br />
+5. <span style="font-weight: bold; text-decoration: underline;">Objects and actions</span><br />
+&nbsp;&nbsp; Before beginning to create an object model for your application, I'd spend some time thinking about how objects and actions are related and, sometimes, constrained. Here are some examples of what I'm thinking:<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; You can put a bird in a cage. You can probably put stones, a lamp and a water bottle in the cage, too, if you care to.<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; You can throw a stone. Can you throw a bird? What happens when a stone is thrown (and how far will it travel)? What happens when a bird is thrown (is it alive, asleep, stunned, dead, etc.)?<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; You can light a lamp, but not a rock. What happens when you try to light the bird? (Grilled chicken?)</p>
+<p>6. <span style="font-weight: bold; text-decoration: underline;">Incomplete and meaningless commands</span><br />
+&nbsp;&nbsp; You can 'take knife', but can you 'throw axe'? Or must you 'throw axe at dwarf'?<br />
+&nbsp;&nbsp; What does it mean if the user types 'take axe at dwarf'? Or, 'take dwarf'?<br />
+&nbsp;&nbsp; What does your engine do if the user types 'take knife' and there is no knife in the room to take?<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; You need to think about these questions as you design your model.&nbsp; <br />
+&nbsp;&nbsp; <br />
+7. <span style="font-weight: bold; text-decoration: underline;">Design Patterns</span><br />
+&nbsp;None of the above even begins to address OO design patterns, but you will need to address the kinds of concern I raise above before you can start designing an object model for your engine.<br />
+&nbsp;<br />
+&nbsp;Let's assume that you've thought through the above and have some solid conclusions. What are some of the obvious objects in your game?<br />
+&nbsp;* TheGame (probably a container for everything else)<br />
+&nbsp;* Player(s)<br />
+&nbsp;* Objects (rocks, birds, etc.)<br />
+&nbsp;* Places &amp; 'connectors' (doorways, tunnels, transport portals, etc.)</p>
+<p>&nbsp;I keep trying to find a way to use the Command Pattern, but it just doesn't seem to fit: each type of object (and place) likely has different actions that it can, or cannot, perform.&nbsp; If there are hundreds of objects in your world, and some can be thrown while some can't, how do you express the throwability of an object, using the Command Pattern?&nbsp;&nbsp;The point of the command pattern is that each command implements a stragety (Strategy Pattern) that depends on all commandable objects having a common set of properties, - but each command is completely agnostic about the specific type of object being commanded (and objects are command-agnostic, too, so an IsThrowable property is out of the question). </p>
+<p><br />
+&nbsp;SO... to have a model where other developers can add new commands you have to have a pre-defined set of modifiable attributes (and context, I suppose: the &quot;take&quot; command may move the target object from being contained in the room to being contained in the player's backpack). So, custom objects can only meaningfully expose the same set of properties (any extra properties will be unrecognized by commands, that only know about a particular interface).</p>
+<p><br />
+&nbsp;AH! Lets say your friend Joe wants to implement some specialized objects (magic spells) and specialized commands to work with them. I guess he could create objects that implement the mandatory IGameObject interface, but also implement the IMagicObject interface; his set of commands have access to the IGameObject properties, but can use reflection to discover if the object at hand also implements IMagicObject and, if it does, manipulates the object accordingly. <br />
+&nbsp;SO - maybe the command pattern will work for you, after all.<br />
+&nbsp;<br />
+<span style="font-weight: bold; text-decoration: underline;">I'm Done</span><br />
+I know I've not directly answered your question, for which I apologise, but I hope that some of what I've said makes sense and is useful. It may be that after you've thought about the interactions between&nbsp;(the) player(s), places&nbsp;and objects that you want to be able to implement, you'll discover what design patterns will support you.<br />
+&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp; </p></div>
+                    <div class="text-right p-10">Chris Trelawny-Ross, Jul 26, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+<br />
+<br />
+
+
+
+
+
+
+
+
+    </div>
+
+    
+  <div class="box-shadow" style="border-top:1px solid #e2ecee;">
+    <div class="container">
+      <div class="row" style="padding:60px 0 10px 0;">
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 pb-15"><img src="../../img/dofactorylogo.png" height="30" /></div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../about.html">About Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../story.html">Our Story</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../customers.html">Customers</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../contact.html">Contact Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../faq.html">FAQs</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum.html">Forum</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../explore.html">Explore Forum</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../login.html">Login</a> &nbsp; <a class="footer-link" href="../../join.html">Join</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted ">Products</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../products.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-net.html">Dofactory .NET</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-sql.html">Dofactory SQL</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-js.html">Dofactory JS</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-bundle.html">Dofactory Bundle</a></li>
+          </ul>
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-8 text-muted">Pricing</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../pricing.html">Product Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/bundle.html">Bundle Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/compare.html">Compare Editions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Demos</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../showcases.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/analytics.html">Analytics App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/ecommerce.html">Ecommerce App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/saas.html">SaaS App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/crm.html">CRM App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/app-factory.html">33-Day App Factory&trade;</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-3 mb-2 ">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Tutorials</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../tutorials.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql.html">SQL Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql/reference.html">SQL Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html.html">HTML Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html/ref.html">HTML Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../net/design-patterns.html">.NET Design Patterns</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../csharp-coding-standards.html">C# Coding Standards</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../javascript.html">JavaScript Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../connection-strings.html">Connection Strings</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row mx-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="row py-10">
+        <div class="col pl-35">
+          <div class="font-weight-bold font-18 merriweather text-muted">Stay Inspired!</div>
+        </div>
+      </div>
+
+      <div class="row pt-3 pb-10">
+        <div class="col-12 col-md-6 xcol-md-5 pl-35">
+          Join other developers and designers who have
+          already signed up for our mailing list.
+        </div>
+        <div class="col-12 col-md-4 xcol-md-4 pl-35">
+
+          
+<form method="post" action="https://www.dofactory.com/emaillist">
+    <div class="input-group mb-3 pt-1">
+        <input type="text" class="form-control" placeholder="Your email..." aria-label="your-email" aria-describedby="your-email" style="max-width:260px;" data-val="true" data-val-email="Invalid email address" data-val-required="Email is required." id="YourEmail" name="YourEmail" value="">
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-green" style="height:37px;">
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <span class="field-validation-valid" data-valmsg-for="YourEmail" data-valmsg-replace="true"></span>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7Eqsf7SxvkIVkyzcpqh5DvE_6-HeR1qTQu9vN0ERCsFXcrzD2Z0BNFSi6nn8eHuKytKOeK-bGv24fo6dOt4vcqgcMVldTrMoXgkup2pRRk5izvl9MYMyCuP9wXtqCO5f9D2A" /></form>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row mx-10 mt-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="d-flex flex-lg-row flex-column p-20 mb-15 font-14">
+        <div class="pb-1 ">
+          <a href="../../terms.html" class="text-muted">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../privacy.html" class="text-muted">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../licensing.html" class="text-muted">Licensing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../eula.html" class="text-muted">EULA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../sitemap.html" class="text-muted">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="pb-1">
+          &copy; Data &amp; Object Factory, LLC. 
+        </div>
+        <div class="pb-1 ml-lg-auto">
+          Made with &nbsp;<img src="../../img/heart.png" style="width:14px;" />&nbsp; in Austin, Texas. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vsn 1.3.0
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+    <script type="text/javascript">
+        $(function () {
+
+            Dofactory.Utils.ScrollToTarget.start();
+
+        });
+    </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/forum/1472/interpertion-setup-consultation-c by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:47:58 GMT -->
+</html>

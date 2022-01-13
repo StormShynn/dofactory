@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/forum/1311/why-do-we-need-to-use-abstract-class by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:47:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>When would you use an Abstract class? - Dofactory</title>
+    <meta name="keywords">
+    <meta name="description" content="Topic: When would you use an Abstract class?">
+
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="why-do-we-need-to-use-abstract-class.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../../index.html">
+        <img src="../../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../../about.html">About Us</a>
+            <a class="dropdown-item" href="../../story.html">Our Story</a>
+            <a class="dropdown-item" href="../../customers.html">Customers</a>
+            <a class="dropdown-item" href="../../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../../login.html">Login</a>
+          <a class="btn btn-join " href="../../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        
+<div class="container pb-70">
+    <div class="row pt-30">
+
+        <div><i class="icon icon-arrow-left"></i> &nbsp;<a rel="nofollow" href="javascript:history.back();">Back to list</a></div>
+
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold">Views:&nbsp;&nbsp; 145.1K</span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold">Replies:&nbsp; 9</span></div>
+                    <div class="pl-10 pt-15"><span class="font-weight-semibold text-extra-muted">Archived</span></div>
+
+                </td>
+                <td class="pl-20 pt-3">
+
+                    <div><h1 class="font-weight-semibold font-25" style="color:#345;">When would you use an Abstract class?</h1></div>
+                    <div class="">Hello everyone,<br />
+<br />
+This&nbsp;is probably a&nbsp;very easy&nbsp;question&nbsp;you guys, but when would we need to use an Abstract class?<br />
+<br />
+Thank you<br />
+Satya</div>
+                    <div class="text-right p-10">Satya Chauhan, Feb 02, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+
+
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;1</h5></div>
+
+
+                    <div class="">When to use Abstract and when to use Interface
+</span></b></p>
+1.&nbsp;&nbsp; </span></span>If you are creating something that provides common functionality to unrelated classes</b>, use an interface
+
+</span></p>
+2.&nbsp;&nbsp; </span></span>Abstract classes allow you to provide default functionality</b> for the subclasses.
+
+</span></p>
+3.&nbsp;&nbsp; </span></span>If you are creating something for objects that are closely related in a hierarchy</b>, use an abstract class
+
+</span></p>
+4.&nbsp;&nbsp; </span></span>If the base class will be changing often and an interface was used instead of an abstract class, we are going to run into problems. Once an interface is changed, any class that implements that will be broken. Now if it’s just you working on the project, that’s no big deal. However, once your interface is published to the client, that interface needs to be locked down. At that point, you will be breaking the clients code
+
+</span></p>
+5.&nbsp;&nbsp; </span></span>Compared to interfaces abstract classes can have implementation. Without implementation an abstract class does the same as an interface but C# allows you to inherit from / implement multiple interfaces but inherit from one base class only.
+
+</span></p>
+6.&nbsp;&nbsp; </span></span>An interface once deployed is &quot;frozen&quot; - you must not change a deployed interface. If you change an interface you break binary compatibility but you can extend an abstract class as long as you don't change method signatures.<br />
+
+
+</span>
+</span></p>
+<br />
+Use an abstract class 
+</b></span></p>
+When creating a class library which will be widely distributed or reused—especially to clients, use an abstract class in preference to an interface; because, it simplifies versioning. This is the practice used by the Microsoft team which developed the Base Class Library. (COM was designed around interfaces.) 
+</span></p>
+Use an abstract class to define a common base class for a family of types. 
+</span></p>
+Use an abstract class to provide default behavior. 
+</span></p>
+Subclass only a base class in a hierarchy to which the class logically belongs. 
+</span></p>
+Use an interface
+</span></b></p>
+When creating a standalone project which can be changed at will, use an interface in preference to an abstract class; because, it offers more design flexibility. 
+</span></p>
+Use interfaces to introduce polymorphic behavior without subclassing and to model multiple inheritance—allowing a specific type to support numerous behaviors. 
+</span></p>
+Use an interface to design a polymorphic hierarchy for value types. 
+</span></p>
+Use an interface when an immutable contract is really intended. 
+</span></p>A well-designed interface defines a very specific range of functionality. Split up interfaces that contain unrelated functionality.
+
+</span></span></div>
+                    <div class="text-right p-10">Seema S, Oct 01, 2013</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;2</h5></div>
+
+
+                    <div class="">When you want a base class which should not be instantiated and have some common functionality for every class well as different implementation of a method in derived classes for other methods. <br />
+For more information you can see<br />
+<br />
+<a href="http://www.advancesharp.com/blog/1095/abstract-class-in-c-with-example" target="_self">Abstract Class in C# with Example</a><br /></div>
+                    <div class="text-right p-10">Sharp .Net, Aug 23, 2013</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;3</h5></div>
+
+
+                    <div class="">Basically Abstract class should be used for 'is-a' relationship and Interface should be used for 'has-a' relationship.<br />
+If we want to retrict all the subclasses must have certain functionality, then Abstract class with implementation is recomended. So, overriding already implemented member in the subclasses is not a good practice here.<br />
+<br />
+In a particular class, where there are more behaviours that&nbsp;will get change during runtime, then implementing from multiple interfaces are recommended. <br />
+<br /></div>
+                    <div class="text-right p-10">Vivekananda P, Feb 23, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;4</h5></div>
+
+
+                    <div class=""><span style="color: #555555; font-family: verdana, bitstream vera sans, helvetica, sans-serif; font-size: 12px; line-height: 17px; ">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; ">Abstract classes allow you to provide default functionality for the subclasses. If you plan on updating this base class throughout the life of your program, it is best to allow that base class to be an abstract class. Why? Because you can make a change to it and all of the inheriting classes will now have this new functionality. If the base class will be changing often and an interface was used instead of an abstract class, we are going to run into problems. Once an interface is changed, any class that implements that will be broken. Now if its just you working on the project, that’s no big deal. However, once your interface is published to the client, that interface needs to be locked down. At that point, you will be breaking the clients code.</p>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; ">Speaking from personal experiences, frameworks is a good place to show when and where to use both an abstract class and an interface. Another general rule is if you are creating something that provides common functionality to unrelated classes, use an interface. If you are creating something for objects that are closely related in a hierarchy, use an abstract class. An example of this would be something like a business rules engine. This engine would take in multiple BusinessRules as classes perhaps? Each one of these classes will have an analyze function on it.</p></span></div>
+                    <div class="text-right p-10">Ashish Dixit, Feb 18, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;5</h5></div>
+
+
+                    <div class="">I think the most of the answers above are explained the need for Base/derived classes. In my knowledge the abstract class will contain a concrete method which can not be override by the derived classes. Means if you DON'T want to change one basic business rule(the concrete method) defined in the base (abstract) class by the derived classes, then go for abstract class with the concrete method.</div>
+                    <div class="text-right p-10">Muralidharan Subramanian, Feb 14, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;6</h5></div>
+
+
+                    <div class="">As Ricky says. When two classes share the same properties or method the common denominator is your abstract class. There are many benefits aside from this. but when you have to change a property type for e.g. &nbsp;D.on't R.epeat Y.ourself</div>
+                    <div class="text-right p-10">Greg Stevenson, Feb 09, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;7</h5></div>
+
+
+                    <div class="">Let’s put it like this, let’s say you have a standard employee hierarchy you want to implement, you are going to have for e.g. a Chairman, Directors, Managers, Associates etc. Each of these is a <b>type of employee</b> so your employee class will be the abstract base class which will contain all of the common shared properties, methods etc. Now when you create your Manager class for e.g.&nbsp;it will inherit from the abstract&nbsp;Employee class&nbsp;and automatically have all of the various properties, methods etc that Employee has. If you think about it it doesn't make sense to create an instance of an Employee class but it does to create an instance of say the Manager class or an Associate class which makes it easy to know when to have a abstract class, just ask yourself does it make sense to instantiate X type of class and if the answer is no you are probably better off having it as an abstract class, this is not a hard and fast rule but a good guide. Another benefit of having an abstract base class is if you need to make a change you only need to make it in one place. This is only a very basic explanation and doesn’t cover all of the rules and reasons for abstract classes but I hope it sheds a little light on it for you. </p>
+</p>
+This may help you a little more.</p>
+<a href="http://www.codeproject.com/KB/cs/jmabstractclasses.aspx">http://www.codeproject.com/KB/cs/jmabstractclasses.aspx</a></p>
+</p>
+Good luck</p>
+Ricky<span style="font-family: arial; font-size: 10pt">
+</span></p></div>
+                    <div class="text-right p-10">Ricky Owen, Feb 09, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;8</h5></div>
+
+
+                    <div class="">Use Abstract class when there is a 'IS-A' relationship between classes. For example, Lion is a Animal, Cat is an Animal. So, Animal can be an abstract class with common implementation like no. of legs, tail etc.</div>
+                    <div class="text-right p-10">Pradip Shrestha, Feb 06, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;9</h5></div>
+
+
+                    <div class="">Hi Satya,<br />
+<br />
+Compared to interfaces abstract classes can have implementation. Without implementation an abstract class does the same as an interface but C# allows you to inherit from / implement multiple interfaces but inherit from one base class only.<br />
+<br />
+An interface once deployed is &quot;frozen&quot; - you must not change a deployed interface. If you change an interface you break binary compatibility but you can extend an abstract class as long as you don't change method signatures.<br />
+<br />
+Regards,<br />
+Torsten.</div>
+                    <div class="text-right p-10">Torsten Weber, Feb 02, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+<br />
+<br />
+
+
+
+
+
+
+
+
+    </div>
+
+    
+  <div class="box-shadow" style="border-top:1px solid #e2ecee;">
+    <div class="container">
+      <div class="row" style="padding:60px 0 10px 0;">
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 pb-15"><img src="../../img/dofactorylogo.png" height="30" /></div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../about.html">About Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../story.html">Our Story</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../customers.html">Customers</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../contact.html">Contact Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../faq.html">FAQs</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum.html">Forum</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../explore.html">Explore Forum</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../login.html">Login</a> &nbsp; <a class="footer-link" href="../../join.html">Join</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted ">Products</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../products.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-net.html">Dofactory .NET</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-sql.html">Dofactory SQL</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-js.html">Dofactory JS</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-bundle.html">Dofactory Bundle</a></li>
+          </ul>
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-8 text-muted">Pricing</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../pricing.html">Product Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/bundle.html">Bundle Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/compare.html">Compare Editions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Demos</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../showcases.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/analytics.html">Analytics App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/ecommerce.html">Ecommerce App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/saas.html">SaaS App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/crm.html">CRM App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/app-factory.html">33-Day App Factory&trade;</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-3 mb-2 ">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Tutorials</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../tutorials.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql.html">SQL Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql/reference.html">SQL Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html.html">HTML Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html/ref.html">HTML Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../net/design-patterns.html">.NET Design Patterns</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../csharp-coding-standards.html">C# Coding Standards</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../javascript.html">JavaScript Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../connection-strings.html">Connection Strings</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row mx-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="row py-10">
+        <div class="col pl-35">
+          <div class="font-weight-bold font-18 merriweather text-muted">Stay Inspired!</div>
+        </div>
+      </div>
+
+      <div class="row pt-3 pb-10">
+        <div class="col-12 col-md-6 xcol-md-5 pl-35">
+          Join other developers and designers who have
+          already signed up for our mailing list.
+        </div>
+        <div class="col-12 col-md-4 xcol-md-4 pl-35">
+
+          
+<form method="post" action="https://www.dofactory.com/emaillist">
+    <div class="input-group mb-3 pt-1">
+        <input type="text" class="form-control" placeholder="Your email..." aria-label="your-email" aria-describedby="your-email" style="max-width:260px;" data-val="true" data-val-email="Invalid email address" data-val-required="Email is required." id="YourEmail" name="YourEmail" value="">
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-green" style="height:37px;">
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <span class="field-validation-valid" data-valmsg-for="YourEmail" data-valmsg-replace="true"></span>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7Equ0kmyBRRNqBfNJyo8OUAb5hjx_Lte7QJZ_SJ6ZZH-E3_bmhTZ1iDFwdnO-pBFK9b2BAWYG4Qeu4Sn1RM62VcyaFhGV2TwgOO5eayvwJOS5yf6iChj4_VJQUPHOrkLJLR4" /></form>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row mx-10 mt-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="d-flex flex-lg-row flex-column p-20 mb-15 font-14">
+        <div class="pb-1 ">
+          <a href="../../terms.html" class="text-muted">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../privacy.html" class="text-muted">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../licensing.html" class="text-muted">Licensing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../eula.html" class="text-muted">EULA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../sitemap.html" class="text-muted">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="pb-1">
+          &copy; Data &amp; Object Factory, LLC. 
+        </div>
+        <div class="pb-1 ml-lg-auto">
+          Made with &nbsp;<img src="../../img/heart.png" style="width:14px;" />&nbsp; in Austin, Texas. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vsn 1.3.0
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+    <script type="text/javascript">
+        $(function () {
+
+            Dofactory.Utils.ScrollToTarget.start();
+
+        });
+    </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/forum/1311/why-do-we-need-to-use-abstract-class by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:47:44 GMT -->
+</html>

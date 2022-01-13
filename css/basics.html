@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/css/basics by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:48:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Basics - Dofactory</title>
+    <meta name="keywords" content="CSS, CSS Tutorial, Reference, Guide, Examples, Demos, Top, Best, Tips, Advice, Training, Learning, Courses, Lessons, Front-end, Programming, Code, Source">
+    <meta name="description" content="CSS is written as a series of rule-sets. A rule-set consists of a selector and a declaration block. A selector points to an HTML element at which a style will be applied (e.g. element, class or id).">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="basics.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        
+<style>
+
+  pre { font-weight: bold; margin-top: 30px; }
+  ol.linenums li { line-height: 22px; }
+
+  .prettyprint { font-size: 16px; }
+  .kwd { color: #0b7490; }
+  .lit, .str { color: #cc4500; }
+
+
+  /* ... review ... */
+
+  /*.atv { color: #139; }*/
+  .atv { color: #b7422c; }
+  /*.atn { color: #F45D48; }*/
+  .atn { color: #353768; }
+  /* too many keywords were incorrectly colored */
+  .kwd { color: #000000; }  
+
+  .prettyprint { background-color: #f6f7f8 !important; }
+
+  .tutorial hr { margin-top: 65px; margin-bottom: 5px; }
+
+  .tutorial .render button, .tutorial .render input[type="submit"], .render input[type="button"], .render input[type="reset"] { display: inline-block; font-weight: 400; text-align: center; white-space: nowrap; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; border: 1px solid transparent; padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; border-radius: 0.25rem; transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border: 1px solid #ccc; vertical-align: top; }
+  .tutorial .render button:hover, .tutorial .render input[type="submit"]:hover, .tutorial .render input[type="button"]:hover, .tutorial .render input[type="reset"]:hover { text-decoration: none; background-color: #dddddd; border-color: #bbb; }
+  .tutorial .render button:focus, .tutorial .render input[type="submit"]:focus, .tutorial .render input[type="button"]:focus, .tutorial .render input[type="reset"]:focus { outline: 0; border: 1px solid #999; }
+
+  .tutorial input[type="text"], .tutorial input[type="password"], .tutorial input[type="email"] { height: calc(2.25rem + 2px); padding: 0.375rem 0.75rem; font-size: 1rem; }
+
+  .tutorial .render select { outline: none; margin: 25px 0 10px; display: block; width: 180px; height: calc(2.25rem + 2px); padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; color: #495057; background-color: #fff; background-clip: padding-box; border: 1px solid #ced4da; border-radius: 0.25rem; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+
+  .tutorial em { font-weight: 500; font-style: normal;/*border: 1px dotted orangered; padding: 0.03em 0.30em 0.03em 0.25em; border-radius: 3px; font-style: normal;*/ }
+
+  /* enables autoscroll in flex and grid */
+  div { min-width: 0; }
+
+  /* multiple demo buttons */
+  .demo-links button { font-size: 17px; padding: 2px 8px 4px; background: #fff; margin: 5px 5px 5px 5px; border-radius: 3px; border: 1px solid #999; transition-duration: .25s }
+  .demo-links button:hover, .demo-links button:focus, .demo-links button:active, .tutorial .demo-links button.selected-style { background: #333; color: white; cursor: pointer; outline: none; }
+  
+  .tutorial p.demo-links { margin-right: 0 !important;}
+  /* Interactive style selection menus */
+  /*.tutorial .demo-links button.selected-style { background: #b8eeef; color: black; }*/
+  .muted-bar { color: #999; }
+
+  .tutorial div.items p:first-child { margin-top:35px !important;}
+  .tutorial .render p { margin-right: 0 !important;}
+
+  .tutorial .for-details { font-size: 15px; padding-top: 10px; }
+
+  .tutorial h3 { font-weight: 500; }
+  
+</style>
+
+<link rel="stylesheet" href="../tutorial/css/responsive1bd2.css?v=kbWbNIwNk4mwtaCxbJqtcx_bZolfxojMY9VsNm1mX_Y" />
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="../img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        CSS Tutorial&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="../css.html">CSS Tutorial</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="basics.html">CSS Basics</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="selectors.html">CSS Selectors</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="specificity.html">CSS Specificity</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="colors.html">CSS Colors</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="color-names.html">CSS Color Names</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="backgrounds.html">CSS Backgrounds</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="images.html">CSS Images</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="borders.html">CSS Borders</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="paddings.html">CSS Padding</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="margins.html">CSS Margin</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="text.html">CSS Text</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="fonts.html">CSS Fonts</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="buttons.html">CSS Buttons</a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="links.html">CSS Links</a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="lists.html">CSS Lists</a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="tables.html">CSS Tables</a>
+                <div class="height-1"></div>
+              <a id="item-17" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="hover.html">CSS Hover</a>
+                <div class="height-1"></div>
+              <a id="item-18" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="icons.html">CSS Icons</a>
+                <div class="height-1"></div>
+              <a id="item-19" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="positions.html">CSS Position</a>
+                <div class="height-1"></div>
+              <a id="item-20" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="alignment.html">CSS Alignment</a>
+                <div class="height-1"></div>
+              <a id="item-21" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="websafety.html">CSS Web Safety</a>
+                <div class="height-1"></div>
+              <a id="item-22" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="comments.html">CSS Comments</a>
+                <div class="height-1"></div>
+              <a id="item-23" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 data-isexternallink=&#x27;true&#x27;
+                 
+                 href="ref.html">CSS Reference</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">CSS Advanced</div>
+              <a id="item-25" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="displays.html">CSS Display</a>
+                <div class="height-1"></div>
+              <a id="item-26" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="box-model.html">CSS Box Model</a>
+                <div class="height-1"></div>
+              <a id="item-27" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="dimensions.html">CSS Dimensions</a>
+                <div class="height-1"></div>
+              <a id="item-28" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="overflows.html">CSS Overflow</a>
+                <div class="height-1"></div>
+              <a id="item-29" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="outlines.html">CSS Outline</a>
+                <div class="height-1"></div>
+              <a id="item-30" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="floats.html">CSS Float</a>
+                <div class="height-1"></div>
+              <a id="item-31" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="combinators.html">CSS Combinators</a>
+                <div class="height-1"></div>
+              <a id="item-32" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="pseudo-classes.html">CSS Pseudo-class</a>
+                <div class="height-1"></div>
+              <a id="item-33" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="pseudo-elements.html">CSS Pseudo-element</a>
+                <div class="height-1"></div>
+              <a id="item-34" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="opacities.html">CSS Opacity</a>
+                <div class="height-1"></div>
+              <a id="item-35" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="multiple-columns.html">CSS Multiple Columns</a>
+                <div class="height-1"></div>
+              <a id="item-36" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="variables.html">CSS Variables</a>
+                <div class="height-1"></div>
+              <a id="item-37" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="media-queries.html">CSS Media Queries</a>
+                <div class="height-1"></div>
+              <a id="item-38" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="transforms-2d.html">CSS 2D Transforms</a>
+                <div class="height-1"></div>
+              <a id="item-39" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="transforms-3d.html">CSS 3D Transforms</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">CSS Flexbox</div>
+              <a id="item-41" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="flexbox.html">CSS Flexbox Intro</a>
+                <div class="height-1"></div>
+              <a id="item-42" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="flexbox-containers.html">CSS Flexbox Containers</a>
+                <div class="height-1"></div>
+              <a id="item-43" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="flexbox-items.html">CSS Flexbox Items</a>
+                <div class="height-1"></div>
+              <a id="item-44" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="flexbox-alignments.html">CSS Flexbox Alignments</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">CSS Grid</div>
+              <a id="item-46" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="grids.html">CSS Grid Intro</a>
+                <div class="height-1"></div>
+              <a id="item-47" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="grid-containers.html">CSS Grid Container</a>
+                <div class="height-1"></div>
+              <a id="item-48" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="grid-items.html">CSS Grid Items</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="29" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="../img/arrow-left.jpg" /> &nbsp;Back to CSS </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html/ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript/design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="../net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial" xstyle="xmax-width:1200px;">
+
+      <div class="d-flex justify-content-around align-items-start">
+
+        <div class="w-100 m-auto" style="max-width:970px;">
+
+<div>
+<h1>CSS Basics</h1>
+
+
+<div class="d-flex mt-10 pt-10 d-block d-lg-none" xstyle="border-top:1px solid #ccd;">
+    <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="../css.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; CSS Tutorial &nbsp;</a>
+  </div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="selectors.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; CSS Selectors &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<div class="items mt-70 mb-50">
+  <p>CSS defines the look-and-feel of HTML elements. This is called <span>styling</span>.</p>
+  <p>A style is written as a <i>rule-set</i> which consists of a <i>selector</i> and a <i>declaration block</i>.</p>
+  <p>A <i>selector</i> defines which HTML elements are selected. </p>
+  <p>A <i>declaration block</i> lists properties, such as color or border, and their values.</p>
+</div>
+
+<a class="goto-target" id="example"></a>
+<div class="d-flex">
+    <h3  style="margin-left:-2px;font-weight:500 !important;" onmouseover="$(&#x27;#xexample&#x27;).show();" onmouseout="$(&#x27;#xexample&#x27;).hide();">Example</h3>
+    <h3 class="pl-12"><a id="xexample" class="d-block header-anchor" href="#example">#</a></h3>
+</div>
+
+
+
+<p>
+  In this example a single <i>rule-set</i> is defined with the name <code>my-style</code>.<br />
+  It is applied to a <a href="../html/div.html" class="code-link">&lt;div&gt;</a> element.
+</p>
+<style>
+  .render div { margin: 25px 0 15px; }
+</style>
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .my-style {
+    padding: 20px;
+    color: darkred;
+    background-color: gold;
+  }
+</style>
+
+<div class="my-style">
+  This element is styled with a CSS rule-set.
+</div>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .my-style {&#xD;&#xA;    padding: 20px;&#xD;&#xA;    color: darkred;&#xD;&#xA;    background-color: gold;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;my-style&quot;&gt;&#xD;&#xA;  This element is styled with a CSS rule-set.&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/basics.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<p class="mt-40">Here's a visual overview of a <i>rule-set</i>.</p>
+<div class="pl-20 pb-20 pt-20">
+  <img src="../img/css/css-syntax.png" draggable="false" alt="Css Syntax" height="140" class="img-fluid" />
+</div>
+<h3>Explanation</h3>
+<div class="items">
+  <p>A <i>selector</i> references the HTML elements to which the style applies.</p>
+  <p>A <i>declaration block</i> consists of one or more declarations separated by semicolons.</p>
+  <p>A <i>property</i> is the characteristic that will be styled (e.g. <a href="color.html" class="code-link">color</a>, <a href="border.html" class="code-link">border</a>).</p>
+  <p>The <i>value</i> is the value for the property (e.g. <a href="color.html" class="code-link">color</a> property can have <code>blue</code> as value).</p>
+  <p>Declarations end with a semicolon, and declaration blocks are surrounded by curly braces.</p>
+  <p>This entire description represents a single <i>rule-set</i>.</p>
+</div>
+
+<hr />
+
+<a class="goto-target" id="syntax"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xsyntax&#x27;).show();" onmouseout="$(&#x27;#xsyntax&#x27;).hide();">Syntax</h2>
+    <h2><a id="xsyntax" style="display:none" class="d-block pl-12 header-anchor" href="#syntax">#</a></h2>
+</div>
+
+
+<p>The basic CSS syntax.</p>
+<pre class="prettyprint lang-css code-hscroll">
+selector { property: value }
+</pre>
+<p>
+  Below is an example.
+</p>
+
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .selector {
+    background-color: pink;
+    color: firebrick;
+    font-style: italic;
+    padding:20px;
+  }
+</style>
+
+<p class="selector">
+  An element styled with CSS
+</p>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .selector {&#xD;&#xA;    background-color: pink;&#xD;&#xA;    color: firebrick;&#xD;&#xA;    font-style: italic;&#xD;&#xA;    padding:20px;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;p class=&quot;selector&quot;&gt;&#xD;&#xA;  An element styled with CSS&#xD;&#xA;&lt;/p&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/basics-selector-example.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<h4 class="mt-40">Explanation</h4>
+<div class="items">
+  <p>The <code>.selector</code> is a CSS <span>selector</span>. This is a class selector because it is prefixed with a dot.</p>
+  <p>It specifies values for three properties: <a href="background-color.html" class="code-link">background-color</a>, <a  href="font-size.html" class="code-link">font-size</a>, <a  href="font-style.html" class="code-link">font-style</a>, and <a href="padding.html" class="code-link">padding-style</a>.</p>
+  <p>The <a  href="../html/class.html" class="code-link">class</a> attribute in the paragraph references the selector.</p>
+  <p>The property values of the selector are then applied to the parts in the paragraph.</p>
+</div>
+
+<p class="for-details mt-30">For details on CSS properties, see our <a class="underline" href="ref.html">CSS reference guide</a>.</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="../css.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; CSS Tutorial &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="selectors.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; CSS Selectors &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<a class="goto-target" id="stylesheets"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xstylesheets&#x27;).show();" onmouseout="$(&#x27;#xstylesheets&#x27;).hide();">Stylesheets</h2>
+    <h2><a id="xstylesheets" style="display:none" class="d-block pl-12 header-anchor" href="#stylesheets">#</a></h2>
+</div>
+
+
+
+<p>
+  There are 3 ways to add styles to a page: 
+
+  <ul class="py-0">
+    <li><a href="#external">External Style sheet</a></li>
+    <li><a href="#internal">Internal Style sheet</a></li>
+    <li><a href="#inline">Inline Style</a></li>
+  </ul>
+
+  <hr />
+  <a class="goto-target" id="external"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xexternal&#x27;).show();" onmouseout="$(&#x27;#xexternal&#x27;).hide();">External Stylesheet</h2>
+    <h2><a id="xexternal" style="display:none" class="d-block pl-12 header-anchor" href="#external">#</a></h2>
+</div>
+
+
+<p>
+  With an external stylesheet, styles are defined in an external file.<br />
+  This file is brought into the page with a <a href="../html/link.html" class="code-link">&lt;link&gt;</a> tag in the <a href="../html/head.html" class="code-link">&lt;head&gt;</a> section.
+  <br /><br />
+
+  A style from an external stylesheet is applied to the paragraph.
+</p>
+<style>
+  .render p { padding: 15px !important; margin-top: 30px; }
+</style>
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <head>
+  <link rel="stylesheet" type="text/css" href="../tutorial/style.css">
+</head>
+
+<p class="aliceblue">
+  An element styled with an external style.
+</p>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;head&gt;&#xD;&#xA;  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/tutorial/style.css&quot;&gt;&#xD;&#xA;&lt;/head&gt;&#xD;&#xA;&#xD;&#xA;&lt;p class=&quot;aliceblue&quot;&gt;&#xD;&#xA;  An element styled with an external style.&#xD;&#xA;&lt;/p&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/basics-external.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<h4 class="mt-30">Explanation:</h4>
+<div class="items">
+  <p>The <a href="../html/link.html" class="code-link">&lt;link&gt;</a> element loads the <i>style.css</i> file into the page.</p>
+  <p>The paragraph references a style with the <a href="../html/class.html" class="code-link">&lt;class&gt;</a> attribute.</p>
+  <p>Below is th style as it appears in the external stylesheet file.</p>
+</div>
+<pre class="prettyprint code-hscroll">
+.aliceblue {
+  background-color:aliceblue;
+  color:steelblue;
+  padding:10px;
+}
+</pre>
+
+<hr />
+<a class="goto-target" id="internal"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xinternal&#x27;).show();" onmouseout="$(&#x27;#xinternal&#x27;).hide();">Internal Stylesheet</h2>
+    <h2><a id="xinternal" style="display:none" class="d-block pl-12 header-anchor" href="#internal">#</a></h2>
+</div>
+
+
+<p>
+  An internal stylesheet defines styles for a single page.<br />
+  The <a href="../html/style.html" class="code-link">&lt;style&gt;</a> tag encloses all CSS rule-sets.
+</p>
+<p>A style from an internal stylesheet is applied to the paragraph.</p>
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .internal-style {
+    padding: 15px;
+    background: moccasin;
+  }
+</style>
+
+<p class="internal-style">
+  An element styled with an internal style.
+</p>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .internal-style {&#xD;&#xA;    padding: 15px;&#xD;&#xA;    background: moccasin;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;p class=&quot;internal-style&quot;&gt;&#xD;&#xA;  An element styled with an internal style.&#xD;&#xA;&lt;/p&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/basics-internal.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+<a class="goto-target" id="inline"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xinline&#x27;).show();" onmouseout="$(&#x27;#xinline&#x27;).hide();">Inline Styles</h2>
+    <h2><a id="xinline" style="display:none" class="d-block pl-12 header-anchor" href="#inline">#</a></h2>
+</div>
+
+
+<p>
+  An inline style only applies to a single element.<br />
+  A <a href="../html/attributes/style.html" class="code-link">style</a> attribute on the element defines the style.<br />
+</p>
+<p>
+  A paragraph styled with an inline <a href="../html/attributes/style.html" class="code-link">style</a> attribute.
+</p>
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <p style="background-color:lavender; padding:10px;">
+  An element styled with an inline style.
+</p>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;p style=&quot;background-color:lavender; padding:10px;&quot;&gt;&#xD;&#xA;  An element styled with an inline style.&#xD;&#xA;&lt;/p&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/basics-inline.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+<a class="goto-target" id="cascading"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xcascading&#x27;).show();" onmouseout="$(&#x27;#xcascading&#x27;).hide();">Cascading Order</h2>
+    <h2><a id="xcascading" style="display:none" class="d-block pl-12 header-anchor" href="#cascading">#</a></h2>
+</div>
+
+
+
+<p>
+  CSS stands for <i>Cascading Style Sheets</i>. Why Cascading?
+</p>
+<p>
+  When a page includes multiple external, internal, and inline styles, the question is
+  which style takes precedence?  To answer this, each browser implements a CSS cascade algorithm
+  that applies the cascading rules. 
+</p>
+<p>
+  One of the rules is that when two styles have the same name, for example from
+  an external stylesheet and an internal stylesheet, then the value from the last
+  read sheet will be applied.
+</p>
+<p>
+  If an element references multiple styles from different stylesheets, the styles will
+  <span>cascade</span> into a new <span>virtual</span> stylesheet by the following rules, where
+  number one has the highest priority:
+</p>
+
+<ol class="py-15 ml-30">
+  <li>Inline style</li>
+  <li>External and internal style</li>
+  <li>Browser default</li>
+</ol>
+
+<p>
+  In this example, the element has 3 sources of background color: external, internal, and inline styles.
+  The inline style takes precedence, i.e. wins.
+</p>
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <link rel="stylesheet" type="text/css" href="../tutorial/style.css">
+
+<style>
+  .blue {
+    background-color: blue;
+  }
+</style>
+
+<p class="blue"
+   style="background-color:lightsalmon;">
+  The inline background-color takes precedence.
+</p>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/tutorial/style.css&quot;&gt;&#xD;&#xA;&#xD;&#xA;&lt;style&gt;&#xD;&#xA;  .blue {&#xD;&#xA;    background-color: blue;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;p class=&quot;blue&quot;&#xD;&#xA;   style=&quot;background-color:lightsalmon;&quot;&gt;&#xD;&#xA;  The inline background-color takes precedence.&#xD;&#xA;&lt;/p&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/basics-cascading.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+<div class="tip"><b>Note:</b> The highest priority overrides other stylesheets and browser defaults.</div>
+
+<hr />
+<a class="goto-target" id="like"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xlike&#x27;).show();" onmouseout="$(&#x27;#xlike&#x27;).hide();">You may also like</h2>
+    <h2><a id="xlike" style="display:none" class="d-block pl-12 header-anchor" href="#like">#</a></h2>
+</div>
+
+
+<p>
+  <div class="d-flex">
+    <div class="p-10">
+      <img src="../img/html/show-like.png" class="img-fluid" loading="lazy" />
+    </div>
+    <div class="pl-25 pt-5">
+      <ul>
+        <li>Our <a class="underline font-weight-semibold" href="selectors.html">CSS Selectors Reference Guide</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="background-color.html">CSS background-color Property Reference</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="color.html">CSS color Property Reference</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="../html/ref.html">HTML Reference Guide</a></li>
+      </ul>
+    </div>
+  </div>
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="../css.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; CSS Tutorial &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="selectors.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; CSS Selectors &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+</div>
+
+          <div class="bg-light p-10 mb-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css.html">CSS Tutorial</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="selectors.html">CSS Selectors</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="borders.html">CSS Borders</a></li>
+
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="flexbox.html">CSS Flex</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="grids.html">CSS Grid</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="tables.html">CSS Tables</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="length.html">CSS Length</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="fonts.html">CSS Fonts</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="animation.html">CSS Animation</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="hover.html">CSS Hover</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="images.html">CSS Images</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="comments.html">CSS Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" style="min-width:230px !important;">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">CSS Basics</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#example">Example</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#rule-sets">Rule sets</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#syntax">Syntax</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#stylesheets">Stylesheets</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#external">External</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#internal">Internal</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#inline">Inline</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#cascading">Cascading Order</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#like">You may also like</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+
+    function copy(id) {
+      var stor = document.createElement("textarea");
+      stor.setAttribute("contentEditable", true);
+      stor.innerHTML = document.getElementById(id).innerHTML;
+      stor.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+      document.body.appendChild(stor);
+      stor.focus({ preventScroll: true });
+      stor.focus();
+
+      document.execCommand("copy");
+      document.body.removeChild(stor);
+
+      $('#show-' + id).fadeIn('fast').delay(1200).fadeOut('slow');
+    }
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/css/basics by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:48:41 GMT -->
+</html>

@@ -1,0 +1,2238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/html/url-encode by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:40:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML URL Encoding - Dofactory</title>
+    <meta name="keywords" content="HTML, HTML Tutorial, Reference, Guide, Examples, Demos, Top, Best, Tips, Advice, Training, Learning, Courses, Lessons, Interview, Front-end, Programming, Code, Source">
+    <meta name="description" content="URL encoding converts characters into a format that can be transmitted over the Internet. Web browsers request pages from web servers by using a URL. The URL is the address of a web page, like: https://www.w3schools.com.">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="url-encode.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        
+
+<style>
+  /* CSS adjustments */
+  pre { font-weight: bold; margin-top: 30px; }
+  ol.linenums li { line-height: 22px; }
+
+  .prettyprint { font-size: 16px; }
+  .kwd { color: #0b7490; }
+  .com, .typ { color: #000000; }
+  .lit, .str { color: #cc4500; }
+
+  /*.atv { color: #139; }*/
+  .atv { color: #b7422c; }
+  /*.atn { color: #F45D48; }*/
+  .atn { color: #353768; }
+
+  .prettyprint { background-color: #f6f7f8 !important; }
+
+  /*pre.scriptpre { margin-top: 0px; }*/
+
+  .tutorial hr { margin-top: 65px; margin-bottom: 5px; }
+
+  .tutorial .render button, .tutorial .render input[type="submit"], .render input[type="button"], .render input[type="reset"] { display: inline-block; font-weight: 400; text-align: center; white-space: nowrap; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; border: 1px solid transparent; padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; border-radius: 0.25rem; transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border: 1px solid #ccc; vertical-align: top; }
+  .tutorial .render button:hover, .tutorial .render input[type="submit"]:hover, .tutorial .render input[type="button"]:hover, .tutorial .render input[type="reset"]:hover { text-decoration: none; background-color: #dddddd; border-color: #bbb; }
+  .tutorial .render button:focus, .tutorial .render input[type="submit"]:focus, .tutorial .render input[type="button"]:focus, .tutorial .render input[type="reset"]:focus { outline: 0; border: 1px solid #999; }
+
+  .tutorial input[type="text"], .tutorial input[type="password"], .tutorial input[type="email"], .tutorial input[type="number"] { height: calc(2.25rem + 2px); padding: 0.375rem 0.75rem; font-size: 1rem; }
+
+  .tutorial .render select { outline: none; margin: 25px 0 10px; display: block; width: 180px; height: calc(2.25rem + 2px); padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; color: #495057; background-color: #fff; background-clip: padding-box; border: 1px solid #ced4da; border-radius: 0.25rem; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+
+  /* field set, legend, submit */
+  .tutorial .render fieldset { min-width: 0; padding: 20px 25px; margin: 30px 0 25px; border: 1px solid #999; }
+  .tutorial .render legend { width: auto; padding-left: 5px; padding-right: 5px; margin-bottom: .5rem; font-size: 17px !important; line-height: inherit; color: inherit; white-space: normal; }
+  .tutorial .render input[type="submit"] { margin-bottom: 10px; }
+
+  /* enables autoscroll in flex and grid */
+  div { min-width: 0; }
+
+  /* show buttons*/
+  .tutorial .render button[onclick^="show("], .tutorial .render button[onclick^="draw("], .tutorial .render button[onclick^="toggle("], .tutorial .render button[onclick^="count("], .tutorial .render button[onclick^="add"], .tutorial .render button[onclick^="reset("] { background-color: #b91c1c; color: white; border-radius: 6px !important; padding-left: 16px; padding-right: 16px; border: none !important; /*padding:3px 8px; margin-top:10px;*/ }
+  .tutorial .render button[onclick^="show("]:hover, .tutorial .render button[onclick^="draw("]:hover, .tutorial .render button[onclick^="toggle("]:hover, .tutorial .render button[onclick^="count("]:hover, .tutorial .render button[onclick^="add"]:hover, .tutorial .render button[onclick^="reset("]:hover { background-color: #991b1b; cursor: pointer; /*xborder-color: #cd3;padding:3px 8px; margin-top:10px;*/ }
+
+  .tutorial div.items p:first-child { margin-top: 35px !important; }
+
+  .tutorial em { border: 0; padding: 0; border-radius: 0; font-weight: 500; font-style: normal; white-space: nowrap; }
+  .tutorial em.c { border: 0; padding: 0; border-radius: 0; font-style: normal; white-space: nowrap; background: #f5f6f7; }
+
+  .tutorial .for-details { font-size:15px; padding-top: 10px; }
+
+  .tutorial h3 { font-weight: 500;}
+</style>
+
+<link rel="stylesheet" href="../tutorial/html/responsivee9e7.css?v=rM7Pr4uzBnOc3BNyGhrYGbF7qhWtK-WXj2JE2FsU7oc" />
+
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="../img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        HTML Tutorial&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="../html.html">HTML Tutorial</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="intro.html">HTML Introduction</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="elements.html">HTML Elements</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="attribs.html">HTML Attributes</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="global-attributes.html">HTML Global Attributes</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="layout.html">HTML Layout</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="links.html">HTML Links</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="images.html">HTML Images</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="background-images.html">HTML Background Images</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="colors.html">HTML Colors</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="color-names.html">HTML Color Names</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="lists.html">HTML Lists</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="blocks.html">HTML Blocks</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="paragraphs.html">HTML Paragraphs</a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="forms.html">HTML Forms</a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="input-types.html">HTML Input Types</a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="input-attributes.html">HTML Input Attributes</a>
+                <div class="height-1"></div>
+              <a id="item-17" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="buttons.html">HTML Buttons</a>
+                <div class="height-1"></div>
+              <a id="item-18" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="tables.html">HTML Tables</a>
+                <div class="height-1"></div>
+              <a id="item-19" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="comments.html">HTML Comments</a>
+                <div class="height-1"></div>
+              <a id="item-20" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="formatting.html">HTML Formatting</a>
+                <div class="height-1"></div>
+              <a id="item-21" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="spaces.html">HTML Spaces</a>
+                <div class="height-1"></div>
+              <a id="item-22" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="css.html">HTML CSS</a>
+                <div class="height-1"></div>
+              <a id="item-23" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="classes.html">HTML Classes</a>
+                <div class="height-1"></div>
+              <a id="item-24" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="ids.html">HTML Ids</a>
+                <div class="height-1"></div>
+              <a id="item-25" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="types.html">HTML Types</a>
+                <div class="height-1"></div>
+              <a id="item-26" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="iframes.html">HTML IFrames</a>
+                <div class="height-1"></div>
+              <a id="item-27" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="editors.html">HTML Editors</a>
+                <div class="height-1"></div>
+              <a id="item-28" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="entities.html">HTML Entities</a>
+                <div class="height-1"></div>
+              <a id="item-29" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="symbols.html">HTML Symbols</a>
+                <div class="height-1"></div>
+              <a id="item-30" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="url-encode.html">HTML URL Encode</a>
+                <div class="height-1"></div>
+              <a id="item-31" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="metatags.html">HTML Meta Tags</a>
+                <div class="height-1"></div>
+              <a id="item-32" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="semantics.html">HTML Semantic</a>
+                <div class="height-1"></div>
+              <a id="item-33" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 data-isexternallink=&#x27;true&#x27;
+                 
+                 href="ref.html">HTML Reference</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">HTML Charsets</div>
+              <a id="item-35" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="charset.html">HTML Charset</a>
+                <div class="height-1"></div>
+              <a id="item-36" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="charset/ascii.html">CharSet ASCII</a>
+                <div class="height-1"></div>
+              <a id="item-37" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="charset/utf8.html">CharSet UTF-8</a>
+                <div class="height-1"></div>
+              <a id="item-38" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="charset/entities.html">CharSet Entities</a>
+                <div class="height-1"></div>
+              <a id="item-39" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="charset/symbols.html">CharSet Symbols</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">HTML Graphics</div>
+              <a id="item-41" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="graphics/canvas.html">HTML Canvas</a>
+                <div class="height-1"></div>
+              <a id="item-42" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="graphics/svg.html">HTML SVG</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">HTML Media</div>
+              <a id="item-44" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="media.html">HTML Media</a>
+                <div class="height-1"></div>
+              <a id="item-45" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="media/video.html">HTML Video</a>
+                <div class="height-1"></div>
+              <a id="item-46" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="media/audio.html">HTML Audio</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="972" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="../img/arrow-left.jpg" /> &nbsp;Back to HTML </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css/ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript/design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="../net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial" xstyle="xmax-width:1200px;">
+
+      <div class="d-flex justify-content-around align-items-start">
+       
+        <div class="w-100 m-auto " style="max-width:970px;">
+
+<div>
+<h1>HTML URL Encode</h1>
+
+
+<div class="d-flex mt-10 pt-10 d-block d-lg-none" xstyle="border-top:1px solid #ccd;">
+    <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="symbols.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; HTML Symbols &nbsp;</a>
+  </div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="metatags.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; HTML Meta Tags &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<div class="items mt-70 mb-50">
+  <p><span>URL encoding</span> refers to the process of converting characters into a format that can be transmitted over the Internet.</p>
+  <p>A URL is the address of a web page, like <span style="background:#f6f7fa;">https://www.company.com?item=abc123</span>.</p>
+  <p>Web browsers request pages from web servers by using these URLs.</p>
+  <p>During transfer over the Internet these URLs are <i>URL-encoded</i>.</p>
+</div>
+
+
+
+
+  <div class="mt-40"></div>
+
+<a class="goto-target" id="example"></a>
+<div class="d-flex">
+  <h3 style="margin-left:-2px;font-weight:500 !important;" onmouseover="$(&#x27;#xexample&#x27;).show();" onmouseout="$(&#x27;#xexample&#x27;).hide();">Example</h3>
+  <h3 class="pl-12"><a id="xexample" class="d-block header-anchor" href="#example">#</a></h3>
+</div>
+
+
+
+
+
+<p class="mb-35">
+  Click the "Submit" button below and the browser will URL-encode the input before it is sent to the server.
+  A form-handler on the server will display the received input.
+
+</p>
+<style>
+  .render form {
+    margin: 25px 0 15px;
+  }
+</style>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action3.html" >
+  User name:<br />
+  <input type="text" name="username" value="Ångström">
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+<p>When submitting, notice the percent (%) characters which are the URL encoded non-ASCII characters.</p>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action3.html&quot; &gt;&#xD;&#xA;  User name:&lt;br /&gt;&#xD;&#xA;  &lt;input type=&quot;text&quot; name=&quot;username&quot; value=&quot;&#xC5;ngstr&#xF6;m&quot;&gt;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/url-encode-example.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="symbols.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; HTML Symbols &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="metatags.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; HTML Meta Tags &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+
+
+<a class="goto-target" id="percent-encoding"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xpercent-encoding&#x27;).show();" onmouseout="$(&#x27;#xpercent-encoding&#x27;).hide();">Percent Encoding</h2>
+  <h2><a id="xpercent-encoding" style="display:none" class="d-block pl-12 header-anchor" href="#percent-encoding">#</a></h2>
+</div>
+
+
+
+<div class="items">
+  <p>URLs can only be sent over the Internet using the <span class="font-weight-semibold">ASCII</span> character set.</p>
+  <p>Since URLs often contain characters outside the ASCII set, the URL has to be converted into a valid ASCII format.</p>
+  <p>URL encoding replaces non-ASCII characters with a "%" followed by two hexadecimal digits.</p>
+  <p>URLs cannot contain spaces. URL encoding replaces a space with a plus (<b>+</b>) sign or with <span class="font-weight-semibold">%20</span>.</p>
+</div>
+
+<hr />
+
+
+
+
+
+
+<a class="goto-target" id="encoding-functions"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xencoding-functions&#x27;).show();" onmouseout="$(&#x27;#xencoding-functions&#x27;).hide();">URL Encoding Functions</h2>
+  <h2><a id="xencoding-functions" style="display:none" class="d-block pl-12 header-anchor" href="#encoding-functions">#</a></h2>
+</div>
+
+
+
+<div class="items">
+  <p>Both client and server languages have functions to URL-encode a string.</p>
+  <p>PHP has <code>rawurlencode()</code>, and ASP.NET has <code>WebUtility.URLEncode()</code>.</p>
+  <p>In JavaScript you can use the <code>encodeURIComponent()</code> function.</p>
+</div>
+
+<p>Click the "URL Encode" button below to see how JavaScript encodes the given name:</p>
+<div class="render">
+  <div class="ml-25 mt-30 mb-20">
+
+    Your name:<br />
+    <input type="text" value="Arnbjørg Kjos" id="urlencodetxt">
+    <input type="button" value="URL Encode" onclick="urlencode()">
+
+  </div>
+</div>
+<p id="encodingresult"></p>
+
+<hr />
+
+
+
+<a class="goto-target" id="ascii-reference"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xascii-reference&#x27;).show();" onmouseout="$(&#x27;#xascii-reference&#x27;).hide();">ASCII Encoding Reference</h2>
+  <h2><a id="xascii-reference" style="display:none" class="d-block pl-12 header-anchor" href="#ascii-reference">#</a></h2>
+</div>
+
+
+
+<div class="items">
+  <p>The browser encodes user input according to the character-set specified on the page.</p>
+  <p><span>ISO-8859-1</span> was the standard character set for HTML 4.</p>
+  <p>Today, the default character-set in HTML5 is <b>UTF-8</b>.</p>
+</div>
+
+<p>Here is list of URL-encoded ASCII characters for both charsets.</p>
+
+<div class="table-box">
+  <table class="table table-md">
+    <tbody>
+      <tr class="bg-light">
+        <th class="width-130">Character</th>
+        <th class="width-150">ISO-8859-1</th>
+        <th>UTF-8</th>
+      </tr>
+      <tr>
+        <td>space</td>
+        <td>%20</td>
+        <td>%20</td>
+      </tr>
+      <tr>
+        <td>!</td>
+        <td>%21</td>
+        <td>%21</td>
+      </tr>
+      <tr>
+        <td>"</td>
+        <td>%22</td>
+        <td>%22</td>
+      </tr>
+      <tr>
+        <td>#</td>
+        <td>%23</td>
+        <td>%23</td>
+      </tr>
+      <tr>
+        <td>$</td>
+        <td>%24</td>
+        <td>%24</td>
+      </tr>
+      <tr>
+        <td>%</td>
+        <td>%25</td>
+        <td>%25</td>
+      </tr>
+      <tr>
+        <td>&amp;</td>
+        <td>%26</td>
+        <td>%26</td>
+      </tr>
+      <tr>
+        <td>'</td>
+        <td>%27</td>
+        <td>%27</td>
+      </tr>
+      <tr>
+        <td>(</td>
+        <td>%28</td>
+        <td>%28</td>
+      </tr>
+      <tr>
+        <td>)</td>
+        <td>%29</td>
+        <td>%29</td>
+      </tr>
+      <tr>
+        <td>*</td>
+        <td>%2A</td>
+        <td>%2A</td>
+      </tr>
+      <tr>
+        <td>+</td>
+        <td>%2B</td>
+        <td>%2B</td>
+      </tr>
+      <tr>
+        <td>,</td>
+        <td>%2C</td>
+        <td>%2C</td>
+      </tr>
+      <tr>
+        <td>-</td>
+        <td>%2D</td>
+        <td>%2D</td>
+      </tr>
+      <tr>
+        <td>.</td>
+        <td>%2E</td>
+        <td>%2E</td>
+      </tr>
+      <tr>
+        <td>/</td>
+        <td>%2F</td>
+        <td>%2F</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>%30</td>
+        <td>%30</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>%31</td>
+        <td>%31</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>%32</td>
+        <td>%32</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>%33</td>
+        <td>%33</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>%34</td>
+        <td>%34</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>%35</td>
+        <td>%35</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>%36</td>
+        <td>%36</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>%37</td>
+        <td>%37</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>%38</td>
+        <td>%38</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>%39</td>
+        <td>%39</td>
+      </tr>
+      <tr>
+        <td>:</td>
+        <td>%3A</td>
+        <td>%3A</td>
+      </tr>
+      <tr>
+        <td>;</td>
+        <td>%3B</td>
+        <td>%3B</td>
+      </tr>
+      <tr>
+        <td>&lt;</td>
+        <td>%3C</td>
+        <td>%3C</td>
+      </tr>
+      <tr>
+        <td>=</td>
+        <td>%3D</td>
+        <td>%3D</td>
+      </tr>
+      <tr>
+        <td>&gt;</td>
+        <td>%3E</td>
+        <td>%3E</td>
+      </tr>
+      <tr>
+        <td>?</td>
+        <td>%3F</td>
+        <td>%3F</td>
+      </tr>
+      <tr>
+        <td>&amp;commat;</td>
+        <td>%40</td>
+        <td>%40</td>
+      </tr>
+      <tr>
+        <td>A</td>
+        <td>%41</td>
+        <td>%41</td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td>%42</td>
+        <td>%42</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>%43</td>
+        <td>%43</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>%44</td>
+        <td>%44</td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>%45</td>
+        <td>%45</td>
+      </tr>
+      <tr>
+        <td>F</td>
+        <td>%46</td>
+        <td>%46</td>
+      </tr>
+      <tr>
+        <td>G</td>
+        <td>%47</td>
+        <td>%47</td>
+      </tr>
+      <tr>
+        <td>H</td>
+        <td>%48</td>
+        <td>%48</td>
+      </tr>
+      <tr>
+        <td>I</td>
+        <td>%49</td>
+        <td>%49</td>
+      </tr>
+      <tr>
+        <td>J</td>
+        <td>%4A</td>
+        <td>%4A</td>
+      </tr>
+      <tr>
+        <td>K</td>
+        <td>%4B</td>
+        <td>%4B</td>
+      </tr>
+      <tr>
+        <td>L</td>
+        <td>%4C</td>
+        <td>%4C</td>
+      </tr>
+      <tr>
+        <td>M</td>
+        <td>%4D</td>
+        <td>%4D</td>
+      </tr>
+      <tr>
+        <td>N</td>
+        <td>%4E</td>
+        <td>%4E</td>
+      </tr>
+      <tr>
+        <td>O</td>
+        <td>%4F</td>
+        <td>%4F</td>
+      </tr>
+      <tr>
+        <td>P</td>
+        <td>%50</td>
+        <td>%50</td>
+      </tr>
+      <tr>
+        <td>Q</td>
+        <td>%51</td>
+        <td>%51</td>
+      </tr>
+      <tr>
+        <td>R</td>
+        <td>%52</td>
+        <td>%52</td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>%53</td>
+        <td>%53</td>
+      </tr>
+      <tr>
+        <td>T</td>
+        <td>%54</td>
+        <td>%54</td>
+      </tr>
+      <tr>
+        <td>U</td>
+        <td>%55</td>
+        <td>%55</td>
+      </tr>
+      <tr>
+        <td>V</td>
+        <td>%56</td>
+        <td>%56</td>
+      </tr>
+      <tr>
+        <td>W</td>
+        <td>%57</td>
+        <td>%57</td>
+      </tr>
+      <tr>
+        <td>X</td>
+        <td>%58</td>
+        <td>%58</td>
+      </tr>
+      <tr>
+        <td>Y</td>
+        <td>%59</td>
+        <td>%59</td>
+      </tr>
+      <tr>
+        <td>Z</td>
+        <td>%5A</td>
+        <td>%5A</td>
+      </tr>
+      <tr>
+        <td>[</td>
+        <td>%5B</td>
+        <td>%5B</td>
+      </tr>
+      <tr>
+        <td>\</td>
+        <td>%5C</td>
+        <td>%5C</td>
+      </tr>
+      <tr>
+        <td>]</td>
+        <td>%5D</td>
+        <td>%5D</td>
+      </tr>
+      <tr>
+        <td>^</td>
+        <td>%5E</td>
+        <td>%5E</td>
+      </tr>
+      <tr>
+        <td>_</td>
+        <td>%5F</td>
+        <td>%5F</td>
+      </tr>
+      <tr>
+        <td>`</td>
+        <td>%60</td>
+        <td>%60</td>
+      </tr>
+      <tr>
+        <td>a</td>
+        <td>%61</td>
+        <td>%61</td>
+      </tr>
+      <tr>
+        <td>b</td>
+        <td>%62</td>
+        <td>%62</td>
+      </tr>
+      <tr>
+        <td>c</td>
+        <td>%63</td>
+        <td>%63</td>
+      </tr>
+      <tr>
+        <td>d</td>
+        <td>%64</td>
+        <td>%64</td>
+      </tr>
+      <tr>
+        <td>e</td>
+        <td>%65</td>
+        <td>%65</td>
+      </tr>
+      <tr>
+        <td>f</td>
+        <td>%66</td>
+        <td>%66</td>
+      </tr>
+      <tr>
+        <td>g</td>
+        <td>%67</td>
+        <td>%67</td>
+      </tr>
+      <tr>
+        <td>h</td>
+        <td>%68</td>
+        <td>%68</td>
+      </tr>
+      <tr>
+        <td>i</td>
+        <td>%69</td>
+        <td>%69</td>
+      </tr>
+      <tr>
+        <td>j</td>
+        <td>%6A</td>
+        <td>%6A</td>
+      </tr>
+      <tr>
+        <td>k</td>
+        <td>%6B</td>
+        <td>%6B</td>
+      </tr>
+      <tr>
+        <td>l</td>
+        <td>%6C</td>
+        <td>%6C</td>
+      </tr>
+      <tr>
+        <td>m</td>
+        <td>%6D</td>
+        <td>%6D</td>
+      </tr>
+      <tr>
+        <td>n</td>
+        <td>%6E</td>
+        <td>%6E</td>
+      </tr>
+      <tr>
+        <td>o</td>
+        <td>%6F</td>
+        <td>%6F</td>
+      </tr>
+      <tr>
+        <td>p</td>
+        <td>%70</td>
+        <td>%70</td>
+      </tr>
+      <tr>
+        <td>q</td>
+        <td>%71</td>
+        <td>%71</td>
+      </tr>
+      <tr>
+        <td>r</td>
+        <td>%72</td>
+        <td>%72</td>
+      </tr>
+      <tr>
+        <td>s</td>
+        <td>%73</td>
+        <td>%73</td>
+      </tr>
+      <tr>
+        <td>t</td>
+        <td>%74</td>
+        <td>%74</td>
+      </tr>
+      <tr>
+        <td>u</td>
+        <td>%75</td>
+        <td>%75</td>
+      </tr>
+      <tr>
+        <td>v</td>
+        <td>%76</td>
+        <td>%76</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>%77</td>
+        <td>%77</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>%78</td>
+        <td>%78</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>%79</td>
+        <td>%79</td>
+      </tr>
+      <tr>
+        <td>z</td>
+        <td>%7A</td>
+        <td>%7A</td>
+      </tr>
+      <tr>
+        <td>{</td>
+        <td>%7B</td>
+        <td>%7B</td>
+      </tr>
+      <tr>
+        <td>|</td>
+        <td>%7C</td>
+        <td>%7C</td>
+      </tr>
+      <tr>
+        <td>}</td>
+        <td>%7D</td>
+        <td>%7D</td>
+      </tr>
+      <tr>
+        <td>~</td>
+        <td>%7E</td>
+        <td>%7E</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>%7F</td>
+        <td>%7F</td>
+      </tr>
+      <tr>
+        <td>`</td>
+        <td>%80</td>
+        <td>%E2%82%AC</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>%81</td>
+        <td>%81</td>
+      </tr>
+      <tr>
+        <td>‚</td>
+        <td>%82</td>
+        <td>%E2%80%9A</td>
+      </tr>
+      <tr>
+        <td>ƒ</td>
+        <td>%83</td>
+        <td>%C6%92</td>
+      </tr>
+      <tr>
+        <td>„</td>
+        <td>%84</td>
+        <td>%E2%80%9E</td>
+      </tr>
+      <tr>
+        <td>…</td>
+        <td>%85</td>
+        <td>%E2%80%A6</td>
+      </tr>
+      <tr>
+        <td>†</td>
+        <td>%86</td>
+        <td>%E2%80%A0</td>
+      </tr>
+      <tr>
+        <td>‡</td>
+        <td>%87</td>
+        <td>%E2%80%A1</td>
+      </tr>
+      <tr>
+        <td>ˆ</td>
+        <td>%88</td>
+        <td>%CB%86</td>
+      </tr>
+      <tr>
+        <td>‰</td>
+        <td>%89</td>
+        <td>%E2%80%B0</td>
+      </tr>
+      <tr>
+        <td>Š</td>
+        <td>%8A</td>
+        <td>%C5%A0</td>
+      </tr>
+      <tr>
+        <td>‹</td>
+        <td>%8B</td>
+        <td>%E2%80%B9</td>
+      </tr>
+      <tr>
+        <td>Œ</td>
+        <td>%8C</td>
+        <td>%C5%92</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>%8D</td>
+        <td>%C5%8D</td>
+      </tr>
+      <tr>
+        <td>Ž</td>
+        <td>%8E</td>
+        <td>%C5%BD</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>%8F</td>
+        <td>%8F</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>%90</td>
+        <td>%C2%90</td>
+      </tr>
+      <tr>
+        <td>‘</td>
+        <td>%91</td>
+        <td>%E2%80%98</td>
+      </tr>
+      <tr>
+        <td>’</td>
+        <td>%92</td>
+        <td>%E2%80%99</td>
+      </tr>
+      <tr>
+        <td>“</td>
+        <td>%93</td>
+        <td>%E2%80%9C</td>
+      </tr>
+      <tr>
+        <td>”</td>
+        <td>%94</td>
+        <td>%E2%80%9D</td>
+      </tr>
+      <tr>
+        <td>•</td>
+        <td>%95</td>
+        <td>%E2%80%A2</td>
+      </tr>
+      <tr>
+        <td>–</td>
+        <td>%96</td>
+        <td>%E2%80%93</td>
+      </tr>
+      <tr>
+        <td>—</td>
+        <td>%97</td>
+        <td>%E2%80%94</td>
+      </tr>
+      <tr>
+        <td>˜</td>
+        <td>%98</td>
+        <td>%CB%9C</td>
+      </tr>
+      <tr>
+        <td>™</td>
+        <td>%99</td>
+        <td>%E2%84</td>
+      </tr>
+      <tr>
+        <td>š</td>
+        <td>%9A</td>
+        <td>%C5%A1</td>
+      </tr>
+      <tr>
+        <td>›</td>
+        <td>%9B</td>
+        <td>%E2%80</td>
+      </tr>
+      <tr>
+        <td>œ</td>
+        <td>%9C</td>
+        <td>%C5%93</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>%9D</td>
+        <td>%9D</td>
+      </tr>
+      <tr>
+        <td>ž</td>
+        <td>%9E</td>
+        <td>%C5%BE</td>
+      </tr>
+      <tr>
+        <td>Ÿ</td>
+        <td>%9F</td>
+        <td>%C5%B8</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>%A0</td>
+        <td>%C2%A0</td>
+      </tr>
+      <tr>
+        <td>¡</td>
+        <td>%A1</td>
+        <td>%C2%A1</td>
+      </tr>
+      <tr>
+        <td>¢</td>
+        <td>%A2</td>
+        <td>%C2%A2</td>
+      </tr>
+      <tr>
+        <td>£</td>
+        <td>%A3</td>
+        <td>%C2%A3</td>
+      </tr>
+      <tr>
+        <td>¤</td>
+        <td>%A4</td>
+        <td>%C2%A4</td>
+      </tr>
+      <tr>
+        <td>¥</td>
+        <td>%A5</td>
+        <td>%C2%A5</td>
+      </tr>
+      <tr>
+        <td>¦</td>
+        <td>%A6</td>
+        <td>%C2%A6</td>
+      </tr>
+      <tr>
+        <td>§</td>
+        <td>%A7</td>
+        <td>%C2%A7</td>
+      </tr>
+      <tr>
+        <td>¨</td>
+        <td>%A8</td>
+        <td>%C2%A8</td>
+      </tr>
+      <tr>
+        <td>©</td>
+        <td>%A9</td>
+        <td>%C2%A9</td>
+      </tr>
+      <tr>
+        <td>ª</td>
+        <td>%AA</td>
+        <td>%C2%AA</td>
+      </tr>
+      <tr>
+        <td>«</td>
+        <td>%AB</td>
+        <td>%C2%AB</td>
+      </tr>
+      <tr>
+        <td>¬</td>
+        <td>%AC</td>
+        <td>%C2%AC</td>
+      </tr>
+      <tr>
+        <td>&shy;</td>
+        <td>%AD</td>
+        <td>%C2%AD</td>
+      </tr>
+      <tr>
+        <td>®</td>
+        <td>%AE</td>
+        <td>%C2%AE</td>
+      </tr>
+      <tr>
+        <td>¯</td>
+        <td>%AF</td>
+        <td>%C2%AF</td>
+      </tr>
+      <tr>
+        <td>°</td>
+        <td>%B0</td>
+        <td>%C2%B0</td>
+      </tr>
+      <tr>
+        <td>±</td>
+        <td>%B1</td>
+        <td>%C2%B1</td>
+      </tr>
+      <tr>
+        <td>²</td>
+        <td>%B2</td>
+        <td>%C2%B2</td>
+      </tr>
+      <tr>
+        <td>³</td>
+        <td>%B3</td>
+        <td>%C2%B3</td>
+      </tr>
+      <tr>
+        <td>´</td>
+        <td>%B4</td>
+        <td>%C2%B4</td>
+      </tr>
+      <tr>
+        <td>µ</td>
+        <td>%B5</td>
+        <td>%C2%B5</td>
+      </tr>
+      <tr>
+        <td>¶</td>
+        <td>%B6</td>
+        <td>%C2%B6</td>
+      </tr>
+      <tr>
+        <td>·</td>
+        <td>%B7</td>
+        <td>%C2%B7</td>
+      </tr>
+      <tr>
+        <td>¸</td>
+        <td>%B8</td>
+        <td>%C2%B8</td>
+      </tr>
+      <tr>
+        <td>¹</td>
+        <td>%B9</td>
+        <td>%C2%B9</td>
+      </tr>
+      <tr>
+        <td>º</td>
+        <td>%BA</td>
+        <td>%C2%BA</td>
+      </tr>
+      <tr>
+        <td>»</td>
+        <td>%BB</td>
+        <td>%C2%BB</td>
+      </tr>
+      <tr>
+        <td>¼</td>
+        <td>%BC</td>
+        <td>%C2%BC</td>
+      </tr>
+      <tr>
+        <td>½</td>
+        <td>%BD</td>
+        <td>%C2%BD</td>
+      </tr>
+      <tr>
+        <td>¾</td>
+        <td>%BE</td>
+        <td>%C2%BE</td>
+      </tr>
+      <tr>
+        <td>¿</td>
+        <td>%BF</td>
+        <td>%C2%BF</td>
+      </tr>
+      <tr>
+        <td>À</td>
+        <td>%C0</td>
+        <td>%C3%80</td>
+      </tr>
+      <tr>
+        <td>Á</td>
+        <td>%C1</td>
+        <td>%C3%81</td>
+      </tr>
+      <tr>
+        <td>Â</td>
+        <td>%C2</td>
+        <td>%C3%82</td>
+      </tr>
+      <tr>
+        <td>Ã</td>
+        <td>%C3</td>
+        <td>%C3%83</td>
+      </tr>
+      <tr>
+        <td>Ä</td>
+        <td>%C4</td>
+        <td>%C3%84</td>
+      </tr>
+      <tr>
+        <td>Å</td>
+        <td>%C5</td>
+        <td>%C3%85</td>
+      </tr>
+      <tr>
+        <td>Æ</td>
+        <td>%C6</td>
+        <td>%C3%86</td>
+      </tr>
+      <tr>
+        <td>Ç</td>
+        <td>%C7</td>
+        <td>%C3%87</td>
+      </tr>
+      <tr>
+        <td>È</td>
+        <td>%C8</td>
+        <td>%C3%88</td>
+      </tr>
+      <tr>
+        <td>É</td>
+        <td>%C9</td>
+        <td>%C3%89</td>
+      </tr>
+      <tr>
+        <td>Ê</td>
+        <td>%CA</td>
+        <td>%C3%8A</td>
+      </tr>
+      <tr>
+        <td>Ë</td>
+        <td>%CB</td>
+        <td>%C3%8B</td>
+      </tr>
+      <tr>
+        <td>Ì</td>
+        <td>%CC</td>
+        <td>%C3%8C</td>
+      </tr>
+      <tr>
+        <td>Í</td>
+        <td>%CD</td>
+        <td>%C3%8D</td>
+      </tr>
+      <tr>
+        <td>Î</td>
+        <td>%CE</td>
+        <td>%C3%8E</td>
+      </tr>
+      <tr>
+        <td>Ï</td>
+        <td>%CF</td>
+        <td>%C3%8F</td>
+      </tr>
+      <tr>
+        <td>Ð</td>
+        <td>%D0</td>
+        <td>%C3%90</td>
+      </tr>
+      <tr>
+        <td>Ñ</td>
+        <td>%D1</td>
+        <td>%C3%91</td>
+      </tr>
+      <tr>
+        <td>Ò</td>
+        <td>%D2</td>
+        <td>%C3%92</td>
+      </tr>
+      <tr>
+        <td>Ó</td>
+        <td>%D3</td>
+        <td>%C3%93</td>
+      </tr>
+      <tr>
+        <td>Ô</td>
+        <td>%D4</td>
+        <td>%C3%94</td>
+      </tr>
+      <tr>
+        <td>Õ</td>
+        <td>%D5</td>
+        <td>%C3%95</td>
+      </tr>
+      <tr>
+        <td>Ö</td>
+        <td>%D6</td>
+        <td>%C3%96</td>
+      </tr>
+      <tr>
+        <td>×</td>
+        <td>%D7</td>
+        <td>%C3%97</td>
+      </tr>
+      <tr>
+        <td>Ø</td>
+        <td>%D8</td>
+        <td>%C3%98</td>
+      </tr>
+      <tr>
+        <td>Ù</td>
+        <td>%D9</td>
+        <td>%C3%99</td>
+      </tr>
+      <tr>
+        <td>Ú</td>
+        <td>%DA</td>
+        <td>%C3%9A</td>
+      </tr>
+      <tr>
+        <td>Û</td>
+        <td>%DB</td>
+        <td>%C3%9B</td>
+      </tr>
+      <tr>
+        <td>Ü</td>
+        <td>%DC</td>
+        <td>%C3%9C</td>
+      </tr>
+      <tr>
+        <td>Ý</td>
+        <td>%DD</td>
+        <td>%C3%9D</td>
+      </tr>
+      <tr>
+        <td>Þ</td>
+        <td>%DE</td>
+        <td>%C3%9E</td>
+      </tr>
+      <tr>
+        <td>ß</td>
+        <td>%DF</td>
+        <td>%C3%9F</td>
+      </tr>
+      <tr>
+        <td>à</td>
+        <td>%E0</td>
+        <td>%C3%A0</td>
+      </tr>
+      <tr>
+        <td>á</td>
+        <td>%E1</td>
+        <td>%C3%A1</td>
+      </tr>
+      <tr>
+        <td>â</td>
+        <td>%E2</td>
+        <td>%C3%A2</td>
+      </tr>
+      <tr>
+        <td>ã</td>
+        <td>%E3</td>
+        <td>%C3%A3</td>
+      </tr>
+      <tr>
+        <td>ä</td>
+        <td>%E4</td>
+        <td>%C3%A4</td>
+      </tr>
+      <tr>
+        <td>å</td>
+        <td>%E5</td>
+        <td>%C3%A5</td>
+      </tr>
+      <tr>
+        <td>æ</td>
+        <td>%E6</td>
+        <td>%C3%A6</td>
+      </tr>
+      <tr>
+        <td>ç</td>
+        <td>%E7</td>
+        <td>%C3%A7</td>
+      </tr>
+      <tr>
+        <td>è</td>
+        <td>%E8</td>
+        <td>%C3%A8</td>
+      </tr>
+      <tr>
+        <td>é</td>
+        <td>%E9</td>
+        <td>%C3%A9</td>
+      </tr>
+      <tr>
+        <td>ê</td>
+        <td>%EA</td>
+        <td>%C3%AA</td>
+      </tr>
+      <tr>
+        <td>ë</td>
+        <td>%EB</td>
+        <td>%C3%AB</td>
+      </tr>
+      <tr>
+        <td>ì</td>
+        <td>%EC</td>
+        <td>%C3%AC</td>
+      </tr>
+      <tr>
+        <td>í</td>
+        <td>%ED</td>
+        <td>%C3%AD</td>
+      </tr>
+      <tr>
+        <td>î</td>
+        <td>%EE</td>
+        <td>%C3%AE</td>
+      </tr>
+      <tr>
+        <td>ï</td>
+        <td>%EF</td>
+        <td>%C3%AF</td>
+      </tr>
+      <tr>
+        <td>ð</td>
+        <td>%F0</td>
+        <td>%C3%B0</td>
+      </tr>
+      <tr>
+        <td>ñ</td>
+        <td>%F1</td>
+        <td>%C3%B1</td>
+      </tr>
+      <tr>
+        <td>ò</td>
+        <td>%F2</td>
+        <td>%C3%B2</td>
+      </tr>
+      <tr>
+        <td>ó</td>
+        <td>%F3</td>
+        <td>%C3%B3</td>
+      </tr>
+      <tr>
+        <td>ô</td>
+        <td>%F4</td>
+        <td>%C3%B4</td>
+      </tr>
+      <tr>
+        <td>õ</td>
+        <td>%F5</td>
+        <td>%C3%B5</td>
+      </tr>
+      <tr>
+        <td>ö</td>
+        <td>%F6</td>
+        <td>%C3%B6</td>
+      </tr>
+      <tr>
+        <td>÷</td>
+        <td>%F7</td>
+        <td>%C3%B7</td>
+      </tr>
+      <tr>
+        <td>ø</td>
+        <td>%F8</td>
+        <td>%C3%B8</td>
+      </tr>
+      <tr>
+        <td>ù</td>
+        <td>%F9</td>
+        <td>%C3%B9</td>
+      </tr>
+      <tr>
+        <td>ú</td>
+        <td>%FA</td>
+        <td>%C3%BA</td>
+      </tr>
+      <tr>
+        <td>û</td>
+        <td>%FB</td>
+        <td>%C3%BB</td>
+      </tr>
+      <tr>
+        <td>ü</td>
+        <td>%FC</td>
+        <td>%C3%BC</td>
+      </tr>
+      <tr>
+        <td>ý</td>
+        <td>%FD</td>
+        <td>%C3%BD</td>
+      </tr>
+      <tr>
+        <td>þ</td>
+        <td>%FE</td>
+        <td>%C3%BE</td>
+      </tr>
+      <tr>
+        <td>ÿ</td>
+        <td>%FF</td>
+        <td>%C3%BF</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr />
+
+
+
+<a class="goto-target" id="control-characters"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xcontrol-characters&#x27;).show();" onmouseout="$(&#x27;#xcontrol-characters&#x27;).hide();">ASCII Control Character Reference</h2>
+  <h2><a id="xcontrol-characters" style="display:none" class="d-block pl-12 header-anchor" href="#control-characters">#</a></h2>
+</div>
+
+
+
+<div class="items">
+  <p>The ASCII control characters between %00 and %1F (0 - 31) were originally designed to control hardware devices, such as, printers.</p>
+  <p>Control characters can be URL encoded, although their use is limited on URLs.</p>
+</div>
+
+<p>Here is a list of URL-encoded ASCII Control characters.</p>
+
+<div class="table-box">
+  <table class="table table-md">
+    <tbody>
+      <tr class="bg-light">
+        <th class="width-160">ASCII Character</th>
+        <th class="width-230">Description</th>
+        <th>URL-encoding</th>
+      </tr>
+      <tr>
+        <td>NUL</td>
+        <td>null character</td>
+        <td>%00</td>
+      </tr>
+      <tr>
+        <td>SOH</td>
+        <td>start of header</td>
+        <td>%01</td>
+      </tr>
+      <tr>
+        <td>STX</td>
+        <td>start of text</td>
+        <td>%02</td>
+      </tr>
+      <tr>
+        <td>ETX</td>
+        <td>end of text</td>
+        <td>%03</td>
+      </tr>
+      <tr>
+        <td>EOT</td>
+        <td>end of transmission</td>
+        <td>%04</td>
+      </tr>
+      <tr>
+        <td>ENQ</td>
+        <td>enquiry</td>
+        <td>%05</td>
+      </tr>
+      <tr>
+        <td>ACK</td>
+        <td>acknowledge</td>
+        <td>%06</td>
+      </tr>
+      <tr>
+        <td>BEL</td>
+        <td>bell (ring)</td>
+        <td>%07</td>
+      </tr>
+      <tr>
+        <td>BS</td>
+        <td>backspace</td>
+        <td>%08</td>
+      </tr>
+      <tr>
+        <td>HT</td>
+        <td>horizontal tab</td>
+        <td>%09</td>
+      </tr>
+      <tr>
+        <td>LF</td>
+        <td>line feed</td>
+        <td>%0A</td>
+      </tr>
+      <tr>
+        <td>VT</td>
+        <td>vertical tab</td>
+        <td>%0B</td>
+      </tr>
+      <tr>
+        <td>FF</td>
+        <td>form feed</td>
+        <td>%0C</td>
+      </tr>
+      <tr>
+        <td>CR</td>
+        <td>carriage return</td>
+        <td>%0D</td>
+      </tr>
+      <tr>
+        <td>SO</td>
+        <td>shift out</td>
+        <td>%0E</td>
+      </tr>
+      <tr>
+        <td>SI</td>
+        <td>shift in</td>
+        <td>%0F</td>
+      </tr>
+      <tr>
+        <td>DLE</td>
+        <td>data link escape</td>
+        <td>%10</td>
+      </tr>
+      <tr>
+        <td>DC1</td>
+        <td>device control 1</td>
+        <td>%11</td>
+      </tr>
+      <tr>
+        <td>DC2</td>
+        <td>device control 2</td>
+        <td>%12</td>
+      </tr>
+      <tr>
+        <td>DC3</td>
+        <td>device control 3</td>
+        <td>%13</td>
+      </tr>
+      <tr>
+        <td>DC4</td>
+        <td>device control 4</td>
+        <td>%14</td>
+      </tr>
+      <tr>
+        <td>NAK</td>
+        <td>negative acknowledge</td>
+        <td>%15</td>
+      </tr>
+      <tr>
+        <td>SYN</td>
+        <td>synchronize</td>
+        <td>%16</td>
+      </tr>
+      <tr>
+        <td>ETB</td>
+        <td>end transmission block</td>
+        <td>%17</td>
+      </tr>
+      <tr>
+        <td>CAN</td>
+        <td>cancel</td>
+        <td>%18</td>
+      </tr>
+      <tr>
+        <td>EM</td>
+        <td>end of medium</td>
+        <td>%19</td>
+      </tr>
+      <tr>
+        <td>SUB</td>
+        <td>substitute</td>
+        <td>%1A</td>
+      </tr>
+      <tr>
+        <td>ESC</td>
+        <td>escape</td>
+        <td>%1B</td>
+      </tr>
+      <tr>
+        <td>FS</td>
+        <td>file separator</td>
+        <td>%1C</td>
+      </tr>
+      <tr>
+        <td>GS</td>
+        <td>group separator</td>
+        <td>%1D</td>
+      </tr>
+      <tr>
+        <td>RS</td>
+        <td>record separator</td>
+        <td>%1E</td>
+      </tr>
+      <tr>
+        <td>US</td>
+        <td>unit separator</td>
+        <td>%1F</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr />
+
+
+
+<a class="goto-target" id="like"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xlike&#x27;).show();" onmouseout="$(&#x27;#xlike&#x27;).hide();">You may also like</h2>
+  <h2><a id="xlike" style="display:none" class="d-block pl-12 header-anchor" href="#like">#</a></h2>
+</div>
+
+
+
+<p>
+  <div class="d-flex">
+    <div class="p-10">
+      <img src="../img/html/show-like.png" class="img-fluid" loading="lazy" />
+    </div>
+    <div class="pl-25 pt-5">
+      <ul>
+        <li>Our <a class="underline font-weight-semibold" href="charset/utf8.html">HTML UTF-8 Charset Reference</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="charset/ascii.html">HTML ASCII Charset Reference</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="../css.html">CSS Tutorial</a></li>
+      </ul>
+    </div>
+  </div>
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="symbols.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; HTML Symbols &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="metatags.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; HTML Meta Tags &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<script>
+  function urlencode() {
+    var input = $("#urlencodetxt").val();
+    var encoded = encodeURIComponent(input);
+    document.getElementById("encodingresult").innerHTML = encoded;
+  }
+</script>
+
+</div>
+
+          <div class="bg-light p-10 mb-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="tables.html">HTML Tables</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="images.html">HTML Images</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="notfound.html">HTML Color Names</a></li>
+
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="links.html">HTML Links</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="tags.html">HTML Tags</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="lists.html">HTML Lists</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="forms.html">HTML Forms</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="buttons.html">HTML Buttons</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="spaces.html">HTML Spaces</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="input/checkbox.html">HTML Checkboxes</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="editors.html">HTML Editors</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="comments.html">HTML Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" style="min-width:230px !important;">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">URL Encoding</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#percent-encoding">Percent Encoding</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#encoding-functions">Functions</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#ascii-reference">ASCII Encoding</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#control-characters">Control Characters</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#like">You may also like</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+      // Adjust HTML Editor menu to open in a different browser tab
+      var menu = document.querySelectorAll('[data-iseditorlink]')[0];
+      menu.href = "javascript:void(0);";
+      menu.setAttribute('onclick', "window.open('/html/editor', 'htmleditor')");
+    });
+
+    //function copy(id) {
+    //  var stor = document.createElement("textarea");
+    //  stor.setAttribute("contentEditable", true);
+    //  stor.innerHTML = document.getElementById(id).innerHTML;
+    //  stor.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+    //  document.body.appendChild(stor);
+    //  stor.focus({ preventScroll: true });
+    //  stor.focus();
+
+    //  document.execCommand("copy");
+    //  document.body.removeChild(stor);
+
+    //  $('#show-' + id).fadeIn('fast').delay(1200).fadeOut('slow');
+    //}
+
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/html/url-encode by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:40:20 GMT -->
+</html>

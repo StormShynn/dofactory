@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/html/svg by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:46:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML svg Tag - Dofactory</title>
+    <meta name="keywords" content="HTML, HTML Tutorial, Reference, Guide, Examples, Demos, Top, Best, Tips, Advice, Training, Learning, Courses, Lessons, Interview, Front-end, Programming, Code, Source">
+    <meta name="description" content="HTML &lt;svg&gt; tag -- the best examples. The &lt;svg&gt; tag serves as a container for SVG graphics. SVG can be used to draw 2D graphics like shapes, paths, texts, or images.">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="svg.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        
+
+<style>
+  /* CSS adjustments */
+  pre { font-weight: bold; margin-top: 30px; }
+  ol.linenums li { line-height: 22px; }
+
+  .prettyprint { font-size: 16px; }
+  .kwd { color: #0b7490; }
+  .com, .typ { color: #000000; }
+  .lit, .str { color: #cc4500; }
+
+  /*.atv { color: #139; }*/
+  .atv { color: #b7422c; }
+  /*.atn { color: #F45D48; }*/
+  .atn { color: #353768; }
+
+  .prettyprint { background-color: #f6f7f8 !important; }
+
+  /*pre.scriptpre { margin-top: 0px; }*/
+
+  .tutorial hr { margin-top: 65px; margin-bottom: 5px; }
+
+  .tutorial .render button, .tutorial .render input[type="submit"], .render input[type="button"], .render input[type="reset"] { display: inline-block; font-weight: 400; text-align: center; white-space: nowrap; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; border: 1px solid transparent; padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; border-radius: 0.25rem; transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border: 1px solid #ccc; vertical-align: top; }
+  .tutorial .render button:hover, .tutorial .render input[type="submit"]:hover, .tutorial .render input[type="button"]:hover, .tutorial .render input[type="reset"]:hover { text-decoration: none; background-color: #dddddd; border-color: #bbb; }
+  .tutorial .render button:focus, .tutorial .render input[type="submit"]:focus, .tutorial .render input[type="button"]:focus, .tutorial .render input[type="reset"]:focus { outline: 0; border: 1px solid #999; }
+
+  .tutorial input[type="text"], .tutorial input[type="password"], .tutorial input[type="email"], .tutorial input[type="number"] { height: calc(2.25rem + 2px); padding: 0.375rem 0.75rem; font-size: 1rem; }
+
+  .tutorial .render select { outline: none; margin: 25px 0 10px; display: block; width: 180px; height: calc(2.25rem + 2px); padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; color: #495057; background-color: #fff; background-clip: padding-box; border: 1px solid #ced4da; border-radius: 0.25rem; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+
+  /* field set, legend, submit */
+  .tutorial .render fieldset { min-width: 0; padding: 20px 25px; margin: 30px 0 25px; border: 1px solid #999; }
+  .tutorial .render legend { width: auto; padding-left: 5px; padding-right: 5px; margin-bottom: .5rem; font-size: 17px !important; line-height: inherit; color: inherit; white-space: normal; }
+  .tutorial .render input[type="submit"] { margin-bottom: 10px; }
+
+  /* enables autoscroll in flex and grid */
+  div { min-width: 0; }
+
+  /* show buttons*/
+  .tutorial .render button[onclick^="show("], .tutorial .render button[onclick^="draw("], .tutorial .render button[onclick^="toggle("], .tutorial .render button[onclick^="count("], .tutorial .render button[onclick^="add"], .tutorial .render button[onclick^="reset("] { background-color: #b91c1c; color: white; border-radius: 6px !important; padding-left: 16px; padding-right: 16px; border: none !important; /*padding:3px 8px; margin-top:10px;*/ }
+  .tutorial .render button[onclick^="show("]:hover, .tutorial .render button[onclick^="draw("]:hover, .tutorial .render button[onclick^="toggle("]:hover, .tutorial .render button[onclick^="count("]:hover, .tutorial .render button[onclick^="add"]:hover, .tutorial .render button[onclick^="reset("]:hover { background-color: #991b1b; cursor: pointer; /*xborder-color: #cd3;padding:3px 8px; margin-top:10px;*/ }
+
+  .tutorial div.items p:first-child { margin-top: 35px !important; }
+
+  .tutorial em { border: 0; padding: 0; border-radius: 0; font-weight: 500; font-style: normal; white-space: nowrap; }
+  .tutorial em.c { border: 0; padding: 0; border-radius: 0; font-style: normal; white-space: nowrap; background: #f5f6f7; }
+
+  .tutorial .for-details { font-size:15px; padding-top: 10px; }
+
+  .tutorial h3 { font-weight: 500;}
+</style>
+
+<link rel="stylesheet" href="../tutorial/html/responsivee9e7.css?v=rM7Pr4uzBnOc3BNyGhrYGbF7qhWtK-WXj2JE2FsU7oc" />
+
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="../img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        HTML Reference&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="ref.html">HTML Reference</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="tags.html">HTML Tags</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="tag-groups.html">HTML Tag Groups</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="attributes.html">HTML Attributes</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="media-types.html">HTTP Media Types</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="http-methods.html">HTTP Methods</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="http-status-codes.html">HTTP Status Codes</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="country-codes.html">HTML Country Codes</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="language-codes.html">HTML Language Codes</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="event-attributes.html">HTML Event Attributes</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 data-iseditorlink=&#x27;true&#x27;
+                 href="editor.html">HTML Editor</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">HTML Tags</div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="a.html">HMTL <code>&lt;a&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="abbr.html">HTML <code>&lt;abbr&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="address.html">HTML <code>&lt;address&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="area.html">HTML <code>&lt;area&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="article.html">HTML <code>&lt;article&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-17" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="aside.html">HTML <code>&lt;aside&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-18" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="audio.html">HTML <code>&lt;audio&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-19" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="b.html">HTML <code>&lt;b&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-20" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="base.html">HTML <code>&lt;base&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-21" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="blockquote.html">HTML <code>&lt;blockquote&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-22" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="body.html">HTML <code>&lt;body&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-23" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="br.html">HTML <code>&lt;br&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-24" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="button.html">HTML <code>&lt;button&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-25" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="canvas.html">HTML <code>&lt;canvas&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-26" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="caption.html">HTML <code>&lt;caption&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-27" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="cite.html">HTML <code>&lt;cite&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-28" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="code.html">HTML <code>&lt;code&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-29" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="col.html">HTML <code>&lt;col&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-30" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="colgroup.html">HTML <code>&lt;colgroup&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-31" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="data.html">HTML <code>&lt;data&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-32" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="datalist.html">HTML <code>&lt;datalist&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-33" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="dd.html">HTML <code>&lt;dd&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-34" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="del.html">HTML <code>&lt;del&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-35" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="details.html">HTML <code>&lt;details&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-36" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="div.html">HTML <code>&lt;div&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-37" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="dl.html">HTML <code>&lt;dl&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-38" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="dt.html">HTML <code>&lt;dt&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-39" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="em.html">HTML <code>&lt;em&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-40" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="embed.html">HTML <code>&lt;embed&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-41" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="fieldset.html">HTML <code>&lt;fieldset&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-42" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="figcaption.html">HTML <code>&lt;figcaption&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-43" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="figure.html">HTML <code>&lt;figure&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-44" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="footer.html">HTML <code>&lt;footer&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-45" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="form.html">HTML <code>&lt;form&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-46" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="h1h6.html">HTML <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-47" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="head.html">HTML <code>&lt;head&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-48" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="header.html">HTML <code>&lt;header&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-49" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="hr.html">HTML <code>&lt;hr&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-50" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="html.html">HTML <code>&lt;html&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-51" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="i.html">HTML <code>&lt;i&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-52" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="iframe.html">HTML <code>&lt;iframe&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-53" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="img.html">HTML <code>&lt;img&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-54" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="input.html">HTML <code>&lt;input&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-55" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="ins.html">HTML <code>&lt;ins&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-56" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="kbd.html">HTML <code>&lt;kbd&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-57" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="label.html">HTML <code>&lt;label&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-58" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="legend.html">HTML <code>&lt;legend&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-59" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="li.html">HTML <code>&lt;li&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-60" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="link.html">HTML <code>&lt;link&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-61" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="main.html">HTML <code>&lt;main&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-62" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="map.html">HTML <code>&lt;map&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-63" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="mark.html">HTML <code>&lt;mark&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-64" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="meta.html">HTML <code>&lt;meta&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-65" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="meter.html">HTML <code>&lt;meter&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-66" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="nav.html">HTML <code>&lt;nav&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-67" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="noscript.html">HTML <code>&lt;noscript&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-68" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="object.html">HTML <code>&lt;object&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-69" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="ol.html">HTML <code>&lt;ol&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-70" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="optgroup.html">HTML <code>&lt;optgroup&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-71" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="option.html">HTML <code>&lt;option&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-72" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="output.html">HTML <code>&lt;output&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-73" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="p.html">HTML <code>&lt;p&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-74" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="param.html">HTML <code>&lt;param&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-75" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="picture.html">HTML <code>&lt;picture&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-76" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="pre.html">HTML <code>&lt;pre&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-77" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="progress.html">HTML <code>&lt;progress&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-78" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="q.html">HTML <code>&lt;q&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-79" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="rp.html">HTML <code>&lt;rp&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-80" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="rt.html">HTML <code>&lt;rt&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-81" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="ruby.html">HTML <code>&lt;ruby&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-82" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="samp.html">HTML <code>&lt;samp&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-83" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="script.html">HTML <code>&lt;script&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-84" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="section.html">HTML <code>&lt;section&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-85" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="select.html">HTML <code>&lt;select&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-86" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="small.html">HTML <code>&lt;small&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-87" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="source.html">HTML <code>&lt;source&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-88" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="span.html">HTML <code>&lt;span&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-89" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="strong.html">HTML <code>&lt;strong&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-90" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="style.html">HTML <code>&lt;style&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-91" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="sub.html">HTML <code>&lt;sub&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-92" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="summary.html">HTML <code>&lt;summary&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-93" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="sup.html">HTML <code>&lt;sup&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-94" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="svg.html">HTML <code>&lt;svg&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-95" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="table.html">HTML <code>&lt;table&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-96" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="tbody.html">HTML <code>&lt;tbody&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-97" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="td.html">HTML <code>&lt;td&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-98" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="template.html">HTML <code>&lt;template&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-99" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="textarea.html">HTML <code>&lt;textarea&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-100" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="tfoot.html">HTML <code>&lt;tfoot&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-101" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="th.html">HTML <code>&lt;th&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-102" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="thead.html">HTML <code>&lt;thead&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-103" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="time.html">HTML <code>&lt;time&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-104" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="title.html">HTML <code>&lt;title&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-105" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="tr.html">HTML <code>&lt;tr&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-106" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="track.html">HTML <code>&lt;track&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-107" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="u.html">HTML <code>&lt;u&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-108" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="ul.html">HTML <code>&lt;ul&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-109" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="var.html">HTML <code>&lt;var&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-110" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="video.html">HTML <code>&lt;video&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-111" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="wbr.html">HTML <code>&lt;wbr&gt;</code></a>
+                <div class="height-1"></div>
+              <a id="item-112" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="comment.html">HTML comment</a>
+                <div class="height-1"></div>
+              <a id="item-113" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="doctype.html">HTML <code>&lt;!DOCTYPE&gt;</code></a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">Deprecated</div>
+              <a id="item-115" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="tags/deprecated.html">Deprecated Tags</a>
+                <div class="height-1"></div>
+              <a id="item-116" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="attributes/deprecated.html">Deprecated Attributes</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="3162" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="../img/arrow-left.jpg" /> &nbsp;Back to HTML </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css/ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript/design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="../net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial" xstyle="xmax-width:1200px;">
+
+      <div class="d-flex justify-content-around align-items-start">
+       
+        <div class="w-100 m-auto " style="max-width:970px;">
+
+<div>
+<h1>HTML &lt;svg&gt; Tag </h1>
+
+
+<div class="d-flex mt-10 pt-10 d-block d-lg-none" xstyle="border-top:1px solid #ccd;">
+    <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="sup.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; HTML <code>&lt;sup&gt;</code> &nbsp;</a>
+  </div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="table.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; HTML <code>&lt;table&gt;</code> &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<div class="items mt-70 mb-50">
+  <p>The <a href="svg.html" class="code-link">&lt;svg&gt;</a> tag serves as a container for SVG graphics.</p>
+  <p>SVG stands for <i>Scalable Vector Graphics</i>.</p>
+  <p>SVG images are lightweight and scalable without loss of resolution or pixelation.</p>
+</div>
+
+
+
+
+  <div class="mt-40"></div>
+
+<a class="goto-target" id="example"></a>
+<div class="d-flex">
+  <h3 style="margin-left:-2px;font-weight:500 !important;" onmouseover="$(&#x27;#xexample&#x27;).show();" onmouseout="$(&#x27;#xexample&#x27;).hide();">Example</h3>
+  <h3 class="pl-12"><a id="xexample" class="d-block header-anchor" href="#example">#</a></h3>
+</div>
+
+
+
+
+<p class="pt-20">
+  An <a href="svg.html" class="code-link">&lt;svg&gt;</a> element of a map of the USA and its 50 states. <br />
+  Hover over any state to see a tooltip with the state's name.
+</p>
+<div class="render mt-20">
+  
+<div class="ml-25 mt-10">
+    <svg viewBox="0 0 950 650">
+<defs>
+  <style type="text/css">
+    .state {fill:lightblue;stroke:#444;}
+  </style>
+</defs>
+<g class="state">
+  <path id="AK" d="M161.1 453.7l-.3 85.4 1.6 1 3.1.2 1.5-1.1h2.6l.2 2.9 7 6.8.5 2.6 3.4-1.9.6-.2.3-3.1 1.5-1.6 1.1-.2 1.9-1.5 3.1 2.1.6 2.9 1.9 1.1 1.1 2.4 3.9 1.8 3.4 6 2.7 3.9 2.3 2.7 1.5 3.7 5 1.8 5.2 2.1 1 4.4.5 3.1-1 3.4-1.8 2.3-1.6-.8-1.5-3.1-2.7-1.5-1.8-1.1-.8.8 1.5 2.7.2 3.7-1.1.5-1.9-1.9-2.1-1.3.5 1.6 1.3 1.8-.8.8s-.8-.3-1.3-1c-.5-.6-2.1-3.4-2.1-3.4l-1-2.3s-.3 1.3-1 1c-.6-.3-1.3-1.5-1.3-1.5l1.8-1.9-1.5-1.5v-5h-.8l-.8 3.4-1.1.5-1-3.7-.6-3.7-.8-.5.3 5.7v1.1l-1.5-1.3-3.6-6-2.1-.5-.6-3.7-1.6-2.9-1.6-1.1v-2.3l2.1-1.3-.5-.3-2.6.6-3.4-2.4-2.6-2.9-4.8-2.6-4-2.6 1.3-3.2V542l-1.8 1.6-2.9 1.1-3.7-1.1-5.7-2.4h-5.5l-.6.5-6.5-3.9-2.1-.3-2.7-5.8-3.6.3-3.6 1.5.5 4.5 1.1-2.9 1 .3-1.5 4.4 3.2-2.7.6 1.6-3.9 4.4-1.3-.3-.5-1.9-1.3-.8-1.3 1.1-2.7-1.8-3.1 2.1-1.8 2.1-3.4 2.1-4.7-.2-.5-2.1 3.7-.6v-1.3l-2.3-.6 1-2.4 2.3-3.9v-1.8l.2-.8 4.4-2.3 1 1.3h2.7l-1.3-2.6-3.7-.3-5 2.7-2.4 3.4-1.8 2.6-1.1 2.3-4.2 1.5-3.1 2.6-.3 1.6 2.3 1 .8 2.1-2.7 3.2-6.5 4.2-7.8 4.2-2.1 1.1-5.3 1.1-5.3 2.3 1.8 1.3-1.5 1.5-.5 1.1-2.7-1-3.2.2-.8 2.3h-1l.3-2.4-3.6 1.3-2.9 1-3.4-1.3-2.9 1.9h-3.2l-2.1 1.3-1.6.8-2.1-.3-2.6-1.1-2.3.6-1 1-1.6-1.1v-1.9l3.1-1.3 6.3.6 4.4-1.6 2.1-2.1 2.9-.6 1.8-.8 2.7.2 1.6 1.3 1-.3 2.3-2.7 3.1-1 3.4-.6 1.3-.3.6.5h.8l1.3-3.7 4-1.5 1.9-3.7 2.3-4.5 1.6-1.5.3-2.6-1.6 1.3-3.4.6-.6-2.4-1.3-.3-1 1-.2 2.9-1.5-.2-1.5-5.8-1.3 1.3-1.1-.5-.3-1.9-4 .2-2.1 1.1-2.6-.3 1.5-1.5.5-2.6-.6-1.9 1.5-1 1.3-.2-.6-1.8v-4.4l-1-1-.8 1.5h-6.1l-1.5-1.3-.6-3.9-2.1-3.6v-1l2.1-.8.2-2.1 1.1-1.1-.8-.5-1.3.5-1.1-2.7 1-5 4.5-3.2 2.6-1.6 1.9-3.7 2.7-1.3 2.6 1.1.3 2.4 2.4-.3 3.2-2.4 1.6.6 1 .6h1.6l2.3-1.3.8-4.4s.3-2.9 1-3.4c.6-.5 1-1 1-1l-1.1-1.9-2.6.8-3.2.8-1.9-.5-3.6-1.8-5-.2-3.6-3.7.5-3.9.6-2.4-2.1-1.8-1.9-3.7.5-.8 6.8-.5h2.1l1 1h.6l-.2-1.6 3.9-.6 2.6.3 1.5 1.1-1.5 2.1-.5 1.5 2.7 1.6 5 1.8 1.8-1-2.3-4.4-1-3.2 1-.8-3.4-1.9-.5-1.1.5-1.6-.8-3.9-2.9-4.7-2.4-4.2 2.9-1.9h3.2l1.8.6 4.2-.2 3.7-3.6 1.1-3.1 3.7-2.4 1.6 1 2.7-.6 3.7-2.1 1.1-.2 1 .8 4.5-.2 2.7-3.1h1.1l3.6 2.4 1.9 2.1-.5 1.1.6 1.1 1.6-1.6 3.9.3.3 3.7 1.9 1.5 7.1.6 6.3 4.2 1.5-1 5.2 2.6 2.1-.6 1.9-.8 4.8 1.9zM46 482.6l2.1 5.3-.2 1-2.9-.3-1.8-4-1.8-1.5H39l-.2-2.6 1.8-2.4 1.1 2.4 1.5 1.5zm-2.6 33.5l3.7.8 3.7 1 .8 1-1.6 3.7-3.1-.2-3.4-3.6zM22.7 502l1.1 2.6 1.1 1.6-1.1.8-2.1-3.1V502zM9 575.1l3.4-2.3 3.4-1 2.6.3.5 1.6 1.9.5 1.9-1.9-.3-1.6 2.7-.6 2.9 2.6-1.1 1.8-4.4 1.1-2.7-.5-3.7-1.1-4.4 1.5-1.6.3zm48.9-4.5l1.6 1.9 2.1-1.6-1.5-1.3zm2.9 3l1.1-2.3 2.1.3-.8 1.9h-2.4zm23.6-1.9l1.5 1.8 1-1.1-.8-1.9zm8.8-12.5l1.1 5.8 2.9.8 5-2.9 4.4-2.6-1.6-2.4.5-2.4-2.1 1.3-2.9-.8 1.6-1.1 1.9.8 3.9-1.8.5-1.5-2.4-.8.8-1.9-2.7 1.9-4.7 3.6-4.8 2.9zm42.3-19.8l2.4-1.5-1-1.8-1.8 1z">
+    <title>Alaska</title>
+  </path>
+  <path id="HI" d="M233.1 519.3l1.9-3.6 2.3-.3.3.8-2.1 3.1zm10.2-3.7l6.1 2.6 2.1-.3 1.6-3.9-.6-3.4-4.2-.5-4 1.8zm30.7 10l3.7 5.5 2.4-.3 1.1-.5 1.5 1.3 3.7-.2 1-1.5-2.9-1.8-1.9-3.7-2.1-3.6-5.8 2.9zm20.2 8.9l1.3-1.9 4.7 1 .6-.5 6.1.6-.3 1.3-2.6 1.5-4.4-.3zm5.3 5.2l1.9 3.9 3.1-1.1.3-1.6-1.6-2.1-3.7-.3zm7-1.2l2.3-2.9 4.7 2.4 4.4 1.1 4.4 2.7v1.9l-3.6 1.8-4.8 1-2.4-1.5zm16.6 15.6l1.6-1.3 3.4 1.6 7.6 3.6 3.4 2.1 1.6 2.4 1.9 4.4 4 2.6-.3 1.3-3.9 3.2-4.2 1.5-1.5-.6-3.1 1.8-2.4 3.2-2.3 2.9-1.8-.2-3.6-2.6-.3-4.5.6-2.4-1.6-5.7-2.1-1.8-.2-2.6 2.3-1 2.1-3.1.5-1-1.6-1.8z">
+    <title>Hawaii</title>
+  </path>
+  <path id="AL" d="M628.5 466.4l.6.2 1.3-2.7 1.5-4.4 2.3.6 3.1 6v1l-2.7 1.9 2.7.3 5.2-2.5-.3-7.6-2.5-1.8-2-2 .4-4 10.5-1.5 25.7-2.9 6.7-.6 5.6.1-.5-2.2-1.5-.8-.9-1.1 1-2.6-.4-5.2-1.6-4.5.8-5.1 1.7-4.8-.2-1.7-1.8-.7-.5-3.6-2.7-3.4-2-6.5-1.4-6.7-1.8-5-3.8-16-3.5-7.9-.8-5.6.1-2.2-9 .8-23.4 2.2-12.2.8-.2 6.4.2 16.7-.7 31-.3 14.1 2.8 18.8 1.6 14.7z">
+    <title>Alabama</title>
+  </path>
+  <path id="AR" d="M587.3 346.1l-6.4-.7.9-3.1 3.1-2.6.6-2.3-1.8-2.9-31.9 1.2-23.3.7-23.6.3 1.5 6.9.1 8.5 1.4 10.9.3 38.2 2.1 1.6 3-1.2 2.9 1.2.4 10.1 25.2-.2 26.8-.8.9-1.9-.3-3.8-1.7-3.1 1.5-1.4-1.4-2.2.7-2.4 1.1-5.9 2.7-2.3-.8-2.2 4-5.6 2.5-1.1-.1-1.7-.5-1.7 2.9-5.8 2.5-1.1.2-3.3 2.1-1.4.9-4.1-1.4-4 4.2-2.4.3-2.1 1.2-4.2.9-3.1z">
+    <title>Arkansas</title>
+  </path>
+  <path id="AZ" d="M135.1 389.7l-.3 1.5.5 1 18.9 10.7 12.1 7.6 14.7 8.6 16.8 10 12.3 2.4 25.4 2.7 6-39.6 7-53.1 4.4-31-24.6-3.6-60.7-11-.2 1.1-2.6 16.5-2.1 3.8-2.8-.2-1.2-2.6-2.6-.4-1.2-1.1-1.1.1-2.1 1.7-.3 6.8-.3 1.5-.5 12.5-1.5 2.4-.4 3.3 2.8 5 1.1 5.5.7 1.1 1.1.9-.4 2.4-1.7 1.2-3.4 1.6-1.6 1.8-1.6 3.6-.5 4.9-3 2.9-1.9.9-.1 5.8-.6 1.6.5.8 3.9.4-.9 3-1.7 2.4-3.7.4z">
+    <title>Arizona</title>
+  </path>
+  <path id="CA" d="M122.7 385.9l-19.7-2.7-10-1.5-.5-1.8v-9.4l-.3-3.2-2.6-4.2-.8-2.3-3.9-4.2-2.9-4.7-2.7-.2-3.2-.8-.3-1 1.5-.6-.6-3.2-1.5-2.1-4.8-.8-3.9-2.1-1.1-2.3-2.6-4.8-2.9-3.1H57l-3.9-2.1-4.5-1.8-4.2-.5-2.4-2.7.5-1.9 1.8-7.1.8-1.9v-2.4l-1.6-1-.5-2.9-1.5-2.6-3.4-5.8-1.3-3.1-1.5-4.7-1.6-5.3-3.2-4.4-.5-2.9.8-3.9h1.1l2.1-1.6 1.1-3.6-1-2.7-2.7-.5-1.9-2.6-2.1-3.7-.2-8.2.6-1.9.6-2.3.5-2.4-5.7-6.3V236l.3-.5.3-3.2-1.3-4-2.3-4.8-2.7-4.5-1.8-3.9 1-3.7.6-5.8 1.8-3.1.3-6.5-1.1-3.6-1.6-4.2L14 184l.8-3.2 1.5-4.2 1.8-.8.3-1.1 3.1-2.6 5.2-11.8.2-7.4 1.69-4.9 38.69 11.8 25.6 6.6-8 31.3-8.67 33.1L88.84 250 131 312.3l17.1 26.1-.4 3.1 2.8 5.2 1.1 5.4 1 1.5.7.6-.2 1.4-1.4 1-3.4 1.6-1.9 2.1-1.7 3.9-.5 4.7-2.6 2.5-2.3 1.1-.1 6.2-.6 1.9 1 1.7 3 .3-.4 1.6-1.4 2-3.9.6zM48.8 337l1.3 1.5-.2 1.3-3.2-.1-.6-1.2-.6-1.5zm1.9 0l1.2-.6 3.6 2.1 3.1 1.2-.9.6-4.5-.2-1.6-1.6zm20.7 19.8l1.8 2.3.8 1 1.5.6.6-1.5-1-1.8-2.7-2-1.1.2v1.2zm-1.4 8.7l1.8 3.2 1.2 1.9-1.5.2-1.3-1.2s-.7-1.5-.7-1.9v-2.2z">
+    <title>California</title>
+  </path>
+  <path id="CO" d="M380.2 235.5l-36-3.5-79.1-8.6-2.2 22.1-7 50.4-1.9 13.7 34 3.9 37.5 4.4 34.7 3 14.3.6z">
+    <title>Colorado</title>
+  </path>
+  <path id="CT" d="M852 190.9l3.6-3.2 1.9-2.1.8.6 2.7-1.5 5.2-1.1 7-3.5-.6-4.2-.8-4.4-1.6-6-4.3 1.1-21.8 4.7.6 3.1 1.5 7.3v8.3l-.9 2.1 1.7 2.2z">
+    <title>Connecticut</title>
+  </path>
+  <path id="DE" d="M834.4 247.2l-1 .5-3.6-2.4-1.8-4.7-1.9-3.6-2.3-1-2.1-3.6.5-2 .5-2.3.1-1.1-.6.1-1.7 1-2 1.7-.2.3 1.4 4.1 2.3 5.6 3.7 16.1 5-.3 6-1.1z">
+    <title>Delaware</title>
+  </path>
+  <path id="FL" d="M750.2 445.2l-5.2-.7-.7.8 1.5 4.4-.4 5.2-4.1-1-.2-2.8H737l-5.3.7-32.4 1.9-8.2-.3-1.7-1.7-2.5-4.2H681l-6.6.5-35.4 4.2-.3 2.8 1.6 1.6 2.9 2 .3 8.4 3.3-.6 6-2.1 6-.5 4.4-.6 7.6 1.8 8.1 3.9 1.6 1.5 2.9 1.1 1.6 1.9.3 2.7 3.2-1.3h3.9l3.6-1.9 3.7-3.6 3.1.2.5-1.1-.8-1 .2-1.9 4-.8h2.6l2.9 1.5 4.2 1.5 2.4 3.7 2.7 1 1.1 3.4 3.4 1.6 1.6 2.6 1.9.6 5.2 1.3 1.3 3.1 3 3.7v9.5l-1.5 4.7.3 2.7 1.3 4.8 1.8 4 .8-.5 1.5-4.5-2.6-1-.3-.6 1.6-.6 4.5 1 .2 1.6-3.2 5.5-2.1 2.4 3.6 3.7 2.6 3.1 2.9 5.3 2.9 3.9 2.1 5 1.8.3 1.6-2.1 1.8 1.1 2.6 4 .6 3.6 3.1 4.4.8-1.3 3.9.3 3.6 2.3 3.4 5.2.8 3.4.3 2.9 1.1 1 1.3.5 2.4-1 1.5-1.6 3.9-.2 3.1-1.5 2.7-3.2-.5-1.9-.3-2.4.6-1.9-.3-1.9 2.4-1.3.3-3.4-.6-1.8-.5-12-1.3-7.6-4.5-8.2-3.6-5.8-2.6-5.3-2.9-2.9-2.9-7.4.7-1.4 1.1-1.3-1.6-2.9-4-3.7-4.8-5.5-3.7-6.3-5.3-9.4-3.7-9.7-2.3-7.3zm17.7 132.7l2.4-.6 1.3-.2 1.5-2.3 2.3-1.6 1.3.5 1.7.3.4 1.1-3.5 1.2-4.2 1.5-2.3 1.2zm13.5-5l1.2 1.1 2.7-2.1 5.3-4.2 3.7-3.9 2.5-6.6 1-1.7.2-3.4-.7.5-1 2.8-1.5 4.6-3.2 5.3-4.4 4.2-3.4 1.9z">
+    <title>Florida</title>
+  </path>
+  <path id="GA" d="M750.2 444.2l-5.6-.7-1.4 1.6 1.6 4.7-.3 3.9-2.2-.6-.2-3h-5.2l-5.3.7-32.3 1.9-7.7-.3-1.4-1.2-2.5-4.3-.8-3.3-1.6-.9-.5-.5.9-2.2-.4-5.5-1.6-4.5.8-4.9 1.7-4.8-.2-2.5-1.9-.7-.4-3.2-2.8-3.5-1.9-6.2-1.5-7-1.7-4.8-3.8-16-3.5-8-.8-5.3.1-2.3 3.3-.3 13.6-1.6 18.6-2 6.3-1.1.5 1.4-2.2.9-.9 2.2.4 2 1.4 1.6 4.3 2.7 3.2-.1 3.2 4.7.6 1.6 2.3 2.8.5 1.7 4.7 1.8 3 2.2 2.3 3 2.3 1.3 2 1.8 1.4 2.7 2.1 1.9 4.1 1.8 2.7 6 1.7 5.1 2.8.7 2.1 1.9 2 5.7 2.9 1.6 1.7-.8.4 1.2-3.3 6.2.5 2.6-1.5 4.2-2.3 10 .8 6.3z">
+    <title>Georgia</title>
+  </path>
+  <path id="IA" d="M556.8 183.6l2.1 2.1.3.7-2 3 .3 4 2.6 4.1 3.1 1.6 2.4.3.9 1.8.2 2.4 2.5 1 .9 1.1.5 1.6 3.8 3.3.6 1.9-.7 3-1.7 3.7-.6 2.4-2.1 1.6-1.6.5-5.7 1.5-1.6 4.8.8 1.8 1.7 1.5-.2 3.5-1.9 1.4-.7 1.8v2.4l-1.4.4-1.7 1.4-.5 1.7.4 1.7-1.3 1-2.3-2.7-1.4-2.8-8.3.8-10 .6-49.2 1.2-1.6-4.3-.4-6.7-1.4-4.2-.7-5.2-2.2-3.7-1-4.6-2.7-7.8-1.1-5.6-1.4-1.9-1.3-2.9 1.7-3.8 1.2-6.1-2.7-2.2-.3-2.4.7-2.4 1.8-.3 61.1-.6 21.2-.7z">
+    <title>Iowa</title>
+  </path>
+  <path id="ID" d="M175.3 27.63l-4.8 17.41L166 65.9l-3.4 16.22-.4 9.67 1.2 4.44 3.5 2.66-.2 3.91-3.9 4.4-4.5 6.6-.9 2.9-1.2 1.1-1.8.8-4.3 5.3-.4 3.1-.4 1.1.6 1 2.6-.1 1.1 2.3-2.4 5.8-1.2 4.2-8.8 35.3 20.7 4.5 39.5 7.9 34.8 6.1 4.9-29.2 3.8-24.1-2.7-2.4-.4-2.6-.8-1.1-2.1 1-.7 2.6-3.2.5-3.9-1.6-3.8.1-2.5.7-3.4-1.5-2.4.2-2.4 2-2-1.1-.7-4 .7-2.9-2.5-2.9-3.3-2.6-2.7-13.1-.1-4.7-.3-.1-.2.4-5.1 3.5-1.7-.2-2.9-3.4-.2-3.1 7-17.13-.4-1.94-3.4-1.15-.6-1.18-2.6-3.46-4.6-10.23-3.2-1.53-2-4.95 1.3-4.63-3.2-7.58 4.4-21.52z">
+    <title>Idaho</title>
+  </path>
+  <path id="IL" d="M618.7 214.3l-.8-2.6-1.3-3.7-1.6-1.8-1.5-2.6-.4-5.5-15.9 1.8-17.4 1h-12.3l.2 2.1 2.2.9 1.1 1.4.4 1.4 3.9 3.4.7 2.4-.7 3.3-1.7 3.7-.8 2.7-2.4 1.9-1.9.6-5.2 1.3-1.3 4.1.6 1.1 1.9 1.8-.2 4.3-2.1 1.6-.5 1.3v2.8l-1.8.6-1.4 1.2-.4 1.2.4 2-1.6 1.3-.9 2.8.3 3.9 2.3 7 7 7.6 5.7 3.7v4.4l.7 1.2 6.6.6 2.7 1.4-.7 3.5-2.2 6.2-.8 3 2 3.7 6.4 5.3 4.8.8 2.2 5.1 2 3.4-.9 2.8 1.5 3.8 1.7 2.1 1.6-.3 1-2.2 2.4-1.7 2.8-1 6.1 2.5.5-.2v-1.1l-1.2-2.7.4-2.8 2.4-1.6 3.4-1.2-.5-1.3-.8-2 1.2-1.3 1-2.7v-4l.4-4.9 2.5-3 1.8-3.8 2.5-4-.5-5.3-1.8-3.2-.3-3.3.8-5.3-.7-7.2-1.1-15.8-1.4-15.3-.9-11.7z">
+    <title>Illinois</title>
+  </path>
+  <path id="IN" d="M622.9 216.1l1.5 1 1.1-.3 2.1-1.9 2.5-1.8 14.3-1.1 18.4-1.8 1.6 15.5 4.9 42.6-.6 2.9 1.3 1.6.2 1.3-2.3 1.6-3.6 1.7-3.2.4-.5 4.8-4.7 3.6-2.9 4 .2 2.4-.5 1.4h-3.5l-1.4-1.7-5.2 3 .2 3.1-.9.2-.5-.9-2.4-1.7-3.6 1.5-1.4 2.9-1.2-.6-1.6-1.8-4.4.5-5.7 1-2.5 1.3v-2.6l.4-4.7 2.3-2.9 1.8-3.9 2.7-4.2-.5-5.8-1.8-3.1-.3-3.2.8-5.3-.7-7.1-.9-12.6-2.5-30.1z">
+    <title>Indiana</title>
+  </path>
+  <path id="KS" d="M485.9 259.5l-43.8-.6-40.6-1.2-21.7-.9-4.3 64.8 24.3 1 44.7 2.1 46.3.6 12.6-.3.7-35-1.2-11.1-2.5-2-2.4-3-2.3-3.6.6-3 1.7-1.4v-2.1l-.8-.7-2.6-.2-3.5-3.4z">
+    <title>Kansas</title>
+  </path>
+  <path id="KY" d="M607.2 331.8l12.6-.7.1-4.1h4.3l30.4-3.2 45.1-4.3 5.6-3.6 3.9-2.1.1-1.9 6-7.8 4.1-3.6 2.1-2.4-3.3-2-2.5-2.7-3-3.8-.5-2.2-2.6-1.4-.9-1.9-.2-6.1-2.6-2-1.9-1.1-.5-2.3-1.3.2-2 1.2-2.5 2.7-1.9-1.7-2.5-.5-2.4 1.4h-2.3l-1.8-2-5.6-.1-1.8-4.5-2.9-1.5-2.1.8-4.2.2-.5 2.1 1.2 1.5.3 2.1-2.8 2-3.8 1.8-2.6.4-.5 4.5-4.9 3.6-2.6 3.7.2 2.2-.9 2.3-4.5-.1-1.3-1.3-3.9 2.2.2 3.3-2.4.6-.8-1.4-1.7-1.2-2.7 1.1-1.8 3.5-2.2-1-1.4-1.6-3.7.4-5.6 1-2.8 1.3-1.2 3.4-1 1 1.5 3.7-4.2 1.4-1.9 1.4-.4 2.2 1.2 2.4v2.2l-1.6.4-6.1-2.5-2.3.9-2 1.4-.8 1.8 1.7 2.4-.9 1.8-.1 3.3-2.4 1.3-2.1 1.7z">
+    <title>Kentucky</title>
+  </path>
+  <path id="LA" d="M526.9 485.9l8.1-.3 10.3 3.6 6.5 1.1 3.7-1.5 3.2 1.1 3.2 1 .8-2.1-3.2-1.1-2.6.5-2.7-1.6.8-1.5 3.1-1 1.8 1.5 1.8-1 3.2.6 1.5 2.4.3 2.3 4.5.3 1.8 1.8-.8 1.6-1.3.8 1.6 1.6 8.4 3.6 3.6-1.3 1-2.4 2.6-.6 1.8-1.5 1.3 1 .8 2.9-2.3.8.6.6 3.4-1.3 2.3-3.4.8-.5-2.1-.3.8-1.6-.2-1.5 2.1-.5 1.1-1.3.6.8.6 3.1 4.2.6 4 1.9 1 1.5h2.9l1.1 1 2.3-3.1V493h-1.3l-3.4-2.7-5.8-.8-3.2-2.3 1.1-2.7 2.3.3.2-.6-1.8-1v-.5h3.2l1.8-3.1-1.3-1.9-.3-2.7-1.5.2-1.9 2.1-.6 2.6-3.1-.6-1-1.8 1.8-1.9 1.9-1.7-2.2-6.5-3.4-3.4 1-7.3-.2-.5-1.3.2-33.1 1.4-.8-2.4.8-8.5 8.6-14.8-.9-2.6 1.4-.4.4-2-2.2-2 .1-1.9-2-4.5-.4-5.1.1-.7-26.4.8-25.2.1.4 9.7.7 9.5.5 3.7 2.6 4.5.9 4.4 4.3 6 .3 3.1.6.8-.7 8.3-2.8 4.6 1.2 2.4-.5 2.6-.8 7.3-1.3 3 .2 3.7z">
+    <title>Louisiana</title>
+  </path>
+  <path id="MA" d="M887.5 172.5l-.5-2.3.8-1.5 2.9-1.5.8 3.1-.5 1.8-2.4 1.5v1l1.9-1.5 3.9-4.5 3.9-1.9 4.2-1.5-.3-2.4-1-2.9-1.9-2.4-1.8-.8-2.1.2-.5.5 1 1.3 1.5-.8 2.1 1.6.8 2.7-1.8 1.8-2.3 1-3.6-.5-3.9-6-2.3-2.6h-1.8l-1.1.8-1.9-2.6.3-1.5 2.4-5.2-2.9-4.4-3.7 1.8-1.8 2.9-18.3 4.7-13.8 2.5-.6 10.6.7 4.9 22-4.8 11.2-2.8 2 1.6 3.4 4.3 2.9 4.7zm12.5 1.4l2.2-.7.5-1.7 1 .1 1 2.3-1.3.5-3.9.1zm-9.4.8l2.3-2.6h1.6l1.8 1.5-2.4 1-2.2 1z">
+    <title>Massachusetts</title>
+  </path>
+  <path id="MD" d="M834.8 264.1l1.7-3.8.5-4.8-6.3 1.1-5.8.3-3.8-16.8-2.3-5.5-1.5-4.6-22.2 4.3-37.6 7.6 2 10.4 4.8-4.9 2.5-.7 1.4-1.5 1.8-2.7 1.6.7 2.6-.2 2.6-2.1 2-1.5 2.1-.6 1.5 1.1 2.7 1.4 1.9 1.8 1.3 1.4 4.8 1.6-.6 2.9 5.8 2.1 2.1-2.6 3.7 2.5-2.1 3.3-.7 3.3-1.8 2.6v2.1l.3.8 2 1.3 3.4 1.1 4.3-.1 3.1 1 2.1.3 1-2.1-1.5-2.1v-1.8l-2.4-2.1-2.1-5.5 1.3-5.3-.2-2.1-1.3-1.3s1.5-1.6 1.5-2.3c0-.6.5-2.1.5-2.1l1.9-1.3 1.9-1.6.5 1-1.5 1.6-1.3 3.7.3 1.1 1.8.3.5 5.5-2.1 1 .3 3.6.5-.2 1.1-1.9 1.6 1.8-1.6 1.3-.3 3.4 2.6 3.4 3.9.5 1.6-.8 3.2 4.2 1 .4zm-14.5.2l1.1 2.5.2 1.8 1.1 1.9s.9-.9.9-1.2c0-.3-.7-3.1-.7-3.1l-.7-2.3z">
+    <title>Maryland</title>
+  </path>
+  <path id="ME" d="M865.8 91.9l1.5.4v-2.6l.8-5.5 2.6-4.7 1.5-4-1.9-2.4v-6l.8-1 .8-2.7-.2-1.5-.2-4.8 1.8-4.8 2.9-8.9 2.1-4.2h1.3l1.3.2v1.1l1.3 2.3 2.7.6.8-.8v-1l4-2.9 1.8-1.8 1.5.2 6 2.4 1.9 1 9.1 29.9h6l.8 1.9.2 4.8 2.9 2.3h.8l.2-.5-.5-1.1 2.8-.5 1.9 2.1 2.3 3.7V85l-2.1 4.7-1.9.6-3.4 3.1-4.8 5.5h-1.3c-.6 0-1-2.1-1-2.1l-1.8.2-1 1.5-2.4 1.5-1 1.5 1.6 1.5-.5.6-.5 2.7-1.9-.2v-1.6l-.3-1.3-1.5.3-1.8-3.2-2.1 1.3 1.3 1.5.3 1.1-.8 1.3.3 3.1.2 1.6-1.6 2.6-2.9.5-.3 2.9-5.3 3.1-1.3.5-1.6-1.5-3.1 3.6 1 3.2-1.5 1.3-.2 4.4-1.1 6.3-2.2-.9-.5-3.1-4-1.1-.2-2.5-11.7-37.43zm36.5 15.6l1.5-1.5 1.4 1.1.6 2.4-1.7.9zm6.7-5.9l1.8 1.9s1.3.1 1.3-.2c0-.3.2-2 .2-2l.9-.8-.8-1.8-2 .7z">
+    <title>Maine</title>
+  </path>
+  <path id="MI" d="M644.5 211l19.1-1.9.2 1.1 9.9-1.5 12-1.7.1-.6.2-1.5 2.1-3.7 2-1.7-.2-5.1 1.6-1.6 1.1-.3.2-3.6 1.5-3 1.1.6.2.6.8.2 1.9-1-.4-9.1-3.2-8.2-2.3-9.1-2.4-3.2-2.6-1.8-1.6 1.1-3.9 1.8-1.9 5-2.7 3.7-1.1.6-1.5-.6s-2.6-1.5-2.4-2.1c.2-.6.5-5 .5-5l3.4-1.3.8-3.4.6-2.6 2.4-1.6-.3-10-1.6-2.3-1.3-.8-.8-2.1.8-.8 1.6.3.2-1.6-2.6-2.2-1.3-2.6h-2.6l-4.5-1.5-5.5-3.4h-2.7l-.6.6-1-.5-3.1-2.3-2.9 1.8-2.9 2.3.3 3.6 1 .3 2.1.5.5.8-2.6.8-2.6.3-1.5 1.8-.3 2.1.3 1.6.3 5.5-3.6 2.1-.6-.2v-4.2l1.3-2.4.6-2.4-.8-.8-1.9.8-1 4.2-2.7 1.1-1.8 1.9-.2 1 .6.8-.6 2.6-2.3.5v1.1l.8 2.4-1.1 6.1-1.6 4 .6 4.7.5 1.1-.8 2.4-.3.8-.3 2.7 3.6 6 2.9 6.5 1.5 4.8-.8 4.7-1 6-2.4 5.2-.3 2.7-3.2 3.1zm-33.3-72.4l-1.3-1.1-1.8-10.4-3.7-1.3-1.7-2.3-12.6-2.8-2.8-1.1-8.1-2.2-7.8-1-3.9-5.3.7-.5 2.7-.8 3.6-2.3v-1l.6-.6 6-1 2.4-1.9 4.4-2.1.2-1.3 1.9-2.9 1.8-.8 1.3-1.8 2.3-2.3 4.4-2.4 4.7-.5 1.1 1.1-.3 1-3.7 1-1.5 3.1-2.3.8-.5 2.4-2.4 3.2-.3 2.6.8.5 1-1.1 3.6-2.9 1.3 1.3h2.3l3.2 1 1.5 1.1 1.5 3.1 2.7 2.7 3.9-.2 1.5-1 1.6 1.3 1.6.5 1.3-.8h1.1l1.6-1 4-3.6 3.4-1.1 6.6-.3 4.5-1.9 2.6-1.3 1.5.2v5.7l.5.3 2.9.8 1.9-.5 6.1-1.6 1.1-1.1 1.5.5v7l3.2 3.1 1.3.6 1.3 1-1.3.3-.8-.3-3.7-.5-2.1.6-2.3-.2-3.2 1.5h-1.8l-5.8-1.3-5.2.2-1.9 2.6-7 .6-2.4.8-1.1 3.1-1.3 1.1-.5-.2-1.5-1.6-4.5 2.4h-.6l-1.1-1.6-.8.2-1.9 4.4-1 4-3.2 6.9zm-29.6-56.5l1.8-2.1 2.2-.8 5.4-3.9 2.3-.6.5.5-5.1 5.1-3.3 1.9-2.1.9zm86.2 32.1l.6 2.5 3.2.2 1.3-1.2s-.1-1.5-.4-1.6c-.3-.2-1.6-1.9-1.6-1.9l-2.2.2-1.6.2-.3 1.1z">
+    <title>Michigan</title>
+  </path>
+  <path id="MN" d="M464.6 66.79l-.6 3.91v10.27l1.6 5.03 1.9 3.32.5 9.93 1.8 13.45 1.8 7.3.4 6.4v5.3l-1.6 1.8-1.8 1.3v1.5l.9 1.7 4.1 3.5.7 3.2v35.9l60.3-.6 21.2-.7-.5-6-1.8-2.1-7.2-4.6-3.6-5.3-3.4-.9-2-2.8h-3.2l-3.5-3.8-.5-7 .1-3.9 1.5-3-.7-2.7-2.8-3.1 2.2-6.1 5.4-4 1.2-1.4-.2-8 .2-3 2.6-3 3.8-2.9 1.3-.2 4.5-5 1.8-.8 2.3-3.9 2.4-3.6 3.1-2.6 4.8-2 9.2-4.1 3.9-1.8.6-2.3-4.4.4-.7 1.1h-.6l-1.8-3.1-8.9.3-1 .8h-1l-.5-1.3-.8-1.8-2.6.5-3.2 3.2-1.6.8h-3.1l-2.6-1v-2.1l-1.3-.2-.5.5-2.6-1.3-.5-2.9-1.5.5-.5 1-2.4-.5-5.3-2.4-3.9-2.6h-2.9l-1.3-1-2.3.6-1.1 1.1-.3 1.3h-4.8v-2.1l-6.3-.3-.3-1.5h-4.8l-1.6-1.6-1.5-6.1-.8-5.5-1.9-.8-2.3-.5-.6.2-.3 8.2-30.1-.03z">
+    <title>Minnesota</title>
+  </path>
+  <path id="MO" d="M593.1 338.7l.5-5.9 4.2-3.4 1.9-1v-2.9l.7-1.6-1.1-1.6-2.4.3-2.1-2.5-1.7-4.5.9-2.6-2-3.2-1.8-4.6-4.6-.7-6.8-5.6-2.2-4.2.8-3.3 2.2-6 .6-3-1.9-1-6.9-.6-1.1-1.9v-4.1l-5.3-3.5-7.2-7.8-2.3-7.3-.5-4.2.7-2.4-2.6-3.1-1.2-2.4-7.7.8-10 .6-48.8 1.2 1.3 2.6-.1 2.2 2.3 3.6 3 3.9 3.1 3 2.6.2 1.4 1.1v2.9l-1.8 1.6-.5 2.3 2.1 3.2 2.4 3 2.6 2.1 1.3 11.6-.8 40 .5 5.7 23.7-.2 23.3-.7 32.5-1.3 2.2 3.7-.8 3.1-3.1 2.5-.5 1.8 5.2.5 4.1-1.1z">
+    <title>Missouri</title>
+  </path>
+  <path id="MS" d="M604.3 472.5l2.6-4.2 1.8.8 6.8-1.9 2.1.3 1.5.8h5.2l.4-1.6-1.7-14.8-2.8-19 1-45.1-.2-16.7.2-6.3-4.8.3-19.6 1.6-13 .4-.2 3.2-2.8 1.3-2.6 5.1.5 1.6.1 2.4-2.9 1.1-3.5 5.1.8 2.3-3 2.5-1 5.7-.6 1.9 1.6 2.5-1.5 1.4 1.5 2.8.3 4.2-1.2 2.5-.2.9.4 5 2 4.5-.1 1.7 2.3 2-.7 3.1-.9.3.6 1.9-8.6 15-.8 8.2.5 1.5 24.2-.7 8.2-.7 1.9-.3.6 1.4-1 7.1 3.3 3.3 2.2 6.4z">
+    <title>Mississippi</title>
+  </path>
+  <path id="MT" d="M361.1 70.77l-5.3 57.13-1.3 15.2-59.1-6.6-49-7.1-1.4 11.2-1.9-1.7-.4-2.5-1.3-1.9-3.3 1.5-.7 2.5-2.3.3-3.8-1.6-4.1.1-2.4.7-3.2-1.5-3 .2-2.1 1.9-.9-.6-.7-3.4.7-3.2-2.7-3.2-3.3-2.5-2.5-12.6-.1-5.3-1.6-.8-.6 1-4.5 3.2-1.2-.1-2.3-2.8-.2-2.8 7-17.15-.6-2.67-3.5-1.12-.4-.91-2.7-3.5-4.6-10.41-3.2-1.58-1.8-4.26 1.3-4.63-3.2-7.57 4.4-21.29L222 37.3l18.4 3.4 32.3 5.3 29.3 4 29.2 3.5 30.8 3.07z">
+    <title>Montana</title>
+  </path>
+  <path id="NC" d="M786.7 357.7L774 350l-3.1-.8-16.6 2.1-1.6-3-2.8-2.2-16.7.5-7.4.9-9.2 4.5-6.8 2.7-6.5 1.2-13.4 1.4.1-4.1 1.7-1.3 2.7-.7.7-3.8 3.9-2.5 3.9-1.5 4.5-3.7 4.4-2.3.7-3.2 4.1-3.8.7 1 2.5.2 2.4-3.6 1.7-.4 2.6.3 1.8-4 2.5-2.4.5-1.8.1-3.5 4.4.1 38.5-5.6 57.5-12.3 2 4.8 3.6 6.5 2.4 2.4.6 2.3-2.4.2.8.6-.3 4.2-2.6 1.3-.6 2.1-1.3 2.9-3.7 1.6-2.4-.3-1.5-.2-1.6-1.3.3 1.3v1h1.9l.8 1.3-1.9 6.3h4.2l.6 1.6 2.3-2.3 1.3-.5-1.9 3.6-3.1 4.8H828l-1.1-.5-2.7.6-5.2 2.4-6.5 5.3-3.4 4.7-1.9 6.5-.5 2.4-4.7.5-5.1 1.5zm49.3-26.2l2.6-2.5 3.2-2.6 1.5-.6.2-2-.6-6.1-1.5-2.3-.6-1.9.7-.2 2.7 5.5.4 4.4-.2 3.4-3.4 1.5-2.8 2.4-1.1 1.2z">
+    <title>North Carolina</title>
+  </path>
+  <path id="ND" d="M471 126.4l-.4-6.2-1.8-7.3-1.8-13.61-.5-9.7-1.9-3.18-1.6-5.32V70.68l.6-3.85-1.8-5.54-28.6-.59-18.6-.6-26.5-1.3-25.2-2.16-.9 14.42-4.7 50.94 56.8 3.9 56.9 1.7z">
+    <title>North Dakota</title>
+  </path>
+  <path id="NE" d="M470.3 204.3l-1-2.3-.5-1.6-2.9-1.6-4.8-1.5-2.2-1.2-2.6.1-3.7.4-4.2 1.2-6-4.1-2.2-2-10.7.6-41.5-2.4-35.6-2.2-4.3 43.7 33.1 3.3-1.4 21.1 21.7 1 40.6 1.2 43.8.6h4.5l-2.2-3-2.6-3.9.1-2.3-1.4-2.7-1.9-5.2-.4-6.7-1.4-4.1-.5-5-2.3-3.7-1-4.7-2.8-7.9-1-5.3z">
+    <title>Nebraska</title>
+  </path>
+  <path id="NH" d="M881.7 141.3l1.1-3.2-2.7-1.2-.5-3.1-4.1-1.1-.3-3-11.7-37.48-.7.08-.6 1.6-.6-.5-1-1-1.5 1.9-.2 2.29.5 8.41 1.9 2.8v4.3l-3.9 4.8-2.4.9v.7l1.1 1.9v8.6l-.8 9.2-.2 4.7 1 1.4-.2 4.7-.5 1.5 1 1.1 5.1-1.2 13.8-3.5 1.7-2.9 4-1.9z">
+    <title>New Hampshire</title>
+  </path>
+  <path id="NJ" d="M823.7 228.3l.1-1.5 2.7-1.3 1.7-2.8 1.7-2.4 3.3-3.2v-1.2l-6.1-4.1-1-2.7-2.7-.3-.1-.9-.7-2.2 2.2-1.1.2-2.9-1.3-1.3.2-1.2 1.9-3.1V193l2.5-3.1 5.6 2.5 6.4 1.9 2.5 1.2.1 1.8-.5 2.7.4 4.5-2.1 1.9-1.1 1 .5.5 2.7-.3 1.1-.8 1.6 3.4.2 9.4.6 1.1-1.1 5.5-3.1 6.5-2.7 4-.8 4.8-2.1 2.4h-.8l-.3-2.7.8-1-.2-1.5-4-.6-4.8-2.3-3.2-2.9-1-2z">
+    <title>New Jersey</title>
+  </path>
+  <path id="NM" d="M270.2 429.4l-16.7-2.6-1.2 9.6-15.8-2 6-39.7 7-53.2 4.4-30.9 34 3.9 37.4 4.4 32 2.8-.3 10.8-1.4-.1-7.4 97.7-28.4-1.8-38.1-3.7.7 6.3z">
+    <title>New Mexico</title>
+  </path>
+  <path id="NV" d="M123.1 173.6l38.7 8.5 26 5.2-10.6 53.1-5.4 29.8-3.3 15.5-2.1 11.1-2.6 16.4-1.7 3.1-1.6-.1-1.2-2.6-2.8-.5-1.3-1.1-1.8.1-.9.8-1.8 1.3-.3 7.3-.3 1.5-.5 12.4-1.1 1.8-16.7-25.5-42.1-62.1-12.43-19 8.55-32.6 8.01-31.3z">
+    <title>Nevada</title>
+  </path>
+  <path id="NY" d="M843.4 200l.5-2.7-.2-2.4-3-1.5-6.5-2-6-2.6-.6-.4-2.7-.3-2-1.5-2.1-5.9-3.3-.5-2.4-2.4-38.4 8.1-31.6 6-.5-6.5 1.6-1.2 1.3-1.1 1-1.6 1.8-1.1 1.9-1.8.5-1.6 2.1-2.7 1.1-1-.2-1-1.3-3.1-1.8-.2-1.9-6.1 2.9-1.8 4.4-1.5 4-1.3 3.2-.5 6.3-.2 1.9 1.3 1.6.2 2.1-1.3 2.6-1.1 5.2-.5 2.1-1.8 1.8-3.2 1.6-1.9h2.1l1.9-1.1.2-2.3-1.5-2.1-.3-1.5 1.1-2.1v-1.5h-1.8l-1.8-.8-.8-1.1-.2-2.6 5.8-5.5.6-.8 1.5-2.9 2.9-4.5 2.7-3.7 2.1-2.4 2.4-1.8 3.1-1.2 5.5-1.3 3.2.2 4.5-1.5 7.4-2.2.7 4.9 2.4 6.5.8 5-1 4.2 2.6 4.5.8 2-.9 3.2 3.7 1.7 2.7 10.2v5.8l-.6 10.9.8 5.4.7 3.6 1.5 7.3v8.1l-1.1 2.3 2.1 2.7.5.9-1.9 1.8.3 1.3 1.3-.3 1.5-1.3 2.3-2.6 1.1-.6 1.6.6 2.3.2 7.9-3.9 2.9-2.7 1.3-1.5 4.2 1.6-3.4 3.6-3.9 2.9-7.1 5.3-2.6 1-5.8 1.9-4 1.1-1-.4z">
+    <title>New York</title>
+  </path>
+  <path id="OH" d="M663.8 211.2l1.7 15.5 4.8 41.1 3.9-.2 2.3-.8 3.6 1.8 1.7 4.2 5.4.1 1.8 2h1.7l2.4-1.4 3.1.5 1.5 1.3 1.8-2 2.3-1.4 2.4-.4.6 2.7 1.6 1 2.6 2 .8.2 2-.1 1.2-.6v-2.1l1.7-1.5.1-4.8 1.1-4.2 1.9-1.3 1 .7 1 1.1.7.2.4-.4-.9-2.7v-2.2l1.1-1.4 2.5-3.6 1.3-1.5 2.2.5 2.1-1.5 3-3.3 2.2-3.7.2-5.4.5-5V230l-1.2-3.2 1.2-1.8 1.3-1.2-.6-2.8-4.3-25.6-6.2 3.7-3.9 2.3-3.4 3.7-4 3.9-3.2.8-2.9.5-5.5 2.6-2.1.2-3.4-3.1-5.2.6-2.6-1.5-2.2-1.3z">
+    <title>Ohio</title>
+  </path>
+  <path id="OK" d="M411.9 334.9l-1.8 24.3-.9 18 .2 1.6 4 3.6 1.7.9h.9l.9-2.1 1.5 1.9 1.6.1.3-.2.2-1.1 2.8 1.4-.4 3.5 3.8.5 2.5 1 4.2.6 2.3 1.6 2.5-1.7 3.5.7 2.2 3.1 1.2.1v2.3l2.1.7 2.5-2.1 1.8.6 2.7.1.7 2.3 4.4 1.8 1.7-.3 1.9-4.2h1.3l1.1 2.1 4.2.8 3.4 1.3 3 .8 1.6-.7.7-2.7h4.5l1.9.9 2.7-1.9h1.4l.6 1.4h3.6l2-1.8 2.3.6 1.7 2.2 3 1.7 3.4.9 1.9 1.2-.3-37.6-1.4-10.9-.1-8.6-1.5-6.6-.6-6.8.1-4.3-12.6.3-46.3-.5-44.7-2.1-41.5-1.8-.4 10.7z">
+    <title>Oklahoma</title>
+  </path>
+  <path id="OR" d="M67.44 158.9l28.24 7.2 27.52 6.5 17 3.7 8.8-35.1 1.2-4.4 2.4-5.5-.7-1.3-2.5.1-1.3-1.8.6-1.5.4-3.3 4.7-5.7 1.9-.9.9-.8.7-2.7.8-1.1 3.9-5.7 3.7-4 .2-3.26-3.4-2.49-1.2-4.55-13.1-3.83L132.9 85l-14.8.37-1.1-1.31-5.1 1.84-4.5-.48-2.4-1.58-1.3.54-4.68-.29-1.96-1.43-4.84-1.77-1.1-.07-4.45-1.27-1.76 1.52-6.26-.24-5.31-3.85.21-9.28-2.05-3.5-4.1-.6-.7-2.5-2.4-.5-5.8 2.1-2.3 6.5-3.2 10-3.2 6.5-5 14.1-6.5 13.6-8.1 12.6-1.9 2.9-.8 8.6-1.3 6 2.71 3.5z">
+    <title>Oregon</title>
+  </path>
+  <path id="PA" d="M736.6 192.2l1.3-.5 5.7-5.5.7 6.9 33.5-6.5 36.9-7.8 2.3 2.3 3.1.4 2 5.6 2.4 1.9 2.8.4.1.1-2.6 3.2v3.1l-1.9 3.1-.2 1.9 1.3 1.3-.2 1.9-2.4 1.1 1 3.4.2 1.1 2.8.3.9 2.5 5.9 3.9v.4l-3.1 3-1.5 2.2-1.7 2.8-2.7 1.2-1.4.3-2.1 1.3-1.6 1.4-22.4 4.3L757 241l-11.3 1.4-3.9.7-5.1-22.4-4.3-25.9z">
+    <title>Pennsylvania</title>
+  </path>
+  <path id="RI" d="M873.6 175.7l-.8-4.4-1.6-6 5.7-1.5 1.5 1.3 3.4 4.3 2.8 4.4-2.8 1.4-1.3-.2-1.1 1.8-2.4 1.9-2.8 1.1z">
+    <title>Rhode Island</title>
+  </path>
+  <path id="SC" d="M759 413.6l-2.1-1-1.9-5.6-2.5-2.3-2.5-.5-1.5-4.6-3-6.5-4.2-1.8-1.9-1.8-1.2-2.6-2.4-2-2.3-1.3-2.2-2.9-3.2-2.4-4.4-1.7-.4-1.4-2.3-2.8-.5-1.5-3.8-5.4-3.4.1-3.9-2.5-1.2-1.2-.2-1.4.6-1.6 2.7-1.3-.8-2 6.4-2.7 9.2-4.5 7.1-.9 16.4-.5 2.3 1.9 1.8 3.5 4.6-.8 12.6-1.5 2.7.8 12.5 7.4 10.1 8.3-5.3 5.4-2.6 6.1-.5 6.3-1.6.8-1.1 2.7-2.4.6-2.1 3.6-2.7 2.7-2.3 3.4-1.6.8-3.6 3.4-2.9.2 1 3.2-5 5.3-2.3 1.6z">
+    <title>South Carolina</title>
+  </path>
+  <path id="SD" d="M471 181.1l-.9 3.2.4 3 2.6 2-1.2 5.4-1.8 4.1 1.5 3.3.7 1.1-1.3.1-.7-1.6-.6-2-3.3-1.8-4.8-1.5-2.5-1.3-2.9.1-3.9.4-3.8 1.2-5.3-3.8-2.7-2.4-10.9.8-41.5-2.4-35.6-2.2L354 162l2.8-34 .4-5 56.9 3.9 56.9 1.7v2.7l-1.3 1.5-2 1.5-.1 2.2 1.1 2.2 4.1 3.4.5 2.7v35.9z">
+    <title>South Dakota</title>
+  </path>
+  <path id="TN" d="M670.8 359.6l-13.1 1.2-23.3 2.2-37.6 2.7-11.8.4.9-.6.9-4.5-1.2-3.6 3.9-2.3.4-2.5 1.2-4.3 3-9.5.5-5.6.3-.2 12.3-.2 13.6-.8.1-3.9 3.5-.1 30.4-3.3 54-5.2 10.3-1.5 7.6-.2 2.4-1.9 1.3.3-.1 3.3-.4 1.6-2.4 2.2-1.6 3.6-2-.4-2.4.9-2.2 3.3-1.4-.2-.8-1.2-1.1.4-4.3 4-.8 3.1-4.2 2.2-4.3 3.6-3.8 1.5-4.4 2.8-.6 3.6-2.5.5-2 1.7-.2 4.8z">
+    <title>Tennessee</title>
+  </path>
+  <path id="TX" d="M282.8 425.6l37 3.6 29.3 1.9 7.4-97.7 54.4 2.4-1.7 23.3-1 18 .2 2 4.4 4.1 2 1.1h1.8l.5-1.2.7.9 2.4.2 1.1-.6v-.2l1 .5-.4 3.7 4.5.7 2.4.9 4.2.7 2.6 1.8 2.8-1.9 2.7.6 2.2 3.1.8.1v2.1l3.3 1.1 2.5-2.1 1.5.5 2.1.1.6 2.1 5.2 2 2.3-.5 1.9-4h.1l1.1 1.9 4.6.9 3.4 1.3 3.2 1 2.4-1.2.7-2.3h3.6l2.1 1 3-2h.4l.5 1.4h4.7l1.9-1.8 1.3.4 1.7 2.1 3.3 1.9 3.4 1 2.5 1.4 2.7 2 3.1-1.2 2.1.8.7 20 .7 9.5.6 4.1 2.6 4.4.9 4.5 4.2 5.9.3 3.1.6.8-.7 7.7-2.9 4.8 1.3 2.6-.5 2.4-.8 7.2-1.3 3 .3 4.2-5.6 1.6-9.9 4.5-1 1.9-2.6 1.9-2.1 1.5-1.3.8-5.7 5.3-2.7 2.1-5.3 3.2-5.7 2.4-6.3 3.4-1.8 1.5-5.8 3.6-3.4.6-3.9 5.5-4 .3-1 1.9 2.3 1.9-1.5 5.5-1.3 4.5-1.1 3.9-.8 4.5.8 2.4 1.8 7 1 6.1 1.8 2.7-1 1.5-3.1 1.9-5.7-3.9-5.5-1.1-1.3.5-3.2-.6-4.2-3.1-5.2-1.1-7.6-3.4-2.1-3.9-1.3-6.5-3.2-1.9-.6-2.3.6-.6.3-3.4-1.3-.6-.6-1 1.3-4.4-1.6-2.3-3.2-1.3-3.4-4.4-3.6-6.6-4.2-2.6.2-1.9-5.3-12.3-.8-4.2-1.8-1.9-.2-1.5-6-5.3-2.6-3.1v-1.1l-2.6-2.1-6.8-1.1-7.4-.6-3.1-2.3-4.5 1.8-3.6 1.5-2.3 3.2-1 3.7-4.4 6.1-2.4 2.4-2.6-1-1.8-1.1-1.9-.6-3.9-2.3v-.6l-1.8-1.9-5.2-2.1-7.4-7.8-2.3-4.7v-8.1l-3.2-6.5-.5-2.7-1.6-1-1.1-2.1-5-2.1-1.3-1.6-7.1-7.9-1.3-3.2-4.7-2.3-1.5-4.4-2.6-2.9-1.7-.5zm174.4 141.7l-.6-7.1-2.7-7.2-.6-7 1.5-8.2 3.3-6.9 3.5-5.4 3.2-3.6.6.2-4.8 6.6-4.4 6.5-2 6.6-.3 5.2.9 6.1 2.6 7.2.5 5.2.2 1.5z">
+    <title>Texas</title>
+  </path>
+  <path id="UT" d="M228.4 305.9l24.6 3.6 1.9-13.7 7-50.5 2.3-22-32.2-3.5 2.2-13.1 1.8-10.6-34.7-6.1-12.5-2.5-10.6 52.9-5.4 30-3.3 15.4-1.7 9.2z">
+    <title>Utah</title>
+  </path>
+  <path id="VA" d="M834.7 265.2l-.2 2.8-2.9 3.8-.4 4.6.5 3.4-1.8 5-2.2 1.9-1.5-4.6.4-5.4 1.6-4.2.7-3.3-.1-1.7zm-60.3 44.6l-38.6 5.6-4.8-.1-2.2-.3-2.5 1.9-7.3.1-10.3 1.6-6.7.6 4.1-2.6 4.1-2.3v-2.1l5.7-7.3 4.1-3.7 2.2-2.5 3.6 4.3 3.8.9 2.7-1 2-1.5 2.4 1.2 4.6-1.3 1.7-4.4 2.4.7 3.2-2.3 1.6.4 2.8-3.2.2-2.7-.8-1.2 4.8-10.5 1.8-5.2.5-4.7.7-.2 1.1 1.7 1.5 1.2 3.9-.2 1.7-8.1 3-.6.8-2.6 2.8-2.2 1.1-2.1 1.8-4.3.1-4.6 3.6 1.4 6.6 3.1.3-5.2 3.4 1.2-.6 2.9 8.6 3.1 1.4 1.8-.8 3.3-1.3 1.3-.5 1.7.5 2.4 2 1.3 3.9 1.4 2.9 1 4.9.9 2.2 2.1 3.2.4.9 1.2-.4 4.7 1.4 1.1-.5 1.9 1.2.8-.2 1.4-2.7-.1.1 1.6 2.3 1.5.1 1.4 1.8 1.8.5 2.5-2.6 1.4 1.6 1.5 5.8-1.7 3.7 6.2z">
+    <title>Virginia</title>
+  </path>
+  <path id="VT" d="M832.7 111.3l2.4 6.5.8 5.3-1 3.9 2.5 4.4.9 2.3-.7 2.6 3.3 1.5 2.9 10.8v5.3l11.5-2.1-1-1.1.6-1.9.2-4.3-1-1.4.2-4.7.8-9.3v-8.5l-1.1-1.8v-1.6l2.8-1.1 3.5-4.4v-3.6l-1.9-2.7-.3-5.79-26.1 6.79z">
+    <title>Vermont</title>
+  </path>
+  <path id="WA" d="M74.5 67.7l-2.3-4.3-4.1-.7-.4-2.4-2.5-.6-2.9-.5-1.8 1-2.3-2.9.3-2.9 2.7-.3 1.6-4-2.6-1.1.2-3.7 4.4-.6-2.7-2.7-1.5-7.1.6-2.9v-7.9l-1.8-3.2 2.3-9.4 2.1.5 2.4 2.9 2.7 2.6 3.2 1.9 4.5 2.1 3.1.6 2.9 1.5 3.4 1 2.3-.2V22l1.3-1.1 2.1-1.3.3 1.1.3 1.8-2.3.5-.3 2.1 1.8 1.5 1.1 2.4.6 1.9 1.5-.2.2-1.3-1-1.3-.5-3.2.8-1.8-.6-1.5V19l1.8-3.6-1.1-2.6L91.9 8l.3-.8 1.4-.8L98 7.9l9.7 2.7 8.6 1.9 20 5.7 23 5.7 15 3.49-4.8 17.56-4.5 20.83-3.4 16.25-.4 9.18-12.9-3.72-15.3-3.47-14.5.32-1.1-1.53-5.7 2.09-3.9-.42-2.6-1.79-1.7.65-4.15-.25-1.72-1.32-5.16-1.82-1.18-.16-4.8-1.39-1.92 1.65-5.65-.25-4.61-3.35zm9.6-55.4l2-.2.5 1.4 1.5-1.6h2.3l.8 1.5-1.5 1.7.6.8-.7 2-1.4.4s-.9.1-.9-.2c0-.3 1.5-2.6 1.5-2.6l-1.7-.6-.3 1.5-.7.6-1.5-2.3z">
+    <title>Washington</title>
+  </path>
+  <path id="WI" d="M541.4 109.9l2.9.5 2.9-.6 7.4-3.2 2.9-1.9 2.1-.8 1.9 1.5-1.1 1.1-1.9 3.1-.6 1.9 1 .6 1.8-1 1.1-.2 2.7.8.6 1.1 1.1.2.6-1.1 4 5.3 8.2 1.2 8.2 2.2 2.6 1.1 12.3 2.6 1.6 2.3 3.6 1.2L609 138l1.6 1.4 1.5.9-1.1 2.3-1.8 1.6-2.1 4.7-1.3 2.4.2 1.8 1.5.3 1.1-1.9 1.5-.8.8-2.3 1.9-1.8 2.7-4 4.2-6.3.8-.5.3 1-.2 2.3-2.9 6.8-2.7 5.7-.5 3.2-.6 2.6.8 1.3-.2 2.7-1.9 2.4-.5 1.8.6 3.6.6 3.4-1.5 2.6-.8 2.9-1 3.1 1.1 2.4.6 6.1 1.6 4.5-.2 3-15.9 1.8-17.5 1H567l-.7-1.5-2.9-.4-2.6-1.3-2.3-3.7-.3-3.6 2-2.9-.5-1.4-2.1-2.2-.8-3.3-.6-6.8-2.1-2.5-7-4.5-3.8-5.4-3.4-1-2.2-2.8h-3.2l-2.9-3.3-.5-6.5.1-3.8 1.5-3.1-.8-3.2-2.5-2.8 1.8-5.4 5.2-3.8 1.6-1.9-.2-8.1.2-2.8 2.4-2.8z">
+    <title>Wisconsin</title>
+  </path>
+  <path id="WV" d="M758.9 254.3l5.8-6 2.6-.8 1.6-1.5 1.5-2.2 1.1.3 3.1-.2 4.6-3.6 1.5-.5 1.3 1 2.6 1.2 3 3-.4 4.3-5.4-2.6-4.8-1.8-.1 5.9-2.6 5.7-2.9 2.4-.8 2.3-3 .5-1.7 8.1-2.8.2-1.1-1-1.2-2-2.2.5-.5 5.1-1.8 5.1-5 11 .9 1.4-.1 2-2.2 2.5-1.6-.4-3.1 2.3-2.8-.8-1.8 4.9-3.8 1-2.5-1.3-2.5 1.9-2.3.7-3.2-.8-3.8-4.5-3.5-2.2-2.5-2.5-2.9-3.7-.5-2.3-2.8-1.7-.6-1.3-.2-5.6.3.1 2.4-.2 1.8-1V275l1.7-1.5.1-5.2.9-3.6 1.1-.7.4.3 1 1.1 1.7.5 1.1-1.3-1-3.1v-1.6l3.1-4.6 1.2-1.3 2 .5 2.6-1.8 3.1-3.4 2.4-4.1.2-5.6.5-4.8v-4.9l-1.1-3 .9-1.3.8-.7 4.3 19.3 4.3-.8 11.2-1.3z">
+    <title>West Virginia</title>
+  </path>
+  <path id="WY" d="M353 161.9l-1.5 25.4-4.4 44-2.7-.3-83.3-9.1-27.9-3 2-12 6.9-41 3.8-24.2 1.3-11.2 48.2 7 59.1 6.5z">
+    <title>Wyoming</title>
+  </path>
+  <g id="DC">
+    <title>District of Columbia</title>
+    <path id="DC1" d="M801.8 253.8l-1.1-1.6-1-.8 1.1-1.6 2.2 1.5z"/>
+    <circle id="DC2" stroke="#FFFFFF" stroke-width="1.5" cx="801.3" cy="251.8" r="5" opacity="1"/> <!-- Set opacity to "0" to hide DC circle -->
+  </g>
+</g>
+<path id="frames" fill="none" stroke="#A9A9A9" stroke-width="2" d="M215 493v55l36 45M0 425h147l68 68h85l54 54v46"/>
+</svg>
+
+</div>
+
+</div>
+<pre class="prettyprint code-hscroll">
+&lt;svg viewBox="0 0 950 650"&gt;
+   ... to see the shapes and paths click the Try It live button ...
+&lt;/svg"&gt;    
+</pre>
+
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/svg.html', 'htmleditor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<div class="d-flex mt-30 ml-30">
+  <div class="width-20 font-23" style="border-left:3px solid orangered"></div>
+  <div class="font-16 xmt-7">
+    <code>svg</code> = scalable vector graphics
+  </div>
+</div>
+
+<hr />
+
+
+
+<a class="goto-target" id="using"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xusing&#x27;).show();" onmouseout="$(&#x27;#xusing&#x27;).hide();">Using &lt;svg&gt;</h2>
+  <h2><a id="xusing" style="display:none" class="d-block pl-12 header-anchor" href="#using">#</a></h2>
+</div>
+
+
+
+<div class="items">
+  <p>The <a href="svg.html" class="code-link">&lt;svg&gt;</a> tag creates a container for SVG graphics.</p>
+  <p>SVG can be used to draw 2D graphics like shapes, paths, text, and images.</p>
+  <p>Shapes are special SVG elements, such as <code>&lt;circle&gt;</code>, <code>&lt;rect&gt;</code>, and <code>&lt;line&gt;</code>.</p>
+  <p>SVG images are very much like XML which can be created by any text editor.</p>
+  <p>However, it's easier to create SVG images with a drawing tool like Adobe Illustrator or Inkscape.</p>
+</div>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="sup.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; HTML <code>&lt;sup&gt;</code> &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="table.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; HTML <code>&lt;table&gt;</code> &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+
+
+<a class="goto-target" id="examples"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xexamples&#x27;).show();" onmouseout="$(&#x27;#xexamples&#x27;).hide();">More Examples</h2>
+  <h2><a id="xexamples" style="display:none" class="d-block pl-12 header-anchor" href="#examples">#</a></h2>
+</div>
+
+
+
+<p>
+  An SVG image contains special <b>SVG tags</b> that draw different shapes, text, and graphics.
+  Let's review some of these special tags.
+</p>
+
+<p class="tip">
+  <b>Note:</b> To cover all the details of creating SVG images would require a complete tutorial.
+  This overview shows some of the basics.
+</p>
+
+
+
+
+<a class="goto-target" id="circle"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xcircle&#x27;).show();" onmouseout="$(&#x27;#xcircle&#x27;).hide();">Circle</h2>
+  <h2><a id="xcircle" style="display:none" class="d-block pl-12 header-anchor" href="#circle">#</a></h2>
+</div>
+
+
+
+<p class="">A circle created with a <code>&lt;circle&gt;</code> SVG tag.</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="steelblue" 
+          stroke-width="2" fill="lightblue" />
+</svg>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;svg width=&quot;100&quot; height=&quot;100&quot;&gt;&#xD;&#xA;  &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot; stroke=&quot;steelblue&quot; &#xD;&#xA;          stroke-width=&quot;2&quot; fill=&quot;lightblue&quot; /&gt;&#xD;&#xA;&lt;/svg&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/svg-circle.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+<a class="goto-target" id="rectangle"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xrectangle&#x27;).show();" onmouseout="$(&#x27;#xrectangle&#x27;).hide();">Rectangle</h2>
+  <h2><a id="xrectangle" style="display:none" class="d-block pl-12 header-anchor" href="#rectangle">#</a></h2>
+</div>
+
+
+
+<p>A rectangle created with a <code>&lt;rect&gt;</code> SVG tag.</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <svg width="300" height="100">
+  <rect width="300" height="100" fill="orangered" />
+</svg>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;svg width=&quot;300&quot; height=&quot;100&quot;&gt;&#xD;&#xA;  &lt;rect width=&quot;300&quot; height=&quot;100&quot; fill=&quot;orangered&quot; /&gt;&#xD;&#xA;&lt;/svg&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/svg-rect.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+<a class="goto-target" id="lines"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xlines&#x27;).show();" onmouseout="$(&#x27;#xlines&#x27;).hide();">Line</h2>
+  <h2><a id="xlines" style="display:none" class="d-block pl-12 header-anchor" href="#lines">#</a></h2>
+</div>
+
+
+
+<p>A playful sketch created with several <code>&lt;line&gt;</code> SVG tags.</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <svg width="400" height="220">
+  <line x1="10" y1="10" x2="200" y2="10" style="stroke:black;stroke-width:1" />
+  <line x1="30" y1="10" x2="200" y2="30" style="stroke:black;stroke-width:1" />
+  <line x1="50" y1="10" x2="200" y2="50" style="stroke:black;stroke-width:1" />
+  <line x1="70" y1="10" x2="200" y2="70" style="stroke:black;stroke-width:1" />
+  <line x1="90" y1="10" x2="200" y2="90" style="stroke:black;stroke-width:1" />
+  <line x1="110" y1="10" x2="200" y2="110" style="stroke:black;stroke-width:1" />
+  <line x1="130" y1="10" x2="200" y2="130" style="stroke:black;stroke-width:1" />
+  <line x1="150" y1="10" x2="200" y2="150" style="stroke:black;stroke-width:1" />
+  <line x1="170" y1="10" x2="200" y2="170" style="stroke:black;stroke-width:1" />
+  <line x1="190" y1="10" x2="200" y2="190" style="stroke:black;stroke-width:1" />
+</svg>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;svg width=&quot;400&quot; height=&quot;220&quot;&gt;&#xD;&#xA;  &lt;line x1=&quot;10&quot; y1=&quot;10&quot; x2=&quot;200&quot; y2=&quot;10&quot; style=&quot;stroke:black;stroke-width:1&quot; /&gt;&#xD;&#xA;  &lt;line x1=&quot;30&quot; y1=&quot;10&quot; x2=&quot;200&quot; y2=&quot;30&quot; style=&quot;stroke:black;stroke-width:1&quot; /&gt;&#xD;&#xA;  &lt;line x1=&quot;50&quot; y1=&quot;10&quot; x2=&quot;200&quot; y2=&quot;50&quot; style=&quot;stroke:black;stroke-width:1&quot; /&gt;&#xD;&#xA;  &lt;line x1=&quot;70&quot; y1=&quot;10&quot; x2=&quot;200&quot; y2=&quot;70&quot; style=&quot;stroke:black;stroke-width:1&quot; /&gt;&#xD;&#xA;  &lt;line x1=&quot;90&quot; y1=&quot;10&quot; x2=&quot;200&quot; y2=&quot;90&quot; style=&quot;stroke:black;stroke-width:1&quot; /&gt;&#xD;&#xA;  &lt;line x1=&quot;110&quot; y1=&quot;10&quot; x2=&quot;200&quot; y2=&quot;110&quot; style=&quot;stroke:black;stroke-width:1&quot; /&gt;&#xD;&#xA;  &lt;line x1=&quot;130&quot; y1=&quot;10&quot; x2=&quot;200&quot; y2=&quot;130&quot; style=&quot;stroke:black;stroke-width:1&quot; /&gt;&#xD;&#xA;  &lt;line x1=&quot;150&quot; y1=&quot;10&quot; x2=&quot;200&quot; y2=&quot;150&quot; style=&quot;stroke:black;stroke-width:1&quot; /&gt;&#xD;&#xA;  &lt;line x1=&quot;170&quot; y1=&quot;10&quot; x2=&quot;200&quot; y2=&quot;170&quot; style=&quot;stroke:black;stroke-width:1&quot; /&gt;&#xD;&#xA;  &lt;line x1=&quot;190&quot; y1=&quot;10&quot; x2=&quot;200&quot; y2=&quot;190&quot; style=&quot;stroke:black;stroke-width:1&quot; /&gt;&#xD;&#xA;&lt;/svg&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/svg-square.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+
+<a class="goto-target" id="path"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xpath&#x27;).show();" onmouseout="$(&#x27;#xpath&#x27;).hide();">Path</h2>
+  <h2><a id="xpath" style="display:none" class="d-block pl-12 header-anchor" href="#path">#</a></h2>
+</div>
+
+
+
+<p>A red heart created with a <code>&lt;path&gt;</code> SVG tag.</p>
+
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <svg width="100" height="100">
+  <path d="M50,30c9-22 42-24 48,0c5,40-40,40-48,65c-8-25-54-25-48-65c 6-24 39-22 48,0 z" 
+        fill="orangered" stroke="#333"/>
+</svg>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;svg width=&quot;100&quot; height=&quot;100&quot;&gt;&#xD;&#xA;  &lt;path d=&quot;M50,30c9-22 42-24 48,0c5,40-40,40-48,65c-8-25-54-25-48-65c 6-24 39-22 48,0 z&quot; &#xD;&#xA;        fill=&quot;orangered&quot; stroke=&quot;#333&quot;/&gt;&#xD;&#xA;&lt;/svg&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/svg-path.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+
+<a class="goto-target" id="advanced"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xadvanced&#x27;).show();" onmouseout="$(&#x27;#xadvanced&#x27;).hide();">Advanced</h2>
+  <h2><a id="xadvanced" style="display:none" class="d-block pl-12 header-anchor" href="#advanced">#</a></h2>
+</div>
+
+
+
+<p>A clock drawn with different SVG tags.</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <svg viewBox="0 0 100 100" width="200" height="200">
+  <g transform="translate(50,50)">
+    <path d="M38,-1h12v2h-12zM-38-1h-12v2h12z"/>
+    <path d="M40,-1h8v2h-8zM-40-1h-8v2h8z" transform="rotate(30)"/>
+    <path d="M40,-1h8v2h-8zM-40-1h-8v2h8z" transform="rotate(60)"/>
+    <path d="M38,-1h12v2h-12zM-38-1h-12v2h12z" transform="rotate(90)"/>
+    <path d="M40,-1h8v2h-8zM-40-1h-8v2h8z" transform="rotate(120)"/>
+    <path d="M40,-1h8v2h-8zM-40-1h-8v2h8z" transform="rotate(150)"/>
+    <path d="M-0.5,0v-35h1v35z"/>
+    <path d="M0,-0.75h30v1.5h-30z"/>
+    <path d="M0,-0.75h30v1.5h-30z" transform="rotate(-30)" fill="#888"/>
+    <circle r="2"/>
+  </g>
+</svg>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;svg viewBox=&quot;0 0 100 100&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&#xD;&#xA;  &lt;g transform=&quot;translate(50,50)&quot;&gt;&#xD;&#xA;    &lt;path d=&quot;M38,-1h12v2h-12zM-38-1h-12v2h12z&quot;/&gt;&#xD;&#xA;    &lt;path d=&quot;M40,-1h8v2h-8zM-40-1h-8v2h8z&quot; transform=&quot;rotate(30)&quot;/&gt;&#xD;&#xA;    &lt;path d=&quot;M40,-1h8v2h-8zM-40-1h-8v2h8z&quot; transform=&quot;rotate(60)&quot;/&gt;&#xD;&#xA;    &lt;path d=&quot;M38,-1h12v2h-12zM-38-1h-12v2h12z&quot; transform=&quot;rotate(90)&quot;/&gt;&#xD;&#xA;    &lt;path d=&quot;M40,-1h8v2h-8zM-40-1h-8v2h8z&quot; transform=&quot;rotate(120)&quot;/&gt;&#xD;&#xA;    &lt;path d=&quot;M40,-1h8v2h-8zM-40-1h-8v2h8z&quot; transform=&quot;rotate(150)&quot;/&gt;&#xD;&#xA;    &lt;path d=&quot;M-0.5,0v-35h1v35z&quot;/&gt;&#xD;&#xA;    &lt;path d=&quot;M0,-0.75h30v1.5h-30z&quot;/&gt;&#xD;&#xA;    &lt;path d=&quot;M0,-0.75h30v1.5h-30z&quot; transform=&quot;rotate(-30)&quot; fill=&quot;#888&quot;/&gt;&#xD;&#xA;    &lt;circle r=&quot;2&quot;/&gt;&#xD;&#xA;  &lt;/g&gt;&#xD;&#xA;&lt;/svg&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/svg-clock.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+
+<a class="goto-target" id="attributes"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xattributes&#x27;).show();" onmouseout="$(&#x27;#xattributes&#x27;).hide();">Attributes for &lt;svg&gt;</h2>
+  <h2><a id="xattributes" style="display:none" class="d-block pl-12 header-anchor" href="#attributes">#</a></h2>
+</div>
+
+
+<p>
+  This table lists the <a href="svg.html" class="code-link">&lt;svg&gt;</a> tag attributes.
+</p>
+<div class="table-box">
+  <table class="table table-md ">
+    <tbody>
+      <tr class="bg-light">
+        <th style="width:200px">Attribute</th>
+        <th style="width:140px">Value</th>
+        <th style="">Description</th>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="svg/viewbox.html">viewBox</a></td>
+        <td><i>list-of-numbers</i></td>
+        <td>Sets viewport coordinates for SVG image.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="svg/width.html">width</a></td>
+        <td><i>pixels</i></td>
+        <td>SVG image width in pixels.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="svg/height.html">height</a></td>
+        <td><i>pixels</i></td>
+        <td>SVG image height in pixels.</td>
+      </tr>
+
+      <tr>
+        <td><a class="code-link" href="svg/id.html">id</a> &nbsp;</td>
+        <td class="font-italic">identifier</td>
+        <td>Defines a unique identifier for the svg element.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="svg/class.html">class</a> &nbsp;</td>
+        <td class="font-italic">classnames</td>
+        <td>Sets one or more CSS classes to be applied to the svg tag.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="svg/style.html">style</a> &nbsp;</td>
+        <td class="font-italic">CSS-styles</td>
+        <td>Sets the style for the svg element.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="svg/data.html">data-*</a> &nbsp;</td>
+        <td class="font-italic">value</td>
+        <td>Defines additional data that can be used by JavaScript.<br /></td>
+      </tr>
+
+      <tr>
+        <td><a class="code-link" href="svg/hidden.html">hidden</a> &nbsp;</td>
+        <td>hidden</td>
+        <td>Specifies whether the svg element is hidden.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="svg/title.html">title</a> &nbsp;</td>
+        <td class="font-italic">text</td>
+        <td>Sets a title that displays as a tooltip.</td>
+      </tr>
+
+      <tr>
+        <td><a class="code-link" href="svg/preserveaspectratio.html">preserveAspectRatio</a></td>
+        <td>none<br>xMinYMin<br>xMidYMin<br>xMaxYMin<br>xMinYMid<br>xMidYMid<br>xMaxYMid<br>xMinYMax<br>xMidYMax<br>xMaxYMax</td>
+        <td>Sets deformation of the SVG image with different aspect ratio.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>For additional global attributes see our <a href="global-attributes.html#list">global attributes list</a>.</p>
+
+<hr />
+
+<h3>Obsolete Attributes</h3>
+<p class="">
+  Do not use the attributes listed below.&nbsp; They are no longer valid on the svg element in SVG3.
+</p>
+
+<div class="table-box">
+  <table class="table table-md ">
+    <tbody>
+      <tr class="bg-light ">
+        <th class="width-180">Attribute</th>
+        <th class="">Description</th>
+        <th class="width-120">Alternative</th>
+      </tr>
+      <tr>
+        <td class="deprecated"><code>baseProfile</code></td>
+        <td>The min SVG language profile that the page requires.</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td class="deprecated"><code>contentScriptType</code></td>
+        <td>The default scripting language used by the SVG image.</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td class="deprecated"><code>contentStyleType</code></td>
+        <td>The default style sheet language used by the SVG image.</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td class="deprecated"><code>version</code></td>
+        <td>The SVG version used in the container.</td>
+        <td>n/a</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr />
+
+
+
+<a class="goto-target" id="didyouknow"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xdidyouknow&#x27;).show();" onmouseout="$(&#x27;#xdidyouknow&#x27;).hide();">Did you know?</h2>
+  <h2><a id="xdidyouknow" style="display:none" class="d-block pl-12 header-anchor" href="#didyouknow">#</a></h2>
+</div>
+
+  <img src="../img/html/show-did-you-know.png" alt="Did you know?" class="pt-35 ml-5" loading="lazy" />
+
+<div class="pl-25 pt-25">
+
+  <div>
+    <h3>Difference between &lt;svg&gt; and &lt;canvas&gt;</h3>
+    <div class="items">
+      <p>Both <a href="svg.html" class="code-link">&lt;svg&gt;</a> and <a href="canvas.html" class="code-link">&lt;canvas&gt;</a> are used to create graphics.</p>
+      <p>The <a href="svg.html" class="code-link">&lt;svg&gt;</a> element is composed of shapes like circle, rect, line, etc, much like XML.</p>
+      <p>The <a href="canvas.html" class="code-link">&lt;canvas&gt;</a> element is very different -- it draws graphics using JavaScript.</p>
+      <p>In short: <a href="svg.html" class="code-link">&lt;svg&gt;</a> is infinitely scalable, but <a href="canvas.html" class="code-link">&lt;canvas&gt;</a> is faster.</p>
+    </div>
+  </div>
+
+  <p>
+    To see what is possible with <a href="svg.html" class="code-link">&lt;svg&gt;</a> follow this link to <a target="_blank" href="https://codepen.io/ge1doot/pen/pobMoLx">codepen.io</a>.
+  </p>
+  <p>
+    <img src="../img/html/svg-dragon.png" class="img-fluid" />
+  </p>
+</div>
+
+<hr />
+
+
+
+<a class="goto-target" id="media-tags"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xmedia-tags&#x27;).show();" onmouseout="$(&#x27;#xmedia-tags&#x27;).hide();">Media Tags</h2>
+  <h2><a id="xmedia-tags" style="display:none" class="d-block pl-12 header-anchor" href="#media-tags">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a href="svg.html" class="code-link">&lt;svg&gt;</a> tag is part of a group of tags
+  that create multi-media experiences on the web.
+  This group is referred to as the <a href="tag-groups/media.html">Media tag group</a>.
+  Together, they allow you to create powerful multi-media solutions.<br /><br />
+  Here is a list of media tags.
+</p>
+
+<div class="table-box">
+  <table class="table table-md">
+    <tbody>
+      <tr class="bg-light">
+        <th style="width:140px">Element</th>
+        <th style="">Description</th>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="audio.html">&lt;audio&gt;</a></td>
+        <td>Creates a player for sound such as music, sound effects, or others</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="video.html">&lt;video&gt;</a></td>
+        <td>Creates a video player on a page</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="source.html">&lt;source&gt;</a></td>
+        <td>Adds a media source for a &lt;video&gt;, &lt;audio&gt;, or &lt;picture&gt;</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="track.html">&lt;track&gt;</a></td>
+        <td>Adds a text track, such as, subtitles and captions, to the media</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="embed.html">&lt;embed&gt;</a></td>
+        <td>Creates a container for an external resource</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="iframe.html">&lt;iframe&gt;</a></td>
+        <td>Creates a frame in which another web page can be embedded</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="svg.html">&lt;svg&gt;</a></td>
+        <td>Displays an scalable vector image</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="canvas.html">&lt;canvas&gt;</a></td>
+        <td>Creates a graphics container where JavaScript can draw</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="img.html">&lt;img&gt;</a></td>
+        <td>Displays an image</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="area.html">&lt;area&gt;</a></td>
+        <td>Specifies a map area for an image</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="map.html">&lt;map&gt;</a></td>
+        <td>Defines a client-side image map, i.e. an image with clickable areas</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="figure.html">&lt;figure&gt;</a></td>
+        <td>Displays self-contained content, usually an image</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="figcaption.html">&lt;figcaption&gt;</a></td>
+        <td>Adds a caption to a &lt;figure&gt; (image) element</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr />
+
+
+
+<a class="goto-target" id="browser"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xbrowser&#x27;).show();" onmouseout="$(&#x27;#xbrowser&#x27;).hide();">Browser support</h2>
+  <h2><a id="xbrowser" style="display:none" class="d-block pl-12 header-anchor" href="#browser">#</a></h2>
+</div>
+
+
+<p>Here is when <a href="svg.html" class="code-link">&lt;svg&gt;</a> support started for each browser:</p>
+<div class="table-box">
+  <table class="table table-md width-400 ">
+    <tbody>
+      <tr>
+        <td class="width-110" title="Chrome">
+          <div class="d-flex">
+            <div><img src="../img/html/chrome.png" loading="lazy" /></div>
+            <div class="pt-2 pl-12">Chrome</div>
+          </div>
+        </td>
+        <td class="width-90 text-center">4.0</td>
+        <td>Jan 2010</td>
+      </tr>
+      <tr>
+        <td class="" title="Firefox">
+          <div class="d-flex">
+            <div><img src="../img/html/firefox.png" loading="lazy" /></div>
+            <div class="pt-2 pl-12">Firefox</div>
+          </div>
+        </td>
+        <td class=" text-center">3.0</td>
+        <td>Jun 2008</td>
+      </tr>
+      <tr>
+        <td class="" title="IE/Edge">
+          <div class="d-flex">
+            <div><img src="../img/html/edge.png" loading="lazy" /></div>
+            <div class="pt-2 pl-12">IE/Edge</div>
+          </div>
+        </td>
+        <td class=" text-center">9.0</td>
+        <td>Mar 2011</td>
+      </tr>
+      <tr>
+        <td class="" title="Opera">
+          <div class="d-flex">
+            <div><img src="../img/html/opera.png" loading="lazy" /></div>
+            <div class="pt-3 pl-12">Opera</div>
+          </div>
+        </td>
+        <td class=" text-center">10.1</td>
+        <td>Jun 2010</td>
+      </tr>
+      <tr>
+        <td class="" title="Safari">
+          <div class="d-flex">
+            <div><img src="../img/html/safari.png" loading="lazy" /></div>
+            <div class="pt-2 pl-12">Safari</div>
+          </div>
+        </td>
+        <td class=" text-center">3.2</td>
+        <td>Nov 2008</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr />
+
+
+<a class="goto-target" id="like"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xlike&#x27;).show();" onmouseout="$(&#x27;#xlike&#x27;).hide();">You may also like</h2>
+  <h2><a id="xlike" style="display:none" class="d-block pl-12 header-anchor" href="#like">#</a></h2>
+</div>
+
+
+<p>
+  <div class="d-flex">
+    <div class="p-10">
+      <img src="../img/html/show-like.png" class="img-fluid" loading="lazy" />
+    </div>
+    <div class="pl-25 pt-5">
+      <ul>
+        <li>Our <a class="font-weight-semibold" href="canvas.html">HTML canvas Reference</a></li>
+        <li>Our <a class="font-weight-semibold" href="../css/icons.html">CSS Icons Tutorial</a></li>
+        <li>Our <a class="font-weight-semibold" href="../css/images.html">CSS Images Tutorial</a></li>
+      </ul>
+    </div>
+  </div>
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="sup.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; HTML <code>&lt;sup&gt;</code> &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="table.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; HTML <code>&lt;table&gt;</code> &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+</div>
+
+          <div class="bg-light p-10 mb-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="tables.html">HTML Tables</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="images.html">HTML Images</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="notfound.html">HTML Color Names</a></li>
+
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="links.html">HTML Links</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="tags.html">HTML Tags</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="lists.html">HTML Lists</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="forms.html">HTML Forms</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="buttons.html">HTML Buttons</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="spaces.html">HTML Spaces</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="input/checkbox.html">HTML Checkboxes</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="editors.html">HTML Editors</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="comments.html">HTML Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" style="min-width:230px !important;">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">Svg tag</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#example">Example</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#using">Using svg</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#examples">More Examples</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#attributes">Attributes</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#didyouknow">Did you know</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#media-tags">Media tags</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#browser">Browser support</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#like">You may also like</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+      // Adjust HTML Editor menu to open in a different browser tab
+      var menu = document.querySelectorAll('[data-iseditorlink]')[0];
+      menu.href = "javascript:void(0);";
+      menu.setAttribute('onclick', "window.open('/html/editor', 'htmleditor')");
+    });
+
+    //function copy(id) {
+    //  var stor = document.createElement("textarea");
+    //  stor.setAttribute("contentEditable", true);
+    //  stor.innerHTML = document.getElementById(id).innerHTML;
+    //  stor.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+    //  document.body.appendChild(stor);
+    //  stor.focus({ preventScroll: true });
+    //  stor.focus();
+
+    //  document.execCommand("copy");
+    //  document.body.removeChild(stor);
+
+    //  $('#show-' + id).fadeIn('fast').delay(1200).fadeOut('slow');
+    //}
+
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/html/svg by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:46:41 GMT -->
+</html>

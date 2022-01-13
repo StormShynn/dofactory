@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/html/input-attributes by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:37:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Input Attributes - Dofactory</title>
+    <meta name="keywords" content="HTML, HTML Tutorial, Reference, Guide, Examples, Demos, Top, Best, Tips, Advice, Training, Learning, Courses, Lessons, Interview, Front-end, Programming, Code, Source">
+    <meta name="description" content="HTML input attributes -- the best examples. Specifies the initial value for an input field.">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="input-attributes.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        
+
+<style>
+  /* CSS adjustments */
+  pre { font-weight: bold; margin-top: 30px; }
+  ol.linenums li { line-height: 22px; }
+
+  .prettyprint { font-size: 16px; }
+  .kwd { color: #0b7490; }
+  .com, .typ { color: #000000; }
+  .lit, .str { color: #cc4500; }
+
+  /*.atv { color: #139; }*/
+  .atv { color: #b7422c; }
+  /*.atn { color: #F45D48; }*/
+  .atn { color: #353768; }
+
+  .prettyprint { background-color: #f6f7f8 !important; }
+
+  /*pre.scriptpre { margin-top: 0px; }*/
+
+  .tutorial hr { margin-top: 65px; margin-bottom: 5px; }
+
+  .tutorial .render button, .tutorial .render input[type="submit"], .render input[type="button"], .render input[type="reset"] { display: inline-block; font-weight: 400; text-align: center; white-space: nowrap; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; border: 1px solid transparent; padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; border-radius: 0.25rem; transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border: 1px solid #ccc; vertical-align: top; }
+  .tutorial .render button:hover, .tutorial .render input[type="submit"]:hover, .tutorial .render input[type="button"]:hover, .tutorial .render input[type="reset"]:hover { text-decoration: none; background-color: #dddddd; border-color: #bbb; }
+  .tutorial .render button:focus, .tutorial .render input[type="submit"]:focus, .tutorial .render input[type="button"]:focus, .tutorial .render input[type="reset"]:focus { outline: 0; border: 1px solid #999; }
+
+  .tutorial input[type="text"], .tutorial input[type="password"], .tutorial input[type="email"], .tutorial input[type="number"] { height: calc(2.25rem + 2px); padding: 0.375rem 0.75rem; font-size: 1rem; }
+
+  .tutorial .render select { outline: none; margin: 25px 0 10px; display: block; width: 180px; height: calc(2.25rem + 2px); padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; color: #495057; background-color: #fff; background-clip: padding-box; border: 1px solid #ced4da; border-radius: 0.25rem; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+
+  /* field set, legend, submit */
+  .tutorial .render fieldset { min-width: 0; padding: 20px 25px; margin: 30px 0 25px; border: 1px solid #999; }
+  .tutorial .render legend { width: auto; padding-left: 5px; padding-right: 5px; margin-bottom: .5rem; font-size: 17px !important; line-height: inherit; color: inherit; white-space: normal; }
+  .tutorial .render input[type="submit"] { margin-bottom: 10px; }
+
+  /* enables autoscroll in flex and grid */
+  div { min-width: 0; }
+
+  /* show buttons*/
+  .tutorial .render button[onclick^="show("], .tutorial .render button[onclick^="draw("], .tutorial .render button[onclick^="toggle("], .tutorial .render button[onclick^="count("], .tutorial .render button[onclick^="add"], .tutorial .render button[onclick^="reset("] { background-color: #b91c1c; color: white; border-radius: 6px !important; padding-left: 16px; padding-right: 16px; border: none !important; /*padding:3px 8px; margin-top:10px;*/ }
+  .tutorial .render button[onclick^="show("]:hover, .tutorial .render button[onclick^="draw("]:hover, .tutorial .render button[onclick^="toggle("]:hover, .tutorial .render button[onclick^="count("]:hover, .tutorial .render button[onclick^="add"]:hover, .tutorial .render button[onclick^="reset("]:hover { background-color: #991b1b; cursor: pointer; /*xborder-color: #cd3;padding:3px 8px; margin-top:10px;*/ }
+
+  .tutorial div.items p:first-child { margin-top: 35px !important; }
+
+  .tutorial em { border: 0; padding: 0; border-radius: 0; font-weight: 500; font-style: normal; white-space: nowrap; }
+  .tutorial em.c { border: 0; padding: 0; border-radius: 0; font-style: normal; white-space: nowrap; background: #f5f6f7; }
+
+  .tutorial .for-details { font-size:15px; padding-top: 10px; }
+
+  .tutorial h3 { font-weight: 500;}
+</style>
+
+<link rel="stylesheet" href="../tutorial/html/responsivee9e7.css?v=rM7Pr4uzBnOc3BNyGhrYGbF7qhWtK-WXj2JE2FsU7oc" />
+
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="../img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        HTML Tutorial&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="../html.html">HTML Tutorial</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="intro.html">HTML Introduction</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="elements.html">HTML Elements</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="attribs.html">HTML Attributes</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="global-attributes.html">HTML Global Attributes</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="layout.html">HTML Layout</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="links.html">HTML Links</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="images.html">HTML Images</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="background-images.html">HTML Background Images</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="colors.html">HTML Colors</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="color-names.html">HTML Color Names</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="lists.html">HTML Lists</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="blocks.html">HTML Blocks</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="paragraphs.html">HTML Paragraphs</a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="forms.html">HTML Forms</a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="input-types.html">HTML Input Types</a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="input-attributes.html">HTML Input Attributes</a>
+                <div class="height-1"></div>
+              <a id="item-17" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="buttons.html">HTML Buttons</a>
+                <div class="height-1"></div>
+              <a id="item-18" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="tables.html">HTML Tables</a>
+                <div class="height-1"></div>
+              <a id="item-19" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="comments.html">HTML Comments</a>
+                <div class="height-1"></div>
+              <a id="item-20" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="formatting.html">HTML Formatting</a>
+                <div class="height-1"></div>
+              <a id="item-21" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="spaces.html">HTML Spaces</a>
+                <div class="height-1"></div>
+              <a id="item-22" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="css.html">HTML CSS</a>
+                <div class="height-1"></div>
+              <a id="item-23" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="classes.html">HTML Classes</a>
+                <div class="height-1"></div>
+              <a id="item-24" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="ids.html">HTML Ids</a>
+                <div class="height-1"></div>
+              <a id="item-25" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="types.html">HTML Types</a>
+                <div class="height-1"></div>
+              <a id="item-26" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="iframes.html">HTML IFrames</a>
+                <div class="height-1"></div>
+              <a id="item-27" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="editors.html">HTML Editors</a>
+                <div class="height-1"></div>
+              <a id="item-28" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="entities.html">HTML Entities</a>
+                <div class="height-1"></div>
+              <a id="item-29" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="symbols.html">HTML Symbols</a>
+                <div class="height-1"></div>
+              <a id="item-30" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="url-encode.html">HTML URL Encode</a>
+                <div class="height-1"></div>
+              <a id="item-31" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="metatags.html">HTML Meta Tags</a>
+                <div class="height-1"></div>
+              <a id="item-32" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="semantics.html">HTML Semantic</a>
+                <div class="height-1"></div>
+              <a id="item-33" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 data-isexternallink=&#x27;true&#x27;
+                 
+                 href="ref.html">HTML Reference</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">HTML Charsets</div>
+              <a id="item-35" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="charset.html">HTML Charset</a>
+                <div class="height-1"></div>
+              <a id="item-36" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="charset/ascii.html">CharSet ASCII</a>
+                <div class="height-1"></div>
+              <a id="item-37" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="charset/utf8.html">CharSet UTF-8</a>
+                <div class="height-1"></div>
+              <a id="item-38" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="charset/entities.html">CharSet Entities</a>
+                <div class="height-1"></div>
+              <a id="item-39" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="charset/symbols.html">CharSet Symbols</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">HTML Graphics</div>
+              <a id="item-41" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="graphics/canvas.html">HTML Canvas</a>
+                <div class="height-1"></div>
+              <a id="item-42" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="graphics/svg.html">HTML SVG</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">HTML Media</div>
+              <a id="item-44" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="media.html">HTML Media</a>
+                <div class="height-1"></div>
+              <a id="item-45" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="media/video.html">HTML Video</a>
+                <div class="height-1"></div>
+              <a id="item-46" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="media/audio.html">HTML Audio</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="517" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="../img/arrow-left.jpg" /> &nbsp;Back to HTML </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css/ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript/design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="../net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial" xstyle="xmax-width:1200px;">
+
+      <div class="d-flex justify-content-around align-items-start">
+       
+        <div class="w-100 m-auto " style="max-width:970px;">
+
+<div>
+<h1>HTML Input Attributes</h1>
+
+
+<div class="d-flex mt-10 pt-10 d-block d-lg-none" xstyle="border-top:1px solid #ccd;">
+    <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="input-types.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; HTML Input Types &nbsp;</a>
+  </div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="buttons.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; HTML Buttons &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<div class="items mt-70 mb-50">
+  <p><span>Input attributes</span> are attributes that can be applied to <a href="input.html" class="code-link">&lt;input&gt;</a> elements.</p>
+  <p>These attributes add features and behaviors to the <a href="input.html" class="code-link">&lt;input&gt;</a> elements.</p>
+  <p>Attribute examples include <a class="code-link" href="input/size.html">size</a>, <a class="code-link" href="input/value.html">value</a>, <a class="code-link" href="input/maxlength.html">maxlength</a>, <a class="code-link" href="input/required.html">required</a>, and many more.</p>
+</div>
+
+
+
+
+  <div class="mt-40"></div>
+
+<a class="goto-target" id="example"></a>
+<div class="d-flex">
+  <h3 style="margin-left:-2px;font-weight:500 !important;" onmouseover="$(&#x27;#xexample&#x27;).show();" onmouseout="$(&#x27;#xexample&#x27;).hide();">Example</h3>
+  <h3 class="pl-12"><a id="xexample" class="d-block header-anchor" href="#example">#</a></h3>
+</div>
+
+
+
+
+<p>An <a class="code-link" href="input.html">&lt;input&gt;</a> tag with 6 attributes.</p>
+
+<style>
+  .render input[maxlength="25"] {
+    margin: 25px 0;
+  }
+</style>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <input type="text" 
+       id="firstname" 
+       name="firstname" 
+       placeholder="First name" 
+       maxlength="25"
+       style="background-color:aliceblue;"
+>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;input type=&quot;text&quot; &#xD;&#xA;       id=&quot;firstname&quot; &#xD;&#xA;       name=&quot;firstname&quot; &#xD;&#xA;       placeholder=&quot;First name&quot; &#xD;&#xA;       maxlength=&quot;25&quot;&#xD;&#xA;       style=&quot;background-color:aliceblue;&quot;&#xD;&#xA;&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+
+<a class="goto-target" id="attributes"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xattributes&#x27;).show();" onmouseout="$(&#x27;#xattributes&#x27;).hide();">Attributes</h2>
+  <h2><a id="xattributes" style="display:none" class="d-block pl-12 header-anchor" href="#attributes">#</a></h2>
+</div>
+
+
+
+<p class="mt-20">
+  Complete list of input attributes and their values.
+</p>
+
+<div class="table-box">
+  <table class="table table-md ">
+    <tbody>
+      <tr class="bg-light">
+        <th style="width:140px">Attribute</th>
+        <th style="width:140px">Value</th>
+        <th style="">Description</th>
+      </tr>
+
+      <tr>
+        <td><a class="code-link" href="input/type.html">type</a></td>
+        <td>
+          <a class="code-link" href="input/text.html">text</a><br>
+          <a class="code-link" href="input/checkbox.html">checkbox</a><br>
+          <a class="code-link" href="input/radio.html">radio</a><br>
+          <a class="code-link" href="input/hidden.html">hidden</a><br>
+          <a class="code-link" href="input/button.html">button</a><br>
+          <a class="code-link" href="input/submit.html">submit</a><br>
+          <a class="code-link" href="input/reset.html">reset</a><br>
+          <a class="code-link" href="input/password.html">password</a><br>
+          <a class="code-link" href="input/file.html">file</a><br>---<br>
+          <a class="code-link" href="input/color.html">color</a><br>
+          <a class="code-link" href="input/date.html">date</a> <br>
+          <a class="code-link" href="input/datetime-local.html">datetime-local</a> <br>
+          <a class="code-link" href="input/email.html">email</a> <br>
+          <a class="code-link" href="input/search.html">search</a><br>
+          <a class="code-link" href="input/image.html">image</a><br>
+          <a class="code-link" href="input/month.html">month</a> <br>
+          <a class="code-link" href="input/number.html">number</a> <br>
+          <a class="code-link" href="input/range.html">range</a> <br>
+          <a class="code-link" href="input/tel.html">tel</a><br>
+          <a class="code-link" href="input/time.html">time</a> <br>
+          <a class="code-link" href="input/url.html">url</a><br>
+          <a class="code-link" href="input/week.html">week</a>
+        </td>
+        <td>
+          The type of input element to be created.<br />
+          The last 13 types (<a class="code-link" href="input/color.html">color</a> to <a class="code-link" href="input/week.html">week</a>) were added in HTML5 (Oct 2014).
+        </td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/name.html">name</a></td>
+        <td><i>text</i></td>
+        <td>Name of the input element.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/value.html">value</a></td>
+        <td><i>text</i></td>
+        <td>Value of the input element.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/id.html">id</a> &nbsp;</td>
+        <td class="font-italic">identifier</td>
+        <td>Defines a unique identifier for the input.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/class.html">class</a> &nbsp;</td>
+        <td class="font-italic">classnames</td>
+
+        <td>Sets one or more CSS classes to be applied to the input.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/style.html">style</a> &nbsp;</td>
+        <td class="font-italic">CSS-styles</td>
+        <td>Sets the style for the input.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/data.html">data-*</a> &nbsp;</td>
+        <td class="font-italic">value</td>
+        <td>Defines additional data that can be used by JavaScript.<br /></td>
+      </tr>
+
+      <tr>
+        <td><a class="code-link" href="input/attributes/hidden.html">hidden</a> &nbsp;</td>
+        <td>hidden</td>
+        <td>Specifies whether the input is hidden.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/title.html">title</a> &nbsp;</td>
+        <td class="font-italic">text</td>
+        <td>Sets a title that displays as a tooltip.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/tabindex.html">tabindex</a> &nbsp;</td>
+        <td class="font-italic">index</td>
+        <td>Sets a tab sequence relative to the other elements.</td>
+      </tr>
+
+      <tr>
+        <td><a class="code-link" href="input/checked.html">checked</a></td>
+        <td>checked</td>
+        <td>For types: <a class="code-link" href="input/checkbox.html">checkbox</a> or <a class="code-link" href="input/radio.html">radio</a>. Makes the option checked or chosen.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/placeholder.html">placeholder</a></td>
+        <td><i>text</i></td>
+        <td>Short hint which describes expected value</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/maxlength.html">maxlength</a></td>
+        <td><i>number</i></td>
+        <td>Maximum number of characters allowed</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/required.html">required</a></td>
+        <td><i>no value</i></td>
+        <td>Sets the input to required field</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/readonly.html">readonly</a></td>
+        <td>readonly</td>
+        <td>Make input read only</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/disabled.html">disabled</a></td>
+        <td>disabled</td>
+        <td>Disables input element</td>
+      </tr>
+
+      <tr>
+        <td><a class="code-link" href="input/autofocus.html">autofocus</a></td>
+        <td><i>no value</i></td>
+        <td>Sets the focus on the element after page loads</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/autocomplete.html">autocomplete</a></td>
+        <td>on | off</td>
+        <td>Presents the user with previously entered values</td>
+      </tr>
+
+      <tr>
+        <td><a class="code-link" href="input/form.html">form</a></td>
+        <td><i>form-id</i></td>
+        <td>Refers to the id of the form the <a href="input.html" class="code-link">&lt;input&gt;</a> element belongs to</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/formaction.html">formaction</a></td>
+        <td><i>URL</i></td>
+        <td>For types: <a class="code-link" href="input/submit.html">submit</a> <a class="code-link" href="input/image.html">image</a>. URL or path of the file the submitted data will be processed</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/formtarget.html">formtarget</a></td>
+        <td class="">
+          <a class="code-link" href="target/blank.html">_blank</a><br />
+          <a class="code-link" href="target/self.html">_self</a><br />
+          <a class="code-link" href="target/parent.html">_parent</a><br />
+          <a class="code-link" href="target/top.html">_top</a><br />
+          <a class="code-link font-italic" href="target/framename.html">framename</a><br />
+        </td>
+        <td>For types: <a class="code-link" href="input/submit.html">submit</a> and <a class="code-link" href="input/image.html">image</a>. Indicates where the response should be displayed</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/formenctype.html">formenctype</a></td>
+        <td colspan="2">
+          <div class="d-flex">
+            <div>
+              <span class="xno-break">application/x-www-form-urlencoded,</span><br>
+              multipart/form-data,<br>
+              text/plain
+            </div>
+            <div class="xpl-md-35">
+              For types: <a class="code-link" href="input/submit.html">submit</a> <a class="code-link" href="input/image.html">image</a>. How the
+              form data submitted shall be encoded to the server.
+            </div>
+          </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/formmethod.html">formmethod</a></td>
+        <td>get<br>post</td>
+        <td>For types: <a class="code-link" href="input/submit.html">submit</a> and <a class="code-link" href="input/image.html">image</a>. The HTTP method for sending form data</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/formnovalidate.html">formnovalidate</a></td>
+        <td>formnovalidate</td>
+        <td>Avoids the form being validated after submission</td>
+      </tr>
+
+
+      <tr>
+        <td><a class="code-link" href="input/accept.html">accept</a></td>
+        <td>
+          <i>file-extension</i><br>
+          audio/*<br>
+          video/*<br>
+          image/*<br>
+          <i>media_type</i>
+        </td>
+        <td>For type: <a class="code-link" href="input/file.html">file</a>. Indicates what file types user can pick to upload</td>
+      </tr>
+
+
+      <tr>
+        <td><a class="code-link" href="input/min.html">min</a></td>
+        <td>
+          <i>
+            number<br>
+            date
+          </i>
+        </td>
+        <td>Minimum value</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/max.html">max</a></td>
+        <td>
+          <i>
+            number<br>
+            date
+          </i>
+        </td>
+        <td>Maximum value</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/step.html">step</a></td>
+        <td>
+          <i>number<br></i>any
+        </td>
+        <td>Interval between legal numbers</td>
+      </tr>
+
+
+      <tr>
+        <td><a class="code-link" href="input/multiple.html">multiple</a></td>
+        <td>multiple</td>
+        <td>Allows users to choose more than one value from selection</td>
+      </tr>
+
+      <tr>
+        <td><a class="code-link" href="input/pattern.html">pattern</a></td>
+        <td><i>regexp</i></td>
+        <td>Regular expression that an <a href="input.html" class="code-link">&lt;input&gt;</a> element's value is checked against</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/size.html">size</a></td>
+        <td><i>number</i></td>
+        <td>Input control's width in number of characters</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/width.html">width</a></td>
+        <td><i>pixels</i></td>
+        <td>Width of the input element in pixels. Used by <a class="code-link" href="input/image.html">image</a> input types.</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/height.html">height</a></td>
+        <td><i>pixels</i></td>
+        <td>Height of element in pixels. Used by <a class="code-link" href="input/image.html">image</a> input types</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/list.html">list</a></td>
+        <td><i>datalist-id</i></td>
+        <td><a href="datalist.html" class="code-link">&lt;datalist&gt;</a> element that contains pre-defined options for an <a href="input.html" class="code-link">&lt;input&gt;</a> element</td>
+      </tr>
+      <tr>
+        <td><a class="code-link" href="input/dirname.html">dirname</a></td>
+        <td><i>inputname</i></td>
+        <td>Text direction to be submitted</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<p>Next, we review each of these.</p>
+
+<hr />
+
+
+
+<a class="goto-target" id="type"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xtype&#x27;).show();" onmouseout="$(&#x27;#xtype&#x27;).hide();">The type Attribute</h2>
+  <h2><a id="xtype" style="display:none" class="d-block pl-12 header-anchor" href="#type">#</a></h2>
+</div>
+
+
+
+
+<p>
+  The <a class="code-link" href="input/type.html">type</a> attribute defines the type of the input control.<br />
+  There are many types, for example <a href="input/text.html" class="code-link">text</a>, <a href="input/button.html" class="code-link">button</a>, <a href="input/radio.html" class="code-link">radio</a>, <a href="input/checkbox.html" class="code-link">checkbox</a>, and others.
+</p>
+
+<p class="">Three <a href="input.html" class="code-link">&lt;input&gt;</a> elements with these types: <a href="input/text.html" class="code-link">text</a>, <a href="input/submit.html" class="code-link">submit</a>, and <a href="input/reset.html" class="code-link">reset</a>.</p>
+
+<style>
+  .render form {
+    margin: 35px 0 15px 0;
+  }
+</style>
+
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  <input type="text" name="location" 
+         placeholder="Location"><br /> <br />
+
+  <input type="submit">
+  <input type="reset">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  &lt;input type=&quot;text&quot; name=&quot;location&quot; &#xD;&#xA;         placeholder=&quot;Location&quot;&gt;&lt;br /&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;  &lt;input type=&quot;reset&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-type.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="name"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xname&#x27;).show();" onmouseout="$(&#x27;#xname&#x27;).hide();">The name Attribute</h2>
+  <h2><a id="xname" style="display:none" class="d-block pl-12 header-anchor" href="#name">#</a></h2>
+</div>
+
+
+
+
+<p>
+  The <a class="code-link" href="input/name.html">name</a> attribute assigns a name to an input field.<br />
+  When a form is submitted the <a class="code-link" href="input/name.html">name</a> and <a class="code-link" href="input/value.html">value</a> of the input element are sent to the server.
+</p>
+
+
+<p class="pt-25">
+  Two <a href="input.html" class="code-link">&lt;input&gt;</a> fields with <a href="input/name.html" class="code-link">name</a> attributes.<br />
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  <input name="firstname" type="text" placeholder="First name"> <br /> <br />
+  <input name="lastname" type="text" placeholder="Last name"> <br /> <br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  &lt;input name=&quot;firstname&quot; type=&quot;text&quot; placeholder=&quot;First name&quot;&gt; &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;  &lt;input name=&quot;lastname&quot; type=&quot;text&quot; placeholder=&quot;Last name&quot;&gt; &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-name.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="value"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xvalue&#x27;).show();" onmouseout="$(&#x27;#xvalue&#x27;).hide();">The value Attribute</h2>
+  <h2><a id="xvalue" style="display:none" class="d-block pl-12 header-anchor" href="#value">#</a></h2>
+</div>
+
+
+
+
+<p>
+  The <a class="code-link" href="input/value.html">value</a> attribute holds the value of the input field.<br />
+  The value can be a string or a number.
+</p>
+
+
+<p class="">An <a href="input.html" class="code-link">&lt;input&gt;</a> field with a <a class="code-link" href="input/value.html">value</a> attribute.</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form>
+  First name &nbsp;
+  <input type="text" name="firstname" value="Georgina">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form&gt;&#xD;&#xA;  First name &amp;nbsp;&#xD;&#xA;  &lt;input type=&quot;text&quot; name=&quot;firstname&quot; value=&quot;Georgina&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-value.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+
+<hr />
+
+
+
+<a class="goto-target" id="id"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xid&#x27;).show();" onmouseout="$(&#x27;#xid&#x27;).hide();">The id Attribute</h2>
+  <h2><a id="xid" style="display:none" class="d-block pl-12 header-anchor" href="#id">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/id.html">id</a> attribute assigns an identifier to the input control.<br />
+  The value <i>must be unique</i> on the web page.
+  <br /><br />
+  Several <a href="input.html" class="code-link">&lt;input&gt;</a> elements, each one with a unique <a class="code-link" href="input/id.html">id</a>.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  <fieldset>
+    <legend>Contact Details</legend>
+
+    <input type="text" placeholder="First name" id="firstname" name="firstname"><br /><br />
+    <input type="text" placeholder="Last name" id="lastname" name="lastname"><br /><br />
+    <input type="text" placeholder="Email" id="email" name="email"><br /><br />
+
+    <input type="submit" id="submit" value="Submit">
+  </fieldset>
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  &lt;fieldset&gt;&#xD;&#xA;    &lt;legend&gt;Contact Details&lt;/legend&gt;&#xD;&#xA;&#xD;&#xA;    &lt;input type=&quot;text&quot; placeholder=&quot;First name&quot; id=&quot;firstname&quot; name=&quot;firstname&quot;&gt;&lt;br /&gt;&lt;br /&gt;&#xD;&#xA;    &lt;input type=&quot;text&quot; placeholder=&quot;Last name&quot; id=&quot;lastname&quot; name=&quot;lastname&quot;&gt;&lt;br /&gt;&lt;br /&gt;&#xD;&#xA;    &lt;input type=&quot;text&quot; placeholder=&quot;Email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;&lt;br /&gt;&lt;br /&gt;&#xD;&#xA;&#xD;&#xA;    &lt;input type=&quot;submit&quot; id=&quot;submit&quot; value=&quot;Submit&quot;&gt;&#xD;&#xA;  &lt;/fieldset&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-id.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+
+<hr />
+
+
+
+<a class="goto-target" id="class"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xclass&#x27;).show();" onmouseout="$(&#x27;#xclass&#x27;).hide();">The class Attribute</h2>
+  <h2><a id="xclass" style="display:none" class="d-block pl-12 header-anchor" href="#class">#</a></h2>
+</div>
+
+
+
+<p class="">
+  The <a class="code-link" href="input/class.html">class</a> attribute assigns one or more CSS classnames to the input control.<br />
+  Classes affect the appearance of the control.<br /><br />
+  An <a href="input.html" class="code-link">&lt;input&gt;</a> element with a <a class="code-link" href="input/class.html">class</a> attribute.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <style>
+  .blue {color:steelblue;background-color:aliceblue}
+</style>
+
+<form action="https://www.dofactory.com/tutorial/action.html">
+  <input class="blue" type="text" name="city" 
+         placeholder="City"> <br /> <br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;style&gt;&#xD;&#xA;  .blue {color:steelblue;background-color:aliceblue}&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  &lt;input class=&quot;blue&quot; type=&quot;text&quot; name=&quot;city&quot; &#xD;&#xA;         placeholder=&quot;City&quot;&gt; &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-class.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="style"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xstyle&#x27;).show();" onmouseout="$(&#x27;#xstyle&#x27;).hide();">The style Attribute</h2>
+  <h2><a id="xstyle" style="display:none" class="d-block pl-12 header-anchor" href="#style">#</a></h2>
+</div>
+
+
+
+<p class="">
+  The <a class="code-link" href="input/style.html">style</a> attribute assigns an <i>inline</i> style to an input control.<br />
+  The style affects the appearance of the control.<br /><br />
+  An <a href="input.html" class="code-link">&lt;input&gt;</a> element with a <a class="code-link" href="input/style.html">style</a> attribute.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  <input style="color:orangered;background-color:lavender;"
+         type="text" name="country" placeholder="Country"
+         value="France"> 
+  <br /><br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  &lt;input style=&quot;color:orangered;background-color:lavender;&quot;&#xD;&#xA;         type=&quot;text&quot; name=&quot;country&quot; placeholder=&quot;Country&quot;&#xD;&#xA;         value=&quot;France&quot;&gt; &#xD;&#xA;  &lt;br /&gt;&lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-style.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+
+<a class="goto-target" id="data"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xdata&#x27;).show();" onmouseout="$(&#x27;#xdata&#x27;).hide();">The data-* Attribute</h2>
+  <h2><a id="xdata" style="display:none" class="d-block pl-12 header-anchor" href="#data">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/data.html">data-*</a> attribute assigns a custom value to an input control.<br />
+  The <code>*</code> part is replaced with a lowercase string, such as <code>data-id</code>, <code>data-cost</code>, or <code>data-location</code>.<br /><br />
+  An <a href="input.html" class="code-link">&lt;input&gt;</a> element with a custom <code>data-case-number</code> attribute.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  <input data-case-number="922720" type="text" name="resolution" 
+         placeholder="Problem resolution"> <br /> <br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  &lt;input data-case-number=&quot;922720&quot; type=&quot;text&quot; name=&quot;resolution&quot; &#xD;&#xA;         placeholder=&quot;Problem resolution&quot;&gt; &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-data-.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<p class="tip"><b>Note: </b> &nbsp;The <a class="code-link" href="attributes/data.html">data-*</a> attribute values are not visible to the end user.</p>
+
+<hr />
+
+
+
+<a class="goto-target" id="hidden"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xhidden&#x27;).show();" onmouseout="$(&#x27;#xhidden&#x27;).hide();">The hidden Attribute</h2>
+  <h2><a id="xhidden" style="display:none" class="d-block pl-12 header-anchor" href="#hidden">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/attributes/hidden.html">hidden</a> attribute hides the input element, i.e., makes it invisible.<br />
+  Even though the control is invisible, its value is included during form submission.<br /><br />
+
+  An <a href="input.html" class="code-link">&lt;input&gt;</a> element with a <a class="code-link" href="input/attributes/hidden.html">hidden</a> attribute. The control is not visible.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  Your favorite food:
+  <input hidden type="text" name="favorite" value="Pizza"> <br /> <br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  Your favorite food:&#xD;&#xA;  &lt;input hidden type=&quot;text&quot; name=&quot;favorite&quot; value=&quot;Pizza&quot;&gt; &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-hidden.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="title"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xtitle&#x27;).show();" onmouseout="$(&#x27;#xtitle&#x27;).hide();">The title Attribute</h2>
+  <h2><a id="xtitle" style="display:none" class="d-block pl-12 header-anchor" href="#title">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/title.html">title</a> attribute adds tooltip text to an input control.<br />
+  Hovering a mouse over the textbox displays a tooltip.<br /><br />
+
+  An <a href="input.html" class="code-link">&lt;input&gt;</a> element with a <a class="code-link" href="input/title.html">title</a> attribute.<br />
+
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  <input title="Please provide your pet's name"
+         type="text" name="pet"
+         placeholder="Your pet's name"> <br /> <br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  &lt;input title=&quot;Please provide your pet&#x27;s name&quot;&#xD;&#xA;         type=&quot;text&quot; name=&quot;pet&quot;&#xD;&#xA;         placeholder=&quot;Your pet&#x27;s name&quot;&gt; &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-title.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="tabindex"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xtabindex&#x27;).show();" onmouseout="$(&#x27;#xtabindex&#x27;).hide();">The tabindex Attribute</h2>
+  <h2><a id="xtabindex" style="display:none" class="d-block pl-12 header-anchor" href="#tabindex">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/tabindex.html">tabindex</a>  attribute assigns a keyboard tab order relative to the other controls.<br />
+  This attribute indicates the order in which elements receive focus using the tab key.
+  <br /><br />
+
+  An <a href="input.html" class="code-link">&lt;input&gt;</a> element with a <a class="code-link" href="input/tabindex.html">tabindex</a> attribute.<br />
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  <input tabindex="16" type="text" name="street"
+         placeholder="Street address"> <br /> <br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  &lt;input tabindex=&quot;16&quot; type=&quot;text&quot; name=&quot;street&quot;&#xD;&#xA;         placeholder=&quot;Street address&quot;&gt; &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-tabindex.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<p class="for-details">
+  For details on <code>tabindex</code>, see our <a class="underline" href="tabindex.html">HTML tabindex attribute Reference</a>.
+</p>
+
+<hr />
+
+
+
+<a class="goto-target" id="checked"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xchecked&#x27;).show();" onmouseout="$(&#x27;#xchecked&#x27;).hide();">The checked Attribute</h2>
+  <h2><a id="xchecked" style="display:none" class="d-block pl-12 header-anchor" href="#checked">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/checked.html">checked</a> attribute checks (i.e. selects) a radio button or checkbox.<br />
+  Clicking the element will toggle, i.e. check or uncheck, the item.
+  <br /><br />
+  Five <a href="input/radio.html" class="code-link">&lt;radio&gt;</a> buttons with the first one <a class="code-link" href="input/checked.html">checked</a>.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  <div>Product Rating</div><br />
+  <label><input type="radio" name="score" value="high" checked> High </label><br />
+  <label><input type="radio" name="score" value="mediumhigh"> Medium High </label><br />
+  <label><input type="radio" name="score" value="medium"> Medium </label><br />
+  <label><input type="radio" name="score" value="mediumlow"> Medium Low </label><br />
+  <label><input type="radio" name="score" value="low"> Low </label><br /><br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  &lt;div&gt;Product Rating&lt;/div&gt;&lt;br /&gt;&#xD;&#xA;  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;score&quot; value=&quot;high&quot; checked&gt; High &lt;/label&gt;&lt;br /&gt;&#xD;&#xA;  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;score&quot; value=&quot;mediumhigh&quot;&gt; Medium High &lt;/label&gt;&lt;br /&gt;&#xD;&#xA;  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;score&quot; value=&quot;medium&quot;&gt; Medium &lt;/label&gt;&lt;br /&gt;&#xD;&#xA;  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;score&quot; value=&quot;mediumlow&quot;&gt; Medium Low &lt;/label&gt;&lt;br /&gt;&#xD;&#xA;  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;score&quot; value=&quot;low&quot;&gt; Low &lt;/label&gt;&lt;br /&gt;&lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-checked.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="placeholder"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xplaceholder&#x27;).show();" onmouseout="$(&#x27;#xplaceholder&#x27;).hide();">The placeholder Attribute</h2>
+  <h2><a id="xplaceholder" style="display:none" class="d-block pl-12 header-anchor" href="#placeholder">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/placeholder.html">placeholder</a> attribute provides a hint about the expected data. <br />
+  Placeholders are displayed as dimmed background text when an input field has no value.
+  <br /><br />
+  Two <a href="input.html" class="code-link">&lt;input&gt;</a> fields with <a class="code-link" href="input/placeholder.html">placeholder</a> attributes.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  <input type="text" name="firstname" placeholder="Enter first name"><br /> <br />
+  <input type="text" name="lastname" placeholder="Enter last name"><br /> <br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  &lt;input type=&quot;text&quot; name=&quot;firstname&quot; placeholder=&quot;Enter first name&quot;&gt;&lt;br /&gt; &lt;br /&gt;&#xD;&#xA;  &lt;input type=&quot;text&quot; name=&quot;lastname&quot; placeholder=&quot;Enter last name&quot;&gt;&lt;br /&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-placeholder.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+
+<a class="goto-target" id="didyouknow"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xdidyouknow&#x27;).show();" onmouseout="$(&#x27;#xdidyouknow&#x27;).hide();">Did you know?</h2>
+  <h2><a id="xdidyouknow" style="display:none" class="d-block pl-12 header-anchor" href="#didyouknow">#</a></h2>
+</div>
+
+  <img src="../img/html/show-did-you-know.png" alt="Did you know?" class="pt-35 ml-5" loading="lazy" />
+
+
+<div class="pl-25 pt-25">
+
+  <div>
+    <h3>Placeholders can be styled with CSS</h3>
+    <p>
+      With the CSS <code>::placeholder</code> selector (or <code>::-webkit-input-placeholder</code>) you can control the appearance of a placeholder.<br /><br />
+      This example changes the color of the placeholder to teal using CSS.
+    </p>
+    
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;style&gt;&#xD;&#xA;  input::placeholder {color: #2bacac;}&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  &lt;input type=&quot;text&quot; name=&quot;firstname&quot; placeholder=&quot;First name&quot;&gt;&lt;br /&gt; &lt;br /&gt;&#xD;&#xA;  &lt;input type=&quot;text&quot; name=&quot;lastname&quot; placeholder=&quot;Last name&quot;&gt;&lt;br /&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-placeholder-style.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+  </div>
+</div>
+
+<hr />
+
+
+
+<a class="goto-target" id="maxlength"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xmaxlength&#x27;).show();" onmouseout="$(&#x27;#xmaxlength&#x27;).hide();">The maxlength Attribute</h2>
+  <h2><a id="xmaxlength" style="display:none" class="d-block pl-12 header-anchor" href="#maxlength">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/maxlength.html">maxlength</a> attribute sets the maximum number of characters the field will hold. <br />
+  By default, the maximum is 524,288 characters.
+  <br /><br />
+  An <a href="input.html" class="code-link">&lt;input&gt;</a> tag with a <a class="code-link" href="input/maxlength.html">maxlength</a> attribute.
+</p>
+
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form>
+  First name &nbsp;
+  <input type="text" name="firstname" maxlength="10">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form&gt;&#xD;&#xA;  First name &amp;nbsp;&#xD;&#xA;  &lt;input type=&quot;text&quot; name=&quot;firstname&quot; maxlength=&quot;10&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-maxlength.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="required"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xrequired&#x27;).show();" onmouseout="$(&#x27;#xrequired&#x27;).hide();">The required Attribute</h2>
+  <h2><a id="xrequired" style="display:none" class="d-block pl-12 header-anchor" href="#required">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/required.html">required</a> attribute make a field mandatory.<br />
+  A value must be entered before submitting the form.<br /><br />
+  Two <a href="input.html" class="code-link">&lt;input&gt;</a> fields with <a class="code-link" href="input/required.html">required</a> attributes.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  First name* &nbsp;<input type="text" name="firstname" required> <br /> <br />
+  Last name* &nbsp;<input type="text" name="lastname" required> <br /> <br />
+  
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  First name* &amp;nbsp;&lt;input type=&quot;text&quot; name=&quot;firstname&quot; required&gt; &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;  Last name* &amp;nbsp;&lt;input type=&quot;text&quot; name=&quot;lastname&quot; required&gt; &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;  &#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-required.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+<div class="tip mt-40"><b>Tip:</b> A common convention is to mark a required field with an asterisk on the label (see above).</div>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="readonly"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xreadonly&#x27;).show();" onmouseout="$(&#x27;#xreadonly&#x27;).hide();">The readonly Attribute</h2>
+  <h2><a id="xreadonly" style="display:none" class="d-block pl-12 header-anchor" href="#readonly">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/readonly.html">readonly</a> attribute makes the input field read-only.<br />
+  A readonly element cannot be modified, but its value is included during form submission.
+  <br /><br />
+  An <a href="input.html" class="code-link">&lt;input&gt;</a> tag with a <a class="code-link" href="input/readonly.html">readonly</a> attribute.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  First name &nbsp;
+  <input type="text" name="firstname" value="Theodore" readonly>
+  <br /><br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  First name &amp;nbsp;&#xD;&#xA;  &lt;input type=&quot;text&quot; name=&quot;firstname&quot; value=&quot;Theodore&quot; readonly&gt;&#xD;&#xA;  &lt;br /&gt;&lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-readonly.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+
+<a class="goto-target" id="disabled"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xdisabled&#x27;).show();" onmouseout="$(&#x27;#xdisabled&#x27;).hide();">The disabled Attribute</h2>
+  <h2><a id="xdisabled" style="display:none" class="d-block pl-12 header-anchor" href="#disabled">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/disabled.html">disabled</a> attribute disables the input field. <br />
+  A disabled element appears dimmed and its value is not sent during form submission.
+  <br /><br />
+  An <a href="input.html" class="code-link">&lt;input&gt;</a> tag with a <a class="code-link" href="input/disabled.html">disabled</a> attribute.
+</p>
+
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  First name &nbsp;
+  <input type="text" name="firstname" value="Sonia" disabled>
+  <br /><br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  First name &amp;nbsp;&#xD;&#xA;  &lt;input type=&quot;text&quot; name=&quot;firstname&quot; value=&quot;Sonia&quot; disabled&gt;&#xD;&#xA;  &lt;br /&gt;&lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-disabled.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="autofocus"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xautofocus&#x27;).show();" onmouseout="$(&#x27;#xautofocus&#x27;).hide();">The autofocus Attribute</h2>
+  <h2><a id="xautofocus" style="display:none" class="d-block pl-12 header-anchor" href="#autofocus">#</a></h2>
+</div>
+
+
+
+<p class="mb-0">
+  The <a class="code-link" href="input/autofocus.html">autofocus</a> attribute specifies that the input field should receive focus when the page loads.<br />
+  Only one element on a page can have the autofocus attribute.
+  <br /><br />
+  An <a href="input.html" class="code-link">&lt;input&gt;</a> tag with an <a class="code-link" href="input/autofocus.html">autofocus</a> attribute.<br />
+  <i>Note: autofocus is disabled on this page. Click the 'Try It live' button to see autofocus in action.</i>
+</p>
+
+<div class="render">
+  <div class="ml-25 mt-30 mb-20">
+    Firstname &nbsp; <input type="text" name="fname">
+  </div>
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form&gt;&#xD;&#xA;  First name &amp;nbsp;&#xD;&#xA;  &lt;input type=&quot;text&quot; name=&quot;firstname&quot; autofocus&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-autofocus.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<p class="tip"><b>Tip: </b> &nbsp;When a control has <b>focus</b>, it means that any user input will go to that control.</p>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="autocomplete"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xautocomplete&#x27;).show();" onmouseout="$(&#x27;#xautocomplete&#x27;).hide();">The autocomplete Attribute</h2>
+  <h2><a id="xautocomplete" style="display:none" class="d-block pl-12 header-anchor" href="#autocomplete">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="autocomplete.html">autocomplete</a> attribute specifies to the browser that input can be autofilled.<br />
+  When autocomplete is on, the browser provides input values based on previous values the user has entered.
+  <br /><br />
+  Two <a href="input.html" class="code-link">&lt;input&gt;</a> tags with <a class="code-link" href="notfound.html">autocomplete</a> turned on.<br />
+  <i>Note: Chrome ignores HTML autocomplete settings.</i>
+</p>
+
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html" >
+  <input type="text" name="firstname" placeholder="First name" autocomplete="on"> <br /><br />
+  <input type="text" name="lastname" placeholder="Last name" autocomplete="on"> <br /><br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot; &gt;&#xD;&#xA;  &lt;input type=&quot;text&quot; name=&quot;firstname&quot; placeholder=&quot;First name&quot; autocomplete=&quot;on&quot;&gt; &lt;br /&gt;&lt;br /&gt;&#xD;&#xA;  &lt;input type=&quot;text&quot; name=&quot;lastname&quot; placeholder=&quot;Last name&quot; autocomplete=&quot;on&quot;&gt; &lt;br /&gt;&lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-autocomplete.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="form"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xform&#x27;).show();" onmouseout="$(&#x27;#xform&#x27;).hide();">The form Attribute</h2>
+  <h2><a id="xform" style="display:none" class="d-block pl-12 header-anchor" href="#form">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/form.html">form</a> attribute specifies the form the <a href="input.html" class="code-link">&lt;input&gt;</a> element belongs to.<br />
+  Even when physically outside the form, the input element is included during form submission.
+  <br /><br />
+  An <a href="input.html" class="code-link">&lt;input&gt;</a> tag with a <a class="code-link" href="input/form.html">form</a> attribute.
+</p>
+
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html" id="myform">
+  <fieldset style="background: #f6f8ff; border: 2px solid #4238ca;">
+    <legend>Personal Information</legend>
+    <input type="text" name="firstname" placeholder="First name">
+
+    <br /><br />
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+<br />
+
+<input form="myform" type="text" name="lastname" placeholder="Last name">
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot; id=&quot;myform&quot;&gt;&#xD;&#xA;  &lt;fieldset style=&quot;background: #f6f8ff; border: 2px solid #4238ca;&quot;&gt;&#xD;&#xA;    &lt;legend&gt;Personal Information&lt;/legend&gt;&#xD;&#xA;    &lt;input type=&quot;text&quot; name=&quot;firstname&quot; placeholder=&quot;First name&quot;&gt;&#xD;&#xA;&#xD;&#xA;    &lt;br /&gt;&lt;br /&gt;&#xD;&#xA;    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;&#xD;&#xA;  &lt;/fieldset&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;&lt;br /&gt;&#xD;&#xA;&#xD;&#xA;&lt;input form=&quot;myform&quot; type=&quot;text&quot; name=&quot;lastname&quot; placeholder=&quot;Last name&quot;&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-form.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+
+<a class="goto-target" id="formaction"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xformaction&#x27;).show();" onmouseout="$(&#x27;#xformaction&#x27;).hide();">The formaction Attribute</h2>
+  <h2><a id="xformaction" style="display:none" class="d-block pl-12 header-anchor" href="#formaction">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/formaction.html">formaction</a> attribute on an <a href="input.html" class="code-link">&lt;input&gt;</a> button overrides the form action, if present.<br />
+  This attribute specifies the URL where the form data will be sent to.
+  <br /><br />
+  The second button has a <a class="code-link" href="input/formaction.html">formaction</a> attribute with an alternative url.
+</p>
+
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  First name &nbsp;<input type="text" name="firstname"> <br /> <br />
+  Last name &nbsp;<input type="text" name="lastname"> <br /> <br />
+
+  <input type="submit" value="Action"> &nbsp;
+  <input type="submit" value="Action 2" formaction="../tutorial/action2.html">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  First name &amp;nbsp;&lt;input type=&quot;text&quot; name=&quot;firstname&quot;&gt; &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;  Last name &amp;nbsp;&lt;input type=&quot;text&quot; name=&quot;lastname&quot;&gt; &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot; value=&quot;Action&quot;&gt; &amp;nbsp;&#xD;&#xA;  &lt;input type=&quot;submit&quot; value=&quot;Action 2&quot; formaction=&quot;/tutorial/action2.html&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-formaction.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+
+<a class="goto-target" id="formtarget"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xformtarget&#x27;).show();" onmouseout="$(&#x27;#xformtarget&#x27;).hide();">The formtarget Attribute</h2>
+  <h2><a id="xformtarget" style="display:none" class="d-block pl-12 header-anchor" href="#formtarget">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/formtarget.html">formtarget</a>  attribute specifies where to display the form submission response.<br />
+  This attribute can only be used on input types <code>submit</code> or <code>image</code>.
+  <br /><br />
+  The second button has a <a class="code-link" href="notfound.html">target</a> attribute which opens a new browser tab.
+
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  First name <input type="text" name="firstname"><br /> <br />
+  Last name <input type="text" name="lastname"><br /> <br />
+ 
+  <input type="submit" value="Submit">
+  <input type="submit" value="Submit to new tab" formtarget="_blank">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  First name &lt;input type=&quot;text&quot; name=&quot;firstname&quot;&gt;&lt;br /&gt; &lt;br /&gt;&#xD;&#xA;  Last name &lt;input type=&quot;text&quot; name=&quot;lastname&quot;&gt;&lt;br /&gt; &lt;br /&gt;&#xD;&#xA; &#xD;&#xA;  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;&#xD;&#xA;  &lt;input type=&quot;submit&quot; value=&quot;Submit to new tab&quot; formtarget=&quot;_blank&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-formtarget.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="formenctype"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xformenctype&#x27;).show();" onmouseout="$(&#x27;#xformenctype&#x27;).hide();">The formenctype Attribute</h2>
+  <h2><a id="xformenctype" style="display:none" class="d-block pl-12 header-anchor" href="#formenctype">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/formenctype.html">formenctype</a>  attribute overrides the form's <a class="code-link" href="form/enctype.html">enctype</a> attribute<br />
+  This attribute specifies how the form data will be encoded before sending it to the server.
+</p>
+<p class="mr-lg-150">
+  In this example, the selected file is encoded and submitted as <code>multipart/form-data</code> which is appropriate for file uploads.
+</p>
+
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/fileupload.html">
+  Step 1 &nbsp; <input type="file" name="file"> <br /> <br />
+  Step 2 &nbsp; <input type="submit" formenctype="multipart/form-data">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/fileupload.html&quot;&gt;&#xD;&#xA;  Step 1 &amp;nbsp; &lt;input type=&quot;file&quot; name=&quot;file&quot;&gt; &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;  Step 2 &amp;nbsp; &lt;input type=&quot;submit&quot; formenctype=&quot;multipart/form-data&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-formenctype.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="formmethod"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xformmethod&#x27;).show();" onmouseout="$(&#x27;#xformmethod&#x27;).hide();">The formmethod Attribute</h2>
+  <h2><a id="xformmethod" style="display:none" class="d-block pl-12 header-anchor" href="#formmethod">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/formmethod.html">formmethod</a>  attribute specifies the HTTP method to use during form submission.<br />
+  This attribute overrides the form's <a class="code-link" href="form/method.html">method</a> attribute.
+  <br /><br />
+  The first button uses the GET method and the second button uses POST.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  First name <input type="text" name="firstname"><br /> <br />
+  Last name <input type="text" name="lastname"><br> <br />
+
+  <input type="submit" formmethod="get" value="Submit-Get"> &nbsp;
+  <input type="submit" formmethod="post" value="Submit-Post" 
+    onclick="alert('Form was posted. Processing requires server code');return false;">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  First name &lt;input type=&quot;text&quot; name=&quot;firstname&quot;&gt;&lt;br /&gt; &lt;br /&gt;&#xD;&#xA;  Last name &lt;input type=&quot;text&quot; name=&quot;lastname&quot;&gt;&lt;br&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot; formmethod=&quot;get&quot; value=&quot;Submit-Get&quot;&gt; &amp;nbsp;&#xD;&#xA;  &lt;input type=&quot;submit&quot; formmethod=&quot;post&quot; value=&quot;Submit-Post&quot; &#xD;&#xA;    onclick=&quot;alert(&#x27;Form was posted. Processing requires server code&#x27;);return false;&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-formmethod.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<p class="tip">
+  <b>Note: </b> &nbsp;With GET the values are visible on the URL following submission.
+</p>
+
+<hr />
+
+
+
+<a class="goto-target" id="formnovalidate"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xformnovalidate&#x27;).show();" onmouseout="$(&#x27;#xformnovalidate&#x27;).hide();">The formnovalidate Attribute</h2>
+  <h2><a id="xformnovalidate" style="display:none" class="d-block pl-12 header-anchor" href="#formnovalidate">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/formnovalidate.html">formnovalidate</a> attribute on a submit button suppresses form validation.<br />
+  With this attribute enabled, none of the input elements will be validated, even when specified.
+  <br /><br />
+  The first button validates the input. The second button does not.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action=https://www.dofactory.com/tutorial/action.html>
+  Email &nbsp;<input type="email" name="email" required><br /> <br />
+
+  <input type="submit" value="Submit with Validation"> &nbsp;
+  <input type="submit" value="Submit without Validation" formnovalidate >
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=/tutorial/action.html&gt;&#xD;&#xA;  Email &amp;nbsp;&lt;input type=&quot;email&quot; name=&quot;email&quot; required&gt;&lt;br /&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot; value=&quot;Submit with Validation&quot;&gt; &amp;nbsp;&#xD;&#xA;  &lt;input type=&quot;submit&quot; value=&quot;Submit without Validation&quot; formnovalidate &gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-formnovalidate.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="accept"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xaccept&#x27;).show();" onmouseout="$(&#x27;#xaccept&#x27;).hide();">The accepts Attribute</h2>
+  <h2><a id="xaccept" style="display:none" class="d-block pl-12 header-anchor" href="#accept">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/accept.html">accept</a> attribute specifies the acceptable file types that can be selected.<br />
+  This attribute only applies to <a class="code-link" href="input.html">&lt;input&gt;</a> type <a class="code-link" href="input/file.html">file</a>.
+  <br /><br />
+  Only image file types can be selected.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  <label for="img">Select image file </label> &nbsp;
+  <input type="file" id="img" name="img" accept="image/*"><br /><br />
+ 
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  &lt;label for=&quot;img&quot;&gt;Select image file &lt;/label&gt; &amp;nbsp;&#xD;&#xA;  &lt;input type=&quot;file&quot; id=&quot;img&quot; name=&quot;img&quot; accept=&quot;image/*&quot;&gt;&lt;br /&gt;&lt;br /&gt;&#xD;&#xA; &#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-accept.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+
+<a class="goto-target" id="min-max"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xmin-max&#x27;).show();" onmouseout="$(&#x27;#xmin-max&#x27;).hide();">The min and max Attributes</h2>
+  <h2><a id="xmin-max" style="display:none" class="d-block pl-12 header-anchor" href="#min-max">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/min.html">min</a> and <a class="code-link" href="input/max.html">max</a> attributes specify the minimum and maximum values that can be entered.
+  <br /><br />
+  An <a class="code-link" href="input.html">&lt;input&gt;</a> element with min and max values of 1 and 10 respectively.
+</p>
+
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  Quantity &nbsp;
+  <input type="number" name="number" 
+         min="1" max="10" value="7"> <br /> <br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  Quantity &amp;nbsp;&#xD;&#xA;  &lt;input type=&quot;number&quot; name=&quot;number&quot; &#xD;&#xA;         min=&quot;1&quot; max=&quot;10&quot; value=&quot;7&quot;&gt; &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-minmax.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+
+<a class="goto-target" id="step"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xstep&#x27;).show();" onmouseout="$(&#x27;#xstep&#x27;).hide();">The step Attribute</h2>
+  <h2><a id="xstep" style="display:none" class="d-block pl-12 header-anchor" href="#step">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/step.html">step</a> attribute specifies the interval with which the value can change.<br />
+  This attribute only applies to <a class="code-link" href="input.html">&lt;input&gt;</a> types <code>number</code> and <code>range</code>.
+  <br /><br />
+  An <a class="code-link" href="input.html">&lt;input&gt;</a> element with a step size of 5.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  <label>Estimated weight</label> &nbsp;
+  <input type="number" name="weight" step="5" value="165"><br /> <br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  &lt;label&gt;Estimated weight&lt;/label&gt; &amp;nbsp;&#xD;&#xA;  &lt;input type=&quot;number&quot; name=&quot;weight&quot; step=&quot;5&quot; value=&quot;165&quot;&gt;&lt;br /&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-step.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="multiple"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xmultiple&#x27;).show();" onmouseout="$(&#x27;#xmultiple&#x27;).hide();">The multiple Attribute</h2>
+  <h2><a id="xmultiple" style="display:none" class="d-block pl-12 header-anchor" href="#multiple">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/multiple.html">multiple</a> attribute specifies that an element accepts multiple input values.<br />
+  This attribute only applies to <a class="code-link" href="input.html">&lt;input&gt;</a> types <code>file</code> and <code>email</code>.
+  <br /><br />
+  An <a class="code-link" href="input.html">&lt;input&gt;</a> element with <a class="code-link" href="input/multiple.html">multiple</a> enabled. Multiple files can be selected.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/fileupload.html">
+   Select and upload one of more image files: <br /> <br />
+   Step 1 &nbsp; <input type="file" name="file" 
+          accept=".jpg,.png" multiple> <br /> <br />
+
+   Step 2 &nbsp; <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/fileupload.html&quot;&gt;&#xD;&#xA;   Select and upload one of more image files: &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;   Step 1 &amp;nbsp; &lt;input type=&quot;file&quot; name=&quot;file&quot; &#xD;&#xA;          accept=&quot;.jpg,.png&quot; multiple&gt; &lt;br /&gt; &lt;br /&gt;&#xD;&#xA;&#xD;&#xA;   Step 2 &amp;nbsp; &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-multiple.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+<a class="goto-target" id="pattern"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xpattern&#x27;).show();" onmouseout="$(&#x27;#xpattern&#x27;).hide();">The pattern Attribute</h2>
+  <h2><a id="xpattern" style="display:none" class="d-block pl-12 header-anchor" href="#pattern">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/pattern.html">pattern</a> attribute specifies a regular expression.<br />
+  This regular expression is used to validate the input before the form is submitted.
+  <br /><br />
+  An <a class="code-link" href="input.html">&lt;input&gt;</a> element with a <a class="code-link" href="input/pattern.html">pattern</a> that requires a 3 letter country code.
+</p>
+
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+ Country code &nbsp;
+ <input type="text" name="countrycode" 
+        pattern="[A-Za-z]{3}" 
+        placeholder="3 letter code"><br /><br />
+
+ <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA; Country code &amp;nbsp;&#xD;&#xA; &lt;input type=&quot;text&quot; name=&quot;countrycode&quot; &#xD;&#xA;        pattern=&quot;[A-Za-z]{3}&quot; &#xD;&#xA;        placeholder=&quot;3 letter code&quot;&gt;&lt;br /&gt;&lt;br /&gt;&#xD;&#xA;&#xD;&#xA; &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-pattern.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<hr />
+
+
+
+
+<a class="goto-target" id="didyouknow2"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xdidyouknow2&#x27;).show();" onmouseout="$(&#x27;#xdidyouknow2&#x27;).hide();">Did you know?</h2>
+  <h2><a id="xdidyouknow2" style="display:none" class="d-block pl-12 header-anchor" href="#didyouknow2">#</a></h2>
+</div>
+
+  <img src="../img/html/show-did-you-know.png" alt="Did you know?" class="pt-35 ml-5" loading="lazy" />
+
+
+<div class="pl-25 pt-25">
+
+  <div>
+    <h3>Text input that accepts numbers only</h3>
+    <p>
+      The <a class="code-link" href="input/pattern.html">pattern</a> attribute allows input restrictions when a form is submitted.
+    </p>
+    <p class="pt-0">
+      However, it is usually better to validate earlier to prevent input mistakes.<br />
+      One way to accomplish this is with JavaScript as shown below.
+    </p>
+    <p class="pt-20">
+      An <a class="code-link" href="input.html">&lt;input&gt;</a> field that only accepts numbers and the backspace.
+    </p>
+    <div class="render">
+      
+<div class="ml-25 mt-10">
+    <form>
+  Enter a number &nbsp;
+  <input type="text" 
+         onkeypress="return (event.charCode != 8 && event.charCode == 0 || 
+                            (event.charCode >= 48 && event.charCode <= 57))" />
+</form>
+
+</div>
+
+    </div>
+    
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form&gt;&#xD;&#xA;  Enter a number &amp;nbsp;&#xD;&#xA;  &lt;input type=&quot;text&quot; &#xD;&#xA;         onkeypress=&quot;return (event.charCode != 8 &amp;&amp; event.charCode == 0 || &#xD;&#xA;                            (event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57))&quot; /&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-pattern-javascript.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+  </div>
+</div>
+
+<hr />
+
+
+
+<a class="goto-target" id="size"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xsize&#x27;).show();" onmouseout="$(&#x27;#xsize&#x27;).hide();">The size Attribute</h2>
+  <h2><a id="xsize" style="display:none" class="d-block pl-12 header-anchor" href="#size">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/size.html">size</a> attribute adjusts the width of an input field for a given number of characters.
+  <br /><br />
+  An <a class="code-link" href="input.html">&lt;input&gt;</a> element that is wide enough for 40 characters.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form>
+  First name &nbsp;
+  <input type="text" name="firstname" 
+         size="40" value="Melanie" >
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form&gt;&#xD;&#xA;  First name &amp;nbsp;&#xD;&#xA;  &lt;input type=&quot;text&quot; name=&quot;firstname&quot; &#xD;&#xA;         size=&quot;40&quot; value=&quot;Melanie&quot; &gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-size.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+
+<a class="goto-target" id="height-width"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xheight-width&#x27;).show();" onmouseout="$(&#x27;#xheight-width&#x27;).hide();">The width and height Attributes</h2>
+  <h2><a id="xheight-width" style="display:none" class="d-block pl-12 header-anchor" href="#height-width">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a class="code-link" href="input/width.html">width</a> and <a class="code-link" href="input/height.html">height</a> attributes specify the height and width of an input element.<br />
+  This attribute only applies to <a class="code-link" href="input.html">&lt;input&gt;</a> elements of type <a class="code-link" href="input/image.html">image</a>.
+  <br /><br />
+  A 50 x 50 pixel <a class="code-link" href="input.html">&lt;input&gt;</a> image.
+</p>
+<style>
+  input[type="image"] {
+    margin-top: 15px;
+  }
+</style>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <input type="image" alt="Go!" onclick="alert('Go!')"
+       src="../img/html/arrow.png" 
+       width="50" height="50">
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;input type=&quot;image&quot; alt=&quot;Go!&quot; onclick=&quot;alert(&#x27;Go!&#x27;)&quot;&#xD;&#xA;       src=&quot;/img/html/arrow.png&quot; &#xD;&#xA;       width=&quot;50&quot; height=&quot;50&quot;&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-heightwidth.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+
+<a class="goto-target" id="list"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xlist&#x27;).show();" onmouseout="$(&#x27;#xlist&#x27;).hide();">The list Attribute</h2>
+  <h2><a id="xlist" style="display:none" class="d-block pl-12 header-anchor" href="#list">#</a></h2>
+</div>
+
+
+
+<p>
+  A <a href="input/list.html" class="code-link">list</a> attribute on an <a class="code-link" href="input.html">&lt;input&gt;</a> element associates it with a <a class="code-link" href="datalist.html">&lt;datalist&gt;</a> with predefined values.<br />
+  The datalist values are presented as a dropdown with optional values. Other values can still be entered.
+  <br /><br />
+  An <a class="code-link" href="input.html">&lt;input&gt;</a> element associated with a <a class="code-link" href="datalist.html">&lt;datalist&gt;</a> with car makes.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <datalist id="cars">
+  <option value="Toyota">
+  <option value="BMW">
+  <option value="Ferrari">
+</datalist>
+
+<form action="https://www.dofactory.com/tutorial/action.html">
+  Select a car &nbsp;
+  <input type="text" list="cars" name="car">
+ 
+  <input type="submit">
+</form>
+
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;datalist id=&quot;cars&quot;&gt;&#xD;&#xA;  &lt;option value=&quot;Toyota&quot;&gt;&#xD;&#xA;  &lt;option value=&quot;BMW&quot;&gt;&#xD;&#xA;  &lt;option value=&quot;Ferrari&quot;&gt;&#xD;&#xA;&lt;/datalist&gt;&#xD;&#xA;&#xD;&#xA;&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  Select a car &amp;nbsp;&#xD;&#xA;  &lt;input type=&quot;text&quot; list=&quot;cars&quot; name=&quot;car&quot;&gt;&#xD;&#xA; &#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-list.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+
+
+<a class="goto-target" id="dirname"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xdirname&#x27;).show();" onmouseout="$(&#x27;#xdirname&#x27;).hide();">The dirname Attribute</h2>
+  <h2><a id="xdirname" style="display:none" class="d-block pl-12 header-anchor" href="#dirname">#</a></h2>
+</div>
+
+
+
+<p>
+  Placing a <a class="code-link" href="dirname.html">dirname</a> attribute submits the input value together with a text direction.
+  <br /><br />
+  A textbox with a <a class="code-link" href="dirname.html">dirname</a> attribute.<br />
+  The form will send the firstname value and the text direction of the firstname field.
+</p>
+<div class="render">
+  
+<div class="ml-25 mt-10">
+    <form action="https://www.dofactory.com/tutorial/action.html">
+  <label for="firstname">First name</label><br />
+  <input type="text" id="firstname" name="firstname" 
+         dirname="notfound.html"><br /><br />
+
+  <input type="submit">
+</form>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-40"><code>&lt;form action=&quot;/tutorial/action.html&quot;&gt;&#xD;&#xA;  &lt;label for=&quot;firstname&quot;&gt;First name&lt;/label&gt;&lt;br /&gt;&#xD;&#xA;  &lt;input type=&quot;text&quot; id=&quot;firstname&quot; name=&quot;firstname&quot; &#xD;&#xA;         dirname=&quot;firstname.dir&quot;&gt;&lt;br /&gt;&lt;br /&gt;&#xD;&#xA;&#xD;&#xA;  &lt;input type=&quot;submit&quot;&gt;&#xD;&#xA;&lt;/form&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:4px;background:#444;border:none;width:120px;" onclick="window.open('editor/inputattributes-dirname.html', 'htmleditor')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+
+<hr />
+
+
+
+<a class="goto-target" id="like"></a>
+<div class='d-flex'>
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xlike&#x27;).show();" onmouseout="$(&#x27;#xlike&#x27;).hide();">You may also like</h2>
+  <h2><a id="xlike" style="display:none" class="d-block pl-12 header-anchor" href="#like">#</a></h2>
+</div>
+
+
+
+<p>
+  <div class="d-flex">
+    <div class="p-10">
+      <img src="../img/html/show-like.png" class="img-fluid" loading="lazy" />
+    </div>
+    <div class="pl-25 pt-5">
+      <ul>
+        <li>Our <a class="underline font-weight-semibold" href="input.html">HTML input Tag Reference</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="input/type.html">HTML input type Attribute Reference</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="attributes.html">HTML Attributes Tutorial</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="../css/notfound.html">CSS Forms Tutorial</a></li>
+      </ul>
+    </div>
+  </div>
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="input-types.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; HTML Input Types &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="buttons.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; HTML Buttons &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+</div>
+
+          <div class="bg-light p-10 mb-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="tables.html">HTML Tables</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="images.html">HTML Images</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="notfound.html">HTML Color Names</a></li>
+
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="links.html">HTML Links</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="tags.html">HTML Tags</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="lists.html">HTML Lists</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="forms.html">HTML Forms</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="buttons.html">HTML Buttons</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="spaces.html">HTML Spaces</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="input/checkbox.html">HTML Checkboxes</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="editors.html">HTML Editors</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="comments.html">HTML Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" style="min-width:230px !important;">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">Input attributes</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#attributes">Attributes</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#type">type</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#name">name</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#value">value</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#id">id</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#class">class</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#style">style</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#data">data-*</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#hidden">hidden</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#title">title</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#tabindex">tabindex</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#checked">checked</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#placeholder">placeholder</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#didyouknow">Did you know</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#maxlength">maxlength</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#required">required</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#readonly">readonly</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#disabled">disabled</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#autofocus">autofocus</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#autocomplete">autocomplete</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#form">form</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#formaction">formaction</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#formtarget">formtarget</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#formenctype">formenctype</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#formmethod">formmethod</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#formnovalidate">formnovalidate</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#accept">accept</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#min-max">min and max</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#step">step</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#multiple">multiple</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#pattern">pattern</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#didyouknow2">Did you know</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#size">size</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#height-width">height and width</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#list">list</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#dirname">dirname</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#like">You may also like</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+      // Adjust HTML Editor menu to open in a different browser tab
+      var menu = document.querySelectorAll('[data-iseditorlink]')[0];
+      menu.href = "javascript:void(0);";
+      menu.setAttribute('onclick', "window.open('/html/editor', 'htmleditor')");
+    });
+
+    //function copy(id) {
+    //  var stor = document.createElement("textarea");
+    //  stor.setAttribute("contentEditable", true);
+    //  stor.innerHTML = document.getElementById(id).innerHTML;
+    //  stor.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+    //  document.body.appendChild(stor);
+    //  stor.focus({ preventScroll: true });
+    //  stor.focus();
+
+    //  document.execCommand("copy");
+    //  document.body.removeChild(stor);
+
+    //  $('#show-' + id).fadeIn('fast').delay(1200).fadeOut('slow');
+    //}
+
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/html/input-attributes by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:37:51 GMT -->
+</html>

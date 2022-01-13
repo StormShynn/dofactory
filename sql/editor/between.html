@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/sql/editor/between by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:46:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SQL Between Example - Dofactory</title>
+    <meta name="keywords" content="SQL Editor, SQL, SQL Server, Data Analysis, Tutorial, Reference, Guide, Examples, Demos, Top, Best, Tips, Advice, Training, Learning, Courses, Lessons, Interview, Programming, Code, Source">
+    <meta name="description" content="SQL Editor. SQL Server BETWEEN -- the best examples. A WHERE BETWEEN clause returns values within a given range. BETWEEN is a shorthand for &gt;= AND &lt;=.">
+
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="between.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+<header class='navbar navbar-expand-lg py-0 pl-0 do-navbar border-bottom'
+        style="height: 80px; background: #fff!important;">
+
+        <div class="width-240">
+          <a class="pl-35 pt-0 width-220 d-block" href="javascript:void(0)">
+            <img src="../../img/dofactorylogo.png" class="pt-6 no-outline" />
+          </a>
+        </div>
+      </header>
+
+
+    <div class="container-fluid">
+        <style>
+  th { background-color: #f6f8ff; }
+  ::-webkit-input-placeholder { color: #6f6fa9 !important; font-weight: normal; }
+</style>
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #ba3371 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+
+  <div class="">
+    <div class="height-70 pl-15 pt-27">
+
+      <div class="d-flex">
+          <div class="pt-10"><h1 class="m-0 p-0 font-25 font-weight-bold">SQL Editor</h1></div>
+        </div>
+    </div>
+
+    <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom ">
+      Tables and Columns&nbsp;
+    </div>
+
+    <nav class="width-230 do-links" id="scroll-list">
+
+      <div class="list-group mb-25 font-14" tabindex="-1" role="tablist" id="list-tab">
+
+          <a id="tableCustomer" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Customer &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsCustomer" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- FirstName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- LastName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- City <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Country <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Phone <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableOrder" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Order &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsOrder" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- OrderDate <span class="font-weight-normal">(datetime)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- OrderNumber <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- CustomerId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- TotalAmount <span class="font-weight-normal">(decimal)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableOrderItem" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">OrderItem &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsOrderItem" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- OrderId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ProductId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- UnitPrice <span class="font-weight-normal">(decimal)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Quantity <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableProduct" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Product &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsProduct" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ProductName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- SupplierId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- UnitPrice <span class="font-weight-normal">(decimal)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Package <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- IsDiscontinued <span class="font-weight-normal">(bit)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableSupplier" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Supplier &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsSupplier" class="pl-20" style='display:block;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- CompanyName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ContactName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ContactTitle <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- City <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Country <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Phone <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Fax <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+            </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="px-md-30 px-10 tutorial">
+
+      <div class="py-20">
+        <div id="scriptassist-display" class="pl-30 font-15 d-flex flex-column justify-content-center" style="background: #f6f7fa;height:85px;background:#333;color:white;">
+          <div class="d-flex">
+            <div><h1 style="display:inline;padding:0 !important;margin: 0 0 2px 0 !important; font-weight:600;border:none !important; font-size:16px !important;text-decoration:none !important;">Problem: </h1></div>
+            <div class="ml-12">List all orders between $1000 and $2000.
+</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="">
+
+        <form method="post" action="https://www.dofactory.com/sql/editor/between">
+
+          <textarea name="script" id="script" rows="9" class="mb-10 form-control border bg-light font-weight-semibold"
+                    placeholder="Enter your SQL" style="font-family: monospace, monospace;color:#334;font-weight:bold;">SELECT OrderDate, OrderNumber, TotalAmount
+  FROM [Order]
+ WHERE TotalAmount BETWEEN 1000 AND 2000
+</textarea>
+
+          <input id="submit" type="submit" class="btn btn-dark" value="Run" />&nbsp;
+          <input id="clear" type="button" class="btn btn-light" value="Clear" />
+
+          <input type="hidden" id="scriptassist" name="scriptassist" value="List all orders between $1000 and $2000.&#xD;&#xA;" />
+          <input type="hidden" id="prescript" name="prescript" value="Between" />
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7Eqt9_sAE5g70hnhx5j5Z05zJcbNWRMbawif3OrMlxB63f444vcde7LyNCVeWQWAnZ2kZhaJqwWOgxfzguYU4kYXQd-ve_G_8gowu7P2sbBKN1fMvc4kFZ-A9dIe_mM_BB70" /></form>
+      </div>
+
+      <div class="mt-60 mb-40"></div>
+
+      <div id="results">
+        <div class="table-hscroll">
+
+            <div class="fffade mb-20 ml-5 font-weight-semibold py-5" style="background-color: #dbff9d; opacity: 0;">
+              &nbsp;208 Records
+            </div>
+            <table class="table table-md table-hover">
+
+                  <tr>
+                      <th>OrderDate</th>
+                      <th>OrderNumber</th>
+                      <th>TotalAmount</th>
+                  </tr>
+                  <tr>
+                        <td>7/5/2012 12:00:00 AM</td>
+                        <td>542379</td>
+                        <td>1863.40</td>
+                  </tr>
+                  <tr>
+                        <td>7/8/2012 12:00:00 AM</td>
+                        <td>542380</td>
+                        <td>1813.00</td>
+                  </tr>
+                  <tr>
+                        <td>7/10/2012 12:00:00 AM</td>
+                        <td>542383</td>
+                        <td>1444.80</td>
+                  </tr>
+                  <tr>
+                        <td>7/16/2012 12:00:00 AM</td>
+                        <td>542387</td>
+                        <td>1119.90</td>
+                  </tr>
+                  <tr>
+                        <td>7/19/2012 12:00:00 AM</td>
+                        <td>542390</td>
+                        <td>1746.20</td>
+                  </tr>
+                  <tr>
+                        <td>7/25/2012 12:00:00 AM</td>
+                        <td>542395</td>
+                        <td>1176.00</td>
+                  </tr>
+                  <tr>
+                        <td>7/30/2012 12:00:00 AM</td>
+                        <td>542398</td>
+                        <td>1101.20</td>
+                  </tr>
+                  <tr>
+                        <td>8/1/2012 12:00:00 AM</td>
+                        <td>542400</td>
+                        <td>1376.00</td>
+                  </tr>
+                  <tr>
+                        <td>8/2/2012 12:00:00 AM</td>
+                        <td>542402</td>
+                        <td>1456.00</td>
+                  </tr>
+                  <tr>
+                        <td>8/9/2012 12:00:00 AM</td>
+                        <td>542407</td>
+                        <td>1200.80</td>
+                  </tr>
+                  <tr>
+                        <td>8/12/2012 12:00:00 AM</td>
+                        <td>542408</td>
+                        <td>1488.80</td>
+                  </tr>
+                  <tr>
+                        <td>8/16/2012 12:00:00 AM</td>
+                        <td>542413</td>
+                        <td>1414.80</td>
+                  </tr>
+                  <tr>
+                        <td>8/19/2012 12:00:00 AM</td>
+                        <td>542414</td>
+                        <td>1452.00</td>
+                  </tr>
+                  <tr>
+                        <td>8/28/2012 12:00:00 AM</td>
+                        <td>542422</td>
+                        <td>1296.00</td>
+                  </tr>
+                  <tr>
+                        <td>8/30/2012 12:00:00 AM</td>
+                        <td>542424</td>
+                        <td>1887.60</td>
+                  </tr>
+                  <tr>
+                        <td>9/3/2012 12:00:00 AM</td>
+                        <td>542426</td>
+                        <td>1050.60</td>
+                  </tr>
+                  <tr>
+                        <td>9/4/2012 12:00:00 AM</td>
+                        <td>542427</td>
+                        <td>1420.00</td>
+                  </tr>
+                  <tr>
+                        <td>9/11/2012 12:00:00 AM</td>
+                        <td>542433</td>
+                        <td>1242.00</td>
+                  </tr>
+                  <tr>
+                        <td>9/19/2012 12:00:00 AM</td>
+                        <td>542439</td>
+                        <td>1762.00</td>
+                  </tr>
+                  <tr>
+                        <td>9/23/2012 12:00:00 AM</td>
+                        <td>542442</td>
+                        <td>1614.80</td>
+                  </tr>
+                  <tr>
+                        <td>10/2/2012 12:00:00 AM</td>
+                        <td>542449</td>
+                        <td>1191.20</td>
+                  </tr>
+                  <tr>
+                        <td>10/9/2012 12:00:00 AM</td>
+                        <td>542455</td>
+                        <td>1497.00</td>
+                  </tr>
+                  <tr>
+                        <td>10/14/2012 12:00:00 AM</td>
+                        <td>542458</td>
+                        <td>1168.00</td>
+                  </tr>
+                  <tr>
+                        <td>10/16/2012 12:00:00 AM</td>
+                        <td>542460</td>
+                        <td>1940.00</td>
+                  </tr>
+                  <tr>
+                        <td>10/31/2012 12:00:00 AM</td>
+                        <td>542473</td>
+                        <td>1586.00</td>
+                  </tr>
+                  <tr>
+                        <td>11/5/2012 12:00:00 AM</td>
+                        <td>542476</td>
+                        <td>1731.20</td>
+                  </tr>
+                  <tr>
+                        <td>11/18/2012 12:00:00 AM</td>
+                        <td>542486</td>
+                        <td>1106.40</td>
+                  </tr>
+                  <tr>
+                        <td>11/19/2012 12:00:00 AM</td>
+                        <td>542487</td>
+                        <td>1360.00</td>
+                  </tr>
+                  <tr>
+                        <td>11/25/2012 12:00:00 AM</td>
+                        <td>542492</td>
+                        <td>1549.60</td>
+                  </tr>
+                  <tr>
+                        <td>11/29/2012 12:00:00 AM</td>
+                        <td>542498</td>
+                        <td>1834.20</td>
+                  </tr>
+                  <tr>
+                        <td>12/3/2012 12:00:00 AM</td>
+                        <td>542500</td>
+                        <td>1174.00</td>
+                  </tr>
+                  <tr>
+                        <td>12/5/2012 12:00:00 AM</td>
+                        <td>542503</td>
+                        <td>1708.00</td>
+                  </tr>
+                  <tr>
+                        <td>12/9/2012 12:00:00 AM</td>
+                        <td>542507</td>
+                        <td>1016.00</td>
+                  </tr>
+                  <tr>
+                        <td>12/12/2012 12:00:00 AM</td>
+                        <td>542510</td>
+                        <td>1419.80</td>
+                  </tr>
+                  <tr>
+                        <td>12/18/2012 12:00:00 AM</td>
+                        <td>542517</td>
+                        <td>1058.40</td>
+                  </tr>
+                  <tr>
+                        <td>12/19/2012 12:00:00 AM</td>
+                        <td>542518</td>
+                        <td>1274.00</td>
+                  </tr>
+                  <tr>
+                        <td>12/20/2012 12:00:00 AM</td>
+                        <td>542519</td>
+                        <td>1832.80</td>
+                  </tr>
+                  <tr>
+                        <td>12/24/2012 12:00:00 AM</td>
+                        <td>542522</td>
+                        <td>1440.00</td>
+                  </tr>
+                  <tr>
+                        <td>12/27/2012 12:00:00 AM</td>
+                        <td>542526</td>
+                        <td>1903.80</td>
+                  </tr>
+                  <tr>
+                        <td>12/31/2012 12:00:00 AM</td>
+                        <td>542529</td>
+                        <td>1765.60</td>
+                  </tr>
+                  <tr>
+                        <td>1/3/2013 12:00:00 AM</td>
+                        <td>542533</td>
+                        <td>1005.90</td>
+                  </tr>
+                  <tr>
+                        <td>1/3/2013 12:00:00 AM</td>
+                        <td>542534</td>
+                        <td>1675.00</td>
+                  </tr>
+                  <tr>
+                        <td>1/7/2013 12:00:00 AM</td>
+                        <td>542537</td>
+                        <td>1194.00</td>
+                  </tr>
+                  <tr>
+                        <td>1/8/2013 12:00:00 AM</td>
+                        <td>542538</td>
+                        <td>1622.40</td>
+                  </tr>
+                  <tr>
+                        <td>1/10/2013 12:00:00 AM</td>
+                        <td>542541</td>
+                        <td>1208.50</td>
+                  </tr>
+                  <tr>
+                        <td>1/17/2013 12:00:00 AM</td>
+                        <td>542548</td>
+                        <td>1814.80</td>
+                  </tr>
+                  <tr>
+                        <td>1/21/2013 12:00:00 AM</td>
+                        <td>542550</td>
+                        <td>1897.60</td>
+                  </tr>
+                  <tr>
+                        <td>1/21/2013 12:00:00 AM</td>
+                        <td>542551</td>
+                        <td>1273.20</td>
+                  </tr>
+                  <tr>
+                        <td>1/23/2013 12:00:00 AM</td>
+                        <td>542553</td>
+                        <td>1020.00</td>
+                  </tr>
+                  <tr>
+                        <td>1/29/2013 12:00:00 AM</td>
+                        <td>542559</td>
+                        <td>1748.50</td>
+                  </tr>
+                  <tr>
+                        <td>2/7/2013 12:00:00 AM</td>
+                        <td>542569</td>
+                        <td>1078.00</td>
+                  </tr>
+                  <tr>
+                        <td>2/10/2013 12:00:00 AM</td>
+                        <td>542571</td>
+                        <td>1755.00</td>
+                  </tr>
+                  <tr>
+                        <td>2/11/2013 12:00:00 AM</td>
+                        <td>542572</td>
+                        <td>1792.00</td>
+                  </tr>
+                  <tr>
+                        <td>2/12/2013 12:00:00 AM</td>
+                        <td>542574</td>
+                        <td>1031.70</td>
+                  </tr>
+                  <tr>
+                        <td>2/18/2013 12:00:00 AM</td>
+                        <td>542579</td>
+                        <td>1838.20</td>
+                  </tr>
+                  <tr>
+                        <td>2/25/2013 12:00:00 AM</td>
+                        <td>542587</td>
+                        <td>1584.00</td>
+                  </tr>
+                  <tr>
+                        <td>2/27/2013 12:00:00 AM</td>
+                        <td>542589</td>
+                        <td>1688.00</td>
+                  </tr>
+                  <tr>
+                        <td>3/4/2013 12:00:00 AM</td>
+                        <td>542594</td>
+                        <td>1848.00</td>
+                  </tr>
+                  <tr>
+                        <td>3/10/2013 12:00:00 AM</td>
+                        <td>542599</td>
+                        <td>1125.50</td>
+                  </tr>
+                  <tr>
+                        <td>3/11/2013 12:00:00 AM</td>
+                        <td>542600</td>
+                        <td>1820.80</td>
+                  </tr>
+                  <tr>
+                        <td>3/11/2013 12:00:00 AM</td>
+                        <td>542601</td>
+                        <td>1328.00</td>
+                  </tr>
+                  <tr>
+                        <td>3/12/2013 12:00:00 AM</td>
+                        <td>542602</td>
+                        <td>1051.20</td>
+                  </tr>
+                  <tr>
+                        <td>3/13/2013 12:00:00 AM</td>
+                        <td>542604</td>
+                        <td>1249.10</td>
+                  </tr>
+                  <tr>
+                        <td>3/14/2013 12:00:00 AM</td>
+                        <td>542605</td>
+                        <td>1770.80</td>
+                  </tr>
+                  <tr>
+                        <td>3/20/2013 12:00:00 AM</td>
+                        <td>542611</td>
+                        <td>1472.00</td>
+                  </tr>
+                  <tr>
+                        <td>3/25/2013 12:00:00 AM</td>
+                        <td>542615</td>
+                        <td>1760.00</td>
+                  </tr>
+                  <tr>
+                        <td>3/26/2013 12:00:00 AM</td>
+                        <td>542616</td>
+                        <td>1272.00</td>
+                  </tr>
+                  <tr>
+                        <td>3/27/2013 12:00:00 AM</td>
+                        <td>542618</td>
+                        <td>1560.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/4/2013 12:00:00 AM</td>
+                        <td>542627</td>
+                        <td>1380.60</td>
+                  </tr>
+                  <tr>
+                        <td>4/8/2013 12:00:00 AM</td>
+                        <td>542629</td>
+                        <td>1412.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/11/2013 12:00:00 AM</td>
+                        <td>542634</td>
+                        <td>1388.50</td>
+                  </tr>
+                  <tr>
+                        <td>5/5/2013 12:00:00 AM</td>
+                        <td>542656</td>
+                        <td>1344.00</td>
+                  </tr>
+                  <tr>
+                        <td>5/5/2013 12:00:00 AM</td>
+                        <td>542657</td>
+                        <td>1670.00</td>
+                  </tr>
+                  <tr>
+                        <td>5/14/2013 12:00:00 AM</td>
+                        <td>542667</td>
+                        <td>1823.80</td>
+                  </tr>
+                  <tr>
+                        <td>5/21/2013 12:00:00 AM</td>
+                        <td>542673</td>
+                        <td>1770.00</td>
+                  </tr>
+                  <tr>
+                        <td>5/23/2013 12:00:00 AM</td>
+                        <td>542677</td>
+                        <td>1908.00</td>
+                  </tr>
+                  <tr>
+                        <td>5/28/2013 12:00:00 AM</td>
+                        <td>542681</td>
+                        <td>1836.00</td>
+                  </tr>
+                  <tr>
+                        <td>5/30/2013 12:00:00 AM</td>
+                        <td>542683</td>
+                        <td>1546.30</td>
+                  </tr>
+                  <tr>
+                        <td>5/30/2013 12:00:00 AM</td>
+                        <td>542684</td>
+                        <td>1819.50</td>
+                  </tr>
+                  <tr>
+                        <td>6/3/2013 12:00:00 AM</td>
+                        <td>542687</td>
+                        <td>1152.50</td>
+                  </tr>
+                  <tr>
+                        <td>6/6/2013 12:00:00 AM</td>
+                        <td>542690</td>
+                        <td>1257.30</td>
+                  </tr>
+                  <tr>
+                        <td>6/10/2013 12:00:00 AM</td>
+                        <td>542694</td>
+                        <td>1299.00</td>
+                  </tr>
+                  <tr>
+                        <td>6/18/2013 12:00:00 AM</td>
+                        <td>542702</td>
+                        <td>1565.65</td>
+                  </tr>
+                  <tr>
+                        <td>6/26/2013 12:00:00 AM</td>
+                        <td>542710</td>
+                        <td>1067.10</td>
+                  </tr>
+                  <tr>
+                        <td>7/7/2013 12:00:00 AM</td>
+                        <td>542720</td>
+                        <td>1140.00</td>
+                  </tr>
+                  <tr>
+                        <td>7/11/2013 12:00:00 AM</td>
+                        <td>542726</td>
+                        <td>1476.10</td>
+                  </tr>
+                  <tr>
+                        <td>7/18/2013 12:00:00 AM</td>
+                        <td>542733</td>
+                        <td>1508.00</td>
+                  </tr>
+                  <tr>
+                        <td>7/22/2013 12:00:00 AM</td>
+                        <td>542736</td>
+                        <td>1413.00</td>
+                  </tr>
+                  <tr>
+                        <td>7/23/2013 12:00:00 AM</td>
+                        <td>542738</td>
+                        <td>1064.00</td>
+                  </tr>
+                  <tr>
+                        <td>7/31/2013 12:00:00 AM</td>
+                        <td>542747</td>
+                        <td>1650.00</td>
+                  </tr>
+                  <tr>
+                        <td>8/4/2013 12:00:00 AM</td>
+                        <td>542749</td>
+                        <td>1260.00</td>
+                  </tr>
+                  <tr>
+                        <td>8/7/2013 12:00:00 AM</td>
+                        <td>542753</td>
+                        <td>1429.75</td>
+                  </tr>
+                  <tr>
+                        <td>8/7/2013 12:00:00 AM</td>
+                        <td>542754</td>
+                        <td>1393.24</td>
+                  </tr>
+                  <tr>
+                        <td>8/11/2013 12:00:00 AM</td>
+                        <td>542756</td>
+                        <td>1503.60</td>
+                  </tr>
+                  <tr>
+                        <td>8/11/2013 12:00:00 AM</td>
+                        <td>542757</td>
+                        <td>1264.50</td>
+                  </tr>
+                  <tr>
+                        <td>8/18/2013 12:00:00 AM</td>
+                        <td>542765</td>
+                        <td>1380.25</td>
+                  </tr>
+                  <tr>
+                        <td>8/25/2013 12:00:00 AM</td>
+                        <td>542773</td>
+                        <td>1086.00</td>
+                  </tr>
+                  <tr>
+                        <td>8/25/2013 12:00:00 AM</td>
+                        <td>542774</td>
+                        <td>1422.00</td>
+                  </tr>
+                  <tr>
+                        <td>8/26/2013 12:00:00 AM</td>
+                        <td>542775</td>
+                        <td>1535.00</td>
+                  </tr>
+                  <tr>
+                        <td>8/27/2013 12:00:00 AM</td>
+                        <td>542776</td>
+                        <td>1928.00</td>
+                  </tr>
+                  <tr>
+                        <td>8/28/2013 12:00:00 AM</td>
+                        <td>542779</td>
+                        <td>1434.00</td>
+                  </tr>
+                  <tr>
+                        <td>8/29/2013 12:00:00 AM</td>
+                        <td>542780</td>
+                        <td>1820.20</td>
+                  </tr>
+                  <tr>
+                        <td>9/2/2013 12:00:00 AM</td>
+                        <td>542783</td>
+                        <td>1203.50</td>
+                  </tr>
+                  <tr>
+                        <td>9/5/2013 12:00:00 AM</td>
+                        <td>542789</td>
+                        <td>1291.60</td>
+                  </tr>
+                  <tr>
+                        <td>9/8/2013 12:00:00 AM</td>
+                        <td>542790</td>
+                        <td>1701.00</td>
+                  </tr>
+                  <tr>
+                        <td>9/10/2013 12:00:00 AM</td>
+                        <td>542794</td>
+                        <td>1515.75</td>
+                  </tr>
+                  <tr>
+                        <td>9/11/2013 12:00:00 AM</td>
+                        <td>542795</td>
+                        <td>1295.00</td>
+                  </tr>
+                  <tr>
+                        <td>9/12/2013 12:00:00 AM</td>
+                        <td>542797</td>
+                        <td>1921.00</td>
+                  </tr>
+                  <tr>
+                        <td>9/19/2013 12:00:00 AM</td>
+                        <td>542805</td>
+                        <td>1423.00</td>
+                  </tr>
+                  <tr>
+                        <td>9/24/2013 12:00:00 AM</td>
+                        <td>542810</td>
+                        <td>1682.50</td>
+                  </tr>
+                  <tr>
+                        <td>9/25/2013 12:00:00 AM</td>
+                        <td>542811</td>
+                        <td>1327.00</td>
+                  </tr>
+                  <tr>
+                        <td>9/26/2013 12:00:00 AM</td>
+                        <td>542814</td>
+                        <td>1768.00</td>
+                  </tr>
+                  <tr>
+                        <td>9/30/2013 12:00:00 AM</td>
+                        <td>542816</td>
+                        <td>1638.45</td>
+                  </tr>
+                  <tr>
+                        <td>10/2/2013 12:00:00 AM</td>
+                        <td>542820</td>
+                        <td>1150.00</td>
+                  </tr>
+                  <tr>
+                        <td>10/8/2013 12:00:00 AM</td>
+                        <td>542827</td>
+                        <td>1073.90</td>
+                  </tr>
+                  <tr>
+                        <td>10/16/2013 12:00:00 AM</td>
+                        <td>542836</td>
+                        <td>1893.00</td>
+                  </tr>
+                  <tr>
+                        <td>10/16/2013 12:00:00 AM</td>
+                        <td>542837</td>
+                        <td>1704.00</td>
+                  </tr>
+                  <tr>
+                        <td>10/21/2013 12:00:00 AM</td>
+                        <td>542842</td>
+                        <td>1238.40</td>
+                  </tr>
+                  <tr>
+                        <td>10/23/2013 12:00:00 AM</td>
+                        <td>542845</td>
+                        <td>1296.00</td>
+                  </tr>
+                  <tr>
+                        <td>10/24/2013 12:00:00 AM</td>
+                        <td>542847</td>
+                        <td>1331.75</td>
+                  </tr>
+                  <tr>
+                        <td>10/27/2013 12:00:00 AM</td>
+                        <td>542849</td>
+                        <td>1125.67</td>
+                  </tr>
+                  <tr>
+                        <td>10/29/2013 12:00:00 AM</td>
+                        <td>542852</td>
+                        <td>1570.00</td>
+                  </tr>
+                  <tr>
+                        <td>11/3/2013 12:00:00 AM</td>
+                        <td>542857</td>
+                        <td>1710.00</td>
+                  </tr>
+                  <tr>
+                        <td>11/4/2013 12:00:00 AM</td>
+                        <td>542858</td>
+                        <td>1296.75</td>
+                  </tr>
+                  <tr>
+                        <td>11/4/2013 12:00:00 AM</td>
+                        <td>542859</td>
+                        <td>1850.00</td>
+                  </tr>
+                  <tr>
+                        <td>11/6/2013 12:00:00 AM</td>
+                        <td>542861</td>
+                        <td>1990.00</td>
+                  </tr>
+                  <tr>
+                        <td>11/7/2013 12:00:00 AM</td>
+                        <td>542863</td>
+                        <td>1459.00</td>
+                  </tr>
+                  <tr>
+                        <td>11/7/2013 12:00:00 AM</td>
+                        <td>542864</td>
+                        <td>1498.35</td>
+                  </tr>
+                  <tr>
+                        <td>11/13/2013 12:00:00 AM</td>
+                        <td>542870</td>
+                        <td>1770.00</td>
+                  </tr>
+                  <tr>
+                        <td>11/19/2013 12:00:00 AM</td>
+                        <td>542877</td>
+                        <td>1912.85</td>
+                  </tr>
+                  <tr>
+                        <td>11/20/2013 12:00:00 AM</td>
+                        <td>542879</td>
+                        <td>1080.00</td>
+                  </tr>
+                  <tr>
+                        <td>11/21/2013 12:00:00 AM</td>
+                        <td>542880</td>
+                        <td>1871.25</td>
+                  </tr>
+                  <tr>
+                        <td>11/24/2013 12:00:00 AM</td>
+                        <td>542881</td>
+                        <td>1701.46</td>
+                  </tr>
+                  <tr>
+                        <td>11/28/2013 12:00:00 AM</td>
+                        <td>542888</td>
+                        <td>1644.60</td>
+                  </tr>
+                  <tr>
+                        <td>12/4/2013 12:00:00 AM</td>
+                        <td>542895</td>
+                        <td>1684.00</td>
+                  </tr>
+                  <tr>
+                        <td>12/8/2013 12:00:00 AM</td>
+                        <td>542898</td>
+                        <td>1477.00</td>
+                  </tr>
+                  <tr>
+                        <td>12/8/2013 12:00:00 AM</td>
+                        <td>542899</td>
+                        <td>1704.00</td>
+                  </tr>
+                  <tr>
+                        <td>12/16/2013 12:00:00 AM</td>
+                        <td>542909</td>
+                        <td>1335.00</td>
+                  </tr>
+                  <tr>
+                        <td>12/17/2013 12:00:00 AM</td>
+                        <td>542911</td>
+                        <td>1132.35</td>
+                  </tr>
+                  <tr>
+                        <td>12/18/2013 12:00:00 AM</td>
+                        <td>542913</td>
+                        <td>1442.50</td>
+                  </tr>
+                  <tr>
+                        <td>12/18/2013 12:00:00 AM</td>
+                        <td>542914</td>
+                        <td>1650.00</td>
+                  </tr>
+                  <tr>
+                        <td>12/19/2013 12:00:00 AM</td>
+                        <td>542916</td>
+                        <td>1913.85</td>
+                  </tr>
+                  <tr>
+                        <td>12/23/2013 12:00:00 AM</td>
+                        <td>542921</td>
+                        <td>1926.06</td>
+                  </tr>
+                  <tr>
+                        <td>12/26/2013 12:00:00 AM</td>
+                        <td>542929</td>
+                        <td>1585.00</td>
+                  </tr>
+                  <tr>
+                        <td>12/26/2013 12:00:00 AM</td>
+                        <td>542930</td>
+                        <td>1632.15</td>
+                  </tr>
+                  <tr>
+                        <td>12/30/2013 12:00:00 AM</td>
+                        <td>542933</td>
+                        <td>1255.80</td>
+                  </tr>
+                  <tr>
+                        <td>1/1/2014 12:00:00 AM</td>
+                        <td>542938</td>
+                        <td>1660.00</td>
+                  </tr>
+                  <tr>
+                        <td>1/2/2014 12:00:00 AM</td>
+                        <td>542942</td>
+                        <td>1852.00</td>
+                  </tr>
+                  <tr>
+                        <td>1/7/2014 12:00:00 AM</td>
+                        <td>542950</td>
+                        <td>1140.00</td>
+                  </tr>
+                  <tr>
+                        <td>1/9/2014 12:00:00 AM</td>
+                        <td>542955</td>
+                        <td>1030.76</td>
+                  </tr>
+                  <tr>
+                        <td>1/13/2014 12:00:00 AM</td>
+                        <td>542959</td>
+                        <td>1764.00</td>
+                  </tr>
+                  <tr>
+                        <td>1/13/2014 12:00:00 AM</td>
+                        <td>542960</td>
+                        <td>1974.00</td>
+                  </tr>
+                  <tr>
+                        <td>1/15/2014 12:00:00 AM</td>
+                        <td>542963</td>
+                        <td>1007.70</td>
+                  </tr>
+                  <tr>
+                        <td>1/15/2014 12:00:00 AM</td>
+                        <td>542964</td>
+                        <td>1508.12</td>
+                  </tr>
+                  <tr>
+                        <td>1/16/2014 12:00:00 AM</td>
+                        <td>542967</td>
+                        <td>1254.00</td>
+                  </tr>
+                  <tr>
+                        <td>1/22/2014 12:00:00 AM</td>
+                        <td>542976</td>
+                        <td>1112.00</td>
+                  </tr>
+                  <tr>
+                        <td>1/23/2014 12:00:00 AM</td>
+                        <td>542979</td>
+                        <td>1052.14</td>
+                  </tr>
+                  <tr>
+                        <td>1/29/2014 12:00:00 AM</td>
+                        <td>542989</td>
+                        <td>1438.25</td>
+                  </tr>
+                  <tr>
+                        <td>2/3/2014 12:00:00 AM</td>
+                        <td>542996</td>
+                        <td>1461.60</td>
+                  </tr>
+                  <tr>
+                        <td>2/4/2014 12:00:00 AM</td>
+                        <td>542999</td>
+                        <td>1630.00</td>
+                  </tr>
+                  <tr>
+                        <td>2/10/2014 12:00:00 AM</td>
+                        <td>543008</td>
+                        <td>1620.00</td>
+                  </tr>
+                  <tr>
+                        <td>2/10/2014 12:00:00 AM</td>
+                        <td>543010</td>
+                        <td>1875.00</td>
+                  </tr>
+                  <tr>
+                        <td>2/12/2014 12:00:00 AM</td>
+                        <td>543014</td>
+                        <td>1450.60</td>
+                  </tr>
+                  <tr>
+                        <td>2/12/2014 12:00:00 AM</td>
+                        <td>543015</td>
+                        <td>1209.00</td>
+                  </tr>
+                  <tr>
+                        <td>2/23/2014 12:00:00 AM</td>
+                        <td>543032</td>
+                        <td>1015.80</td>
+                  </tr>
+                  <tr>
+                        <td>2/24/2014 12:00:00 AM</td>
+                        <td>543034</td>
+                        <td>1924.25</td>
+                  </tr>
+                  <tr>
+                        <td>3/2/2014 12:00:00 AM</td>
+                        <td>543048</td>
+                        <td>1930.00</td>
+                  </tr>
+                  <tr>
+                        <td>3/2/2014 12:00:00 AM</td>
+                        <td>543049</td>
+                        <td>1122.80</td>
+                  </tr>
+                  <tr>
+                        <td>3/3/2014 12:00:00 AM</td>
+                        <td>543051</td>
+                        <td>1936.00</td>
+                  </tr>
+                  <tr>
+                        <td>3/5/2014 12:00:00 AM</td>
+                        <td>543059</td>
+                        <td>1174.75</td>
+                  </tr>
+                  <tr>
+                        <td>3/6/2014 12:00:00 AM</td>
+                        <td>543062</td>
+                        <td>1925.50</td>
+                  </tr>
+                  <tr>
+                        <td>3/12/2014 12:00:00 AM</td>
+                        <td>543074</td>
+                        <td>1139.10</td>
+                  </tr>
+                  <tr>
+                        <td>3/12/2014 12:00:00 AM</td>
+                        <td>543076</td>
+                        <td>1407.50</td>
+                  </tr>
+                  <tr>
+                        <td>3/17/2014 12:00:00 AM</td>
+                        <td>543084</td>
+                        <td>1902.10</td>
+                  </tr>
+                  <tr>
+                        <td>3/18/2014 12:00:00 AM</td>
+                        <td>543087</td>
+                        <td>1762.70</td>
+                  </tr>
+                  <tr>
+                        <td>3/19/2014 12:00:00 AM</td>
+                        <td>543091</td>
+                        <td>1122.00</td>
+                  </tr>
+                  <tr>
+                        <td>3/20/2014 12:00:00 AM</td>
+                        <td>543096</td>
+                        <td>1255.60</td>
+                  </tr>
+                  <tr>
+                        <td>3/23/2014 12:00:00 AM</td>
+                        <td>543098</td>
+                        <td>1408.00</td>
+                  </tr>
+                  <tr>
+                        <td>3/24/2014 12:00:00 AM</td>
+                        <td>543101</td>
+                        <td>1733.06</td>
+                  </tr>
+                  <tr>
+                        <td>3/26/2014 12:00:00 AM</td>
+                        <td>543108</td>
+                        <td>1500.70</td>
+                  </tr>
+                  <tr>
+                        <td>3/27/2014 12:00:00 AM</td>
+                        <td>543112</td>
+                        <td>1014.00</td>
+                  </tr>
+                  <tr>
+                        <td>3/30/2014 12:00:00 AM</td>
+                        <td>543114</td>
+                        <td>1809.75</td>
+                  </tr>
+                  <tr>
+                        <td>3/31/2014 12:00:00 AM</td>
+                        <td>543119</td>
+                        <td>1353.60</td>
+                  </tr>
+                  <tr>
+                        <td>4/2/2014 12:00:00 AM</td>
+                        <td>543125</td>
+                        <td>1196.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/3/2014 12:00:00 AM</td>
+                        <td>543127</td>
+                        <td>1980.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/3/2014 12:00:00 AM</td>
+                        <td>543129</td>
+                        <td>1261.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/6/2014 12:00:00 AM</td>
+                        <td>543130</td>
+                        <td>1075.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/6/2014 12:00:00 AM</td>
+                        <td>543132</td>
+                        <td>1902.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/13/2014 12:00:00 AM</td>
+                        <td>543148</td>
+                        <td>1575.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/14/2014 12:00:00 AM</td>
+                        <td>543152</td>
+                        <td>1402.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/14/2014 12:00:00 AM</td>
+                        <td>543153</td>
+                        <td>1500.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/15/2014 12:00:00 AM</td>
+                        <td>543154</td>
+                        <td>1966.81</td>
+                  </tr>
+                  <tr>
+                        <td>4/15/2014 12:00:00 AM</td>
+                        <td>543156</td>
+                        <td>1030.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/16/2014 12:00:00 AM</td>
+                        <td>543157</td>
+                        <td>1170.30</td>
+                  </tr>
+                  <tr>
+                        <td>4/16/2014 12:00:00 AM</td>
+                        <td>543159</td>
+                        <td>1286.80</td>
+                  </tr>
+                  <tr>
+                        <td>4/20/2014 12:00:00 AM</td>
+                        <td>543165</td>
+                        <td>1754.50</td>
+                  </tr>
+                  <tr>
+                        <td>4/20/2014 12:00:00 AM</td>
+                        <td>543166</td>
+                        <td>1692.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/22/2014 12:00:00 AM</td>
+                        <td>543171</td>
+                        <td>1887.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/23/2014 12:00:00 AM</td>
+                        <td>543175</td>
+                        <td>1309.50</td>
+                  </tr>
+                  <tr>
+                        <td>4/23/2014 12:00:00 AM</td>
+                        <td>543176</td>
+                        <td>1564.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/24/2014 12:00:00 AM</td>
+                        <td>543177</td>
+                        <td>1090.50</td>
+                  </tr>
+                  <tr>
+                        <td>4/27/2014 12:00:00 AM</td>
+                        <td>543182</td>
+                        <td>1665.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/28/2014 12:00:00 AM</td>
+                        <td>543185</td>
+                        <td>1727.50</td>
+                  </tr>
+                  <tr>
+                        <td>4/29/2014 12:00:00 AM</td>
+                        <td>543189</td>
+                        <td>1838.00</td>
+                  </tr>
+                  <tr>
+                        <td>4/30/2014 12:00:00 AM</td>
+                        <td>543193</td>
+                        <td>1445.50</td>
+                  </tr>
+                  <tr>
+                        <td>5/5/2014 12:00:00 AM</td>
+                        <td>543200</td>
+                        <td>1873.50</td>
+                  </tr>
+                  <tr>
+                        <td>5/6/2014 12:00:00 AM</td>
+                        <td>543206</td>
+                        <td>1057.00</td>
+                  </tr>
+                  <tr>
+                        <td>5/6/2014 12:00:00 AM</td>
+                        <td>543207</td>
+                        <td>1374.60</td>
+                  </tr>
+            </table>
+            <div class="py-120"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+
+    </div>
+
+    
+  <div class="box-shadow" style="border-top:1px solid #e2ecee;">
+    <div class="container">
+      <div class="row" style="padding:60px 0 10px 0;">
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 pb-15"><img src="../../img/dofactorylogo.png" height="30" /></div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../about.html">About Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../story.html">Our Story</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../customers.html">Customers</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../contact.html">Contact Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../faq.html">FAQs</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum.html">Forum</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum/explore.html">Explore Forum</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../login.html">Login</a> &nbsp; <a class="footer-link" href="../../join.html">Join</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted ">Products</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../products.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-net.html">Dofactory .NET</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-sql.html">Dofactory SQL</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-js.html">Dofactory JS</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-bundle.html">Dofactory Bundle</a></li>
+          </ul>
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-8 text-muted">Pricing</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../pricing.html">Product Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/bundle.html">Bundle Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/compare.html">Compare Editions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Demos</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../showcases.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/analytics.html">Analytics App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/ecommerce.html">Ecommerce App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/saas.html">SaaS App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/crm.html">CRM App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/app-factory.html">33-Day App Factory&trade;</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-3 mb-2 ">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Tutorials</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../tutorials.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql.html">SQL Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../reference.html">SQL Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html.html">HTML Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html/ref.html">HTML Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../net/design-patterns.html">.NET Design Patterns</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../csharp-coding-standards.html">C# Coding Standards</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../javascript.html">JavaScript Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../connection-strings.html">Connection Strings</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row mx-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="row py-10">
+        <div class="col pl-35">
+          <div class="font-weight-bold font-18 merriweather text-muted">Stay Inspired!</div>
+        </div>
+      </div>
+
+      <div class="row pt-3 pb-10">
+        <div class="col-12 col-md-6 xcol-md-5 pl-35">
+          Join other developers and designers who have
+          already signed up for our mailing list.
+        </div>
+        <div class="col-12 col-md-4 xcol-md-4 pl-35">
+
+          
+<form method="post" action="https://www.dofactory.com/emaillist">
+    <div class="input-group mb-3 pt-1">
+        <input type="text" class="form-control" placeholder="Your email..." aria-label="your-email" aria-describedby="your-email" style="max-width:260px;" data-val="true" data-val-email="Invalid email address" data-val-required="Email is required." id="YourEmail" name="YourEmail" value="">
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-green" style="height:37px;">
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <span class="field-validation-valid" data-valmsg-for="YourEmail" data-valmsg-replace="true"></span>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7Eqt9_sAE5g70hnhx5j5Z05zJcbNWRMbawif3OrMlxB63f444vcde7LyNCVeWQWAnZ2kZhaJqwWOgxfzguYU4kYXQd-ve_G_8gowu7P2sbBKN1fMvc4kFZ-A9dIe_mM_BB70" /></form>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row mx-10 mt-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="d-flex flex-lg-row flex-column p-20 mb-15 font-14">
+        <div class="pb-1 ">
+          <a href="../../terms.html" class="text-muted">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../privacy.html" class="text-muted">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../licensing.html" class="text-muted">Licensing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../eula.html" class="text-muted">EULA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../sitemap.html" class="text-muted">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="pb-1">
+          &copy; Data &amp; Object Factory, LLC. 
+        </div>
+        <div class="pb-1 ml-lg-auto">
+          Made with &nbsp;<img src="../../img/heart.png" style="width:14px;" />&nbsp; in Austin, Texas. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vsn 1.3.0
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.namespace("Sql").Sandbox = (function () {
+
+      var activateControls = function () {
+
+        // clear button
+
+        $("#clear").on("click", function () {
+
+          $("#prescript").val("");
+          $("#script").val("");
+          $("#scriptassist").val("Enter your own SQL and click Run.");
+          $("#scriptassist-display").html("&nbsp;&nbsp;&nbsp;Enter your own SQL and click Run.");
+
+          $("#results").html("<div style='height:450px;color:#666;padding-left:0px;'>No results to display</div>");
+        });
+
+        // display column names when clicked on table name
+
+        $("a[id^='table']").on("click", function () {
+          var id = "#" + $(this).attr("id").replace("table", "columns");
+          $(id).slideToggle(200);
+        });
+      };
+
+      var fadeIn = function () {
+        $('.fffade').fadeTo(800, 1);
+      }
+
+      var start = function () {
+        activateControls();
+        fadeIn();
+      };
+
+      return { start: start };
+    })();
+
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Sql.Sandbox.start();
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/sql/editor/between by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:46:10 GMT -->
+</html>

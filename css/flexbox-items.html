@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/css/flexbox-items by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:54:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Flexbox Items - Dofactory</title>
+    <meta name="keywords" content="CSS, CSS Tutorial, Reference, Guide, Examples, Demos, Top, Best, Tips, Advice, Training, Learning, Courses, Lessons, Front-end, Programming, Code, Source">
+    <meta name="description" content="CSS flexbox items are the immediate child elements inside a flex container. They are aligned and packed by either container or item property settings.">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="flexbox-items.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        
+<style>
+
+  pre { font-weight: bold; margin-top: 30px; }
+  ol.linenums li { line-height: 22px; }
+
+  .prettyprint { font-size: 16px; }
+  .kwd { color: #0b7490; }
+  .lit, .str { color: #cc4500; }
+
+
+  /* ... review ... */
+
+  /*.atv { color: #139; }*/
+  .atv { color: #b7422c; }
+  /*.atn { color: #F45D48; }*/
+  .atn { color: #353768; }
+  /* too many keywords were incorrectly colored */
+  .kwd { color: #000000; }  
+
+  .prettyprint { background-color: #f6f7f8 !important; }
+
+  .tutorial hr { margin-top: 65px; margin-bottom: 5px; }
+
+  .tutorial .render button, .tutorial .render input[type="submit"], .render input[type="button"], .render input[type="reset"] { display: inline-block; font-weight: 400; text-align: center; white-space: nowrap; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; border: 1px solid transparent; padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; border-radius: 0.25rem; transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border: 1px solid #ccc; vertical-align: top; }
+  .tutorial .render button:hover, .tutorial .render input[type="submit"]:hover, .tutorial .render input[type="button"]:hover, .tutorial .render input[type="reset"]:hover { text-decoration: none; background-color: #dddddd; border-color: #bbb; }
+  .tutorial .render button:focus, .tutorial .render input[type="submit"]:focus, .tutorial .render input[type="button"]:focus, .tutorial .render input[type="reset"]:focus { outline: 0; border: 1px solid #999; }
+
+  .tutorial input[type="text"], .tutorial input[type="password"], .tutorial input[type="email"] { height: calc(2.25rem + 2px); padding: 0.375rem 0.75rem; font-size: 1rem; }
+
+  .tutorial .render select { outline: none; margin: 25px 0 10px; display: block; width: 180px; height: calc(2.25rem + 2px); padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; color: #495057; background-color: #fff; background-clip: padding-box; border: 1px solid #ced4da; border-radius: 0.25rem; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+
+  .tutorial em { font-weight: 500; font-style: normal;/*border: 1px dotted orangered; padding: 0.03em 0.30em 0.03em 0.25em; border-radius: 3px; font-style: normal;*/ }
+
+  /* enables autoscroll in flex and grid */
+  div { min-width: 0; }
+
+  /* multiple demo buttons */
+  .demo-links button { font-size: 17px; padding: 2px 8px 4px; background: #fff; margin: 5px 5px 5px 5px; border-radius: 3px; border: 1px solid #999; transition-duration: .25s }
+  .demo-links button:hover, .demo-links button:focus, .demo-links button:active, .tutorial .demo-links button.selected-style { background: #333; color: white; cursor: pointer; outline: none; }
+  
+  .tutorial p.demo-links { margin-right: 0 !important;}
+  /* Interactive style selection menus */
+  /*.tutorial .demo-links button.selected-style { background: #b8eeef; color: black; }*/
+  .muted-bar { color: #999; }
+
+  .tutorial div.items p:first-child { margin-top:35px !important;}
+  .tutorial .render p { margin-right: 0 !important;}
+
+  .tutorial .for-details { font-size: 15px; padding-top: 10px; }
+
+  .tutorial h3 { font-weight: 500; }
+  
+</style>
+
+<link rel="stylesheet" href="../tutorial/css/responsive1bd2.css?v=kbWbNIwNk4mwtaCxbJqtcx_bZolfxojMY9VsNm1mX_Y" />
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="../img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        CSS Tutorial&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="../css.html">CSS Tutorial</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="basics.html">CSS Basics</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="selectors.html">CSS Selectors</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="specificity.html">CSS Specificity</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="colors.html">CSS Colors</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="color-names.html">CSS Color Names</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="backgrounds.html">CSS Backgrounds</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="images.html">CSS Images</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="borders.html">CSS Borders</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="paddings.html">CSS Padding</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="margins.html">CSS Margin</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="text.html">CSS Text</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="fonts.html">CSS Fonts</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="buttons.html">CSS Buttons</a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="links.html">CSS Links</a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="lists.html">CSS Lists</a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="tables.html">CSS Tables</a>
+                <div class="height-1"></div>
+              <a id="item-17" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="hover.html">CSS Hover</a>
+                <div class="height-1"></div>
+              <a id="item-18" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="icons.html">CSS Icons</a>
+                <div class="height-1"></div>
+              <a id="item-19" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="positions.html">CSS Position</a>
+                <div class="height-1"></div>
+              <a id="item-20" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="alignment.html">CSS Alignment</a>
+                <div class="height-1"></div>
+              <a id="item-21" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="websafety.html">CSS Web Safety</a>
+                <div class="height-1"></div>
+              <a id="item-22" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="comments.html">CSS Comments</a>
+                <div class="height-1"></div>
+              <a id="item-23" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 data-isexternallink=&#x27;true&#x27;
+                 
+                 href="ref.html">CSS Reference</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">CSS Advanced</div>
+              <a id="item-25" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="displays.html">CSS Display</a>
+                <div class="height-1"></div>
+              <a id="item-26" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="box-model.html">CSS Box Model</a>
+                <div class="height-1"></div>
+              <a id="item-27" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="dimensions.html">CSS Dimensions</a>
+                <div class="height-1"></div>
+              <a id="item-28" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="overflows.html">CSS Overflow</a>
+                <div class="height-1"></div>
+              <a id="item-29" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="outlines.html">CSS Outline</a>
+                <div class="height-1"></div>
+              <a id="item-30" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="floats.html">CSS Float</a>
+                <div class="height-1"></div>
+              <a id="item-31" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="combinators.html">CSS Combinators</a>
+                <div class="height-1"></div>
+              <a id="item-32" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="pseudo-classes.html">CSS Pseudo-class</a>
+                <div class="height-1"></div>
+              <a id="item-33" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="pseudo-elements.html">CSS Pseudo-element</a>
+                <div class="height-1"></div>
+              <a id="item-34" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="opacities.html">CSS Opacity</a>
+                <div class="height-1"></div>
+              <a id="item-35" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="multiple-columns.html">CSS Multiple Columns</a>
+                <div class="height-1"></div>
+              <a id="item-36" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="variables.html">CSS Variables</a>
+                <div class="height-1"></div>
+              <a id="item-37" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="media-queries.html">CSS Media Queries</a>
+                <div class="height-1"></div>
+              <a id="item-38" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="transforms-2d.html">CSS 2D Transforms</a>
+                <div class="height-1"></div>
+              <a id="item-39" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="transforms-3d.html">CSS 3D Transforms</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">CSS Flexbox</div>
+              <a id="item-41" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="flexbox.html">CSS Flexbox Intro</a>
+                <div class="height-1"></div>
+              <a id="item-42" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="flexbox-containers.html">CSS Flexbox Containers</a>
+                <div class="height-1"></div>
+              <a id="item-43" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="flexbox-items.html">CSS Flexbox Items</a>
+                <div class="height-1"></div>
+              <a id="item-44" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="flexbox-alignments.html">CSS Flexbox Alignments</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">CSS Grid</div>
+              <a id="item-46" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="grids.html">CSS Grid Intro</a>
+                <div class="height-1"></div>
+              <a id="item-47" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="grid-containers.html">CSS Grid Container</a>
+                <div class="height-1"></div>
+              <a id="item-48" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="grid-items.html">CSS Grid Items</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="1449" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="../img/arrow-left.jpg" /> &nbsp;Back to CSS </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html/ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript/design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="../net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial" xstyle="xmax-width:1200px;">
+
+      <div class="d-flex justify-content-around align-items-start">
+
+        <div class="w-100 m-auto" style="max-width:970px;">
+
+<div>
+<h1>CSS Flexbox Items</h1>
+
+
+<div class="d-flex mt-10 pt-10 d-block d-lg-none" xstyle="border-top:1px solid #ccd;">
+    <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="flexbox-containers.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; CSS Flexbox Containers &nbsp;</a>
+  </div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="flexbox-alignments.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; CSS Flexbox Alignments &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<div class="items mt-70 mb-50">
+  <p><span>Flexbox</span> is a <b>layout system</b> that arranges items in rows and columns.</p>
+  <p>Flexbox items are the <span>immediate children</span> in a flex container.</p>
+  <p>Items that are deeper than the children are not considered flex items.</p>
+</div>
+
+<a class="goto-target" id="example"></a>
+<div class="d-flex">
+    <h3  style="margin-left:-2px;font-weight:500 !important;" onmouseover="$(&#x27;#xexample&#x27;).show();" onmouseout="$(&#x27;#xexample&#x27;).hide();">Example</h3>
+    <h3 class="pl-12"><a id="xexample" class="d-block header-anchor" href="#example">#</a></h3>
+</div>
+
+
+
+<p class="">
+  A flex container with 13 flex items.
+</p>
+
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .flex-items {
+    background-color: #776fac;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flex-items > div {
+    background-color: aliceblue;
+    margin: 5px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 18px;
+    width: 100px;
+  }
+</style>
+
+<div class="flex-items">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+  <div>13</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .flex-items {&#xD;&#xA;    background-color: #776fac;&#xD;&#xA;    padding: 5px;&#xD;&#xA;    display: flex;&#xD;&#xA;    flex-wrap: wrap;&#xD;&#xA;  }&#xD;&#xA;&#xD;&#xA;  .flex-items &gt; div {&#xD;&#xA;    background-color: aliceblue;&#xD;&#xA;    margin: 5px;&#xD;&#xA;    height: 80px;&#xD;&#xA;    line-height: 80px;&#xD;&#xA;    text-align: center;&#xD;&#xA;    font-size: 18px;&#xD;&#xA;    width: 100px;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;flex-items&quot;&gt;&#xD;&#xA;  &lt;div&gt;1&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;2&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;3&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;4&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;5&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;6&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;7&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;8&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;9&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;10&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;11&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;12&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;13&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/flexbox-items.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+
+<div class="mt-50"></div>
+<a class="goto-target" id="using"></a>
+<div class="d-flex">
+    <h3  style="margin-left:-2px;font-weight:500 !important;" onmouseover="$(&#x27;#xusing&#x27;).show();" onmouseout="$(&#x27;#xusing&#x27;).hide();">Using flex items</h3>
+    <h3 class="pl-12"><a id="xusing" class="d-block header-anchor" href="#using">#</a></h3>
+</div>
+
+
+<div class="items">
+  <p>Direct child elements in a flex container automatically become flex items.</p>
+  <p>Each flex item can be controlled with these properties:</p>
+</div>
+
+
+<ul class="py-10 ml-25" style="list-style-type: circle">
+  <li><a href="#flex-grow" class="code-link">flex-grow</a></li>
+  <li><a href="#flex-shrink" class="code-link">flex-shrink</a></li>
+  <li><a href="#flex-basis" class="code-link">flex-basis</a></li>
+  <li><a href="#flex" class="code-link">flex</a></li>
+  <li><a href="#order" class="code-link">order</a></li>
+</ul>
+
+<hr />
+<a class="goto-target" id="flex-grow"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xflex-grow&#x27;).show();" onmouseout="$(&#x27;#xflex-grow&#x27;).hide();">The flex-grow property</h2>
+    <h2><a id="xflex-grow" style="display:none" class="d-block pl-12 header-anchor" href="#flex-grow">#</a></h2>
+</div>
+
+
+<p>
+  The <a href="flex-grow.html" class="code-link">flex-grow</a> property specifies how much a flex item
+  will grow relative to the rest of the flex items.<br /><br />
+  The last item stretches to fill the remaining space.
+</p>
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .flex-grow {
+    background-color: #776fac;
+    padding: 5px;
+    display: flex;
+  }
+
+  .flex-grow > div {
+    background-color: aliceblue;
+    margin: 5px;
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 18px;
+  }
+</style>
+
+<div class="flex-grow">
+  <div style="flex-grow: 1">1</div>
+  <div style="flex-grow: 1">2</div>
+  <div style="flex-grow: 8">3</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .flex-grow {&#xD;&#xA;    background-color: #776fac;&#xD;&#xA;    padding: 5px;&#xD;&#xA;    display: flex;&#xD;&#xA;  }&#xD;&#xA;&#xD;&#xA;  .flex-grow &gt; div {&#xD;&#xA;    background-color: aliceblue;&#xD;&#xA;    margin: 5px;&#xD;&#xA;    height: 80px;&#xD;&#xA;    width: 80px;&#xD;&#xA;    line-height: 80px;&#xD;&#xA;    text-align: center;&#xD;&#xA;    font-size: 18px;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;flex-grow&quot;&gt;&#xD;&#xA;  &lt;div style=&quot;flex-grow: 1&quot;&gt;1&lt;/div&gt;&#xD;&#xA;  &lt;div style=&quot;flex-grow: 1&quot;&gt;2&lt;/div&gt;&#xD;&#xA;  &lt;div style=&quot;flex-grow: 8&quot;&gt;3&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/flexbox-grow.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+<p class="for-details">For details on <code>flex-grow</code>, see our <a class="underline" href="flex-grow.html">CSS flex-grow Property Reference</a>.</p>
+
+<hr />
+<a class="goto-target" id="flex-shrink"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xflex-shrink&#x27;).show();" onmouseout="$(&#x27;#xflex-shrink&#x27;).hide();">The flex-shrink property</h2>
+    <h2><a id="xflex-shrink" style="display:none" class="d-block pl-12 header-anchor" href="#flex-shrink">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a href="flex-shrink.html" class="code-link">flex-shrink</a> property specifies
+  how much a flex item will shrink relative to the rest of the flex items.<br /><br />
+  Item 2 is set to shrink. It shrinks relative to the other items when resizing the browser.
+
+</p>
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .flex-shrink {
+    background-color: #776fac;
+    padding: 5px;
+    display: flex;
+  }
+
+  .flex-shrink > div {
+    background-color: aliceblue;
+    margin: 5px;
+    height: 80px;
+    width: 100px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 18px;
+  }
+</style>
+
+<div class="flex-shrink">
+  <div>1</div>
+  <div style="flex-shrink: 2">2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .flex-shrink {&#xD;&#xA;    background-color: #776fac;&#xD;&#xA;    padding: 5px;&#xD;&#xA;    display: flex;&#xD;&#xA;  }&#xD;&#xA;&#xD;&#xA;  .flex-shrink &gt; div {&#xD;&#xA;    background-color: aliceblue;&#xD;&#xA;    margin: 5px;&#xD;&#xA;    height: 80px;&#xD;&#xA;    width: 100px;&#xD;&#xA;    line-height: 80px;&#xD;&#xA;    text-align: center;&#xD;&#xA;    font-size: 18px;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;flex-shrink&quot;&gt;&#xD;&#xA;  &lt;div&gt;1&lt;/div&gt;&#xD;&#xA;  &lt;div style=&quot;flex-shrink: 2&quot;&gt;2&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;3&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;4&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;5&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;6&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;7&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/flexbox-shrink.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+<p class="for-details">For details on <code>flex-shrink</code>, see our <a class="underline" href="flex-shrink.html">CSS flex-shrink Property Reference</a>.</p>
+
+<hr />
+<a class="goto-target" id="flex-basis"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xflex-basis&#x27;).show();" onmouseout="$(&#x27;#xflex-basis&#x27;).hide();">The flex-basis property</h2>
+    <h2><a id="xflex-basis" style="display:none" class="d-block pl-12 header-anchor" href="#flex-basis">#</a></h2>
+</div>
+
+
+
+<p>
+  The <a href="flex-basis.html" class="code-link">flex-basis</a> property specifies
+  the initial width (the basis) of the item.<br /><br />
+  Item 2 has a 40% basis.
+</p>
+
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .flex-basis {
+    background-color: #776fac;
+    padding: 5px;
+    display: flex;
+  }
+
+  .flex-basis > div {
+    background-color: aliceblue;
+    margin: 5px;
+    height: 80px;
+    width: 100px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 18px;
+  }
+</style>
+
+<div class="flex-basis">
+  <div>1</div>
+  <div style="flex-basis: 40%;">2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .flex-basis {&#xD;&#xA;    background-color: #776fac;&#xD;&#xA;    padding: 5px;&#xD;&#xA;    display: flex;&#xD;&#xA;  }&#xD;&#xA;&#xD;&#xA;  .flex-basis &gt; div {&#xD;&#xA;    background-color: aliceblue;&#xD;&#xA;    margin: 5px;&#xD;&#xA;    height: 80px;&#xD;&#xA;    width: 100px;&#xD;&#xA;    line-height: 80px;&#xD;&#xA;    text-align: center;&#xD;&#xA;    font-size: 18px;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;flex-basis&quot;&gt;&#xD;&#xA;  &lt;div&gt;1&lt;/div&gt;&#xD;&#xA;  &lt;div style=&quot;flex-basis: 40%;&quot;&gt;2&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;3&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;4&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;5&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/flexbox-basis.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<p class="for-details">For details on <code>flex-basis</code>, see our <a class="underline" href="flex-basis.html">CSS flex-basis Property Reference</a>.</p>
+
+<hr />
+<a class="goto-target" id="flex"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xflex&#x27;).show();" onmouseout="$(&#x27;#xflex&#x27;).hide();">The flex property</h2>
+    <h2><a id="xflex" style="display:none" class="d-block pl-12 header-anchor" href="#flex">#</a></h2>
+</div>
+
+
+<p>
+  The <a href="flex.html" class="code-link">flex</a> property is a shorthand for the <a href="flex-grow.html" class="code-link">flex-grow</a>, <a href="flex-shrink.html" class="code-link">flex-shrink</a>, and <a href="flex-basis.html" class="code-link">flex-basis</a> properties.
+  <br /><br />
+  These items have default growth, shrink, and a 100px basis.
+</p>
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .flex {
+    background-color: #776fac;
+    padding: 5px;
+    display: flex;
+  }
+
+  .flex > div {
+    background-color: aliceblue;
+    margin: 5px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 18px;
+    flex: 0 1 100px;
+  }
+</style>
+
+<div class="flex">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .flex {&#xD;&#xA;    background-color: #776fac;&#xD;&#xA;    padding: 5px;&#xD;&#xA;    display: flex;&#xD;&#xA;  }&#xD;&#xA;&#xD;&#xA;  .flex &gt; div {&#xD;&#xA;    background-color: aliceblue;&#xD;&#xA;    margin: 5px;&#xD;&#xA;    height: 80px;&#xD;&#xA;    line-height: 80px;&#xD;&#xA;    text-align: center;&#xD;&#xA;    font-size: 18px;&#xD;&#xA;    flex: 0 1 100px;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;flex&quot;&gt;&#xD;&#xA;  &lt;div&gt;1&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;2&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;3&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;4&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;5&lt;/div&gt;&#xD;&#xA;  &lt;div&gt;6&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/flexbox-flex.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<hr />
+
+<a class="goto-target" id="order"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xorder&#x27;).show();" onmouseout="$(&#x27;#xorder&#x27;).hide();">The order property</h2>
+    <h2><a id="xorder" style="display:none" class="d-block pl-12 header-anchor" href="#order">#</a></h2>
+</div>
+
+
+<p>
+  The <a href="order.html" class="code-link">order</a> property specifies the display order of a flex item.<br /><br />
+  These items are ordered as: 4, 2, 1, 3.
+</p>
+
+<div class="render mt-20">
+  <div class="ml-25 mt-10">
+    <style>
+  .flex-order {
+    background-color: #776fac;
+    padding: 5px;
+    display: flex;
+  }
+
+  .flex-order > div {
+    background-color: aliceblue;
+    margin: 5px;
+    height: 80px;
+    width: 100px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 18px;
+  }
+</style>
+
+<div class="flex-order">
+  <div style="order: 3">1</div>
+  <div style="order: 2">2</div>
+  <div style="order: 4">3</div>
+  <div style="order: 1">4</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<pre class="prettyprint code-hscroll mt-30"><code>&lt;style&gt;&#xD;&#xA;  .flex-order {&#xD;&#xA;    background-color: #776fac;&#xD;&#xA;    padding: 5px;&#xD;&#xA;    display: flex;&#xD;&#xA;  }&#xD;&#xA;&#xD;&#xA;  .flex-order &gt; div {&#xD;&#xA;    background-color: aliceblue;&#xD;&#xA;    margin: 5px;&#xD;&#xA;    height: 80px;&#xD;&#xA;    width: 100px;&#xD;&#xA;    line-height: 80px;&#xD;&#xA;    text-align: center;&#xD;&#xA;    font-size: 18px;&#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;div class=&quot;flex-order&quot;&gt;&#xD;&#xA;  &lt;div style=&quot;order: 3&quot;&gt;1&lt;/div&gt;&#xD;&#xA;  &lt;div style=&quot;order: 2&quot;&gt;2&lt;/div&gt;&#xD;&#xA;  &lt;div style=&quot;order: 4&quot;&gt;3&lt;/div&gt;&#xD;&#xA;  &lt;div style=&quot;order: 1&quot;&gt;4&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-5" style="border-radius:1px;background:#444;border:none;width:120px;" onclick="window.open('editor/flexbox-order.html', 'editor')">
+    Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button>
+
+<p class="for-details">For details on <code>order</code>, see our <a class="underline" href="order.html">CSS order Property Reference</a>.</p>
+
+<hr />
+
+<a class="goto-target" id="properties"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xproperties&#x27;).show();" onmouseout="$(&#x27;#xproperties&#x27;).hide();">Flexbox Properties</h2>
+    <h2><a id="xproperties" style="display:none" class="d-block pl-12 header-anchor" href="#properties">#</a></h2>
+</div>
+
+
+
+<p>A list of all flexbox properties for flexbox.</p>
+
+<div class="table-box">
+  <table class="table table-md ">
+    <tbody>
+      <tr class="bg-light">
+        <th style="width:170px;">Property</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><a href="display.html" class="code-link">display</a></td>
+        <td>Specifies the type of display flow for the element</td>
+      </tr>
+
+      <tr>
+        <td><a href="flex-wrap.html" class="code-link">flex-wrap</a></td>
+        <td>Specifies whether to wrap flex items when they run out of space</td>
+      </tr>
+      <tr>
+        <td><a href="flex-direction.html" class="code-link">flex-direction</a></td>
+        <td>Specifies the direction of the items in a flex container</td>
+      </tr>
+      <tr>
+        <td><a href="flex-flow.html" class="code-link">flex-flow</a></td>
+        <td>Shorthand for flex-direction and flex-wrap</td>
+      </tr>
+      <tr>
+        <td><a href="gap.html" class="code-link">gap</a></td>
+        <td>Space between rows and columns.</td>
+      </tr>
+      <tr>
+        <td><a href="row-gap.html" class="code-link">row-gap</a></td>
+        <td>Space between rows.</td>
+      </tr>
+      <tr>
+        <td><a href="column-gap.html" class="code-link">column-gap</a></td>
+        <td>Space between columns.</td>
+      </tr>
+      <tr>
+        <td><a href="justify-content.html" class="code-link">justify-content</a></td>
+        <td>Horizontally aligns items when they do not use all available space</td>
+      </tr>
+      <tr>
+        <td><a href="align-items.html" class="code-link">align-items</a></td>
+        <td>Vertically aligns the flex items when they don't use all available space</td>
+      </tr>
+      <tr>
+        <td><a href="align-content.html" class="code-link">align-content</a></td>
+        <td>Specifies that, instead of aligning flex items, it aligns flex lines</td>
+      </tr>
+
+      <tr>
+        <td><a href="order.html" class="code-link">order</a></td>
+        <td>Specifies the order of an item relative to the other items.</td>
+      </tr>
+      <tr>
+        <td><a href="align-self.html" class="code-link">align-self</a></td>
+        <td>Used on flex items. Overrides the container's align-items setting</td>
+      </tr>
+
+      <tr>
+        <td><a href="flex-basis.html" class="code-link">flex-basis</a></td>
+        <td>Specifies the initial width (the basis) of an item.</td>
+      </tr>
+      <tr>
+        <td><a href="flex-grow.html" class="code-link">flex-grow</a></td>
+        <td>Specifies how an item stretches (grows) in the flex container</td>
+      </tr>
+      <tr>
+        <td><a href="flex-shrink.html" class="code-link">flex-shrink</a></td>
+        <td>Specifies how an item contracts (shrinks) in the flex container</td>
+      </tr>
+      <tr>
+        <td><a href="flex.html" class="code-link">flex</a></td>
+        <td>Shorthand for flex-grow, flex-shrink, and flex-basis</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr />
+<a class="goto-target" id="browser"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xbrowser&#x27;).show();" onmouseout="$(&#x27;#xbrowser&#x27;).hide();">Browser Support of Flexbox</h2>
+    <h2><a id="xbrowser" style="display:none" class="d-block pl-12 header-anchor" href="#browser">#</a></h2>
+</div>
+
+
+
+<p>This table shows when <code>flexbox</code> support started for each browser.</p>
+
+<div class="table-box">
+  <table class="table table-md width-400">
+    <tbody>
+      <tr>
+        <td class="w-30" title="Chrome">
+          <div class="d-flex">
+            <div><img src="../img/html/chrome.png" loading="lazy" /></div>
+            <div class="pt-2 pl-12">Chrome</div>
+          </div>
+        </td>
+        <td class="w-30 text-center">29.0</td>
+        <td>Aug 2013</td>
+      </tr>
+      <tr>
+        <td class="w-30" title="Firefox">
+          <div class="d-flex">
+            <div><img src="../img/html/firefox.png" /></div>
+            <div class="pt-2 pl-12">Firefox</div>
+          </div>
+        </td>
+        <td class="w-30 text-center">28.0</td>
+        <td>Mar 2014</td>
+      </tr>
+      <tr>
+        <td class="w-30" title="IE/Edge">
+          <div class="d-flex">
+            <div><img src="../img/html/edge.png" /></div>
+            <div class="pt-2 pl-12">IE/Edge</div>
+          </div>
+        </td>
+        <td class="w-30 text-center">11.0</td>
+        <td>Oct 2013</td>
+      </tr>
+      <tr>
+        <td class="w-30" title="Opera">
+          <div class="d-flex">
+            <div><img src="../img/html/opera.png" /></div>
+            <div class="pt-3 pl-12">Opera</div>
+          </div>
+        </td>
+        <td class="w-30 text-center">17.0</td>
+        <td>Aug 2013</td>
+      </tr>
+      <tr>
+        <td class="w-30" title="Safari">
+          <div class="d-flex">
+            <div><img src="../img/html/safari.png" /></div>
+            <div class="pt-2 pl-12">Safari</div>
+          </div>
+        </td>
+        <td class="w-30 text-center">9.0</td>
+        <td>Sep 2015</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr />
+<a class="goto-target" id="like"></a>
+<div class="d-flex">
+    <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xlike&#x27;).show();" onmouseout="$(&#x27;#xlike&#x27;).hide();">You may also like</h2>
+    <h2><a id="xlike" style="display:none" class="d-block pl-12 header-anchor" href="#like">#</a></h2>
+</div>
+
+
+<p>
+  <div class="d-flex">
+    <div class="p-10">
+      <img src="../img/html/show-like.png" class="img-fluid" loading="lazy" />
+    </div>
+    <div class="pl-25 pt-5">
+      <ul>
+        <li>Our <a class="underline font-weight-semibold" href="flex.html">CSS flex Property Reference</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="flex-wrap.html">CSS flex-wrap Property Reference</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="../html/layout.html">HTML Layout Tutorial</a></li>
+      </ul>
+    </div>
+  </div>
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="flexbox-containers.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; CSS Flexbox Containers &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="flexbox-alignments.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; CSS Flexbox Alignments &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+</div>
+
+          <div class="bg-light p-10 mb-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css.html">CSS Tutorial</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="selectors.html">CSS Selectors</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="borders.html">CSS Borders</a></li>
+
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="flexbox.html">CSS Flex</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="grids.html">CSS Grid</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="tables.html">CSS Tables</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="length.html">CSS Length</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="fonts.html">CSS Fonts</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="animation.html">CSS Animation</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="hover.html">CSS Hover</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="images.html">CSS Images</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="comments.html">CSS Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" style="min-width:230px !important;">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">Flexbox Items</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#example">Example</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#using">Using</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#flex-grow">flex-grow</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#flex-shrink">flex-shrink</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#flex-basis">flex-basis</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#flex">flex</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#order">order</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#properties">Flexbox Properties</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#like">You may also like</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+
+    function copy(id) {
+      var stor = document.createElement("textarea");
+      stor.setAttribute("contentEditable", true);
+      stor.innerHTML = document.getElementById(id).innerHTML;
+      stor.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+      document.body.appendChild(stor);
+      stor.focus({ preventScroll: true });
+      stor.focus();
+
+      document.execCommand("copy");
+      document.body.removeChild(stor);
+
+      $('#show-' + id).fadeIn('fast').delay(1200).fadeOut('slow');
+    }
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/css/flexbox-items by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:54:41 GMT -->
+</html>

@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/javascript/function-objects by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:05:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Function Objects - Dofactory</title>
+    <meta name="keywords" content="javascript function, javascript objects, javascript currying, javascript bind, javascript memoization">
+    <meta name="description" content="In JavaScript, functions are objects. You can work with functions as if they were objects. For example, you can assign functions to variables, to array elements, and to other objects. They can also be passed around as arguments to other functions or be returned from those functions.">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="function-objects.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        <link rel="stylesheet" href="../tutorial/css/javascript1cdd.css?v=qVXqJlnTI2nqJ78-w9n5mGO4sNLYFSlXHRVEVwRSTj4" />
+
+<style>
+  .bg-cream-100 { background-color: #f6f8fd !important; }
+</style>
+
+
+<script>
+  var console = {};
+  console.log = function (e) {
+    try {
+
+      if (!e && e != false) e = "undefined";
+      if (e == "Andrew Fuller\n Bob Springsteen") {
+        e = e.replace(/(?:\r\n|\r|\n)/g, '<br>');
+      }
+      document.writeln(e);
+      document.write("<br />");
+    }
+    catch {
+      document.writeln("");
+    }
+  };
+  window.console = console;
+</script>
+
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="../img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        JavaScript Tutorial&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="../javascript.html">JavaScript Intro</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="what-is.html">What is JavaScript</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="essentials.html">JavaScript Essentials</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="variables.html">JavaScript Variables</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="operators.html">JavaScript Operators</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="conditionals.html">JavaScript Conditionals</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="loops.html">JavaScript Loops</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="builtin-types.html">JavaScript Built-in Types</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="objects.html">JavaScript Objects</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="advanced-objects.html">JavaScript Adv. Objects</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="arrays.html">JavaScript Arrays</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="functions.html">JavaScript Functions</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="function-objects.html">JavaScript Function Objects</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="json.html">JavaScript JSON</a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="regular-expressions.html">JavaScript Reg. Expressions</a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="design-patterns.html">JavaScript Patterns</a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="reference.html">JavaScript Reference</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="387" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="../img/arrow-left.jpg" /> &nbsp;Back to JS </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html/ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css/ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="../net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial" xstyle="xmax-width:1200px;">
+
+      <div class="d-flex justify-content-around align-items-start">
+
+        <div class="w-100 m-auto" style="max-width:970px;">
+
+          <h1>JavaScript Function Objects</h1>
+
+
+<div class="d-flex">
+    <div class="mt-40">
+        <p class="pb-0 mb-0" style="margin-right:0 !important;">In JavaScript, functions are called <em>Function Objects</em> because they <i>are</i> objects. Just like objects, functions have properties and methods, they can be stored in a variable or an array, and be passed as arguments to other functions.</p>
+    </div>
+    <div class="ml-auto d-none d-md-block text-center" style="flex: 0 0 200px;">
+      <img src="../img/javascript/show-js.png" alt="JavaScript Tutorial" style="margin:20px 10px 0px 35px;" />
+    </div>
+</div>
+
+
+
+<hr />
+<a class="goto-target" id="first-class"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xfirst-class&#x27;).show();" onmouseout="$(&#x27;#xfirst-class&#x27;).hide();">Functions are First-Class Objects</h2>
+    <h2><a id="xfirst-class" style="display:none" class="d-block pl-12 header-anchor" href="#first-class">#</a></h2>
+</div>
+
+
+
+<p>
+  As mentioned, functions are objects.  You can work with functions as if they
+  were objects. For example, you can assign functions to variables, to array elements,
+  and to other objects. They can also be passed around as arguments to other
+  functions or be returned from those functions.
+  The only difference with objects is that functions can be called.
+</p>
+
+<p>
+  Let's run a small test and confirm that a function is 
+  indeed an object instance:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-1');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-1" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-1">function message() {&#xD;&#xA;    console.log(&quot;Greetings Linda!&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(typeof message);               // =&gt; function&#xD;&#xA;console.log(message instanceof Object);    // =&gt; true&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function message() {&#xD;&#xA;    console.log(&quot;Greetings Linda!&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(typeof message);               // =&gt; function&#xD;&#xA;console.log(message instanceof Object);    // =&gt; true&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-1" style="display:none;">
+  <script>
+      function message() {
+    console.log("Greetings Linda!");
+}
+
+console.log(typeof message);               // => function
+console.log(message instanceof Object);    // => true
+;
+  </script>
+</div>
+<button id="function-objects-1-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-1');">
+  Run
+</button>
+
+
+<p>
+  We see that a function is indeed an object. JavaScript functions are a special 
+  type of objects, called <i>function objects</i>. A function object includes 
+  a string which holds the actual code -- the function body -- of the function. 
+  The code is literally just a string. Although not recommended, you can create 
+  a new function object by passing the built-in Function constructor a string 
+  of code, like so:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-2');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-2" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-2">var body = &quot;return Math.PI * radius * radius&quot;;&#xD;&#xA;var circle = new Function(&quot;radius&quot;, body);&#xD;&#xA;&#xD;&#xA;console.log(circle(5));          // =&gt; 78.5398..&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var body = &quot;return Math.PI * radius * radius&quot;;&#xD;&#xA;var circle = new Function(&quot;radius&quot;, body);&#xD;&#xA;&#xD;&#xA;console.log(circle(5));          // =&gt; 78.5398..&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-2" style="display:none;">
+  <script>
+      var body = "return Math.PI * radius * radius";
+var circle = new Function("radius", body);
+
+console.log(circle(5));          // => 78.5398..
+;
+  </script>
+</div>
+<button id="function-objects-2-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-2');">
+  Run
+</button>
+
+
+<p>
+  You can also create a new function with a custom constructor function (remember that by 
+  convention a constructor function always starts with an upper-case letter).   
+  In the code below we have a <code>Book</code> constructor function that is used 
+  to create book instances. In the constructor function we are assigning a function 
+  object to the <code>getDetails</code> property.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-3');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-3" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-3">function Book(type, author) {&#xD;&#xA;    this.type = type;&#xD;&#xA;    this.author = author;&#xD;&#xA;    this.getDetails = function () {&#xD;&#xA;        return this.type &#x2B; &quot; written by &quot; &#x2B; this.author;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var book = new Book(&quot;Fiction&quot;, &quot;Peter King&quot;);&#xD;&#xA;&#xD;&#xA;console.log(book.getDetails());        // =&gt; Fiction written by Peter King&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function Book(type, author) {&#xD;&#xA;    this.type = type;&#xD;&#xA;    this.author = author;&#xD;&#xA;    this.getDetails = function () {&#xD;&#xA;        return this.type &#x2B; &quot; written by &quot; &#x2B; this.author;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var book = new Book(&quot;Fiction&quot;, &quot;Peter King&quot;);&#xD;&#xA;&#xD;&#xA;console.log(book.getDetails());        // =&gt; Fiction written by Peter King&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-3" style="display:none;">
+  <script>
+      function Book(type, author) {
+    this.type = type;
+    this.author = author;
+    this.getDetails = function () {
+        return this.type + " written by " + this.author;
+    }
+}
+
+var book = new Book("Fiction", "Peter King");
+
+console.log(book.getDetails());        // => Fiction written by Peter King
+;
+  </script>
+</div>
+<button id="function-objects-3-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-3');">
+  Run
+</button>
+
+
+<p>
+  The <code>Book</code> constructor accepts an argument which is assigned to a property 
+  named <code>type</code>. Once an object is created, you can assign property values 
+  and invoke methods just like any other object. 
+</p>
+
+<p>
+  Function objects can also be created as part of an object literal. Below we create 
+  an object named <code>circle</code> with a property named <code>area</code> which 
+  is a function object.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-4');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-4" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-4">var circle = {&#xD;&#xA;    radius: 10,&#xD;&#xA;    area: function () {&#xD;&#xA;        return Math.PI * this.radius * this.radius;&#xD;&#xA;    }&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;console.log(circle.area());                // =&gt; 314.15..&#xD;&#xA;console.log(typeof circle.area);           // =&gt; function&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var circle = {&#xD;&#xA;    radius: 10,&#xD;&#xA;    area: function () {&#xD;&#xA;        return Math.PI * this.radius * this.radius;&#xD;&#xA;    }&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;console.log(circle.area());                // =&gt; 314.15..&#xD;&#xA;console.log(typeof circle.area);           // =&gt; function&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-4" style="display:none;">
+  <script>
+      var circle = {
+    radius: 10,
+    area: function () {
+        return Math.PI * this.radius * this.radius;
+    }
+};
+
+console.log(circle.area());                // => 314.15..
+console.log(typeof circle.area);           // => function
+;
+  </script>
+</div>
+<button id="function-objects-4-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-4');">
+  Run
+</button>
+
+
+<p>
+  Next, let's look at an example where a function object is passed around like a 
+  regular object. The <code>negate</code> function takes a function as its argument. 
+  A new function is returned from the <code>negate</code> call that invokes the 
+  passed in function and returns the logical negation of its return value. 
+</p>
+
+<p>
+  Following the function declaration we pass the built-in <code>isNaN</code> function to 
+  <code>negate</code> and assign the function returned to the <code>isNumber</code> variable.  
+  The variable <code>isNumber</code> is a function object that can be passed around 
+  like any object. To invoke the function you call it with different parameters.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-5');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-5" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-5">function negate(f) {&#xD;&#xA;    return function (i) {&#xD;&#xA;        return !f(i);&#xD;&#xA;    };&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var isNumber = negate(isNaN);  // function object&#xD;&#xA;&#xD;&#xA;console.log(isNumber(5));            // =&gt; true&#xD;&#xA;console.log(isNumber(NaN));          // =&gt; false&#xD;&#xA;console.log(isNumber(&quot;A&quot;));          // =&gt; false&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function negate(f) {&#xD;&#xA;    return function (i) {&#xD;&#xA;        return !f(i);&#xD;&#xA;    };&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var isNumber = negate(isNaN);  // function object&#xD;&#xA;&#xD;&#xA;console.log(isNumber(5));            // =&gt; true&#xD;&#xA;console.log(isNumber(NaN));          // =&gt; false&#xD;&#xA;console.log(isNumber(&quot;A&quot;));          // =&gt; false&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-5" style="display:none;">
+  <script>
+      function negate(f) {
+    return function (i) {
+        return !f(i);
+    };
+}
+
+var isNumber = negate(isNaN);  // function object
+
+console.log(isNumber(5));            // => true
+console.log(isNumber(NaN));          // => false
+console.log(isNumber("A"));          // => false
+;
+  </script>
+</div>
+<button id="function-objects-5-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-5');">
+  Run
+</button>
+
+
+<p>
+  Here is another example using the same <code>negate</code> function.  We added a custom 
+  function to test whether a number is <i>prime</i> or not (non-prime numbers are called 
+  <i>composite</i>).  This function is passed to the <code>negate</code> function as 
+  an argument.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-6');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-6" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-6">var isPrime = function (number) {     // determines if number is prime&#xD;&#xA;    var divisor = parseInt(number / 2, 10);&#xD;&#xA;    var prime = true;&#xD;&#xA;    while (divisor &gt; 1) {&#xD;&#xA;        if (number % divisor === 0) {&#xD;&#xA;            prime = false;&#xD;&#xA;            divisor = 0;&#xD;&#xA;        } else {&#xD;&#xA;            divisor -= 1;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;    return prime === true;&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;function negate(f) {&#xD;&#xA;    return function (i) {&#xD;&#xA;        return !f(i);&#xD;&#xA;    };&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var isComposite = negate(isPrime);       // function object&#xD;&#xA;&#xD;&#xA;console.log([2, 4].every(isComposite));  // =&gt; false (2 is prime, 4 is not)&#xD;&#xA;console.log([4, 6].every(isComposite));  // =&gt; true (4 or 6 are composite)&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>var isPrime = function (number) {     // determines if number is prime&#xD;&#xA;    var divisor = parseInt(number / 2, 10);&#xD;&#xA;    var prime = true;&#xD;&#xA;    while (divisor &gt; 1) {&#xD;&#xA;        if (number % divisor === 0) {&#xD;&#xA;            prime = false;&#xD;&#xA;            divisor = 0;&#xD;&#xA;        } else {&#xD;&#xA;            divisor -= 1;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;    return prime === true;&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;function negate(f) {&#xD;&#xA;    return function (i) {&#xD;&#xA;        return !f(i);&#xD;&#xA;    };&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var isComposite = negate(isPrime);       // function object&#xD;&#xA;&#xD;&#xA;console.log([2, 4].every(isComposite));  // =&gt; false (2 is prime, 4 is not)&#xD;&#xA;console.log([4, 6].every(isComposite));  // =&gt; true (4 or 6 are composite)&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-6" style="display:none;">
+  <script>
+      var isPrime = function (number) {     // determines if number is prime
+    var divisor = parseInt(number / 2, 10);
+    var prime = true;
+    while (divisor > 1) {
+        if (number % divisor === 0) {
+            prime = false;
+            divisor = 0;
+        } else {
+            divisor -= 1;
+        }
+    }
+    return prime === true;
+};
+
+function negate(f) {
+    return function (i) {
+        return !f(i);
+    };
+}
+
+var isComposite = negate(isPrime);       // function object
+
+console.log([2, 4].every(isComposite));  // => false (2 is prime, 4 is not)
+console.log([4, 6].every(isComposite));  // => true (4 or 6 are composite)
+;
+  </script>
+</div>
+<button id="function-objects-6-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-6');">
+  Run
+</button>
+
+
+<p>
+  Note: the built-in <code>Array.every()</code> method tests whether all elements in the 
+  array pass the test implemented by the function that is passed as an argument; in our 
+  case the <code>isComposite</code> function object.
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="functions.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; JavaScript Functions &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="json.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; JavaScript JSON &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<a class="goto-target" id="by-reference"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xby-reference&#x27;).show();" onmouseout="$(&#x27;#xby-reference&#x27;).hide();">Function Copied by Reference</h2>
+    <h2><a id="xby-reference" style="display:none" class="d-block pl-12 header-anchor" href="#by-reference">#</a></h2>
+</div>
+
+
+
+<p>
+  When you assign a function object to another variable JavaScript does not create a new 
+  copy of the function. Instead it makes the new variable reference the same function 
+  object as original. It is just that two variables having different names are 
+  accessing the same underlying function object.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-7');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-7" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-7">function original() {&#xD;&#xA;    // ...&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;original.message = &quot;Hello&quot;;&#xD;&#xA;var copy = original;&#xD;&#xA;&#xD;&#xA;console.log(original.message);         // =&gt; Hello&#xD;&#xA;console.log(copy.message);             // =&gt; Hello&#xD;&#xA;&#xD;&#xA;copy.message = &quot;Greetings&quot;;&#xD;&#xA;&#xD;&#xA;console.log(original.message);         // =&gt; Greetings&#xD;&#xA;console.log(copy.message);             // =&gt; Greetings&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function original() {&#xD;&#xA;    // ...&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;original.message = &quot;Hello&quot;;&#xD;&#xA;var copy = original;&#xD;&#xA;&#xD;&#xA;console.log(original.message);         // =&gt; Hello&#xD;&#xA;console.log(copy.message);             // =&gt; Hello&#xD;&#xA;&#xD;&#xA;copy.message = &quot;Greetings&quot;;&#xD;&#xA;&#xD;&#xA;console.log(original.message);         // =&gt; Greetings&#xD;&#xA;console.log(copy.message);             // =&gt; Greetings&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-7" style="display:none;">
+  <script>
+      function original() {
+    // ...
+}
+
+original.message = "Hello";
+var copy = original;
+
+console.log(original.message);         // => Hello
+console.log(copy.message);             // => Hello
+
+copy.message = "Greetings";
+
+console.log(original.message);         // => Greetings
+console.log(copy.message);             // => Greetings
+;
+  </script>
+</div>
+<button id="function-objects-7-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-7');">
+  Run
+</button>
+
+
+<p>
+  This example shows that if we add a property to the function object, then both variables, 
+  <code>original</code> and <code>copy</code>, will be changed because they are 
+  referencing the same function object. This confirms that function objects are indeed 
+  copied by reference.
+</p>
+
+<hr />
+<a class="goto-target" id="function-body"></a>
+<div class="d-flex">
+    <h3 onmouseover="$(&#x27;#xfunction-body&#x27;).show();" onmouseout="$(&#x27;#xfunction-body&#x27;).hide();">Function Object Body</h3>
+    <h3 class="pl-12"><a id="xfunction-body" class="d-block header-anchor" href="#function-body">#</a></h3>
+</div>
+
+
+
+
+<p>
+  We just learned that function objects are copied by reference. However, when modifying the 
+  actual function body, things are a bit different because this will cause a new function object 
+  to be created.  In the next example the <code>original</code> function body is changed and 
+  JavaScript will create a new function object. 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-8');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-8" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-8">function original() {&#xD;&#xA;    console.log(&quot;I am Original&quot;);&#xD;&#xA;}&#xD;&#xA;var copy = original;&#xD;&#xA;&#xD;&#xA;original();                  // =&gt; I am Original&#xD;&#xA;copy();                      // =&gt; I am Original&#xD;&#xA;&#xD;&#xA;original = function () {     // Modify the original code&#xD;&#xA;    console.log(&quot;I am Altered&quot;);&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;original();                  // =&gt; I am Altered&#xD;&#xA;copy();                      // =&gt; I am Original&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function original() {&#xD;&#xA;    console.log(&quot;I am Original&quot;);&#xD;&#xA;}&#xD;&#xA;var copy = original;&#xD;&#xA;&#xD;&#xA;original();                  // =&gt; I am Original&#xD;&#xA;copy();                      // =&gt; I am Original&#xD;&#xA;&#xD;&#xA;original = function () {     // Modify the original code&#xD;&#xA;    console.log(&quot;I am Altered&quot;);&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;original();                  // =&gt; I am Altered&#xD;&#xA;copy();                      // =&gt; I am Original&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-8" style="display:none;">
+  <script>
+      function original() {
+    console.log("I am Original");
+}
+var copy = original;
+
+original();                  // => I am Original
+copy();                      // => I am Original
+
+original = function () {     // Modify the original code
+    console.log("I am Altered");
+};
+
+original();                  // => I am Altered
+copy();                      // => I am Original
+;
+  </script>
+</div>
+<button id="function-objects-8-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-8');">
+  Run
+</button>
+
+
+<p>
+  Assigning a new function body to <code>original</code> will create a new function object. 
+  Note that the <code>copy</code> variable still references the old function object.
+</p>
+
+<hr />
+<a class="goto-target" id="callback"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xcallback&#x27;).show();" onmouseout="$(&#x27;#xcallback&#x27;).hide();">Passing a function as a Callback</h2>
+    <h2><a id="xcallback" style="display:none" class="d-block pl-12 header-anchor" href="#callback">#</a></h2>
+</div>
+
+
+
+<p>
+  Just like a regular object, you can pass a function object to another function (actually 
+  you've already seen this in action with the <code>negate</code> function example). 
+</p>
+
+<p>
+  In the next example, two different functions, <code>add</code> and <code>multiply</code>, are 
+  passed as a parameter to the function <code>action</code>.  Of course, only a reference 
+  to the function is passed. The functions <code>add</code> and <code>multiply</code> 
+  are called callbacks or more appropriately callback functions.  
+  The function <code>action</code> will call it back (i.e. invoke it) with the 
+  two argument values provided: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-9');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-9" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-9">function action(callback, x, y) {&#xD;&#xA;    var result = callback(x, y);&#xD;&#xA;    console.log(result);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;function add(x, y) {&#xD;&#xA;    return x &#x2B; y;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;function multiply(x, y) {&#xD;&#xA;    return x * y;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;action(add, 2, 3);           // =&gt; 5&#xD;&#xA;action(multiply, 2, 3);      // =&gt; 6&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function action(callback, x, y) {&#xD;&#xA;    var result = callback(x, y);&#xD;&#xA;    console.log(result);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;function add(x, y) {&#xD;&#xA;    return x &#x2B; y;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;function multiply(x, y) {&#xD;&#xA;    return x * y;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;action(add, 2, 3);           // =&gt; 5&#xD;&#xA;action(multiply, 2, 3);      // =&gt; 6&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-9" style="display:none;">
+  <script>
+      function action(callback, x, y) {
+    var result = callback(x, y);
+    console.log(result);
+}
+
+function add(x, y) {
+    return x + y;
+}
+
+function multiply(x, y) {
+    return x * y;
+}
+
+action(add, 2, 3);           // => 5
+action(multiply, 2, 3);      // => 6
+;
+  </script>
+</div>
+<button id="function-objects-9-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-9');">
+  Run
+</button>
+
+
+<p>
+  Callback functions play an important role in many frameworks, including JQuery. 
+  Consider the code below. The <code>alert</code> message executes well before the 
+  <code>hide</code> animation is complete, which is probably not what you want.  
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+$("#blue").hide(2000);           
+alert("Animation complete.."); // executes before animation is complete
+</pre>
+<a class="btn btn-md btn-submit-green ml-25 mb-20 mt-0" style="border-radius:1px;background:#4d3a3a;border:none;width:90px;" href="javascript:void(0);" onclick="run10();return false">Run</a>&nbsp;
+<a class="btn btn-md btn-submit-green ml-0 mb-20 mt-0" style="border-radius:1px;background:#4d3a3a;border:none;width:90px;" href="javascript:void(0);" onclick="reset10();return false">Reset</a>
+<div id="blue" style="width:110px;height:100px;background:lightblue;margin:10px 5px;margin-left:25px;"></div>
+<script type="text/javascript">
+  function run10() {
+    $("#blue").hide(2000);
+    alert("Animation complete..");        // executes before animation is complete
+  }
+  function reset10() {
+    $("#blue").show(1);
+  }
+</script>
+
+<p>
+  This can be solved by passing in a callback function which will execute <i>only</i> when 
+  the animation is complete. 
+</p>
+
+<pre class="prettyprint xlinenums run code-hscroll">
+$("#red").hide(2000, function() {   
+    alert("Animation complete.."); // executes after animation
+});
+</pre>
+<a class="btn btn-md btn-submit-green ml-25 mb-20 mt-0" style="border-radius:1px;background:#4d3a3a;border:none;width:90px;" href="javascript:void(0);" onclick="run11();return false">Run</a>&nbsp;
+<a class="btn btn-md btn-submit-green ml-0 mb-20 mt-0" style="border-radius:1px;background:#4d3a3a;border:none;width:90px;" href="javascript:void(0);" onclick="reset11();return false">Reset</a>
+<div id="red" style="width:110px;height:100px;background:red;margin:10px 5px;margin-left:25px;"></div>
+
+<script type="text/javascript">
+  function run11() {
+    $("#red").hide(2000, function () {   // callback function executes after animation is complete
+      alert("Animation complete..");
+    });
+
+  }
+  function reset11() {
+    $("#red").show(1);
+  }
+</script>
+
+<p>
+  So, instead of waiting for a function to complete you can utilize callbacks to execute it 
+  <i>asynchronously</i>. This is beneficial for tasks that take some time to complete, 
+  such as the above hide animation. Another example is when executing an AJAX operation 
+  and you don't want the user to wait for the call to come back.  This allows the 
+  browser to continue to respond to user requests while waiting for the callback 
+  function to be called.
+</p>
+
+<p>
+  Asynchronous programming is an important skill to have when working with JavaScript. 
+  To learn more about callbacks and the important event loop we suggest you check our 
+  unique <a href="../products/dofactory-js.html"><b>Dofactory JS</b></a> where we explore 
+  these and other topics in much greater detail. <a href="../products/dofactory-js.html">Click here</a> 
+  for more details. 
+</p>
+
+<hr />
+<a class="goto-target" id="currying"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xcurrying&#x27;).show();" onmouseout="$(&#x27;#xcurrying&#x27;).hide();">Currying</h2>
+    <h2><a id="xcurrying" style="display:none" class="d-block pl-12 header-anchor" href="#currying">#</a></h2>
+</div>
+
+
+
+<p>
+  In situations where a function is repeatedly called with mostly the same arguments, 
+  you may have a candidate for <i>currying</i>.  To curry a function is essentially 
+  caching and reusing argument values. 
+</p>
+
+<p>
+  A curried function uses a closure to cache the state of recurring arguments so that 
+  you don't need to pass them every time. The new function then uses them to pre-populate 
+  the entire list of arguments that the original function requires.
+</p>
+
+<p>
+  The input to the currying process is a function that accepts two or more arguments. It then 
+  transforms the function to produce a new function that offers the similar functionality 
+  but with partial (fewer than the original) arguments. It binds the rest of the arguments 
+  to fixed values.
+</p>
+
+<p>
+  Let's look at an example. The function <code>name</code> accepts two arguments for 
+  first name and last name: <code>first</code> and <code>last</code>. It concatenates 
+  them to generate the person's name.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-10');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-10" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-10">function name(first, last) {&#xD;&#xA;    return first &#x2B; &quot; &quot; &#x2B; last;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(name(&quot;Joni&quot;, &quot;Mitchell&quot;));&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function name(first, last) {&#xD;&#xA;    return first &#x2B; &quot; &quot; &#x2B; last;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(name(&quot;Joni&quot;, &quot;Mitchell&quot;));&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-10" style="display:none;">
+  <script>
+      function name(first, last) {
+    return first + " " + last;
+}
+
+console.log(name("Joni", "Mitchell"));
+;
+  </script>
+</div>
+<button id="function-objects-10-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-10');">
+  Run
+</button>
+
+
+<p>
+  Next, we create a curried version of the same function. If we pass two arguments it 
+  executes normally, just like the example above. If, however, we only pass the 
+  <code>first</code> argument, then an another function is returned with its closure which 
+  holds the <code>first</code> value. The returned function accepts a partial list of 
+  arguments, in our example, just one argument which is <code>last</code> because it already 
+  knows what the <code>first</code> value is.  Again, it performs the same job as 
+  <code>name</code>, but the value of <code>first</code> is remembered in the closure 
+  associated with the anonymous helper function that is returned. 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-11');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-11" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-11">function name(first, last) {&#xD;&#xA;    if (typeof last === &#x27;undefined&#x27;) {&#xD;&#xA;        return function (last) {          // curry function, creates a closure&#xD;&#xA;            return first &#x2B; &quot; &quot; &#x2B; last;&#xD;&#xA;        };&#xD;&#xA;    }&#xD;&#xA;    return first &#x2B; &quot; &quot; &#x2B; last;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(name(&quot;Joni&quot;, &quot;Mitchell&quot;));    // =&gt; Joni Mitchell&#xD;&#xA;&#xD;&#xA;var partialName = name(&quot;Joni&quot;);&#xD;&#xA;&#xD;&#xA;console.log(partialName(&quot;Mitchell&quot;));     // =&gt; Joni Mitchell&#xD;&#xA;console.log(partialName(&quot;McNamara&quot;));     // =&gt; Joni McNamara&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function name(first, last) {&#xD;&#xA;    if (typeof last === &#x27;undefined&#x27;) {&#xD;&#xA;        return function (last) {          // curry function, creates a closure&#xD;&#xA;            return first &#x2B; &quot; &quot; &#x2B; last;&#xD;&#xA;        };&#xD;&#xA;    }&#xD;&#xA;    return first &#x2B; &quot; &quot; &#x2B; last;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(name(&quot;Joni&quot;, &quot;Mitchell&quot;));    // =&gt; Joni Mitchell&#xD;&#xA;&#xD;&#xA;var partialName = name(&quot;Joni&quot;);&#xD;&#xA;&#xD;&#xA;console.log(partialName(&quot;Mitchell&quot;));     // =&gt; Joni Mitchell&#xD;&#xA;console.log(partialName(&quot;McNamara&quot;));     // =&gt; Joni McNamara&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-11" style="display:none;">
+  <script>
+      function name(first, last) {
+    if (typeof last === 'undefined') {
+        return function (last) {          // curry function, creates a closure
+            return first + " " + last;
+        };
+    }
+    return first + " " + last;
+}
+
+console.log(name("Joni", "Mitchell"));    // => Joni Mitchell
+
+var partialName = name("Joni");
+
+console.log(partialName("Mitchell"));     // => Joni Mitchell
+console.log(partialName("McNamara"));     // => Joni McNamara
+;
+  </script>
+</div>
+<button id="function-objects-11-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-11');">
+  Run
+</button>
+
+
+<p>
+  In JavaScript, a function needs a helper function to achieve currying. This helper function 
+  is commonly referred to as the <i>curry function</i>. 
+</p>
+
+<p>
+  There is a generic implementation of currying that can be applied to any function and the code 
+  below demonstrates this.  It creates a closure that stores both the original function and 
+  the arguments to curry. Then, when called again, it concatenates the incoming arguments 
+  with the prior array of arguments and executes the original function. One array holds 
+  the arguments passed to the current invocation and the other array holds the arguments 
+  passed to the curry function.  The concatenated array is then passed to the 
+  original function.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-12');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-12" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-12">Function.prototype.curry = function () {&#xD;&#xA;    var f = this;&#xD;&#xA;    var curryArgs = Array.prototype.slice.call(arguments);&#xD;&#xA;&#xD;&#xA;    // Return a function that returns the result &#xD;&#xA;    // of invoking the original function&#xD;&#xA;    return function () {&#xD;&#xA;        return f.apply(this, curryArgs.concat(&#xD;&#xA;            Array.prototype.slice.call(arguments)));&#xD;&#xA;    };&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;function show(message) {&#xD;&#xA;    console.log(message);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var joke = show.curry(&quot;Two friends walk into a bar...&quot;);&#xD;&#xA;&#xD;&#xA;joke();       // Two friends walk into a bar..&#xD;&#xA;joke();       // Two friends walk into a bar..&#xD;&#xA;joke();       // Two friends walk into a bar..&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>Function.prototype.curry = function () {&#xD;&#xA;    var f = this;&#xD;&#xA;    var curryArgs = Array.prototype.slice.call(arguments);&#xD;&#xA;&#xD;&#xA;    // Return a function that returns the result &#xD;&#xA;    // of invoking the original function&#xD;&#xA;    return function () {&#xD;&#xA;        return f.apply(this, curryArgs.concat(&#xD;&#xA;            Array.prototype.slice.call(arguments)));&#xD;&#xA;    };&#xD;&#xA;};&#xD;&#xA;&#xD;&#xA;function show(message) {&#xD;&#xA;    console.log(message);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var joke = show.curry(&quot;Two friends walk into a bar...&quot;);&#xD;&#xA;&#xD;&#xA;joke();       // Two friends walk into a bar..&#xD;&#xA;joke();       // Two friends walk into a bar..&#xD;&#xA;joke();       // Two friends walk into a bar..&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-12" style="display:none;">
+  <script>
+      Function.prototype.curry = function () {
+    var f = this;
+    var curryArgs = Array.prototype.slice.call(arguments);
+
+    // Return a function that returns the result 
+    // of invoking the original function
+    return function () {
+        return f.apply(this, curryArgs.concat(
+            Array.prototype.slice.call(arguments)));
+    };
+};
+
+function show(message) {
+    console.log(message);
+}
+
+var joke = show.curry("Two friends walk into a bar...");
+
+joke();       // Two friends walk into a bar..
+joke();       // Two friends walk into a bar..
+joke();       // Two friends walk into a bar..
+;
+  </script>
+</div>
+<button id="function-objects-12-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-12');">
+  Run
+</button>
+
+
+<hr />
+<a class="goto-target" id="bind"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xbind&#x27;).show();" onmouseout="$(&#x27;#xbind&#x27;).hide();">bind()</h2>
+    <h2><a id="xbind" style="display:none" class="d-block pl-12 header-anchor" href="#bind">#</a></h2>
+</div>
+
+
+
+<p>
+  All JavaScript functions have a method called <code>bind</code> that binds to an object 
+  and returns a new function.  The first argument to bind sets the <code>this</code> context 
+  of the function.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-13');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-13" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-13">function area(height) {&#xD;&#xA;    return this.width * height;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var obj = { width: 5 };&#xD;&#xA;var bound = area.bind(obj);&#xD;&#xA;&#xD;&#xA;console.log(bound(4));             // =&gt; 20&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function area(height) {&#xD;&#xA;    return this.width * height;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var obj = { width: 5 };&#xD;&#xA;var bound = area.bind(obj);&#xD;&#xA;&#xD;&#xA;console.log(bound(4));             // =&gt; 20&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-13" style="display:none;">
+  <script>
+      function area(height) {
+    return this.width * height;
+}
+
+var obj = { width: 5 };
+var bound = area.bind(obj);
+
+console.log(bound(4));             // => 20
+;
+  </script>
+</div>
+<button id="function-objects-13-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-13');">
+  Run
+</button>
+
+
+
+<p>
+  Calling <code>bound(4);</code> invokes the original function <code>area</code> as a method of 
+  <code>obj</code>, like <code>obj.area(4);</code>. The argument you pass to <code>bound</code> 
+  is passed as the <code>height</code> argument to the function <code>area</code>. 
+</p>
+
+<p>
+  In addition to binding a function to an object,
+  EcmaScript 5 supports a <code>bind</code> method that brings native currying to 
+  JavaScript. You no longer need to use a curry helper function. The arbitrary number 
+  of arguments that you pass to <code>bind</code> are also bound.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-14');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-14" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-14">function add(x, y, z) {&#xD;&#xA;    return x &#x2B; y &#x2B; z;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var partial = add.bind(null, 1, 2);&#xD;&#xA;&#xD;&#xA;var result = partial(3);          // pass 3 for the z argument &#xD;&#xA;&#xD;&#xA;console.log(result);              // =&gt; 6&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function add(x, y, z) {&#xD;&#xA;    return x &#x2B; y &#x2B; z;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var partial = add.bind(null, 1, 2);&#xD;&#xA;&#xD;&#xA;var result = partial(3);          // pass 3 for the z argument &#xD;&#xA;&#xD;&#xA;console.log(result);              // =&gt; 6&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-14" style="display:none;">
+  <script>
+      function add(x, y, z) {
+    return x + y + z;
+}
+
+var partial = add.bind(null, 1, 2);
+
+var result = partial(3);          // pass 3 for the z argument 
+
+console.log(result);              // => 6
+;
+  </script>
+</div>
+<button id="function-objects-14-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-14');">
+  Run
+</button>
+
+
+
+<p>
+  This creates a new function called <code>partial</code>. The <code>this</code> value is bound 
+  to null, i.e. the global object, and the <code>x</code> and <code>y</code> arguments are 
+  bound to 1 and 2 respectively.  Calling <code>partial</code> with the argument value 
+  3 binds this value to <code>x</code> and then executes the <code>add</code> function 
+  without the need to write a curry function.
+</p>
+
+<p>
+  Next, let's look at a practical application of currying in the area of unit conversions:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-15');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-15" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-15">function unitConversion(toUnit, factor, offset, input) {&#xD;&#xA;    offset = offset || 0;&#xD;&#xA;    return [((offset &#x2B; input) * factor).toFixed(2), toUnit].join(&quot; &quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var meterToKm = unitConversion.bind(null, &#x27;km&#x27;, 0.001, 0);&#xD;&#xA;var kgToGram = unitConversion.bind(null, &#x27;grams&#x27;, 1000, 0);&#xD;&#xA;&#xD;&#xA;console.log(kgToGram(3.7));                 // =&gt; 3700 grams&#xD;&#xA;console.log(meterToKm(2000));               // =&gt; 2 km&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function unitConversion(toUnit, factor, offset, input) {&#xD;&#xA;    offset = offset || 0;&#xD;&#xA;    return [((offset &#x2B; input) * factor).toFixed(2), toUnit].join(&quot; &quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;var meterToKm = unitConversion.bind(null, &#x27;km&#x27;, 0.001, 0);&#xD;&#xA;var kgToGram = unitConversion.bind(null, &#x27;grams&#x27;, 1000, 0);&#xD;&#xA;&#xD;&#xA;console.log(kgToGram(3.7));                 // =&gt; 3700 grams&#xD;&#xA;console.log(meterToKm(2000));               // =&gt; 2 km&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-15" style="display:none;">
+  <script>
+      function unitConversion(toUnit, factor, offset, input) {
+    offset = offset || 0;
+    return [((offset + input) * factor).toFixed(2), toUnit].join(" ");
+}
+
+var meterToKm = unitConversion.bind(null, 'km', 0.001, 0);
+var kgToGram = unitConversion.bind(null, 'grams', 1000, 0);
+
+console.log(kgToGram(3.7));                 // => 3700 grams
+console.log(meterToKm(2000));               // => 2 km
+;
+  </script>
+</div>
+<button id="function-objects-15-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-15');">
+  Run
+</button>
+
+
+
+<p>
+  The <code>unitConversion</code> function performs the actual unit conversion computations. 
+  Look at <code>bind</code> and, again, the null argument refers to the global object 
+  to be used as <code>this</code>. The next three arguments are bound to <code>toUnit</code>, 
+  <code>factor</code>, and <code>offset</code> respectively.  These bindings are 
+  stored and maintained in the closure that is associated with the <code>meterToKm</code> 
+  and <code>kgToGram</code> function objects.  In the last two lines we call each function 
+  with a value which is then bound to the <code>input</code> variable and the original 
+  <code>unitConversion</code> function is called returning the desired results.
+</p>
+
+<hr />
+<a class="goto-target" id="caching"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xcaching&#x27;).show();" onmouseout="$(&#x27;#xcaching&#x27;).hide();">Caching</h2>
+    <h2><a id="xcaching" style="display:none" class="d-block pl-12 header-anchor" href="#caching">#</a></h2>
+</div>
+
+
+
+
+<p>
+  Suppose you are building a car racing game in JavaScript and you need to keep track 
+  of the total number of car objects that have been instantiated. In Java, you would 
+  use the static keyword for this, but JavaScript does not offer such functionality 
+  out-of-the-box.
+</p>
+
+<p>
+  Of course, you could simply store this piece of data in a global variable but this would 
+  add unnecessary variables to the global namespace. A better solution is to store this 
+  information in a property of a function object. Let's call the function <code>carCount</code> 
+  and use it to memorize the next value to be returned. Then the function would be able to 
+  return a different value each time it is invoked.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-16');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-16" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-16">function carCount() {&#xD;&#xA;    var count = 0;&#xD;&#xA;    var increment = function () {&#xD;&#xA;        return &#x2B;&#x2B;count;&#xD;&#xA;    }&#xD;&#xA;    return increment;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(carCount());    // =&gt; 1&#xD;&#xA;console.log(carCount());    // =&gt; 2&#xD;&#xA;console.log(carCount());    // =&gt; 3&#xD;&#xA;console.log(carCount());    // =&gt; 4&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function carCount() {&#xD;&#xA;    var count = 0;&#xD;&#xA;    var increment = function () {&#xD;&#xA;        return &#x2B;&#x2B;count;&#xD;&#xA;    }&#xD;&#xA;    return increment;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(carCount());    // =&gt; 1&#xD;&#xA;console.log(carCount());    // =&gt; 2&#xD;&#xA;console.log(carCount());    // =&gt; 3&#xD;&#xA;console.log(carCount());    // =&gt; 4&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-16" style="display:none;">
+  <script>
+      function carCount() {
+    var count = 0;
+    var increment = function () {
+        return ++count;
+    }
+    return increment;
+}
+
+console.log(carCount());    // => 1
+console.log(carCount());    // => 2
+console.log(carCount());    // => 3
+console.log(carCount());    // => 4
+;
+  </script>
+</div>
+<button id="function-objects-16-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-16');">
+  Run
+</button>
+
+
+<p>
+  In functional programming, caching the results of a function call is referred to as 
+  <i>memoization</i>. Let's explore this in a little more detail.
+</p>
+
+<hr />
+<a class="goto-target" id="memoization"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xmemoization&#x27;).show();" onmouseout="$(&#x27;#xmemoization&#x27;).hide();">Memoization</h2>
+    <h2><a id="xmemoization" style="display:none" class="d-block pl-12 header-anchor" href="#memoization">#</a></h2>
+</div>
+
+
+
+<p><i>Memoization</i> is an optimization technique that is used to improve the performance of a function by caching its return values so that it does not need to redo the potentially heavy computations next time it is called.</p>
+<p>
+  Not all functions can be memoized; only <i>referential transparent functions</i>. 
+  A referential transparent function is one that always produces the same output on 
+  a given input. For instance, if you invoke a function with a value x passed to it, 
+  it will perform calculations on x and always returns the same associated y value. 
+</p>
+
+<p>
+  Good examples of where memoization can be beneficial are HTML5 Canvas animations 
+  and recursive mathematical calculations, such as, factorial computation, generating 
+  Fibonacci sequences, and matrix chain multiplications. 
+</p>
+
+<p>
+  Let's look at how memoization can be used to improve computing the Fibonacci numbers. 
+  The recursive approach to generating these numbers does not scale very well.   
+  In the example below the <code>getFibonacci</code> function is recursively called 177 times 
+  to generate the sum of the first 10 Fibonacci numbers: 
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-17');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-17" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-17">function getFibonacci(num) {&#xD;&#xA;    if (num &lt; 2) {&#xD;&#xA;        return num;&#xD;&#xA;    }&#xD;&#xA;    return getFibonacci(num - 1) &#x2B; getFibonacci(num - 2);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(getFibonacci(10));     // =&gt; 55   (with 177 iterations)&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function getFibonacci(num) {&#xD;&#xA;    if (num &lt; 2) {&#xD;&#xA;        return num;&#xD;&#xA;    }&#xD;&#xA;    return getFibonacci(num - 1) &#x2B; getFibonacci(num - 2);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(getFibonacci(10));     // =&gt; 55   (with 177 iterations)&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-17" style="display:none;">
+  <script>
+      function getFibonacci(num) {
+    if (num < 2) {
+        return num;
+    }
+    return getFibonacci(num - 1) + getFibonacci(num - 2);
+}
+
+console.log(getFibonacci(10));     // => 55   (with 177 iterations)
+;
+  </script>
+</div>
+<button id="function-objects-17-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-17');">
+  Run
+</button>
+
+
+<p>
+  The program does a lot of extra work by not keeping track of previously calculated values.  
+  This is where memoization comes in.   First, declare a cache array where you can store 
+  the already-calculated function values that were returned in previous calls.  Then, 
+  instead of invoking the function, return these values in subsequent calls to the 
+  function, like so:
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('function-objects-18');"><img src="../img/copy.png" /> copy</a>
+  </div>
+  <div id="show-function-objects-18" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-function-objects-18">function getFibonacci(num) {&#xD;&#xA;    var cache = [];&#xD;&#xA;    var fib = function (value) {&#xD;&#xA;        if (value &lt; 2) return value;&#xD;&#xA;        if (cache[value]) return cache[value];&#xD;&#xA;&#xD;&#xA;        cache[value] = (fib(value - 1)) &#x2B; (fib(value - 2));&#xD;&#xA;        return cache[value];&#xD;&#xA;    };&#xD;&#xA;    return fib(num);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(getFibonacci(10));     // =&gt; 55   (with 20 iterations)&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>function getFibonacci(num) {&#xD;&#xA;    var cache = [];&#xD;&#xA;    var fib = function (value) {&#xD;&#xA;        if (value &lt; 2) return value;&#xD;&#xA;        if (cache[value]) return cache[value];&#xD;&#xA;&#xD;&#xA;        cache[value] = (fib(value - 1)) &#x2B; (fib(value - 2));&#xD;&#xA;        return cache[value];&#xD;&#xA;    };&#xD;&#xA;    return fib(num);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;console.log(getFibonacci(10));     // =&gt; 55   (with 20 iterations)&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="function-objects-18" style="display:none;">
+  <script>
+      function getFibonacci(num) {
+    var cache = [];
+    var fib = function (value) {
+        if (value < 2) return value;
+        if (cache[value]) return cache[value];
+
+        cache[value] = (fib(value - 1)) + (fib(value - 2));
+        return cache[value];
+    };
+    return fib(num);
+}
+
+console.log(getFibonacci(10));     // => 55   (with 20 iterations)
+;
+  </script>
+</div>
+<button id="function-objects-18-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'function-objects-18');">
+  Run
+</button>
+
+
+<p>
+  To generate the first 10 Fibonacci numbers, this function is recursively executed 20 times only. 
+  A significant improvement. 
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="functions.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; JavaScript Functions &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="json.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; JavaScript JSON &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+          <div class="bg-light p-10 my-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css.html">CSS Tutorial</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/selectors.html">CSS Selectors</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/borders.html">CSS Borders</a></li>
+
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/flex.html">CSS Flex</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/grids.html">CSS Grid</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/tables.html">CSS Tables</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/notfound.html">CSS Units</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/fonts.html">CSS Fonts</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/animation.html">CSS Animation</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/hover.html">CSS Hover</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/images.html">CSS Images</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="../css/comments.html">CSS Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" xstyle="flex: 0 0 230px">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">Function Objects</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#first-class">First-class</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#by-reference">By reference</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#function-body">Function body</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#callback">Callback</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#currying">Currying</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#function">bind()</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#caching">Caching</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#memoization">Memoization</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+
+    let runbutton = function (button, model) {
+      var n = '#' + model;
+      var text = button.innerText;
+      if (text == "Run") {
+        $(n).slideDown(300);
+        button.innerText = "Clear";
+      } else {
+        $(n).slideUp(300);
+        button.innerText = "Run";
+      }
+    };
+
+    function copy(id) {
+      var stor = document.createElement("textarea");
+      stor.setAttribute("contentEditable", true);
+      stor.innerHTML = document.getElementById('copy-' + id).innerHTML;
+      stor.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+      document.body.appendChild(stor);
+      stor.focus({ preventScroll: true });
+      stor.focus();
+
+      document.execCommand("copy");
+      document.body.removeChild(stor);
+
+      $('#show-' + id).fadeIn('fast').delay(1200).fadeOut('slow');
+    }
+
+
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/javascript/function-objects by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:05:03 GMT -->
+</html>

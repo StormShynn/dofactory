@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/sql/editor/format-german by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:46:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SQL Format Example - Dofactory</title>
+    <meta name="keywords" content="SQL Editor, SQL, SQL Server, Data Analysis, Tutorial, Reference, Guide, Examples, Demos, Top, Best, Tips, Advice, Training, Learning, Courses, Lessons, Interview, Programming, Code, Source">
+    <meta name="description" content="SQL Editor. SQL Server FORMAT -- the best examples. The FORMAT function returns a converted value that is formatted as specified. It is useful in converting dates, time, number, and currency.">
+
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="format-german.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+<header class='navbar navbar-expand-lg py-0 pl-0 do-navbar border-bottom'
+        style="height: 80px; background: #fff!important;">
+
+        <div class="width-240">
+          <a class="pl-35 pt-0 width-220 d-block" href="javascript:void(0)">
+            <img src="../../img/dofactorylogo.png" class="pt-6 no-outline" />
+          </a>
+        </div>
+      </header>
+
+
+    <div class="container-fluid">
+        <style>
+  th { background-color: #f6f8ff; }
+  ::-webkit-input-placeholder { color: #6f6fa9 !important; font-weight: normal; }
+</style>
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #ba3371 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+
+  <div class="">
+    <div class="height-70 pl-15 pt-27">
+
+      <div class="d-flex">
+          <div class="pt-10"><h1 class="m-0 p-0 font-25 font-weight-bold">SQL Editor</h1></div>
+        </div>
+    </div>
+
+    <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom ">
+      Tables and Columns&nbsp;
+    </div>
+
+    <nav class="width-230 do-links" id="scroll-list">
+
+      <div class="list-group mb-25 font-14" tabindex="-1" role="tablist" id="list-tab">
+
+          <a id="tableCustomer" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Customer &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsCustomer" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- FirstName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- LastName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- City <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Country <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Phone <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableOrder" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Order &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsOrder" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- OrderDate <span class="font-weight-normal">(datetime)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- OrderNumber <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- CustomerId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- TotalAmount <span class="font-weight-normal">(decimal)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableOrderItem" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">OrderItem &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsOrderItem" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- OrderId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ProductId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- UnitPrice <span class="font-weight-normal">(decimal)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Quantity <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableProduct" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Product &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsProduct" class="pl-20" style='display:none;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ProductName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- SupplierId <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- UnitPrice <span class="font-weight-normal">(decimal)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Package <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- IsDiscontinued <span class="font-weight-normal">(bit)</span></a>
+                  <div class="height-1"></div>
+            </div>
+          <a id="tableSupplier" class='pl-15 list-group-item list-group-item-action border-0 font-15 font-weight-semibold' style="background-color:#e9eaf1;"
+             href="javascript:void(0)">Supplier &nbsp;<i class="icon-arrow-down font-9"></i></a>
+            <div class="height-1"></div>
+            <div id="columnsSupplier" class="pl-20" style='display:block;margin-bottom:10px;'>
+
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Id <span class="font-weight-normal">(int)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- CompanyName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ContactName <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- ContactTitle <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- City <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Country <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Phone <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+                <a class='pl-0 list-group-item list-group-item-action border-0 font-15 xfont-weight-semibold'
+                   href="javascript:void(0)">- Fax <span class="font-weight-normal">(nvarchar)</span></a>
+                  <div class="height-1"></div>
+            </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="px-md-30 px-10 tutorial">
+
+      <div class="py-20">
+        <div id="scriptassist-display" class="pl-30 font-15 d-flex flex-column justify-content-center" style="background: #f6f7fa;height:85px;background:#333;color:white;">
+          <div class="d-flex">
+            <div><h1 style="display:inline;padding:0 !important;margin: 0 0 2px 0 !important; font-weight:600;border:none !important; font-size:16px !important;text-decoration:none !important;">Problem: </h1></div>
+            <div class="ml-12">List all orders from Germany formatted according to their local culture.
+</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="">
+
+        <form method="post" action="https://www.dofactory.com/sql/editor/format-german">
+
+          <textarea name="script" id="script" rows="9" class="mb-10 form-control border bg-light font-weight-semibold"
+                    placeholder="Enter your SQL" style="font-family: monospace, monospace;color:#334;font-weight:bold;">SELECT FirstName, LastName, City,
+       FORMAT(TotalAmount,'C', 'de-de') AS Amount,
+       FORMAT(OrderDate, 'd', 'de-de') AS Date
+ FROM [Order] O
+ JOIN Customer C ON C.Id = O.CustomerId
+WHERE C.Country = 'Germany'
+</textarea>
+
+          <input id="submit" type="submit" class="btn btn-dark" value="Run" />&nbsp;
+          <input id="clear" type="button" class="btn btn-light" value="Clear" />
+
+          <input type="hidden" id="scriptassist" name="scriptassist" value="List all orders from Germany formatted according to their local culture.&#xD;&#xA;" />
+          <input type="hidden" id="prescript" name="prescript" value="Format" />
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7EqvfB7A9a_33uXlOvGQ7bX0TqohP4yQld4YuNb2ot51YpO_s9AvAKCkdYwIXq9pOkfe2OU1WgN6BQqPANg9_QqaGyhli514YnY7nGekE_F6c7OLtIBqIoT6GJOcLT6Dy_-M" /></form>
+      </div>
+
+      <div class="mt-60 mb-40"></div>
+
+      <div id="results">
+        <div class="table-hscroll">
+
+            <div class="fffade mb-20 ml-5 font-weight-semibold py-5" style="background-color: #dbff9d; opacity: 0;">
+              &nbsp;122 Records
+            </div>
+            <table class="table table-md table-hover">
+
+                  <tr>
+                      <th>FirstName</th>
+                      <th>LastName</th>
+                      <th>City</th>
+                      <th>Amount</th>
+                      <th>Date</th>
+                  </tr>
+                  <tr>
+                        <td>Karin</td>
+                        <td>Josephs</td>
+                        <td>M&#xFC;nster</td>
+                        <td>1.863,40 &#x20AC;</td>
+                        <td>05.07.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Henriette</td>
+                        <td>Pfalzheim</td>
+                        <td>K&#xF6;ln</td>
+                        <td>1.746,20 &#x20AC;</td>
+                        <td>19.07.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>4.031,00 &#x20AC;</td>
+                        <td>29.07.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>2.142,40 &#x20AC;</td>
+                        <td>05.08.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Alexander</td>
+                        <td>Feuer</td>
+                        <td>Leipzig</td>
+                        <td>1.200,80 &#x20AC;</td>
+                        <td>09.08.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>468,00 &#x20AC;</td>
+                        <td>13.08.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>1.452,00 &#x20AC;</td>
+                        <td>19.08.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>2.179,20 &#x20AC;</td>
+                        <td>20.08.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>3.016,00 &#x20AC;</td>
+                        <td>21.08.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Rita</td>
+                        <td>M&#xFC;ller</td>
+                        <td>Stuttgart</td>
+                        <td>755,00 &#x20AC;</td>
+                        <td>09.09.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Rita</td>
+                        <td>M&#xFC;ller</td>
+                        <td>Stuttgart</td>
+                        <td>1.614,80 &#x20AC;</td>
+                        <td>23.09.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>182,40 &#x20AC;</td>
+                        <td>24.09.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>164,40 &#x20AC;</td>
+                        <td>07.10.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>1.497,00 &#x20AC;</td>
+                        <td>09.10.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>2.467,00 &#x20AC;</td>
+                        <td>24.10.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>2.300,80 &#x20AC;</td>
+                        <td>30.10.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>1.586,00 &#x20AC;</td>
+                        <td>31.10.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>2.924,80 &#x20AC;</td>
+                        <td>04.11.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Rita</td>
+                        <td>M&#xFC;ller</td>
+                        <td>Stuttgart</td>
+                        <td>396,00 &#x20AC;</td>
+                        <td>07.11.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Rita</td>
+                        <td>M&#xFC;ller</td>
+                        <td>Stuttgart</td>
+                        <td>1.106,40 &#x20AC;</td>
+                        <td>18.11.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>2.273,60 &#x20AC;</td>
+                        <td>22.11.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Sven</td>
+                        <td>Ottlieb</td>
+                        <td>Aachen</td>
+                        <td>447,20 &#x20AC;</td>
+                        <td>26.11.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Sven</td>
+                        <td>Ottlieb</td>
+                        <td>Aachen</td>
+                        <td>86,40 &#x20AC;</td>
+                        <td>23.12.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>1.903,80 &#x20AC;</td>
+                        <td>27.12.2012</td>
+                  </tr>
+                  <tr>
+                        <td>Henriette</td>
+                        <td>Pfalzheim</td>
+                        <td>K&#xF6;ln</td>
+                        <td>1.194,00 &#x20AC;</td>
+                        <td>07.01.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>1.814,80 &#x20AC;</td>
+                        <td>17.01.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Karin</td>
+                        <td>Josephs</td>
+                        <td>M&#xFC;nster</td>
+                        <td>567,50 &#x20AC;</td>
+                        <td>06.02.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Karin</td>
+                        <td>Josephs</td>
+                        <td>M&#xFC;nster</td>
+                        <td>273,60 &#x20AC;</td>
+                        <td>14.02.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>4.277,40 &#x20AC;</td>
+                        <td>19.02.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>656,00 &#x20AC;</td>
+                        <td>25.02.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>1.584,00 &#x20AC;</td>
+                        <td>25.02.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>717,60 &#x20AC;</td>
+                        <td>07.03.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>1.560,00 &#x20AC;</td>
+                        <td>27.03.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>1.380,60 &#x20AC;</td>
+                        <td>04.04.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Hanna</td>
+                        <td>Moos</td>
+                        <td>Mannheim</td>
+                        <td>149,00 &#x20AC;</td>
+                        <td>09.04.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>462,00 &#x20AC;</td>
+                        <td>15.04.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Henriette</td>
+                        <td>Pfalzheim</td>
+                        <td>K&#xF6;ln</td>
+                        <td>240,00 &#x20AC;</td>
+                        <td>16.04.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Hanna</td>
+                        <td>Moos</td>
+                        <td>Mannheim</td>
+                        <td>136,80 &#x20AC;</td>
+                        <td>17.04.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Rita</td>
+                        <td>M&#xFC;ller</td>
+                        <td>Stuttgart</td>
+                        <td>2.427,50 &#x20AC;</td>
+                        <td>22.04.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>10.588,50 &#x20AC;</td>
+                        <td>23.04.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>2.657,80 &#x20AC;</td>
+                        <td>30.04.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>1.670,00 &#x20AC;</td>
+                        <td>05.05.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>517,40 &#x20AC;</td>
+                        <td>12.05.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>2.085,00 &#x20AC;</td>
+                        <td>14.05.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>10.191,70 &#x20AC;</td>
+                        <td>19.05.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>493,80 &#x20AC;</td>
+                        <td>20.05.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Karin</td>
+                        <td>Josephs</td>
+                        <td>M&#xFC;nster</td>
+                        <td>275,10 &#x20AC;</td>
+                        <td>26.05.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>4.181,50 &#x20AC;</td>
+                        <td>27.05.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Henriette</td>
+                        <td>Pfalzheim</td>
+                        <td>K&#xF6;ln</td>
+                        <td>1.819,50 &#x20AC;</td>
+                        <td>30.05.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>1.152,50 &#x20AC;</td>
+                        <td>03.06.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>1.257,30 &#x20AC;</td>
+                        <td>06.06.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Alexander</td>
+                        <td>Feuer</td>
+                        <td>Leipzig</td>
+                        <td>2.147,40 &#x20AC;</td>
+                        <td>20.06.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Henriette</td>
+                        <td>Pfalzheim</td>
+                        <td>K&#xF6;ln</td>
+                        <td>1.067,10 &#x20AC;</td>
+                        <td>26.06.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Hanna</td>
+                        <td>Moos</td>
+                        <td>Mannheim</td>
+                        <td>330,00 &#x20AC;</td>
+                        <td>27.06.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>3.900,00 &#x20AC;</td>
+                        <td>03.07.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>543,65 &#x20AC;</td>
+                        <td>08.07.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>2.493,00 &#x20AC;</td>
+                        <td>09.07.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Karin</td>
+                        <td>Josephs</td>
+                        <td>M&#xFC;nster</td>
+                        <td>1.064,00 &#x20AC;</td>
+                        <td>23.07.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Hanna</td>
+                        <td>Moos</td>
+                        <td>Mannheim</td>
+                        <td>464,00 &#x20AC;</td>
+                        <td>29.07.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>1.429,75 &#x20AC;</td>
+                        <td>07.08.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>918,00 &#x20AC;</td>
+                        <td>13.08.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Rita</td>
+                        <td>M&#xFC;ller</td>
+                        <td>Stuttgart</td>
+                        <td>620,00 &#x20AC;</td>
+                        <td>14.08.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Rita</td>
+                        <td>M&#xFC;ller</td>
+                        <td>Stuttgart</td>
+                        <td>945,00 &#x20AC;</td>
+                        <td>21.08.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Maria</td>
+                        <td>Anders</td>
+                        <td>Berlin</td>
+                        <td>1.086,00 &#x20AC;</td>
+                        <td>25.08.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Rita</td>
+                        <td>M&#xFC;ller</td>
+                        <td>Stuttgart</td>
+                        <td>530,40 &#x20AC;</td>
+                        <td>01.09.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>1.203,50 &#x20AC;</td>
+                        <td>02.09.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>4.668,00 &#x20AC;</td>
+                        <td>05.09.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Rita</td>
+                        <td>M&#xFC;ller</td>
+                        <td>Stuttgart</td>
+                        <td>694,75 &#x20AC;</td>
+                        <td>15.09.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>2.301,75 &#x20AC;</td>
+                        <td>16.09.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>1.423,00 &#x20AC;</td>
+                        <td>19.09.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Henriette</td>
+                        <td>Pfalzheim</td>
+                        <td>K&#xF6;ln</td>
+                        <td>1.768,00 &#x20AC;</td>
+                        <td>26.09.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>10.164,80 &#x20AC;</td>
+                        <td>03.10.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Maria</td>
+                        <td>Anders</td>
+                        <td>Berlin</td>
+                        <td>878,00 &#x20AC;</td>
+                        <td>03.10.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>4.825,00 &#x20AC;</td>
+                        <td>06.10.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Alexander</td>
+                        <td>Feuer</td>
+                        <td>Leipzig</td>
+                        <td>114,00 &#x20AC;</td>
+                        <td>09.10.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Maria</td>
+                        <td>Anders</td>
+                        <td>Berlin</td>
+                        <td>330,00 &#x20AC;</td>
+                        <td>13.10.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>1.331,75 &#x20AC;</td>
+                        <td>24.10.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>3.463,00 &#x20AC;</td>
+                        <td>27.10.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>972,50 &#x20AC;</td>
+                        <td>29.10.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>4.529,80 &#x20AC;</td>
+                        <td>18.11.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>1.684,00 &#x20AC;</td>
+                        <td>04.12.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Henriette</td>
+                        <td>Pfalzheim</td>
+                        <td>K&#xF6;ln</td>
+                        <td>2.310,00 &#x20AC;</td>
+                        <td>05.12.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>3.603,22 &#x20AC;</td>
+                        <td>10.12.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Alexander</td>
+                        <td>Feuer</td>
+                        <td>Leipzig</td>
+                        <td>1.335,00 &#x20AC;</td>
+                        <td>16.12.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>770,00 &#x20AC;</td>
+                        <td>22.12.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>1.926,06 &#x20AC;</td>
+                        <td>23.12.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Sven</td>
+                        <td>Ottlieb</td>
+                        <td>Aachen</td>
+                        <td>420,00 &#x20AC;</td>
+                        <td>25.12.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>1.585,00 &#x20AC;</td>
+                        <td>26.12.2013</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>11.490,70 &#x20AC;</td>
+                        <td>06.01.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Sven</td>
+                        <td>Ottlieb</td>
+                        <td>Aachen</td>
+                        <td>1.030,76 &#x20AC;</td>
+                        <td>09.01.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Henriette</td>
+                        <td>Pfalzheim</td>
+                        <td>K&#xF6;ln</td>
+                        <td>1.007,70 &#x20AC;</td>
+                        <td>15.01.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Maria</td>
+                        <td>Anders</td>
+                        <td>Berlin</td>
+                        <td>851,00 &#x20AC;</td>
+                        <td>15.01.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>4.059,00 &#x20AC;</td>
+                        <td>21.01.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>1.052,14 &#x20AC;</td>
+                        <td>23.01.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Hanna</td>
+                        <td>Moos</td>
+                        <td>Mannheim</td>
+                        <td>625,00 &#x20AC;</td>
+                        <td>27.01.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>1.438,25 &#x20AC;</td>
+                        <td>29.01.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>581,00 &#x20AC;</td>
+                        <td>30.01.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>17.250,00 &#x20AC;</td>
+                        <td>02.02.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>1.620,00 &#x20AC;</td>
+                        <td>10.02.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>388,35 &#x20AC;</td>
+                        <td>17.02.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>5.502,11 &#x20AC;</td>
+                        <td>18.02.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>1.174,75 &#x20AC;</td>
+                        <td>05.03.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>500,00 &#x20AC;</td>
+                        <td>09.03.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>3.642,50 &#x20AC;</td>
+                        <td>10.03.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Alexander</td>
+                        <td>Feuer</td>
+                        <td>Leipzig</td>
+                        <td>245,00 &#x20AC;</td>
+                        <td>12.03.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Maria</td>
+                        <td>Anders</td>
+                        <td>Berlin</td>
+                        <td>491,20 &#x20AC;</td>
+                        <td>16.03.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Hanna</td>
+                        <td>Moos</td>
+                        <td>Mannheim</td>
+                        <td>677,00 &#x20AC;</td>
+                        <td>17.03.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>3.584,00 &#x20AC;</td>
+                        <td>19.03.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Karin</td>
+                        <td>Josephs</td>
+                        <td>M&#xFC;nster</td>
+                        <td>910,40 &#x20AC;</td>
+                        <td>23.03.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>2.870,00 &#x20AC;</td>
+                        <td>01.04.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>560,00 &#x20AC;</td>
+                        <td>02.04.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Henriette</td>
+                        <td>Pfalzheim</td>
+                        <td>K&#xF6;ln</td>
+                        <td>1.261,00 &#x20AC;</td>
+                        <td>03.04.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Maria</td>
+                        <td>Anders</td>
+                        <td>Berlin</td>
+                        <td>960,00 &#x20AC;</td>
+                        <td>09.04.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Peter</td>
+                        <td>Franken</td>
+                        <td>M&#xFC;nchen</td>
+                        <td>2.974,00 &#x20AC;</td>
+                        <td>09.04.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Henriette</td>
+                        <td>Pfalzheim</td>
+                        <td>K&#xF6;ln</td>
+                        <td>744,00 &#x20AC;</td>
+                        <td>14.04.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Horst</td>
+                        <td>Kloss</td>
+                        <td>Cunewalde</td>
+                        <td>6.941,49 &#x20AC;</td>
+                        <td>14.04.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Philip</td>
+                        <td>Cramer</td>
+                        <td>Brandenburg</td>
+                        <td>2.160,00 &#x20AC;</td>
+                        <td>16.04.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Sven</td>
+                        <td>Ottlieb</td>
+                        <td>Aachen</td>
+                        <td>1.692,00 &#x20AC;</td>
+                        <td>20.04.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Rita</td>
+                        <td>M&#xFC;ller</td>
+                        <td>Stuttgart</td>
+                        <td>1.564,00 &#x20AC;</td>
+                        <td>23.04.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Hanna</td>
+                        <td>Moos</td>
+                        <td>Mannheim</td>
+                        <td>858,00 &#x20AC;</td>
+                        <td>29.04.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Sven</td>
+                        <td>Ottlieb</td>
+                        <td>Aachen</td>
+                        <td>86,85 &#x20AC;</td>
+                        <td>04.05.2014</td>
+                  </tr>
+                  <tr>
+                        <td>Renate</td>
+                        <td>Messner</td>
+                        <td>Frankfurt a.M.</td>
+                        <td>1.873,50 &#x20AC;</td>
+                        <td>05.05.2014</td>
+                  </tr>
+            </table>
+            <div class="py-120"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+
+    </div>
+
+    
+  <div class="box-shadow" style="border-top:1px solid #e2ecee;">
+    <div class="container">
+      <div class="row" style="padding:60px 0 10px 0;">
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 pb-15"><img src="../../img/dofactorylogo.png" height="30" /></div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../about.html">About Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../story.html">Our Story</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../customers.html">Customers</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../contact.html">Contact Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../faq.html">FAQs</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum.html">Forum</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum/explore.html">Explore Forum</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../login.html">Login</a> &nbsp; <a class="footer-link" href="../../join.html">Join</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted ">Products</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../products.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-net.html">Dofactory .NET</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-sql.html">Dofactory SQL</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-js.html">Dofactory JS</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-bundle.html">Dofactory Bundle</a></li>
+          </ul>
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-8 text-muted">Pricing</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../pricing.html">Product Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/bundle.html">Bundle Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/compare.html">Compare Editions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Demos</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../showcases.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/analytics.html">Analytics App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/ecommerce.html">Ecommerce App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/saas.html">SaaS App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/crm.html">CRM App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/app-factory.html">33-Day App Factory&trade;</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-3 mb-2 ">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Tutorials</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../tutorials.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql.html">SQL Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../reference.html">SQL Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html.html">HTML Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html/ref.html">HTML Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../net/design-patterns.html">.NET Design Patterns</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../csharp-coding-standards.html">C# Coding Standards</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../javascript.html">JavaScript Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../connection-strings.html">Connection Strings</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row mx-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="row py-10">
+        <div class="col pl-35">
+          <div class="font-weight-bold font-18 merriweather text-muted">Stay Inspired!</div>
+        </div>
+      </div>
+
+      <div class="row pt-3 pb-10">
+        <div class="col-12 col-md-6 xcol-md-5 pl-35">
+          Join other developers and designers who have
+          already signed up for our mailing list.
+        </div>
+        <div class="col-12 col-md-4 xcol-md-4 pl-35">
+
+          
+<form method="post" action="https://www.dofactory.com/emaillist">
+    <div class="input-group mb-3 pt-1">
+        <input type="text" class="form-control" placeholder="Your email..." aria-label="your-email" aria-describedby="your-email" style="max-width:260px;" data-val="true" data-val-email="Invalid email address" data-val-required="Email is required." id="YourEmail" name="YourEmail" value="">
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-green" style="height:37px;">
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <span class="field-validation-valid" data-valmsg-for="YourEmail" data-valmsg-replace="true"></span>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7EqvfB7A9a_33uXlOvGQ7bX0TqohP4yQld4YuNb2ot51YpO_s9AvAKCkdYwIXq9pOkfe2OU1WgN6BQqPANg9_QqaGyhli514YnY7nGekE_F6c7OLtIBqIoT6GJOcLT6Dy_-M" /></form>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row mx-10 mt-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="d-flex flex-lg-row flex-column p-20 mb-15 font-14">
+        <div class="pb-1 ">
+          <a href="../../terms.html" class="text-muted">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../privacy.html" class="text-muted">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../licensing.html" class="text-muted">Licensing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../eula.html" class="text-muted">EULA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../sitemap.html" class="text-muted">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="pb-1">
+          &copy; Data &amp; Object Factory, LLC. 
+        </div>
+        <div class="pb-1 ml-lg-auto">
+          Made with &nbsp;<img src="../../img/heart.png" style="width:14px;" />&nbsp; in Austin, Texas. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vsn 1.3.0
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.namespace("Sql").Sandbox = (function () {
+
+      var activateControls = function () {
+
+        // clear button
+
+        $("#clear").on("click", function () {
+
+          $("#prescript").val("");
+          $("#script").val("");
+          $("#scriptassist").val("Enter your own SQL and click Run.");
+          $("#scriptassist-display").html("&nbsp;&nbsp;&nbsp;Enter your own SQL and click Run.");
+
+          $("#results").html("<div style='height:450px;color:#666;padding-left:0px;'>No results to display</div>");
+        });
+
+        // display column names when clicked on table name
+
+        $("a[id^='table']").on("click", function () {
+          var id = "#" + $(this).attr("id").replace("table", "columns");
+          $(id).slideToggle(200);
+        });
+      };
+
+      var fadeIn = function () {
+        $('.fffade').fadeTo(800, 1);
+      }
+
+      var start = function () {
+        activateControls();
+        fadeIn();
+      };
+
+      return { start: start };
+    })();
+
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Sql.Sandbox.start();
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/sql/editor/format-german by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:46:15 GMT -->
+</html>

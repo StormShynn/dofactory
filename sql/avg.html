@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/sql/avg by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:31:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SQL AVG Function - Dofactory</title>
+    <meta name="keywords" content="SQL, SQL Server, Data Analysis, Tutorial, Reference, Guide, Examples, Demos, Top, Best, Tips, Advice, Training, Learning, Courses, Lessons, Interview, Programming, Code, Source">
+    <meta name="description" content="SQL Server AVG -- the best examples. The AVG function returns the average of the specified values.">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="canonical" href="avg.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../index.html">
+        <img src="../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../about.html">About Us</a>
+            <a class="dropdown-item" href="../story.html">Our Story</a>
+            <a class="dropdown-item" href="../customers.html">Customers</a>
+            <a class="dropdown-item" href="../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../login.html">Login</a>
+          <a class="btn btn-join " href="../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        <style>
+
+  /* ==============
+       Sql tutorial
+    =================*/
+
+  table.table-model { border-collapse: collapse; width: 170px; }
+
+  table.table-model tr > td,
+  table.table-model tr > th { padding: 3px 25px; color: #666; font-size: 15px; border: 3px solid #666; }
+
+  table.table-model tr > th { background: #e3e5ed; color: #444; font-weight: bold; }
+
+  .key { background: white url(../img/key.png) center right 12px no-repeat; }
+
+  h2 { font-size: 28px; }
+  h2.h2-first { font-size: 26px; padding: 27px 0 0 25px; font-weight:500; }
+
+  pre { font-weight: bold; }
+
+
+  ol.linenums li { line-height: 22px; }
+
+  .prettyprint { font-size: 16px; }
+
+  .kwd { color: #0b7490; }
+
+  .lit, .str { color: #cc4500; }
+
+  .tutorial hr { margin-top: 65px; margin-bottom: 5px; }
+
+  .tutorial div.items p { margin: 6px 0 6px 22px; line-height: 27px; }
+
+  /*  .bg-cream-100 { background-color: #f6f8fd !important; }
+  .bg-cream-100 th { background-color: #e8edf8 !important; }*/
+  /*.bg-cream-100 { background-color: #f6f7fb !important; }
+  .bg-cream-100 th { background-color: #eef1f7 !important; }*/
+  .bg-cream-100 { background-color: #fff !important; }
+  .bg-cream-100 th { background-color: #f3f3f7 !important; }
+  .bg-cream-100 td { background-color: #fafafe !important; }
+
+
+  /*.tutorial .table td, .tutorial .table th { border-color: #a1a3a5 !important; }*/
+  .tutorial .table td, .tutorial .table th { border-color: #c1c3c5 !important; }
+
+  /* enables autoscroll in flex and grid */
+  div { min-width: 0; }
+
+
+  .rose-dash { border-bottom: 2px dashed #ba675c; }
+  /* highlight for null value in a table. #f45d49;*/
+
+  .tutorial div.items p:first-child { margin-top: 35px !important; }
+
+  h2.more-examples { font-weight: 500; font-size: 20px; margin-bottom: 50px; margin-top: 0; }
+
+  td.null { background-color: #fefce5 !important; font-size: 16px; }
+
+  /* test */
+  /*code { font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; xfont-size: 13.6px; xcolor: rgb(87, 96, 106); background-color: xrgba(175, 184, 193, 0.2); }*/
+  /*b { font-weight:500 !important;}*/
+
+ /* dev also ask sections */
+
+  .click {
+    background: #f0f3f7;
+    color: black;
+    border-top: 1px solid #ddd;
+    cursor: pointer;
+    margin: 10px 0 0 0 !important;
+    padding: 12px 12px 12px 30px !important;
+    font-size: 17px !important;
+    font-weight: 400 !important;
+    position: relative;
+  }
+
+  .click i {
+    color: #6f6363;
+    font-size: 13px;
+    margin-top: 5px;
+  }
+
+  .answer {
+    display: none;
+    margin-bottom: 40px;
+    margin-left: 1px;
+  }
+
+  .rotate {
+    transform: rotate(-180deg);
+    transition: .5s;
+  }
+
+  .rotate-reset {
+    transform: rotate(0deg);
+    transition: .5s;
+  }
+
+  h2 i {
+    position: absolute;
+    top: 12px;
+    left: 9px;
+  }
+
+</style>
+<link rel="stylesheet" href="../tutorial/sql/responsive2a51.css?v=gQ5yt3YNBeP0hc5QYamBDiXzKvXNFE_m0Fy1ZJ5tVeY" />
+
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="../img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        SQL Reference&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="reference.html">SQL Reference</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="sql-server.html">SQL Server</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="data-types.html">SQL Data Types</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="primary-key.html">SQL Primary Key</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="foreign-key.html">SQL Foreign Key</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="identity.html">SQL Identity</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="create-database.html">SQL Create Database</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="create-table.html">SQL Create Table</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="create-view.html">SQL Create View</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="create-index.html">SQL Create Index</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="add-column.html">SQL Add Column</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="constraints.html">SQL Constraints</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="not-null.html">SQL Not Null</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="check.html">SQL Check</a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="unique.html">SQL Unique</a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="default.html">SQL Default</a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="stored-procedures.html">SQL Procedures</a>
+                <div class="height-1"></div>
+              <a id="item-17" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="triggers.html">SQL Triggers</a>
+                <div class="height-1"></div>
+              <a id="item-18" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="functions.html">SQL Functions</a>
+                <div class="height-1"></div>
+              <a id="item-19" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="string-functions.html">SQL String Functions</a>
+                <div class="height-1"></div>
+              <a id="item-20" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="numeric-functions.html">SQL Numeric Functions</a>
+                <div class="height-1"></div>
+              <a id="item-21" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="date-functions.html">SQL Date Functions</a>
+                <div class="height-1"></div>
+              <a id="item-22" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="aggregate-functions.html">SQL Aggregate Functions</a>
+                <div class="height-1"></div>
+              <a id="item-23" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="system-functions.html">SQL System Functions</a>
+                <div class="height-1"></div>
+              <a id="item-24" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="window-functions.html">SQL Window Functions</a>
+                <div class="height-1"></div>
+              <a id="item-25" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="coalesce.html">SQL Coalesce</a>
+                <div class="height-1"></div>
+              <a id="item-26" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="nullif.html">SQL NullIf</a>
+                <div class="height-1"></div>
+              <a id="item-27" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="with-cte.html">SQL With Cte</a>
+                <div class="height-1"></div>
+              <a id="item-28" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="pivot.html">SQL Pivot</a>
+                <div class="height-1"></div>
+              <a id="item-29" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="cube.html">SQL Cube</a>
+                <div class="height-1"></div>
+              <a id="item-30" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="rollup.html">SQL Rollup</a>
+                <div class="height-1"></div>
+              <a id="item-31" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="grouping-sets.html">SQL Grouping Sets</a>
+                <div class="height-1"></div>
+              <a id="item-32" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="schema.html">SQL Schema</a>
+                <div class="height-1"></div>
+              <a id="item-33" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="transactions.html">SQL Transactions</a>
+                <div class="height-1"></div>
+              <a id="item-34" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="find-duplicates.html">SQL Find Duplicates</a>
+                <div class="height-1"></div>
+              <a id="item-35" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="delete-duplicates.html">SQL Delete Duplicates</a>
+                <div class="height-1"></div>
+              <a id="item-36" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="convert-datetime-to-date.html">SQL DateTime to Date</a>
+                <div class="height-1"></div>
+              <a id="item-37" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="convert-datetime-to-string.html">SQL DateTime to String</a>
+                <div class="height-1"></div>
+              <a id="item-38" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="convert-string-to-datetime.html">SQL String to Datetime</a>
+                <div class="height-1"></div>
+              <a id="item-39" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="exception-handling.html">SQL Exception Handling</a>
+                <div class="height-1"></div>
+              <a id="item-40" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="query-optimization.html">SQL Query Optimization</a>
+                <div class="height-1"></div>
+              <a id="item-41" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="sql-server-management-studio.html">SQL Management Studio</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">SQL Career</div>
+              <a id="item-43" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="developer.html">SQL Developer</a>
+                <div class="height-1"></div>
+              <a id="item-44" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="training.html">SQL Training</a>
+                <div class="height-1"></div>
+              <a id="item-45" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="certification.html">SQL Certification</a>
+                <div class="height-1"></div>
+              <a id="item-46" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="interview-questions.html">SQL Interview Questions</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">SQL Databases</div>
+              <a id="item-48" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="sqlite.html">SQL Sqlite</a>
+                <div class="height-1"></div>
+              <a id="item-49" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="sql-express.html">SQL Express</a>
+                <div class="height-1"></div>
+              <a id="item-50" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="mysql.html">SQL MySql</a>
+                <div class="height-1"></div>
+              <a id="item-51" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="postgresql.html">SQL PostgreSql</a>
+                <div class="height-1"></div>
+              <a id="item-52" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="sql-vs-nosql.html">SQL vs NoSQL</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">String Functions</div>
+              <a id="item-54" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="ascii.html">SQL Ascii</a>
+                <div class="height-1"></div>
+              <a id="item-55" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="functions/char.html">SQL Char</a>
+                <div class="height-1"></div>
+              <a id="item-56" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="charindex.html">SQL CharIndex</a>
+                <div class="height-1"></div>
+              <a id="item-57" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="concat.html">SQL Concat</a>
+                <div class="height-1"></div>
+              <a id="item-58" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="contains.html">SQL Contains</a>
+                <div class="height-1"></div>
+              <a id="item-59" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="datalength.html">SQL DataLength</a>
+                <div class="height-1"></div>
+              <a id="item-60" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="difference.html">SQL Difference</a>
+                <div class="height-1"></div>
+              <a id="item-61" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="format.html">SQL Format</a>
+                <div class="height-1"></div>
+              <a id="item-62" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="left.html">SQL Left</a>
+                <div class="height-1"></div>
+              <a id="item-63" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="len.html">SQL Len</a>
+                <div class="height-1"></div>
+              <a id="item-64" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="lower.html">SQL Lower</a>
+                <div class="height-1"></div>
+              <a id="item-65" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="ltrim.html">SQL LTrim</a>
+                <div class="height-1"></div>
+              <a id="item-66" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="functions/nchar.html">SQL NChar</a>
+                <div class="height-1"></div>
+              <a id="item-67" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="patindex.html">SQL PatIndex</a>
+                <div class="height-1"></div>
+              <a id="item-68" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="quotename.html">SQL QuoteName</a>
+                <div class="height-1"></div>
+              <a id="item-69" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="replace.html">SQL Replace</a>
+                <div class="height-1"></div>
+              <a id="item-70" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="replicate.html">SQL Replicate</a>
+                <div class="height-1"></div>
+              <a id="item-71" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="reverse.html">SQL Reverse</a>
+                <div class="height-1"></div>
+              <a id="item-72" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="right.html">SQL Right</a>
+                <div class="height-1"></div>
+              <a id="item-73" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="rtrim.html">SQL RTrim</a>
+                <div class="height-1"></div>
+              <a id="item-74" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="soundex.html">SQL Soundex</a>
+                <div class="height-1"></div>
+              <a id="item-75" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="space.html">SQL Space</a>
+                <div class="height-1"></div>
+              <a id="item-76" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="str.html">SQL Str</a>
+                <div class="height-1"></div>
+              <a id="item-77" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="stuff.html">SQL Stuff</a>
+                <div class="height-1"></div>
+              <a id="item-78" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="substring.html">SQL Substring</a>
+                <div class="height-1"></div>
+              <a id="item-79" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="trim.html">SQL Trim</a>
+                <div class="height-1"></div>
+              <a id="item-80" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="unicode.html">SQL Unicode</a>
+                <div class="height-1"></div>
+              <a id="item-81" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="upper.html">SQL Upper</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">Numeric Functions</div>
+              <a id="item-83" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="abs.html">SQL Abs</a>
+                <div class="height-1"></div>
+              <a id="item-84" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="acos.html">SQL Acos</a>
+                <div class="height-1"></div>
+              <a id="item-85" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="asin.html">SQL Asin</a>
+                <div class="height-1"></div>
+              <a id="item-86" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="atan.html">SQL Atan</a>
+                <div class="height-1"></div>
+              <a id="item-87" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="atn2.html">SQL Atn2</a>
+                <div class="height-1"></div>
+              <a id="item-88" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="ceiling.html">SQL Ceiling</a>
+                <div class="height-1"></div>
+              <a id="item-89" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="cos.html">SQL Cos</a>
+                <div class="height-1"></div>
+              <a id="item-90" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="cot.html">SQL Cot</a>
+                <div class="height-1"></div>
+              <a id="item-91" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="degrees.html">SQL Degrees</a>
+                <div class="height-1"></div>
+              <a id="item-92" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="exp.html">SQL Exp</a>
+                <div class="height-1"></div>
+              <a id="item-93" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="floor.html">SQL Floor</a>
+                <div class="height-1"></div>
+              <a id="item-94" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="log.html">SQL Log</a>
+                <div class="height-1"></div>
+              <a id="item-95" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="log10.html">SQL Log10</a>
+                <div class="height-1"></div>
+              <a id="item-96" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="pi.html">SQL Pi</a>
+                <div class="height-1"></div>
+              <a id="item-97" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="power.html">SQL Power</a>
+                <div class="height-1"></div>
+              <a id="item-98" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="radians.html">SQL Radians</a>
+                <div class="height-1"></div>
+              <a id="item-99" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="rand.html">SQL Rand</a>
+                <div class="height-1"></div>
+              <a id="item-100" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="round.html">SQL Round</a>
+                <div class="height-1"></div>
+              <a id="item-101" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="sign.html">SQL Sign</a>
+                <div class="height-1"></div>
+              <a id="item-102" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="sin.html">SQL Sin</a>
+                <div class="height-1"></div>
+              <a id="item-103" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="sqrt.html">SQL Sqrt</a>
+                <div class="height-1"></div>
+              <a id="item-104" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="square.html">SQL Square</a>
+                <div class="height-1"></div>
+              <a id="item-105" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="tan.html">SQL Tan</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">Date &amp; Time Functions</div>
+              <a id="item-107" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="current-timestamp.html">SQL Current_Timestamp</a>
+                <div class="height-1"></div>
+              <a id="item-108" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="current-timezone.html">SQL Current_Timezone</a>
+                <div class="height-1"></div>
+              <a id="item-109" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="current-timezone-id.html">SQL Current_Timezone_Id</a>
+                <div class="height-1"></div>
+              <a id="item-110" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="dateadd.html">SQL DateAdd</a>
+                <div class="height-1"></div>
+              <a id="item-111" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="datediff.html">SQL DateDiff</a>
+                <div class="height-1"></div>
+              <a id="item-112" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="datediff-big.html">SQL DateDiff_Big</a>
+                <div class="height-1"></div>
+              <a id="item-113" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="datefromparts.html">SQL DateFromParts</a>
+                <div class="height-1"></div>
+              <a id="item-114" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="datename.html">SQL DateName</a>
+                <div class="height-1"></div>
+              <a id="item-115" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="datepart.html">SQL DatePart</a>
+                <div class="height-1"></div>
+              <a id="item-116" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="datetime2fromparts.html">SQL Datetime2FromParts</a>
+                <div class="height-1"></div>
+              <a id="item-117" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="datetimefromparts.html">SQL DatetimeFromParts</a>
+                <div class="height-1"></div>
+              <a id="item-118" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="datetimeoffsetfromparts.html">SQL DatetimOffsetFrmParts</a>
+                <div class="height-1"></div>
+              <a id="item-119" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="day.html">SQL Day</a>
+                <div class="height-1"></div>
+              <a id="item-120" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="eomonth.html">SQL EOMonth</a>
+                <div class="height-1"></div>
+              <a id="item-121" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="getdate.html">SQL GetDate</a>
+                <div class="height-1"></div>
+              <a id="item-122" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="getutcdate.html">SQL GetUtcDate</a>
+                <div class="height-1"></div>
+              <a id="item-123" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="isdate.html">SQL IsDate</a>
+                <div class="height-1"></div>
+              <a id="item-124" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="month.html">SQL Month</a>
+                <div class="height-1"></div>
+              <a id="item-125" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="smalldatetimefromparts.html">SQL SmallDatetimeFrmParts</a>
+                <div class="height-1"></div>
+              <a id="item-126" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="switchoffset.html">SQL SwitchOffset</a>
+                <div class="height-1"></div>
+              <a id="item-127" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="sysdatetime.html">SQL SysDatetime</a>
+                <div class="height-1"></div>
+              <a id="item-128" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="sysdatetimeoffset.html">SQL SysDatetimeOffset</a>
+                <div class="height-1"></div>
+              <a id="item-129" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="sysutcdatetime.html">SQL SysUtcDatetime</a>
+                <div class="height-1"></div>
+              <a id="item-130" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="timefromparts.html">SQL TimeFromParts</a>
+                <div class="height-1"></div>
+              <a id="item-131" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="todatetimeoffset.html">SQL ToDatetimeOffset</a>
+                <div class="height-1"></div>
+              <a id="item-132" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="year.html">SQL Year</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">Aggregate Functions</div>
+              <a id="item-134" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="avg.html">SQL Avg</a>
+                <div class="height-1"></div>
+              <a id="item-135" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="count.html">SQL Count</a>
+                <div class="height-1"></div>
+              <a id="item-136" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="count-big.html">SQL Count_Big</a>
+                <div class="height-1"></div>
+              <a id="item-137" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="max.html">SQL Max</a>
+                <div class="height-1"></div>
+              <a id="item-138" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="min.html">SQL Min</a>
+                <div class="height-1"></div>
+              <a id="item-139" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="stdev.html">SQL StDev</a>
+                <div class="height-1"></div>
+              <a id="item-140" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="stdevp.html">SQL StDevP</a>
+                <div class="height-1"></div>
+              <a id="item-141" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="sum.html">SQL Sum</a>
+                <div class="height-1"></div>
+              <a id="item-142" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="var.html">SQL Var</a>
+                <div class="height-1"></div>
+              <a id="item-143" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="varp.html">SQL VarP</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">System Functions</div>
+              <a id="item-145" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="cast.html">SQL Cast</a>
+                <div class="height-1"></div>
+              <a id="item-146" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="convert.html">SQL Convert</a>
+                <div class="height-1"></div>
+              <a id="item-147" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="choose.html">SQL Choose</a>
+                <div class="height-1"></div>
+              <a id="item-148" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="isnull.html">SQL IsNull</a>
+                <div class="height-1"></div>
+              <a id="item-149" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="isnumeric.html">SQL IsNumeric</a>
+                <div class="height-1"></div>
+              <a id="item-150" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="iif.html">SQL Iif</a>
+                <div class="height-1"></div>
+              <a id="item-151" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="parse.html">SQL Parse</a>
+                <div class="height-1"></div>
+              <a id="item-152" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="try-cast.html">SQL Try_Cast</a>
+                <div class="height-1"></div>
+              <a id="item-153" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="try-convert.html">SQL Try_Convert</a>
+                <div class="height-1"></div>
+              <a id="item-154" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="try-parse.html">SQL Try_Parse</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">Window Functions</div>
+              <a id="item-156" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="first-value.html">SQL First_Value</a>
+                <div class="height-1"></div>
+              <a id="item-157" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="last-value.html">SQL Last_Value</a>
+                <div class="height-1"></div>
+              <a id="item-158" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="lead.html">SQL Lead</a>
+                <div class="height-1"></div>
+              <a id="item-159" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="lag.html">SQL Lag</a>
+                <div class="height-1"></div>
+              <a id="item-160" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="rank.html">SQL Rank</a>
+                <div class="height-1"></div>
+              <a id="item-161" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="dense-rank.html">SQL Dense_Rank</a>
+                <div class="height-1"></div>
+              <a id="item-162" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="percent-rank.html">SQL Percent_Rank</a>
+                <div class="height-1"></div>
+              <a id="item-163" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="ntile.html">SQL NTile</a>
+                <div class="height-1"></div>
+              <a id="item-164" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="cume-dist.html">SQL Cume_Dist</a>
+                <div class="height-1"></div>
+              <a id="item-165" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="row-number.html">SQL Row_Number</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">Data Types</div>
+              <a id="item-167" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="bit.html">SQL Bit</a>
+                <div class="height-1"></div>
+              <a id="item-168" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="tinyint.html">SQL TinyInt</a>
+                <div class="height-1"></div>
+              <a id="item-169" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="smallint.html">SQL SmallInt</a>
+                <div class="height-1"></div>
+              <a id="item-170" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="int.html">SQL Int</a>
+                <div class="height-1"></div>
+              <a id="item-171" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="bigint.html">SQL BigInt</a>
+                <div class="height-1"></div>
+              <a id="item-172" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="decimal.html">SQL Decimal</a>
+                <div class="height-1"></div>
+              <a id="item-173" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="numeric.html">SQL Numeric</a>
+                <div class="height-1"></div>
+              <a id="item-174" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="float.html">SQL Float</a>
+                <div class="height-1"></div>
+              <a id="item-175" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="real.html">SQL Real</a>
+                <div class="height-1"></div>
+              <a id="item-176" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="smallmoney.html">SQL SmallMoney</a>
+                <div class="height-1"></div>
+              <a id="item-177" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="money.html">SQL Money</a>
+                <div class="height-1"></div>
+              <a id="item-178" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="date.html">SQL Date</a>
+                <div class="height-1"></div>
+              <a id="item-179" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="time.html">SQL Time</a>
+                <div class="height-1"></div>
+              <a id="item-180" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="smalldatetime.html">SQL SmallDateTime</a>
+                <div class="height-1"></div>
+              <a id="item-181" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="datetime.html">SQL DateTime</a>
+                <div class="height-1"></div>
+              <a id="item-182" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="datetime2.html">SQL DateTime2</a>
+                <div class="height-1"></div>
+              <a id="item-183" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="datetimeoffset.html">SQL DateTimeOffset</a>
+                <div class="height-1"></div>
+              <a id="item-184" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="char.html">SQL Char</a>
+                <div class="height-1"></div>
+              <a id="item-185" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="nchar.html">SQL NChar</a>
+                <div class="height-1"></div>
+              <a id="item-186" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="varchar.html">SQL Varchar</a>
+                <div class="height-1"></div>
+              <a id="item-187" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="varcharmax.html">SQL VarcharMax</a>
+                <div class="height-1"></div>
+              <a id="item-188" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="nvarchar.html">SQL NVarchar</a>
+                <div class="height-1"></div>
+              <a id="item-189" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="nvarcharmax.html">SQL NVarcharMax</a>
+                <div class="height-1"></div>
+              <a id="item-190" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="text.html">SQL Text</a>
+                <div class="height-1"></div>
+              <a id="item-191" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="ntext.html">SQL NText</a>
+                <div class="height-1"></div>
+              <a id="item-192" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="binary.html">SQL Binary</a>
+                <div class="height-1"></div>
+              <a id="item-193" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="varbinary.html">SQL VarBinary</a>
+                <div class="height-1"></div>
+              <a id="item-194" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="varbinarymax.html">SQL VarBinaryMax</a>
+                <div class="height-1"></div>
+              <a id="item-195" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="image.html">SQL Image</a>
+                <div class="height-1"></div>
+              <a id="item-196" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="rowversion.html">SQL RowVersion</a>
+                <div class="height-1"></div>
+              <a id="item-197" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="uniqueidentifier.html">SQL Uniqueidentifier</a>
+                <div class="height-1"></div>
+              <a id="item-198" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="xml.html">SQL Xml</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="4517" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="../img/arrow-left.jpg" /> &nbsp;Back to SQL </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../html/ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="../css/ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../javascript/design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="../net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial">
+
+      <div class="d-flex justify-content-around align-items-start">
+
+        <div class="w-100 m-auto" style="max-width:970px;">
+
+<div>
+<h1>SQL AVG Function</h1>
+
+
+<div class="d-flex mt-10 pt-10 d-block d-lg-none" xstyle="border-top:1px solid #ccd;">
+    <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="year.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; SQL Year &nbsp;</a>
+  </div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="count.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; SQL Count &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<div class="items mt-70">
+  <p><code>AVG</code> returns the average of the specified values.</p>
+  <p><code>AVG</code> ignores <code>NULL</code> values.</p>
+</div>
+
+
+
+  <div class="mt-40"></div>
+
+<a class="goto-target" id="example"></a>
+<div class="d-flex">
+  <h3 style="margin-left:-2px;font-weight:500 !important;" onmouseover="$(&#x27;#xexample&#x27;).show();" onmouseout="$(&#x27;#xexample&#x27;).hide();">Example</h3>
+  <h3 class="pl-12"><a id="xexample" class="d-block header-anchor" href="#example">#</a></h3>
+</div>
+
+
+
+<p>This example returns the <b>average</b> price of all products.</p>
+
+
+<pre class="prettyprint lang-sql run code-hscroll mt-30"><code>SELECT AVG(UnitPrice) AS Average&#xD;&#xA;  FROM Product&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-0" style="border-radius:4px;background:#4d3a3a;border:none;width:120px;" onclick="window.open('editor/avg.html', 'sandbox')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button> 
+
+<div class="pt-30 ml-25">
+  <b>Result:</b> &nbsp;1 record
+</div>
+
+<div class="table-box">
+  <table class="table table-md bg-cream-100">
+    <tr class="bg-light">
+      <th>Average</th>
+    </tr>
+    <tr>
+      <td>28.621282</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="year.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; SQL Year &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="count.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; SQL Count &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+
+
+<a class="goto-target" id="syntax"></a>
+<div class="d-flex">
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xsyntax&#x27;).show();" onmouseout="$(&#x27;#xsyntax&#x27;).hide();">Syntax</h2>
+  <h2><a id="xsyntax" style="display:none" class="d-block pl-12 header-anchor" href="#syntax">#</a></h2>
+</div>
+
+
+
+<p class="pt-40">Syntax of the AVG function.</p>
+
+<pre class="prettyprint linenums lang-sql run code-hscroll">
+AVG(value)
+</pre>
+
+<div class="items">
+  <p><code>value</code> -- a number or column name.</p>
+</div>
+
+<hr />
+
+
+
+<a class="goto-target" id="examples"></a>
+<div class="d-flex">
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xexamples&#x27;).show();" onmouseout="$(&#x27;#xexamples&#x27;).hide();">More Examples</h2>
+  <h2><a id="xexamples" style="display:none" class="d-block pl-12 header-anchor" href="#examples">#</a></h2>
+</div>
+
+
+
+
+<div class="mt-40 mb-45 pt-10 pb-5 pl-1 mr-10 d-flex" style="border-bottom:1px dashed #555;">
+  <div style="width:14px;height:14px;margin-top:5px;background: pink; border: 0px solid #478334; "></div>
+  <div class="ml-10"><h2 class="" style="font-weight:500; font-size: 17px; padding: 0; margin: 0 !important; "><span style="display:inline-block;padding:1px;border-bottom:0px solid;">AVG with GROUP BY</span></h2></div>
+</div>
+
+
+
+<div class="d-none d-md-block position-relative">
+  
+<table class="table-model position-absolute" style="z-index:10;top:0;right:20px;">
+    <tr><th>ORDER</th></tr>
+    <tr><td class="bg-white key">Id</td></tr>
+    <tr><td class="bg-white">OrderDate</td></tr>
+    <tr><td class="bg-white">OrderNumber</td></tr>
+    <tr><td class="bg-white">CustomerId</td></tr>
+    <tr><td class="bg-white">TotalAmount</td></tr>
+</table>
+</div>
+
+<div class="ml-30 mb-25 mb-md-150 mr-md-200">
+  <b>Problem: </b> List the monthly average sales for the year 2013.
+</div>
+
+
+<pre class="prettyprint lang-sql run code-hscroll mt-30"><code>SELECT MONTH(OrderDate) AS &#x27;Month&#x27;,&#xD;&#xA;       AVG(TotalAmount) AS &#x27;Average Monthly Sales&#x27;&#xD;&#xA;  FROM [Order]&#xD;&#xA; WHERE YEAR(OrderDate) = 2013&#xD;&#xA; GROUP BY MONTH(OrderDate)&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-0" style="border-radius:4px;background:#4d3a3a;border:none;width:120px;" onclick="window.open('editor/avg-month.html', 'sandbox')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button> 
+
+<div class="ml-30 pt-40">
+  <b>Result:</b> &nbsp;12 records
+</div>
+
+<div class="table-box">
+  <table class="table table-md bg-cream-100">
+    <tr>
+      <th>Month</th>
+      <th>Average Monthly Sales</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2020.993939</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>1420.937931</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1332.663333</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>1796.754516</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>1775.740625</td>
+    </tr>
+    <tr>
+      <td colspan="2"><img src="../img/ellipsis.png" /></td>
+    </tr>
+  </table>
+</div>
+
+
+
+<div class="mt-80 mb-45 pt-10 pb-5 pl-1 mr-10 d-flex" style="border-bottom:1px dashed #555;">
+  <div style="width: 14px; height: 14px; margin-top: 5px; background: pink; border: 0px solid #478334; "></div>
+  <div class="ml-10"><h2 class="" style="font-weight:500; font-size: 17px; padding: 0; margin: 0 !important; "><span style="display:inline-block;padding:1px;border-bottom:0px solid;">AVG with GROUP BY</span></h2></div>
+</div>
+
+
+
+<div class="d-none d-md-block position-relative">
+  
+<table class="table-model position-absolute" style="z-index:10;top:0;right:220px;">
+    <tr><th>PRODUCT</th></tr>
+    <tr><td class="bg-white key">Id</td></tr>
+    <tr><td class="bg-white">ProductName</td></tr>
+    <tr><td class="bg-white">SupplierId</td></tr>
+    <tr><td class="bg-white">UnitPrice</td></tr>
+    <tr><td class="bg-white">Package</td></tr>
+    <tr><td class="bg-white">IsDiscontinued</td></tr>
+</table>
+  
+<table class="table-model position-absolute" style="z-index:10;top:0;right:20px;">
+    <tr><th>SUPPLIER</th></tr>
+    <tr><td class="bg-white key">Id</td></tr>
+    <tr><td class="bg-white">CompanyName</td></tr>
+    <tr><td class="bg-white">ContactName</td></tr>
+    <tr><td class="bg-white">City</td></tr>
+    <tr><td class="bg-white">Country</td></tr>
+    <tr><td class="bg-white">Phone</td></tr>
+    <tr><td class="bg-white">Fax</td></tr>
+</table>
+</div>
+
+<div class="ml-30 mb-25 mb-md-170 mr-md-400">
+  <b>Problem: </b> List the average product price by supplier.
+</div>
+
+
+<pre class="prettyprint lang-sql run code-hscroll mt-30"><code>SELECT S.CompanyName, &#xD;&#xA;       AVG(UnitPrice) AS &#x27;Average Price&#x27;&#xD;&#xA;  FROM Product P&#xD;&#xA;  JOIN Supplier S ON S.Id = P.SupplierId&#xD;&#xA; GROUP BY S.CompanyName&#xD;&#xA;</code></pre>
+<button class="btn btn-md btn-submit-green ml-25 mb-20 mt-0" style="border-radius:4px;background:#4d3a3a;border:none;width:120px;" onclick="window.open('editor/avg-price.html', 'sandbox')">
+  Try it live<i class="icon-control-play font-11 pl-10"></i>
+</button> 
+
+<div class="ml-30 pt-40">
+  <b>Result:</b> &nbsp;29 records
+</div>
+
+<div class="table-box">
+  <table class="table table-md bg-cream-100">
+    <tr>
+      <th>CompanyName</th>
+      <th>Average Price</th>
+    </tr>
+    <tr>
+      <td>Aux joyeux ecclésiastiques</td>
+      <td>140.750000</td>
+    </tr>
+    <tr>
+      <td>Bigfoot Breweries</td>
+      <td>15.333333</td>
+    </tr>
+    <tr>
+      <td>Cooperativa de Quesos 'Las Cabras'</td>
+      <td>29.500000</td>
+    </tr>
+    <tr>
+      <td>Escargots Nouveaux</td>
+      <td>13.250000</td>
+    </tr>
+    <tr>
+      <td>Exotic Liquids</td>
+      <td>15.666666</td>
+    </tr>
+    <tr>
+      <td colspan="2"><img src="../img/ellipsis.png" /></td>
+    </tr>
+  </table>
+</div>
+
+<hr />
+
+
+
+<a class="goto-target" id="like"></a>
+<div class="d-flex">
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#x27;#xlike&#x27;).show();" onmouseout="$(&#x27;#xlike&#x27;).hide();">You may also like</h2>
+  <h2><a id="xlike" style="display:none" class="d-block pl-12 header-anchor" href="#like">#</a></h2>
+</div>
+
+
+
+<p>
+  <div class="d-flex">
+    <div class="p-10">
+      <img src="../img/html/show-like.png" class="img-fluid" loading="lazy" />
+    </div>
+    <div class="pl-25 pt-5">
+      <ul>
+        <li>Our <a class="underline font-weight-semibold" href="aggregate-functions.html">Sql Aggregate Functions Reference</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="sum.html">Sql SUM Function Reference</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="count.html">Sql COUNT Function Reference</a></li>
+      </ul>
+    </div>
+  </div>
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="year.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title='Previous'><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; SQL Year &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="count.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; SQL Count &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+<br />
+<br />
+</div>
+
+          <div class="bg-light p-10 mb-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="insert.html">Sql INSERT</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="update.html">Sql UPDATE</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="delete.html">Sql DELETE</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="join.html">Sql JOIN</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="left-join.html">Sql LEFT JOIN</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="right-join.html">Sql RIGHT JOIN</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="where.html">Sql WHERE</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="where-like.html">Sql WHERE LIKE</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="where-in.html">Sql WHERE IN</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="order-by.html">Sql ORDER BY</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="group-by.html">Sql GROUP BY</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="subquery.html">Sql Subqueries</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="identity.html">Sql Identity</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="primary-key.html">Sql Primary Key</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="foreign-key.html">Sql Foreign Key</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="create-table.html">Sql Create Table</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="create-view.html">Sql Create View</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="create-index.html">Sql Create Index</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="functions.html">Sql Functions</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="triggers.html">Sql Triggers</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="stored-procedures.html">Sql Procedures</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="training.html">Sql Training</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="developer.html">Sql Developers</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="interview-questions.html">Sql Interviews</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" style="min-width:230px !important;">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">AVG</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#example">Example</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#syntax">Syntax</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#examples">More Examples</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#like">You may also like</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-right font-13 mr-12">
+  vsn 3.1
+</div>
+
+<a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+<script src="../lib/google-code-prettify/lang-sql1452.js?v=My557O_cX4LNa3ao-aA2z3I4Ezkj6bDEnQEORTzgh14"></script>
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+      // Open SQL Editor menu in a different browser tab
+      var menu = document.querySelectorAll('[data-iseditorlink]')[0];
+      menu.href = "javascript:void(0);";
+      menu.setAttribute('onclick', "window.open('/sql/editor', 'sandbox')");
+
+      // Devs also ask sections
+      $(".click").on('click', function () {
+        $(this).next("div.answer").slideToggle("fast");
+        $(this).find(".arrow").toggleClass('rotate');
+        $(this).find(".arrow").toggleClass('rotate-reset');
+      });
+    });
+
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/sql/avg by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:31:28 GMT -->
+</html>

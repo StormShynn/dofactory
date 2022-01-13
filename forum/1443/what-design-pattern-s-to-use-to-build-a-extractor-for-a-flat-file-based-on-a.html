@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/forum/1443/what-design-pattern-s-to-use-to-build-a-extractor-for-a-flat-file-based-on-a by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:47:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>What design pattern(s) to use to build a extractor for a flat file based on a sp - Dofactory</title>
+    <meta name="keywords">
+    <meta name="description" content="Topic: What design pattern(s) to use to build a extractor for a flat file based on a sp">
+
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="what-design-pattern-s-to-use-to-build-a-extractor-for-a-flat-file-based-on-a.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="../../lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="../../lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="../../lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="../../css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="../../index.html">
+        <img src="../../img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="../../products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="../../products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="../../img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="../../showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="../../showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="../../showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="../../showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="../../pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="../../pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="../../sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="../../csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="../../html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="../../css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="../../connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="../../about.html">About Us</a>
+            <a class="dropdown-item" href="../../story.html">Our Story</a>
+            <a class="dropdown-item" href="../../customers.html">Customers</a>
+            <a class="dropdown-item" href="../../contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../../faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="../../cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="../../img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="../../login.html">Login</a>
+          <a class="btn btn-join " href="../../join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="../../about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../../join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="../../login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        
+<div class="container pb-70">
+    <div class="row pt-30">
+
+        <div><i class="icon icon-arrow-left"></i> &nbsp;<a rel="nofollow" href="javascript:history.back();">Back to list</a></div>
+
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold">Views:&nbsp;&nbsp; 31.9K</span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold">Replies:&nbsp; 4</span></div>
+                    <div class="pl-10 pt-15"><span class="font-weight-semibold text-extra-muted">Archived</span></div>
+
+                </td>
+                <td class="pl-20 pt-3">
+
+                    <div><h1 class="font-weight-semibold font-25" style="color:#345;">What design pattern(s) to use to build a extractor for a flat file based on a specification?</h1></div>
+                    <div class="">I have a flat file where each row has a specification.&nbsp; Say the first row specification level 100 a header row and all 200s are data rows and level 199 is a file summary.<br />
+I have created a data table that contains the specifications, and I am able to get the specifications into an object List&lt;RowSpecs&gt; no problem. <br />
+<br />
+I open the file and I read each row and based on the first three characters I pull the specifications for that row.&nbsp; I iterate through the specific specs for that row and assign the data to that field in the appropriate element.&nbsp; Some times there is some conversion of the data, or a lookup that needs to occur on a piece of data, and sometimes there are some special rules like formatting etc.&nbsp; <br />
+<br />
+I have coded it to make it work, but it seems very clunky and riddled with possible errors.&nbsp; Does anyone have a good suggestion for how to apply a design pattern for this type of situation?&nbsp; Multiple patterns?<br />
+<br />
+The other trick is that I use the field name to match the object field name to reflect back and set the field formatting and the field data, so I have to make sure those items match or decorate them somehow or build a mapping of some sort.&nbsp; <br />
+<br />
+Anyway, any ideas would be appreciated!&nbsp; Also, I need to go both ways, in other words, I need to use the rowspecs to build a file or to parse the file.<br />
+<br />
+thanks!<br /></div>
+                    <div class="text-right p-10">Tony Blogumas, Jun 16, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+
+
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;1</h5></div>
+
+
+                    <div class="">I appreciate the responses.&nbsp; Its been a while and I developed my own solution.&nbsp; I created a few tables in a database to store the data for the specifications of the file.&nbsp; This allows me to define any specification including versions of the specifications.&nbsp; The detail rows contain the following fields, Id, RecordTypeId, FieldName, StartPosition, FieldLength, Description, IsFieldPadded, PaddingCharacter, FieldFormattingString, PaddingDirection, HasConstantValue, ConstantValue, DataTypeId.<br />
+<br />
+Using this data I can create a collection of detail specifications that defines a row, and either parse it or build it against that specification.<br />
+<br />
+It gets trickier when you have to know what the previous line was in order to apply the correct specification to the current line.<br />
+<br />
+But in psuedo code her is a basic idea:<br />
+<br />
+Read file into List&lt;string&gt;<br />
+-- determine the specifications required to decompose this file<br />
+Get Specifications for file<br />
+for each string in List<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get the specifications for this row -- in my case the first 3 characters of each row are the row type identifier<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; create Collection to store decomposed objects&nbsp; (ie whatever each row holds the data for)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for each specification in row specifications<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; create new decomposed object item<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Extract the data for specification<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (here is where I ran into coding trouble -- I had a huge switch based on RecordType and a method to extract the data based on record types.&nbsp; Very ugly but functional.&nbsp; I also had to add code in this method to check for field types like Time or Date or both also for handling boolean conversion of data and decimal types)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Once you have the data for the field then you could easily set the value of the objects field<br />
+<br />
+In my case if I could not convert some piece of data I would throw an exception and then I could figure out why and handle that, then just rerun the process.<br />
+<br />
+If anyone is interested, feel free to ping me and you can send email to tony at blognstuff dot com<br />
+<br />
+Always interested in someone looking at my solution and showing me a better way!<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+<br /></div>
+                    <div class="text-right p-10">Tony Blogumas, Mar 15, 2012</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;2</h5></div>
+
+
+                    <div class=""><p>Hi for your scenario , I could think of Factory pattern .<br />
+File formats could normally vary like Delimited and Fixed Width .<br />
+<br />
+Processing a Delimited File is fairly straight forward and processing Fixed Width needs extra effort.<br />
+<br />
+For Fixed Width I would recommend to have a xml based File Schema, which could be loaded and parsed against the data file.<br />
+<br />
+In case if the File format changes for Field Names, length, lookup formatting etc., all that you need to do is to change the XML and not the code.<br />
+<br />
+This way your app becomes more resilient to change requirements and will add extensibility as well.<br />
+<br />
+Please refer to the code snippet I have put in for your reference.<br />
+<br />
+In Short <br />
+1) MyFile is the File object (product) being handled.<br />
+2) MyFileProcessor will return the FileProcessor to IFileProcessor&nbsp;(Delimeted or a FixedWidth) based on the File Format you choose (on the UI?)<br />
+3) IFileProcessor.ProcessFile() will process and return the data (as a DataTable - assumed for simplicity).<br />
+<br />
+This way you may choose to have the code within the console application to stay on your app side code (ASP.NET or Windows forms etc.,)</p>
+<p>All the other stuff could be placed on a service , which has public method (of course you got to add Webmethod attribs) to be triggered by the clients.<br />
+<br />
+Please Note: </p>
+<p>The same factory pattern could be extended to provide different file schemas , based on some logic (filename?) in case if you wish to have different set of file formats for different set of files.</p>
+<p>Also, you may also have a separate schema for delimited files&nbsp;and refer them too for Header/Trailer.</p>
+<p>You may add that to this code as you would prefer.<br />
+</p>
+<p>Please share your thoughts , if this suggestion is ok.</p>
+<p>Thanks,</p>
+<p>Tarriq Ferrose Khan<br />
+</p><br />
+<div id="language_cs_91499" style="border-right: medium none; border-top: medium none; border-left: medium none; color: black; border-bottom: medium none; background-color: #fffaef">
+<pre><span style="color: blue">using</span> System;
+<span style="color: blue">using</span> System.Collections.Generic;
+<span style="color: blue">using</span> System.Linq;
+<span style="color: blue">using</span> System.Text;
+<span style="color: blue">using</span> System.Data;
+
+
+<span style="color: blue">namespace</span> ConsoleApplication1
+ {
+     <span style="color: blue">public</span> <span style="color: blue">enum</span> CustomFileType {FixedWidth,Delimited}
+
+     <span style="color: blue">class</span><span style="color: teal"> Program
+     </span>{
+         <span style="color: blue">static</span> <span style="color: blue">void</span> Main(<span style="color: blue">string</span>[] args)
+         {
+             <span style="color: green">//File object being handled</span>
+             MyFile myFile = <span style="color: blue">new</span> MyFile(<span style="color: #a31515">&quot;Test.txt&quot;</span>,CustomFileType.FixedWidth);
+             
+             <span style="color: green">//File Factory returning the exact File processor based on File Type </span>
+             MyFileProcessorFactory processorFactory = <span style="color: blue">new</span> MyFileProcessorFactory(myFile);
+             IFileProcessor iFileProcessor = processorFactory.GetFileProcessor();
+
+             <span style="color: green">//Process File will call the ProcessFile method of the FileProcessor Product being returned by factory</span>
+             
+             iFileProcessor.ProcessFile(myFile);
+                 <span style="color: green">//myFile.ProcessedFileData will need to have the processed collection.</span>
+             Console.ReadLine();
+         }
+     }
+
+     <span style="color: blue">public</span> <span style="color: blue">interface</span><span style="color: teal"> IFileProcessor
+     </span>{
+         MyFile ProcessFile(MyFile myFile);
+     }
+
+     <span style="color: blue">public</span> <span style="color: blue">class</span><span style="color: teal"> MyFile
+     </span>{
+         <span style="color: blue">string</span> _FileName = <span style="color: blue">string</span>.Empty;
+         CustomFileType _FileType;
+         DataTable _FileData = <span style="color: blue">new</span> DataTable();
+
+         <span style="color: blue">public</span> <span style="color: blue">string</span> FileName
+         {
+             <span style="color: blue">get</span> {<span style="color: blue">return</span> _FileName; }            
+         }
+         <span style="color: blue">public</span> CustomFileType FileType
+         {
+             <span style="color: blue">get</span> { <span style="color: blue">return</span> _FileType; }
+         }
+
+         <span style="color: blue">public</span> DataTable ProcessedFileData
+         {
+             <span style="color: blue">get</span> { <span style="color: blue">return</span> _FileData; }
+             <span style="color: blue">set</span> {_FileData=value; }
+         }
+
+         <span style="color: blue">public</span> MyFile(<span style="color: blue">string</span> FileName, CustomFileType fileType)
+         {
+             _FileName = FileName;
+             _FileType = fileType;
+         }
+     }
+
+     <span style="color: blue">public</span> <span style="color: blue">class</span><span style="color: teal"> MyFileProcessorFactory
+     </span>{
+         <span style="color: blue">public</span> IFileProcessor processor;
+         <span style="color: blue">public</span> MyFile myFile;
+
+         <span style="color: blue">public</span> MyFileProcessorFactory(MyFile _myfile)
+         {
+             myFile = _myfile;
+         }
+
+         <span style="color: blue">public</span> IFileProcessor GetFileProcessor()
+         {
+
+             <span style="color: blue">switch</span> (myFile.FileType)
+             {
+                 <span style="color: blue">case</span> CustomFileType.Delimited:
+                     processor= <span style="color: blue">new</span> MyDelimitedFileProcessor();
+                     <span style="color: blue">break</span>;
+                 <span style="color: blue">case</span> CustomFileType.FixedWidth:
+                     processor= <span style="color: blue">new</span> MyFixedWidthFileProcessor();
+                     <span style="color: blue">break</span>;
+             }
+             <span style="color: blue">return</span> processor;
+         }
+     }
+
+     <span style="color: blue">public</span> <span style="color: blue">class</span><span style="color: teal"> MyFixedWidthFileProcessor : IFileProcessor
+     </span>{
+
+         <span style="color: blue">public</span> MyFile ProcessFile(MyFile myfile)
+         {
+             
+             <span style="color: blue">if</span> (LoadSchema())
+             {
+                 <span style="color: blue">if</span> (CheckFileIntegrity())
+                 {
+                     myfile.ProcessedFileData = CreateDataTable();
+                 }
+             }
+             Console.WriteLine(<span style="color: #a31515">&quot;Fixed&quot;</span>);
+             <span style="color: blue">return</span> myfile;
+         }
+         <span style="color: blue">private</span> <span style="color: blue">bool</span> LoadSchema()
+         { 
+             <span style="color: green">//Load the XML Schema.</span>
+             <span style="color: green">//if not loaded properly returns false.</span>
+             <span style="color: green">//else</span>
+             <span style="color: blue">return</span> <span style="color: blue">true</span>;
+         }
+
+         <span style="color: blue">private</span> <span style="color: blue">bool</span> CheckFileIntegrity()
+         {
+             <span style="color: green">//Check if the Header and Trailer format on the data file matches with the defined schema.</span>
+             <span style="color: green">//Checks if the actual number of rows on the file matches with Header /trailer count</span>
+             <span style="color: green">//returns false if any of the above it false</span>
+             <span style="color: green">//else</span>
+             <span style="color: blue">return</span> <span style="color: blue">true</span>;
+         }
+
+         <span style="color: blue">private</span> DataTable CreateDataTable()
+         {
+             <span style="color: green">//this will parse through the file against the loaded schema and return a Data Table</span>
+             <span style="color: blue">return</span> <span style="color: blue">new</span> DataTable();
+         }
+     }
+
+     <span style="color: blue">public</span> <span style="color: blue">class</span><span style="color: teal"> MyDelimitedFileProcessor : IFileProcessor
+     </span>{
+         <span style="color: blue">string</span> StandardDelimiter = <span style="color: #a31515">&quot;|&quot;</span>;
+         <span style="color: green">//You may declare this as a property to have other delimiters - passed in from UI.</span>
+         <span style="color: blue">public</span> MyFile ProcessFile(MyFile myfile)
+         {
+             Console.WriteLine(<span style="color: #a31515">&quot;Delimited&quot;</span>);
+             <span style="color: blue">return</span> myfile;
+         }
+         <span style="color: blue">private</span> DataTable CreateDataTable()
+         {
+             <span style="color: green">//this will parse through the file for the delimiter and return DataTable</span>
+             <span style="color: blue">return</span> <span style="color: blue">new</span> DataTable();
+         }
+
+
+     }
+
+
+
+         
+     
+ }
+</pre></div><br />
+&nbsp;<br />
+<div id="language_ot_72096" style="border-right: medium none; border-top: medium none; border-left: medium none; color: black; border-bottom: medium none; background-color: #fffaef">
+<pre>Sample XML Schema - to be validated?
+
+&lt;?xml version=<span style="color: #a31515">&quot;1.0&quot;</span> encoding=<span style="color: #a31515">&quot;utf-8&quot;</span> ?&gt;
+&lt;CustomFileSchema&gt;
+&lt;HeaderSchema value=<span style="color: #a31515">&quot;100;#########;mm/dd/yyyy&quot;</span>/&gt;
+&lt;TrailerSchema value=<span style="color: #a31515">&quot;199;#########;mm/dd/yyyy&quot;</span>/&gt;
+&lt;DataSchema Tag=&quot;200&quot;&gt;
+&lt;Field Name=<span style="color: #a31515">&quot;Test1&quot;</span> Order=<span style="color: #a31515">&quot;1&quot;</span> length=<span style="color: #a31515">&quot;10&quot;</span> NeedsLookup=<span style="color: #a31515">&quot;False&quot;</span> FieldFormatting=<span style="color: #a31515">&quot;dd/mm/yyyy&quot;</span>&gt;&lt;/Field&gt;
+&lt;Field Name=<span style="color: #a31515">&quot;Test2&quot;</span> Order=<span style="color: #a31515">&quot;2&quot;</span> length=<span style="color: #a31515">&quot;8&quot;</span> NeedsLookup=<span style="color: #a31515">&quot;true&quot;</span> &gt;&lt;/Field&gt;
+&lt;Field Name=<span style="color: #a31515">&quot;Test3&quot;</span> Order=<span style="color: #a31515">&quot;3&quot;</span> length=<span style="color: #a31515">&quot;10&quot;</span> NeedsLookup=<span style="color: #a31515">&quot;False&quot;</span>  FieldFormatting=<span style="color: #a31515">&quot;$##,###,###.00&quot;</span>&gt;&lt;/Field&gt;
+&lt;/DataSchema&gt;
+&lt;/CustomFileSchema&gt;
+</pre></div><br />
+&nbsp;</div>
+                    <div class="text-right p-10">Tarriq Ferrose Khan, Aug 15, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;3</h5></div>
+
+
+                    <div class="">I am no expert, but I faced somewhat similar issue when working with excel file.<br />
+<br />
+I used <span style="font-weight: bold">Strategy pattern</span> for extracting information from files.<br />
+Secondly, I used <span style="font-weight: bold">Flyweight&nbsp;pattern&nbsp;</span>for capturing data before writing or processing. <br />
+<br />
+I used Collection Objects to capture data (List and Dictionary)<br />
+<br />
+List&lt;object&gt; -&gt; this can be another dictionary for quick access (if required) Dictionary&lt;Id, Object&gt;<br />
+<br />
+Object<br />
+{<br />
+&nbsp;Dictionary&lt;Property, Value&gt;<br />
+}<br />
+<br />
+Strategy Pattern -&gt;&nbsp;follows principle of Encaplusation&nbsp;-&nbsp;<span style="font-weight: bold">Seperate what changes</span><br />
+<br />
+Hope this will be helpful.<br />
+<br />
+I appologise for poor english.<br />
+<br /></div>
+                    <div class="text-right p-10">Asmprogs Asmprogs, Jul 09, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+        <table class="w-100 mt-30">
+            <tr>
+                <td class="align-top" style="width:120px !important;background:#f6f7f9;">
+
+                    <div class="p-10"><span class="font-weight-semibold"></span></div>
+                    <div class="pl-10 pt-0"><span class="font-weight-semibold"></span></div>
+
+                </td>
+
+                <td class="pl-20 pt-3">
+
+                    <div><h5 class="font-19 font-weight-semibold py-5">Reply&nbsp;4</h5></div>
+
+
+                    <div class="">Tony, could you please post your code for reference..</div>
+                    <div class="text-right p-10">Venkatesh D, Jul 05, 2011</div>
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+<br />
+<br />
+
+
+
+
+
+
+
+
+    </div>
+
+    
+  <div class="box-shadow" style="border-top:1px solid #e2ecee;">
+    <div class="container">
+      <div class="row" style="padding:60px 0 10px 0;">
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 pb-15"><img src="../../img/dofactorylogo.png" height="30" /></div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../about.html">About Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../story.html">Our Story</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../customers.html">Customers</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../contact.html">Contact Us</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../faq.html">FAQs</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../../forum.html">Forum</a></li>
+            <li class="footer-item pb-4"><a class="footer-link" href="../explore.html">Explore Forum</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../login.html">Login</a> &nbsp; <a class="footer-link" href="../../join.html">Join</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted ">Products</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../products.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-net.html">Dofactory .NET</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-sql.html">Dofactory SQL</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-js.html">Dofactory JS</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../products/dofactory-bundle.html">Dofactory Bundle</a></li>
+          </ul>
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-8 text-muted">Pricing</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../pricing.html">Product Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/bundle.html">Bundle Pricing</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../pricing/compare.html">Compare Editions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Demos</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../showcases.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/analytics.html">Analytics App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/ecommerce.html">Ecommerce App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/saas.html">SaaS App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/crm.html">CRM App</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../showcases/app-factory.html">33-Day App Factory&trade;</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-3 mb-2 ">
+          <div class="pl-20 font-weight-bold font-18 merriweather pb-10 pt-3 text-muted">Tutorials</div>
+          <ul class="footer-list">
+            <li class="footer-item"><a class="footer-link" href="../../tutorials.html">Overview</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql.html">SQL Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../sql/reference.html">SQL Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html.html">HTML Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../html/ref.html">HTML Reference</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../net/design-patterns.html">.NET Design Patterns</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../csharp-coding-standards.html">C# Coding Standards</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../javascript.html">JavaScript Tutorial</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../connection-strings.html">Connection Strings</a></li>
+            <li class="footer-item"><a class="footer-link" href="../../visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row mx-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="row py-10">
+        <div class="col pl-35">
+          <div class="font-weight-bold font-18 merriweather text-muted">Stay Inspired!</div>
+        </div>
+      </div>
+
+      <div class="row pt-3 pb-10">
+        <div class="col-12 col-md-6 xcol-md-5 pl-35">
+          Join other developers and designers who have
+          already signed up for our mailing list.
+        </div>
+        <div class="col-12 col-md-4 xcol-md-4 pl-35">
+
+          
+<form method="post" action="https://www.dofactory.com/emaillist">
+    <div class="input-group mb-3 pt-1">
+        <input type="text" class="form-control" placeholder="Your email..." aria-label="your-email" aria-describedby="your-email" style="max-width:260px;" data-val="true" data-val-email="Invalid email address" data-val-required="Email is required." id="YourEmail" name="YourEmail" value="">
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-green" style="height:37px;">
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <span class="field-validation-valid" data-valmsg-for="YourEmail" data-valmsg-replace="true"></span>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7EqsRQ-S7QKx_oawwqI9g14Rk5xvyGtpu_cUX_3UjSsv_PEoZgV-zTqtPLLBXE_e2NXN3ztevtC82hUc-0cIb5p2RrePyEZnxXHl1NPeE4s-o_mUXUS_BZUiV-oJKWX6W5qc" /></form>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row mx-10 mt-10" style="border-bottom:1px solid #ddd;height:1px;">
+      </div>
+
+      <div class="d-flex flex-lg-row flex-column p-20 mb-15 font-14">
+        <div class="pb-1 ">
+          <a href="../../terms.html" class="text-muted">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../privacy.html" class="text-muted">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../licensing.html" class="text-muted">Licensing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../eula.html" class="text-muted">EULA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="../../sitemap.html" class="text-muted">Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="pb-1">
+          &copy; Data &amp; Object Factory, LLC. 
+        </div>
+        <div class="pb-1 ml-lg-auto">
+          Made with &nbsp;<img src="../../img/heart.png" style="width:14px;" />&nbsp; in Austin, Texas. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vsn 1.3.0
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="../../lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="../../lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="../../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="../../lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="../../lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="../../lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="../../lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="../../js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+    <script type="text/javascript">
+        $(function () {
+
+            Dofactory.Utils.ScrollToTarget.start();
+
+        });
+    </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/forum/1443/what-design-pattern-s-to-use-to-build-a-extractor-for-a-flat-file-based-on-a by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 16:47:58 GMT -->
+</html>

@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.dofactory.com/javascript by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:05:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Tutorial - Dofactory</title>
+    <meta name="keywords" content="javascript, tutorial, what is javascript, what javascript can do, javascript variables, javascript object, javascript loops, javascript array">
+    <meta name="description" content="JavaScript tutorial covering the basics as well as more advanced topics including Inheritance, Immediate Functions, Prototypes, Closures, Currying, Namespaces, and more. Upon completion you will be comfortable adding robust JavaScript functionality to your web pages.">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="canonical" href="javascript.html" />
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min71fa.css?v=L_W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y" />
+        <link rel="stylesheet" href="lib/bootstrap-datepicker/css/bootstrap-datepicker.min25e5.css?v=siyOpF_pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg" />
+        <link rel="stylesheet" href="lib/simple-line-icons/css/simple-line-icons.mined33.css?v=7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV_8erfDQz_Q" />
+        <link rel="stylesheet" href="lib/google-code-prettify/prettify198f.css?v=YYvcuFRWOPKudlOnW_y5kOvXw3dO1NYFXJxsfoabmAo" />
+        <link rel="stylesheet" href="css/app.minfff2.css?v=ntsMfhGZgDkKn7AusG-6U_lSBWgBi92spRGVLOBwBpQ" />
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class='navbar navbar-expand-lg py-0 pl-0 do-navbar'
+          style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="index.html">
+        <img src="img/dofactorylogo.png" height="44" class="no-outline" />
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="products/dofactory-net.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="img/n.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="products/dofactory-sql.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="img/s.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="products/dofactory-js.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="img/j.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="products/dofactory-bundle.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="img/b.png" width="32" class="xpt-2" /></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="products.html"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="img/all.png" width="40" class="xpt-2" /></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="showcases/analytics.html">Analytics</a>
+            <a class="dropdown-item" href="showcases/ecommerce.html">Ecommerce</a>
+            <a class="dropdown-item" href="showcases/saas.html">SaaS</a>
+            <a class="dropdown-item" href="showcases/crm.html">CRM</a>
+            <a class="dropdown-item" href="showcases/app-factory.html">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="showcases.html">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="pricing.html">Product Pricing</a>
+            <a class="dropdown-item" href="pricing/bundle.html">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="pricing/compare.html">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="sql.html">SQL Tutorial</a>
+            <a class="dropdown-item" href="sql/reference.html">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="net/design-patterns.html">C# Design Patterns</a>
+            <a class="dropdown-item" href="csharp-coding-standards.html">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="html.html">HTML Tutorial</a>
+            <a class="dropdown-item" href="html/ref.html">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="css.html">CSS Tutorial</a>
+            <a class="dropdown-item" href="css/ref.html">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="javascript.html">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="connection-strings.html">Connection Strings</a>
+            <a class="dropdown-item" href="visual-studio-shortcuts.html">Visual Studio Shortcuts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="tutorials.html">Overview</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="about.html">About Us</a>
+            <a class="dropdown-item" href="story.html">Our Story</a>
+            <a class="dropdown-item" href="customers.html">Customers</a>
+            <a class="dropdown-item" href="contact.html">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="faq.html">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="cart.html">
+            <span class="position-relative">
+              <img title="Cart" src="img/cart.png" style="width: 25px;" />
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style='width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; '>
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="login.html">Login</a>
+          <a class="btn btn-join " href="join.html">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="products.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="showcases.html">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="tutorials.html">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="about.html">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="join.html">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="login.html">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        <link rel="stylesheet" href="tutorial/css/javascript1cdd.css?v=qVXqJlnTI2nqJ78-w9n5mGO4sNLYFSlXHRVEVwRSTj4" />
+
+<style>
+  .bg-cream-100 { background-color: #f6f8fd !important; }
+</style>
+
+
+<script>
+  var console = {};
+  console.log = function (e) {
+    try {
+
+      if (!e && e != false) e = "undefined";
+      if (e == "Andrew Fuller\n Bob Springsteen") {
+        e = e.replace(/(?:\r\n|\r|\n)/g, '<br>');
+      }
+      document.writeln(e);
+      document.write("<br />");
+    }
+    catch {
+      document.writeln("");
+    }
+  };
+  window.console = console;
+</script>
+
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex"
+       style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div >
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$('#switcher').addClass('tutorial-choice');" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="img/arrow-right.jpg" /></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        JavaScript Tutorial&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active'
+                 
+                 
+                 href="javascript.html">JavaScript Intro</a>
+                <div class="height-1"></div>
+              <a id="item-1" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/what-is.html">What is JavaScript</a>
+                <div class="height-1"></div>
+              <a id="item-2" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/essentials.html">JavaScript Essentials</a>
+                <div class="height-1"></div>
+              <a id="item-3" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/variables.html">JavaScript Variables</a>
+                <div class="height-1"></div>
+              <a id="item-4" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/operators.html">JavaScript Operators</a>
+                <div class="height-1"></div>
+              <a id="item-5" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/conditionals.html">JavaScript Conditionals</a>
+                <div class="height-1"></div>
+              <a id="item-6" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/loops.html">JavaScript Loops</a>
+                <div class="height-1"></div>
+              <a id="item-7" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/builtin-types.html">JavaScript Built-in Types</a>
+                <div class="height-1"></div>
+              <a id="item-8" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/objects.html">JavaScript Objects</a>
+                <div class="height-1"></div>
+              <a id="item-9" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/advanced-objects.html">JavaScript Adv. Objects</a>
+                <div class="height-1"></div>
+              <a id="item-10" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/arrays.html">JavaScript Arrays</a>
+                <div class="height-1"></div>
+              <a id="item-11" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/functions.html">JavaScript Functions</a>
+                <div class="height-1"></div>
+              <a id="item-12" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/function-objects.html">JavaScript Function Objects</a>
+                <div class="height-1"></div>
+              <a id="item-13" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/json.html">JavaScript JSON</a>
+                <div class="height-1"></div>
+              <a id="item-14" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/regular-expressions.html">JavaScript Reg. Expressions</a>
+                <div class="height-1"></div>
+              <a id="item-15" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/design-patterns.html">JavaScript Patterns</a>
+                <div class="height-1"></div>
+              <a id="item-16" class='pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 '
+                 
+                 
+                 href="javascript/reference.html">JavaScript Reference</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="0" />
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$('#switcher').removeClass('tutorial-choice');" href="javacript:void(0)"><img class="align-baseline" src="img/arrow-left.jpg" /> &nbsp;Back to JS </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="html.html">HTML Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="html/ref.html">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="css.html">CSS Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="css/ref.html">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="sql.html">SQL Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="sql/reference.html">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty check-fill'></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="javascript.html">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="javascript/design-patterns.html">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="net/design-patterns.html">C# Design Patterns</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="csharp-coding-standards.html">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="connection-strings.html">Connection Strings</a></li>
+          <li class="p-4"><i class='check-empty '></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="visual-studio-shortcuts.html">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial" xstyle="xmax-width:1200px;">
+
+      <div class="d-flex justify-content-around align-items-start">
+
+        <div class="w-100 m-auto" style="max-width:970px;">
+
+          
+<h1>JavaScript Introduction</h1>
+
+
+<div class="row mt-40">
+  <div class="col-12 col-md-9">
+    <p style="margin-right:0 !important;">
+      Welcome to our <b>JavaScript Tutorial</b>.
+      This tutorial covers the basics of JavaScript as well as
+      more advanced topics. These include Inheritance,
+      Immediate Functions, Prototypes, Closures, Currying, Namespaces, and more.
+      Upon completion you will be comfortable adding robust JavaScript
+      functionality to your web pages.
+    </p>
+  </div>
+  <div class="col-md-3 d-none d-md-block text-center">
+    <img src="img/javascript/javascript.png" alt="JavaScript" class="mt-40 img-fluid" />
+  </div>
+</div>
+
+<hr />
+
+<p>
+  Building world-class web apps requires skills that go beyond this tutorial.
+  For that you will need our <a href="products/dofactory-js.html">Dofactory JS</a>
+  which teaches how to write robust, maintainable, and beautiful web apps using
+  proven design patterns and pattern architectures.
+  To learn more <a href="products/dofactory-js.html">click here</a>.
+</p>
+<p>
+  Both this tutorial and our <a href="products/dofactory-js.html">Dofactory JS</a> product
+  come with code samples that demonstrate the concepts in action.  Each time you
+  see a 'Run' button, it will execute the code displayed. The results display in
+  an output area under the code.
+</p>
+
+
+<div class="d-flex">
+  <div class="mt-30 mb-11 ml-29">
+    <a class="no-underline font-15" style="color:#234;" href="javascript:copy('intro-1');"><img src="img/copy.png" /> copy</a>
+  </div>
+  <div id="show-intro-1" class="ml-15 mt-20 mb-20 px-12 pt-2  font-15" style="background:black;color:white;border-radius:5px;display:none;">copied to clipboard</div>
+<pre style="display:none;" id="copy-intro-1">console.log(&quot;I am ready to run!&quot;);      // =&gt; I am ready to run&#xD;&#xA;</pre>
+</div>
+
+<pre class="prettyprint run code-hscroll mt-0"><code>console.log(&quot;I am ready to run!&quot;);      // =&gt; I am ready to run&#xD;&#xA;</code></pre>
+<div class="javascript-output" id="intro-1" style="display:none;">
+  <script>
+      console.log("I am ready to run!");      // => I am ready to run
+;
+  </script>
+</div>
+<button id="intro-1-btn" class="btn btn-md btn-submit-green ml-25 mb-20 mt-0"
+        style="border-radius: 4px; background: #4d3a3a; border: none; width: 90px;"
+        onclick="runbutton(this,'intro-1');">
+  Run
+</button>
+
+
+<p>
+  Next is a listing of the 17 chapters in this tutorial.
+</p>
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="javascript/what-is.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; What is JavaScript &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<br />
+<a class="goto-target" id="intro"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xintro&#x27;).show();" onmouseout="$(&#x27;#xintro&#x27;).hide();">1. JavaScript Intro</h2>
+    <h2><a id="xintro" style="display:none" class="d-block pl-12 header-anchor" href="#intro">#</a></h2>
+</div>
+
+
+
+<p>
+  The page you are currently reading.
+  Here we provide an overview of the different chapters and their contents.
+</p>
+
+<br />
+<a class="goto-target" id="what-is-javascript"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xwhat-is-javascript&#x27;).show();" onmouseout="$(&#x27;#xwhat-is-javascript&#x27;).hide();">2. What is JavaScript</h2>
+    <h2><a id="xwhat-is-javascript" style="display:none" class="d-block pl-12 header-anchor" href="#what-is-javascript">#</a></h2>
+</div>
+
+
+
+<p>
+  In this chapter we review the JavaScript language. You will learn that JavaScript
+  is object-oriented but that it <i>does not support classes</i>. Inheritance is implemented
+  through a mechanism called <i>prototypes</i>.  We compare JavaScript to other languages
+  and answer the often asked question: <i>Is JavaScript related to Java?</i>
+  -- <a class="go" href="javascript/what-is.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+
+<br />
+<a class="goto-target" id="essentials"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xessentials&#x27;).show();" onmouseout="$(&#x27;#xessentials&#x27;).hide();">3. JavaScript Essentials</h2>
+    <h2><a id="xessentials" style="display:none" class="d-block pl-12 header-anchor" href="#essentials">#</a></h2>
+</div>
+
+
+
+<p>
+  Before you start writing JavaScript code is it important to have a good grasp of the
+  language and its development environment. Here we review language fundamentals,
+  case-sensitivity, commenting, and several important tips and techniques on how to
+  write and debug JavaScript, as well as perform data validation
+  -- <a class="go" href="javascript/essentials.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+<br />
+<a class="goto-target" id="variables"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xvariables&#x27;).show();" onmouseout="$(&#x27;#xvariables&#x27;).hide();">4. JavaScript Variables</h2>
+    <h2><a id="xvariables" style="display:none" class="d-block pl-12 header-anchor" href="#variables">#</a></h2>
+</div>
+
+
+
+<p>
+  JavaScript is not a type-safe language. This can make declaring and using
+  variables a bit tricky. You will learn about global variables, variable scope,
+  variable hoisting, and how the single-var pattern can help you avoid some common pitfalls.
+  -- <a class="go" href="javascript/variables.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+<br />
+<a class="goto-target" id="operators"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xoperators&#x27;).show();" onmouseout="$(&#x27;#xoperators&#x27;).hide();">5. JavaScript Operators</h2>
+    <h2><a id="xoperators" style="display:none" class="d-block pl-12 header-anchor" href="#operators">#</a></h2>
+</div>
+
+
+
+<p>
+  JavaScript supports all operators that you expect to find in any mature language.
+  However, some JavaScript operators behave in unexpected ways. We will present each
+  of the operators available in JavaScript including arithmetic, assignment, comparison,
+  logical/boolean, and string operators.
+  -- <a class="go" href="javascript/operators.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+<br />
+<a class="goto-target" id="conditionals"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xconditionals&#x27;).show();" onmouseout="$(&#x27;#xconditionals&#x27;).hide();">6. JavaScript Conditionals</h2>
+    <h2><a id="xconditionals" style="display:none" class="d-block pl-12 header-anchor" href="#conditionals">#</a></h2>
+</div>
+
+
+
+<p>
+  In this chapter we show how to use JavaScript conditionals, including <i>if</i>,
+  <i>if else</i>, <i>if else if else</i> and the <i>switch</i> statement.  You will also
+  learn how to avoid a common switch coding problem
+  -- <a class="go" href="javascript/conditionals.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+<br />
+<a class="goto-target" id="loops"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xloops&#x27;).show();" onmouseout="$(&#x27;#xloops&#x27;).hide();">7. JavaScript Loops</h2>
+    <h2><a id="xloops" style="display:none" class="d-block pl-12 header-anchor" href="#loops">#</a></h2>
+</div>
+
+
+
+<p>
+  In this chapter we present the looping constructs available in JavaScript. These include
+  <i>for loops</i>, <i>do loops</i>, <i>while loops</i>, <i>continue</i> and <i>break</i>.
+  We also discuss <i>for in</i> loops which allow you to iterate over object properties
+  -- <a class="go" href="javascript/loops.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+<br />
+<a class="goto-target" id="built-in-types"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xbuilt-in-types&#x27;).show();" onmouseout="$(&#x27;#xbuilt-in-types&#x27;).hide();">8. JavaScript Built-in Types</h2>
+    <h2><a id="xbuilt-in-types" style="display:none" class="d-block pl-12 header-anchor" href="#built-in-types">#</a></h2>
+</div>
+
+
+
+<p>
+  JavaScript includes built-in types, such as String, Boolean, Number, Date and Math.
+  Here we discuss how to create these types and how to access their properties.
+  We will show you how to work with implicit and explicit Number to String conversions.
+  Finally, the Date object and the Math object are presented.
+  -- <a class="go" href="javascript/builtin-types.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+<br />
+<a class="goto-target" id="objects"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xobjects&#x27;).show();" onmouseout="$(&#x27;#xobjects&#x27;).hide();">9. JavaScript Objects</h2>
+    <h2><a id="xobjects" style="display:none" class="d-block pl-12 header-anchor" href="#objects">#</a></h2>
+</div>
+
+
+
+<p>
+  In this chapter we are getting to the very heart of the language. Everything in
+  JavaScript is an object. We discuss object literals followed by object properties
+  and how to dynamically add, retrieve, update, and delete properties from an object.
+  JavaScript is a prototypal language and you will learn how to use this to implement inheritance.
+  -- <a class="go" href="javascript/objects.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+<br />
+<a class="goto-target" id="advanced-objects"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xadvanced-objects&#x27;).show();" onmouseout="$(&#x27;#xadvanced-objects&#x27;).hide();">10. JavaScript Advanced Objects</h2>
+    <h2><a id="xadvanced-objects" style="display:none" class="d-block pl-12 header-anchor" href="#advanced-objects">#</a></h2>
+</div>
+
+
+
+<p>
+  JavaScript is object-oriented, but it lacks several features that you've come to expect
+  from a mature object-oriented language.  There are ways to solve this with a series of
+  advanced concepts including namespaces, modules, chaining, and closures.
+  You will also learn how to keep members private in objects.
+  -- <a class="go" href="javascript/advanced-objects.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+<br />
+<a class="goto-target" id="arrays"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xarrays&#x27;).show();" onmouseout="$(&#x27;#xarrays&#x27;).hide();">11. JavaScript Arrays</h2>
+    <h2><a id="xarrays" style="display:none" class="d-block pl-12 header-anchor" href="#arrays">#</a></h2>
+</div>
+
+
+
+<p>
+  Next, you will learn about JavaScript arrays. We show how to create arrays
+  using array literals and some other options. We will also explore ways to
+  effectively iterate over array elements. Multi-dimensional arrays are easily
+  implemented in JavaScript. Finally, you will learn how to give arrays their own methods.
+  -- <a class="go" href="javascript/arrays.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+<br />
+<a class="goto-target" id="functions"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xfunctions&#x27;).show();" onmouseout="$(&#x27;#xfunctions&#x27;).hide();">12. JavaScript Functions</h2>
+    <h2><a id="xfunctions" style="display:none" class="d-block pl-12 header-anchor" href="#functions">#</a></h2>
+</div>
+
+
+
+<p>
+  As a JavaScript developer it is essential that you are comfortable working
+  with functions because they play a critical role in building robust applications.
+  We will discuss function literals and function constructors. You will also learn about
+  variable scope, function closures, and the important immediate functions.
+  -- <a class="go" href="javascript/functions.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+<br />
+<a class="goto-target" id="function-objects"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xfunction-objects&#x27;).show();" onmouseout="$(&#x27;#xfunction-objects&#x27;).hide();">13. JavaScript Function Objects</h2>
+    <h2><a id="xfunction-objects" style="display:none" class="d-block pl-12 header-anchor" href="#function-objects">#</a></h2>
+</div>
+
+
+
+<p>
+  Functions are first-class citizens in JavaScript. They are objects, but better. When programming in JavaScript
+  it is necessary that you move beyond the notion of function being a reusable block of code.
+  Most large-scale JavaScript projects choose functions over objects. We will discuss why this.
+  Also discussed are callbacks, currying, memoization, and the use of functions as building
+  blocks of project modules.
+  -- <a class="go" href="javascript/function-objects.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+<br />
+<a class="goto-target" id="json"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xjson&#x27;).show();" onmouseout="$(&#x27;#xjson&#x27;).hide();">14. JavaScript JSON</h2>
+    <h2><a id="xjson" style="display:none" class="d-block pl-12 header-anchor" href="#json">#</a></h2>
+</div>
+
+
+
+<p>
+  JSON (JavaScript Object Notation) has taken the world by storm, even in non-JavaScript environments,
+  such as, .NET, Java, Ruby, and PHP. We discuss what JSON is, why it is popular, and how it compares to XML.
+  You will learn how to parse JSON and why Ajax and JSON are a 'match made in heaven'.
+  -- <a class="go" href="javascript/json.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+<br />
+<a class="goto-target" id="regular-expressions"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xregular-expressions&#x27;).show();" onmouseout="$(&#x27;#xregular-expressions&#x27;).hide();">15. JavaScript Regular Expressions</h2>
+    <h2><a id="xregular-expressions" style="display:none" class="d-block pl-12 header-anchor" href="#regular-expressions">#</a></h2>
+</div>
+
+
+
+<p>
+  Regular expressions provide a powerful way to perform pattern matching on certain characters
+  within strings of text. They offer a concise syntax to carry out complex tasks that otherwise
+  would require lengthy code. In this chapter you will learn how to build and apply
+  JavaScript regular expressions in your own solutions
+  -- <a class="go" href="javascript/regular-expressions.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+<br />
+<a class="goto-target" id="design-patterns"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xdesign-patterns&#x27;).show();" onmouseout="$(&#x27;#xdesign-patterns&#x27;).hide();">16. JavaScript Design Patterns</h2>
+    <h2><a id="xdesign-patterns" style="display:none" class="d-block pl-12 header-anchor" href="#design-patterns">#</a></h2>
+</div>
+
+
+
+<p>
+  In this section you will learn how to design powerful applications with
+  JavaScript Design Patterns
+  -- <a class="go" href="javascript/design-patterns.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+<br />
+<a class="goto-target" id="reference"></a>
+<div class="d-flex">
+    <h2 onmouseover="$(&#x27;#xreference&#x27;).show();" onmouseout="$(&#x27;#xreference&#x27;).hide();">17. JavaScript Reference</h2>
+    <h2><a id="xreference" style="display:none" class="d-block pl-12 header-anchor" href="#reference">#</a></h2>
+</div>
+
+
+
+<p>
+  In this final chapter we offer a quick JavaScript reference guide. 
+  -- <a class="go" href="javascript/reference.html">let's go <img src="img/arrow-right.jpg"></a>
+</p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="javascript/what-is.html" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title='Next'>&nbsp; What is JavaScript &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+          <div class="bg-light p-10 my-35 text-center">
+            <a class="darker-link" href="javascript:alert('Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!')">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="css.html">CSS Tutorial</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="css/selectors.html">CSS Selectors</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="css/borders.html">CSS Borders</a></li>
+
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="css/flex.html">CSS Flex</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="css/grids.html">CSS Grid</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="css/tables.html">CSS Tables</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="css/notfound.html">CSS Units</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="css/fonts.html">CSS Fonts</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="css/animation.html">CSS Animation</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="css/hover.html">CSS Hover</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="css/images.html">CSS Images</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="css/comments.html">CSS Comments</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" xstyle="flex: 0 0 230px">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#">Introduction</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#intro">1. Intro</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#what-is-javascript">2. What Is</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#essentials">3. Essentials</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#variables">4. Variables</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#operators">5. Operators</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#conditionals">6. Conditionals</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#loops">7. Loops</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#built-in-types">8. Built-in Types</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#objects">9. Objects</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#advanced-objects">10. Advanced Objects</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#arrays">11. Arrays</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#functions">12. Functions</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#function-objects">13. Function Objects</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#json">14. Json</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#regular-expressions">15. Regex</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#design-patterns">16. Patterns</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="#reference">17. Reference</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="#" class="scroll-up rounded-circle text-center pt-7"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="lib/jquery/jquery.min24d6.js?v=CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"></script>
+        <script src="lib/jquery-validation/jquery.validate.min5ad2.js?v=sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI"></script>
+        <script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.minbd79.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY"></script>
+        <script src="lib/google-code-prettify/prettify110e.js?v=4uV247xgfNF5_1EZRwEPZF00QaNTE67A29BsRDf4O3c"></script>
+        <script src="lib/bootstrap/js/bootstrap.bundle.min72cb.js?v=OUFW7hFO0_r5aEGTQOz9F_aXQOt-TwqI1Z4fbVvww04"></script>
+        <script src="lib/bootstrap-datepicker/js/bootstrap-datepicker.min972b.js?v=bqVeqGdJ7h_lYPq6xrPv_YGzMEb6dNxlfiTUHSgRCp8"></script>
+        <script src="lib/typeahead.js/typeahead.jquery.min7d44.js?v=nORlj0J8ZjvGz-6rtHb2Jcc0QDASsDUNOwUkfcwoW8A"></script>
+        <script src="js/app.min60ec.js?v=x5540RYyDTxVNeURuenBBX2YdX1eoyLnOywDrRGQptM"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+    });
+
+    let runbutton = function (button, model) {
+      var n = '#' + model;
+      var text = button.innerText;
+      if (text == "Run") {
+        $(n).slideDown(300);
+        button.innerText = "Clear";
+      } else {
+        $(n).slideUp(300);
+        button.innerText = "Run";
+      }
+    };
+
+    function copy(id) {
+      var stor = document.createElement("textarea");
+      stor.setAttribute("contentEditable", true);
+      stor.innerHTML = document.getElementById('copy-' + id).innerHTML;
+      stor.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
+      document.body.appendChild(stor);
+      stor.focus({ preventScroll: true });
+      stor.focus();
+
+      document.execCommand("copy");
+      document.body.removeChild(stor);
+
+      $('#show-' + id).fadeIn('fast').delay(1200).fadeOut('slow');
+    }
+
+
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1223200-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+</body>
+
+<!-- Mirrored from www.dofactory.com/javascript by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jan 2022 15:05:44 GMT -->
+</html>
